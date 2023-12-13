@@ -1,0 +1,470 @@
+/* 
+  Localizable.strings
+  Saw Grow
+
+  Created by Truk Karawawattana on 8/8/2565 BE.
+  
+*/
+
+//JSON KEY
+"Name" = "name_zh";
+"First_Name" = "first_name";
+"Last_Name" = "last_name";
+"Menu_Name" = "menu_name_zh";
+"Category_Name" = "category_name";
+"Request_Name" = "request_name";
+
+//GENERAL
+"Formatter_Locale" = "zh";
+"Thai" = "泰语";
+"English" = "英语";
+"Loading" = "加载";
+"Successful" = "成功";
+"Empty" = "未找到数据";
+"Coming_Soon" = "即将推出";
+"Confirm" = "确认";
+"Cancel" = "取消";
+"Delete" = "删除";
+"Confirm_Delete" = "确认删除";
+"OK" = "好";
+"Done" = "完成";
+"Day" = "天";
+"Select_Date" = "选择一个日期";
+"Sent_Date" = "发送日期";
+"Receive_Date" = "接收日期";
+"MonthYear_Field" = "选择月、年";
+"Search_Field" = "搜索联系人";
+
+////////////////////////////////////////////////////////////////////////////////////
+
+//LOGIN
+"LOGIN_Header" = "欢迎，";
+"LOGIN_Sub_Header" = "登录继续！";
+"LOGIN_Email_Title" = "电子邮件";
+"LOGIN_Email_Field" = "电子邮件";
+"LOGIN_Password_Title" = "密码";
+"LOGIN_Password_Field" = "密码";
+"LOGIN_ForgetPassword_Button" = "忘记密码？";
+"LOGIN_SignIn_Button" = "登录";
+
+//RESET PASSWORD
+"RESET_PASSWORD_Header" = "重置密码";
+"RESET_PASSWORD_Sub_Header" = "输入与您的帐户关联的电子邮件，我们将发送一封电子邮件，说明重置您的密码。";
+"RESET_PASSWORD_Email_Title" = "电子邮件地址";
+"RESET_PASSWORD_Email_Field" = "电子邮件";
+"RESET_PASSWORD_Send_Button" = "发送";
+
+//NEW PASSCODE
+"NEW_PASSCODE_Header" = "新密码";
+"NEW_PASSCODE_Sub_Header" = "为了您账户的安全，请输入安全码";
+"NEW_PASSCODE_Next_Button" = "下一个";
+
+//CONFIRM PASSCODE
+"CONFIRM_PASSCODE_Header" = "确认密码";
+"CONFIRM_PASSCODE_Sub_Header" = "为了您账户的安全，请输入安全码";
+"CONFIRM_PASSCODE_Confirm_Button" = "确认";
+
+//ENTER PASSCODE
+"ENTER_PASSCODE_Header" = "输入密码";
+"ENTER_PASSCODE_Sub_Header" = "为了您的账户安全，请输入安全码";
+"ENTER_PASSCODE_ForgetPasscode_Button" = "忘记密码";
+
+//TUTORIAL
+"TUTORIAL_KEY_Title" = "标题";
+"TUTORIAL_KEY_Description" = "描述";
+"TUTORIAL_Next_Button" = "下一个";
+"TUTORIAL_Next_Button_Done" = "完成";
+"TUTORIAL_Skip_Button" = "跳过";
+"TUTORIAL_Back_Button" = "返回";
+
+//TUTORIAL COMPLETE
+"TUTORIAL_COMPLETE_Point" = "积分";
+"TUTORIAL_COMPLETE_Header" = "每项活动都获得积分";
+"TUTORIAL_COMPLETE_Sub_Header_1" = "你已经收到了";
+"TUTORIAL_COMPLETE_Sub_Header_2" = "教程完成点数";
+"TUTORIAL_COMPLETE_Receive_Button" = "获得积分";
+
+////////////////////////////////////////////////////////////////////////////////////
+
+//SIDE MENU
+"SIDE_MENU_Version" = "版本";
+
+//PROFILE
+"PROFILE_Call_Button" = "通话";
+"PROFILE_Email_Button" = "电子邮件";
+"PROFILE_EmpCard_Button" = " 员工卡";
+"PROFILE_SendSticker_Button" = " 发送贴纸";
+"PROFILE_Status" = "状态";
+"PROFILE_Warning" = "警告";
+"PROFILE_Title_Header" = "个人资料信息";
+"PROFILE_Title_Position" = "位置";
+"PROFILE_Title_Department" = "部门";
+"PROFILE_Title_Head" = "部门主管";
+"PROFILE_Title_Hire" = "雇佣";
+"PROFILE_Title_Email" = "电子邮件";
+"PROFILE_Title_Phone" = "电话号码";
+
+//HOME TAB
+"HOME_Mood_Ask" = "你今天感觉怎么样？";
+"HOME_Mood_Bad" = "不好";
+"HOME_Mood_Neutral" = "正常";
+"HOME_Mood_Good" = "好";
+"HOME_Mood_Awesome" = "太棒了";
+
+"HOME_Category" = "类别";
+"HOME_Announcement" = "公告";
+"HOME_Recommend" = "推荐";
+"HOME_SeeAll" = "查看全部";
+"HOME_Location_Denied" = "访问您的位置已被拒绝";
+"HOME_Location_Allow" = "请允许访问您的位置以使用它";
+"HOME_Location_Disable" = "访问您的位置已被禁用";
+"HOME_Location_Check" = "请检查您设备的隐私设置";
+
+//CALENDAR TAB
+"CALENDAR_Language" = "zh";
+"CALENDAR_Sheet_Request" = "请求";
+"CALENDAR_Sheet_Leave" = "离开";
+
+//NOTIFICATION TAB
+"NOTIFICATION_Header" = "通知";
+"NOTIFICATION_ReadAll" = "阅读全部";
+"NOTIFICATION_Confirm" = "确认阅读全部";
+
+//DIRECTORY TAB
+"DIRECTORY_TAB_1" = "A-Z";
+"DIRECTORY_TAB_2" = "最爱";
+"DIRECTORY_TAB_3" = "我的团队";
+"DIRECTORY_TAB_Edit_Button" = "编辑";
+"DIRECTORY_TAB_Done_Button" = "完成";
+
+//DIRECTORY FAVORITE
+"DIRECTORY_FAVORITE_Header" = "收藏";
+"DIRECTORY_FAVORITE_Search_Field" = "搜索联系人";
+"DIRECTORY_FAVORITE_Table_Header1" = "你的最爱";
+"DIRECTORY_FAVORITE_Table_Header2" = "全部";
+
+////////////////////////////////////////////////////////////////////////////////////
+
+//CHECKIN
+"CHECKIN_Place_Loading" = "正在检查您的位置...";
+"CHECKIN_Place_Unknow" = "未知地名";
+"CHECKIN_Note" = "注意";
+"CHECKIN_Upload" = "上传图片";
+"CHECKIN_In" = "签到";
+"CHECKIN_Update" = "更新";
+"CHECKIN_Out" = "签出";
+"CHECKIN_TouchID" = "使用 Touch ID 签入、更新、签出";
+
+"CHECKIN_Confirm_In" = "确认入住";
+"CHECKIN_Confirm_Update" = "确认更新";
+"CHECKIN_Confirm_Out" = "确认退房";
+"CHECKIN_Confirm_Swipe" = "滑动确认";
+
+//LEAVE
+"LEAVE_Header" = "离开请求";
+"LEAVE_Tab_1" = "请求";
+"LEAVE_Tab_2" = "状态";
+"LEAVE_Tab_3" = "历史";
+"LEAVE_Type_Field" = "离开类型";
+"LEAVE_Start_Date" = "开始日期";
+"LEAVE_End_Date" = "结束日期";
+"LEAVE_Full_Date" = "完整日期";
+"LEAVE_Half_Date1" = "半天早上";
+"LEAVE_Half_Date2" = "半天下午";
+"LEAVE_Reason" = "原因";
+"LEAVE_Head" = "部门主管";
+"LEAVE_Submit_Button" = "提交请求";
+"LEAVE_Confirm" = "确认请假请求";
+"LEAVE_Cancel_Employee" = "被工作人员取消";
+
+"LEAVE_STATUS_Title" = "假期";
+"LEAVE_STATUS_Used" = "已使用";
+"LEAVE_STATUS_Total" = "总计";
+"LEAVE_STATUS_Remain" = "剩余";
+
+"LEAVE_DETAIL_Header" = "离开细节";
+"LEAVE_DETAIL_Request" = "请求";
+"LEAVE_DETAIL_Leave_Type" = "离开类型";
+"LEAVE_DETAIL_Duration" = "持续时间";
+"LEAVE_DETAIL_Total" = "总计";
+"LEAVE_DETAIL_Reason" = "原因";
+"LEAVE_DETAIL_Reject_Reason" = "拒绝原因";
+"LEAVE_DETAIL_Cancel" = "取消";
+"LEAVE_DETAIL_Withdraw" = "撤回";
+"LEAVE_DETAIL_Accept" = "接受";
+"LEAVE_DETAIL_Confirm_Cancel" = "确认取消";
+"LEAVE_DETAIL_Confirm_Withdraw" = "确认撤回";
+"LEAVE_DETAIL_Confirm_Accept" = "确认接受请求";
+
+//ATTENDANCE
+"ATTENDANCE_Header" = "工作时间";
+"ATTENDANCE_Tab_1" = "请求";
+"ATTENDANCE_Tab_2" = "历史";
+"ATTENDANCE_Date" = "选择日期";
+"ATTENDANCE_Time_Normal" = "正常时间";
+"ATTENDANCE_Time_Attendance" = "出勤时间";
+"ATTENDANCE_Time_Request" = "考勤请求";
+"ATTENDANCE_Note" = "注意";
+"ATTENDANCE_Submit_Button" = "提交请求";
+"ATTENDANCE_Confirm" = "确认考勤请求";
+
+"ATTENDANCE_DETAIL_Header" = "工作时间详情";
+"ATTENDANCE_DETAIL_Date" = "日期";
+"ATTENDANCE_DETAIL_Attendance_Type" = "出席类型";
+"ATTENDANCE_DETAIL_Attendance_Time" = "出勤时间";
+"ATTENDANCE_DETAIL_Change_to" = "更改为";
+
+//OT
+"OT_Header" = "OT 请求";
+"OT_Tab_1" = "请求";
+"OT_Tab_2" = "历史";
+"OT_Warning_Title" = "请更新所有出勤申请!";
+"OT_Warning_Detail" = "为了信息的准确性和您的福利，请在 OT 请求之前更新所有出勤情况。";
+"OT_Submit_Button" = "提交请求";
+"OT_Confirm" = "确认 OT 请求";
+
+"OT_Total" = "总计";
+"OT_ThisMonth" = "本月";
+
+"OT_DETAIL_Header" = "OT 详细信息";
+"OT_DETAIL_Date" = "OT 日期";
+"OT_DETAIL_Time" = "加时时间";
+
+"OT_Request" = "创建一个新请求";
+"OT_Type" = "加班请求的类型";
+"OT_Start_Date_Time" = "开始日期和时间";
+"OT_No_Hour" = "小时数";
+"OT_End_Date_Time" = "结束日期和时间";
+"OT_Hour" = "小时";
+
+//SWAP SHIFT
+"SWAP_Header" = "交换工作班次";
+"SWAP_Tab_1" = "请求";
+"SWAP_Tab_2" = "回复";
+"SWAP_Tab_3" = "历史";
+"SWAP_Your_Shift_Field" = "选择您的班次";
+"SWAP_Other_Name_Field" = "选择兑换名称";
+"SWAP_Other_Shift_Field" = "选择交换器的工作班次";
+"SWAP_Note" = "注意";
+"SWAP_Submit_Button" = "提交请求";
+"SWAP_Confirm" = "确认轮班申请提交";
+"SWAP_Response_Title" = "想换班";
+"SWAP_Accept_Confirm" = "确认接受轮班工作";
+
+"SWAP_DETAIL_Header" = "交换工作班次";
+"SWAP_DETAIL_Date" = "日期";
+"SWAP_DETAIL_Time" = "时间";
+
+////////////////////////////////////////////////////////////////////////////////////
+
+//APPROVE
+"APPROVE_MENU_Header" = "头部批准";
+"APPROVE_LEAVE_Header" = "离开批准";
+"APPROVE_ATTENDANCE_Header" = "工作时间批准";
+"APPROVE_OT_Header" = "OT 批准";
+"APPROVE_EDOC_Header" = "电子文件审批";
+"APPROVE_SWAP_Header" = "批准换班请求";
+"APPROVE_REIMBURSE_Header" = "批准提款请求";
+"APPROVE_Tab_1" = "请求";
+"APPROVE_Tab_2" = "历史";
+"APPROVE_Approve" = "批准";
+"APPROVE_Confirm" = "确认批准";
+"APPROVE_Reject" = "拒绝";
+"APPROVE_Reject_Confirm" = "确认拒绝";
+
+"APPROVE_DETAIL_LEAVE_Header" = "留下详细信息";
+"APPROVE_DETAIL_ATTENDANCE_Header" = "工作时间详情";
+"APPROVE_DETAIL_OT_Header" = "OT 详细信息";
+"APPROVE_DETAIL_SWAP_Header" = "轮班申请详情";
+"APPROVE_DETAIL_Default_Reject_Reason" = "如果你想拒绝，请输入一些理由";
+
+////////////////////////////////////////////////////////////////////////////////////
+
+//REWARD TAB
+"REWARD_Header" = "奖励";
+"REWARD_Point" = "积分";
+"REWARD_Menu" = "菜单";
+"REWARD_Recommend" = "推荐";
+"REWARD_SeeAll" = "查看全部";
+
+"REWARD_DETAIL_Header" = "奖励详情";
+"REWARD_DETAIL_Out" = "缺货";
+"REWARD_DETAIL_Insufficient" = "积分不足";
+"REWARD_DETAIL_Redeem" = "兑换";
+"REWARD_DETAIL_Redeem_Confirm" = "确认兑换";
+"REWARD_DETAIL_Alert_Expire" = "过期";
+
+"REWARD_COUPON_Header" = "我的优惠券";
+"REWARD_COUPON_Tab_1" = "有效";
+"REWARD_COUPON_Tab_2" = "已使用";
+"REWARD_COUPON_Tab_3" = "过期";
+"REWARD_COUPON_Use_Now" = "现在使用";
+"REWARD_COUPON_Use_Now" = "已使用";
+"REWARD_COUPON_Expired" = "过期";
+
+"REWARD_COUPON_Valid" = "有效优惠券";
+"REWARD_COUPON_Use_Button" = "使用优惠券";
+"REWARD_COUPON_Used" = "二手优惠券";
+"REWARD_COUPON_Used_Button" = "二手";
+"REWARD_COUPON_Use_Confirm" = "确认使用优惠券";
+"REWARD_COUPON_QR_Expire" = "此优惠券到期时间为";
+"REWARD_COUPON_QR_Remark" = "您的兑换码也会发送到您的短信和邮箱";
+
+//SEND STICKER
+"STICKER_Header" = "发送贴纸";
+"STICKER_Recommend" = "推荐";
+"STICKER_All" = "全部";
+"STICKER_Remain" = "剩余";
+"STICKER_Already_Sent" = "已经发送礼物";
+"STICKER_Reach_Max" = "你达到了今天的上限";
+
+"STICKER_HEAD_Header" = "发送头点";
+"STICKER_HEAD_Your_Team" = "你的团队";
+
+"STICKER_SEND_Header" = "发送贴纸";
+"STICKER_SEND_Send_To" = "发送到：";
+"STICKER_SEND_Note" = "备注";
+"STICKER_SEND_Remark" = "给接收者写点东西";
+"STICKER_SEND_Submit_Button" = "送礼物";
+"STICKER_SEND_Confirm" = "确认发送贴纸";
+
+"STICKER_COMPLETE_Header" = "完成";
+"STICKER_COMPLETE_Title" = "礼物送出";
+"STICKER_COMPLETE_Done_Button" = "完成";
+
+//MISSION
+"MISSION_Header" = "任务";
+"MISSION_Routine" = "日常点数";
+"MISSION_Mission" = "任务点";
+
+"MISSION_HISTORY_Header" = "历史";
+
+//RANKING
+"RANKING_Header" = "排名";
+"RANKING_Tab_1" = "所有等级";
+"RANKING_Tab_2" = "每月排名";
+
+////////////////////////////////////////////////////////////////////////////////////
+
+//EDOC
+"EDOC_MORE_Header" = "类别";
+"EDOC_Header" = "电子文档";
+"EDOC_Tab_1" = "请求";
+"EDOC_Tab_2" = "历史";
+"EDOC_Language_Field" = "选择语言";
+"EDOC_Submit_Button" = "提交请求";
+"EDOC_Confirm" = "确认提交请求";
+
+"EDOC_SLIP_Period" = "期间：";
+"EDOC_SLIP_Confirm" = "确认工资单请求";
+
+"EDOC_DETAIL_Header" = "电子文档";
+"EDOC_DETAIL_Button_PDF" = "查看 PDF";
+"EDOC_DETAIL_Request" = "请求";
+"EDOC_DETAIL_Type" = "电子文档类型";
+"EDOC_DETAIL_Button_Cancel" = "取消";
+"EDOC_DETAIL_Button_Reject" = "拒绝";
+"EDOC_DETAIL_Button_Approve" = "批准";
+
+"EDOC_WEB_Button_Send_Email" = "发送到电子邮件";
+"EDOC_WEB_Email_Field" = "电子邮件";
+"EDOC_WEB_Button_Send" = "发送";
+"EDOC_WEB_Button_Cancel" = "取消";
+
+//REPORT
+"REPORT_HEADER" = "报告";
+"REPORT_Work" = "工作日";
+"REPORT_Late" = "迟到";
+"REPORT_Absent" = "缺席";
+"REPORT_Leave" = "离开";
+
+//WARNING LETTER
+"WARNING_HEADER" = "警告信历史";
+"WARNING_HEAD_HEADER" = "警告信";
+"WARNING_HEAD_Tab_1" = "请求";
+"WARNING_HEAD_Tab_2" = "状态";
+"WARNING_HEAD_Tab_3" = "历史";
+
+"WARNING_REQUEST_Person_Field" = "选择人物";
+"WARNING_REQUEST_Type_Field" = "选择警告类型";
+"WARNING_REQUEST_Start_Field" = "开始日期";
+"WARNING_REQUEST_End_Field" = "结束日期";
+"WARNING_REQUEST_Reason" = "原因";
+"WARNING_REQUEST_Submit_Button" = "提交请求";
+"WARNING_REQUEST_Confirm" = "确认警告信请求";
+
+"WARNING_HISTORY_Title" = "警告信";
+
+"WARNING_DETAIL_Header" = "警告信";
+"WARNING_DETAIL_Button_Letter" = "查看信件";
+"WARNING_DETAIL_Request" = "接收者";
+"WARNING_DETAIL_Type" = "警告类型";
+"WARNING_DETAIL_Duration" = "持续时间";
+"WARNING_DETAIL_Reason" = "原因";
+"WARNING_DETAIL_Button_Accept" = "接受并向电子邮件发送警告信";
+"WARNING_DETAIL_Confirm" = "确认接受";
+
+//REIMBURSE
+"REIMBURSE_Confirm" = "确认提款请求";
+"REIMBURSE_REQUEST_Type_Field" = "选择提款类型";
+"REIMBURSE_REQUEST_Amount_Field" = "输入金额";
+"REIMBURSE_DETAIL_Amount_Field" = "数量";
+
+//QR SALARY
+"QR_SALARY_Detail" = "上传您的银行账户二维码图片";
+"QR_SALARY_Button_Upload" = "上传图片二维码";
+"QR_SALARY_Button_Delete" = "删除二维码";
+"QR_SALARY_Button_Download" = "保存图片";
+
+//PROBATION
+"PROBATION_REQUEST_Name_Field" = "选择人员";
+"PROBATION_REQUEST_Position_Field" = "工作职位";
+"PROBATION_REQUEST_StartDate_Field" = "开始日期";
+"PROBATION_REQUEST_RequestDate_Field" = "评估日期";
+"PROBATION_REQUEST_Info1" = "性能试用评估";
+"PROBATION_REQUEST_Info2" = "解释";
+"PROBATION_REQUEST_Info3" = "5 级\n表示绩效结果明显超出指定标准\n\n4 级\n表示绩效结果超出指定标准\n\n3 级\n表示绩效结果工作满足指定标准。\n\n2 级\n 表示工作绩效低于规定标准。\n\n1级\n表示工作绩效明显低于规定标准。";
+"PROBATION_SCORE" = "分";
+"PROBATION_SCORE_Name" = "被评估人";
+"PROBATION_HEAD_Name" = "评审员";
+"PROBATION_RESULT_Score" = "总得分";
+"PROBATION_RESULT_Fail" = "没有通过";
+"PROBATION_RESULT_Pass" = "经过";
+"PROBATION_RESULT_Type" = "选择一个理由";
+"PROBATION_Note" = "评论";
+"PROBATION_Confirm" = "确认评价";
+
+//PEOPLE SELECTOR
+"PEOPLE_HEADER" = "选择人物";
+
+////////////////////////////////////////////////////////////////////////////////////
+
+//SETTING
+"SETTING_Header" = "设置";
+"SETTING_LANGUAGE_Header" = "语言";
+"SETTING_COMPANY_Header" = "切换公司";
+
+//CHANGE PASSWORD
+"CHANGE_PASSWORD_Header" = "更改密码";
+"CHANGE_PASSWORD_Current_Field" = "当前密码";
+"CHANGE_PASSWORD_Title_Header" = "新密码必须包含：";
+"CHANGE_PASSWORD_Title_Condition_1" = "至少 8 个字符";
+"CHANGE_PASSWORD_Title_Condition_2" = "至少一个小写字母 (a-z)";
+"CHANGE_PASSWORD_Title_Condition_3" = "至少一个数字 (0-9)";
+"CHANGE_PASSWORD_Title_Condition_4" = "至少一个特殊字符";
+"CHANGE_PASSWORD_NewPass_Field" = "新密码";
+"CHANGE_PASSWORD_ConfirmNewPass_Field" = "确认新密码";
+"CHANGE_PASSWORD_Title_Confirm" = "确认新密码不匹配";
+"CHANGE_PASSWORD_Submit_Button" = "提交";
+
+//CAMERA
+"Camera" = "相机";
+"Photo Library" = "照片库";
+"GO_Setting" = "转到设置";
+"Warning" = "警告";
+"CAMERA_Denied" = "您的相机访问被拒绝";
+"CAMERA_Allow" = "请允许相机访问上传头像";
+"CAMERA_No" = "你没有相机";
+"PHOTO_Denied" = "您的照片库访问被拒绝";
+"PHOTO_Allow" = "请允许照片库访问上传头像";
+"PHOTO_No" = "您没有访问图库的权限。";

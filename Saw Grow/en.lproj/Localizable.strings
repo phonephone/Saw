@@ -1,0 +1,470 @@
+/* 
+  Localizable.strings
+  Saw Grow
+
+  Created by Truk Karawawattana on 8/8/2565 BE.
+  
+*/
+
+//JSON KEY
+"Name" = "name_en";
+"First_Name" = "first_name_en";
+"Last_Name" = "last_name_en";
+"Menu_Name" = "menu_name_en";
+"Category_Name" = "category_name_en";
+"Request_Name" = "request_name_en";
+
+//GENERAL
+"Formatter_Locale" = "en";//"en_US_POSIX";
+"Thai" = "Thai";
+"English" = "English";
+"Loading" = "Loading";
+"Successful" = "Successful";
+"Empty" = "Empty";
+"Coming_Soon" = "Coming Soon";
+"Confirm" = "Confirm";
+"Cancel" = "Cancel";
+"Delete" = "Delete";
+"Confirm_Delete" = "Confirm Delete";
+"OK" = "OK";
+"Done" = "Done";
+"Day" = "Day";
+"Select_Date" = "Select Date";
+"Sent_Date" = "Sent Date";
+"Receive_Date" = "Receive Date";
+"MonthYear_Field" = "Select Month,Year";
+"Search_Field" = "Search contacts";
+
+////////////////////////////////////////////////////////////////////////////////////
+
+//LOGIN
+"LOGIN_Header" = "Welcome,";
+"LOGIN_Sub_Header" = "Sign in to continue!";
+"LOGIN_Email_Title" = "Email";
+"LOGIN_Email_Field" = "Email";
+"LOGIN_Password_Title" = "Password";
+"LOGIN_Password_Field" = "Password";
+"LOGIN_ForgetPassword_Button" = "Forget Password ?";
+"LOGIN_SignIn_Button" = "Sign In";
+
+//RESET PASSWORD
+"RESET_PASSWORD_Header" = "Reset Password";
+"RESET_PASSWORD_Sub_Header" = "Enter the email associated with your account and we'll send an email with instructions to reset your password.";
+"RESET_PASSWORD_Email_Title" = "Email address";
+"RESET_PASSWORD_Email_Field" = "Email";
+"RESET_PASSWORD_Send_Button" = "Send";
+
+//NEW PASSCODE
+"NEW_PASSCODE_Header" = "New Passcode";
+"NEW_PASSCODE_Sub_Header" = "For the security of your account, please enter the security code";
+"NEW_PASSCODE_Next_Button" = "Next";
+
+//CONFIRM PASSCODE
+"CONFIRM_PASSCODE_Header" = "Confirm Passcode";
+"CONFIRM_PASSCODE_Sub_Header" = "For the security of your account, please enter the security code";
+"CONFIRM_PASSCODE_Confirm_Button" = "Confirm";
+
+//ENTER PASSCODE
+"ENTER_PASSCODE_Header" = "Enter Passcode";
+"ENTER_PASSCODE_Sub_Header" = "For the security of your account, please enter the security code";
+"ENTER_PASSCODE_ForgetPasscode_Button" = "Forget Passcode";
+
+//TUTORIAL
+"TUTORIAL_KEY_Title" = "title"; //ขาดภาษาอังกฤษ
+"TUTORIAL_KEY_Description" = "desc"; //ขาดภาษาอังกฤษ
+"TUTORIAL_Next_Button" = "Next";
+"TUTORIAL_Next_Button_Done" = "Done";
+"TUTORIAL_Skip_Button" = "Skip";
+"TUTORIAL_Back_Button" = "Back";
+
+//TUTORIAL COMPLETE
+"TUTORIAL_COMPLETE_Point" = "Points";
+"TUTORIAL_COMPLETE_Header" = "Every Activities Earn Points";
+"TUTORIAL_COMPLETE_Sub_Header_1" = "You have recieved";
+"TUTORIAL_COMPLETE_Sub_Header_2" = "points from tutorial completion";
+"TUTORIAL_COMPLETE_Receive_Button" = "Received points";
+
+////////////////////////////////////////////////////////////////////////////////////
+
+//SIDE MENU
+"SIDE_MENU_Version" = "Version";
+
+//PROFILE
+"PROFILE_Call_Button" = "  Call";
+"PROFILE_Email_Button" = "  Email";
+"PROFILE_EmpCard_Button" = "  Employee Card";
+"PROFILE_SendSticker_Button" = "  Send Sticker";
+"PROFILE_Status" = "Status";
+"PROFILE_Warning" = "Warning";
+"PROFILE_Title_Header" = "Profile Information";
+"PROFILE_Title_Position" = "Position";
+"PROFILE_Title_Department" = "Department";
+"PROFILE_Title_Head" = "Head of Department";
+"PROFILE_Title_Hire" = "Hire";
+"PROFILE_Title_Email" = "Email";
+"PROFILE_Title_Phone" = "Phone Number";
+
+//HOME TAB
+"HOME_Mood_Ask" = "How are you feeling today ?";
+"HOME_Mood_Bad" = "Bad";
+"HOME_Mood_Neutral" = "Neutral";
+"HOME_Mood_Good" = "Good";
+"HOME_Mood_Awesome" = "Awesome";
+
+"HOME_Category" = "Category";
+"HOME_Announcement" = "Announcement";
+"HOME_Recommend" = "Recommend";
+"HOME_SeeAll" = "See all";
+"HOME_Location_Denied" = "Location service denied";
+"HOME_Location_Allow" = "Please allow location service to use this feature";
+"HOME_Location_Disable" = "Location services are disable";
+"HOME_Location_Check" = "Please check your device privacy settings";
+
+//CALENDAR TAB
+"CALENDAR_Language" = "en_US";
+"CALENDAR_Sheet_Request" = "Request";
+"CALENDAR_Sheet_Leave" = "Leave";
+
+//NOTIFICATION TAB
+"NOTIFICATION_Header" = "Notifications";
+"NOTIFICATION_ReadAll" = "Read all";
+"NOTIFICATION_Confirm" = "Confirm Read All";
+
+//DIRECTORY TAB
+"DIRECTORY_TAB_1" = "A-Z";
+"DIRECTORY_TAB_2" = "Favorite";
+"DIRECTORY_TAB_3" = "My Team";
+"DIRECTORY_TAB_Edit_Button" = "Edit";
+"DIRECTORY_TAB_Done_Button" = "Done";
+
+//DIRECTORY FAVORITE
+"DIRECTORY_FAVORITE_Header" = "Favorite";
+"DIRECTORY_FAVORITE_Search_Field" = "Search contacts";
+"DIRECTORY_FAVORITE_Table_Header1" = "Your Favorite";
+"DIRECTORY_FAVORITE_Table_Header2" = "All";
+
+////////////////////////////////////////////////////////////////////////////////////
+
+//CHECKIN
+"CHECKIN_Place_Loading" = "Checking your location...";
+"CHECKIN_Place_Unknow" = "Unknown place name";
+"CHECKIN_Note" = "Note";
+"CHECKIN_Upload" = "Upload Picture";
+"CHECKIN_In" = "Check in";
+"CHECKIN_Update" = "Update";
+"CHECKIN_Out" = "Check out";
+"CHECKIN_TouchID" = "Check in, Update, Check out with Touch ID";
+
+"CHECKIN_Confirm_In" = "Confirm Check in";
+"CHECKIN_Confirm_Update" = "Confirm Update";
+"CHECKIN_Confirm_Out" = "Confirm Check out";
+"CHECKIN_Confirm_Swipe" = "Swipe to Confirm";
+
+//LEAVE
+"LEAVE_Header" = "Leave Request";
+"LEAVE_Tab_1" = "Request";
+"LEAVE_Tab_2" = "Status";
+"LEAVE_Tab_3" = "History";
+"LEAVE_Type_Field" = "Leave Type";
+"LEAVE_Start_Date" = "Start Date";
+"LEAVE_End_Date" = "End Date";
+"LEAVE_Full_Date" = "Full-Date";
+"LEAVE_Half_Date1" = "1st Half";
+"LEAVE_Half_Date2" = "2nd Half";
+"LEAVE_Reason" = "Reason";
+"LEAVE_Head" = "Head of Department";
+"LEAVE_Submit_Button" = "Submit Request";
+"LEAVE_Confirm" = "Confirm Leave Request";
+"LEAVE_Cancel_Employee" = "Cancel by Employee";
+
+"LEAVE_STATUS_Title" = "Vacation Leave";
+"LEAVE_STATUS_Used" = "Used";
+"LEAVE_STATUS_Total" = "Total";
+"LEAVE_STATUS_Remain" = "Remaining";
+
+"LEAVE_DETAIL_Header" = "Leave Detail";
+"LEAVE_DETAIL_Request" = "Request";
+"LEAVE_DETAIL_Leave_Type" = "Leave Type";
+"LEAVE_DETAIL_Duration" = "Duration";
+"LEAVE_DETAIL_Total" = "Total";
+"LEAVE_DETAIL_Reason" = "Reason";
+"LEAVE_DETAIL_Reject_Reason" = "Reject Reason";
+"LEAVE_DETAIL_Cancel" = "Cancel";
+"LEAVE_DETAIL_Withdraw" = "Withdraw";
+"LEAVE_DETAIL_Accept" = "Accept";
+"LEAVE_DETAIL_Confirm_Cancel" = "Confirm Cancel";
+"LEAVE_DETAIL_Confirm_Withdraw" = "Confirm WithDraw";
+"LEAVE_DETAIL_Confirm_Accept" = "Confirm Accept";
+
+//ATTENDANCE
+"ATTENDANCE_Header" = "Working Hours";
+"ATTENDANCE_Tab_1" = "Request";
+"ATTENDANCE_Tab_2" = "History";
+"ATTENDANCE_Date" = "Select Date";
+"ATTENDANCE_Time_Normal" = "Normal Time";
+"ATTENDANCE_Time_Attendance" = "Attendance Time";
+"ATTENDANCE_Time_Request" = "Time Attendance Request";
+"ATTENDANCE_Note" = "Note";
+"ATTENDANCE_Submit_Button" = "Submit Request";
+"ATTENDANCE_Confirm" = "Confirm Attendance Request";
+
+"ATTENDANCE_DETAIL_Header" = "Working Hours Detail";
+"ATTENDANCE_DETAIL_Date" = "Date";
+"ATTENDANCE_DETAIL_Attendance_Type" = "Attendance Type";
+"ATTENDANCE_DETAIL_Attendance_Time" = "Attendance Time";
+"ATTENDANCE_DETAIL_Change_to" = "Change to";
+
+//OT
+"OT_Header" = "OT Request";
+"OT_Tab_1" = "Request";
+"OT_Tab_2" = "History";
+"OT_Warning_Title" = "Please update all Attendance Request !";
+"OT_Warning_Detail" = "For the accuracy of the information and your benefits please update all attendance before OT Request.";
+"OT_Submit_Button" = "Submit Request";
+"OT_Confirm" = "Confirm OT Request";
+
+"OT_Total" = "Total";
+"OT_ThisMonth" = "This Month";
+
+"OT_DETAIL_Header" = "OT Detail";
+"OT_DETAIL_Date" = "OT Date";
+"OT_DETAIL_Time" = "OT Time";
+
+"OT_Request" = "New Request";
+"OT_Type" = "OT Type";
+"OT_Start_Date_Time" = "Start Date & Time";
+"OT_No_Hour" = "Number of hours";
+"OT_End_Date_Time" = "End Date & Time";
+"OT_Hour" = "Hours";
+
+//SWAP SHIFT
+"SWAP_Header" = "Swap Shift";
+"SWAP_Tab_1" = "Request";
+"SWAP_Tab_2" = "Response";
+"SWAP_Tab_3" = "History";
+"SWAP_Your_Shift_Field" = "Select Your Shift";
+"SWAP_Other_Name_Field" = "Select Recipient Name";
+"SWAP_Other_Shift_Field" = "Select Recipient Shift";
+"SWAP_Note" = "Note";
+"SWAP_Submit_Button" = "Submit Request";
+"SWAP_Confirm" = "Confirm Swap Shift Request";
+"SWAP_Response_Title" = "wants to swap a shift with";
+"SWAP_Accept_Confirm" = "Confirm Accept Swap Shift Request";
+
+"SWAP_DETAIL_Header" = "Swap Shift";
+"SWAP_DETAIL_Date" = "Date";
+"SWAP_DETAIL_Time" = "Time";
+
+////////////////////////////////////////////////////////////////////////////////////
+
+//APPROVE
+"APPROVE_MENU_Header" = "Head Approval";
+"APPROVE_LEAVE_Header" = "Leave Approve";
+"APPROVE_ATTENDANCE_Header" = "Working Hours Approve";
+"APPROVE_OT_Header" = "OT Approve";
+"APPROVE_EDOC_Header" = "e-Document Approve";
+"APPROVE_SWAP_Header" = "Swap Shift Approve";
+"APPROVE_REIMBURSE_Header" = "Reimburse Approve";
+"APPROVE_Tab_1" = "Request";
+"APPROVE_Tab_2" = "History";
+"APPROVE_Approve" = "Approve";
+"APPROVE_Confirm" = "Confirm Approve";
+"APPROVE_Reject" = "Reject";
+"APPROVE_Reject_Confirm" = "Confirm Reject";
+
+"APPROVE_DETAIL_LEAVE_Header" = "Leave Detail";
+"APPROVE_DETAIL_ATTENDANCE_Header" = "Working Hours Detail";
+"APPROVE_DETAIL_OT_Header" = "OT Detail";
+"APPROVE_DETAIL_SWAP_Header" = "Swap Shift Detail";
+"APPROVE_DETAIL_Default_Reject_Reason" = "Enter some reason if you want to reject";
+
+////////////////////////////////////////////////////////////////////////////////////
+
+//REWARD TAB
+"REWARD_Header" = "Reward";
+"REWARD_Point" = "Points";
+"REWARD_Menu" = "Menu";
+"REWARD_Recommend" = "Recommend";
+"REWARD_SeeAll" = "See all";
+
+"REWARD_DETAIL_Header" = "Reward Detail";
+"REWARD_DETAIL_Out" = "Out of stock";
+"REWARD_DETAIL_Insufficient" = "Insufficient Point";
+"REWARD_DETAIL_Redeem" = "Redeem";
+"REWARD_DETAIL_Redeem_Confirm" = "Confirm Redeem";
+"REWARD_DETAIL_Alert_Expire" = "Expires";
+
+"REWARD_COUPON_Header" = "My Coupon";
+"REWARD_COUPON_Tab_1" = "Valid";
+"REWARD_COUPON_Tab_2" = "Used";
+"REWARD_COUPON_Tab_3" = "Expired";
+"REWARD_COUPON_Use_Now" = "Use now";
+"REWARD_COUPON_Use_Now" = "Used";
+"REWARD_COUPON_Expired" = "Expired";
+
+"REWARD_COUPON_Valid" = "Valid Coupon";
+"REWARD_COUPON_Use_Button" = "Use Coupon";
+"REWARD_COUPON_Used" = "Used Coupon";
+"REWARD_COUPON_Used_Button" = "Used";
+"REWARD_COUPON_Use_Confirm" = "Confirm Use Coupon";
+"REWARD_COUPON_QR_Expire" = "This coupon expires at";
+"REWARD_COUPON_QR_Remark" = "Your redeem code will also be sent to your SMS & E-mail";
+
+//SEND STICKER
+"STICKER_Header" = "Send Sticker";
+"STICKER_Recommend" = "Recommend";
+"STICKER_All" = "All";
+"STICKER_Remain" = "Remain";
+"STICKER_Already_Sent" = "Already Sent Gift";
+"STICKER_Reach_Max" = "You reached maximum limit for today";
+
+"STICKER_HEAD_Header" = "Send Head Point";
+"STICKER_HEAD_Your_Team" = "Your Team";
+
+"STICKER_SEND_Header" = "Send Sticker";
+"STICKER_SEND_Send_To" = "Send to :";
+"STICKER_SEND_Note" = "Note";
+"STICKER_SEND_Remark" = "Write something to receiver";
+"STICKER_SEND_Submit_Button" = "Send Gift";
+"STICKER_SEND_Confirm" = "Confirm Send Sticker";
+
+"STICKER_COMPLETE_Header" = "Complete";
+"STICKER_COMPLETE_Title" = "Gift sent";
+"STICKER_COMPLETE_Done_Button" = "Done";
+
+//MISSION
+"MISSION_Header" = "Mission";
+"MISSION_Routine" = "Routine Points";
+"MISSION_Mission" = "Mission Point";
+
+"MISSION_HISTORY_Header" = "History";
+
+//RANKING
+"RANKING_Header" = "Ranking";
+"RANKING_Tab_1" = "All ranks";
+"RANKING_Tab_2" = "Monthly ranking";
+
+////////////////////////////////////////////////////////////////////////////////////
+
+//EDOC
+"EDOC_MORE_Header" = "Category";
+"EDOC_Header" = "e-Document";
+"EDOC_Tab_1" = "Request";
+"EDOC_Tab_2" = "History";
+"EDOC_Language_Field" = "Select Language";
+"EDOC_Submit_Button" = "Submit Request";
+"EDOC_Confirm" = "Confirm Submit Request";
+
+"EDOC_SLIP_Period" = "Period:";
+"EDOC_SLIP_Confirm" = "Confirm Payslip Request";
+
+"EDOC_DETAIL_Header" = "e-Document";
+"EDOC_DETAIL_Button_PDF" = "View PDF";
+"EDOC_DETAIL_Request" = "Request";
+"EDOC_DETAIL_Type" = "e-Document Type";
+"EDOC_DETAIL_Button_Cancel" = "Cancel";
+"EDOC_DETAIL_Button_Reject" = "Reject";
+"EDOC_DETAIL_Button_Approve" = "Approve";
+
+"EDOC_WEB_Button_Send_Email" = "Sent to email";
+"EDOC_WEB_Email_Field" = "email";
+"EDOC_WEB_Button_Send" = "Send";
+"EDOC_WEB_Button_Cancel" = "Cancel";
+
+//REPORT
+"REPORT_HEADER" = "Report";
+"REPORT_Work" = "Working Day";
+"REPORT_Late" = "Late";
+"REPORT_Absent" = "Absent";
+"REPORT_Leave" = "Leave";
+
+//WARNING LETTER
+"WARNING_HEADER" = "Warning Letter History";
+"WARNING_HEAD_HEADER" = "Warning Letter";
+"WARNING_HEAD_Tab_1" = "Request";
+"WARNING_HEAD_Tab_2" = "Status";
+"WARNING_HEAD_Tab_3" = "History";
+
+"WARNING_REQUEST_Person_Field" = "Select Person";
+"WARNING_REQUEST_Type_Field" = "Select Warning Type";
+"WARNING_REQUEST_Start_Field" = "Start Date";
+"WARNING_REQUEST_End_Field" = "End Date";
+"WARNING_REQUEST_Reason" = "Reason";
+"WARNING_REQUEST_Submit_Button" = "Submit Request";
+"WARNING_REQUEST_Confirm" = "Confirm Warning Letter Request";
+
+"WARNING_HISTORY_Title" = "Warning Letter";
+
+"WARNING_DETAIL_Header" = "Warning Letter";
+"WARNING_DETAIL_Button_Letter" = "View letter";
+"WARNING_DETAIL_Request" = "Reciever";
+"WARNING_DETAIL_Type" = "Warning Type";
+"WARNING_DETAIL_Duration" = "Duration";
+"WARNING_DETAIL_Reason" = "Reason";
+"WARNING_DETAIL_Button_Accept" = "Accept and Send Warning Letter to Email";
+"WARNING_DETAIL_Confirm" = "Confirm Accept";
+
+//REIMBURSE
+"REIMBURSE_Confirm" = "Confirm Reimburse Request";
+"REIMBURSE_REQUEST_Type_Field" = "Select Reimburse Type";
+"REIMBURSE_REQUEST_Amount_Field" = "Enter Amount";
+"REIMBURSE_DETAIL_Amount_Field" = "Amount";
+
+//QR SALARY
+"QR_SALARY_Detail" = "Upload your bank account QR Code image";
+"QR_SALARY_Button_Upload" = "Upload QR Code image";
+"QR_SALARY_Button_Delete" = "Delete QR Code";
+"QR_SALARY_Button_Download" = "Save image";
+
+//PROBATION
+"PROBATION_REQUEST_Name_Field" = "Select Person";
+"PROBATION_REQUEST_Position_Field" = "Job Position";
+"PROBATION_REQUEST_StartDate_Field" = "Start Date";
+"PROBATION_REQUEST_RequestDate_Field" = "Evaluation Date";
+"PROBATION_REQUEST_Info1" = "Probation Evaluation";
+"PROBATION_REQUEST_Info2" = "Explanation";
+"PROBATION_REQUEST_Info3" = "Level 5\nMeans performance results significantly exceed the specified standards\n\nLevel 4\nMeans performance results exceed the specified standards\n\nLevel 3\nMeans performance results The work meets the specified standards.\n\nLevel 2\n means that the work performance is lower than the specified standards.\n\nLevel 1\n means that the work performance is significantly lower than the specified standards.";
+"PROBATION_SCORE" = "Point";
+"PROBATION_SCORE_Name" = "Person being evaluated";
+"PROBATION_HEAD_Name" = "Assessor";
+"PROBATION_RESULT_Score" = "Total score";
+"PROBATION_RESULT_Fail" = "Fail";
+"PROBATION_RESULT_Pass" = "Pass";
+"PROBATION_RESULT_Type" = "Choose a reason";
+"PROBATION_Note" = "Comment";
+"PROBATION_Confirm" = "Confirm Evaluation";
+
+//PEOPLE SELECTOR
+"PEOPLE_HEADER" = "Select Person";
+
+////////////////////////////////////////////////////////////////////////////////////
+
+//SETTING
+"SETTING_Header" = "Setting";
+"SETTING_LANGUAGE_Header" = "Language";
+"SETTING_COMPANY_Header" = "Switch Company";
+
+//CHANGE PASSWORD
+"CHANGE_PASSWORD_Header" = "Change Password";
+"CHANGE_PASSWORD_Current_Field" = "Current Password";
+"CHANGE_PASSWORD_Title_Header" = "New Password must contain:";
+"CHANGE_PASSWORD_Title_Condition_1" = "At least 8 characters";
+"CHANGE_PASSWORD_Title_Condition_2" = "At least one lowercase letter (a-z)";
+"CHANGE_PASSWORD_Title_Condition_3" = "At least one number (0-9)";
+"CHANGE_PASSWORD_Title_Condition_4" = "At least one special character";
+"CHANGE_PASSWORD_NewPass_Field" = "New Password";
+"CHANGE_PASSWORD_ConfirmNewPass_Field" = "Confirm New Password";
+"CHANGE_PASSWORD_Title_Confirm" = "Confirm New Password not match";
+"CHANGE_PASSWORD_Submit_Button" = "Submit";
+
+//CAMERA
+"Camera" = "Camera";
+"Photo Library" = "Photo Library";
+"GO_Setting" = "Go to Setting";
+"Warning" = "Warning";
+"CAMERA_Denied" = "Your Camera Access Denied";
+"CAMERA_Allow" = "Please allow camera access to upload profile photo";
+"CAMERA_No" = "You don't have camera";
+"PHOTO_Denied" = "Your Photo Library Access Denied";
+"PHOTO_Allow" = "Please allow photo library access to upload profile photo";
+"PHOTO_No" = "You don't have permission to access gallery.";

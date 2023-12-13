@@ -1,0 +1,90 @@
+
+/* Class = "UIButton"; normalTitle = "Forget Password ?"; ObjectID = "2Lv-Em-qv0"; */
+"2Lv-Em-qv0.normalTitle" = "Forget Password ?";
+
+/* Class = "UILabel"; text = "Sign in to continue!"; ObjectID = "7CF-0d-wBG"; */
+"7CF-0d-wBG.text" = "Sign in to continue!";
+
+/* Class = "UILabel"; text = "Confirm Passcode"; ObjectID = "7SQ-gv-qdg"; */
+"7SQ-gv-qdg.text" = "Confirm Passcode";
+
+/* Class = "UILabel"; text = "or continue with"; ObjectID = "8UI-9n-luY"; */
+"8UI-9n-luY.text" = "or continue with";
+
+/* Class = "UIButton"; normalTitle = "Next"; ObjectID = "8uQ-Tb-3MQ"; */
+"8uQ-Tb-3MQ.normalTitle" = "Next";
+
+/* Class = "UILabel"; text = "Enter the email associated with your account and we'll send an email with instructions to reset your password."; ObjectID = "B2X-vk-uwI"; */
+"B2X-vk-uwI.text" = "Enter the email associated with your account and we'll send an email with instructions to reset your password.";
+
+/* Class = "UILabel"; text = "Password"; ObjectID = "CwC-lA-VA0"; */
+"CwC-lA-VA0.text" = "Password";
+
+/* Class = "UILabel"; text = "Reset Password"; ObjectID = "G6B-rA-ydT"; */
+"G6B-rA-ydT.text" = "Reset Password";
+
+/* Class = "UIButton"; normalTitle = "Confirm"; ObjectID = "Igd-5p-t2F"; */
+"Igd-5p-t2F.normalTitle" = "Confirm";
+
+/* Class = "UIButton"; normalTitle = "Skip"; ObjectID = "KFc-Uy-Euf"; */
+"KFc-Uy-Euf.normalTitle" = "Skip";
+
+/* Class = "UIButton"; normalTitle = "Next"; ObjectID = "Lde-oH-nj3"; */
+"Lde-oH-nj3.normalTitle" = "Next";
+
+/* Class = "UILabel"; text = "Welcome,"; ObjectID = "MG7-uu-eeS"; */
+"MG7-uu-eeS.text" = "Welcome,";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "N5B-H1-gUW"; */
+"N5B-H1-gUW.placeholder" = "Email";
+
+/* Class = "UILabel"; text = "Email"; ObjectID = "Pic-FZ-Gv9"; */
+"Pic-FZ-Gv9.text" = "Email";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "SL1-eB-9j3"; */
+"SL1-eB-9j3.placeholder" = "Email";
+
+/* Class = "UILabel"; text = "For the security of your account, please enter the security code"; ObjectID = "V9o-gQ-gZf"; */
+"V9o-gQ-gZf.text" = "For the security of your account, please enter the security code";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "WSV-0w-3bT"; */
+"WSV-0w-3bT.placeholder" = "Password";
+
+/* Class = "UILabel"; text = "Enter Passcode"; ObjectID = "Zp9-b5-uN0"; */
+"Zp9-b5-uN0.text" = "Enter Passcode";
+
+/* Class = "UILabel"; text = "Points"; ObjectID = "c9X-7s-178"; */
+"c9X-7s-178.text" = "Points";
+
+/* Class = "UIButton"; normalTitle = "Sign In"; ObjectID = "e8N-4W-Ffc"; */
+"e8N-4W-Ffc.normalTitle" = "Sign In";
+
+/* Class = "UIButton"; normalTitle = "Send"; ObjectID = "gzE-34-kOD"; */
+"gzE-34-kOD.normalTitle" = "Send";
+
+/* Class = "UILabel"; text = "New Passcode"; ObjectID = "hBg-Cc-Edm"; */
+"hBg-Cc-Edm.text" = "New Passcode";
+
+/* Class = "UIButton"; normalTitle = "Forget Passcode"; ObjectID = "mFT-VR-A9a"; */
+"mFT-VR-A9a.normalTitle" = "Forget Passcode";
+
+/* Class = "UILabel"; text = "+0"; ObjectID = "pV4-Ps-lG0"; */
+"pV4-Ps-lG0.text" = "+0";
+
+/* Class = "UILabel"; text = "For the security of your account, please enter the security code"; ObjectID = "see-s5-Rek"; */
+"see-s5-Rek.text" = "For the security of your account, please enter the security code";
+
+/* Class = "UILabel"; text = "For the security of your account, please enter the security code"; ObjectID = "vMr-Bi-nKW"; */
+"vMr-Bi-nKW.text" = "For the security of your account, please enter the security code";
+
+/* Class = "UILabel"; text = "ทุกกิจกรรมคือคะแนน"; ObjectID = "vt0-Kt-fZ0"; */
+"vt0-Kt-fZ0.text" = "ทุกกิจกรรมคือคะแนน";
+
+/* Class = "UILabel"; text = "คุณ ได้รับ 0 คะแนนจากการอ่าน Tutorial"; ObjectID = "vwp-t2-8tM"; */
+"vwp-t2-8tM.text" = "คุณ ได้รับ 0 คะแนนจากการอ่าน Tutorial";
+
+/* Class = "UILabel"; text = "Email address"; ObjectID = "wH5-UD-vrA"; */
+"wH5-UD-vrA.text" = "Email address";
+
+/* Class = "UIButton"; normalTitle = "Receive point"; ObjectID = "wOW-cf-UHB"; */
+"wOW-cf-UHB.normalTitle" = "Receive point";

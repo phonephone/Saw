@@ -1,0 +1,576 @@
+
+/* Class = "UILabel"; text = "13:00 - 17:00"; ObjectID = "0QL-SR-hr0"; */
+"0QL-SR-hr0.text" = "13:00 - 17:00";
+
+/* Class = "UILabel"; text = "Today"; ObjectID = "0cw-MV-R4X"; */
+"0cw-MV-R4X.text" = "Today";
+
+/* Class = "UILabel"; text = "Working Hours"; ObjectID = "0qj-l2-glg"; */
+"0qj-l2-glg.text" = "Working Hours";
+
+/* Class = "UILabel"; text = "Bannai Ratchada Soi5 Apartment"; ObjectID = "1BV-go-Juk"; */
+"1BV-go-Juk.text" = "Bannai Ratchada Soi5 Apartment";
+
+/* Class = "UIButton"; normalTitle = "Update"; ObjectID = "1eR-Pi-KU4"; */
+"1eR-Pi-KU4.normalTitle" = "Update";
+
+/* Class = "UITextField"; placeholder = "Time Attendance Request"; ObjectID = "1eo-4c-av6"; */
+"1eo-4c-av6.placeholder" = "Time Attendance Request";
+
+/* Class = "UILabel"; text = "Leave Type"; ObjectID = "1fV-WI-1iV"; */
+"1fV-WI-1iV.text" = "Leave Type";
+
+/* Class = "UILabel"; text = "08:00 - 12:00, 10 Sep 2021"; ObjectID = "1mb-Qo-KB3"; */
+"1mb-Qo-KB3.text" = "08:00 - 12:00, 10 Sep 2021";
+
+/* Class = "UIButton"; normalTitle = "QR Code"; ObjectID = "2bb-cb-xOW"; */
+"2bb-cb-xOW.normalTitle" = "QR Code";
+
+/* Class = "UILabel"; text = "Cheif Technology Officer"; ObjectID = "2g1-rx-mWQ"; */
+"2g1-rx-mWQ.text" = "Cheif Technology Officer";
+
+/* Class = "UIButton"; normalTitle = "Approval"; ObjectID = "3HV-7R-4rd"; */
+"3HV-7R-4rd.normalTitle" = "Approval";
+
+/* Class = "UIButton"; normalTitle = "History"; ObjectID = "4eE-wc-8no"; */
+"4eE-wc-8no.normalTitle" = "History";
+
+/* Class = "UILabel"; text = "Note : Visit my parents"; ObjectID = "59E-KN-ZIT"; */
+"59E-KN-ZIT.text" = "Note : Visit my parents";
+
+/* Class = "UILabel"; text = "Leave Request"; ObjectID = "5CL-JM-xNm"; */
+"5CL-JM-xNm.text" = "Leave Request";
+
+/* Class = "UILabel"; text = "Phongkhanet Kaewrit"; ObjectID = "5Vl-tL-Q7W"; */
+"5Vl-tL-Q7W.text" = "Phongkhanet Kaewrit";
+
+/* Class = "UILabel"; text = "Pending"; ObjectID = "5Yi-uX-lUe"; */
+"5Yi-uX-lUe.text" = "Pending";
+
+/* Class = "UITextView"; text = "Reason"; ObjectID = "5du-e0-MHe"; */
+"5du-e0-MHe.text" = "Reason";
+
+/* Class = "UIButton"; normalTitle = "Reject"; ObjectID = "6me-mt-Ixo"; */
+"6me-mt-Ixo.normalTitle" = "Reject";
+
+/* Class = "UILabel"; text = "22 Sep 2021"; ObjectID = "7G0-Fi-LA4"; */
+"7G0-Fi-LA4.text" = "22 Sep 2021";
+
+/* Class = "UIButton"; normalTitle = "Request"; ObjectID = "7RD-wf-SFi"; */
+"7RD-wf-SFi.normalTitle" = "Request";
+
+/* Class = "UILabel"; text = "For the accuracy of the information and your benefits\nPlease update all attendance before OT Request."; ObjectID = "7fU-Cp-cSx"; */
+"7fU-Cp-cSx.text" = "For the accuracy of the information and your benefits\nPlease update all attendance before OT Request.";
+
+/* Class = "UILabel"; text = "Change To"; ObjectID = "8OP-VB-ddj"; */
+"8OP-VB-ddj.text" = "Change To";
+
+/* Class = "UILabel"; text = "Leaves"; ObjectID = "91Y-3n-hKP"; */
+"91Y-3n-hKP.text" = "Leaves";
+
+/* Class = "UILabel"; text = "Approve"; ObjectID = "9KF-KG-Z6c"; */
+"9KF-KG-Z6c.text" = "Approve";
+
+/* Class = "UILabel"; text = "Used"; ObjectID = "9LS-DJ-dhV"; */
+"9LS-DJ-dhV.text" = "Used";
+
+/* Class = "UITextView"; text = "Reason Reason Reason Reason Reason Reason Reason Reason Reason Reason"; ObjectID = "9Q8-mp-ZM3"; */
+"9Q8-mp-ZM3.text" = "Reason Reason Reason Reason Reason Reason Reason Reason Reason Reason";
+
+/* Class = "UILabel"; text = "Sent date   19 Sep 2021"; ObjectID = "9jn-CD-q5X"; */
+"9jn-CD-q5X.text" = "Sent date   19 Sep 2021";
+
+/* Class = "UITextField"; placeholder = "Select Month,Year"; ObjectID = "Alk-Wp-eEl"; */
+"Alk-Wp-eEl.placeholder" = "Select Month,Year";
+
+/* Class = "UILabel"; text = "OT Time : 17:00 - 18:00"; ObjectID = "BRf-6X-boS"; */
+"BRf-6X-boS.text" = "OT Time : 17:00 - 18:00";
+
+/* Class = "UILabel"; text = "Today"; ObjectID = "BSn-JY-xm0"; */
+"BSn-JY-xm0.text" = "Today";
+
+/* Class = "UIButton"; normalTitle = "Request"; ObjectID = "BaY-W9-ppg"; */
+"BaY-W9-ppg.normalTitle" = "Request";
+
+/* Class = "UILabel"; text = "5"; ObjectID = "Btv-D3-Mxf"; */
+"Btv-D3-Mxf.text" = "5";
+
+/* Class = "UILabel"; text = "Frontend Developer"; ObjectID = "DGp-pK-oWa"; */
+"DGp-pK-oWa.text" = "Frontend Developer";
+
+/* Class = "UILabel"; text = "Phongkhanet Kaewrit"; ObjectID = "Dkq-Vi-kUW"; */
+"Dkq-Vi-kUW.text" = "Phongkhanet Kaewrit";
+
+/* Class = "UILabel"; text = "7 Hours"; ObjectID = "DrY-Vw-drM"; */
+"DrY-Vw-drM.text" = "7 Hours";
+
+/* Class = "UILabel"; text = "Vacation Leaves"; ObjectID = "E6R-vs-2DX"; */
+"E6R-vs-2DX.text" = "Vacation Leaves";
+
+/* Class = "UILabel"; text = "Please update all Attendance Request !"; ObjectID = "EIT-ir-ZA6"; */
+"EIT-ir-ZA6.text" = "Please update all Attendance Request !";
+
+/* Class = "UILabel"; text = "27 September 2021"; ObjectID = "EbT-a5-2fq"; */
+"EbT-a5-2fq.text" = "27 September 2021";
+
+/* Class = "UILabel"; text = "OT Request"; ObjectID = "F9R-6g-OBt"; */
+"F9R-6g-OBt.text" = "OT Request";
+
+/* Class = "UILabel"; text = "Leave Detail"; ObjectID = "FPe-Jl-Lob"; */
+"FPe-Jl-Lob.text" = "Leave Detail";
+
+/* Class = "UILabel"; text = "Swap Shift"; ObjectID = "FTG-fa-yaJ"; */
+"FTG-fa-yaJ.text" = "Swap Shift";
+
+/* Class = "UILabel"; text = "Note : Visit my parents"; ObjectID = "FeQ-Ob-dlv"; */
+"FeQ-Ob-dlv.text" = "Note : Visit my parents";
+
+/* Class = "UILabel"; text = "Request"; ObjectID = "GLX-uW-GuP"; */
+"GLX-uW-GuP.text" = "Request";
+
+/* Class = "UILabel"; text = "Phongkhanet Kaewrit"; ObjectID = "GV4-pe-NNA"; */
+"GV4-pe-NNA.text" = "Phongkhanet Kaewrit";
+
+/* Class = "UILabel"; text = "8:30"; ObjectID = "GfR-Or-qHm"; */
+"GfR-Or-qHm.text" = "8:30";
+
+/* Class = "UITextField"; placeholder = "End Date"; ObjectID = "H0W-ic-K9D"; */
+"H0W-ic-K9D.placeholder" = "End Date";
+
+/* Class = "UILabel"; text = "27 September 2021"; ObjectID = "H6v-Bt-aoI"; */
+"H6v-Bt-aoI.text" = "27 September 2021";
+
+/* Class = "UILabel"; text = "Awiruth Suwannarat"; ObjectID = "HFB-KU-dHL"; */
+"HFB-KU-dHL.text" = "Awiruth Suwannarat";
+
+/* Class = "UILabel"; text = "Swap Shift Request"; ObjectID = "HGI-63-dic"; */
+"HGI-63-dic.text" = "Swap Shift Request";
+
+/* Class = "UILabel"; text = "Total 1 Hours"; ObjectID = "HMH-I4-t1r"; */
+"HMH-I4-t1r.text" = "Total 1 Hours";
+
+/* Class = "UIButton"; normalTitle = "Reject"; ObjectID = "HTw-ix-WMd"; */
+"HTw-ix-WMd.normalTitle" = "Reject";
+
+/* Class = "UILabel"; text = "Kasidate Suksart"; ObjectID = "HUp-sB-gbE"; */
+"HUp-sB-gbE.text" = "Kasidate Suksart";
+
+/* Class = "UILabel"; text = "Check in Late"; ObjectID = "Hq8-Y9-CEm"; */
+"Hq8-Y9-CEm.text" = "Check in Late";
+
+/* Class = "UILabel"; text = "September 22,2021 - September 25,2021"; ObjectID = "IeV-eZ-ZkI"; */
+"IeV-eZ-ZkI.text" = "September 22,2021 - September 25,2021";
+
+/* Class = "UILabel"; text = "Today"; ObjectID = "Ix5-i0-fDw"; */
+"Ix5-i0-fDw.text" = "Today";
+
+/* Class = "UIButton"; normalTitle = "History"; ObjectID = "J30-xS-mhL"; */
+"J30-xS-mhL.normalTitle" = "History";
+
+/* Class = "UILabel"; text = "9:00"; ObjectID = "J80-gS-vq4"; */
+"J80-gS-vq4.text" = "9:00";
+
+/* Class = "UIButton"; normalTitle = "Approve"; ObjectID = "Jiq-JX-Xf0"; */
+"Jiq-JX-Xf0.normalTitle" = "Approve";
+
+/* Class = "UITextView"; text = "Note"; ObjectID = "JuU-CO-t1c"; */
+"JuU-CO-t1c.text" = "Note";
+
+/* Class = "UIButton"; normalTitle = "History"; ObjectID = "Jzc-jp-fDd"; */
+"Jzc-jp-fDd.normalTitle" = "History";
+
+/* Class = "UILabel"; text = "Request"; ObjectID = "K2y-MX-NgQ"; */
+"K2y-MX-NgQ.text" = "Request";
+
+/* Class = "UILabel"; text = "27 September 2021"; ObjectID = "KGd-Bg-qUO"; */
+"KGd-Bg-qUO.text" = "27 September 2021";
+
+/* Class = "UILabel"; text = "Phonekhanet Kaewrit"; ObjectID = "MAN-It-8a7"; */
+"MAN-It-8a7.text" = "Phonekhanet Kaewrit";
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "MDI-Sd-1io"; */
+"MDI-Sd-1io.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
+
+/* Class = "UILabel"; text = "Pending"; ObjectID = "MLp-o6-MHz"; */
+"MLp-o6-MHz.text" = "Pending";
+
+/* Class = "UITextField"; text = "Phongkhanet Kaewrit"; ObjectID = "Mi9-c2-snP"; */
+"Mi9-c2-snP.text" = "Phongkhanet Kaewrit";
+
+/* Class = "UIButton"; normalTitle = "History"; ObjectID = "NF1-gU-e47"; */
+"NF1-gU-e47.normalTitle" = "History";
+
+/* Class = "UILabel"; text = "Swap Shift"; ObjectID = "Nhk-dr-nng"; */
+"Nhk-dr-nng.text" = "Swap Shift";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "Nja-4x-av6"; */
+"Nja-4x-av6.normalTitle" = "Cancel";
+
+/* Class = "UILabel"; text = "08:00 - 12:00, 10 Sep 2021"; ObjectID = "Nkc-Rb-Ayn"; */
+"Nkc-Rb-Ayn.text" = "08:00 - 12:00, 10 Sep 2021";
+
+/* Class = "UILabel"; text = "Swap Shift"; ObjectID = "Nr6-UI-XoM"; */
+"Nr6-UI-XoM.text" = "Swap Shift";
+
+/* Class = "UILabel"; text = "Fri, Sep 2021 14:00"; ObjectID = "Nrg-2l-oJz"; */
+"Nrg-2l-oJz.text" = "Fri, Sep 2021 14:00";
+
+/* Class = "UILabel"; text = "OT Request"; ObjectID = "OJW-MM-haY"; */
+"OJW-MM-haY.text" = "OT Request";
+
+/* Class = "UIButton"; normalTitle = "Approve"; ObjectID = "OhC-vw-euu"; */
+"OhC-vw-euu.normalTitle" = "Approve";
+
+/* Class = "UILabel"; text = "8:30"; ObjectID = "PIF-vQ-54a"; */
+"PIF-vQ-54a.text" = "8:30";
+
+/* Class = "UILabel"; text = "Annual Leave"; ObjectID = "PdA-b0-JYs"; */
+"PdA-b0-JYs.text" = "Annual Leave";
+
+/* Class = "UILabel"; text = "Awiruth Suwannarat"; ObjectID = "PtB-p6-npG"; */
+"PtB-p6-npG.text" = "Awiruth Suwannarat";
+
+/* Class = "UILabel"; text = "9:00"; ObjectID = "QBI-ts-uL3"; */
+"QBI-ts-uL3.text" = "9:00";
+
+/* Class = "UIButton"; normalTitle = "Half-Date"; ObjectID = "QLU-wX-ctT"; */
+"QLU-wX-ctT.normalTitle" = "Half-Date";
+
+/* Class = "UILabel"; text = "Annual Leave"; ObjectID = "QLq-Yq-KgB"; */
+"QLq-Yq-KgB.text" = "Annual Leave";
+
+/* Class = "UIButton"; normalTitle = "Approval"; ObjectID = "QUW-lM-h2A"; */
+"QUW-lM-h2A.normalTitle" = "Approval";
+
+/* Class = "UILabel"; text = "OT Time : 17:00 - 19:00"; ObjectID = "R3u-hq-hKH"; */
+"R3u-hq-hKH.text" = "OT Time : 17:00 - 19:00";
+
+/* Class = "UILabel"; text = "Request"; ObjectID = "R5R-hV-ceI"; */
+"R5R-hV-ceI.text" = "Request";
+
+/* Class = "UILabel"; text = "17 October 2021"; ObjectID = "RtX-dc-Ejo"; */
+"RtX-dc-Ejo.text" = "17 October 2021";
+
+/* Class = "UILabel"; text = "Request"; ObjectID = "RuD-xQ-rFx"; */
+"RuD-xQ-rFx.text" = "Request";
+
+/* Class = "UILabel"; text = "100 Hours"; ObjectID = "SX0-GF-C5o"; */
+"SX0-GF-C5o.text" = "100 Hours";
+
+/* Class = "UIButton"; normalTitle = "Request"; ObjectID = "TEv-QS-61T"; */
+"TEv-QS-61T.normalTitle" = "Request";
+
+/* Class = "UITextField"; placeholder = "Select Month,Year"; ObjectID = "Tns-XN-6By"; */
+"Tns-XN-6By.placeholder" = "Select Month,Year";
+
+/* Class = "UIButton"; normalTitle = "Full-Date"; ObjectID = "TwW-ry-1Ux"; */
+"TwW-ry-1Ux.normalTitle" = "Full-Date";
+
+/* Class = "UITextField"; placeholder = "Start Date"; ObjectID = "U0A-67-dXW"; */
+"U0A-67-dXW.placeholder" = "Start Date";
+
+/* Class = "UIButton"; normalTitle = "History"; ObjectID = "UBr-Vj-4kT"; */
+"UBr-Vj-4kT.normalTitle" = "History";
+
+/* Class = "UILabel"; text = "This Month"; ObjectID = "UUk-39-g4n"; */
+"UUk-39-g4n.text" = "This Month";
+
+/* Class = "UILabel"; text = "Approve"; ObjectID = "Uth-5I-y4r"; */
+"Uth-5I-y4r.text" = "Approve";
+
+/* Class = "UITextField"; text = "Date/Time Recipient"; ObjectID = "VbK-Zi-w5s"; */
+"VbK-Zi-w5s.text" = "Date/Time Recipient";
+
+/* Class = "UILabel"; text = "22 October 2021"; ObjectID = "W4h-f7-YfM"; */
+"W4h-f7-YfM.text" = "22 October 2021";
+
+/* Class = "UILabel"; text = "Total"; ObjectID = "WCN-di-lCX"; */
+"WCN-di-lCX.text" = "Total";
+
+/* Class = "UILabel"; text = "25 September 2021"; ObjectID = "WFT-4q-CQ2"; */
+"WFT-4q-CQ2.text" = "25 September 2021";
+
+/* Class = "UILabel"; text = "Remaining"; ObjectID = "WHf-II-yc4"; */
+"WHf-II-yc4.text" = "Remaining";
+
+/* Class = "UITextField"; text = "Select Recipient"; ObjectID = "XIU-S1-LGW"; */
+"XIU-S1-LGW.text" = "Select Recipient";
+
+/* Class = "UITextField"; placeholder = "Select Date"; ObjectID = "XaX-ld-TtG"; */
+"XaX-ld-TtG.placeholder" = "Select Date";
+
+/* Class = "UILabel"; text = "Phongkhanet Kaewrit"; ObjectID = "XhV-Ov-7Ae"; */
+"XhV-Ov-7Ae.text" = "Phongkhanet Kaewrit";
+
+/* Class = "UILabel"; text = "Note : Visit my parents"; ObjectID = "Xhk-uX-GYI"; */
+"Xhk-uX-GYI.text" = "Note : Visit my parents";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "YYr-uf-Pul"; */
+"YYr-uf-Pul.text" = "0";
+
+/* Class = "UIButton"; normalTitle = "GPS"; ObjectID = "YbN-6O-Ufq"; */
+"YbN-6O-Ufq.normalTitle" = "GPS";
+
+/* Class = "UILabel"; text = "Aticha Sunthornponsin wants to swap a shift with Phongkhanet Keawrit"; ObjectID = "Yn3-FA-tA5"; */
+"Yn3-FA-tA5.text" = "Aticha Sunthornponsin wants to swap a shift with Phongkhanet Keawrit";
+
+/* Class = "UILabel"; text = "Total"; ObjectID = "ZWk-cH-PvG"; */
+"ZWk-cH-PvG.text" = "Total";
+
+/* Class = "UIButton"; normalTitle = "Check out"; ObjectID = "Zxg-xg-fgx"; */
+"Zxg-xg-fgx.normalTitle" = "Check out";
+
+/* Class = "UILabel"; text = "Approve"; ObjectID = "aOj-G5-0PF"; */
+"aOj-G5-0PF.text" = "Approve";
+
+/* Class = "UILabel"; text = "25 September 2021"; ObjectID = "aQw-jQ-pdX"; */
+"aQw-jQ-pdX.text" = "25 September 2021";
+
+/* Class = "UILabel"; text = "3 Days"; ObjectID = "aRb-Ed-gNb"; */
+"aRb-Ed-gNb.text" = "3 Days";
+
+/* Class = "UITextField"; placeholder = "Select Month,Year"; ObjectID = "acO-F1-7ae"; */
+"acO-F1-7ae.placeholder" = "Select Month,Year";
+
+/* Class = "UILabel"; text = "Kasidate Suksart"; ObjectID = "arL-cJ-Tnf"; */
+"arL-cJ-Tnf.text" = "Kasidate Suksart";
+
+/* Class = "UILabel"; text = "Attendance Time"; ObjectID = "bW4-9Y-amt"; */
+"bW4-9Y-amt.text" = "Attendance Time";
+
+/* Class = "UIButton"; normalTitle = "Withdraw"; ObjectID = "beE-ht-Rse"; */
+"beE-ht-Rse.normalTitle" = "Withdraw";
+
+/* Class = "UILabel"; text = "Duration"; ObjectID = "bhN-nq-hVu"; */
+"bhN-nq-hVu.text" = "Duration";
+
+/* Class = "UILabel"; text = "13:00 - 17:00"; ObjectID = "cGf-rd-OOc"; */
+"cGf-rd-OOc.text" = "13:00 - 17:00";
+
+/* Class = "UIButton"; normalTitle = "Submit Request"; ObjectID = "cWI-82-ivz"; */
+"cWI-82-ivz.normalTitle" = "Submit Request";
+
+/* Class = "UILabel"; text = "September 22,2021 - September 25,2021"; ObjectID = "ckv-mH-jg6"; */
+"ckv-mH-jg6.text" = "September 22,2021 - September 25,2021";
+
+/* Class = "UILabel"; text = "Note : Visit my parents"; ObjectID = "ckz-hh-H2A"; */
+"ckz-hh-H2A.text" = "Note : Visit my parents";
+
+/* Class = "UILabel"; text = "Pending"; ObjectID = "cng-0Z-AkE"; */
+"cng-0Z-AkE.text" = "Pending";
+
+/* Class = "UILabel"; text = "25 September 2021"; ObjectID = "dE3-2L-kxR"; */
+"dE3-2L-kxR.text" = "25 September 2021";
+
+/* Class = "UILabel"; text = "October, 2021"; ObjectID = "dUq-mA-VO5"; */
+"dUq-mA-VO5.text" = "October, 2021";
+
+/* Class = "UIButton"; normalTitle = "Approval"; ObjectID = "dYV-hr-9xZ"; */
+"dYV-hr-9xZ.normalTitle" = "Approval";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "dYk-gP-jsb"; */
+"dYk-gP-jsb.text" = "0";
+
+/* Class = "UILabel"; text = "22 - 25 Sep 2021"; ObjectID = "dkS-7D-CZp"; */
+"dkS-7D-CZp.text" = "22 - 25 Sep 2021";
+
+/* Class = "UILabel"; text = "22 - 25 Sep 2021"; ObjectID = "eDE-8a-Xqg"; */
+"eDE-8a-Xqg.text" = "22 - 25 Sep 2021";
+
+/* Class = "UILabel"; text = "Approve"; ObjectID = "eZq-A0-NbH"; */
+"eZq-A0-NbH.text" = "Approve";
+
+/* Class = "UILabel"; text = "08:00 - 12:00"; ObjectID = "enc-Ab-t69"; */
+"enc-Ab-t69.text" = "08:00 - 12:00";
+
+/* Class = "UILabel"; text = "Duration"; ObjectID = "faS-gt-tDn"; */
+"faS-gt-tDn.text" = "Duration";
+
+/* Class = "UIButton"; normalTitle = "Request"; ObjectID = "flc-sK-rHM"; */
+"flc-sK-rHM.normalTitle" = "Request";
+
+/* Class = "UILabel"; text = "Leave Request"; ObjectID = "gcK-Zf-mWs"; */
+"gcK-Zf-mWs.text" = "Leave Request";
+
+/* Class = "UILabel"; text = "08:00 - 12:00"; ObjectID = "hKc-cd-lfm"; */
+"hKc-cd-lfm.text" = "08:00 - 12:00";
+
+/* Class = "UILabel"; text = "Leave Request"; ObjectID = "hX5-ak-ToI"; */
+"hX5-ak-ToI.text" = "Leave Request";
+
+/* Class = "UITextField"; text = "Date/Time"; ObjectID = "hel-wk-c4v"; */
+"hel-wk-c4v.text" = "Date/Time";
+
+/* Class = "UILabel"; text = "Cheif Technology Officer"; ObjectID = "hfj-j1-9Mr"; */
+"hfj-j1-9Mr.text" = "Cheif Technology Officer";
+
+/* Class = "UILabel"; text = "Total 1 Hours"; ObjectID = "hoz-4J-cUQ"; */
+"hoz-4J-cUQ.text" = "Total 1 Hours";
+
+/* Class = "UILabel"; text = "99"; ObjectID = "iBW-4H-uKb"; */
+"iBW-4H-uKb.text" = "99";
+
+/* Class = "UILabel"; text = "Phongkhanet Kaewrit"; ObjectID = "ibH-yn-9M9"; */
+"ibH-yn-9M9.text" = "Phongkhanet Kaewrit";
+
+/* Class = "UILabel"; text = "Reject"; ObjectID = "idS-Qa-XWZ"; */
+"idS-Qa-XWZ.text" = "Reject";
+
+/* Class = "UILabel"; text = "Reason"; ObjectID = "jE1-8M-Eig"; */
+"jE1-8M-Eig.text" = "Reason";
+
+/* Class = "UILabel"; text = "September 22,2021 - September 25,2021"; ObjectID = "jJ7-Vl-8rG"; */
+"jJ7-Vl-8rG.text" = "September 22,2021 - September 25,2021";
+
+/* Class = "UILabel"; text = "Kasidate Suksart"; ObjectID = "jJ9-cx-NVu"; */
+"jJ9-cx-NVu.text" = "Kasidate Suksart";
+
+/* Class = "UILabel"; text = "Annual Leave"; ObjectID = "jLL-wT-4nx"; */
+"jLL-wT-4nx.text" = "Annual Leave";
+
+/* Class = "UIButton"; normalTitle = "Submit Request"; ObjectID = "jj5-8G-buu"; */
+"jj5-8G-buu.normalTitle" = "Submit Request";
+
+/* Class = "UILabel"; text = "22 October 2021"; ObjectID = "kEM-Tv-ORf"; */
+"kEM-Tv-ORf.text" = "22 October 2021";
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "kLo-qS-xKh"; */
+"kLo-qS-xKh.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
+
+/* Class = "UILabel"; text = "Attendance Time"; ObjectID = "kMM-XR-5UK"; */
+"kMM-XR-5UK.text" = "Attendance Time";
+
+/* Class = "UILabel"; text = "08:00 - 12:00, 10 Sep 2021"; ObjectID = "kQ7-LU-V5d"; */
+"kQ7-LU-V5d.text" = "08:00 - 12:00, 10 Sep 2021";
+
+/* Class = "UILabel"; text = "Total"; ObjectID = "ky5-Al-UUu"; */
+"ky5-Al-UUu.text" = "Total";
+
+/* Class = "UILabel"; text = "Pending"; ObjectID = "lXq-eO-Xgh"; */
+"lXq-eO-Xgh.text" = "Pending";
+
+/* Class = "UILabel"; text = "Request"; ObjectID = "m9Y-k4-lPb"; */
+"m9Y-k4-lPb.text" = "Request";
+
+/* Class = "UILabel"; text = "08:00 - 12:00"; ObjectID = "m9p-1O-7fu"; */
+"m9p-1O-7fu.text" = "08:00 - 12:00";
+
+/* Class = "UILabel"; text = "08:00 - 12:00, 10 Sep 2021"; ObjectID = "n7M-mf-j7k"; */
+"n7M-mf-j7k.text" = "08:00 - 12:00, 10 Sep 2021";
+
+/* Class = "UIButton"; normalTitle = "History"; ObjectID = "n8L-yK-BbN"; */
+"n8L-yK-BbN.normalTitle" = "History";
+
+/* Class = "UIButton"; normalTitle = "Check in"; ObjectID = "nB0-HK-4o1"; */
+"nB0-HK-4o1.normalTitle" = "Check in";
+
+/* Class = "UILabel"; text = "Approve"; ObjectID = "nFa-pf-5cH"; */
+"nFa-pf-5cH.text" = "Approve";
+
+/* Class = "UILabel"; text = "Cheif Technology Officer"; ObjectID = "nLE-qa-H0n"; */
+"nLE-qa-H0n.text" = "Cheif Technology Officer";
+
+/* Class = "UILabel"; text = "Approve Detail"; ObjectID = "nTr-oh-Odz"; */
+"nTr-oh-Odz.text" = "Approve Detail";
+
+/* Class = "UIButton"; normalTitle = "Sort by"; ObjectID = "nbS-x5-JY6"; */
+"nbS-x5-JY6.normalTitle" = "Sort by";
+
+/* Class = "UILabel"; text = "Head Approval"; ObjectID = "ngv-P2-Ayi"; */
+"ngv-P2-Ayi.text" = "Head Approval";
+
+/* Class = "UILabel"; text = "Aticha Sunthornponsin wants to swap a shift with Phongkhanet Keawrit"; ObjectID = "ntL-4q-rsy"; */
+"ntL-4q-rsy.text" = "Aticha Sunthornponsin wants to swap a shift with Phongkhanet Keawrit";
+
+/* Class = "UIButton"; normalTitle = "Request"; ObjectID = "oBO-i8-CJb"; */
+"oBO-i8-CJb.normalTitle" = "Request";
+
+/* Class = "UILabel"; text = "OT Time : 17:00 - 18:00"; ObjectID = "orH-w5-eaj"; */
+"orH-w5-eaj.text" = "OT Time : 17:00 - 18:00";
+
+/* Class = "UILabel"; text = "Total 2 Hours"; ObjectID = "pCY-1v-gEl"; */
+"pCY-1v-gEl.text" = "Total 2 Hours";
+
+/* Class = "UIButton"; normalTitle = "Submit Request"; ObjectID = "pYN-5P-eNQ"; */
+"pYN-5P-eNQ.normalTitle" = "Submit Request";
+
+/* Class = "UILabel"; text = "22 - 25 Sep 2021"; ObjectID = "paI-bl-ip1"; */
+"paI-bl-ip1.text" = "22 - 25 Sep 2021";
+
+/* Class = "UILabel"; text = "Kasidate Suksart"; ObjectID = "pkd-OI-cD2"; */
+"pkd-OI-cD2.text" = "Kasidate Suksart";
+
+/* Class = "UIButton"; normalTitle = "History"; ObjectID = "poF-8b-RVt"; */
+"poF-8b-RVt.normalTitle" = "History";
+
+/* Class = "UIButton"; normalTitle = "Delete"; ObjectID = "qgb-Xr-ZfP"; */
+"qgb-Xr-ZfP.normalTitle" = "Delete";
+
+/* Class = "UILabel"; text = "Aticha Sunthornponsin wants to swap a shift with Phongkhanet Keawrit"; ObjectID = "quF-fq-xh8"; */
+"quF-fq-xh8.text" = "Aticha Sunthornponsin wants to swap a shift with Phongkhanet Keawrit";
+
+/* Class = "UILabel"; text = "Aticha Sunthornponsin wants to swap a shift with Phongkhanet Keawrit"; ObjectID = "r5b-ey-XGd"; */
+"r5b-ey-XGd.text" = "Aticha Sunthornponsin wants to swap a shift with Phongkhanet Keawrit";
+
+/* Class = "UILabel"; text = "Annual Leaves"; ObjectID = "rfc-X6-vHO"; */
+"rfc-X6-vHO.text" = "Annual Leaves";
+
+/* Class = "UIButton"; normalTitle = "Request"; ObjectID = "rjy-Ij-XX7"; */
+"rjy-Ij-XX7.normalTitle" = "Request";
+
+/* Class = "UILabel"; text = "Awiruth Suwannarat"; ObjectID = "saG-Ht-OIg"; */
+"saG-Ht-OIg.text" = "Awiruth Suwannarat";
+
+/* Class = "UILabel"; text = "Total"; ObjectID = "si7-M5-znV"; */
+"si7-M5-znV.text" = "Total";
+
+/* Class = "UILabel"; text = "Reject"; ObjectID = "sjo-Kh-gd3"; */
+"sjo-Kh-gd3.text" = "Reject";
+
+/* Class = "UIButton"; normalTitle = "Request"; ObjectID = "t7n-0Y-hSL"; */
+"t7n-0Y-hSL.normalTitle" = "Request";
+
+/* Class = "UILabel"; text = "13:00 - 17:00"; ObjectID = "tCG-ga-TG8"; */
+"tCG-ga-TG8.text" = "13:00 - 17:00";
+
+/* Class = "UILabel"; text = "Change To"; ObjectID = "ucm-tb-CYt"; */
+"ucm-tb-CYt.text" = "Change To";
+
+/* Class = "UITextField"; placeholder = "Head of Department"; ObjectID = "uzl-yv-6Df"; */
+"uzl-yv-6Df.placeholder" = "Head of Department";
+
+/* Class = "UIButton"; normalTitle = "Status"; ObjectID = "vli-bI-phb"; */
+"vli-bI-phb.normalTitle" = "Status";
+
+/* Class = "UILabel"; text = "Swap Shift"; ObjectID = "wKz-Sj-Fas"; */
+"wKz-Sj-Fas.text" = "Swap Shift";
+
+/* Class = "UITextField"; placeholder = "Normal Time"; ObjectID = "wcM-1m-Dpg"; */
+"wcM-1m-Dpg.placeholder" = "Normal Time";
+
+/* Class = "UITextField"; placeholder = "Attendance Time"; ObjectID = "wq3-4m-Nhx"; */
+"wq3-4m-Nhx.placeholder" = "Attendance Time";
+
+/* Class = "UILabel"; text = "Duration"; ObjectID = "xXV-NG-WLm"; */
+"xXV-NG-WLm.text" = "Duration";
+
+/* Class = "UILabel"; text = "Frontend Developer"; ObjectID = "xYU-Q5-n3U"; */
+"xYU-Q5-n3U.text" = "Frontend Developer";
+
+/* Class = "UILabel"; text = "Reject"; ObjectID = "xu1-zh-vl2"; */
+"xu1-zh-vl2.text" = "Reject";
+
+/* Class = "UILabel"; text = "20"; ObjectID = "yE1-sz-9C5"; */
+"yE1-sz-9C5.text" = "20";
+
+/* Class = "UITextField"; placeholder = "Leave Type"; ObjectID = "yMr-bR-Oge"; */
+"yMr-bR-Oge.placeholder" = "Leave Type";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "z7Y-dJ-HXJ"; */
+"z7Y-dJ-HXJ.text" = "0";
+
+/* Class = "UILabel"; text = "Attendance Request"; ObjectID = "ze6-Ag-L5X"; */
+"ze6-Ag-L5X.text" = "Attendance Request";
+
+/* Class = "UIButton"; normalTitle = "Submit Request"; ObjectID = "zf0-P7-vNZ"; */
+"zf0-P7-vNZ.normalTitle" = "Submit Request";

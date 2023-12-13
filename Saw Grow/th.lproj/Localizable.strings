@@ -1,0 +1,470 @@
+/* 
+  Localizable.strings
+  Saw Grow
+
+  Created by Truk Karawawattana on 8/8/2565 BE.
+  
+*/
+
+//JSON KEY
+"Name" = "name_th";
+"First_Name" = "first_name";
+"Last_Name" = "last_name";
+"Menu_Name" = "menu_name_th";
+"Category_Name" = "category_name";
+"Request_Name" = "request_name";
+
+//GENERAL
+"Formatter_Locale" = "th";
+"Thai" = "ไทย";
+"English" = "อังกฤษ";
+"Loading" = "กำลังโหลด";
+"Successful" = "สำเร็จ";
+"Empty" = "ไม่พบข้อมูล";
+"Coming_Soon" = "เร็วๆนี้";
+"Confirm" = "ยืนยัน";
+"Cancel" = "ยกเลิก";
+"Delete" = "ลบ";
+"Confirm_Delete" = "ยืนยันการลบ";
+"OK" = "ตกลง";
+"Done" = "เสร็จสิ้น";
+"Day" = "วัน";
+"Request_Date" = "วันที่";
+"Sent_Date" = "วันที่ส่ง";
+"Receive_Date" = "วันที่ได้รับ";
+"MonthYear_Field" = "เลือกเดือน,ปี";
+"Search_Field" = "ค้นหารายชื่อ";
+
+////////////////////////////////////////////////////////////////////////////////////
+
+//LOGIN
+"LOGIN_Header" = "ยินดีต้อนรับ,";
+"LOGIN_Sub_Header" = "ลงชื่อเข้าใช้เพื่อดำเนินการต่อ!";
+"LOGIN_Email_Title" = "อีเมล";
+"LOGIN_Email_Field" = "อีเมลของคุณ";
+"LOGIN_Password_Title" = "รหัสผ่าน";
+"LOGIN_Password_Field" = "รหัสผ่านของคุณ";
+"LOGIN_ForgetPassword_Button" = "ลืมรหัสผ่าน ?";
+"LOGIN_SignIn_Button" = "ลงชื่อเข้าใช้";
+
+//RESET PASSWORD
+"RESET_PASSWORD_Header" = "รีเซ็ตรหัสผ่าน";
+"RESET_PASSWORD_Sub_Header" = "ป้อนอีเมลที่เชื่อมโยงกับบัญชีของคุณ แล้วเราจะส่งเป็นอีเมลพร้อมคำแนะนำในการรีเซ็ตรหัสผ่านของคุณ";
+"RESET_PASSWORD_Email_Title" = "อีเมล";
+"RESET_PASSWORD_Email_Field" = "อีเมลของคุณ";
+"RESET_PASSWORD_Send_Button" = "ส่ง";
+
+//NEW PASSCODE
+"NEW_PASSCODE_Header" = "ตั้งรหัส PIN";
+"NEW_PASSCODE_Sub_Header" = "เพื่อความปลอดภัยของบัญชีของคุณ โปรดตั้งรหัส PIN";
+"NEW_PASSCODE_Next_Button" = "ถัดไป";
+
+//CONFIRM PASSCODE
+"CONFIRM_PASSCODE_Header" = "ยืนยันรหัส PIN";
+"CONFIRM_PASSCODE_Sub_Header" = "เพื่อความปลอดภัยของบัญชีของคุณ โปรดยืนยันรหัส PIN";
+"CONFIRM_PASSCODE_Confirm_Button" = "ยืนยัน";
+
+//ENTER PASSCODE
+"ENTER_PASSCODE_Header" = "รหัส PIN";
+"ENTER_PASSCODE_Sub_Header" = "กรุณากรอกรหัส PIN";
+"ENTER_PASSCODE_ForgetPasscode_Button" = "ลืมรหัส PIN ?";
+
+//TUTORIAL
+"TUTORIAL_KEY_Title" = "title"; //ขาด KEY ภาษาอังกฤษ
+"TUTORIAL_KEY_Description" = "desc"; //ขาด KEY ภาษาอังกฤษ
+"TUTORIAL_Next_Button" = "ถัดไป";
+"TUTORIAL_Next_Button_Done" = "เสร็จสิ้น";
+"TUTORIAL_Skip_Button" = "ข้าม";
+"TUTORIAL_Back_Button" = "กลับ";
+
+//TUTORIAL COMPLETE
+"TUTORIAL_COMPLETE_Point" = "คะแนน";
+"TUTORIAL_COMPLETE_Header" = "ทุกกิจกรรมคือคะแนน";
+"TUTORIAL_COMPLETE_Sub_Header_1" = "คุณได้รับ";
+"TUTORIAL_COMPLETE_Sub_Header_2" = "คะแนนจากการอ่านคู่มือ";
+"TUTORIAL_COMPLETE_Receive_Button" = "ได้รับคะแนน";
+
+////////////////////////////////////////////////////////////////////////////////////
+
+//SIDE MENU
+"SIDE_MENU_Version" = "เวอร์ชัน";
+
+//PROFILE
+"PROFILE_Call_Button" = "  โทร";
+"PROFILE_Email_Button" = "  อีเมล";
+"PROFILE_EmpCard_Button" = "  บัตรพนักงาน";
+"PROFILE_SendSticker_Button" = "  ส่งสติกเกอร์";
+"PROFILE_Status" = "สถานะ";
+"PROFILE_Warning" = "การเตือน";
+"PROFILE_Title_Header" = "ข้อมูลโปรไฟล์";
+"PROFILE_Title_Position" = "ตำแหน่ง";
+"PROFILE_Title_Department" = "แผนก";
+"PROFILE_Title_Head" = "หัวหน้าแผนก";
+"PROFILE_Title_Hire" = "วันที่จ้างงาน";
+"PROFILE_Title_Email" = "อีเมล";
+"PROFILE_Title_Phone" = "เบอร์โทร";
+
+//HOME TAB
+"HOME_Mood_Ask" = "วันนี้คุณรู้สึกอย่างไร ?";
+"HOME_Mood_Bad" = "แย่";
+"HOME_Mood_Neutral" = "ปกติ";
+"HOME_Mood_Good" = "ดี";
+"HOME_Mood_Awesome" = "เยี่ยม";
+
+"HOME_Category" = "หมวดหมู่";
+"HOME_Announcement" = "ประกาศ";
+"HOME_Recommend" = "แนะนำ";
+"HOME_SeeAll" = "ดูทั้งหมด";
+"HOME_Location_Denied" = "การเข้าถึงตำแหน่งของคุณถูกปฏิเสธ";
+"HOME_Location_Allow" = "กรุณาอนุญาตให้เข้าถึงตำแหน่งของคุณเพื่อใช้งาน";
+"HOME_Location_Disable" = "การเข้าถึงตำแหน่งของคุณถูกปิดไว้";
+"HOME_Location_Check" = "กรุณาตรวจสอบการตั้งค่าความเป็นส่วนตัวของอุปกรณ์";
+
+//CALENDAR TAB
+"CALENDAR_Language" = "th";
+"CALENDAR_Sheet_Request" = "คำขอ";
+"CALENDAR_Sheet_Leave" = "คำขอลา";
+
+//NOTIFICATION TAB
+"NOTIFICATION_Header" = "แจ้งเตือน";
+"NOTIFICATION_ReadAll" = "อ่านทั้งหมด";
+"NOTIFICATION_Confirm" = "ยืนยันอ่านทั้งหมด";
+
+//DIRECTORY TAB
+"DIRECTORY_TAB_1" = "A-Z";
+"DIRECTORY_TAB_2" = "รายการโปรด";
+"DIRECTORY_TAB_3" = "ทีมของฉัน";
+"DIRECTORY_TAB_Edit_Button" = "แก้ไข";
+"DIRECTORY_TAB_Done_Button" = "เสร็จ";
+
+//DIRECTORY FAVORITE
+"DIRECTORY_FAVORITE_Header" = "รายการโปรด";
+"DIRECTORY_FAVORITE_Search_Field" = "ค้นหารายชื่อ";
+"DIRECTORY_FAVORITE_Table_Header1" = "รายการโปรด";
+"DIRECTORY_FAVORITE_Table_Header2" = "ทั้งหมด";
+
+////////////////////////////////////////////////////////////////////////////////////
+
+//CHECKIN
+"CHECKIN_Place_Loading" = "กำลังตรวจสอบข้อมูลสถานที่";
+"CHECKIN_Place_Unknow" = "ไม่รู้สถานที่";
+"CHECKIN_Note" = "หมายเหตุ";
+"CHECKIN_Upload" = "แนบรูปภาพ";
+"CHECKIN_In" = "เข้างาน";
+"CHECKIN_Update" = "อัปเดต";
+"CHECKIN_Out" = "ออกงาน";
+"CHECKIN_TouchID" = "เข้างาน, อัปเดตและออกงานด้วย Touch ID";
+
+"CHECKIN_Confirm_In" = "ยืนยันการเข้างาน";
+"CHECKIN_Confirm_Update" = "ยืนยันการอัปเดต";
+"CHECKIN_Confirm_Out" = "ยืนยันการออกงาน";
+"CHECKIN_Confirm_Swipe" = "สไลด์เพื่อยืนยัน";
+
+//LEAVE
+"LEAVE_Header" = "คำขอลา";
+"LEAVE_Tab_1" = "คำขอ";
+"LEAVE_Tab_2" = "สถานะ";
+"LEAVE_Tab_3" = "ประวัติ";
+"LEAVE_Type_Field" = "ประเภทการลา";
+"LEAVE_Start_Date" = "วันที่เริ่มต้น";
+"LEAVE_End_Date" = "วันที่สิ้นสุด";
+"LEAVE_Full_Date" = "เต็มวัน";
+"LEAVE_Half_Date1" = "ครึ่งวันเช้า";
+"LEAVE_Half_Date2" = "ครึ่งวันบ่าย";
+"LEAVE_Reason" = "เหตุผล";
+"LEAVE_Head" = "หัวหน้าผู้อนุมัติ";
+"LEAVE_Submit_Button" = "ส่งคำขอ";
+"LEAVE_Confirm" = "ยืนยันการส่งคำขอลา";
+"LEAVE_Cancel_Employee" = "ยกเลิกโดยพนักงาน";
+
+"LEAVE_STATUS_Title" = "ลาพักร้อน";
+"LEAVE_STATUS_Used" = "ใช้แล้ว";
+"LEAVE_STATUS_Total" = "ทั้งหมด";
+"LEAVE_STATUS_Remain" = "เหลือ";
+
+"LEAVE_DETAIL_Header" = "รายละเอียดคำขอลา";
+"LEAVE_DETAIL_Request" = "คำขอ";
+"LEAVE_DETAIL_Leave_Type" = "ประเภทการลา";
+"LEAVE_DETAIL_Duration" = "ระยะเวลา";
+"LEAVE_DETAIL_Total" = "จำนวนวัน";
+"LEAVE_DETAIL_Reason" = "เหตุผล";
+"LEAVE_DETAIL_Reject_Reason" = "เหตุผลที่ปฏิเสธ";
+"LEAVE_DETAIL_Cancel" = "ยกเลิกคำขอ";
+"LEAVE_DETAIL_Withdraw" = "ถอนคำขอ";
+"LEAVE_DETAIL_Accept" = "ยอมรับคำขอ";
+"LEAVE_DETAIL_Confirm_Cancel" = "ยืนยันการยกเลิกคำขอ";
+"LEAVE_DETAIL_Confirm_Withdraw" = "ยืนยันการถอนคำขอ";
+"LEAVE_DETAIL_Confirm_Accept" = "ยืนยันการยอมรับคำขอ";
+
+//ATTENDANCE
+"ATTENDANCE_Header" = "ปรับเวลาทำงาน";
+"ATTENDANCE_Tab_1" = "คำขอ";
+"ATTENDANCE_Tab_2" = "ประวัติ";
+"ATTENDANCE_Date" = "วันที่ต้องการขอปรับ";
+"ATTENDANCE_Time_Normal" = "เวลาปกติ";
+"ATTENDANCE_Time_Attendance" = "เวลาที่บันทึก";
+"ATTENDANCE_Time_Request" = "เวลาที่ต้องการขอปรับ";
+"ATTENDANCE_Note" = "หมายเหตุ";
+"ATTENDANCE_Submit_Button" = "ส่งคำขอ";
+"ATTENDANCE_Confirm" = "ยืนยันการส่งคำขอปรับเวลา";
+
+"ATTENDANCE_DETAIL_Header" = "รายละเอียดคำขอปรับเวลา";
+"ATTENDANCE_DETAIL_Date" = "วันที่";
+"ATTENDANCE_DETAIL_Attendance_Type" = "ประเภทการปรับเวลา";
+"ATTENDANCE_DETAIL_Attendance_Time" = "เวลาที่บันทึก";
+"ATTENDANCE_DETAIL_Change_to" = "ขอปรับเวลาเป็น";
+
+//OT
+"OT_Header" = "คำขอล่วงเวลา";
+"OT_Tab_1" = "คำขอ";
+"OT_Tab_2" = "ประวัติ";
+"OT_Warning_Title" = "ปรับเวลาการทำงานทั้งหมดให้เสร็จก่อนเสมอ !";
+"OT_Warning_Detail" = "เพื่อความถูกต้องและผลประโยชน์ของคุณ กรุณาปรับเวลาการทำงานทั้งหมดให้เรียบร้อย ก่อนการส่งคำขอล่วงเวลา";
+"OT_Submit_Button" = "ส่งคำขอ";
+"OT_Confirm" = "ยืนยันการส่งคำขอล่วงเวลา";
+
+"OT_Total" = "ทั้งหมด";
+"OT_ThisMonth" = "เดือนนี้";
+
+"OT_DETAIL_Header" = "รายละเอียดคำขอล่วงเวลา";
+"OT_DETAIL_Date" = "วันที่ขอล่วงเวลา";
+"OT_DETAIL_Time" = "เวลาที่ขอ";
+
+"OT_Request" = "สร้างคำขอใหม่";
+"OT_Type" = "ประเภทคำขอล่วงเวลา";
+"OT_Start_Date_Time" = "วันที่และเวลาเริ่มต้น";
+"OT_No_Hour" = "จำนวนชั่วโมง";
+"OT_End_Date_Time" = "วันที่และเวลาสิ้นสุด";
+"OT_Hour" = "ชั่วโมง";
+
+//SWAP SHIFT
+"SWAP_Header" = "แลกกะการทำงาน";
+"SWAP_Tab_1" = "คำขอ";
+"SWAP_Tab_2" = "ตอบรับ";
+"SWAP_Tab_3" = "ประวัติ";
+"SWAP_Your_Shift_Field" = "เลือกกะการทำงานของคุณ";
+"SWAP_Other_Name_Field" = "เลือกชื่อผู้รับแลก";
+"SWAP_Other_Shift_Field" = "เลือกกะการทำงานของผู้รับแลก";
+"SWAP_Note" = "หมายเหตุ";
+"SWAP_Submit_Button" = "ส่งคำขอ";
+"SWAP_Confirm" = "ยืนยันการส่งคำขอแลกกะการทำงาน";
+"SWAP_Response_Title" = "ต้องการแลกกะการทำงานกับ";
+"SWAP_Accept_Confirm" = "ยืนยันการยอมรับแลกกะการทำงาน";
+
+"SWAP_DETAIL_Header" = "แลกกะการทำงาน";
+"SWAP_DETAIL_Date" = "วันที่";
+"SWAP_DETAIL_Time" = "เวลา";
+
+////////////////////////////////////////////////////////////////////////////////////
+
+//APPROVE
+"APPROVE_MENU_Header" = "หัวหน้าอนุมัติ";
+"APPROVE_LEAVE_Header" = "อนุมัติคำขอลา";
+"APPROVE_ATTENDANCE_Header" = "อนุมัติคำขอปรับเวลา";
+"APPROVE_OT_Header" = "อนุมัติคำขอล่วงเวลา";
+"APPROVE_EDOC_Header" = "อนุมัติคำขอเอกสาร";
+"APPROVE_SWAP_Header" = "อนุมัติคำขอแลกกะ";
+"APPROVE_REIMBURSE_Header" = "อนุมัติคำขอเบิกเงิน";
+"APPROVE_Tab_1" = "คำขอ";
+"APPROVE_Tab_2" = "ประวัติ";
+"APPROVE_Approve" = "อนุมัติ";
+"APPROVE_Confirm" = "ยืนยันการอนุมัติคำขอ";
+"APPROVE_Reject" = "ปฏิเสธ";
+"APPROVE_Reject_Confirm" = "ยืนยันการปฏิเสธคำขอ";
+
+"APPROVE_DETAIL_LEAVE_Header" = "รายละเอียดคำขอลา";
+"APPROVE_DETAIL_ATTENDANCE_Header" = "รายละเอียดคำขอปรับเวลา";
+"APPROVE_DETAIL_OT_Header" = "รายละเอียดคำขอล่วงเวลา";
+"APPROVE_DETAIL_SWAP_Header" = "รายละเอียดคำขอแลกกะ";
+"APPROVE_DETAIL_Default_Reject_Reason" = "กรุณาระบุเหตุผลหากต้องการปฏิเสธคำขอ";
+
+////////////////////////////////////////////////////////////////////////////////////
+
+//REWARD TAB
+"REWARD_Header" = "รางวัล";
+"REWARD_Point" = "คะแนน";
+"REWARD_Menu" = "เมนู";
+"REWARD_Recommend" = "แนะนำ";
+"REWARD_SeeAll" = "ดูทั้งหมด";
+
+"REWARD_DETAIL_Header" = "รายละเอียดรางวัล";
+"REWARD_DETAIL_Out" = "สินค้าหมด";
+"REWARD_DETAIL_Insufficient" = "คะแนนไม่เพียงพอ";
+"REWARD_DETAIL_Redeem" = "แลกสินค้า";
+"REWARD_DETAIL_Redeem_Confirm" = "ยืนยันการแลกสินค้า";
+"REWARD_DETAIL_Alert_Expire" = "หมดอายุ";
+
+"REWARD_COUPON_Header" = "คูปองของฉัน";
+"REWARD_COUPON_Tab_1" = "พร้อมใช้";
+"REWARD_COUPON_Tab_2" = "ถูกใช้แล้ว";
+"REWARD_COUPON_Tab_3" = "หมดอายุ";
+"REWARD_COUPON_Use_Now" = "ใช้ทันที";
+"REWARD_COUPON_Use_Now" = "ถูกใช้แล้ว";
+"REWARD_COUPON_Expired" = "หมดอายุ";
+
+"REWARD_COUPON_Valid" = "คูปองพร้อมใช้";
+"REWARD_COUPON_Use_Button" = "ใช้คูปอง";
+"REWARD_COUPON_Used" = "คูปองใช้แล้ว";
+"REWARD_COUPON_Used_Button" = "ใช้แล้ว";
+"REWARD_COUPON_Use_Confirm" = "ยืนยันการใช้คูปอง";
+"REWARD_COUPON_QR_Expire" = "คูปองจะหมดอายุ";
+"REWARD_COUPON_QR_Remark" = "รหัสแลกรางวัลของคุณจะถูกส่งไปยัง SMS และอีเมล";
+
+//SEND STICKER
+"STICKER_Header" = "ส่งสติกเกอร์";
+"STICKER_Recommend" = "แนะนำ";
+"STICKER_All" = "ทั้งหมด";
+"STICKER_Remain" = "เหลือ";
+"STICKER_Already_Sent" = "คุณเคยส่งสติกเกอร์ให้แล้ววันนี้";
+"STICKER_Reach_Max" = "ถึงขีดจำกัดการส่งสติกเกอร์ของวันนี้";
+
+"STICKER_HEAD_Header" = "คะแนนจากหัวหน้า";
+"STICKER_HEAD_Your_Team" = "ทีมของคุณ";
+
+"STICKER_SEND_Header" = "ส่งสติกเกอร์";
+"STICKER_SEND_Send_To" = "ส่งไปที่ :";
+"STICKER_SEND_Note" = "หมายเหตุ";
+"STICKER_SEND_Remark" = "เขียนข้อความถึงผู้รับ";
+"STICKER_SEND_Submit_Button" = "ส่ง";
+"STICKER_SEND_Confirm" = "ยืนยันส่งสติกเกอร์";
+
+"STICKER_COMPLETE_Header" = "สำเร็จ";
+"STICKER_COMPLETE_Title" = "ส่งสติกเกอร์แล้ว";
+"STICKER_COMPLETE_Done_Button" = "เสร็จสิ้น";
+
+//MISSION
+"MISSION_Header" = "ภารกิจ";
+"MISSION_Routine" = "คะแนนประจำวัน";
+"MISSION_Mission" = "คะแนนภารกิจ";
+
+"MISSION_HISTORY_Header" = "ประวัติ";
+
+//RANKING
+"RANKING_Header" = "อันดับ";
+"RANKING_Tab_1" = "อันดับทั้งหมด";
+"RANKING_Tab_2" = "อันดับรายเดือน";
+
+////////////////////////////////////////////////////////////////////////////////////
+
+//EDOC
+"EDOC_MORE_Header" = "หมวดหมู่";
+"EDOC_Header" = "คำขอเอกสาร";
+"EDOC_Tab_1" = "คำขอ";
+"EDOC_Tab_2" = "ประวัติ";
+"EDOC_Language_Field" = "เลือกภาษา";
+"EDOC_Submit_Button" = "ส่งคำขอ";
+"EDOC_Confirm" = "ยืนยันการส่งคำขอ";
+
+"EDOC_SLIP_Period" = "ช่วงเวลา:";
+"EDOC_SLIP_Confirm" = "ยืนยันการขอสลิปเงินเดือน";
+
+"EDOC_DETAIL_Header" = "คำขอเอกสาร";
+"EDOC_DETAIL_Button_PDF" = "ดู PDF";
+"EDOC_DETAIL_Request" = "คำขอ";
+"EDOC_DETAIL_Type" = "ประเภทคำขอเอกสาร";
+"EDOC_DETAIL_Button_Cancel" = "ยกเลิกคำขอ";
+"EDOC_DETAIL_Button_Reject" = "ปฏิเสธคำขอ";
+"EDOC_DETAIL_Button_Approve" = "อนุมัติคำขอ";
+
+"EDOC_WEB_Button_Send_Email" = "ส่งอีเมล";
+"EDOC_WEB_Email_Field" = "อีเมล";
+"EDOC_WEB_Button_Send" = "ส่ง";
+"EDOC_WEB_Button_Cancel" = "ยกเลิก";
+
+//REPORT
+"REPORT_HEADER" = "รายงาน";
+"REPORT_Work" = "วันทำงาน";
+"REPORT_Late" = "มาสาย";
+"REPORT_Absent" = "ขาดงาน";
+"REPORT_Leave" = "ลา";
+
+//WARNING LETTER
+"WARNING_HEADER" = "ประวัติหนังสือเตือน";
+"WARNING_HEAD_HEADER" = "หนังสือเตือน";
+"WARNING_HEAD_Tab_1" = "คำขอ";
+"WARNING_HEAD_Tab_2" = "สถานะ";
+"WARNING_HEAD_Tab_3" = "ประวัติ";
+
+"WARNING_REQUEST_Person_Field" = "เลือกบุคคล";
+"WARNING_REQUEST_Type_Field" = "เลือกประเภทการเตือน";
+"WARNING_REQUEST_Start_Field" = "วันที่เริ่มต้น";
+"WARNING_REQUEST_End_Field" = "วันที่สิ้นสุด";
+"WARNING_REQUEST_Reason" = "เหตุผล";
+"WARNING_REQUEST_Submit_Button" = "ส่ง";
+"WARNING_REQUEST_Confirm" = "ยืนยันการส่งหนังสือเตือน";
+
+"WARNING_HISTORY_Title" = "หนังสือเตือน";
+
+"WARNING_DETAIL_Header" = "หนังสือเตือน";
+"WARNING_DETAIL_Button_Letter" = "ดูหนังสือเตือน";
+"WARNING_DETAIL_Request" = "ผู้รับ";
+"WARNING_DETAIL_Type" = "ประเภทการเตือน";
+"WARNING_DETAIL_Duration" = "ช่วงเวลา";
+"WARNING_DETAIL_Reason" = "เหตุผล";
+"WARNING_DETAIL_Button_Accept" = "ยอมรับและส่งหนังสือเตือนไปยังอีเมล";
+"WARNING_DETAIL_Confirm" = "ยืนยันการยอมรับหนังสือเตือน";
+
+//REIMBURSE
+"REIMBURSE_Confirm" = "ยืนยันการส่งคำขอเบิกเงิน";
+"REIMBURSE_REQUEST_Type_Field" = "เลือกประเภทการเบิกเงิน";
+"REIMBURSE_REQUEST_Amount_Field" = "ใส่จำนวนเงิน";
+"REIMBURSE_DETAIL_Amount_Field" = "จำนวนเงิน";
+
+//QR SALARY
+"QR_SALARY_Detail" = "อัพโหลดรูปภาพ QR Code บัญชีธนาคารของคุณ";
+"QR_SALARY_Button_Upload" = "อัพโหลดรูปภาพ QR Code";
+"QR_SALARY_Button_Delete" = "ลบ QR Code";
+"QR_SALARY_Button_Download" = "บันทึกรูปภาพ";
+
+//PROBATION
+"PROBATION_REQUEST_Name_Field" = "เลือกผู้ถูกประเมิน";
+"PROBATION_REQUEST_Position_Field" = "ตำแหน่ง";
+"PROBATION_REQUEST_StartDate_Field" = "วันที่เริ่มงาน";
+"PROBATION_REQUEST_RequestDate_Field" = "วันที่ประเมิน";
+"PROBATION_REQUEST_Info1" = "การประเมินผลการทดลองการปฏิบัติงาน";
+"PROBATION_REQUEST_Info2" = "คำชี้แจง";
+"PROBATION_REQUEST_Info3" = "ระดับ 5\nหมายถึง ผลการปฏิบัติงานเกินกว่ามาตรฐานที่กำหนดอย่างมาก\n\nระดับ 4\nหมายถึง ผลการปฏิบัติงานเกินว่ามาตรฐานที่กำหนด\n\nระดับ 3\nหมายถึง ผลการปฎิบัติงานตรงตามมาตรฐานที่กำหนด\n\nระดับ 2\nหมายถึง ผลการปฏิบัติงานต่ำกว่ามาตรฐานที่กำหนด\n\nระดับ 1\nหมายถึง ผลการปฏิบัติงานต่ำกว่ามาตรฐานที่กำหนดอย่างมาก";
+"PROBATION_SCORE" = "คะแนน";
+"PROBATION_SCORE_Name" = "ผู้ถูกประเมิน";
+"PROBATION_HEAD_Name" = "ผู้ประเมิน";
+"PROBATION_RESULT_Score" = "คะแนนรวม";
+"PROBATION_RESULT_Fail" = "ไม่ผ่าน";
+"PROBATION_RESULT_Pass" = "ผ่าน";
+"PROBATION_RESULT_Type" = "เลือกเหตุผล";
+"PROBATION_Note" = "ความคิดเห็น";
+"PROBATION_Confirm" = "ยืนยันการประเมิน";
+
+//PEOPLE SELECTOR
+"PEOPLE_HEADER" = "เลือกบุคคล";
+
+////////////////////////////////////////////////////////////////////////////////////
+
+//SETTING
+"SETTING_Header" = "การตั้งค่า";
+"SETTING_LANGUAGE_Header" = "ภาษา";
+"SETTING_COMPANY_Header" = "สลับบริษัท";
+
+//CHANGE PASSWORD
+"CHANGE_PASSWORD_Header" = "เปลี่ยนรหัสผ่าน";
+"CHANGE_PASSWORD_Current_Field" = "รหัสผ่านปัจจุบัน";
+"CHANGE_PASSWORD_Title_Header" = "รหัสผ่านใหม่ต้องประกอบด้วย:";
+"CHANGE_PASSWORD_Title_Condition_1" = "อย่างน้อย 8 ตัวอักษรภาษาอังกฤษ";
+"CHANGE_PASSWORD_Title_Condition_2" = "อย่างน้อย 1 ตัวอักษรพิมพ์เล็ก (a-z)";
+"CHANGE_PASSWORD_Title_Condition_3" = "อย่างน้อย 1 หมายเลข (0-9)";
+"CHANGE_PASSWORD_Title_Condition_4" = "อย่างน้อย 1 อักขระพิเศษ";
+"CHANGE_PASSWORD_NewPass_Field" = "รหัสผ่านใหม่";
+"CHANGE_PASSWORD_ConfirmNewPass_Field" = "ยืนยันรหัสผ่านใหม่";
+"CHANGE_PASSWORD_Title_Confirm" = "รหัสผ่านใหม่ไม่ตรงกัน";
+"CHANGE_PASSWORD_Submit_Button" = "ส่ง";
+
+//CAMERA
+"Camera" = "กล้อง";
+"Photo Library" = "คลังรูปภาพ";
+"GO_Setting" = "ไปที่การตั้งค่า";
+"Warning" = "คำเตือน";
+"CAMERA_Denied" = "การเข้าถึงกล้องของคุณถูกปฏิเสธ";
+"CAMERA_Allow" = "โปรดอนุญาตให้เข้าถึงกล้องเพื่ออัปโหลดรูปโปรไฟล์";
+"CAMERA_No" = "คุณไม่มีกล้อง";
+"PHOTO_Denied" = "การเข้าถึงคลังรูปภาพของคุณถูกปฏิเสธ";
+"PHOTO_Allow" = "โปรดอนุญาตให้เข้าถึงคลังรูปภาพเพื่ออัปโหลดรูปโปรไฟล์";
+"PHOTO_No" = "คุณไม่มีสิทธิ์เข้าถึงแกลเลอรี";
