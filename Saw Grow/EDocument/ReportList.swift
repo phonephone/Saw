@@ -20,6 +20,10 @@ class ReportList: UIViewController, UITextFieldDelegate {
     
     var firstTime = true
     
+    var setColor: Bool = true
+    
+    @IBOutlet weak var headerView: UIView!
+    
     @IBOutlet weak var searchField: UITextField!
     
     @IBOutlet weak var monthYearIcon: UIButton!
@@ -30,6 +34,17 @@ class ReportList: UIViewController, UITextFieldDelegate {
     var mySelectedDate = Date()
     
     @IBOutlet weak var directoryCollectionView: UICollectionView!
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        if setColor {
+            self.navigationController?.setStatusBarColor()
+            headerView.setGradientBackground()
+            
+            setColor = false
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

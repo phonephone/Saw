@@ -22,12 +22,27 @@ class SendSticker: UIViewController, UITextViewDelegate {
     
     let remarkStr = "STICKER_SEND_Remark".localized()
     
+    var setColor: Bool = true
+    
+    @IBOutlet weak var headerView: UIView!
+    
     @IBOutlet weak var pointLabel: UILabel!
     @IBOutlet weak var receiverNameLabel: UILabel!
     @IBOutlet weak var remarkText: UITextView!
     @IBOutlet weak var submitBtn: UIButton!
     
     @IBOutlet weak var myCollectionView: UICollectionView!
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        if setColor {
+            self.navigationController?.setStatusBarColor()
+            headerView.setGradientBackground()
+            
+            setColor = false
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

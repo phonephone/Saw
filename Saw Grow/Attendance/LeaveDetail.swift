@@ -26,9 +26,24 @@ class LeaveDetail: UIViewController {
     
     var emptyReason:String = "-"
     
+    var setColor: Bool = true
+    
+    @IBOutlet weak var headerView: UIView!
+    
     @IBOutlet weak var headerTitle: UILabel!
     @IBOutlet var myTableView: UITableView!
 
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        if setColor {
+            self.navigationController?.setStatusBarColor()
+            headerView.setGradientBackground()
+            
+            setColor = false
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

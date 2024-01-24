@@ -48,10 +48,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         LoginManager.shared.setup(channelID: PlistParser.getKeysValue()!["lineChannelID"]!, universalLinkURL: nil)
         
         ProgressHUD.animationType = .circleStrokeSpin
-        ProgressHUD.colorAnimation = .themeColor
+        ProgressHUD.colorAnimation = UIColor.customThemeColor()
         ProgressHUD.colorHUD = .white
         ProgressHUD.colorBackground = .clear//.lightGray
-        ProgressHUD.colorStatus = .themeColor
+        ProgressHUD.colorStatus = UIColor.customThemeColor()
         ProgressHUD.fontStatus = UIFont.Roboto_Medium(ofSize: 20)
         
         Thread.sleep(forTimeInterval: 1.0)

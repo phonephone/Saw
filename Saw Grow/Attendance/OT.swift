@@ -21,9 +21,24 @@ class OT: UIViewController {
     
     var otTab:otTab?
     
+    var setColor: Bool = true
+    
+    @IBOutlet weak var headerView: UIView!
+    
     @IBOutlet weak var requestBtn: MyButton!
     @IBOutlet weak var historyBtn: MyButton!
     @IBOutlet weak var bottomView: UIView!
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        if setColor {
+            self.navigationController?.setStatusBarColor()
+            headerView.setGradientBackground()
+            
+            setColor = false
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

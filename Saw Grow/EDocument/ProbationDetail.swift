@@ -20,12 +20,27 @@ class ProbationDetail: UIViewController, UITextViewDelegate {
     var edocName:String?
     var edocType:edocType?
     
+    var setColor: Bool = true
+    
+    @IBOutlet weak var headerView: UIView!
+    
     @IBOutlet weak var headTitle: UILabel!
     
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var remarkLabel: UILabel!
     
     @IBOutlet weak var myTableView: UITableView!
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        if setColor {
+            self.navigationController?.setStatusBarColor()
+            headerView.setGradientBackground()
+            
+            setColor = false
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

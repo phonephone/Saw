@@ -16,6 +16,10 @@ class HeadPoint: UIViewController, UITextFieldDelegate {
     
     var directoryAllJSON:JSON?
     
+    var setColor: Bool = true
+    
+    @IBOutlet weak var headerView: UIView!
+    
     @IBOutlet weak var searchField: UITextField!
     
     @IBOutlet weak var directoryCollectionView: UICollectionView!
@@ -25,6 +29,17 @@ class HeadPoint: UIViewController, UITextFieldDelegate {
         
         loadTeam()
         searchField.text = ""
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        if setColor {
+            self.navigationController?.setStatusBarColor()
+            headerView.setGradientBackground()
+            
+            setColor = false
+        }
     }
     
     override func viewDidLoad() {

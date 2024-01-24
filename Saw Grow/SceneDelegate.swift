@@ -53,7 +53,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             }
 
             // MARK: - Bypass Login
-            //let vc = UIStoryboard.mainStoryBoard.instantiateViewController(withIdentifier: "TabBar") as! TabBar
+            let vc = UIStoryboard.mainStoryBoard.instantiateViewController(withIdentifier: "TabBar") as! TabBar
             
             //let vc = UIStoryboard.mainStoryBoard.instantiateViewController(withIdentifier: "Reward") as! Reward
             

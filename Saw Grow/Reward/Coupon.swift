@@ -20,16 +20,37 @@ class Coupon: UIViewController {
     
     var couponTab:couponTab?
     
+    var setColor: Bool = true
+    
+    @IBOutlet weak var headerView: UIView!
+    
     @IBOutlet weak var validBtn: MyButton!
     @IBOutlet weak var usedBtn: MyButton!
     @IBOutlet weak var expiredBtn: MyButton!
     @IBOutlet weak var bottomView: UIView!
+    
+    var blurView : UIVisualEffectView!
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        if setColor {
+            self.navigationController?.setStatusBarColor()
+            headerView.setGradientBackground()
+            
+            setColor = false
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         print("COUPON")
         
         setTab(tab: .valid)
+        
+        blurView = blurViewSetup()
+        self.view.addSubview(blurView)
+        self.view.sendSubviewToBack(blurView)
     }
     
     @IBAction func segmentClick(_ sender: UIButton) {

@@ -72,15 +72,12 @@ class NewPasscode: UIViewController, UITextFieldDelegate, MyFieldDelegate {
     @objc func textFieldDidChange(_ textField: UITextField) {
         
         if textField == passCode1 && textField.text!.count >= 1 {
-            passCode1.resignFirstResponder()
             passCode2.becomeFirstResponder()
         }
         if textField == passCode2 && textField.text!.count >= 1 {
-            passCode2.resignFirstResponder()
             passCode3.becomeFirstResponder()
         }
         if textField == passCode3 && textField.text!.count >= 1 {
-            passCode3.resignFirstResponder()
             passCode4.becomeFirstResponder()
         }
         if textField == passCode4 && textField.text!.count >= 1 {
@@ -91,15 +88,12 @@ class NewPasscode: UIViewController, UITextFieldDelegate, MyFieldDelegate {
     
     func textFieldDidDelete(_ textField: UITextField) {
         if textField == passCode2 && passCode2.text?.count == 0 && passCode3.text?.count == 0 {
-            passCode2.resignFirstResponder()
             passCode1.becomeFirstResponder()
         }
         if textField == passCode3 && passCode3.text?.count == 0 && passCode4.text?.count == 0 {
-            passCode3.resignFirstResponder()
             passCode2.becomeFirstResponder()
         }
         if textField == passCode4 && passCode4.text?.count == 0 {
-            passCode4.resignFirstResponder()
             passCode3.becomeFirstResponder()
         }
     }

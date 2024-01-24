@@ -24,6 +24,10 @@ class ProbationResult: UIViewController, UITextFieldDelegate, UITextViewDelegate
     
     let remarkStr = "PROBATION_Note".localized()
     
+    var setColor: Bool = true
+    
+    @IBOutlet weak var headerView: UIView!
+    
     @IBOutlet weak var headTitle: UILabel!
     
     @IBOutlet weak var scoreLabel: UILabel!
@@ -41,6 +45,17 @@ class ProbationResult: UIViewController, UITextFieldDelegate, UITextViewDelegate
     @IBOutlet weak var submitBtn: UIButton!
     
     var typePicker: UIPickerView! = UIPickerView()
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        if setColor {
+            self.navigationController?.setStatusBarColor()
+            headerView.setGradientBackground()
+            
+            setColor = false
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -18,6 +18,8 @@ class OTRequest: UIViewController, UITextFieldDelegate, UITextViewDelegate {
     var otJSON:JSON?
     
     var selectedOT:[String] = []
+    
+    var firstTime = true
 
     @IBOutlet weak var monthYearIcon: UIButton!
     @IBOutlet weak var monthYearField: UITextField!
@@ -53,7 +55,11 @@ class OTRequest: UIViewController, UITextFieldDelegate, UITextViewDelegate {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        //monthYearField.becomeFirstResponder()
+        
+        if firstTime {
+            monthYearField.becomeFirstResponder()
+            firstTime = false
+        }
     }
     
     func loadOT(monthYear:Date) {

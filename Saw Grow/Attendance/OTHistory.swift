@@ -15,6 +15,8 @@ class OTHistory: UIViewController, UITextFieldDelegate {
     
     var otJSON:JSON?
     
+    var firstTime = true
+    
     @IBOutlet weak var monthYearIcon: UIButton!
     @IBOutlet weak var monthYearField: UITextField!
     @IBOutlet weak var monthYearBtn: UIButton!
@@ -53,7 +55,11 @@ class OTHistory: UIViewController, UITextFieldDelegate {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        monthYearField.becomeFirstResponder()
+        
+        if firstTime {
+            monthYearField.becomeFirstResponder()
+            firstTime = false
+        }
     }
     
     func loadOT(monthYear:Date) {

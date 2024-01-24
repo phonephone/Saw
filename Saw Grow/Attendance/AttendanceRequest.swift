@@ -24,6 +24,8 @@ class AttendanceRequest: UIViewController, UITextFieldDelegate, UITextViewDelega
     var selectedAdjustTime:String = ""
     
     let remarkStr = "ATTENDANCE_Note".localized()
+    
+    var firstTime = true
 
     @IBOutlet weak var monthYearIcon: UIButton!
     @IBOutlet weak var monthYearField: UITextField!
@@ -89,7 +91,11 @@ class AttendanceRequest: UIViewController, UITextFieldDelegate, UITextViewDelega
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        monthYearField.becomeFirstResponder()
+        
+        if firstTime {
+            monthYearField.becomeFirstResponder()
+            firstTime = false
+        }
     }
     
     func loadAttendance(monthYear:Date) {

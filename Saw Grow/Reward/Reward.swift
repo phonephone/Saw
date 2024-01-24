@@ -20,6 +20,10 @@ class Reward: UIViewController, UIScrollViewDelegate {
     var isSuperAdmin:Bool?
     var companyJSON:JSON?
     
+    var setColor: Bool = true
+    
+    @IBOutlet weak var headerView: UIView!
+    
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var userPoint: UILabel!
     
@@ -75,8 +79,19 @@ class Reward: UIViewController, UIScrollViewDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         loadReward()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        if setColor {
+            self.tabBarController?.setStatusBarColor()
+            self.tabBarController?.tabBar.tintColor = UIColor.customThemeColor()
+            headerView.setGradientBackground(mainPage:true)
+            
+            setColor = false
+        }
     }
     
     override func viewDidLoad() {

@@ -24,6 +24,10 @@ class RewardList: UIViewController, UIScrollViewDelegate {
     
     var mode:rewardMode?
     
+    var setColor: Bool = true
+    
+    @IBOutlet weak var headerView: UIView!
+    
     @IBOutlet weak var headTitle: UILabel!
     @IBOutlet weak var menuCollectionView: UICollectionView!
     @IBOutlet weak var myCollectionView: UICollectionView!
@@ -59,6 +63,17 @@ class RewardList: UIViewController, UIScrollViewDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        if setColor {
+            self.navigationController?.setStatusBarColor()
+            headerView.setGradientBackground()
+            
+            setColor = false
+        }
     }
     
     override func viewDidLoad() {

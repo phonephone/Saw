@@ -73,7 +73,7 @@ class Probation: UIViewController, UITextFieldDelegate, UITextViewDelegate {
                 
             case .success(let responseObject):
                 let json = JSON(responseObject)
-                //print("SUCCESS PERSON\(json)")
+                print("SUCCESS PERSON\(json)")
                 
                 self.personJSON = json["data"][0]["emp"]
                 
@@ -184,12 +184,13 @@ extension Probation: UIPickerViewDelegate {
             positionField.text = cellArray["designation_name"].stringValue
             positionIcon.setImage(UIImage(named: "form_person_on"), for: .normal)
             
-            let joinDate = dateFromServerString(dateStr: cellArray["date_of_joining"].stringValue)
-            startDateField.text = appStringFromDate(date: joinDate!, format: "d MMMM yyyy")
-            startDateIcon.setImage(UIImage(named: "form_date_on"), for: .normal)
-            
-            requestDateField.text = appStringFromDate(date: Date(), format: "d MMMM yyyy")
-            requestDateIcon.setImage(UIImage(named: "form_date_on"), for: .normal)
+            if let joinDate = dateFromServerString(dateStr: cellArray["date_of_joining"].stringValue) {
+                startDateField.text = appStringFromDate(date: joinDate, format: "d MMMM yyyy")
+                startDateIcon.setImage(UIImage(named: "form_date_on"), for: .normal)
+                
+                requestDateField.text = appStringFromDate(date: Date(), format: "d MMMM yyyy")
+                requestDateIcon.setImage(UIImage(named: "form_date_on"), for: .normal)
+            }
             
             selectedPersonJSON = cellArray
         }

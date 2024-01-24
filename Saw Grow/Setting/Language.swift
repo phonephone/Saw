@@ -15,6 +15,10 @@ class Language: UIViewController {
     
     var languageJSON:JSON?
     
+    var setColor: Bool = true
+    
+    @IBOutlet weak var headerView: UIView!
+    
     @IBOutlet weak var headTitle: UILabel!
     @IBOutlet weak var myTableView: UITableView!
     
@@ -26,6 +30,17 @@ class Language: UIViewController {
     
     @objc func setText(){
         //headTitle.text = "SETTING_LANGUAGE_title".localized()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        if setColor {
+            self.navigationController?.setStatusBarColor()
+            headerView.setGradientBackground()
+            
+            setColor = false
+        }
     }
     
     override func viewDidLoad() {

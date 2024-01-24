@@ -299,6 +299,7 @@
 			isa = PBXGroup;
 			children = (
 				101D450D2732A5B10081AEDD /* MyExtension.swift */,
+				103E7DEE2925FE350074CC76 /* AttachmentHandler.swift */,
 				10CB65F729D190320034BE03 /* Updater.swift */,
 				10B247EA2B29D6AD00E6F2D8 /* PlistParser.swift */,
 			);
@@ -344,7 +345,6 @@
 		107D3490275A0D5D0067209A /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				103E7DEE2925FE350074CC76 /* AttachmentHandler.swift */,
 				10997C572737D8CF003A6A69 /* Profile.swift */,
 				10FF1EC5273BEBAA00E4FFCE /* EmployeeCard.swift */,
 				10C12CA22743E51900B2B0AF /* DirectoryList.swift */,
@@ -489,6 +489,9 @@
 				10CD6200273506F200350D51 /* SideMenuCell.xib */,
 				10EF1ED8270E97DD0030C936 /* Main.storyboard */,
 				1030652F2733091000EE4F42 /* Home.swift */,
+				10E664A52769BC3F00B22C1F /* CalendarList.swift */,
+				10892059276A463100A7AAFF /* CalendarCell.swift */,
+				1030C976275F9DF3006041FE /* NotificationAll.swift */,
 				10891A74273414A1008D3A4C /* Login */,
 				107D3490275A0D5D0067209A /* Profile */,
 				10A957FA274F8D4D00766F14 /* Attendance */,
@@ -496,9 +499,6 @@
 				1020EECF27C7C57D00F21C93 /* Reward */,
 				1089979C282A492A00D8446F /* EDocument */,
 				100D545628AE4FD300F51E6C /* Setting */,
-				10E664A52769BC3F00B22C1F /* CalendarList.swift */,
-				10892059276A463100A7AAFF /* CalendarCell.swift */,
-				1030C976275F9DF3006041FE /* NotificationAll.swift */,
 				10177DB22786220C008701FC /* Web.swift */,
 				1049F8F0272E714E00F23465 /* HRService.storyboard */,
 				101D450C2732A58B0081AEDD /* Extension */,
@@ -1005,7 +1005,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Saw Grow/Saw Grow.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = ANTR249Q57;
 				EXCLUDED_ARCHS = "";
@@ -1015,7 +1015,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.9.4;
+				MARKETING_VERSION = 1.9.6;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.softcakes.Saw-Grow";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1034,7 +1034,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Saw Grow/Saw Grow.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ANTR249Q57;
 				EXCLUDED_ARCHS = "";
 				INFOPLIST_FILE = "Saw Grow/Info.plist";
@@ -1042,7 +1042,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.9.4;
+				MARKETING_VERSION = 1.9.6;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.softcakes.Saw-Grow";
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -17,6 +17,10 @@ class CalendarList: UIViewController {
     var calendarJSON:JSON?
     var goToDate:Date?
     
+    var setColor: Bool = true
+    
+    @IBOutlet weak var headerView: UIView!
+    
     @IBOutlet weak var calendarMainView: UIView!
     @IBOutlet weak var myCarlendar: FSCalendar!
     @IBOutlet weak var monthLabel: UILabel!
@@ -40,6 +44,18 @@ class CalendarList: UIViewController {
         myCarlendar.today = Date()
         loadCalendar(monthYear: myCarlendar.currentPage,scrollToDate: firstTime)
         //myCarlendar.select(today, scrollToDate: true)
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        if setColor {
+            self.tabBarController?.setStatusBarColor()
+            self.tabBarController?.tabBar.tintColor = UIColor.customThemeColor()
+            headerView.setGradientBackground(mainPage:true)
+            
+            setColor = false
+        }
     }
     
     override func viewDidLoad() {
@@ -67,8 +83,11 @@ class CalendarList: UIViewController {
         //scrollToDate(date: Date())
         if goToDate != nil
         {
-            myCarlendar.select(goToDate)
-            scrollToDate(date: goToDate!)
+            currentPage = goToDate
+            myCarlendar.setCurrentPage(goToDate!, animated: true)
+            myCarlendar.select(goToDate, scrollToDate: false)
+            loadCalendar(monthYear: myCarlendar.currentPage,scrollToDate: true)
+            
             goToDate = nil
         }
     }
@@ -87,7 +106,7 @@ class CalendarList: UIViewController {
                 
             case .success(let responseObject):
                 let json = JSON(responseObject)
-                print("SUCCESS CALENDAR\(json)")
+                //print("SUCCESS CALENDAR\(json)")
                 
                 self.calendarJSON = json["data"]["timesheet"]
                 if self.calendarJSON?.count == 0
@@ -204,9 +223,9 @@ extension FSCalendar {
         //        self.appearance.headerTitleColor     = Colors.NavTitleColor
         //        self.appearance.weekdayTextColor     = Colors.topTabBarSelectedColor
         //        self.appearance.eventDefaultColor    = Colors.NavTitleColor
-        //        self.appearance.selectionColor       = Colors.purpleColor
+        self.appearance.selectionColor       = UIColor.customThemeColor()
         //        self.appearance.titleSelectionColor  = Colors.NavTitleColor
-        //        self.appearance.todayColor           = Colors.purpleColor
+        self.appearance.todayColor           = UIColor.lightGray
         //        self.appearance.todaySelectionColor  = Colors.purpleColor
         //
         //        self.appearance.headerMinimumDissolvedAlpha = 0.0 // Hide Left Right Month Name

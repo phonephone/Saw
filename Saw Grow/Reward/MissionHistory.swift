@@ -14,6 +14,10 @@ class MissionHistory: UIViewController, UITextFieldDelegate {
     
     var historyJSON:JSON?
     
+    var setColor: Bool = true
+    
+    @IBOutlet weak var headerView: UIView!
+    
     @IBOutlet weak var monthYearIcon: UIButton!
     @IBOutlet weak var monthYearField: UITextField!
     @IBOutlet weak var monthYearBtn: UIButton!
@@ -21,6 +25,8 @@ class MissionHistory: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var thisMonthLabel: UILabel!
     
     @IBOutlet weak var myCollectionView: UICollectionView!
+    
+    var firstTime = true
     
     @IBOutlet var popupView: UIView!
     @IBOutlet weak var popupTitle: UILabel!
@@ -35,6 +41,17 @@ class MissionHistory: UIViewController, UITextFieldDelegate {
 //    var monthYearPicker: UIDatePicker! = UIDatePicker()
     let myDatePicker = MyDatePicker()
     var mySelectedDate = Date()
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        if setColor {
+            self.navigationController?.setStatusBarColor()
+            headerView.setGradientBackground()
+            
+            setColor = false
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,7 +87,11 @@ class MissionHistory: UIViewController, UITextFieldDelegate {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        monthYearField.becomeFirstResponder()
+        
+        if firstTime {
+            monthYearField.becomeFirstResponder()
+            firstTime = false
+        }
     }
     
     func loadHistory(monthYear:Date) {

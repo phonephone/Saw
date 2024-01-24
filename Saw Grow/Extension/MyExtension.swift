@@ -23,6 +23,14 @@ extension UIColor {
     static let buttonRed = UIColor(named: "Btn_Red")!
     static let buttonGreen = UIColor(named: "Btn_Green")!
     static let buttonDisable = UIColor(named: "Btn_Disable")!
+    static let bgLightGray = UIColor(named: "Bg_Light_Gray")!
+    static let headerGradient1 = UIColor(named: "Header_1")!
+    static let headerGradient2 = UIColor(named: "Header_2")!
+    
+    static func customThemeColor() -> UIColor {
+        let iconColor = UserDefaults.standard.loadcolor(forKey: "iconColor")
+        return iconColor ?? .themeColor
+    }
 }
 
 extension UIFont {
@@ -72,11 +80,74 @@ extension UIDevice {
 
 // MARK: - UINavigationController
 extension UINavigationController {
-  func popToViewController(ofClass: AnyClass, animated: Bool = true) {
-    if let vc = viewControllers.last(where: { $0.isKind(of: ofClass) }) {
-      popToViewController(vc, animated: animated)
+    
+    func setStatusBarColor(backgroundColor: UIColor? = nil) {
+
+        var statusBarFrame: CGRect
+        if #available(iOS 13.0, *) {
+            let window = UIApplication.shared.windows.first
+            let topPadding = window?.safeAreaInsets.top
+            statusBarFrame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: topPadding ?? 0.0)
+        } else {
+            statusBarFrame = UIApplication.shared.statusBarFrame
+        }
+        
+        let statusBarView = UIView(frame: statusBarFrame)
+        
+        if (backgroundColor != nil) {
+            statusBarView.backgroundColor = backgroundColor
+        }
+        else{
+            let gradient1 = UserDefaults.standard.loadcolor(forKey: "gradientColor_1")
+            statusBarView.backgroundColor = gradient1 ?? UIColor.themeColor//backgroundColor
+        }
+        
+        view.addSubview(statusBarView)
     }
-  }
+    
+    func popToViewController(ofClass: AnyClass, animated: Bool = true) {
+        if let vc = viewControllers.last(where: { $0.isKind(of: ofClass) }) {
+            popToViewController(vc, animated: animated)
+        }
+    }
+    
+    func removeAnyViewControllers(ofKind kind: AnyClass)
+    {
+        self.viewControllers = self.viewControllers.filter { !$0.isKind(of: kind)}
+    }
+    
+    func containsViewController(ofKind kind: AnyClass) -> Bool
+    {
+        return self.viewControllers.contains(where: { $0.isKind(of: kind) })
+    }
+}
+
+// MARK: - UITabBarController
+extension UITabBarController {
+    
+    func setStatusBarColor(backgroundColor: UIColor? = nil) {
+
+        var statusBarFrame: CGRect
+        if #available(iOS 13.0, *) {
+            let window = UIApplication.shared.windows.first
+            let topPadding = window?.safeAreaInsets.top
+            statusBarFrame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: topPadding ?? 0.0)
+        } else {
+            statusBarFrame = UIApplication.shared.statusBarFrame
+        }
+        
+        let statusBarView = UIView(frame: statusBarFrame)
+        
+        if (backgroundColor != nil) {
+            statusBarView.backgroundColor = backgroundColor
+        }
+        else{
+            let gradient1 = UserDefaults.standard.loadcolor(forKey: "gradientColor_1")
+            statusBarView.backgroundColor = gradient1 ?? UIColor.themeColor//backgroundColor
+        }
+        
+        view.addSubview(statusBarView)
+    }
 }
 
 // MARK: - UIViewController
@@ -196,6 +267,10 @@ extension UIViewController {
         UserDefaults.standard.removeObject(forKey:"access_token")
         UserDefaults.standard.removeObject(forKey:"passCode")
         UserDefaults.standard.removeObject(forKey:"fcm_token")
+        
+        UserDefaults.standard.removeObject(forKey:"gradientColor_1")
+        UserDefaults.standard.removeObject(forKey:"gradientColor_2")
+        UserDefaults.standard.removeObject(forKey:"iconColor")
         
         //Remove all keyss
         //        if let appDomain = Bundle.main.bundleIdentifier {
@@ -470,6 +545,32 @@ extension UIView {
         
         self.layer.mask = mask
     }
+    
+    func setGradientBackground(colorTop: UIColor? = nil, colorBottom: UIColor? = nil, mainPage: Bool? = false){
+        
+        let gradientLayer = CAGradientLayer()
+        
+        if colorTop != nil && colorBottom != nil {
+            gradientLayer.colors = [colorBottom!.cgColor, colorTop!.cgColor]
+        }
+        else if mainPage == true {
+            let gradient1 = UserDefaults.standard.loadcolor(forKey: "gradientColor_1")
+            let gradient2 = UserDefaults.standard.loadcolor(forKey: "gradientColor_2")
+            
+            gradientLayer.colors = [gradient2?.cgColor ?? UIColor.bgLightGray.cgColor, gradient1?.cgColor ?? UIColor.themeColor.cgColor]
+        }
+        else {
+            let gradient1 = UserDefaults.standard.loadcolor(forKey: "gradientColor_1")
+            gradientLayer.colors = [gradient1?.cgColor ?? UIColor.headerGradient2.cgColor, gradient1?.cgColor ?? UIColor.headerGradient1.cgColor]
+        }
+        
+        gradientLayer.startPoint = CGPoint(x: 0.5, y: 1.0)
+        gradientLayer.endPoint = CGPoint(x: 0.5, y: 0.0)
+        gradientLayer.locations = [NSNumber(floatLiteral: 0.0), NSNumber(floatLiteral: 1.0)]
+        gradientLayer.frame = self.bounds
+
+        self.layer.insertSublayer(gradientLayer, at: 0)
+    }
 }
 
 // MARK: - UIImageView
@@ -517,11 +618,11 @@ extension UIImage {
         return self.jpegData(compressionQuality: 0.5)?.base64EncodedString() ?? ""
     }
     
-//    func convertBase64StringToImage (imageBase64String:String) -> UIImage {
-//        let imageData = Data.init(base64Encoded: imageBase64String, options: .init(rawValue: 0))
-//        let image = UIImage(data: imageData!)
-//        return image!
-//    }
+    //    func convertBase64StringToImage (imageBase64String:String) -> UIImage {
+    //        let imageData = Data.init(base64Encoded: imageBase64String, options: .init(rawValue: 0))
+    //        let image = UIImage(data: imageData!)
+    //        return image!
+    //    }
 }
 
 
@@ -655,12 +756,40 @@ extension UICollectionViewCell {
         contentView.layer.borderWidth = 0.0
         contentView.layer.borderColor = UIColor.clear.cgColor
         contentView.layer.masksToBounds = true
-
+        
         layer.shadowColor = UIColor.lightGray.cgColor
         layer.shadowOffset = CGSize(width: 0, height: 0.0)
         layer.shadowRadius = 4.0
         layer.shadowOpacity = 0.2
         layer.masksToBounds = false
         layer.shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: contentView.layer.cornerRadius).cgPath
+    }
+}
+
+// MARK: - UserDefaults
+extension UserDefaults {
+
+    func saveColor(_ value: UIColor?, forKey key: String) {
+
+        guard let color = value else { return }
+        do {
+            let data = try NSKeyedArchiver.archivedData(withRootObject: color, requiringSecureCoding: false)
+            set(data, forKey: key)
+        } catch let error {
+            print("error color key data not saved \(error.localizedDescription)")
+        }
+    }
+    
+    func loadcolor(forKey key: String) -> UIColor? {
+        guard let colorData = data(forKey: key) else {
+            return nil
+        }
+
+        do {
+            return try NSKeyedUnarchiver.unarchivedObject(ofClass: UIColor.self, from: colorData)
+        } catch let error {
+            print("color error \(error.localizedDescription)")
+            return nil
+        }
     }
 }

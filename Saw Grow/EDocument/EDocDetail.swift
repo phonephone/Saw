@@ -25,10 +25,25 @@ class EDocDetail: UIViewController, UITextViewDelegate {
     
     let remarkStr = "APPROVE_DETAIL_Default_Reject_Reason".localized()
     
+    var setColor: Bool = true
+    
+    @IBOutlet weak var headerView: UIView!
+    
     @IBOutlet var pdfBtn: UIButton!
     
     @IBOutlet var myTableView: UITableView!
 
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        if setColor {
+            self.navigationController?.setStatusBarColor()
+            headerView.setGradientBackground()
+            
+            setColor = false
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

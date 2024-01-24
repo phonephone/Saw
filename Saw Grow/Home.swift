@@ -33,12 +33,16 @@ class Home: UIViewController, OverlayContainerViewControllerDelegate, UIScrollVi
     
     @IBOutlet weak var recommendStack: UIStackView!
     
-    var firstTime: Bool = true
+    var locationManager: CLLocationManager!
     
     var showMood = false
     var popupShown = "0"
     
-    var locationManager: CLLocationManager!
+    var firstTime: Bool = true
+    var setColor: Bool = true
+    
+    @IBOutlet weak var headerView: UIView!
+    @IBOutlet weak var headerImage: UIImageView!
     
     @IBOutlet weak var sideMenuBtn: UIButton!
     @IBOutlet weak var userPic: MyButton!
@@ -87,6 +91,31 @@ class Home: UIViewController, OverlayContainerViewControllerDelegate, UIScrollVi
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         loadHome()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        if setColor {
+//            UserDefaults.standard.saveColor(UIColor.red, forKey: "gradientColor_1")
+//            UserDefaults.standard.saveColor(UIColor.yellow, forKey: "gradientColor_2")
+//            UserDefaults.standard.saveColor(UIColor.green, forKey: "iconColor")
+//
+//            UserDefaults.standard.removeObject(forKey:"gradientColor_1")
+//            UserDefaults.standard.removeObject(forKey:"gradientColor_2")
+//            UserDefaults.standard.removeObject(forKey:"iconColor")
+
+            //self.navigationController?.setStatusBar(backgroundColor: .red)
+            //self.tabBarController?.setStatusBarColor(backgroundColor: .red)
+            self.tabBarController?.setStatusBarColor()
+            self.tabBarController?.tabBar.tintColor = UIColor.customThemeColor()
+            headerView.setGradientBackground(mainPage: true)
+
+            ProgressHUD.colorAnimation = UIColor.customThemeColor()
+            ProgressHUD.colorStatus = UIColor.customThemeColor()
+
+            setColor = false
+        }
     }
     
     override func viewDidLoad() {
@@ -187,7 +216,27 @@ class Home: UIViewController, OverlayContainerViewControllerDelegate, UIScrollVi
                 
             case .success(let responseObject):
                 let json = JSON(responseObject)
-                print("SUCCESS HOME\(json)")
+                //print("SUCCESS HOME\(json)")
+                
+                let theme = json["data"][0]["theme"]
+                if theme.count > 0 {
+                    if theme[0]["background_color1"].stringValue != "" {
+                        let color = colorFromRGB(rgbString: theme[0]["background_color1"].stringValue)
+                        UserDefaults.standard.saveColor(color, forKey: "gradientColor_1")
+                    }
+                    if theme[0]["background_color2"].stringValue != "" {
+                        let color = colorFromRGB(rgbString: theme[0]["background_color2"].stringValue)
+                        UserDefaults.standard.saveColor(color, forKey: "gradientColor_2")
+                    }
+                    if theme[0]["icon_color"].stringValue != "" {
+                        let color = colorFromRGB(rgbString: theme[0]["icon_color"].stringValue)
+                        UserDefaults.standard.saveColor(color, forKey: "iconColor")
+                    }
+                    if theme[0]["background_image"].stringValue != "" {
+                        self.headerImage.sd_setImage(with: URL(string:theme[0]["background_image"].stringValue), placeholderImage: nil)
+                    }
+                    setColor = true
+                }
                 
                 self.profileJSON = json["data"][0]["profile"][0]
                 self.userPic.sd_setImage(with: URL(string:self.profileJSON!["profile_photo"].stringValue), for: .normal, placeholderImage: UIImage(named: "logo_circle"))
@@ -201,6 +250,7 @@ class Home: UIViewController, OverlayContainerViewControllerDelegate, UIScrollVi
                 else{
                     self.tabBarController!.tabBar.items!.last!.badgeValue = badgeNo
                 }
+                self.tabBarController!.tabBar.items!.last!.badgeColor = UIColor.customThemeColor()
                 
                 self.showMood = false
                 if json["data"][0]["todaymood"] == "" {
@@ -208,7 +258,7 @@ class Home: UIViewController, OverlayContainerViewControllerDelegate, UIScrollVi
                 }
                 
                 if json["data"][0]["ispopup"].stringValue != popupShown {
-                    self.popupPic.sd_setImage(with: URL(string:json["data"][0]["popup"][0]["image_url"].stringValue), placeholderImage: UIImage(named: "xxx"))
+                    self.popupPic.sd_setImage(with: URL(string:json["data"][0]["popup"][0]["image_url"].stringValue), placeholderImage: nil)
                     self.popupTitle.text = json["data"][0]["popup"][0]["title"].stringValue
                     self.popupDescription.text = json["data"][0]["popup"][0]["detail"].stringValue
                     self.popIn(popupView: self.blurView)
@@ -503,7 +553,7 @@ extension Home: UICollectionViewDataSource {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier:"CategoryCell", for: indexPath) as! CategoryCell
             
             cell.cellImage.sd_setImage(with: URL(string:cellArray["menu_image_url"].stringValue), placeholderImage: UIImage(named: "logo_circle"))
-            //cell.menuImage.setImageColor(color: .themeColor)
+            //cell.cellImage.setImageColor(color: .red)
             
             cell.cellTitle.text = cellArray[menuNameKey()].stringValue
             

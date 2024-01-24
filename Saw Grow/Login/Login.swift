@@ -76,7 +76,6 @@ class Login: UIViewController, UITextFieldDelegate {
         if emailField.text! == "" {
             return false
         } else if textField == emailField {
-            emailField.resignFirstResponder()
             passField.becomeFirstResponder()
             return true
         } else if textField == passField {

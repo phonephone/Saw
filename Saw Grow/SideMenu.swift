@@ -15,6 +15,12 @@ class SideMenu: UIViewController {
     var profileJSON : JSON?
     var menuJSON:JSON?
     var footerMenuJSON:JSON?
+    
+    var firstTime = true
+    
+    var setColor: Bool = true
+    
+    @IBOutlet weak var bottomView: UIView!
 
     @IBOutlet weak var userPic: UIImageView!
     @IBOutlet weak var userName: UILabel!
@@ -26,12 +32,21 @@ class SideMenu: UIViewController {
     @IBOutlet weak var helpBtn: UIButton!
     @IBOutlet weak var appVersion: UILabel!
     
-    var firstTime = true
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         loadSideMenu()
     }
+    
+//    override func viewDidLayoutSubviews() {
+//        super.viewDidLayoutSubviews()
+//
+//        if setColor {
+//            self.navigationController?.setStatusBarColor()
+//            bottomView.setGradientBackground(colorTop: .white, colorBottom: UIColor.customThemeColor())
+//
+//            setColor = false
+//        }
+//    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -139,8 +154,8 @@ class SideMenu: UIViewController {
             self.sideMenuTableView.selectRow(at: defaultRow, animated: false, scrollPosition: .none)
             
             let cell = (self.sideMenuTableView.cellForRow(at: defaultRow) as? SideMenuCell)!
-            cell.menuImage.setImageColor(color: .themeColor)
-            cell.menuTitle.textColor = .themeColor
+            cell.menuImage.setImageColor(color: UIColor.customThemeColor())
+            cell.menuTitle.textColor = UIColor.customThemeColor()
         }
     }
     
@@ -186,7 +201,7 @@ extension SideMenu: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: SideMenuCell.identifier, for: indexPath) as? SideMenuCell else { fatalError("xib doesn't exist") }
 
         cell.menuImage.sd_setImage(with: URL(string:self.menuJSON![indexPath.row]["menu_image_url"].stringValue), placeholderImage: UIImage(named: "logo_circle"))
-        //cell.menuImage.setImageColor(color: .themeColor)
+        //cell.menuImage.setImageColor(color: UIColor.customThemeColor())
         
         cell.menuTitle.text = self.menuJSON![indexPath.row][menuNameKey()].stringValue
         
@@ -210,7 +225,7 @@ extension SideMenu: UITableViewDataSource {
         
         // Highlighted color
         let myHighlight = UIView()
-        myHighlight.backgroundColor = .themeColor
+        myHighlight.backgroundColor = UIColor.customThemeColor()
         myHighlight.backgroundColor = myHighlight.backgroundColor!.withAlphaComponent(0.2)
         myHighlight.layer.cornerRadius = 25
         cell.selectedBackgroundView = myHighlight
@@ -225,8 +240,8 @@ extension SideMenu: UITableViewDelegate {
         print("Select \(indexPath.row)")
         
         let cell = (tableView.cellForRow(at: indexPath) as? SideMenuCell)!
-        cell.menuImage.setImageColor(color: .themeColor)
-        cell.menuTitle.textColor = .themeColor
+        cell.menuImage.setImageColor(color: UIColor.customThemeColor())
+        cell.menuTitle.textColor = UIColor.customThemeColor()
         
         switchMenu(menuNo:indexPath.row)
     }
@@ -262,7 +277,7 @@ extension SideMenu: UITableViewDelegate {
             deselectAll(self.sideMenuTableView)
             
         case "LEFT_CHANGE_PASSWORD":
-            let vc = UIStoryboard.mainStoryBoard.instantiateViewController(withIdentifier: "ChangePassword") as! ChangePassword
+            let vc = UIStoryboard.settingStoryBoard.instantiateViewController(withIdentifier: "ChangePassword") as! ChangePassword
             self.navigationController!.pushViewController(vc, animated: true)
             deselectAll(self.sideMenuTableView)
             
@@ -306,11 +321,12 @@ extension SideMenu: UITableViewDelegate {
     
     func deselectAll(_ tableView: UITableView) {
         for i in 0..<menuJSON!.count {
-            var cell : SideMenuCell
             tableView.deselectRow(at: IndexPath(row: i, section: 0), animated: true)
-            cell = (tableView.cellForRow(at: IndexPath(row: i, section: 0)) as? SideMenuCell)!
-            cell.menuImage.image = cell.menuImage.image!.withRenderingMode(.alwaysOriginal)
-            cell.menuTitle.textColor = .textDarkGray
+            
+            if let cell = (tableView.cellForRow(at: IndexPath(row: i, section: 0)) as? SideMenuCell) {
+                cell.menuImage.image = cell.menuImage.image!.withRenderingMode(.alwaysOriginal)
+                cell.menuTitle.textColor = .textDarkGray
+            }
         }
     }
 }

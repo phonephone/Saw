@@ -19,9 +19,24 @@ class DirectoryFavorite: UIViewController, UITextFieldDelegate {
     var directoryJSON:JSON?
     var directoryAllJSON:JSON?
     
+    var setColor: Bool = true
+    
+    @IBOutlet weak var headerView: UIView!
+    
     @IBOutlet weak var searchField: UITextField!
     
     @IBOutlet weak var directoryCollectionView: UICollectionView!
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        if setColor {
+            self.navigationController?.setStatusBarColor()
+            headerView.setGradientBackground()
+            
+            setColor = false
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +50,8 @@ class DirectoryFavorite: UIViewController, UITextFieldDelegate {
         directoryCollectionView.dataSource = self
         directoryCollectionView.backgroundColor = .clear
         directoryCollectionView.contentInset = UIEdgeInsets(top: 15, left: 0, bottom: 15, right: 0)
+        
+        directoryCollectionView.isHidden = true
         //let layout = self.directoryCollectionView.collectionViewLayout as? UICollectionViewFlowLayout
         //layout?.sectionHeadersPinToVisibleBounds = true
         
@@ -62,6 +79,7 @@ class DirectoryFavorite: UIViewController, UITextFieldDelegate {
                 self.directoryAllJSON = self.allJSON
                 
                 self.directoryCollectionView.reloadData()
+                self.directoryCollectionView.isHidden = false
             }
         }
     }
@@ -141,6 +159,7 @@ extension DirectoryFavorite: UICollectionViewDataSource {
             else{
                 headerCell.cellTitleAlphabet.text = "DIRECTORY_FAVORITE_Table_Header2".localized()
             }
+            headerCell.cellTitleAlphabet.textColor = UIColor.themeColor
             return headerCell
         }
         return UICollectionReusableView()

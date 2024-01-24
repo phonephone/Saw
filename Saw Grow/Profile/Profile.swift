@@ -28,6 +28,10 @@ class Profile: UIViewController , MFMailComposeViewControllerDelegate {
     
     var senderRemain = 0
     
+    var setColor: Bool = true
+    
+    @IBOutlet weak var headerView: UIView!
+    
     @IBOutlet weak var userPic: UIImageView!
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var userPosition: UILabel!
@@ -45,7 +49,19 @@ class Profile: UIViewController , MFMailComposeViewControllerDelegate {
     @IBOutlet weak var warningTitle: UILabel!
     @IBOutlet weak var warningIcon: UIImageView!
     
+    @IBOutlet weak var tableTitle: UILabel!
     @IBOutlet weak var myTableView: UITableView!
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        if setColor {
+            self.navigationController?.setStatusBarColor()
+            headerView.setGradientBackground()
+
+            setColor = false
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,12 +81,19 @@ class Profile: UIViewController , MFMailComposeViewControllerDelegate {
             userBtn.isHidden = true
         }
         
+//        changeColor(callBtn)
+//        changeColor(emailBtn)
+//        changeColor(employeeCardBtn)
+//        changeColor(stickerBtn)
+        
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
         userPic.addGestureRecognizer(tapGestureRecognizer)
         userPic.isUserInteractionEnabled = true
         
         statusTitle.text = ""
         statusIcon.image = nil
+        
+        tableTitle.textColor = UIColor.themeColor
         
         // TableView
         myTableView.delegate = self
@@ -127,6 +150,11 @@ class Profile: UIViewController , MFMailComposeViewControllerDelegate {
         else {
             warningView.isHidden = true
         }
+    }
+    
+    func changeColor(_ sender: UIButton) {
+        sender.setTitleColor(UIColor.customThemeColor(), for: .normal)
+        sender.imageView?.setImageColor(color: UIColor.customThemeColor())
     }
     
     @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)

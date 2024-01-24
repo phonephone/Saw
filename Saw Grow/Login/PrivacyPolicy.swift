@@ -14,6 +14,10 @@ class PrivacyPolicy: UIViewController, UIScrollViewDelegate {
     
     var agreementShow:Bool?
     
+    var setColor: Bool = true
+    
+    @IBOutlet weak var headerView: UIView!
+    
     @IBOutlet weak var headerTitle: UILabel!
     @IBOutlet weak var backBtn: UIButton!
     
@@ -24,6 +28,17 @@ class PrivacyPolicy: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var checkboxLabel: UILabel!
     
     @IBOutlet weak var submitBtn: UIButton!
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        if setColor {
+            self.navigationController?.setStatusBarColor()
+            headerView.setGradientBackground()
+            
+            setColor = false
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

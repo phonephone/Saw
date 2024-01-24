@@ -14,6 +14,10 @@ class EDocSalaryQR: UIViewController {
     
     var edocName:String?
     
+    var setColor: Bool = true
+    
+    @IBOutlet weak var headerView: UIView!
+    
     @IBOutlet weak var headTitle: UILabel!
     @IBOutlet weak var mainView: UIView!
     @IBOutlet weak var qrDetailView: UIStackView!
@@ -21,6 +25,17 @@ class EDocSalaryQR: UIViewController {
     @IBOutlet weak var uploadBtn: UIButton!
     @IBOutlet weak var deleteBtn: UIButton!
     @IBOutlet weak var downloadBtn: UIButton!
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        if setColor {
+            self.navigationController?.setStatusBarColor()
+            headerView.setGradientBackground()
+            
+            setColor = false
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -28,6 +28,10 @@ class RewardDetail: UIViewController, WKNavigationDelegate {
     
     var userPoint:Int?
     
+    var setColor: Bool = true
+    
+    @IBOutlet weak var headerView: UIView!
+    
     @IBOutlet weak var headTitle: UILabel!
     @IBOutlet weak var myWebView: WKWebView!
     @IBOutlet weak var submitView: UIView!
@@ -36,6 +40,17 @@ class RewardDetail: UIViewController, WKNavigationDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         //loadReward()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        if setColor {
+            self.navigationController?.setStatusBarColor()
+            headerView.setGradientBackground()
+            
+            setColor = false
+        }
     }
     
     override func viewDidLoad() {

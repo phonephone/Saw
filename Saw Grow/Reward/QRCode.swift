@@ -21,6 +21,8 @@ class QRCode: UIViewController {
     @IBOutlet weak var cardView: MyView!
     @IBOutlet weak var qrPic: UIImageView!
     
+    var blurView : UIVisualEffectView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print("QR")
@@ -30,6 +32,10 @@ class QRCode: UIViewController {
         qrTitle.text = qrJSON!["desc"].stringValue
         qrDate.text = qrJSON!["expire_date"].stringValue
         qrPic.image = generateQRCode(from: qrJSON!["redeam_url"].stringValue)
+        
+        blurView = blurViewSetup()
+        self.view.addSubview(blurView)
+        self.view.sendSubviewToBack(blurView)
     }
     
     func generateQRCode(from string: String) -> UIImage? {

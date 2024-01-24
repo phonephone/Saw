@@ -21,6 +21,10 @@ class SendGift: UIViewController, UITextFieldDelegate {
     
     var senderRemain = 0
     
+    var setColor: Bool = true
+    
+    @IBOutlet weak var headerView: UIView!
+    
     @IBOutlet weak var searchField: UITextField!
     
     @IBOutlet weak var remainLabel: UILabel!
@@ -33,6 +37,17 @@ class SendGift: UIViewController, UITextFieldDelegate {
         
         loadRecommend()
         searchField.text = ""
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        if setColor {
+            self.navigationController?.setStatusBarColor()
+            headerView.setGradientBackground()
+            
+            setColor = false
+        }
     }
     
     override func viewDidLoad() {

@@ -20,6 +20,10 @@ class ProbationScore: UIViewController {
     
     var scoreArray = [Int]()
     
+    var setColor: Bool = true
+    
+    @IBOutlet weak var headerView: UIView!
+    
     @IBOutlet weak var headTitle: UILabel!
     
     @IBOutlet weak var personPic: UIImageView!
@@ -28,6 +32,17 @@ class ProbationScore: UIViewController {
     @IBOutlet weak var myTableView: UITableView!
     
     @IBOutlet weak var submitBtn: UIButton!
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        if setColor {
+            self.navigationController?.setStatusBarColor()
+            headerView.setGradientBackground()
+            
+            setColor = false
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

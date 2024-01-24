@@ -16,6 +16,10 @@ class Mission: UIViewController, UITextFieldDelegate {
     var routineJSON:JSON?
     var missionJSON:JSON?
     
+    var setColor: Bool = true
+    
+    @IBOutlet weak var headerView: UIView!
+    
     @IBOutlet weak var routinePointLabel: UILabel!
     @IBOutlet weak var missionPointLabel: UILabel!
     
@@ -26,6 +30,17 @@ class Mission: UIViewController, UITextFieldDelegate {
         super.viewWillAppear(animated)
         
         loadMission()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        if setColor {
+            self.navigationController?.setStatusBarColor()
+            headerView.setGradientBackground()
+            
+            setColor = false
+        }
     }
     
     override func viewDidLoad() {

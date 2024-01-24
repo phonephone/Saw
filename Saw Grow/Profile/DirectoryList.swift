@@ -34,6 +34,10 @@ class DirectoryList: UIViewController, UITextFieldDelegate, MFMailComposeViewCon
     var allJSON:JSON?
     var directoryJSON:JSON?
     
+    var setColor: Bool = true
+    
+    @IBOutlet weak var headerView: UIView!
+    
     @IBOutlet weak var sideMenuBtn: UIButton!
     @IBOutlet weak var btnAtoZ: MyButton!
     @IBOutlet weak var btnFavorite: MyButton!
@@ -49,6 +53,18 @@ class DirectoryList: UIViewController, UITextFieldDelegate, MFMailComposeViewCon
         super.viewWillAppear(animated)
         loadDirectory()
         searchField.text = ""
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        if setColor {
+            self.tabBarController?.setStatusBarColor()
+            self.tabBarController?.tabBar.tintColor = UIColor.customThemeColor()
+            headerView.setGradientBackground(mainPage:true)
+            
+            setColor = false
+        }
     }
     
     override func viewDidLoad() {
@@ -67,6 +83,8 @@ class DirectoryList: UIViewController, UITextFieldDelegate, MFMailComposeViewCon
         searchField.delegate = self
         searchField.addTarget(self, action: #selector(self.textFieldDidChange(_:)),
                                   for: .editingChanged)
+        
+        setSegmentBtn(button: btnAtoZ)
     }
     
     func loadDirectory() {
@@ -204,7 +222,7 @@ class DirectoryList: UIViewController, UITextFieldDelegate, MFMailComposeViewCon
     }
     
     func setSegmentBtn(button: UIButton) {
-        button.backgroundColor = .themeColor
+        button.backgroundColor = UIColor.themeColor
         button.setTitleColor(UIColor.white, for: .normal)
     }
     

@@ -14,6 +14,10 @@ class ChangePassword: UIViewController, UITextFieldDelegate {
     
     var passwordJSON:JSON?
     
+    var setColor: Bool = true
+    
+    @IBOutlet weak var headerView: UIView!
+    
     @IBOutlet weak var currentPassword: UITextField!
     @IBOutlet weak var newPassword: UITextField!
     @IBOutlet weak var confirmNewPassword: UITextField!
@@ -33,6 +37,17 @@ class ChangePassword: UIViewController, UITextFieldDelegate {
     var checkMatch:Bool = false
     
     @IBOutlet weak var submitBtn: MyButton!
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        if setColor {
+            self.navigationController?.setStatusBarColor()
+            headerView.setGradientBackground()
+            
+            setColor = false
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

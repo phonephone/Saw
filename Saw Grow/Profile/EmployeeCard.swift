@@ -15,6 +15,10 @@ class EmployeeCard: UIViewController {
     
     var profileJSON:JSON?
     
+    var setColor: Bool = true
+    
+    @IBOutlet weak var bottomView: UIView!
+    
     @IBOutlet weak var userPic: UIImageView!
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var userPosition: UILabel!
@@ -22,18 +26,37 @@ class EmployeeCard: UIViewController {
     @IBOutlet weak var cardView: MyView!
     @IBOutlet weak var qrPic: UIImageView!
     
+    var blurView : UIVisualEffectView!
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        if setColor {
+            self.navigationController?.setStatusBarColor()
+            bottomView.setGradientBackground()
+            
+            setColor = false
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //print(profileJSON!)
         
-        self.view.backgroundColor = UIColor.black.withAlphaComponent(0.75)
+        //self.view.backgroundColor = UIColor.black.withAlphaComponent(0.35)
+        
+        bottomView.backgroundColor = UIColor.customThemeColor()
         
         self.userPic.sd_setImage(with: URL(string:self.profileJSON!["profile_photo"].stringValue), placeholderImage: UIImage(named: "logo_circle"))
         self.userName.text = "\(self.profileJSON![self.firstNameKey()].stringValue) \n\(self.profileJSON![self.lastNameKey()].stringValue)"
         self.userPosition.text = self.profileJSON!["designation_name"].stringValue
         
         qrPic.image = generateQRCode(from: self.profileJSON!["qrurl"].stringValue)
+        
+        blurView = blurViewSetup()
+        self.view.addSubview(blurView)
+        self.view.sendSubviewToBack(blurView)
     }
     
     func generateQRCode(from string: String) -> UIImage? {

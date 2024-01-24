@@ -15,11 +15,27 @@ class NotificationAll: UIViewController {
     
     var notiJSON:JSON?
     
+    var setColor: Bool = true
+    
+    @IBOutlet weak var headerView: UIView!
+    
     @IBOutlet weak var myCollectionView: UICollectionView!
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         loadNoti(withLoadingHUD: true)
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        if setColor {
+            self.tabBarController?.setStatusBarColor()
+            self.tabBarController?.tabBar.tintColor = UIColor.customThemeColor()
+            headerView.setGradientBackground()
+            
+            setColor = false
+        }
     }
     
     override func viewDidLoad() {
@@ -89,6 +105,7 @@ extension NotificationAll: UICollectionViewDataSource {
         if let headerCell = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "NotificationHeader_Cell", for: indexPath) as? NotificationHeader_Cell
         {
             headerCell.cellBtnReadAll.addTarget(self, action: #selector(readAllClick(_:)), for: .touchUpInside)
+            headerCell.cellBtnReadAll.backgroundColor = UIColor.themeColor
             
             return headerCell
         }

@@ -10,10 +10,25 @@ import ProgressHUD
 
 class TermOfService: UIViewController, UIScrollViewDelegate {
     
+    var setColor: Bool = true
+    
+    @IBOutlet weak var headerView: UIView!
+    
     @IBOutlet weak var headerTitle: UILabel!
     @IBOutlet weak var backBtn: UIButton!
     
     @IBOutlet weak var myScrollView: UIScrollView!
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        if setColor {
+            self.navigationController?.setStatusBarColor()
+            headerView.setGradientBackground()
+            
+            setColor = false
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

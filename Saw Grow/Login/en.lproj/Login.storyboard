@@ -816,6 +816,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="forgetBtn" destination="mFT-VR-A9a" id="zIh-pQ-hoa"/>
                         <outlet property="passCode1" destination="WAc-bg-4xR" id="iwX-2o-IeG"/>
                         <outlet property="passCode2" destination="xcE-j2-sxu" id="3gh-qT-uF9"/>
                         <outlet property="passCode3" destination="sfy-dX-93T" id="JgY-pi-3xv"/>
@@ -1147,421 +1148,6 @@
             </objects>
             <point key="canvasLocation" x="1769.5652173913045" y="1431.6964285714284"/>
         </scene>
-        <!--Privacy Policy-->
-        <scene sceneID="j4F-Ro-fUZ">
-            <objects>
-                <viewController storyboardIdentifier="PrivacyPolicy" id="J9Z-pY-BwL" customClass="PrivacyPolicy" customModule="Saw_Grow" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="E1V-f2-PYQ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="4000"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sEC-mp-rH2" userLabel="HeaderView">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="124"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="header_short" translatesAutoresizingMaskIntoConstraints="NO" id="ai4-Bn-7bg">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="124"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="ai4-Bn-7bg" secondAttribute="height" multiplier="107:32" id="00a-FJ-Jhb"/>
-                                        </constraints>
-                                    </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qfL-pn-qMm">
-                                        <rect key="frame" x="29" y="51.5" width="53.5" height="21"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="qfL-pn-qMm" secondAttribute="height" multiplier="28:11" id="f4l-ku-2Ky"/>
-                                            <constraint firstAttribute="height" constant="21" id="g5h-mZ-fBR"/>
-                                        </constraints>
-                                        <state key="normal" image="btn_back_white">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="back:" destination="J9Z-pY-BwL" eventType="touchUpInside" id="NDx-44-RFR"/>
-                                        </connections>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Privacy Policy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NFK-EM-D25">
-                                        <rect key="frame" x="144.5" y="50" width="125.5" height="23.5"/>
-                                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="20"/>
-                                        <color key="textColor" name="Text_White"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="ai4-Bn-7bg" secondAttribute="trailing" id="6lA-th-B83"/>
-                                    <constraint firstItem="qfL-pn-qMm" firstAttribute="leading" secondItem="sEC-mp-rH2" secondAttribute="leading" constant="29" id="FL3-yE-SOf"/>
-                                    <constraint firstAttribute="bottom" secondItem="ai4-Bn-7bg" secondAttribute="bottom" id="W0i-52-TEg"/>
-                                    <constraint firstItem="ai4-Bn-7bg" firstAttribute="top" secondItem="sEC-mp-rH2" secondAttribute="top" id="ZI0-Ne-LgK"/>
-                                    <constraint firstItem="NFK-EM-D25" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="qfL-pn-qMm" secondAttribute="trailing" constant="10" id="fcj-cR-PWp"/>
-                                    <constraint firstItem="NFK-EM-D25" firstAttribute="centerY" secondItem="sEC-mp-rH2" secondAttribute="centerY" id="gsJ-Tb-BQs"/>
-                                    <constraint firstItem="NFK-EM-D25" firstAttribute="centerX" secondItem="sEC-mp-rH2" secondAttribute="centerX" id="hoE-yq-enX"/>
-                                    <constraint firstItem="ai4-Bn-7bg" firstAttribute="leading" secondItem="sEC-mp-rH2" secondAttribute="leading" id="lV0-De-X0M"/>
-                                    <constraint firstItem="qfL-pn-qMm" firstAttribute="centerY" secondItem="sEC-mp-rH2" secondAttribute="centerY" id="zFs-7v-m0e"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PVa-pN-59M" userLabel="BottomView">
-                                <rect key="frame" x="0.0" y="124" width="414" height="3876"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="IqO-Pg-KFV">
-                                        <rect key="frame" x="25" y="25" width="364" height="3821"/>
-                                        <subviews>
-                                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AHo-Lc-fXH" customClass="MyScrollView" customModule="Saw_Grow" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="364" height="3704"/>
-                                                <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="LeM-gV-0df">
-                                                        <rect key="frame" x="0.0" y="0.0" width="324" height="4505.5"/>
-                                                        <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="นโยบายความเป็นส่วนตัว และ คุ้มครองข้อมูลส่วนบุคคล" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WgY-WD-Shu">
-                                                                <rect key="frame" x="0.0" y="0.0" width="324" height="48"/>
-                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
-                                                                <color key="textColor" name="Text_Dark_Gray"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="privacy_icon" translatesAutoresizingMaskIntoConstraints="NO" id="az8-JV-m16">
-                                                                <rect key="frame" x="0.0" y="63" width="324" height="189"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="189" id="aER-VI-sFl"/>
-                                                                </constraints>
-                                                            </imageView>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="rdq-ui-0T6">
-                                                                <rect key="frame" x="0.0" y="267" width="324" height="202"/>
-                                                                <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2l0-pO-mVM">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="324" height="202"/>
-                                                                        <string key="text">บริษัท ซอฟท์เค๊ก จำกัด  (สำนักงานใหญ่) ผู้ให้บริการ www.sawgrow.com ขอแนะนำให้ท่านทำความเข้าใจนโยบายส่วนบุคคล (privacy policy) นี้ เนื่องจาก นโยบายนี้อธิบายถึงวิธีการที่บริษัทปฏิบัติต่อข้อมูลส่วนบุคคลของท่าน เช่น การเก็บรวบรวม การจัดเก็บรักษา การใช้ การเปิดเผย รวมถึงสิทธิต่างๆ ของท่าน เป็นต้น เพื่อให้ท่านได้รับทราบถึงนโยบายในการคุ้มครองข้อมูลส่วนบุคคลของบริษัท บริษัท ตระหนักถึงความสำคัญของการปกป้องข้อมูลส่วนบุคคลของลูกค้า พนักงาน รวมตลอดถึงคู่ค้าของบริษัท ด้วยเหตุนี้บริษัทจึงได้จัดให้มีมาตรการในการเก็บรักษา และป้องกันตามมาตราฐานของกฎหมาย ข้อกำหนด และระเบียบเกี่ยวกับการคุ้มครองข้อมูลส่วนบุคคล อย่างเคร่งครัด ดังต่อไปนี้
-</string>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                                        <color key="textColor" name="Text_Dark_Gray"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                </subviews>
-                                                            </stackView>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="zt8-mb-lXO">
-                                                                <rect key="frame" x="0.0" y="484" width="324" height="218"/>
-                                                                <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1. คำนิยาม" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ap3-kW-weO">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="324" height="16"/>
-                                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
-                                                                        <color key="textColor" name="Text_Dark_Gray"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="It7-JJ-g7n">
-                                                                        <rect key="frame" x="0.0" y="16" width="324" height="202"/>
-                                                                        <string key="text">“ข้อมูลส่วนบุคคล” หมายความว่า ข้อมูลเกี่ยวกับบุคคลซึ่งทำให้สามารถระบุตัวบุคคลนั้นได้ไม่ว่าทางตรงหรือทางอ้อม แต่ไม่รวมถึงข้อมูลของผู้ถึงแก่กรรมโดยเฉพาะ “ผู้ควบคุมข้อมูลส่วนบุคคล” หมายความว่า บุคคลหรือนิติบุคคลซึ่งทำให้มีอำนาจหน้าที่ตัดสินใจเกี่ยวกับการเก็บรวบรวม ใช้ หรือเปิดเผยข้อมูลส่วนบุคคล “ผู้ประมวลผลข้อมูลส่วนบุคคล” หมายความว่า บุคคลหรือนิติบุคคลซึ่งดำเนินการเกี่ยวกับรวบรวม ใช้ หรือเปิดเผยข้อมูลส่วนบุคคลตามคำสั่งหรือในนามของผู้ควบคุมข้อมูลส่วนบุคคล ทั้งนี้ บุคคลหรือนิติบุคคลซึ่งดำเนินการดังกล่าวไม่เป็นผู้ควบคุมข้อมูลส่วนบุคคล “เจ้าของข้อมูล” หมายความว่า ลูกค้า พนักงาน คู่ค้า ซึ่งเป็นบุคคลธรรมดา “บุคคล” หมายความว่า บุคคลธรรมดา
-</string>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                                        <color key="textColor" name="Text_Dark_Gray"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                </subviews>
-                                                            </stackView>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="bbb-Ca-pNt">
-                                                                <rect key="frame" x="0.0" y="717" width="324" height="156"/>
-                                                                <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2. วัตถุประสงค์ในการจัดทำนโยบายการคุ้มครองข้อมูลส่วนบุคคล" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QgP-Qu-Rsm">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="324" height="31.5"/>
-                                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
-                                                                        <color key="textColor" name="Text_Dark_Gray"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oMB-y0-Xfm">
-                                                                        <rect key="frame" x="0.0" y="31.5" width="324" height="124.5"/>
-                                                                        <string key="text">บริษัทจัดทำนโยบายการคุ้มครองข้อมูลส่วนบุคคลเพื่อคุ้มครองข้อมูลของลูกค้า พนักงาน รวมตลอดถึง คู่ค้าของบริษัท ในการทำธุรกรรมต่าง ๆ กับบริษัท ให้มีความปลอดภัย น่าเชื่อถือ และเพื่อให้เจ้าของข้อมูลได้รับการคุ้มครองอย่างมีประสิทธิภาพและได้รับการป้องการการนำข้อมูลส่วนบุคคลของเจ้าของข้อมูลไปใช้โดยไม่ได้รับอนุญาต อีกทั้งเพื่อให้มีการเยียวยาเจ้าของข้อมูลส่วนบุคคตามกฎหมายที่เกี่ยวข้อง
-</string>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                                        <color key="textColor" name="Text_Dark_Gray"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                </subviews>
-                                                            </stackView>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Ude-vD-E1Z">
-                                                                <rect key="frame" x="0.0" y="888" width="324" height="714.5"/>
-                                                                <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3. การเก็บข้อมูลส่วนบุคคลอย่างจำกัด" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4pP-Mg-kyq">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="324" height="16"/>
-                                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
-                                                                        <color key="textColor" name="Text_Dark_Gray"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P46-tC-oDY">
-                                                                        <rect key="frame" x="0.0" y="16" width="324" height="698.5"/>
-                                                                        <string key="text">การจัดเก็บรวบรวมข้อมูลส่วนบุคคลจะกระทำโดยมี วัตถุประสงค์ ขอบเขต และใช้วิธีการที่ชอบด้วยกฎหมายและเป็นธรรม ในการเก็บรวบรวมและจัดเก็บข้อมูล ตลอดจนเก็บรวบรวม และจัดเก็บข้อมูลส่วนบุคคลอย่างจำกัดเพียงเท่าที่จำเป็นแก่การให้บริการ หรือบริการด้วยวิธีการทางอิเล็กทรอนิกส์อื่นใดภายใต้วัตถุประสงค์ของบริษัทเท่านั้น ทั้งนี้บริษัทจะดำเนินการให้เจ้าของข้อมูล รับรู้ ให้ความยินยอม ทางอิเล็กทรอนิกส์ ตามแบบวิธีการของบริษัท  บริษัท ได้เก็บรวบรวมข้อมูลของท่านผ่านทาง ข้อมูลที่ท่านแสดงและส่งมอบให้กับบริษัท  บริษัทอาจจัดเก็บข้อมูลส่วนบุคคลของท่านซึ่งเกี่ยวกับความสนใจและบริการที่ท่านใช้ ซึ่งอาจประกอบด้วยเรื่อง เชื้อชาติ ศาสนาหรือปรัชญา ข้อมูลสุขภาพของท่าน ข้อมูลชีวภาพ ทุพพลภาพ ความพิการ อัตลักษณ์ หรือข้อมูลอื่นใด ที่จะเป็นประโยชน์ในการให้บริการ ทั้งนี้ การดำเนินการดังกล่าวข้างต้น บริษัทจะขอความยินยอมจากท่านก่อนทำการเก็บรวบรวม เว้นแต่ 3.1. เป็นการปฏิบัติตามกฎหมาย เช่น พระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคล พระราชบัญญัติว่าด้วยธุรกรรมทางอิเล็กทรอนิกส์ พระราชบัญญัติการประกอบกิจการโทรคมนาคม พระราชบัญญัติป้องกันและปราบปรามการฟอกเงิน ประมวลกฎหมายแพ่งและอาญา ประมวลกฎหมายวิธีพิจารณาความแพ่งและอาญา เป็นต้น 3.2. เป็นไปเพื่อประโยชน์แก่การสอบสวนของพนักงานสอบสวน หรือการพิจารณาพิพากษาคดีของศาล 3.3. เพื่อประโยชน์ของท่าน และการขอความยินยอมไม่อาจกระทำได้ในเวลานั้น 3.4. เป็นการจำเป็นเพื่อประโยชน์โดยชอบด้วยกฎหมายของบริษัท หรือของบุคคลหรือนิติบุคคลอื่นที่ไม่ใช่บริษัท 3.5. เป็นการจำเป็นเพื่อป้องกันหรือระงับอันตรายต่อชีวิต ร่างกาย หรือสุขภาพของบุคคล 3.6. เป็นการจำเป็นเพื่อการปฏิบัติตามสัญญาซึ่งเจ้าของข้อมูลส่วนบุคคลเป็นคู่สัญญาหรือเพื่อใช้ในการดำเนินการตามคำขอของเจ้าของข้อมูลส่วนบุคคลก่อนเข้าทำสัญญานั้น 3.7. เพื่อให้บรรลุวัตถุประสงค์ที่เกี่ยวกับการจัดทำเอกสารประวัติศาสตร์หรือจดหมายเหตุ เพื่อประโยชน์สาธารณะ หรือเพื่อการศึกษา วิจัย การจัดทำสถิติ ซึ่งได้จัดให้มีมาตรการป้องกันที่เหมาะสม 3.8 ข้อมูลพฤติกรรมการใช้งาน จะถูกนำไปวิเคราะห์ความสามารถของ platform รวมถึงวางแผนการพัฒนา platform ในอนาคต โดยเป็นข้อมูลการใช้งานและไม่เกี่ยวข้องกับข้อมูลส่วนบุคคลใดๆทั้งสิ้น </string>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                                        <color key="textColor" name="Text_Dark_Gray"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                </subviews>
-                                                            </stackView>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xq4-h6-Zf2">
-                                                                <rect key="frame" x="0.0" y="1617.5" width="324" height="574.5"/>
-                                                                <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4. วัตถุประสงค์ในการเก็บรวบรวมข้อมูลส่วนบุคคล" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7I5-pw-6dK">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="324" height="16"/>
-                                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
-                                                                        <color key="textColor" name="Text_Dark_Gray"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j7n-YC-auW">
-                                                                        <rect key="frame" x="0.0" y="16" width="324" height="558.5"/>
-                                                                        <string key="text">บริษัทจะดำเนินการจัดเก็บรวบรวม ใช้ ปรับปรุงและเปิดเผยข้อมูลส่วนบุคคลของผู้ให้ข้อมูลตามวัตถุประสงค์ ขอบเขต และตามวิธีการที่กฎหมายหมายกำหนด โดยจะจัดเก็บเพียงเท่าที่จำเป็นแก่การให้บริการ และการดำเนินงานของบริษัทเพื่อประโยชน์ของเจ้าของข้อมูลเป็นหลัก และการอื่น ๆตามกฎหมายเพื่อวัตถุประสงค์ ดังนี้  4.1) เพื่อใช้ในการประมวลผล บริหารจัดการ พิจารณา ให้บริการและการดำเนินงานต่าง ๆ ซึ่งเกี่ยวกับธุรกิจของบริษัทที่มีอยู่ในปัจจุบัน และอาจมีขึ้นในอนาคต และรวมถึงการใด ๆ เพื่อประโยชน์ของเจ้าของข้อมูล ตลอดจนนำไปใช้ในการจัดทำบัญชี งบการเงิน และข้อมูลทางบัญชีของบริษัท 4.2) เพื่อนำส่งข้อมูลส่วนบุคคลไปยังบริษัท ข้อมูลเครดิตแห่งชาติ จำกัด เพื่อใช้ในการขออนุมัติสินเชื่อ หรือหน่วยงานราชการอื่นใดที่เกี่ยวข้องเพื่อประโยชน์ในการใช้พิจารณาสินเชื่อให้กับผู้ให้ข้อมูล 4.3) เพื่อใช้ในการติดตามและเรียกเก็บค่างวดตามสัญญาเช่าซื้อ และหนี้สินอื่นใด (ถ้ามี) จากเจ้าของข้อมูล ซึ่งบริษัทมีสิทธิตามกฎหมาย 4.4) เพื่อใช้ในการแก้ไข ยกเลิก และ/หรือต่ออายุสัญญาเช่าซื้อ สัญญาจ้าง และสัญญาอื่นใดระหว่างเจ้าของข้อมูลกับบริษัท 4.5) เพื่อใช้เป็นข้อมูลในการวิเคราะห์ เสนอ ให้ใช้ เพื่อการวิจัยการตลาดและ/หรือการจัดกิจกรรมส่งเสริมการขาย และ/หรือเพื่อประโยชน์ในการจัดทำฐานข้อมูลและใช้ข้อมูลเพื่อเสนอสิทธิประโยชน์ตามความสนใจของ เจ้าของข้อมูล และ/หรือปรับปรุงการให้บริการ การดำเนินการ หรือผลิตภัณฑ์ของบริษัท 4.6) เพื่อปฏิบัติตามระเบียบ ประกาศ ข้อบังคับ รวมตลอดถึงข้อกำหนดอื่นใดซึ่งบริษัทมีหน้าที่ผูกพันในการปฏิบัติตามกฎหมาย 4.7) เพื่อการนำเสนอข้อมูล ติดตาม ประสานงาน และการให้บริการหลังการขายรวมตลอดถึงเพื่อการจัดทำบริการทางอิเล็คทรอนิกส์ 4.8) เพื่อดำเนินการอื่นใดที่เกี่ยวข้องเพื่อให้บรรลุวัตถุประสงค์ดังที่ได้กล่าวมาข้างต้น </string>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                                        <color key="textColor" name="Text_Dark_Gray"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                </subviews>
-                                                            </stackView>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="qsL-aA-nto">
-                                                                <rect key="frame" x="0.0" y="2207" width="324" height="373"/>
-                                                                <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5. ข้อจำกัดในการใช้ข้อมูลส่วนบุคคล" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XKf-tF-UZS">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="324" height="16"/>
-                                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
-                                                                        <color key="textColor" name="Text_Dark_Gray"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8gi-q5-rpa">
-                                                                        <rect key="frame" x="0.0" y="16" width="324" height="357"/>
-                                                                        <string key="text">บริษัทจะทำการเก็บข้อมูลส่วนบุคคลตามมาตรฐานที่กฎหมายกำหนดและจะไม่ทำการใช้หรือเปิด เผยข้อมูลดังกล่าวต่อบุคคลภายนอกโดยไม่ได้รับความยินยอมของเจ้าของข้อมูล เว้นแต่เพื่อปฏิบัติตามวัตถุประสงค์ที่ระบุไว้ข้างต้น หรือตามที่กฎหมายกำหนดให้ต้องทำการเปิดเผย โดยจะเปิดเผยข้อมูลส่วนบุคคลให้กับหน่วยงานหรือบุคคลที่เกี่ยวข้องดังนี้  5.1) กลุ่มธุรกิจ พันธมิตรทางธุรกิจ ของบริษัท รวมตลอดถึงหน่วยงานของรัฐที่เกี่ยวข้อง ในการให้บริการในการประมวลผล บริหารจัดการ พิจารณา ให้บริการและการดำเนินงานต่าง ๆ ที่เจ้าของข้อมูลได้รับและอาจได้รับในอนาคต 5.2) บริษัท ข้อมูลเครดิตแห่งชาติ จำกัด รวมตลอดถึงบริษัทในเครือกิจการหรือเครือธุรกิจเดียวกัน หรือหน่วยงานอื่นที่เกี่ยวข้อง 5.3) พนักงาน ผู้รับมอบอำนาจ ตัวแทน บุคคลหรือนิติบุคคลผู้ให้บริการการรับจดทะเบียนยานพาหนะ และ/หรือบริการด้านการเร่งรัดหนี้สิน และ/หรือผู้ตรวจสอบบัญชีของบริษัท และ/หรือบริการและการดำเนินงานต่าง ๆ ซึ่งเกี่ยวกับธุรกิจของบริษัทที่มีอยู่ในปัจจุบันและอาจมีขึ้นในอนาคต 5.4) พนักงาน ผู้รับมอบอำนาจ ตัวแทน บุคคล นิติบุคคลหรือหน่วยงานอื่นใด เพื่อปฏิบัติตามข้อกำหนดของกฎหมายหรือก่อตั้งสิทธิตามสัญญาของบริษัท </string>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                                        <color key="textColor" name="Text_Dark_Gray"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                </subviews>
-                                                            </stackView>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="lWp-Y0-X4t">
-                                                                <rect key="frame" x="0.0" y="2595" width="324" height="466"/>
-                                                                <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6. สิทธิของเจ้าของข้อมูลส่วนบุคคล" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lmj-vV-hKy">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="324" height="16"/>
-                                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
-                                                                        <color key="textColor" name="Text_Dark_Gray"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3wK-cE-GKr">
-                                                                        <rect key="frame" x="0.0" y="16" width="324" height="450"/>
-                                                                        <string key="text">บริษัทให้ความสำคัญกับสิทธิของเจ้าของข้อมูลส่วนบุคคล จึงได้กำหนดสิทธิของเจ้าของข้อมูลในการดำเนินการกับข้อมูลส่วนบุคคลของตนซึ่งบริษัทเก็บรวบรวมไว้เพื่อให้สอดคล้องกับกฎหมาย ดังนี้  6.1) ขอเข้าถึงและขอรับสำเนาข้อมูลส่วนบุคคลที่เกี่ยวกับตน ซึ่งอยู่ในความรับผิดชอบของบริษัทได้ตามหลักเกณฑ์และวิธีการที่บริษัทกำหนด หรือขอให้เปิดเผยถึงการได้มาซึ่งข้อมูลส่วนบุคคลดังกล่าวที่ตนไม่ได้ให้ความยินยอม 6.2) ขอรับข้อมูลส่วนบุคคลที่เกี่ยวกับตนจากบริษัทได้ ในกรณีที่บริษัทได้ทำให้ข้อมูลส่วนบุคคลนั้นอยู่ในรูปแบบที่สามารถอ่านหรือใช้งานโดยทั่วไปได้ด้วยเครื่องมือหรืออุปกรณ์ที่ทำงานได้โดยอัตโนมัติ และสามารถใช้หรือเปิดเผยข้อมูลส่วนบุคคลได้ด้วยวิธีการอัตโนมัติ 6.3) คัดค้านการเก็บรวบรวม ใช้ หรือเปิดเผยข้อมูลส่วนบุคคลที่เกี่ยวกับตน ที่กฎหมายอนุญาตให้เก็บได้โดยไม่ต้องได้รับความยินยอมจากผู้ให้ข้อมูล เมื่อใดก็ได้ 6.4) ขอให้บริษัทลบหรือทำลาย หรือทำให้ข้อมูลส่วนบุคคลเป็นข้อมูลที่ไม่สามารถระบุตัวบุคคลที่เป็นเจ้าของข้อมูลส่วนบุคคลได้ ในกรณีตามที่กฎหมายกำหนด 6.5) ขอให้บริษัทระงับการใช้ข้อมูลส่วนบุคคลได้ ในกรณีตามที่กฎหมายกำหนด 6.6) แจ้งให้บริษัทดำเนินการให้ข้อมูลส่วนบุคคลนั้นถูกต้องเป็นปัจจุบัน สมบูรณ์ และไม่ก่อให้เกิดความเข้าใจผิด 6.7) ร้องเรียนในกรณีที่ผู้ควบคุมข้อมูลส่วนบุคคลหรือผู้ประมวลผลข้อมูลส่วนบุคคล รวมทั้งลูกจ้างหรือผู้รับจ้างของผู้ควบคุมข้อมูลส่วนบุคคลหรือผู้ประมวลผลข้อมูลส่วนบุคคล ฝ่าฝืนหรือ ไม่ปฏิบัติตามกฎหมายคุ้มครองข้อมูลส่วนบุคคล </string>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                                        <color key="textColor" name="Text_Dark_Gray"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                </subviews>
-                                                            </stackView>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Rhq-rg-cLu">
-                                                                <rect key="frame" x="0.0" y="3076" width="324" height="202.5"/>
-                                                                <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7. การเพิกถอนความยินยอม" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sp1-4j-DRN">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="324" height="16"/>
-                                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
-                                                                        <color key="textColor" name="Text_Dark_Gray"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xdR-Lt-oHP">
-                                                                        <rect key="frame" x="0.0" y="16" width="324" height="186.5"/>
-                                                                        <string key="text">เจ้าของข้อมูลสามารถเพิกถอนความยินยอมที่ได้ให้ไว้กับบริษัทในการเก็บรวบรวม ใช้ หรือเปิดเผยข้อมูลส่วนบุคคลดังกล่าวข้างต้นเสียเมื่อใดก็ได้ ด้วยการแจ้งความประสงค์ให้บริษัททราบพร้อมทั้งเหตุผลแห่งการนั้น โดยบริษัทจะดำเนินการตามที่ได้รับแจ้งเว้นแต่กรณีมีข้อจำกัดสิทธิในการถอนความยินยอมโดยกฎหมายหรือสัญญาที่ให้ประโยชน์แก่ เจ้าของข้อมูล ทั้งนี้ การเพิกถอนความยินยอมของเจ้าของข้อมูลส่วนบุคคล จะไม่ส่งผลกระทบต่อการเก็บรวบรวมใช้ หรือเปิดเผยข้อมูลส่วนบุคคล ที่เจ้าของข้อมูลส่วนบุคคลได้ให้ความยินยอมไปแล้วก่อนหน้านั้น </string>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                                        <color key="textColor" name="Text_Dark_Gray"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                </subviews>
-                                                            </stackView>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Hs2-qH-WTK">
-                                                                <rect key="frame" x="0.0" y="3293.5" width="324" height="435"/>
-                                                                <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8. การปฏิเสธและการจัดทำบันทึก" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EAI-O3-ghj">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="324" height="16"/>
-                                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
-                                                                        <color key="textColor" name="Text_Dark_Gray"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RQV-cX-nNZ">
-                                                                        <rect key="frame" x="0.0" y="16" width="324" height="419"/>
-                                                                        <string key="text">ในกรณีที่เจ้าของข้อมูลร้องขอให้บริษัทดำเนินการตามที่ระบุไว้ในข้อ 6.1-6.7 หรือ ข้อ 7 บริษัทจะดำเนินการตามที่ได้รับคำร้องขอภายในเวลาที่เหมาะสมและตามขั้นตอนการปฏิบัติของบริษัท เว้นแต่ในกรณีดังนี้ บริษัทอาจปฏิเสธการดำเนินการดังกล่าวได้  8.1) โดยสภาพแล้วไม่อาจดำเนินการดังกล่าวได้ 8.2) เป็นการปฏิเสธตามกฎหมายหรือตามคำสั่งศาล และการเข้าถึงและขอรับสำเนาข้อมูลส่วนบุคคลนั้นจะส่งผลกระทบที่อาจก่อให้เกิดความเสียหาต่อสิทธิและเสรีภาพบุคคลอื่น 8.3) การส่งหรือการโอนข้อมูลส่วนบุคคลนั้นเป็นการปฏิบัติหน้าที่เพื่อประโยชน์สาธารณะหรือเป็นการปฏิบัติหน้าที่ตามกฎหมาย หรือการใช้สิทธิดังกล่าวอาจเป็นการละเมิดสิทธิหรือเสรีภาพของบุคคลอื่น 8.4) การเก็บรวบรวม ใช้ หรือเปิดเผยข้อมูลส่วนบุคคลนั้น ผู้ควบคุมข้อมูลส่วนบุคคลได้แสดงให้เห็นถึงเหตุอันชอบด้วยกฎหมายที่สำคัญยิ่งกว่า 8.5) การเก็บรวบรวม ใช้ หรือเปิดเผยข้อมูลส่วนบุคคลนั้นเป็นไปเพื่อก่อตั้งสิทธิเรียกร้องตามกฎหมายการปฏิบัติตามหรือการใช้สิทธิเรียกร้องตามกฎหมาย หรือการยกขึ้นต่อสู้สิทธิเรียกร้องตามกฎหมายในกรณีที่บริษัทปฏิเสธไม่ดำเนินการตามคำร้องขอของเจ้าของข้อมูลให้ดำเนินการอย่างใดอย่างหนึ่งตามข้อ 7.1-7.8 หรือ ข้อ 8 นั้น บริษัทจะจัดทำรายงานการบันทึกการปฏิเสธพร้อมเหตุผลแห่งการปฏิเสธจัดเก็บไว้ในฝ่าย แผนก หรือหน่วยงานอื่นใดภายในบริษัทซึ่งปฏิเสธคำร้องขอของเจ้าของข้อมูล </string>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                                        <color key="textColor" name="Text_Dark_Gray"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                </subviews>
-                                                            </stackView>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="roI-sI-WKF">
-                                                                <rect key="frame" x="0.0" y="3743.5" width="324" height="249"/>
-                                                                <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9. มาตรการรักษาความมั่นคงปลอดภัยและคุณภาพของข้อมูล" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ffz-hX-P0a">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="324" height="16"/>
-                                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
-                                                                        <color key="textColor" name="Text_Dark_Gray"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3zN-AS-ci5">
-                                                                        <rect key="frame" x="0.0" y="16" width="324" height="233"/>
-                                                                        <string key="text">บริษัทตระหนักถึงความสำคัญของการรักษาความมั่นคงปลอดภัยของข้อมูลส่วนบุคคลของท่าน บริษัทจึงกำหนดให้มีมาตรการในการรักษาความมั่นคงปลอดภัยของข้อมูลส่วนบุคคลอย่างเหมาะสมและสอดคล้องกับการรักษาความลับของข้อมูลส่วนบุคคลเพื่อป้องกันการสูญหาย การเข้าถึง ทำลาย ใช้ แปลง แก้ไขหรือเปิดเผยข้อมูลส่วนบุคคลโดยไม่มีสิทธิหรือโดยไม่ชอบด้วยกฎหมาย ตลอดจนการป้องกันมิให้มีการนำข้อมูลส่วนบุคคลไปใช้โดยมิได้รับอนุญาต นอกจากนี้คณะกรรมการของบริษัทยังได้จัดทำนโยบาย ระเบียบปฏิบัติ คู่มือ แนวทางและอบรมให้ความรู้ ในการเก็บรักษา ใช้ และเปิดเผยข้อมูลส่วนบุคคล เพื่อให้พนักงานของบริษัทในทุกระดับชั้นดำเนินการเก็บรักษา ใช้ และ เปิดเผยข้อมูลส่วนบุคคลปฏิบัติตามมาตราฐานของบริษัทและสอดคล้องกับกฎหมายที่เกี่ยวข้อง </string>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                                        <color key="textColor" name="Text_Dark_Gray"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                </subviews>
-                                                            </stackView>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Zrh-dS-H1f">
-                                                                <rect key="frame" x="0.0" y="4007.5" width="324" height="233.5"/>
-                                                                <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10. เจ้าหน้าที่คุ้มครองข้อมูลส่วนบุคคล" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N8u-T6-xrZ">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="324" height="16"/>
-                                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
-                                                                        <color key="textColor" name="Text_Dark_Gray"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gXW-NG-vfw">
-                                                                        <rect key="frame" x="0.0" y="16" width="324" height="217.5"/>
-                                                                        <string key="text">บริษัทได้มีการดำเนินการปฏิบัติตามพระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคล พ.ศ. 2562 โดยแต่งตั้งเจ้าหน้าที่คุ้มครองข้อมูลส่วนบุคคล (Data Protection Officer : DPO) เพื่อตรวจสอบการดำเนินการของบริษัทที่เกี่ยวกับการเก็บรวบรวม ใช้และเปิดเผยข้อมูลส่วนบุคคลให้สอดคล้องกับพระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคล พ.ศ. 2562 รวมถึงกฎหมายที่เกี่ยวข้องกับการคุ้มครองข้อมูลส่วนบุคคล นอกจากนี้ บริษัทได้จัดทำระเบียบ คำสั่งให้ผู้เกี่ยวข้องดำเนินการตามที่กำหนดไว้ เพื่อให้การดำเนินงานตามแนวนโยบายเกี่ยวกับการคุ้มครองข้อมูลส่วนบุคคลให้เป็นไปด้วยความเรียบร้อย อีกทั้ง ยังเป็นไปตามนโยบายของคณะกรรมการกำกับการบริหารข้อมูลส่วนบุคคลและความมั่นคงปลอดภัยไซเบอร์ของบริษัทที่กำหนด </string>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                                        <color key="textColor" name="Text_Dark_Gray"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                </subviews>
-                                                            </stackView>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="JL2-WG-iCq">
-                                                                <rect key="frame" x="0.0" y="4256" width="324" height="156"/>
-                                                                <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11. ระยะเวลาการเก็บและการทำลายข้อมูลส่วนบุคคล" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Kz-Eq-PGu">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="324" height="16"/>
-                                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
-                                                                        <color key="textColor" name="Text_Dark_Gray"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v2k-IX-EM7">
-                                                                        <rect key="frame" x="0.0" y="16" width="324" height="140"/>
-                                                                        <string key="text">บริษัทจะจัดเก็บรักษาข้อมูลตามที่ได้รับจากเจ้าของข้อมูลตามระยะเวลาเท่าที่จำเป็นในการดำเนินการตามวัตถุประสงค์ดังที่ได้กล่าวมาข้างต้นเท่านั้น เว้นแต่ในกรณีที่มีกฎหมายกำหนดไว้โดยเฉพาะให้เก็บไว้ได้นานกว่านั้น หรือ เป็นการจำเป็นเพื่อการก่อตั้งสิทธิเรียกร้องตามกฎหมาย การปฏิบัติตามหรือการใช้สิทธิเรียกร้องตามกฎหมาย หรือการยกขึ้นต่อสู้ซึ่งสิทธิเรียกร้องตามกฎหมาย หรือเพื่อดำเนินการตามสัญญาซึ่งบริษัทมีสิทธิตามกฎหมาย </string>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                                        <color key="textColor" name="Text_Dark_Gray"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                </subviews>
-                                                            </stackView>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="9Kv-rX-gDF">
-                                                                <rect key="frame" x="0.0" y="4427" width="324" height="78.5"/>
-                                                                <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12. ช่องทางการติดต่อบริษัท" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xyE-Yp-9fb">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="324" height="16"/>
-                                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
-                                                                        <color key="textColor" name="Text_Dark_Gray"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wCd-Ca-bJU">
-                                                                        <rect key="frame" x="0.0" y="16" width="324" height="62.5"/>
-                                                                        <string key="text">บริษัท ซอฟท์เค๊ก จำกัด  (สำนักงานใหญ่)   เลขที่ 290/112 หมู่ที่11 ถนนสวนผัก แขวงตลิ่งชัน เขตตลิ่งชัน กรุงเทพมหานคร 10170 Email: sawhr@gmail.com</string>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                                        <color key="textColor" name="Text_Dark_Gray"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                </subviews>
-                                                            </stackView>
-                                                        </subviews>
-                                                    </stackView>
-                                                </subviews>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstItem="LeM-gV-0df" firstAttribute="width" secondItem="V8d-SX-gMv" secondAttribute="width" constant="-40" id="MZv-pV-MKz"/>
-                                                    <constraint firstItem="LeM-gV-0df" firstAttribute="leading" secondItem="DeO-XR-Dcl" secondAttribute="leading" id="bfb-j5-Rcb"/>
-                                                    <constraint firstItem="LeM-gV-0df" firstAttribute="bottom" secondItem="DeO-XR-Dcl" secondAttribute="bottom" id="f8p-h7-Zph"/>
-                                                    <constraint firstItem="DeO-XR-Dcl" firstAttribute="trailing" secondItem="LeM-gV-0df" secondAttribute="trailing" id="iBd-Wk-jfK"/>
-                                                    <constraint firstItem="LeM-gV-0df" firstAttribute="top" secondItem="DeO-XR-Dcl" secondAttribute="top" id="oBc-3g-Mhx"/>
-                                                </constraints>
-                                                <viewLayoutGuide key="contentLayoutGuide" id="DeO-XR-Dcl"/>
-                                                <viewLayoutGuide key="frameLayoutGuide" id="V8d-SX-gMv"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="15"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </scrollView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="uL0-k3-hHd">
-                                                <rect key="frame" x="0.0" y="3719" width="364" height="102"/>
-                                                <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="loa-4N-R5w">
-                                                        <rect key="frame" x="0.0" y="0.0" width="364" height="28"/>
-                                                        <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V35-Jd-Qkv">
-                                                                <rect key="frame" x="0.0" y="0.0" width="28" height="28"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" secondItem="V35-Jd-Qkv" secondAttribute="height" multiplier="1:1" id="sme-Yy-UXD"/>
-                                                                </constraints>
-                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                                <state key="normal" image="form_checkbox_off"/>
-                                                                <connections>
-                                                                    <action selector="checkboxClick:" destination="J9Z-pY-BwL" eventType="touchUpInside" id="4OL-w0-a3L"/>
-                                                                </connections>
-                                                            </button>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I agree to the Privacy Policy" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mNy-35-TOe">
-                                                                <rect key="frame" x="38" y="0.0" width="326" height="28"/>
-                                                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="14"/>
-                                                                <color key="textColor" name="Text_Dark_Gray"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                        </subviews>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="28" id="Cbr-eE-JsO"/>
-                                                        </constraints>
-                                                    </stackView>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wJb-xi-zsF" customClass="MyButton" customModule="Saw_Grow" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="43" width="364" height="59"/>
-                                                        <color key="backgroundColor" name="Main_Theme_1"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="59" id="hiN-Kv-EQu"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="20"/>
-                                                        <state key="normal" title="Accept">
-                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        </state>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                <real key="value" value="15"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                        <connections>
-                                                            <action selector="submitClick:" destination="J9Z-pY-BwL" eventType="touchUpInside" id="lsh-VP-68w"/>
-                                                        </connections>
-                                                    </button>
-                                                </subviews>
-                                                <constraints>
-                                                    <constraint firstAttribute="trailing" secondItem="wJb-xi-zsF" secondAttribute="trailing" id="1zQ-hk-N0R"/>
-                                                    <constraint firstItem="wJb-xi-zsF" firstAttribute="leading" secondItem="uL0-k3-hHd" secondAttribute="leading" id="pvv-aQ-He9"/>
-                                                </constraints>
-                                            </stackView>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                                <color key="backgroundColor" name="Bg_Light_Gray"/>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="IqO-Pg-KFV" secondAttribute="trailing" constant="25" id="1UC-ut-zVW"/>
-                                    <constraint firstAttribute="bottom" secondItem="IqO-Pg-KFV" secondAttribute="bottom" constant="30" id="QSi-4o-sn3"/>
-                                    <constraint firstItem="IqO-Pg-KFV" firstAttribute="top" secondItem="PVa-pN-59M" secondAttribute="top" constant="25" id="RHS-mO-EWg"/>
-                                    <constraint firstItem="IqO-Pg-KFV" firstAttribute="leading" secondItem="PVa-pN-59M" secondAttribute="leading" constant="25" id="tsP-4H-4PF"/>
-                                </constraints>
-                            </view>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="Hbf-VA-CJ5"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="PVa-pN-59M" firstAttribute="trailing" secondItem="Hbf-VA-CJ5" secondAttribute="trailing" id="1MX-6b-RtU"/>
-                            <constraint firstItem="PVa-pN-59M" firstAttribute="top" secondItem="sEC-mp-rH2" secondAttribute="bottom" id="Cxq-fB-Ojq"/>
-                            <constraint firstItem="sEC-mp-rH2" firstAttribute="trailing" secondItem="Hbf-VA-CJ5" secondAttribute="trailing" id="ICw-4e-B28"/>
-                            <constraint firstItem="PVa-pN-59M" firstAttribute="leading" secondItem="Hbf-VA-CJ5" secondAttribute="leading" id="KG5-S9-Thq"/>
-                            <constraint firstItem="sEC-mp-rH2" firstAttribute="top" secondItem="E1V-f2-PYQ" secondAttribute="top" id="Rhg-RY-I56"/>
-                            <constraint firstAttribute="bottom" secondItem="PVa-pN-59M" secondAttribute="bottom" id="Ys5-0K-I1k"/>
-                            <constraint firstItem="sEC-mp-rH2" firstAttribute="leading" secondItem="Hbf-VA-CJ5" secondAttribute="leading" id="tkg-uH-eqk"/>
-                        </constraints>
-                    </view>
-                    <size key="freeformSize" width="414" height="4000"/>
-                    <connections>
-                        <outlet property="agreementStack" destination="uL0-k3-hHd" id="JOU-pn-IGK"/>
-                        <outlet property="backBtn" destination="qfL-pn-qMm" id="i46-4u-xxF"/>
-                        <outlet property="checkboxBtn" destination="V35-Jd-Qkv" id="ZyE-QF-chZ"/>
-                        <outlet property="checkboxLabel" destination="mNy-35-TOe" id="A8Z-Pc-hVy"/>
-                        <outlet property="headerTitle" destination="NFK-EM-D25" id="nhC-Ce-du8"/>
-                        <outlet property="myScrollView" destination="AHo-Lc-fXH" id="pX7-d1-QlN"/>
-                        <outlet property="submitBtn" destination="wJb-xi-zsF" id="bQM-uR-6GD"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="buF-gt-3vW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="360.86956521739131" y="3814.9553571428569"/>
-        </scene>
         <!--Term Of Service-->
         <scene sceneID="VRf-eZ-yg0">
             <objects>
@@ -1571,16 +1157,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="58h-AR-lPY" userLabel="HeaderView">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="124"/>
+                                <rect key="frame" x="0.0" y="48" width="414" height="60"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="header_short" translatesAutoresizingMaskIntoConstraints="NO" id="bhU-cw-O3M">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="124"/>
+                                    <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="header_short" translatesAutoresizingMaskIntoConstraints="NO" id="bhU-cw-O3M">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="bhU-cw-O3M" secondAttribute="height" multiplier="107:32" id="4TW-39-TxS"/>
+                                            <constraint firstAttribute="height" constant="60" id="jNG-TZ-FYs"/>
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2EZ-ix-c41">
-                                        <rect key="frame" x="29" y="51.5" width="53.5" height="21"/>
+                                        <rect key="frame" x="29" y="19.5" width="53.5" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="2EZ-ix-c41" secondAttribute="height" multiplier="28:11" id="Azu-ZX-GpO"/>
                                             <constraint firstAttribute="height" constant="21" id="QQd-ti-FC4"/>
@@ -1593,7 +1179,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Terms of Service" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7pP-cV-LjK">
-                                        <rect key="frame" x="131.5" y="50" width="151.5" height="23.5"/>
+                                        <rect key="frame" x="131.5" y="18.5" width="151.5" height="23.5"/>
                                         <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="20"/>
                                         <color key="textColor" name="Text_White"/>
                                         <nil key="highlightedColor"/>
@@ -1612,13 +1198,13 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cpH-rr-dII" userLabel="BottomView">
-                                <rect key="frame" x="0.0" y="124" width="414" height="3876"/>
+                                <rect key="frame" x="0.0" y="108" width="414" height="3892"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="b68-cb-YFV">
-                                        <rect key="frame" x="25" y="25" width="364" height="3821"/>
+                                        <rect key="frame" x="25" y="25" width="364" height="3837"/>
                                         <subviews>
                                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aTQ-xV-4gk" customClass="MyScrollView" customModule="Saw_Grow" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="364" height="3821"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="364" height="3837"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Q18-JQ-59D">
                                                         <rect key="frame" x="0.0" y="0.0" width="324" height="7259"/>
@@ -1944,7 +1530,7 @@
                             <constraint firstItem="cpH-rr-dII" firstAttribute="leading" secondItem="5j5-PA-3c8" secondAttribute="leading" id="8lw-WO-72R"/>
                             <constraint firstItem="58h-AR-lPY" firstAttribute="leading" secondItem="5j5-PA-3c8" secondAttribute="leading" id="QRu-8n-w28"/>
                             <constraint firstItem="cpH-rr-dII" firstAttribute="top" secondItem="58h-AR-lPY" secondAttribute="bottom" id="byO-So-JNz"/>
-                            <constraint firstItem="58h-AR-lPY" firstAttribute="top" secondItem="o3Y-UA-weV" secondAttribute="top" id="czI-ok-P6a"/>
+                            <constraint firstItem="58h-AR-lPY" firstAttribute="top" secondItem="5j5-PA-3c8" secondAttribute="top" id="czI-ok-P6a"/>
                             <constraint firstItem="58h-AR-lPY" firstAttribute="trailing" secondItem="5j5-PA-3c8" secondAttribute="trailing" id="fAp-kD-IvH"/>
                             <constraint firstItem="cpH-rr-dII" firstAttribute="trailing" secondItem="5j5-PA-3c8" secondAttribute="trailing" id="nvi-KA-I2s"/>
                             <constraint firstAttribute="bottom" secondItem="cpH-rr-dII" secondAttribute="bottom" id="pOB-JS-5ox"/>
@@ -1954,12 +1540,429 @@
                     <connections>
                         <outlet property="backBtn" destination="2EZ-ix-c41" id="jRe-vu-DrI"/>
                         <outlet property="headerTitle" destination="7pP-cV-LjK" id="lwQ-px-ozK"/>
+                        <outlet property="headerView" destination="58h-AR-lPY" id="7Hr-GV-h1c"/>
                         <outlet property="myScrollView" destination="aTQ-xV-4gk" id="A5U-CU-GM9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wbO-gx-eGw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-348" y="3815"/>
+        </scene>
+        <!--Privacy Policy-->
+        <scene sceneID="j4F-Ro-fUZ">
+            <objects>
+                <viewController storyboardIdentifier="PrivacyPolicy" id="J9Z-pY-BwL" customClass="PrivacyPolicy" customModule="Saw_Grow" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="E1V-f2-PYQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="4000"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sEC-mp-rH2" userLabel="HeaderView">
+                                <rect key="frame" x="0.0" y="48" width="414" height="60"/>
+                                <subviews>
+                                    <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="header_short" translatesAutoresizingMaskIntoConstraints="NO" id="ai4-Bn-7bg">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="rWv-NN-0OJ"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qfL-pn-qMm">
+                                        <rect key="frame" x="29" y="19.5" width="53.5" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="qfL-pn-qMm" secondAttribute="height" multiplier="28:11" id="f4l-ku-2Ky"/>
+                                            <constraint firstAttribute="height" constant="21" id="g5h-mZ-fBR"/>
+                                        </constraints>
+                                        <state key="normal" image="btn_back_white">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="back:" destination="J9Z-pY-BwL" eventType="touchUpInside" id="NDx-44-RFR"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Privacy Policy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NFK-EM-D25">
+                                        <rect key="frame" x="144.5" y="18.5" width="125.5" height="23.5"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="20"/>
+                                        <color key="textColor" name="Text_White"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="ai4-Bn-7bg" secondAttribute="trailing" id="6lA-th-B83"/>
+                                    <constraint firstItem="qfL-pn-qMm" firstAttribute="leading" secondItem="sEC-mp-rH2" secondAttribute="leading" constant="29" id="FL3-yE-SOf"/>
+                                    <constraint firstAttribute="bottom" secondItem="ai4-Bn-7bg" secondAttribute="bottom" id="W0i-52-TEg"/>
+                                    <constraint firstItem="ai4-Bn-7bg" firstAttribute="top" secondItem="sEC-mp-rH2" secondAttribute="top" id="ZI0-Ne-LgK"/>
+                                    <constraint firstItem="NFK-EM-D25" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="qfL-pn-qMm" secondAttribute="trailing" constant="10" id="fcj-cR-PWp"/>
+                                    <constraint firstItem="NFK-EM-D25" firstAttribute="centerY" secondItem="sEC-mp-rH2" secondAttribute="centerY" id="gsJ-Tb-BQs"/>
+                                    <constraint firstItem="NFK-EM-D25" firstAttribute="centerX" secondItem="sEC-mp-rH2" secondAttribute="centerX" id="hoE-yq-enX"/>
+                                    <constraint firstItem="ai4-Bn-7bg" firstAttribute="leading" secondItem="sEC-mp-rH2" secondAttribute="leading" id="lV0-De-X0M"/>
+                                    <constraint firstItem="qfL-pn-qMm" firstAttribute="centerY" secondItem="sEC-mp-rH2" secondAttribute="centerY" id="zFs-7v-m0e"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PVa-pN-59M" userLabel="BottomView">
+                                <rect key="frame" x="0.0" y="108" width="414" height="3892"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="IqO-Pg-KFV">
+                                        <rect key="frame" x="25" y="25" width="364" height="3837"/>
+                                        <subviews>
+                                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AHo-Lc-fXH" customClass="MyScrollView" customModule="Saw_Grow" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="364" height="3720"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="LeM-gV-0df">
+                                                        <rect key="frame" x="0.0" y="0.0" width="324" height="4505.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="นโยบายความเป็นส่วนตัว และ คุ้มครองข้อมูลส่วนบุคคล" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WgY-WD-Shu">
+                                                                <rect key="frame" x="0.0" y="0.0" width="324" height="48"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                                <color key="textColor" name="Text_Dark_Gray"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="privacy_icon" translatesAutoresizingMaskIntoConstraints="NO" id="az8-JV-m16">
+                                                                <rect key="frame" x="0.0" y="63" width="324" height="189"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="189" id="aER-VI-sFl"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="rdq-ui-0T6">
+                                                                <rect key="frame" x="0.0" y="267" width="324" height="202"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2l0-pO-mVM">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="324" height="202"/>
+                                                                        <string key="text">บริษัท ซอฟท์เค๊ก จำกัด  (สำนักงานใหญ่) ผู้ให้บริการ www.sawgrow.com ขอแนะนำให้ท่านทำความเข้าใจนโยบายส่วนบุคคล (privacy policy) นี้ เนื่องจาก นโยบายนี้อธิบายถึงวิธีการที่บริษัทปฏิบัติต่อข้อมูลส่วนบุคคลของท่าน เช่น การเก็บรวบรวม การจัดเก็บรักษา การใช้ การเปิดเผย รวมถึงสิทธิต่างๆ ของท่าน เป็นต้น เพื่อให้ท่านได้รับทราบถึงนโยบายในการคุ้มครองข้อมูลส่วนบุคคลของบริษัท บริษัท ตระหนักถึงความสำคัญของการปกป้องข้อมูลส่วนบุคคลของลูกค้า พนักงาน รวมตลอดถึงคู่ค้าของบริษัท ด้วยเหตุนี้บริษัทจึงได้จัดให้มีมาตรการในการเก็บรักษา และป้องกันตามมาตราฐานของกฎหมาย ข้อกำหนด และระเบียบเกี่ยวกับการคุ้มครองข้อมูลส่วนบุคคล อย่างเคร่งครัด ดังต่อไปนี้
+</string>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                        <color key="textColor" name="Text_Dark_Gray"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="zt8-mb-lXO">
+                                                                <rect key="frame" x="0.0" y="484" width="324" height="218"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1. คำนิยาม" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ap3-kW-weO">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="324" height="16"/>
+                                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                                                                        <color key="textColor" name="Text_Dark_Gray"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="It7-JJ-g7n">
+                                                                        <rect key="frame" x="0.0" y="16" width="324" height="202"/>
+                                                                        <string key="text">“ข้อมูลส่วนบุคคล” หมายความว่า ข้อมูลเกี่ยวกับบุคคลซึ่งทำให้สามารถระบุตัวบุคคลนั้นได้ไม่ว่าทางตรงหรือทางอ้อม แต่ไม่รวมถึงข้อมูลของผู้ถึงแก่กรรมโดยเฉพาะ “ผู้ควบคุมข้อมูลส่วนบุคคล” หมายความว่า บุคคลหรือนิติบุคคลซึ่งทำให้มีอำนาจหน้าที่ตัดสินใจเกี่ยวกับการเก็บรวบรวม ใช้ หรือเปิดเผยข้อมูลส่วนบุคคล “ผู้ประมวลผลข้อมูลส่วนบุคคล” หมายความว่า บุคคลหรือนิติบุคคลซึ่งดำเนินการเกี่ยวกับรวบรวม ใช้ หรือเปิดเผยข้อมูลส่วนบุคคลตามคำสั่งหรือในนามของผู้ควบคุมข้อมูลส่วนบุคคล ทั้งนี้ บุคคลหรือนิติบุคคลซึ่งดำเนินการดังกล่าวไม่เป็นผู้ควบคุมข้อมูลส่วนบุคคล “เจ้าของข้อมูล” หมายความว่า ลูกค้า พนักงาน คู่ค้า ซึ่งเป็นบุคคลธรรมดา “บุคคล” หมายความว่า บุคคลธรรมดา
+</string>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                        <color key="textColor" name="Text_Dark_Gray"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="bbb-Ca-pNt">
+                                                                <rect key="frame" x="0.0" y="717" width="324" height="156"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2. วัตถุประสงค์ในการจัดทำนโยบายการคุ้มครองข้อมูลส่วนบุคคล" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QgP-Qu-Rsm">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="324" height="31.5"/>
+                                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                                                                        <color key="textColor" name="Text_Dark_Gray"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oMB-y0-Xfm">
+                                                                        <rect key="frame" x="0.0" y="31.5" width="324" height="124.5"/>
+                                                                        <string key="text">บริษัทจัดทำนโยบายการคุ้มครองข้อมูลส่วนบุคคลเพื่อคุ้มครองข้อมูลของลูกค้า พนักงาน รวมตลอดถึง คู่ค้าของบริษัท ในการทำธุรกรรมต่าง ๆ กับบริษัท ให้มีความปลอดภัย น่าเชื่อถือ และเพื่อให้เจ้าของข้อมูลได้รับการคุ้มครองอย่างมีประสิทธิภาพและได้รับการป้องการการนำข้อมูลส่วนบุคคลของเจ้าของข้อมูลไปใช้โดยไม่ได้รับอนุญาต อีกทั้งเพื่อให้มีการเยียวยาเจ้าของข้อมูลส่วนบุคคตามกฎหมายที่เกี่ยวข้อง
+</string>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                        <color key="textColor" name="Text_Dark_Gray"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Ude-vD-E1Z">
+                                                                <rect key="frame" x="0.0" y="888" width="324" height="714.5"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3. การเก็บข้อมูลส่วนบุคคลอย่างจำกัด" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4pP-Mg-kyq">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="324" height="16"/>
+                                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                                                                        <color key="textColor" name="Text_Dark_Gray"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P46-tC-oDY">
+                                                                        <rect key="frame" x="0.0" y="16" width="324" height="698.5"/>
+                                                                        <string key="text">การจัดเก็บรวบรวมข้อมูลส่วนบุคคลจะกระทำโดยมี วัตถุประสงค์ ขอบเขต และใช้วิธีการที่ชอบด้วยกฎหมายและเป็นธรรม ในการเก็บรวบรวมและจัดเก็บข้อมูล ตลอดจนเก็บรวบรวม และจัดเก็บข้อมูลส่วนบุคคลอย่างจำกัดเพียงเท่าที่จำเป็นแก่การให้บริการ หรือบริการด้วยวิธีการทางอิเล็กทรอนิกส์อื่นใดภายใต้วัตถุประสงค์ของบริษัทเท่านั้น ทั้งนี้บริษัทจะดำเนินการให้เจ้าของข้อมูล รับรู้ ให้ความยินยอม ทางอิเล็กทรอนิกส์ ตามแบบวิธีการของบริษัท  บริษัท ได้เก็บรวบรวมข้อมูลของท่านผ่านทาง ข้อมูลที่ท่านแสดงและส่งมอบให้กับบริษัท  บริษัทอาจจัดเก็บข้อมูลส่วนบุคคลของท่านซึ่งเกี่ยวกับความสนใจและบริการที่ท่านใช้ ซึ่งอาจประกอบด้วยเรื่อง เชื้อชาติ ศาสนาหรือปรัชญา ข้อมูลสุขภาพของท่าน ข้อมูลชีวภาพ ทุพพลภาพ ความพิการ อัตลักษณ์ หรือข้อมูลอื่นใด ที่จะเป็นประโยชน์ในการให้บริการ ทั้งนี้ การดำเนินการดังกล่าวข้างต้น บริษัทจะขอความยินยอมจากท่านก่อนทำการเก็บรวบรวม เว้นแต่ 3.1. เป็นการปฏิบัติตามกฎหมาย เช่น พระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคล พระราชบัญญัติว่าด้วยธุรกรรมทางอิเล็กทรอนิกส์ พระราชบัญญัติการประกอบกิจการโทรคมนาคม พระราชบัญญัติป้องกันและปราบปรามการฟอกเงิน ประมวลกฎหมายแพ่งและอาญา ประมวลกฎหมายวิธีพิจารณาความแพ่งและอาญา เป็นต้น 3.2. เป็นไปเพื่อประโยชน์แก่การสอบสวนของพนักงานสอบสวน หรือการพิจารณาพิพากษาคดีของศาล 3.3. เพื่อประโยชน์ของท่าน และการขอความยินยอมไม่อาจกระทำได้ในเวลานั้น 3.4. เป็นการจำเป็นเพื่อประโยชน์โดยชอบด้วยกฎหมายของบริษัท หรือของบุคคลหรือนิติบุคคลอื่นที่ไม่ใช่บริษัท 3.5. เป็นการจำเป็นเพื่อป้องกันหรือระงับอันตรายต่อชีวิต ร่างกาย หรือสุขภาพของบุคคล 3.6. เป็นการจำเป็นเพื่อการปฏิบัติตามสัญญาซึ่งเจ้าของข้อมูลส่วนบุคคลเป็นคู่สัญญาหรือเพื่อใช้ในการดำเนินการตามคำขอของเจ้าของข้อมูลส่วนบุคคลก่อนเข้าทำสัญญานั้น 3.7. เพื่อให้บรรลุวัตถุประสงค์ที่เกี่ยวกับการจัดทำเอกสารประวัติศาสตร์หรือจดหมายเหตุ เพื่อประโยชน์สาธารณะ หรือเพื่อการศึกษา วิจัย การจัดทำสถิติ ซึ่งได้จัดให้มีมาตรการป้องกันที่เหมาะสม 3.8 ข้อมูลพฤติกรรมการใช้งาน จะถูกนำไปวิเคราะห์ความสามารถของ platform รวมถึงวางแผนการพัฒนา platform ในอนาคต โดยเป็นข้อมูลการใช้งานและไม่เกี่ยวข้องกับข้อมูลส่วนบุคคลใดๆทั้งสิ้น </string>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                        <color key="textColor" name="Text_Dark_Gray"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xq4-h6-Zf2">
+                                                                <rect key="frame" x="0.0" y="1617.5" width="324" height="574.5"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4. วัตถุประสงค์ในการเก็บรวบรวมข้อมูลส่วนบุคคล" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7I5-pw-6dK">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="324" height="16"/>
+                                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                                                                        <color key="textColor" name="Text_Dark_Gray"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j7n-YC-auW">
+                                                                        <rect key="frame" x="0.0" y="16" width="324" height="558.5"/>
+                                                                        <string key="text">บริษัทจะดำเนินการจัดเก็บรวบรวม ใช้ ปรับปรุงและเปิดเผยข้อมูลส่วนบุคคลของผู้ให้ข้อมูลตามวัตถุประสงค์ ขอบเขต และตามวิธีการที่กฎหมายหมายกำหนด โดยจะจัดเก็บเพียงเท่าที่จำเป็นแก่การให้บริการ และการดำเนินงานของบริษัทเพื่อประโยชน์ของเจ้าของข้อมูลเป็นหลัก และการอื่น ๆตามกฎหมายเพื่อวัตถุประสงค์ ดังนี้  4.1) เพื่อใช้ในการประมวลผล บริหารจัดการ พิจารณา ให้บริการและการดำเนินงานต่าง ๆ ซึ่งเกี่ยวกับธุรกิจของบริษัทที่มีอยู่ในปัจจุบัน และอาจมีขึ้นในอนาคต และรวมถึงการใด ๆ เพื่อประโยชน์ของเจ้าของข้อมูล ตลอดจนนำไปใช้ในการจัดทำบัญชี งบการเงิน และข้อมูลทางบัญชีของบริษัท 4.2) เพื่อนำส่งข้อมูลส่วนบุคคลไปยังบริษัท ข้อมูลเครดิตแห่งชาติ จำกัด เพื่อใช้ในการขออนุมัติสินเชื่อ หรือหน่วยงานราชการอื่นใดที่เกี่ยวข้องเพื่อประโยชน์ในการใช้พิจารณาสินเชื่อให้กับผู้ให้ข้อมูล 4.3) เพื่อใช้ในการติดตามและเรียกเก็บค่างวดตามสัญญาเช่าซื้อ และหนี้สินอื่นใด (ถ้ามี) จากเจ้าของข้อมูล ซึ่งบริษัทมีสิทธิตามกฎหมาย 4.4) เพื่อใช้ในการแก้ไข ยกเลิก และ/หรือต่ออายุสัญญาเช่าซื้อ สัญญาจ้าง และสัญญาอื่นใดระหว่างเจ้าของข้อมูลกับบริษัท 4.5) เพื่อใช้เป็นข้อมูลในการวิเคราะห์ เสนอ ให้ใช้ เพื่อการวิจัยการตลาดและ/หรือการจัดกิจกรรมส่งเสริมการขาย และ/หรือเพื่อประโยชน์ในการจัดทำฐานข้อมูลและใช้ข้อมูลเพื่อเสนอสิทธิประโยชน์ตามความสนใจของ เจ้าของข้อมูล และ/หรือปรับปรุงการให้บริการ การดำเนินการ หรือผลิตภัณฑ์ของบริษัท 4.6) เพื่อปฏิบัติตามระเบียบ ประกาศ ข้อบังคับ รวมตลอดถึงข้อกำหนดอื่นใดซึ่งบริษัทมีหน้าที่ผูกพันในการปฏิบัติตามกฎหมาย 4.7) เพื่อการนำเสนอข้อมูล ติดตาม ประสานงาน และการให้บริการหลังการขายรวมตลอดถึงเพื่อการจัดทำบริการทางอิเล็คทรอนิกส์ 4.8) เพื่อดำเนินการอื่นใดที่เกี่ยวข้องเพื่อให้บรรลุวัตถุประสงค์ดังที่ได้กล่าวมาข้างต้น </string>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                        <color key="textColor" name="Text_Dark_Gray"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="qsL-aA-nto">
+                                                                <rect key="frame" x="0.0" y="2207" width="324" height="373"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5. ข้อจำกัดในการใช้ข้อมูลส่วนบุคคล" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XKf-tF-UZS">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="324" height="16"/>
+                                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                                                                        <color key="textColor" name="Text_Dark_Gray"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8gi-q5-rpa">
+                                                                        <rect key="frame" x="0.0" y="16" width="324" height="357"/>
+                                                                        <string key="text">บริษัทจะทำการเก็บข้อมูลส่วนบุคคลตามมาตรฐานที่กฎหมายกำหนดและจะไม่ทำการใช้หรือเปิด เผยข้อมูลดังกล่าวต่อบุคคลภายนอกโดยไม่ได้รับความยินยอมของเจ้าของข้อมูล เว้นแต่เพื่อปฏิบัติตามวัตถุประสงค์ที่ระบุไว้ข้างต้น หรือตามที่กฎหมายกำหนดให้ต้องทำการเปิดเผย โดยจะเปิดเผยข้อมูลส่วนบุคคลให้กับหน่วยงานหรือบุคคลที่เกี่ยวข้องดังนี้  5.1) กลุ่มธุรกิจ พันธมิตรทางธุรกิจ ของบริษัท รวมตลอดถึงหน่วยงานของรัฐที่เกี่ยวข้อง ในการให้บริการในการประมวลผล บริหารจัดการ พิจารณา ให้บริการและการดำเนินงานต่าง ๆ ที่เจ้าของข้อมูลได้รับและอาจได้รับในอนาคต 5.2) บริษัท ข้อมูลเครดิตแห่งชาติ จำกัด รวมตลอดถึงบริษัทในเครือกิจการหรือเครือธุรกิจเดียวกัน หรือหน่วยงานอื่นที่เกี่ยวข้อง 5.3) พนักงาน ผู้รับมอบอำนาจ ตัวแทน บุคคลหรือนิติบุคคลผู้ให้บริการการรับจดทะเบียนยานพาหนะ และ/หรือบริการด้านการเร่งรัดหนี้สิน และ/หรือผู้ตรวจสอบบัญชีของบริษัท และ/หรือบริการและการดำเนินงานต่าง ๆ ซึ่งเกี่ยวกับธุรกิจของบริษัทที่มีอยู่ในปัจจุบันและอาจมีขึ้นในอนาคต 5.4) พนักงาน ผู้รับมอบอำนาจ ตัวแทน บุคคล นิติบุคคลหรือหน่วยงานอื่นใด เพื่อปฏิบัติตามข้อกำหนดของกฎหมายหรือก่อตั้งสิทธิตามสัญญาของบริษัท </string>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                        <color key="textColor" name="Text_Dark_Gray"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="lWp-Y0-X4t">
+                                                                <rect key="frame" x="0.0" y="2595" width="324" height="466"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6. สิทธิของเจ้าของข้อมูลส่วนบุคคล" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lmj-vV-hKy">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="324" height="16"/>
+                                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                                                                        <color key="textColor" name="Text_Dark_Gray"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3wK-cE-GKr">
+                                                                        <rect key="frame" x="0.0" y="16" width="324" height="450"/>
+                                                                        <string key="text">บริษัทให้ความสำคัญกับสิทธิของเจ้าของข้อมูลส่วนบุคคล จึงได้กำหนดสิทธิของเจ้าของข้อมูลในการดำเนินการกับข้อมูลส่วนบุคคลของตนซึ่งบริษัทเก็บรวบรวมไว้เพื่อให้สอดคล้องกับกฎหมาย ดังนี้  6.1) ขอเข้าถึงและขอรับสำเนาข้อมูลส่วนบุคคลที่เกี่ยวกับตน ซึ่งอยู่ในความรับผิดชอบของบริษัทได้ตามหลักเกณฑ์และวิธีการที่บริษัทกำหนด หรือขอให้เปิดเผยถึงการได้มาซึ่งข้อมูลส่วนบุคคลดังกล่าวที่ตนไม่ได้ให้ความยินยอม 6.2) ขอรับข้อมูลส่วนบุคคลที่เกี่ยวกับตนจากบริษัทได้ ในกรณีที่บริษัทได้ทำให้ข้อมูลส่วนบุคคลนั้นอยู่ในรูปแบบที่สามารถอ่านหรือใช้งานโดยทั่วไปได้ด้วยเครื่องมือหรืออุปกรณ์ที่ทำงานได้โดยอัตโนมัติ และสามารถใช้หรือเปิดเผยข้อมูลส่วนบุคคลได้ด้วยวิธีการอัตโนมัติ 6.3) คัดค้านการเก็บรวบรวม ใช้ หรือเปิดเผยข้อมูลส่วนบุคคลที่เกี่ยวกับตน ที่กฎหมายอนุญาตให้เก็บได้โดยไม่ต้องได้รับความยินยอมจากผู้ให้ข้อมูล เมื่อใดก็ได้ 6.4) ขอให้บริษัทลบหรือทำลาย หรือทำให้ข้อมูลส่วนบุคคลเป็นข้อมูลที่ไม่สามารถระบุตัวบุคคลที่เป็นเจ้าของข้อมูลส่วนบุคคลได้ ในกรณีตามที่กฎหมายกำหนด 6.5) ขอให้บริษัทระงับการใช้ข้อมูลส่วนบุคคลได้ ในกรณีตามที่กฎหมายกำหนด 6.6) แจ้งให้บริษัทดำเนินการให้ข้อมูลส่วนบุคคลนั้นถูกต้องเป็นปัจจุบัน สมบูรณ์ และไม่ก่อให้เกิดความเข้าใจผิด 6.7) ร้องเรียนในกรณีที่ผู้ควบคุมข้อมูลส่วนบุคคลหรือผู้ประมวลผลข้อมูลส่วนบุคคล รวมทั้งลูกจ้างหรือผู้รับจ้างของผู้ควบคุมข้อมูลส่วนบุคคลหรือผู้ประมวลผลข้อมูลส่วนบุคคล ฝ่าฝืนหรือ ไม่ปฏิบัติตามกฎหมายคุ้มครองข้อมูลส่วนบุคคล </string>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                        <color key="textColor" name="Text_Dark_Gray"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Rhq-rg-cLu">
+                                                                <rect key="frame" x="0.0" y="3076" width="324" height="202.5"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7. การเพิกถอนความยินยอม" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sp1-4j-DRN">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="324" height="16"/>
+                                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                                                                        <color key="textColor" name="Text_Dark_Gray"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xdR-Lt-oHP">
+                                                                        <rect key="frame" x="0.0" y="16" width="324" height="186.5"/>
+                                                                        <string key="text">เจ้าของข้อมูลสามารถเพิกถอนความยินยอมที่ได้ให้ไว้กับบริษัทในการเก็บรวบรวม ใช้ หรือเปิดเผยข้อมูลส่วนบุคคลดังกล่าวข้างต้นเสียเมื่อใดก็ได้ ด้วยการแจ้งความประสงค์ให้บริษัททราบพร้อมทั้งเหตุผลแห่งการนั้น โดยบริษัทจะดำเนินการตามที่ได้รับแจ้งเว้นแต่กรณีมีข้อจำกัดสิทธิในการถอนความยินยอมโดยกฎหมายหรือสัญญาที่ให้ประโยชน์แก่ เจ้าของข้อมูล ทั้งนี้ การเพิกถอนความยินยอมของเจ้าของข้อมูลส่วนบุคคล จะไม่ส่งผลกระทบต่อการเก็บรวบรวมใช้ หรือเปิดเผยข้อมูลส่วนบุคคล ที่เจ้าของข้อมูลส่วนบุคคลได้ให้ความยินยอมไปแล้วก่อนหน้านั้น </string>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                        <color key="textColor" name="Text_Dark_Gray"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Hs2-qH-WTK">
+                                                                <rect key="frame" x="0.0" y="3293.5" width="324" height="435"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8. การปฏิเสธและการจัดทำบันทึก" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EAI-O3-ghj">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="324" height="16"/>
+                                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                                                                        <color key="textColor" name="Text_Dark_Gray"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RQV-cX-nNZ">
+                                                                        <rect key="frame" x="0.0" y="16" width="324" height="419"/>
+                                                                        <string key="text">ในกรณีที่เจ้าของข้อมูลร้องขอให้บริษัทดำเนินการตามที่ระบุไว้ในข้อ 6.1-6.7 หรือ ข้อ 7 บริษัทจะดำเนินการตามที่ได้รับคำร้องขอภายในเวลาที่เหมาะสมและตามขั้นตอนการปฏิบัติของบริษัท เว้นแต่ในกรณีดังนี้ บริษัทอาจปฏิเสธการดำเนินการดังกล่าวได้  8.1) โดยสภาพแล้วไม่อาจดำเนินการดังกล่าวได้ 8.2) เป็นการปฏิเสธตามกฎหมายหรือตามคำสั่งศาล และการเข้าถึงและขอรับสำเนาข้อมูลส่วนบุคคลนั้นจะส่งผลกระทบที่อาจก่อให้เกิดความเสียหาต่อสิทธิและเสรีภาพบุคคลอื่น 8.3) การส่งหรือการโอนข้อมูลส่วนบุคคลนั้นเป็นการปฏิบัติหน้าที่เพื่อประโยชน์สาธารณะหรือเป็นการปฏิบัติหน้าที่ตามกฎหมาย หรือการใช้สิทธิดังกล่าวอาจเป็นการละเมิดสิทธิหรือเสรีภาพของบุคคลอื่น 8.4) การเก็บรวบรวม ใช้ หรือเปิดเผยข้อมูลส่วนบุคคลนั้น ผู้ควบคุมข้อมูลส่วนบุคคลได้แสดงให้เห็นถึงเหตุอันชอบด้วยกฎหมายที่สำคัญยิ่งกว่า 8.5) การเก็บรวบรวม ใช้ หรือเปิดเผยข้อมูลส่วนบุคคลนั้นเป็นไปเพื่อก่อตั้งสิทธิเรียกร้องตามกฎหมายการปฏิบัติตามหรือการใช้สิทธิเรียกร้องตามกฎหมาย หรือการยกขึ้นต่อสู้สิทธิเรียกร้องตามกฎหมายในกรณีที่บริษัทปฏิเสธไม่ดำเนินการตามคำร้องขอของเจ้าของข้อมูลให้ดำเนินการอย่างใดอย่างหนึ่งตามข้อ 7.1-7.8 หรือ ข้อ 8 นั้น บริษัทจะจัดทำรายงานการบันทึกการปฏิเสธพร้อมเหตุผลแห่งการปฏิเสธจัดเก็บไว้ในฝ่าย แผนก หรือหน่วยงานอื่นใดภายในบริษัทซึ่งปฏิเสธคำร้องขอของเจ้าของข้อมูล </string>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                        <color key="textColor" name="Text_Dark_Gray"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="roI-sI-WKF">
+                                                                <rect key="frame" x="0.0" y="3743.5" width="324" height="249"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9. มาตรการรักษาความมั่นคงปลอดภัยและคุณภาพของข้อมูล" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ffz-hX-P0a">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="324" height="16"/>
+                                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                                                                        <color key="textColor" name="Text_Dark_Gray"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3zN-AS-ci5">
+                                                                        <rect key="frame" x="0.0" y="16" width="324" height="233"/>
+                                                                        <string key="text">บริษัทตระหนักถึงความสำคัญของการรักษาความมั่นคงปลอดภัยของข้อมูลส่วนบุคคลของท่าน บริษัทจึงกำหนดให้มีมาตรการในการรักษาความมั่นคงปลอดภัยของข้อมูลส่วนบุคคลอย่างเหมาะสมและสอดคล้องกับการรักษาความลับของข้อมูลส่วนบุคคลเพื่อป้องกันการสูญหาย การเข้าถึง ทำลาย ใช้ แปลง แก้ไขหรือเปิดเผยข้อมูลส่วนบุคคลโดยไม่มีสิทธิหรือโดยไม่ชอบด้วยกฎหมาย ตลอดจนการป้องกันมิให้มีการนำข้อมูลส่วนบุคคลไปใช้โดยมิได้รับอนุญาต นอกจากนี้คณะกรรมการของบริษัทยังได้จัดทำนโยบาย ระเบียบปฏิบัติ คู่มือ แนวทางและอบรมให้ความรู้ ในการเก็บรักษา ใช้ และเปิดเผยข้อมูลส่วนบุคคล เพื่อให้พนักงานของบริษัทในทุกระดับชั้นดำเนินการเก็บรักษา ใช้ และ เปิดเผยข้อมูลส่วนบุคคลปฏิบัติตามมาตราฐานของบริษัทและสอดคล้องกับกฎหมายที่เกี่ยวข้อง </string>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                        <color key="textColor" name="Text_Dark_Gray"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Zrh-dS-H1f">
+                                                                <rect key="frame" x="0.0" y="4007.5" width="324" height="233.5"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10. เจ้าหน้าที่คุ้มครองข้อมูลส่วนบุคคล" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N8u-T6-xrZ">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="324" height="16"/>
+                                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                                                                        <color key="textColor" name="Text_Dark_Gray"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gXW-NG-vfw">
+                                                                        <rect key="frame" x="0.0" y="16" width="324" height="217.5"/>
+                                                                        <string key="text">บริษัทได้มีการดำเนินการปฏิบัติตามพระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคล พ.ศ. 2562 โดยแต่งตั้งเจ้าหน้าที่คุ้มครองข้อมูลส่วนบุคคล (Data Protection Officer : DPO) เพื่อตรวจสอบการดำเนินการของบริษัทที่เกี่ยวกับการเก็บรวบรวม ใช้และเปิดเผยข้อมูลส่วนบุคคลให้สอดคล้องกับพระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคล พ.ศ. 2562 รวมถึงกฎหมายที่เกี่ยวข้องกับการคุ้มครองข้อมูลส่วนบุคคล นอกจากนี้ บริษัทได้จัดทำระเบียบ คำสั่งให้ผู้เกี่ยวข้องดำเนินการตามที่กำหนดไว้ เพื่อให้การดำเนินงานตามแนวนโยบายเกี่ยวกับการคุ้มครองข้อมูลส่วนบุคคลให้เป็นไปด้วยความเรียบร้อย อีกทั้ง ยังเป็นไปตามนโยบายของคณะกรรมการกำกับการบริหารข้อมูลส่วนบุคคลและความมั่นคงปลอดภัยไซเบอร์ของบริษัทที่กำหนด </string>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                        <color key="textColor" name="Text_Dark_Gray"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="JL2-WG-iCq">
+                                                                <rect key="frame" x="0.0" y="4256" width="324" height="156"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11. ระยะเวลาการเก็บและการทำลายข้อมูลส่วนบุคคล" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Kz-Eq-PGu">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="324" height="16"/>
+                                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                                                                        <color key="textColor" name="Text_Dark_Gray"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v2k-IX-EM7">
+                                                                        <rect key="frame" x="0.0" y="16" width="324" height="140"/>
+                                                                        <string key="text">บริษัทจะจัดเก็บรักษาข้อมูลตามที่ได้รับจากเจ้าของข้อมูลตามระยะเวลาเท่าที่จำเป็นในการดำเนินการตามวัตถุประสงค์ดังที่ได้กล่าวมาข้างต้นเท่านั้น เว้นแต่ในกรณีที่มีกฎหมายกำหนดไว้โดยเฉพาะให้เก็บไว้ได้นานกว่านั้น หรือ เป็นการจำเป็นเพื่อการก่อตั้งสิทธิเรียกร้องตามกฎหมาย การปฏิบัติตามหรือการใช้สิทธิเรียกร้องตามกฎหมาย หรือการยกขึ้นต่อสู้ซึ่งสิทธิเรียกร้องตามกฎหมาย หรือเพื่อดำเนินการตามสัญญาซึ่งบริษัทมีสิทธิตามกฎหมาย </string>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                        <color key="textColor" name="Text_Dark_Gray"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="9Kv-rX-gDF">
+                                                                <rect key="frame" x="0.0" y="4427" width="324" height="78.5"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12. ช่องทางการติดต่อบริษัท" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xyE-Yp-9fb">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="324" height="16"/>
+                                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                                                                        <color key="textColor" name="Text_Dark_Gray"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wCd-Ca-bJU">
+                                                                        <rect key="frame" x="0.0" y="16" width="324" height="62.5"/>
+                                                                        <string key="text">บริษัท ซอฟท์เค๊ก จำกัด  (สำนักงานใหญ่)   เลขที่ 290/112 หมู่ที่11 ถนนสวนผัก แขวงตลิ่งชัน เขตตลิ่งชัน กรุงเทพมหานคร 10170 Email: sawhr@gmail.com</string>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                        <color key="textColor" name="Text_Dark_Gray"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="LeM-gV-0df" firstAttribute="width" secondItem="V8d-SX-gMv" secondAttribute="width" constant="-40" id="MZv-pV-MKz"/>
+                                                    <constraint firstItem="LeM-gV-0df" firstAttribute="leading" secondItem="DeO-XR-Dcl" secondAttribute="leading" id="bfb-j5-Rcb"/>
+                                                    <constraint firstItem="LeM-gV-0df" firstAttribute="bottom" secondItem="DeO-XR-Dcl" secondAttribute="bottom" id="f8p-h7-Zph"/>
+                                                    <constraint firstItem="DeO-XR-Dcl" firstAttribute="trailing" secondItem="LeM-gV-0df" secondAttribute="trailing" id="iBd-Wk-jfK"/>
+                                                    <constraint firstItem="LeM-gV-0df" firstAttribute="top" secondItem="DeO-XR-Dcl" secondAttribute="top" id="oBc-3g-Mhx"/>
+                                                </constraints>
+                                                <viewLayoutGuide key="contentLayoutGuide" id="DeO-XR-Dcl"/>
+                                                <viewLayoutGuide key="frameLayoutGuide" id="V8d-SX-gMv"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="15"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </scrollView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="uL0-k3-hHd">
+                                                <rect key="frame" x="0.0" y="3735" width="364" height="102"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="loa-4N-R5w">
+                                                        <rect key="frame" x="0.0" y="0.0" width="364" height="28"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V35-Jd-Qkv">
+                                                                <rect key="frame" x="0.0" y="0.0" width="28" height="28"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" secondItem="V35-Jd-Qkv" secondAttribute="height" multiplier="1:1" id="sme-Yy-UXD"/>
+                                                                </constraints>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <state key="normal" image="form_checkbox_off"/>
+                                                                <connections>
+                                                                    <action selector="checkboxClick:" destination="J9Z-pY-BwL" eventType="touchUpInside" id="4OL-w0-a3L"/>
+                                                                </connections>
+                                                            </button>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I agree to the Privacy Policy" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mNy-35-TOe">
+                                                                <rect key="frame" x="38" y="0.0" width="326" height="28"/>
+                                                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="14"/>
+                                                                <color key="textColor" name="Text_Dark_Gray"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="28" id="Cbr-eE-JsO"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wJb-xi-zsF" customClass="MyButton" customModule="Saw_Grow" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="43" width="364" height="59"/>
+                                                        <color key="backgroundColor" name="Main_Theme_1"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="59" id="hiN-Kv-EQu"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="20"/>
+                                                        <state key="normal" title="Accept">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="15"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="submitClick:" destination="J9Z-pY-BwL" eventType="touchUpInside" id="lsh-VP-68w"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="wJb-xi-zsF" secondAttribute="trailing" id="1zQ-hk-N0R"/>
+                                                    <constraint firstItem="wJb-xi-zsF" firstAttribute="leading" secondItem="uL0-k3-hHd" secondAttribute="leading" id="pvv-aQ-He9"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" name="Bg_Light_Gray"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="IqO-Pg-KFV" secondAttribute="trailing" constant="25" id="1UC-ut-zVW"/>
+                                    <constraint firstAttribute="bottom" secondItem="IqO-Pg-KFV" secondAttribute="bottom" constant="30" id="QSi-4o-sn3"/>
+                                    <constraint firstItem="IqO-Pg-KFV" firstAttribute="top" secondItem="PVa-pN-59M" secondAttribute="top" constant="25" id="RHS-mO-EWg"/>
+                                    <constraint firstItem="IqO-Pg-KFV" firstAttribute="leading" secondItem="PVa-pN-59M" secondAttribute="leading" constant="25" id="tsP-4H-4PF"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Hbf-VA-CJ5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="PVa-pN-59M" firstAttribute="trailing" secondItem="Hbf-VA-CJ5" secondAttribute="trailing" id="1MX-6b-RtU"/>
+                            <constraint firstItem="PVa-pN-59M" firstAttribute="top" secondItem="sEC-mp-rH2" secondAttribute="bottom" id="Cxq-fB-Ojq"/>
+                            <constraint firstItem="sEC-mp-rH2" firstAttribute="trailing" secondItem="Hbf-VA-CJ5" secondAttribute="trailing" id="ICw-4e-B28"/>
+                            <constraint firstItem="PVa-pN-59M" firstAttribute="leading" secondItem="Hbf-VA-CJ5" secondAttribute="leading" id="KG5-S9-Thq"/>
+                            <constraint firstItem="sEC-mp-rH2" firstAttribute="top" secondItem="Hbf-VA-CJ5" secondAttribute="top" id="Rhg-RY-I56"/>
+                            <constraint firstAttribute="bottom" secondItem="PVa-pN-59M" secondAttribute="bottom" id="Ys5-0K-I1k"/>
+                            <constraint firstItem="sEC-mp-rH2" firstAttribute="leading" secondItem="Hbf-VA-CJ5" secondAttribute="leading" id="tkg-uH-eqk"/>
+                        </constraints>
+                    </view>
+                    <size key="freeformSize" width="414" height="4000"/>
+                    <connections>
+                        <outlet property="agreementStack" destination="uL0-k3-hHd" id="JOU-pn-IGK"/>
+                        <outlet property="backBtn" destination="qfL-pn-qMm" id="i46-4u-xxF"/>
+                        <outlet property="checkboxBtn" destination="V35-Jd-Qkv" id="ZyE-QF-chZ"/>
+                        <outlet property="checkboxLabel" destination="mNy-35-TOe" id="A8Z-Pc-hVy"/>
+                        <outlet property="headerTitle" destination="NFK-EM-D25" id="nhC-Ce-du8"/>
+                        <outlet property="headerView" destination="sEC-mp-rH2" id="fes-It-2Bi"/>
+                        <outlet property="myScrollView" destination="AHo-Lc-fXH" id="pX7-d1-QlN"/>
+                        <outlet property="submitBtn" destination="wJb-xi-zsF" id="bQM-uR-6GD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="buF-gt-3vW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="360.86956521739131" y="3814.9553571428569"/>
         </scene>
     </scenes>
     <designables>
@@ -1988,16 +1991,16 @@
             <size key="intrinsicContentSize" width="42" height="36"/>
         </designable>
         <designable name="N5B-H1-gUW">
-            <size key="intrinsicContentSize" width="59.5" height="25"/>
+            <size key="intrinsicContentSize" width="49.5" height="25"/>
         </designable>
         <designable name="SL1-eB-9j3">
-            <size key="intrinsicContentSize" width="59.5" height="25"/>
+            <size key="intrinsicContentSize" width="49.5" height="25"/>
         </designable>
         <designable name="WAc-bg-4xR">
             <size key="intrinsicContentSize" width="13" height="59"/>
         </designable>
         <designable name="WSV-0w-3bT">
-            <size key="intrinsicContentSize" width="98.5" height="24"/>
+            <size key="intrinsicContentSize" width="88.5" height="24"/>
         </designable>
         <designable name="Zuz-ae-l4M">
             <size key="intrinsicContentSize" width="7" height="34.5"/>
@@ -2051,7 +2054,7 @@
             <color red="0.87450980392156863" green="0.88235294117647056" blue="0.90588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Main_Theme_1">
-            <color red="0.0" green="0.76078431372549016" blue="0.86274509803921573" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.023529411764705882" green="0.77254901960784317" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Text_Black">
             <color red="0.10196078431372549" green="0.12549019607843137" blue="0.18431372549019609" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

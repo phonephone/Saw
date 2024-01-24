@@ -22,9 +22,24 @@ class Ranking: UIViewController {
     var isSuperAdmin:Bool?
     var companyJSON:JSON?
     
+    var setColor: Bool = true
+    
+    @IBOutlet weak var headerView: UIView!
+    
     @IBOutlet weak var allBtn: MyButton!
     @IBOutlet weak var monthlyBtn: MyButton!
     @IBOutlet weak var bottomView: UIView!
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        if setColor {
+            self.navigationController?.setStatusBarColor()
+            headerView.setGradientBackground()
+            
+            setColor = false
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

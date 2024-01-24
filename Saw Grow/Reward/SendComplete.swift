@@ -18,6 +18,10 @@ class SendComplete: UIViewController, UITextViewDelegate {
     var detailPoint:String?
     var detailRemark:String?
     
+    var setColor: Bool = true
+    
+    @IBOutlet weak var headerView: UIView!
+    
     @IBOutlet weak var stickerImageView: UIImageView!
     
     @IBOutlet weak var pointView: UIView!
@@ -27,6 +31,17 @@ class SendComplete: UIViewController, UITextViewDelegate {
     @IBOutlet weak var remarkLabel: UILabel!
     
     @IBOutlet weak var submitBtn: UIButton!
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        if setColor {
+            self.navigationController?.setStatusBarColor()
+            headerView.setGradientBackground()
+            
+            setColor = false
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

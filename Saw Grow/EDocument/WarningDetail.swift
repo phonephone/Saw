@@ -17,10 +17,25 @@ class WarningDetail: UIViewController {
     var detailID:String?
     var detailJSON : JSON?
     
+    var setColor: Bool = true
+    
+    @IBOutlet weak var headerView: UIView!
+    
     @IBOutlet var pdfBtn: UIButton!
     
     @IBOutlet var myTableView: UITableView!
 
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        if setColor {
+            self.navigationController?.setStatusBarColor()
+            headerView.setGradientBackground()
+            
+            setColor = false
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

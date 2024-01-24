@@ -24,6 +24,10 @@ class OTManual: UIViewController, UITextFieldDelegate, UITextViewDelegate {
     
     let remarkStr = "ATTENDANCE_Note".localized()
     
+    var setColor: Bool = true
+    
+    @IBOutlet weak var headerView: UIView!
+    
     @IBOutlet weak var typeIcon: UIButton!
     @IBOutlet weak var typeField: UITextField!
     @IBOutlet weak var typeBtn: UIButton!
@@ -55,6 +59,17 @@ class OTManual: UIViewController, UITextFieldDelegate, UITextViewDelegate {
     var endPicker: UIDatePicker! = UIDatePicker()
     
     var hourArray = [String]()
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        if setColor {
+            self.navigationController?.setStatusBarColor()
+            headerView.setGradientBackground()
+            
+            setColor = false
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
