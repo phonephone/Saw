@@ -381,12 +381,12 @@ extension SwapShiftRequest: UIPickerViewDataSource {
         }
 
         // title
-        let myTitle = NSAttributedString(string: cellArray!["datestr"].stringValue, attributes: [NSAttributedString.Key.font:UIFont.Roboto_Regular(ofSize: 20) ,NSAttributedString.Key.foregroundColor:UIColor.textDarkGray])
+        let myTitle = NSAttributedString(string: cellArray!["datestr"].stringValue, attributes: [NSAttributedString.Key.font:UIFont.Kanit_Regular(ofSize: 20) ,NSAttributedString.Key.foregroundColor:UIColor.textDarkGray])
         pickerLabel.attributedText = myTitle
         pickerLabel.textAlignment = .left
 
         // subtitle
-        let mySubtitle = NSAttributedString(string: "(\(cellArray!["desc"].stringValue))", attributes: [NSAttributedString.Key.font:UIFont.Roboto_Regular(ofSize: 20) ,NSAttributedString.Key.foregroundColor:UIColor.themeColor])
+        let mySubtitle = NSAttributedString(string: "(\(cellArray!["desc"].stringValue))", attributes: [NSAttributedString.Key.font:UIFont.Kanit_Regular(ofSize: 20) ,NSAttributedString.Key.foregroundColor:UIColor.themeColor])
         pickerLabel2.attributedText = mySubtitle
         pickerLabel2.textAlignment = .right
 

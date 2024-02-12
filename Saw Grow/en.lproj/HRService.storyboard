@@ -10,11 +10,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Roboto-Medium.ttf">
-            <string>Roboto-Medium</string>
+        <array key="Kanit-Medium.ttf">
+            <string>Kanit-Medium</string>
         </array>
-        <array key="Roboto-Regular.ttf">
-            <string>Roboto-Regular</string>
+        <array key="Kanit-Regular.ttf">
+            <string>Kanit-Regular</string>
         </array>
     </customFonts>
     <scenes>
@@ -46,8 +46,8 @@
                                         </state>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pay Slip" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AIj-ih-2y4">
-                                        <rect key="frame" x="171" y="18.5" width="72" height="23.5"/>
-                                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="20"/>
+                                        <rect key="frame" x="171" y="15" width="72.5" height="30"/>
+                                        <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="20"/>
                                         <color key="textColor" name="Text_White"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -80,15 +80,15 @@
                                                                 <rect key="frame" x="38" y="10" width="117.5" height="72"/>
                                                                 <subviews>
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="20,000" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XLZ-Br-Ce1">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="117.5" height="33.5"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="117.5" height="35.5"/>
                                                                         <color key="textColor" name="Main_Theme_1"/>
-                                                                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="25"/>
+                                                                        <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="25"/>
                                                                         <textInputTraits key="textInputTraits"/>
                                                                     </textField>
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Salary" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SL2-Az-hWo">
-                                                                        <rect key="frame" x="0.0" y="48.5" width="117.5" height="23.5"/>
+                                                                        <rect key="frame" x="0.0" y="50.5" width="117.5" height="21.5"/>
                                                                         <color key="textColor" name="Main_Theme_1"/>
-                                                                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="16"/>
+                                                                        <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="16"/>
                                                                         <textInputTraits key="textInputTraits"/>
                                                                     </textField>
                                                                 </subviews>
@@ -119,15 +119,15 @@
                                                                 <rect key="frame" x="38" y="10" width="117.5" height="72"/>
                                                                 <subviews>
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="20,000" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="psM-eX-XWq">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="117.5" height="33.5"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="117.5" height="35.5"/>
                                                                         <color key="textColor" name="Status_Green"/>
-                                                                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="25"/>
+                                                                        <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="25"/>
                                                                         <textInputTraits key="textInputTraits"/>
                                                                     </textField>
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Net Pay" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6n3-h7-Kur">
-                                                                        <rect key="frame" x="0.0" y="48.5" width="117.5" height="23.5"/>
+                                                                        <rect key="frame" x="0.0" y="50.5" width="117.5" height="21.5"/>
                                                                         <color key="textColor" name="Status_Green"/>
-                                                                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="16"/>
+                                                                        <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="16"/>
                                                                         <textInputTraits key="textInputTraits"/>
                                                                     </textField>
                                                                 </subviews>
@@ -168,9 +168,9 @@
                                                                 <state key="normal" image="form_date_off"/>
                                                             </button>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Select Month" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="24i-5m-VRU">
-                                                                <rect key="frame" x="40" y="19" width="241" height="20.5"/>
+                                                                <rect key="frame" x="40" y="16.5" width="241" height="25.5"/>
                                                                 <color key="textColor" name="Text_Gray"/>
-                                                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
+                                                                <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="16"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="726-tA-tdG">
@@ -208,9 +208,9 @@
                                                                 <state key="normal" image="form_date_off"/>
                                                             </button>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Select Year" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="voQ-pC-Fde">
-                                                                <rect key="frame" x="40" y="19" width="241" height="20.5"/>
+                                                                <rect key="frame" x="40" y="16.5" width="241" height="25.5"/>
                                                                 <color key="textColor" name="Text_Gray"/>
-                                                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
+                                                                <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="16"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JWQ-Tz-hcm">
@@ -236,7 +236,7 @@
                                         </subviews>
                                     </stackView>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Sll-mm-NJU">
-                                        <rect key="frame" x="29" y="307" width="356" height="273"/>
+                                        <rect key="frame" x="29" y="312" width="356" height="268"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
@@ -261,8 +261,8 @@
                                                                     <rect key="frame" x="20" y="10" width="265" height="38"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="17 October 2021" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zxm-7r-COY">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="103.5" height="38"/>
-                                                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="96" height="38"/>
+                                                                            <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="14"/>
                                                                             <color key="textColor" name="Text_Black"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
@@ -311,8 +311,8 @@
                                                                     <rect key="frame" x="20" y="10" width="265" height="38"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="22 October 2021" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2rr-6s-cBP">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="103.5" height="38"/>
-                                                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="99" height="38"/>
+                                                                            <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="14"/>
                                                                             <color key="textColor" name="Text_Black"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
@@ -351,7 +351,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="59" id="ksn-uS-c8n"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="20"/>
+                                                <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="20"/>
                                                 <state key="normal" title="Send to Email">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
@@ -362,7 +362,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="59" id="O5O-eM-7KF"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="20"/>
+                                                <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="20"/>
                                                 <state key="normal" title="   Download Pay Slip" image="payslip_download_on">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
@@ -370,8 +370,8 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sent to" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sW5-nn-hs2">
-                                        <rect key="frame" x="29" y="278" width="356" height="19"/>
-                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
+                                        <rect key="frame" x="29" y="278" width="356" height="24"/>
+                                        <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="16"/>
                                         <color key="textColor" name="Status_Gray"/>
                                         <nil key="highlightedColor"/>
                                     </label>

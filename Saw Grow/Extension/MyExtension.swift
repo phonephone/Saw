@@ -40,6 +40,13 @@ extension UIFont {
     class func Roboto_Regular(ofSize size: CGFloat) -> UIFont {
         return UIFont(name: "Roboto-Regular", size: size)!
     }
+    
+    class func Kanit_Medium(ofSize size: CGFloat) -> UIFont {
+        return UIFont(name: "Kanit-Medium", size: size)!
+    }
+    class func Kanit_Regular(ofSize size: CGFloat) -> UIFont {
+        return UIFont(name: "Kanit-Regular", size: size)!
+    }
 }
 
 extension UIStoryboard  {
@@ -208,9 +215,9 @@ extension UIViewController {
                     else if menuKey == "BOTTOM_SEARCH" {
                         let vc = UIStoryboard.mainStoryBoard.instantiateViewController(withIdentifier: "DirectoryList") as! DirectoryList
                         
-                        if json["data"][0]["is_birthday"].stringValue == "1" {
-                            vc.tabBarItem = UITabBarItem(title: "", image: UIImage(named: "tabbar_birthday"), selectedImage: UIImage(named: "tabbar_birthday"))
-                        }
+//                        if json["data"][0]["is_birthday"].stringValue == "1" {
+//                            vc.tabBarItem = UITabBarItem(title: "", image: UIImage(named: "tabbar_birthday"), selectedImage: UIImage(named: "tabbar_birthday"))
+//                        }
                         
                         tabBarArray.append(vc)
                     }
@@ -732,8 +739,8 @@ extension DateFormatter {
 extension UIAlertController {
     func setColorAndFont(){
         
-        let attributesTitle = [NSAttributedString.Key.foregroundColor: UIColor.textDarkGray, NSAttributedString.Key.font: UIFont.Roboto_Medium(ofSize: 18)]
-        let attributesMessage = [NSAttributedString.Key.foregroundColor: UIColor.gray, NSAttributedString.Key.font: UIFont.Roboto_Regular(ofSize: 15)]
+        let attributesTitle = [NSAttributedString.Key.foregroundColor: UIColor.textDarkGray, NSAttributedString.Key.font: UIFont.Kanit_Medium(ofSize: 18)]
+        let attributesMessage = [NSAttributedString.Key.foregroundColor: UIColor.gray, NSAttributedString.Key.font: UIFont.Kanit_Regular(ofSize: 15)]
         let attributedTitleText = NSAttributedString(string: self.title ?? "", attributes: attributesTitle as [NSAttributedString.Key : Any])
         let attributedMessageText = NSAttributedString(string: self.message ?? "", attributes: attributesMessage as [NSAttributedString.Key : Any])
         

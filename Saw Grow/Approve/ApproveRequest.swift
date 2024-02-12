@@ -336,7 +336,7 @@ extension ApproveRequest: UICollectionViewDelegate {
 //        alert.addTextField() { reasonTextField in
 //            reasonTextField.placeholder = "Enter some reason"
 //            reasonTextField.textColor = .textDarkGray
-//            reasonTextField.font = UIFont.Roboto_Regular(ofSize: 16)
+//            reasonTextField.font = UIFont.Kanit_Regular(ofSize: 16)
 //        }
 //
 //        alert.addAction(UIAlertAction(title: "Cancel", style: .default, handler: { action in

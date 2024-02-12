@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Roboto-Regular.ttf">
-            <string>Roboto-Regular</string>
+        <array key="Kanit-Regular.ttf">
+            <string>Kanit-Regular</string>
         </array>
     </customFonts>
     <objects>
@@ -30,18 +30,18 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KDT-dx-DBP">
-                        <rect key="frame" x="60" y="19" width="40.5" height="18"/>
-                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
+                        <rect key="frame" x="60" y="17" width="39.5" height="22.5"/>
+                        <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="15"/>
                         <color key="textColor" name="Text_Dark_Gray"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3   " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oKM-aK-IZZ" customClass="MyLabel" customModule="Saw_Grow" customModuleProvider="target">
-                        <rect key="frame" x="224.5" y="15.5" width="23.5" height="25"/>
+                        <rect key="frame" x="227" y="15.5" width="21" height="25"/>
                         <color key="backgroundColor" name="Btn_Red"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="25" id="hfC-25-FNX"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="17"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                         <userDefinedRuntimeAttributes>
@@ -74,7 +74,7 @@
     </objects>
     <designables>
         <designable name="oKM-aK-IZZ">
-            <size key="intrinsicContentSize" width="23.5" height="20.5"/>
+            <size key="intrinsicContentSize" width="21" height="25.5"/>
         </designable>
     </designables>
     <resources>

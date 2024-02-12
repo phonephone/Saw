@@ -309,7 +309,7 @@ extension EDocReimburse: UIPickerViewDataSource {
         var pickerLabel: UILabel? = (view as? UILabel)
         if pickerLabel == nil {
             pickerLabel = UILabel()
-            pickerLabel?.font = .Roboto_Regular(ofSize: 22)
+            pickerLabel?.font = .Kanit_Regular(ofSize: 22)
             pickerLabel?.textAlignment = .center
         }
         

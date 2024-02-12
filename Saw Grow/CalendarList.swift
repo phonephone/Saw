@@ -215,9 +215,9 @@ extension FSCalendar {
         
         self.appearance.headerDateFormat = "MMM yyyy"
         
-        self.appearance.headerTitleFont      = UIFont.Roboto_Medium(ofSize: 18)
-        self.appearance.weekdayFont          = UIFont.Roboto_Regular(ofSize: 15)
-        self.appearance.titleFont            = UIFont.Roboto_Regular(ofSize: 17)
+        self.appearance.headerTitleFont      = UIFont.Kanit_Medium(ofSize: 18)
+        self.appearance.weekdayFont          = UIFont.Kanit_Regular(ofSize: 15)
+        self.appearance.titleFont            = UIFont.Kanit_Regular(ofSize: 17)
         self.appearance.eventOffset = CGPoint(x: 0, y: 3)
         
         //        self.appearance.headerTitleColor     = Colors.NavTitleColor

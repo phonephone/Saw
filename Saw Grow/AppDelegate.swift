@@ -19,6 +19,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     let gcmMessageIDKey = "gcm.message_id"
     
+    override init() {
+        super.init()
+        UIFont.overrideInitialize()
+    }
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
@@ -52,7 +57,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         ProgressHUD.colorHUD = .white
         ProgressHUD.colorBackground = .clear//.lightGray
         ProgressHUD.colorStatus = UIColor.customThemeColor()
-        ProgressHUD.fontStatus = UIFont.Roboto_Medium(ofSize: 20)
+        ProgressHUD.fontStatus = UIFont.Kanit_Medium(ofSize: 20)
         
         Thread.sleep(forTimeInterval: 1.0)
         //RunLoop.current.run(until:NSDate(timeIntervalSinceNow:1)as Date)

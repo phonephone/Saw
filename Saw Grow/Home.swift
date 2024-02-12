@@ -224,14 +224,26 @@ class Home: UIViewController, OverlayContainerViewControllerDelegate, UIScrollVi
                         let color = colorFromRGB(rgbString: theme[0]["background_color1"].stringValue)
                         UserDefaults.standard.saveColor(color, forKey: "gradientColor_1")
                     }
+                    else {
+                        UserDefaults.standard.removeObject(forKey:"gradientColor_1")
+                    }
+                    
                     if theme[0]["background_color2"].stringValue != "" {
                         let color = colorFromRGB(rgbString: theme[0]["background_color2"].stringValue)
                         UserDefaults.standard.saveColor(color, forKey: "gradientColor_2")
                     }
+                    else {
+                        UserDefaults.standard.removeObject(forKey:"gradientColor_2")
+                    }
+                    
                     if theme[0]["icon_color"].stringValue != "" {
                         let color = colorFromRGB(rgbString: theme[0]["icon_color"].stringValue)
                         UserDefaults.standard.saveColor(color, forKey: "iconColor")
                     }
+                    else {
+                        UserDefaults.standard.removeObject(forKey:"iconColor")
+                    }
+                    
                     if theme[0]["background_image"].stringValue != "" {
                         self.headerImage.sd_setImage(with: URL(string:theme[0]["background_image"].stringValue), placeholderImage: nil)
                     }

@@ -11,8 +11,14 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Roboto-Bold.ttf">
-            <string>Roboto-Bold</string>
+        <array key="Kanit-Bold.ttf">
+            <string>Kanit-Bold</string>
+        </array>
+        <array key="Kanit-Medium.ttf">
+            <string>Kanit-Medium</string>
+        </array>
+        <array key="Kanit-Regular.ttf">
+            <string>Kanit-Regular</string>
         </array>
         <array key="Roboto-Medium.ttf">
             <string>Roboto-Medium</string>
@@ -75,8 +81,8 @@
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Company Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YeD-cx-V7t">
-                                        <rect key="frame" x="85" y="39.333333333333329" width="205" height="21.333333333333329"/>
-                                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="18"/>
+                                        <rect key="frame" x="85" y="36.666666666666671" width="205" height="27"/>
+                                        <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="18"/>
                                         <color key="textColor" name="Text_Dark_Gray"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -99,8 +105,8 @@
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jAA-l2-Jp0">
-                                                            <rect key="frame" x="57" y="19.333333333333329" width="40.666666666666657" height="17.666666666666671"/>
-                                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
+                                                            <rect key="frame" x="57" y="16.666666666666664" width="39.333333333333343" height="22.666666666666664"/>
+                                                            <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="15"/>
                                                             <color key="textColor" name="Text_Dark_Gray"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -111,7 +117,7 @@
                                                                 <constraint firstAttribute="width" secondItem="50v-jp-nne" secondAttribute="height" multiplier="1:1" id="45G-qQ-XpN"/>
                                                                 <constraint firstAttribute="height" constant="25" id="rDd-Hv-LdK"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="17"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -144,7 +150,7 @@
                                                     </imageView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ym6-wz-WYV">
                                                         <rect key="frame" x="57" y="0.0" width="223" height="50"/>
-                                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
+                                                        <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="15"/>
                                                         <state key="normal" title="Contact Us">
                                                             <color key="titleColor" name="Text_Dark_Gray"/>
                                                         </state>
@@ -175,7 +181,7 @@
                                                     </imageView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2T5-9q-fEZ">
                                                         <rect key="frame" x="57" y="0.0" width="223" height="50"/>
-                                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
+                                                        <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="15"/>
                                                         <state key="normal" title="Help">
                                                             <color key="titleColor" name="Text_Dark_Gray"/>
                                                         </state>
@@ -197,8 +203,8 @@
                                                 <rect key="frame" x="0.0" y="100" width="280" height="50"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IgS-re-uOh">
-                                                        <rect key="frame" x="60" y="16.333333333333371" width="95" height="17.666666666666671"/>
-                                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
+                                                        <rect key="frame" x="60" y="13.666666666666631" width="95" height="22.666666666666671"/>
+                                                        <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="15"/>
                                                         <color key="textColor" name="Text_Dark_Gray"/>
                                                         <nil key="highlightedColor"/>
                                                         <userDefinedRuntimeAttributes>
@@ -206,8 +212,8 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="V 1.0 (1)" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q9q-yK-lWG">
-                                                        <rect key="frame" x="165" y="16.333333333333371" width="95" height="17.666666666666671"/>
-                                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
+                                                        <rect key="frame" x="165" y="13.666666666666631" width="95" height="22.666666666666671"/>
+                                                        <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="15"/>
                                                         <color key="textColor" name="Text_Gray"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -317,19 +323,19 @@
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="n0B-v1-NjH">
-                                        <rect key="frame" x="125.33333333333331" y="100" width="124.66666666666669" height="60"/>
+                                        <rect key="frame" x="126" y="100" width="123.33333333333331" height="60"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name Surname" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oMm-cl-Exu">
-                                                <rect key="frame" x="0.0" y="0.0" width="124.66666666666667" height="30"/>
-                                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="18"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="123.33333333333333" height="30"/>
+                                                <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="18"/>
                                                 <color key="textColor" name="Text_White"/>
                                                 <nil key="highlightedColor"/>
                                                 <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <size key="shadowOffset" width="0.0" height="2"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Position" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eO3-te-AXj">
-                                                <rect key="frame" x="0.0" y="30" width="124.66666666666667" height="30"/>
-                                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
+                                                <rect key="frame" x="0.0" y="30" width="123.33333333333333" height="30"/>
+                                                <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="16"/>
                                                 <color key="textColor" name="Text_White"/>
                                                 <nil key="highlightedColor"/>
                                                 <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.10049957482993198" colorSpace="custom" customColorSpace="sRGB"/>
@@ -371,7 +377,7 @@
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PbP-Ao-mdm">
                                                                         <rect key="frame" x="20" y="0.0" width="77" height="30"/>
-                                                                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="18"/>
+                                                                        <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="18"/>
                                                                         <color key="textColor" name="Text_Gray_1"/>
                                                                         <nil key="highlightedColor"/>
                                                                         <userDefinedRuntimeAttributes>
@@ -414,15 +420,15 @@
                                                                                     </constraints>
                                                                                 </imageView>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Payroll" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IxD-MV-Ehi" customClass="MyLabelTopAligned" customModule="Saw_Grow" customModuleProvider="target">
-                                                                                    <rect key="frame" x="0.0" y="55" width="70" height="35"/>
-                                                                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
+                                                                                    <rect key="frame" x="0.0" y="50" width="70" height="40"/>
+                                                                                    <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="13"/>
                                                                                     <color key="textColor" name="Text_Dark_Gray"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
                                                                             </subviews>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="bottom" secondItem="IxD-MV-Ehi" secondAttribute="bottom" id="1ve-8G-Cl8"/>
-                                                                                <constraint firstItem="IxD-MV-Ehi" firstAttribute="top" secondItem="dpA-Kh-Ljf" secondAttribute="bottom" constant="5" id="I0T-rH-Efg"/>
+                                                                                <constraint firstItem="IxD-MV-Ehi" firstAttribute="top" secondItem="dpA-Kh-Ljf" secondAttribute="bottom" id="I0T-rH-Efg"/>
                                                                                 <constraint firstAttribute="trailing" secondItem="IxD-MV-Ehi" secondAttribute="trailing" id="Xo1-zc-t4H"/>
                                                                                 <constraint firstItem="dpA-Kh-Ljf" firstAttribute="top" secondItem="9gB-tK-QNY" secondAttribute="top" id="Ygn-zu-IqE"/>
                                                                                 <constraint firstItem="dpA-Kh-Ljf" firstAttribute="leading" secondItem="9gB-tK-QNY" secondAttribute="leading" constant="10" id="ZMI-bc-l2V"/>
@@ -453,7 +459,7 @@
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Announcement" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qha-bt-94k">
                                                                         <rect key="frame" x="20" y="0.0" width="129.66666666666666" height="30"/>
-                                                                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="18"/>
+                                                                        <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="18"/>
                                                                         <color key="textColor" name="Text_Gray_1"/>
                                                                         <nil key="highlightedColor"/>
                                                                         <userDefinedRuntimeAttributes>
@@ -529,19 +535,19 @@
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recommend" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EJT-7E-erX">
                                                                         <rect key="frame" x="20" y="0.0" width="261.33333333333331" height="30"/>
-                                                                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="16"/>
+                                                                        <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="16"/>
                                                                         <color key="textColor" name="Text_Gray_1"/>
                                                                         <nil key="highlightedColor"/>
                                                                         <userDefinedRuntimeAttributes>
                                                                             <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="HOME_Recommend"/>
                                                                         </userDefinedRuntimeAttributes>
                                                                     </label>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4bS-kj-wQ1">
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4bS-kj-wQ1">
                                                                         <rect key="frame" x="275" y="0.0" width="80" height="30"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="80" id="eDf-IF-GgY"/>
                                                                         </constraints>
-                                                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="13"/>
+                                                                        <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="13"/>
                                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                         <state key="normal" title="See all">
                                                                             <color key="titleColor" name="Text_Gray_1"/>
@@ -598,13 +604,13 @@
                                                                                             <subviews>
                                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bar B Q Plaza" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kut-S6-LQw">
                                                                                                     <rect key="frame" x="0.0" y="0.0" width="262" height="20"/>
-                                                                                                    <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="13"/>
+                                                                                                    <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="13"/>
                                                                                                     <color key="textColor" name="Text_Dark_Gray"/>
                                                                                                     <nil key="highlightedColor"/>
                                                                                                 </label>
                                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ใช้ 100 คะแนน รับสิทธิ์สั่งบาร์บีกอน 319.-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Shl-uo-tnd">
                                                                                                     <rect key="frame" x="0.0" y="20" width="262" height="20"/>
-                                                                                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
+                                                                                                    <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="12"/>
                                                                                                     <color key="textColor" name="Text_Dark_Gray"/>
                                                                                                     <nil key="highlightedColor"/>
                                                                                                 </label>
@@ -707,7 +713,7 @@
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check in" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ThX-8Y-2ja" customClass="MyLabelTopAligned" customModule="Saw_Grow" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="60" width="81.333333333333329" height="50"/>
-                                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
+                                                        <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="15"/>
                                                         <color key="textColor" name="Text_Dark_Gray"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -730,7 +736,7 @@
                                                         <rect key="frame" x="0.0" y="60" width="81.333333333333329" height="50"/>
                                                         <string key="text">Working
  Hour</string>
-                                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
+                                                        <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="15"/>
                                                         <color key="textColor" name="Text_Dark_Gray"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -751,7 +757,7 @@
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Leaves" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vMu-LN-iyn" customClass="MyLabelTopAligned" customModule="Saw_Grow" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="60" width="81" height="50"/>
-                                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
+                                                        <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="15"/>
                                                         <color key="textColor" name="Text_Dark_Gray"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -772,7 +778,7 @@
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OT Request" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1QD-f9-Jb3" customClass="MyLabelTopAligned" customModule="Saw_Grow" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="60" width="81.333333333333329" height="50"/>
-                                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
+                                                        <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="15"/>
                                                         <color key="textColor" name="Text_Dark_Gray"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -815,7 +821,7 @@
                             <constraint firstItem="cvJ-92-pey" firstAttribute="leading" secondItem="u2v-JO-Go2" secondAttribute="leading" constant="20" id="zoG-EH-B5i"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="tabbar_home" id="0Ol-Pf-NSs"/>
+                    <tabBarItem key="tabBarItem" title="" image="tab1" selectedImage="tab1_on" id="0Ol-Pf-NSs"/>
                     <connections>
                         <outlet property="annoucementStack" destination="sif-hV-juu" id="Afo-1g-Xw6"/>
                         <outlet property="announcementCollectionView" destination="D9y-el-3It" id="LLW-Lk-rAm"/>
@@ -881,10 +887,10 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="bNU-nZ-DmG">
-                            <rect key="frame" x="36.666666666666657" y="78.333333333333343" width="315" height="83.333333333333343"/>
+                            <rect key="frame" x="36.666666666666657" y="76.333333333333314" width="315" height="87.666666666666686"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fFc-f1-Rk4">
-                                    <rect key="frame" x="0.0" y="0.0" width="60" height="83.333333333333329"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="60" height="87.666666666666671"/>
                                     <subviews>
                                         <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fom-a9-h3k">
                                             <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
@@ -898,8 +904,8 @@
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bad" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="66x-VD-8c1">
-                                            <rect key="frame" x="0.0" y="68.000000000000014" width="60" height="15.333333333333329"/>
-                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="13"/>
+                                            <rect key="frame" x="0.0" y="68.000000000000014" width="60" height="19.666666666666671"/>
+                                            <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="13"/>
                                             <color key="textColor" name="Text_Dark_Gray"/>
                                             <nil key="highlightedColor"/>
                                             <userDefinedRuntimeAttributes>
@@ -909,7 +915,7 @@
                                     </subviews>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dln-vN-ePf">
-                                    <rect key="frame" x="85" y="0.0" width="60" height="83.333333333333329"/>
+                                    <rect key="frame" x="85" y="0.0" width="60" height="87.666666666666671"/>
                                     <subviews>
                                         <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u6d-Mf-Dtz">
                                             <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
@@ -923,8 +929,8 @@
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Neutral" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Afh-xV-oTL">
-                                            <rect key="frame" x="0.0" y="68.000000000000014" width="60" height="15.333333333333329"/>
-                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="13"/>
+                                            <rect key="frame" x="0.0" y="68.000000000000014" width="60" height="19.666666666666671"/>
+                                            <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="13"/>
                                             <color key="textColor" name="Text_Dark_Gray"/>
                                             <nil key="highlightedColor"/>
                                             <userDefinedRuntimeAttributes>
@@ -934,7 +940,7 @@
                                     </subviews>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="j6g-6S-wcs">
-                                    <rect key="frame" x="170" y="0.0" width="60" height="83.333333333333329"/>
+                                    <rect key="frame" x="170" y="0.0" width="60" height="87.666666666666671"/>
                                     <subviews>
                                         <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7TP-J1-QIy">
                                             <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
@@ -948,8 +954,8 @@
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Good" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6iB-Z8-WzK">
-                                            <rect key="frame" x="0.0" y="68.000000000000014" width="60" height="15.333333333333329"/>
-                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="13"/>
+                                            <rect key="frame" x="0.0" y="68.000000000000014" width="60" height="19.666666666666671"/>
+                                            <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="13"/>
                                             <color key="textColor" name="Text_Dark_Gray"/>
                                             <nil key="highlightedColor"/>
                                             <userDefinedRuntimeAttributes>
@@ -959,7 +965,7 @@
                                     </subviews>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="KhB-LE-5wh">
-                                    <rect key="frame" x="255" y="0.0" width="60" height="83.333333333333329"/>
+                                    <rect key="frame" x="255" y="0.0" width="60" height="87.666666666666671"/>
                                     <subviews>
                                         <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X93-9J-zGj">
                                             <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
@@ -973,8 +979,8 @@
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Awesome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cxN-Z7-5bD">
-                                            <rect key="frame" x="0.0" y="68.000000000000014" width="60" height="15.333333333333329"/>
-                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="13"/>
+                                            <rect key="frame" x="0.0" y="68.000000000000014" width="60" height="19.666666666666671"/>
+                                            <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="13"/>
                                             <color key="textColor" name="Text_Dark_Gray"/>
                                             <nil key="highlightedColor"/>
                                             <userDefinedRuntimeAttributes>
@@ -986,8 +992,8 @@
                             </subviews>
                         </stackView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How are you felling today ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b7H-hl-Yw4">
-                            <rect key="frame" x="73.666666666666671" y="23.333333333333329" width="240.66666666666663" height="23.666666666666671"/>
-                            <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="20"/>
+                            <rect key="frame" x="71.333333333333329" y="20" width="245.66666666666669" height="30"/>
+                            <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="20"/>
                             <color key="textColor" name="Text_Dark_Gray"/>
                             <nil key="highlightedColor"/>
                             <userDefinedRuntimeAttributes>
@@ -1014,10 +1020,10 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="IHQ-fT-0Ia">
-                            <rect key="frame" x="126" y="84.999999999999972" width="60" height="393.33333333333326"/>
+                            <rect key="frame" x="126" y="76.333333333333343" width="60" height="410.66666666666663"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="9YE-td-J82">
-                                    <rect key="frame" x="0.0" y="0.0" width="60" height="83.333333333333329"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="60" height="87.666666666666671"/>
                                     <subviews>
                                         <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l1F-Rv-ihB">
                                             <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
@@ -1031,8 +1037,8 @@
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bad" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lxe-mN-hWD">
-                                            <rect key="frame" x="0.0" y="68" width="60" height="15.333333333333329"/>
-                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="13"/>
+                                            <rect key="frame" x="0.0" y="68.000000000000014" width="60" height="19.666666666666671"/>
+                                            <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="13"/>
                                             <color key="textColor" name="Text_Dark_Gray"/>
                                             <nil key="highlightedColor"/>
                                             <userDefinedRuntimeAttributes>
@@ -1042,7 +1048,7 @@
                                     </subviews>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="e5o-0u-fhg">
-                                    <rect key="frame" x="0.0" y="103.33333333333334" width="60" height="83.333333333333343"/>
+                                    <rect key="frame" x="0.0" y="107.66666666666666" width="60" height="87.666666666666657"/>
                                     <subviews>
                                         <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nq1-p7-t4D">
                                             <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
@@ -1056,8 +1062,8 @@
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Neutral" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zdk-NC-bbo">
-                                            <rect key="frame" x="0.0" y="67.999999999999972" width="60" height="15.333333333333329"/>
-                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="13"/>
+                                            <rect key="frame" x="0.0" y="68" width="60" height="19.666666666666671"/>
+                                            <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="13"/>
                                             <color key="textColor" name="Text_Dark_Gray"/>
                                             <nil key="highlightedColor"/>
                                             <userDefinedRuntimeAttributes>
@@ -1067,7 +1073,7 @@
                                     </subviews>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="GyE-S2-QD2">
-                                    <rect key="frame" x="0.0" y="206.66666666666669" width="60" height="83.333333333333314"/>
+                                    <rect key="frame" x="0.0" y="215.33333333333334" width="60" height="87.666666666666657"/>
                                     <subviews>
                                         <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZKD-U4-3xD">
                                             <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
@@ -1081,8 +1087,8 @@
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Good" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ALr-aY-gXm">
-                                            <rect key="frame" x="0.0" y="68" width="60" height="15.333333333333329"/>
-                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="13"/>
+                                            <rect key="frame" x="0.0" y="68" width="60" height="19.666666666666671"/>
+                                            <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="13"/>
                                             <color key="textColor" name="Text_Dark_Gray"/>
                                             <nil key="highlightedColor"/>
                                             <userDefinedRuntimeAttributes>
@@ -1092,7 +1098,7 @@
                                     </subviews>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="YHX-J4-r3y">
-                                    <rect key="frame" x="0.0" y="310" width="60" height="83.333333333333314"/>
+                                    <rect key="frame" x="0.0" y="323" width="60" height="87.666666666666686"/>
                                     <subviews>
                                         <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6mx-mx-71N">
                                             <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
@@ -1106,8 +1112,8 @@
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Awesome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aLv-Ez-B1j">
-                                            <rect key="frame" x="0.0" y="68" width="60" height="15.333333333333329"/>
-                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="13"/>
+                                            <rect key="frame" x="0.0" y="68" width="60" height="19.666666666666671"/>
+                                            <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="13"/>
                                             <color key="textColor" name="Text_Dark_Gray"/>
                                             <nil key="highlightedColor"/>
                                             <userDefinedRuntimeAttributes>
@@ -1119,8 +1125,8 @@
                             </subviews>
                         </stackView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How are you felling today ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZcQ-RH-Q4w">
-                            <rect key="frame" x="35.666666666666671" y="26.666666666666664" width="240.66666666666663" height="23.666666666666664"/>
-                            <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="20"/>
+                            <rect key="frame" x="33.333333333333329" y="23.333333333333329" width="245.66666666666669" height="30"/>
+                            <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="20"/>
                             <color key="textColor" name="Text_Dark_Gray"/>
                             <nil key="highlightedColor"/>
                             <userDefinedRuntimeAttributes>
@@ -1147,13 +1153,13 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="t5V-y8-YJD">
-                            <rect key="frame" x="58.666666666666657" y="76.333333333333329" width="183" height="201.66666666666669"/>
+                            <rect key="frame" x="58.666666666666657" y="72.000000000000014" width="183" height="210.33333333333337"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="63" translatesAutoresizingMaskIntoConstraints="NO" id="Zfb-Kq-fey">
-                                    <rect key="frame" x="0.0" y="0.0" width="183" height="83.333333333333329"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="183" height="87.666666666666671"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ehw-S1-UfD">
-                                            <rect key="frame" x="0.0" y="0.0" width="60" height="83.333333333333329"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="60" height="87.666666666666671"/>
                                             <subviews>
                                                 <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fkh-Ul-Ej7">
                                                     <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
@@ -1167,8 +1173,8 @@
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bad" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vaf-hY-piW">
-                                                    <rect key="frame" x="0.0" y="68.000000000000014" width="60" height="15.333333333333329"/>
-                                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="13"/>
+                                                    <rect key="frame" x="0.0" y="68" width="60" height="19.666666666666671"/>
+                                                    <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="13"/>
                                                     <color key="textColor" name="Text_Dark_Gray"/>
                                                     <nil key="highlightedColor"/>
                                                     <userDefinedRuntimeAttributes>
@@ -1178,7 +1184,7 @@
                                             </subviews>
                                         </stackView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="B37-rc-4aW">
-                                            <rect key="frame" x="123" y="0.0" width="60" height="83.333333333333329"/>
+                                            <rect key="frame" x="123" y="0.0" width="60" height="87.666666666666671"/>
                                             <subviews>
                                                 <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tzp-th-l8Y">
                                                     <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
@@ -1192,8 +1198,8 @@
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Neutral" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Sb-i1-Y9i">
-                                                    <rect key="frame" x="0.0" y="68.000000000000014" width="60" height="15.333333333333329"/>
-                                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="13"/>
+                                                    <rect key="frame" x="0.0" y="68" width="60" height="19.666666666666671"/>
+                                                    <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="13"/>
                                                     <color key="textColor" name="Text_Dark_Gray"/>
                                                     <nil key="highlightedColor"/>
                                                     <userDefinedRuntimeAttributes>
@@ -1205,10 +1211,10 @@
                                     </subviews>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="63" translatesAutoresizingMaskIntoConstraints="NO" id="0YH-On-p1B">
-                                    <rect key="frame" x="0.0" y="118.33333333333334" width="183" height="83.333333333333343"/>
+                                    <rect key="frame" x="0.0" y="122.66666666666666" width="183" height="87.666666666666657"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="wA9-aC-QIU">
-                                            <rect key="frame" x="0.0" y="0.0" width="60" height="83.333333333333329"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="60" height="87.666666666666671"/>
                                             <subviews>
                                                 <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sdH-1D-uc7">
                                                     <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
@@ -1222,8 +1228,8 @@
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Good" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GAj-Qv-xtZ">
-                                                    <rect key="frame" x="0.0" y="68.000000000000028" width="60" height="15.333333333333329"/>
-                                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="13"/>
+                                                    <rect key="frame" x="0.0" y="68.000000000000028" width="60" height="19.666666666666671"/>
+                                                    <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="13"/>
                                                     <color key="textColor" name="Text_Dark_Gray"/>
                                                     <nil key="highlightedColor"/>
                                                     <userDefinedRuntimeAttributes>
@@ -1233,7 +1239,7 @@
                                             </subviews>
                                         </stackView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="4dV-cJ-Pt0">
-                                            <rect key="frame" x="123" y="0.0" width="60" height="83.333333333333329"/>
+                                            <rect key="frame" x="123" y="0.0" width="60" height="87.666666666666671"/>
                                             <subviews>
                                                 <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ja8-jK-0Pk">
                                                     <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
@@ -1247,8 +1253,8 @@
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Awesome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="phN-5G-huK">
-                                                    <rect key="frame" x="0.0" y="68.000000000000028" width="60" height="15.333333333333329"/>
-                                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="13"/>
+                                                    <rect key="frame" x="0.0" y="68.000000000000028" width="60" height="19.666666666666671"/>
+                                                    <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="13"/>
                                                     <color key="textColor" name="Text_Dark_Gray"/>
                                                     <nil key="highlightedColor"/>
                                                     <userDefinedRuntimeAttributes>
@@ -1262,8 +1268,8 @@
                             </subviews>
                         </stackView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How are you felling today ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sva-nR-zIH">
-                            <rect key="frame" x="29.666666666666671" y="26.666666666666664" width="240.66666666666663" height="23.666666666666664"/>
-                            <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="20"/>
+                            <rect key="frame" x="27.333333333333329" y="23.666666666666671" width="245.66666666666669" height="30"/>
+                            <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="20"/>
                             <color key="textColor" name="Text_Dark_Gray"/>
                             <nil key="highlightedColor"/>
                             <userDefinedRuntimeAttributes>
@@ -1302,7 +1308,7 @@
                             </connections>
                         </button>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="NCb-6x-LY5">
-                            <rect key="frame" x="25" y="45" width="324" height="311.33333333333331"/>
+                            <rect key="frame" x="25" y="45" width="324" height="322"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="reward_icon2" translatesAutoresizingMaskIntoConstraints="NO" id="3Xh-5q-E7z">
                                     <rect key="frame" x="52" y="0.0" width="220" height="220"/>
@@ -1312,17 +1318,17 @@
                                     </constraints>
                                 </imageView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="La0-aP-cFa">
-                                    <rect key="frame" x="6.3333333333333428" y="240.00000000000003" width="311.66666666666663" height="71.333333333333343"/>
+                                    <rect key="frame" x="5" y="240" width="314.33333333333331" height="82"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Happy Birthday" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QwZ-Xo-sTp">
-                                            <rect key="frame" x="0.0" y="0.0" width="311.66666666666669" height="28.333333333333332"/>
-                                            <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="24"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Happy Birthday" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QwZ-Xo-sTp">
+                                            <rect key="frame" x="0.0" y="0.0" width="314.33333333333331" height="36"/>
+                                            <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="24"/>
                                             <color key="textColor" name="Text_Dark_Gray"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Happy Birthday to Saw Member Wish you a happy work life" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CEi-Rm-0rd">
-                                            <rect key="frame" x="0.0" y="38.333333333333314" width="311.66666666666669" height="33"/>
-                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Happy Birthday to Saw Member Wish you a happy work life" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CEi-Rm-0rd">
+                                            <rect key="frame" x="0.0" y="46" width="314.33333333333331" height="36"/>
+                                            <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="14"/>
                                             <color key="textColor" name="Text_Dark_Gray"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -1336,7 +1342,7 @@
                             <constraints>
                                 <constraint firstAttribute="height" constant="59" id="pj8-sF-W7T"/>
                             </constraints>
-                            <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="20"/>
+                            <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="20"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             <state key="normal" title="Done"/>
                             <userDefinedRuntimeAttributes>
@@ -1400,8 +1406,8 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reward" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VMk-cP-Dch">
-                                        <rect key="frame" x="173.33333333333334" y="18.333333333333329" width="67.333333333333343" height="23.666666666666671"/>
-                                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="20"/>
+                                        <rect key="frame" x="174" y="15" width="66.333333333333314" height="30"/>
+                                        <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="20"/>
                                         <color key="textColor" name="Text_White"/>
                                         <nil key="highlightedColor"/>
                                         <userDefinedRuntimeAttributes>
@@ -1426,7 +1432,7 @@
                                 <rect key="frame" x="0.0" y="190" width="414" height="727"/>
                                 <subviews>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OwS-wB-kl1">
-                                        <rect key="frame" x="0.0" y="143.33333333333331" width="414" height="583.66666666666674"/>
+                                        <rect key="frame" x="0.0" y="146.66666666666669" width="414" height="580.33333333333326"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="AUr-vy-fI5">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="444"/>
@@ -1439,7 +1445,7 @@
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Menu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NnR-kX-kNp">
                                                                         <rect key="frame" x="20" y="0.0" width="374" height="50"/>
-                                                                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="15"/>
+                                                                        <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="15"/>
                                                                         <color key="textColor" name="Text_Dark_Gray"/>
                                                                         <nil key="highlightedColor"/>
                                                                         <userDefinedRuntimeAttributes>
@@ -1489,7 +1495,7 @@
                                                                                 </imageView>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Menu" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CIc-hj-wCZ" customClass="MyLabelTopAligned" customModule="Saw_Grow" customModuleProvider="target">
                                                                                     <rect key="frame" x="0.0" y="67" width="62" height="33"/>
-                                                                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
+                                                                                    <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="12"/>
                                                                                     <color key="textColor" name="Text_Dark_Gray"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
@@ -1523,26 +1529,26 @@
                                                         </constraints>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="E0L-ee-kSy">
-                                                        <rect key="frame" x="0.0" y="180.00000000000006" width="414" height="264"/>
+                                                        <rect key="frame" x="0.0" y="179.99999999999994" width="414" height="264"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wi0-yP-sFx">
                                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recommend" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xhD-VA-Ng9">
                                                                         <rect key="frame" x="20" y="0.0" width="290.66666666666669" height="50"/>
-                                                                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="15"/>
+                                                                        <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="15"/>
                                                                         <color key="textColor" name="Text_Dark_Gray"/>
                                                                         <nil key="highlightedColor"/>
                                                                         <userDefinedRuntimeAttributes>
                                                                             <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="REWARD_Recommend"/>
                                                                         </userDefinedRuntimeAttributes>
                                                                     </label>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Pq-Mo-S7i">
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Pq-Mo-S7i">
                                                                         <rect key="frame" x="314" y="0.0" width="80" height="50"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="80" id="gzR-5J-aQS"/>
                                                                         </constraints>
-                                                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="13"/>
+                                                                        <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="13"/>
                                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                         <state key="normal" title="See all">
                                                                             <color key="titleColor" name="Text_Gray_1"/>
@@ -1597,13 +1603,13 @@
                                                                                             <subviews>
                                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bar B Q Plaza" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ke5-Yj-Ysj">
                                                                                                     <rect key="frame" x="0.0" y="0.0" width="262" height="20"/>
-                                                                                                    <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="13"/>
+                                                                                                    <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="13"/>
                                                                                                     <color key="textColor" name="Text_Dark_Gray"/>
                                                                                                     <nil key="highlightedColor"/>
                                                                                                 </label>
                                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ใช้ 100 คะแนน รับสิทธิ์สั่งบาร์บีกอน 319.-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b2h-r3-TGU">
                                                                                                     <rect key="frame" x="0.0" y="20" width="262" height="20"/>
-                                                                                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
+                                                                                                    <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="12"/>
                                                                                                     <color key="textColor" name="Text_Dark_Gray"/>
                                                                                                     <nil key="highlightedColor"/>
                                                                                                 </label>
@@ -1846,29 +1852,29 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9o3-fR-baY" userLabel="CardView">
-                                <rect key="frame" x="20" y="117.00000000000001" width="374" height="206.33333333333337"/>
+                                <rect key="frame" x="20" y="119.99999999999999" width="374" height="206.66666666666663"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="reward_card_bg" translatesAutoresizingMaskIntoConstraints="NO" id="VJB-lW-mpl">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="206.33333333333334"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="206.66666666666666"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Demo Account" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sIQ-5s-fYM">
-                                        <rect key="frame" x="15" y="15.000000000000004" width="344" height="35.333333333333343"/>
-                                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="30"/>
+                                        <rect key="frame" x="15" y="15" width="344" height="45"/>
+                                        <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="30"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="7Th-Oa-WlI">
-                                        <rect key="frame" x="10" y="102.33333333333334" width="354" height="94"/>
+                                        <rect key="frame" x="10" y="76.666666666666657" width="354" height="120"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cnh-qE-Wrx">
-                                                <rect key="frame" x="0.0" y="0.0" width="354" height="58.666666666666664"/>
-                                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="50"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="354" height="75"/>
+                                                <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="50"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Points" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ENv-H4-rN6">
-                                                <rect key="frame" x="0.0" y="58.666666666666657" width="354" height="35.333333333333343"/>
-                                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="30"/>
+                                                <rect key="frame" x="0.0" y="75.000000000000028" width="354" height="45"/>
+                                                <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="30"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                                 <userDefinedRuntimeAttributes>
@@ -1909,7 +1915,7 @@
                             <constraint firstItem="9o3-fR-baY" firstAttribute="top" secondItem="VMk-cP-Dch" secondAttribute="bottom" constant="25" id="fuc-ck-Yds"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="tabbar_reward" id="R1T-YY-5wE"/>
+                    <tabBarItem key="tabBarItem" title="" image="tab2" selectedImage="tab2_on" id="R1T-YY-5wE"/>
                     <size key="freeformSize" width="414" height="1000"/>
                     <connections>
                         <outlet property="discountCollectionView" destination="OkN-II-eHv" id="2qZ-iB-ceg"/>
@@ -1953,7 +1959,7 @@
                                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TPc-hm-ZDe" customClass="MyButton" customModule="Saw_Grow" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="106.33333333333333" height="36"/>
                                                                 <color key="backgroundColor" name="Main_Theme_1"/>
-                                                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
+                                                                <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="16"/>
                                                                 <state key="normal" title="A-Z">
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
@@ -1970,7 +1976,7 @@
                                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BBI-L9-gRm" customClass="MyButton" customModule="Saw_Grow" customModuleProvider="target">
                                                                 <rect key="frame" x="107.33333333333334" y="0.0" width="106.33333333333334" height="36"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
+                                                                <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="16"/>
                                                                 <state key="normal" title="Favorite">
                                                                     <color key="titleColor" name="Text_Dark_Gray"/>
                                                                 </state>
@@ -1987,7 +1993,7 @@
                                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jY8-iA-NQ6" customClass="MyButton" customModule="Saw_Grow" customModuleProvider="target">
                                                                 <rect key="frame" x="214.66666666666666" y="0.0" width="106.33333333333334" height="36"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
+                                                                <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="16"/>
                                                                 <state key="normal" title="My Team">
                                                                     <color key="titleColor" name="Text_Dark_Gray"/>
                                                                 </state>
@@ -2029,9 +2035,9 @@
                                                         </constraints>
                                                     </imageView>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search contacts" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="6MX-Bw-NHi">
-                                                        <rect key="frame" x="48" y="14.666666666666659" width="187" height="20.666666666666671"/>
+                                                        <rect key="frame" x="48" y="12.333333333333345" width="187" height="25.666666666666671"/>
                                                         <color key="textColor" name="Text_Dark_Gray"/>
-                                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
+                                                        <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="16"/>
                                                         <textInputTraits key="textInputTraits" returnKeyType="search"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Search_Field"/>
@@ -2147,20 +2153,20 @@
                                                             <rect key="frame" x="91" y="13" width="175" height="62"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wankawee Wisarnwan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eDn-RK-JhT">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="140.66666666666666" height="20.666666666666668"/>
-                                                                    <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="14"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="139" height="20.666666666666668"/>
+                                                                    <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="14"/>
                                                                     <color key="textColor" name="Text_Dark_Gray"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IT Director" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rVh-Ld-TGz">
                                                                     <rect key="frame" x="0.0" y="20.666666666666664" width="55.333333333333336" height="20.666666666666664"/>
-                                                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
+                                                                    <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="12"/>
                                                                     <color key="textColor" name="Text_Gray"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Annual Leave" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U9j-mS-yWm">
-                                                                    <rect key="frame" x="0.0" y="41.333333333333336" width="71.666666666666671" height="20.666666666666664"/>
-                                                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
+                                                                    <rect key="frame" x="0.0" y="41.333333333333336" width="73" height="20.666666666666664"/>
+                                                                    <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="12"/>
                                                                     <color key="textColor" name="Text_Gray"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
@@ -2338,17 +2344,17 @@
                                                                     </constraints>
                                                                 </view>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="C3O-5Y-q4O">
-                                                                    <rect key="frame" x="14.666666666666671" y="72" width="140.66666666666663" height="45"/>
+                                                                    <rect key="frame" x="15.666666666666671" y="72" width="139" height="45"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wankawee Wisarnwan" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yNU-OA-Btk">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="140.66666666666666" height="22.666666666666668"/>
-                                                                            <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="14"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="139" height="22.666666666666668"/>
+                                                                            <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="14"/>
                                                                             <color key="textColor" name="Text_Dark_Gray"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IT Director" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zoL-BW-WGF">
-                                                                            <rect key="frame" x="0.0" y="22.666666666666671" width="140.66666666666666" height="22.333333333333329"/>
-                                                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
+                                                                            <rect key="frame" x="0.0" y="22.666666666666671" width="139" height="22.333333333333329"/>
+                                                                            <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="12"/>
                                                                             <color key="textColor" name="Text_Gray"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
@@ -2448,7 +2454,7 @@
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="30" id="5Vc-HX-uC3"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
+                                                            <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="16"/>
                                                             <color key="textColor" name="Main_Theme_1"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -2464,7 +2470,7 @@
                                                                 <constraint firstAttribute="height" constant="27" id="SoV-4A-Tiz"/>
                                                                 <constraint firstAttribute="width" secondItem="w0l-hA-ZV3" secondAttribute="height" multiplier="5:3" id="iEQ-Ul-ESN"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="12"/>
+                                                            <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="12"/>
                                                             <state key="normal" title="Edit">
                                                                 <color key="titleColor" name="Text_Gray_2"/>
                                                             </state>
@@ -2482,7 +2488,7 @@
                                                                 <constraint firstAttribute="width" secondItem="ffq-AJ-B2I" secondAttribute="height" multiplier="5:3" id="M81-WG-EGC"/>
                                                                 <constraint firstAttribute="height" constant="27" id="uNW-jr-Vfl"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="12"/>
+                                                            <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="12"/>
                                                             <state key="normal" title="Done">
                                                                 <color key="titleColor" name="Text_White"/>
                                                             </state>
@@ -2533,7 +2539,7 @@
                             <constraint firstItem="aal-J5-lP6" firstAttribute="top" secondItem="0j6-8H-OMW" secondAttribute="top" id="i1e-v9-WNm"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="tabbar_search" id="CBE-0g-WRx"/>
+                    <tabBarItem key="tabBarItem" title="" image="tab3" selectedImage="tab3_on" id="CBE-0g-WRx"/>
                     <connections>
                         <outlet property="btnAtoZ" destination="TPc-hm-ZDe" id="1fr-7k-cu1"/>
                         <outlet property="btnFavorite" destination="BBI-L9-gRm" id="dN8-xV-GFH"/>
@@ -2578,8 +2584,8 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favorite" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jcq-Jy-TYp">
-                                        <rect key="frame" x="151.66666666666666" y="18.666666666666671" width="72" height="23.666666666666671"/>
-                                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="20"/>
+                                        <rect key="frame" x="150.66666666666666" y="15.666666666666671" width="74" height="30"/>
+                                        <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="20"/>
                                         <color key="textColor" name="Text_White"/>
                                         <nil key="highlightedColor"/>
                                         <userDefinedRuntimeAttributes>
@@ -2597,9 +2603,9 @@
                                                 </constraints>
                                             </imageView>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search Contacts" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Cda-DN-y7i">
-                                                <rect key="frame" x="48" y="15" width="287" height="20"/>
+                                                <rect key="frame" x="48" y="12.33333333333333" width="287" height="25.666666666666671"/>
                                                 <color key="textColor" name="Text_Dark_Gray"/>
-                                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
+                                                <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="search"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="DIRECTORY_FAVORITE_Search_Field"/>
@@ -2670,8 +2676,8 @@
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aticha Sunthornponsin" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZzB-Mh-1AU">
-                                                            <rect key="frame" x="91" y="23.666666666666664" width="228" height="17.666666666666664"/>
-                                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
+                                                            <rect key="frame" x="91" y="21.333333333333329" width="228" height="22.666666666666671"/>
+                                                            <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="15"/>
                                                             <color key="textColor" name="Text_Dark_Gray"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -2709,8 +2715,8 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Favorite" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nMN-vi-cgp">
-                                                    <rect key="frame" x="8" y="8.6666666666666643" width="311" height="18"/>
-                                                    <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="15"/>
+                                                    <rect key="frame" x="8" y="6.3333333333333339" width="311" height="22.666666666666664"/>
+                                                    <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="15"/>
                                                     <color key="textColor" name="Main_Theme_1"/>
                                                     <nil key="highlightedColor"/>
                                                     <userDefinedRuntimeAttributes>
@@ -2877,17 +2883,17 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="50" height="49"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="23l-fM-YVQ">
-                                                                    <rect key="frame" x="14.666666666666666" y="8" width="20.666666666666671" height="33.333333333333336"/>
+                                                                    <rect key="frame" x="12.666666666666664" y="-0.33333333333333215" width="25" height="49.666666666666657"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2xO-yl-hQT">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="20.666666666666668" height="21.333333333333332"/>
-                                                                            <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="18"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="25" height="30"/>
+                                                                            <fontDescription key="fontDescription" name="Kanit-Bold" family="Kanit" pointSize="20"/>
                                                                             <color key="textColor" name="Text_Dark_Gray"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mU8-bT-zZG">
-                                                                            <rect key="frame" x="0.0" y="21.333333333333332" width="20.666666666666668" height="11.999999999999996"/>
-                                                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="10"/>
+                                                                            <rect key="frame" x="0.0" y="30" width="25" height="19.666666666666671"/>
+                                                                            <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="13"/>
                                                                             <color key="textColor" name="Text_Dark_Gray"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
@@ -2939,14 +2945,14 @@
                                                                     </constraints>
                                                                 </view>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check in" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PA9-BW-kwj">
-                                                                    <rect key="frame" x="25.000000000000004" y="15.666666666666666" width="57.333333333333343" height="17.666666666666671"/>
-                                                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
+                                                                    <rect key="frame" x="25.000000000000004" y="13.333333333333334" width="57.333333333333343" height="22.666666666666664"/>
+                                                                    <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="15"/>
                                                                     <color key="textColor" name="Text_Dark_Gray"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00 AM" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FAe-bl-8Wf">
-                                                                    <rect key="frame" x="189.33333333333334" y="15.666666666666666" width="55.666666666666657" height="17.666666666666671"/>
-                                                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
+                                                                    <rect key="frame" x="187.66666666666666" y="13.333333333333334" width="57.333333333333343" height="22.666666666666664"/>
+                                                                    <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="15"/>
                                                                     <color key="textColor" name="Text_Dark_Gray"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
@@ -3017,17 +3023,17 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="50" height="60"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="1DX-Xx-gwP">
-                                                                    <rect key="frame" x="14.666666666666666" y="13.333333333333332" width="20.666666666666671" height="33.333333333333343"/>
+                                                                    <rect key="frame" x="12.666666666666664" y="5.3333333333333321" width="25" height="49.666666666666671"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ctx-lQ-hQB">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="20.666666666666668" height="21.333333333333332"/>
-                                                                            <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="18"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="25" height="30"/>
+                                                                            <fontDescription key="fontDescription" name="Kanit-Bold" family="Kanit" pointSize="20"/>
                                                                             <color key="textColor" name="Text_Dark_Gray"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mxS-BH-tbh">
-                                                                            <rect key="frame" x="0.0" y="21.333333333333329" width="20.666666666666668" height="12"/>
-                                                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="10"/>
+                                                                            <rect key="frame" x="0.0" y="30" width="25" height="19.666666666666671"/>
+                                                                            <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="13"/>
                                                                             <color key="textColor" name="Text_Dark_Gray"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
@@ -3059,17 +3065,17 @@
                                                                     </constraints>
                                                                 </view>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="b5s-Jh-FVS">
-                                                                    <rect key="frame" x="25" y="7.3333333333333321" width="245" height="35.333333333333343"/>
+                                                                    <rect key="frame" x="25" y="2.3333333333333321" width="245" height="45.333333333333343"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You didn't check out" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GEV-rU-2gj">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="245" height="17.666666666666668"/>
-                                                                            <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="15"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="245" height="22.666666666666668"/>
+                                                                            <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="15"/>
                                                                             <color key="textColor" name="Text_Point_Gold"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please update Attendance" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1pO-5u-Upf">
-                                                                            <rect key="frame" x="0.0" y="17.666666666666664" width="245" height="17.666666666666664"/>
-                                                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
+                                                                            <rect key="frame" x="0.0" y="22.666666666666664" width="245" height="22.666666666666664"/>
+                                                                            <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="15"/>
                                                                             <color key="textColor" name="Text_Point_Gold"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
@@ -3185,7 +3191,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="50"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="gAP-11-UvY">
-                                                <rect key="frame" x="61.333333333333329" y="0.0" width="212.33333333333337" height="50"/>
+                                                <rect key="frame" x="64.333333333333329" y="0.0" width="206.66666666666669" height="50"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5tg-iK-C6n">
                                                         <rect key="frame" x="0.0" y="5" width="40" height="40"/>
@@ -3202,13 +3208,13 @@
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Month 2021" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IcC-IA-CMn">
-                                                        <rect key="frame" x="52.000000000000021" y="13.33333333333333" width="108.33333333333331" height="23.666666666666671"/>
-                                                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="20"/>
+                                                        <rect key="frame" x="52.000000000000007" y="10" width="102.66666666666669" height="30"/>
+                                                        <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="20"/>
                                                         <color key="textColor" name="Text_Dark_Gray"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rXS-Nz-SAw">
-                                                        <rect key="frame" x="172.33333333333331" y="5" width="40" height="40"/>
+                                                        <rect key="frame" x="166.66666666666669" y="5" width="40" height="40"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="D9b-WD-Yqs"/>
                                                             <constraint firstAttribute="width" secondItem="rXS-Nz-SAw" secondAttribute="height" multiplier="1:1" id="t1O-Pt-vCw"/>
@@ -3276,7 +3282,7 @@
                             <constraint firstItem="pEY-dl-Ggx" firstAttribute="top" secondItem="1KU-b1-2Fy" secondAttribute="bottom" constant="10" id="x78-I3-BuC"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="tabbar_calendar" id="nRA-d7-jg2"/>
+                    <tabBarItem key="tabBarItem" title="" image="tab4" selectedImage="tab4_on" id="nRA-d7-jg2"/>
                     <connections>
                         <outlet property="calendarMainView" destination="pEY-dl-Ggx" id="UoT-0X-El0"/>
                         <outlet property="headerView" destination="7bg-VR-A9X" id="Jdd-BG-FIu"/>
@@ -3320,8 +3326,8 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notifications" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5g3-UV-OfN">
-                                        <rect key="frame" x="130" y="18.333333333333329" width="115" height="23.666666666666671"/>
-                                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="20"/>
+                                        <rect key="frame" x="129.33333333333334" y="15" width="116.33333333333334" height="30"/>
+                                        <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="20"/>
                                         <color key="textColor" name="Text_White"/>
                                         <nil key="highlightedColor"/>
                                         <userDefinedRuntimeAttributes>
@@ -3397,23 +3403,23 @@
                                                             </constraints>
                                                         </imageView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Bxi-l3-37H">
-                                                            <rect key="frame" x="118" y="18" width="241" height="54"/>
+                                                            <rect key="frame" x="118" y="12.333333333333336" width="241" height="65.666666666666657"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Phonekhanet Kaewrit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gtZ-OW-FlG">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="133.66666666666666" height="16.666666666666668"/>
-                                                                    <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="14"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="135.66666666666666" height="21"/>
+                                                                    <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="14"/>
                                                                     <color key="textColor" name="Text_Dark_Gray"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Sent Gift for You" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BQt-JM-Fbh">
-                                                                    <rect key="frame" x="0.0" y="21.666666666666664" width="95" height="15.333333333333336"/>
-                                                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="13"/>
+                                                                    <rect key="frame" x="0.0" y="26" width="95" height="19.666666666666671"/>
+                                                                    <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="13"/>
                                                                     <color key="textColor" name="Text_Dark_Gray"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="2 minutes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t8e-wK-VRX">
-                                                                    <rect key="frame" x="0.0" y="42" width="44.333333333333336" height="12"/>
-                                                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="10"/>
+                                                                    <rect key="frame" x="0.0" y="50.666666666666664" width="44" height="14.999999999999993"/>
+                                                                    <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="10"/>
                                                                     <color key="textColor" name="Text_Gray"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
@@ -3453,7 +3459,7 @@
                                                         <constraint firstAttribute="width" constant="70" id="eHx-o1-006"/>
                                                         <constraint firstAttribute="height" constant="29" id="oBD-1C-JGC"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="12"/>
+                                                    <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="12"/>
                                                     <state key="normal" title="Read all">
                                                         <color key="titleColor" name="Text_White"/>
                                                     </state>
@@ -3497,7 +3503,7 @@
                             <constraint firstItem="Bbo-rB-Z1F" firstAttribute="trailing" secondItem="7TF-DM-GWD" secondAttribute="trailing" id="wB4-30-azO"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="tabbar_notification" id="Ybw-0e-OMX"/>
+                    <tabBarItem key="tabBarItem" title="" image="tab5" selectedImage="tab5_on" id="Ybw-0e-OMX"/>
                     <connections>
                         <outlet property="headerView" destination="Bbo-rB-Z1F" id="pdP-tY-sPK"/>
                         <outlet property="myCollectionView" destination="bGi-jY-OoV" id="pIS-dB-7hS"/>
@@ -3576,17 +3582,17 @@
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="xze-e7-NBK">
-                                        <rect key="frame" x="125.33333333333331" y="125" width="124.66666666666669" height="60"/>
+                                        <rect key="frame" x="126" y="125" width="123.33333333333331" height="60"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name Surname" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ivT-yR-aSZ">
-                                                <rect key="frame" x="0.0" y="0.0" width="124.66666666666667" height="30"/>
-                                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="18"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="123.33333333333333" height="30"/>
+                                                <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="18"/>
                                                 <color key="textColor" name="Text_White"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Position" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JjJ-LI-DDg">
-                                                <rect key="frame" x="0.0" y="30" width="124.66666666666667" height="30"/>
-                                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="18"/>
+                                                <rect key="frame" x="0.0" y="30" width="123.33333333333333" height="30"/>
+                                                <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="18"/>
                                                 <color key="textColor" name="Text_White"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -3605,7 +3611,7 @@
                                                     <constraint firstAttribute="height" constant="40" id="EgQ-fL-Y7r"/>
                                                     <constraint firstAttribute="width" secondItem="zyI-mB-uv8" secondAttribute="height" multiplier="39:19" id="tB2-2u-awN"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
+                                                <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="16"/>
                                                 <state key="normal" title="  Call" image="profile_call">
                                                     <color key="titleColor" name="Main_Theme_1"/>
                                                 </state>
@@ -3625,7 +3631,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="MH3-kQ-2jW" secondAttribute="height" multiplier="12:5" id="bgy-3H-dFY"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
+                                                <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="16"/>
                                                 <state key="normal" title="  Email" image="profile_email">
                                                     <color key="titleColor" name="Main_Theme_1"/>
                                                 </state>
@@ -3645,7 +3651,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="i4h-FL-xGV" secondAttribute="height" multiplier="160:40" id="IRs-XQ-wpj"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
+                                                <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="16"/>
                                                 <state key="normal" title="  Employee Card" image="profile_employeecard">
                                                     <color key="titleColor" name="Main_Theme_1"/>
                                                 </state>
@@ -3665,7 +3671,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="cjJ-UN-GS2" secondAttribute="height" multiplier="150:40" id="QuR-8o-Dgs"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
+                                                <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="16"/>
                                                 <state key="normal" title="  Send Sticker" image="profile_sticker">
                                                     <color key="titleColor" name="Main_Theme_1"/>
                                                 </state>
@@ -3710,8 +3716,8 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="325" height="50"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Status" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iU2-QA-weU">
-                                                        <rect key="frame" x="20" y="16.333333333333314" width="213.66666666666666" height="17.666666666666671"/>
-                                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
+                                                        <rect key="frame" x="20" y="13.666666666666687" width="213.66666666666666" height="22.666666666666671"/>
+                                                        <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="15"/>
                                                         <color key="textColor" name="Text_Dark_Gray"/>
                                                         <nil key="highlightedColor"/>
                                                         <userDefinedRuntimeAttributes>
@@ -3719,8 +3725,8 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Work" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v45-zK-qL0">
-                                                        <rect key="frame" x="233.66666666666669" y="16.333333333333314" width="34.333333333333314" height="17.666666666666671"/>
-                                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
+                                                        <rect key="frame" x="233.66666666666669" y="13.666666666666687" width="34.333333333333314" height="22.666666666666671"/>
+                                                        <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="15"/>
                                                         <color key="textColor" name="Main_Theme_1"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -3753,8 +3759,8 @@
                                                 <rect key="frame" x="0.0" y="65" width="325" height="50"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Warning" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8OA-cG-mbo">
-                                                        <rect key="frame" x="20" y="16.333333333333314" width="197.66666666666666" height="17.666666666666671"/>
-                                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
+                                                        <rect key="frame" x="20" y="13.666666666666687" width="197.33333333333334" height="22.666666666666671"/>
+                                                        <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="15"/>
                                                         <color key="textColor" name="Text_Dark_Gray"/>
                                                         <nil key="highlightedColor"/>
                                                         <userDefinedRuntimeAttributes>
@@ -3762,8 +3768,8 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 timed" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ra4-wR-cSD">
-                                                        <rect key="frame" x="217.66666666666666" y="16.333333333333314" width="50.333333333333343" height="17.666666666666671"/>
-                                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
+                                                        <rect key="frame" x="217.33333333333334" y="13.666666666666687" width="50.666666666666657" height="22.666666666666671"/>
+                                                        <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="15"/>
                                                         <color key="textColor" name="Btn_Red"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -3795,8 +3801,8 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile Information" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xFn-ye-rPU">
-                                        <rect key="frame" x="25" y="155" width="325" height="19"/>
-                                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="16"/>
+                                        <rect key="frame" x="25" y="155" width="325" height="24"/>
+                                        <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="16"/>
                                         <color key="textColor" name="Main_Theme_1"/>
                                         <nil key="highlightedColor"/>
                                         <userDefinedRuntimeAttributes>
@@ -3804,7 +3810,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="g9d-1u-1yP">
-                                        <rect key="frame" x="25" y="194" width="325" height="288"/>
+                                        <rect key="frame" x="25" y="199" width="325" height="283"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <color key="separatorColor" name="Text_Light_Gray"/>
                                         <inset key="separatorInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
@@ -3820,14 +3826,14 @@
                                                             <rect key="frame" x="20" y="0.0" width="285" height="70"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Position" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g2z-pg-Krr">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="55" height="40"/>
-                                                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="56" height="40"/>
+                                                                    <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="15"/>
                                                                     <color key="textColor" name="Text_Gray"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Frontend Developer" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7MX-OE-ZB6">
-                                                                    <rect key="frame" x="0.0" y="30" width="129.66666666666666" height="40"/>
-                                                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
+                                                                    <rect key="frame" x="0.0" y="30" width="132" height="40"/>
+                                                                    <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="15"/>
                                                                     <color key="textColor" name="Text_Dark_Gray"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
@@ -3960,11 +3966,11 @@
                                                 </userDefinedRuntimeAttributes>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ts3-gm-i8A">
-                                                <rect key="frame" x="143.33333333333337" y="14.999999999999943" width="176.66666666666663" height="77.666666666666671"/>
+                                                <rect key="frame" x="143.33333333333337" y="14.999999999999943" width="176.66666666666663" height="99"/>
                                                 <string key="text">Phongkhanet
 Kaewrit
 test</string>
-                                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="22"/>
+                                                <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="22"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -3972,7 +3978,7 @@ test</string>
                                                 <rect key="frame" x="143.33333333333337" y="82.999999999999943" width="176.66666666666663" height="40.333333333333343"/>
                                                 <string key="text">Frontend 
 Developer</string>
-                                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="18"/>
+                                                <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="18"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -4026,7 +4032,7 @@ Developer</string>
                                     <constraint firstAttribute="height" constant="50" id="6PF-sx-0IM"/>
                                     <constraint firstAttribute="width" secondItem="VLW-8F-EXw" secondAttribute="height" multiplier="102:25" id="rOk-ln-7lK"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="20"/>
                                 <state key="normal" title="   Scan QR Code" image="ecard_camera">
                                     <color key="titleColor" name="Text_Black"/>
                                 </state>
@@ -4100,8 +4106,8 @@ Developer</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Web" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kOX-cD-XO5">
-                                        <rect key="frame" x="167.66666666666666" y="18" width="40" height="24"/>
-                                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="20"/>
+                                        <rect key="frame" x="168.33333333333334" y="15" width="38.666666666666657" height="30"/>
+                                        <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="20"/>
                                         <color key="textColor" name="Text_White"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -4123,7 +4129,7 @@ Developer</string>
                                 <subviews>
                                     <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="slG-gt-dlp">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="702"/>
-                                        <color key="backgroundColor" red="0.58823529411764708" green="0.015686274509803921" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <wkWebViewConfiguration key="configuration">
                                             <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                             <wkPreferences key="preferences"/>
@@ -4159,7 +4165,7 @@ Developer</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I13-tx-zYB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3611.594202898551" y="71.651785714285708"/>
+            <point key="canvasLocation" x="3610.4000000000001" y="70.935960591133011"/>
         </scene>
         <!--Coming_Soon-->
         <scene sceneID="3Rl-Wi-loC">
@@ -4176,8 +4182,8 @@ Developer</string>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coming Soon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4RF-Xy-KM1">
-                                <rect key="frame" x="97.333333333333329" y="503.33333333333326" width="180.66666666666669" height="35"/>
-                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="30"/>
+                                <rect key="frame" x="97" y="503.33333333333326" width="181" height="45"/>
+                                <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -4199,7 +4205,7 @@ Developer</string>
     </scenes>
     <designables>
         <designable name="1QD-f9-Jb3">
-            <size key="intrinsicContentSize" width="77.333333333333329" height="17.666666666666668"/>
+            <size key="intrinsicContentSize" width="77" height="22.666666666666668"/>
         </designable>
         <designable name="1cW-40-SZQ">
             <size key="intrinsicContentSize" width="17" height="22"/>
@@ -4217,13 +4223,13 @@ Developer</string>
             <size key="intrinsicContentSize" width="62" height="62"/>
         </designable>
         <designable name="7h7-q4-nCs">
-            <size key="intrinsicContentSize" width="54.666666666666664" height="35.333333333333336"/>
+            <size key="intrinsicContentSize" width="54.666666666666664" height="45"/>
         </designable>
         <designable name="BBI-L9-gRm">
-            <size key="intrinsicContentSize" width="57" height="31"/>
+            <size key="intrinsicContentSize" width="58" height="36"/>
         </designable>
         <designable name="CIc-hj-wCZ">
-            <size key="intrinsicContentSize" width="30.333333333333332" height="14.333333333333334"/>
+            <size key="intrinsicContentSize" width="29.666666666666668" height="18"/>
         </designable>
         <designable name="Fdn-3P-Xqn">
             <size key="intrinsicContentSize" width="12" height="22"/>
@@ -4232,7 +4238,7 @@ Developer</string>
             <size key="intrinsicContentSize" width="62.333333333333336" height="62.333333333333336"/>
         </designable>
         <designable name="IxD-MV-Ehi">
-            <size key="intrinsicContentSize" width="36.333333333333336" height="14.333333333333334"/>
+            <size key="intrinsicContentSize" width="40.666666666666664" height="19.666666666666668"/>
         </designable>
         <designable name="JfK-xg-6Bn">
             <size key="intrinsicContentSize" width="62.333333333333336" height="62.333333333333336"/>
@@ -4241,7 +4247,7 @@ Developer</string>
             <size key="intrinsicContentSize" width="75" height="75"/>
         </designable>
         <designable name="MH3-kQ-2jW">
-            <size key="intrinsicContentSize" width="70" height="19"/>
+            <size key="intrinsicContentSize" width="70" height="24"/>
         </designable>
         <designable name="Q4d-0L-tlw">
             <size key="intrinsicContentSize" width="22" height="22"/>
@@ -4250,16 +4256,16 @@ Developer</string>
             <size key="intrinsicContentSize" width="17" height="22"/>
         </designable>
         <designable name="TPc-hm-ZDe">
-            <size key="intrinsicContentSize" width="30" height="31"/>
+            <size key="intrinsicContentSize" width="30" height="36"/>
         </designable>
         <designable name="ThX-8Y-2ja">
-            <size key="intrinsicContentSize" width="57.333333333333336" height="17.666666666666668"/>
+            <size key="intrinsicContentSize" width="57.333333333333336" height="22.666666666666668"/>
         </designable>
         <designable name="Und-nX-KcR">
             <size key="intrinsicContentSize" width="62.333333333333336" height="62.333333333333336"/>
         </designable>
         <designable name="VLW-8F-EXw">
-            <size key="intrinsicContentSize" width="172" height="26"/>
+            <size key="intrinsicContentSize" width="168" height="30"/>
         </designable>
         <designable name="WrP-i0-RJ5">
             <size key="intrinsicContentSize" width="22" height="22"/>
@@ -4271,22 +4277,22 @@ Developer</string>
             <size key="intrinsicContentSize" width="30" height="30"/>
         </designable>
         <designable name="cjJ-UN-GS2">
-            <size key="intrinsicContentSize" width="119" height="22.666666666666668"/>
+            <size key="intrinsicContentSize" width="118" height="24"/>
         </designable>
         <designable name="dzy-9Q-rnu">
             <size key="intrinsicContentSize" width="329" height="141"/>
         </designable>
         <designable name="etv-MU-Gxh">
-            <size key="intrinsicContentSize" width="43" height="27"/>
+            <size key="intrinsicContentSize" width="44" height="30"/>
         </designable>
         <designable name="ffq-AJ-B2I">
-            <size key="intrinsicContentSize" width="30" height="27"/>
+            <size key="intrinsicContentSize" width="30" height="30"/>
         </designable>
         <designable name="i4h-FL-xGV">
-            <size key="intrinsicContentSize" width="141" height="19.666666666666668"/>
+            <size key="intrinsicContentSize" width="141" height="24"/>
         </designable>
         <designable name="jY8-iA-NQ6">
-            <size key="intrinsicContentSize" width="66" height="31"/>
+            <size key="intrinsicContentSize" width="64" height="36"/>
         </designable>
         <designable name="k8K-DS-KZx">
             <size key="intrinsicContentSize" width="75" height="75"/>
@@ -4301,19 +4307,19 @@ Developer</string>
             <size key="intrinsicContentSize" width="22" height="22"/>
         </designable>
         <designable name="vMu-LN-iyn">
-            <size key="intrinsicContentSize" width="47" height="17.666666666666668"/>
+            <size key="intrinsicContentSize" width="46" height="22.666666666666668"/>
         </designable>
         <designable name="w0l-hA-ZV3">
-            <size key="intrinsicContentSize" width="30" height="27"/>
+            <size key="intrinsicContentSize" width="30" height="30"/>
         </designable>
         <designable name="ypj-Yr-i64">
             <size key="intrinsicContentSize" width="96" height="97.333333333333329"/>
         </designable>
         <designable name="znH-TW-hgA">
-            <size key="intrinsicContentSize" width="47" height="36"/>
+            <size key="intrinsicContentSize" width="48" height="42"/>
         </designable>
         <designable name="zyI-mB-uv8">
-            <size key="intrinsicContentSize" width="52" height="19"/>
+            <size key="intrinsicContentSize" width="52" height="24"/>
         </designable>
     </designables>
     <resources>
@@ -4374,10 +4380,16 @@ Developer</string>
         <image name="sidemenu_help" width="25" height="25"/>
         <image name="sidemenu_home" width="28" height="28"/>
         <image name="swap_icon_circle" width="23" height="23"/>
-        <image name="tabbar_calendar" width="24.666666030883789" height="22"/>
-        <image name="tabbar_home" width="20.333333969116211" height="22.333333969116211"/>
-        <image name="tabbar_notification" width="20" height="25"/>
-        <image name="tabbar_reward" width="22" height="22"/>
+        <image name="tab1" width="24" height="23.333333969116211"/>
+        <image name="tab1_on" width="23.333333969116211" height="23"/>
+        <image name="tab2" width="23.333333969116211" height="23"/>
+        <image name="tab2_on" width="23" height="23"/>
+        <image name="tab3" width="23.666666030883789" height="23.666666030883789"/>
+        <image name="tab3_on" width="23.333333969116211" height="23.666666030883789"/>
+        <image name="tab4" width="23.666666030883789" height="22.333333969116211"/>
+        <image name="tab4_on" width="23" height="22.333333969116211"/>
+        <image name="tab5" width="20.333333969116211" height="22.333333969116211"/>
+        <image name="tab5_on" width="19.666666030883789" height="22.333333969116211"/>
         <image name="tabbar_search" width="22.666666030883789" height="22.666666030883789"/>
         <namedColor name="Bg_Light_Gray">
             <color red="0.96470588235294119" green="0.97254901960784312" blue="0.98431372549019602" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

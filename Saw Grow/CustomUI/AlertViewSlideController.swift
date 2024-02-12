@@ -28,7 +28,7 @@ class AlertViewSlideController : UIViewController, MTSlideToOpenDelegate {
         titleLabel.text = alertTitle
         slideView.delegate = self
         slideView.labelText = slideTitle
-        slideView.textFont = .Roboto_Regular(ofSize: 17)
+        slideView.textFont = .Kanit_Regular(ofSize: 17)
         slideView.textColor = .textDarkGray
         slideView.showSliderText = true
         slideView.thumnailImageView.image = UIImage(named: "slider")

@@ -33,7 +33,7 @@ class EmployeeCard: UIViewController {
         
         if setColor {
             self.navigationController?.setStatusBarColor()
-            bottomView.setGradientBackground()
+            //bottomView.setGradientBackground()
             
             setColor = false
         }
@@ -45,8 +45,6 @@ class EmployeeCard: UIViewController {
         //print(profileJSON!)
         
         //self.view.backgroundColor = UIColor.black.withAlphaComponent(0.35)
-        
-        bottomView.backgroundColor = UIColor.customThemeColor()
         
         self.userPic.sd_setImage(with: URL(string:self.profileJSON!["profile_photo"].stringValue), placeholderImage: UIImage(named: "logo_circle"))
         self.userName.text = "\(self.profileJSON![self.firstNameKey()].stringValue) \n\(self.profileJSON![self.lastNameKey()].stringValue)"

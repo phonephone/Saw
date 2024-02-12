@@ -78,6 +78,26 @@
 		10A5741F29D5705800150A43 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A5741E29D5705800150A43 /* AlertViewController.swift */; };
 		10A5742129D5769C00150A43 /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A5742029D5769C00150A43 /* AlertService.swift */; };
 		10A5742329D5808700150A43 /* AlertViewSlideController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A5742229D5808700150A43 /* AlertViewSlideController.swift */; };
+		10A6481E2B70C17800367543 /* Kanit-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 10A6480B2B70C17800367543 /* Kanit-ExtraLight.ttf */; };
+		10A6481F2B70C17800367543 /* Kanit-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 10A6480C2B70C17800367543 /* Kanit-ThinItalic.ttf */; };
+		10A648202B70C17800367543 /* Kanit-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 10A6480D2B70C17800367543 /* Kanit-BoldItalic.ttf */; };
+		10A648212B70C17800367543 /* Kanit-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 10A6480E2B70C17800367543 /* Kanit-SemiBold.ttf */; };
+		10A648222B70C17800367543 /* Kanit-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 10A6480F2B70C17800367543 /* Kanit-Black.ttf */; };
+		10A648232B70C17800367543 /* Kanit-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 10A648102B70C17800367543 /* Kanit-Regular.ttf */; };
+		10A648242B70C17800367543 /* Kanit-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 10A648112B70C17800367543 /* Kanit-Italic.ttf */; };
+		10A648252B70C17800367543 /* Kanit-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 10A648122B70C17800367543 /* Kanit-MediumItalic.ttf */; };
+		10A648262B70C17800367543 /* Kanit-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 10A648132B70C17800367543 /* Kanit-Thin.ttf */; };
+		10A648272B70C17800367543 /* Kanit-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 10A648142B70C17800367543 /* Kanit-ExtraBoldItalic.ttf */; };
+		10A648282B70C17800367543 /* Kanit-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 10A648152B70C17800367543 /* Kanit-ExtraBold.ttf */; };
+		10A648292B70C17800367543 /* Kanit-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 10A648162B70C17800367543 /* Kanit-Bold.ttf */; };
+		10A6482A2B70C17800367543 /* Kanit-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 10A648172B70C17800367543 /* Kanit-SemiBoldItalic.ttf */; };
+		10A6482B2B70C17800367543 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 10A648182B70C17800367543 /* OFL.txt */; };
+		10A6482C2B70C17800367543 /* Kanit-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 10A648192B70C17800367543 /* Kanit-BlackItalic.ttf */; };
+		10A6482D2B70C17800367543 /* Kanit-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 10A6481A2B70C17800367543 /* Kanit-Light.ttf */; };
+		10A6482E2B70C17800367543 /* Kanit-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 10A6481B2B70C17800367543 /* Kanit-LightItalic.ttf */; };
+		10A6482F2B70C17800367543 /* Kanit-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 10A6481C2B70C17800367543 /* Kanit-ExtraLightItalic.ttf */; };
+		10A648302B70C17800367543 /* Kanit-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 10A6481D2B70C17800367543 /* Kanit-Medium.ttf */; };
+		10A648322B70C90C00367543 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A648312B70C90C00367543 /* Font.swift */; };
 		10A691192833A7160068CA3E /* EDocMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A691182833A7150068CA3E /* EDocMenu.swift */; };
 		10A6911B2833AAE60068CA3E /* MoreMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A6911A2833AAE60068CA3E /* MoreMenu.swift */; };
 		10A6911F2833EB390068CA3E /* EDocWeb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A6911E2833EB390068CA3E /* EDocWeb.swift */; };
@@ -213,6 +233,26 @@
 		10A5741E29D5705800150A43 /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		10A5742029D5769C00150A43 /* AlertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
 		10A5742229D5808700150A43 /* AlertViewSlideController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewSlideController.swift; sourceTree = "<group>"; };
+		10A6480B2B70C17800367543 /* Kanit-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kanit-ExtraLight.ttf"; sourceTree = "<group>"; };
+		10A6480C2B70C17800367543 /* Kanit-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kanit-ThinItalic.ttf"; sourceTree = "<group>"; };
+		10A6480D2B70C17800367543 /* Kanit-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kanit-BoldItalic.ttf"; sourceTree = "<group>"; };
+		10A6480E2B70C17800367543 /* Kanit-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kanit-SemiBold.ttf"; sourceTree = "<group>"; };
+		10A6480F2B70C17800367543 /* Kanit-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kanit-Black.ttf"; sourceTree = "<group>"; };
+		10A648102B70C17800367543 /* Kanit-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kanit-Regular.ttf"; sourceTree = "<group>"; };
+		10A648112B70C17800367543 /* Kanit-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kanit-Italic.ttf"; sourceTree = "<group>"; };
+		10A648122B70C17800367543 /* Kanit-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kanit-MediumItalic.ttf"; sourceTree = "<group>"; };
+		10A648132B70C17800367543 /* Kanit-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kanit-Thin.ttf"; sourceTree = "<group>"; };
+		10A648142B70C17800367543 /* Kanit-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kanit-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		10A648152B70C17800367543 /* Kanit-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kanit-ExtraBold.ttf"; sourceTree = "<group>"; };
+		10A648162B70C17800367543 /* Kanit-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kanit-Bold.ttf"; sourceTree = "<group>"; };
+		10A648172B70C17800367543 /* Kanit-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kanit-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		10A648182B70C17800367543 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
+		10A648192B70C17800367543 /* Kanit-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kanit-BlackItalic.ttf"; sourceTree = "<group>"; };
+		10A6481A2B70C17800367543 /* Kanit-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kanit-Light.ttf"; sourceTree = "<group>"; };
+		10A6481B2B70C17800367543 /* Kanit-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kanit-LightItalic.ttf"; sourceTree = "<group>"; };
+		10A6481C2B70C17800367543 /* Kanit-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kanit-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		10A6481D2B70C17800367543 /* Kanit-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kanit-Medium.ttf"; sourceTree = "<group>"; };
+		10A648312B70C90C00367543 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		10A691182833A7150068CA3E /* EDocMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EDocMenu.swift; sourceTree = "<group>"; };
 		10A6911A2833AAE60068CA3E /* MoreMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreMenu.swift; sourceTree = "<group>"; };
 		10A6911E2833EB390068CA3E /* EDocWeb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EDocWeb.swift; sourceTree = "<group>"; };
@@ -403,6 +443,32 @@
 			path = EDocument;
 			sourceTree = "<group>";
 		};
+		10A6480A2B70C17800367543 /* Kanit */ = {
+			isa = PBXGroup;
+			children = (
+				10A6480B2B70C17800367543 /* Kanit-ExtraLight.ttf */,
+				10A6480C2B70C17800367543 /* Kanit-ThinItalic.ttf */,
+				10A6480D2B70C17800367543 /* Kanit-BoldItalic.ttf */,
+				10A6480E2B70C17800367543 /* Kanit-SemiBold.ttf */,
+				10A6480F2B70C17800367543 /* Kanit-Black.ttf */,
+				10A648102B70C17800367543 /* Kanit-Regular.ttf */,
+				10A648112B70C17800367543 /* Kanit-Italic.ttf */,
+				10A648122B70C17800367543 /* Kanit-MediumItalic.ttf */,
+				10A648132B70C17800367543 /* Kanit-Thin.ttf */,
+				10A648142B70C17800367543 /* Kanit-ExtraBoldItalic.ttf */,
+				10A648152B70C17800367543 /* Kanit-ExtraBold.ttf */,
+				10A648162B70C17800367543 /* Kanit-Bold.ttf */,
+				10A648172B70C17800367543 /* Kanit-SemiBoldItalic.ttf */,
+				10A648182B70C17800367543 /* OFL.txt */,
+				10A648192B70C17800367543 /* Kanit-BlackItalic.ttf */,
+				10A6481A2B70C17800367543 /* Kanit-Light.ttf */,
+				10A6481B2B70C17800367543 /* Kanit-LightItalic.ttf */,
+				10A6481C2B70C17800367543 /* Kanit-ExtraLightItalic.ttf */,
+				10A6481D2B70C17800367543 /* Kanit-Medium.ttf */,
+			);
+			path = Kanit;
+			sourceTree = "<group>";
+		};
 		10A957FA274F8D4D00766F14 /* Attendance */ = {
 			isa = PBXGroup;
 			children = (
@@ -432,6 +498,8 @@
 		10C06885270EC7F100FDF155 /* Font */ = {
 			isa = PBXGroup;
 			children = (
+				10A648312B70C90C00367543 /* Font.swift */,
+				10A6480A2B70C17800367543 /* Kanit */,
 				10C06886270EC7F100FDF155 /* Roboto */,
 			);
 			name = Font;
@@ -603,34 +671,53 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10A6482B2B70C17800367543 /* OFL.txt in Resources */,
+				10A648262B70C17800367543 /* Kanit-Thin.ttf in Resources */,
+				10A6482F2B70C17800367543 /* Kanit-ExtraLightItalic.ttf in Resources */,
 				10B247ED2B29D6C700E6F2D8 /* keys.plist in Resources */,
+				10A648252B70C17800367543 /* Kanit-MediumItalic.ttf in Resources */,
+				10A648212B70C17800367543 /* Kanit-SemiBold.ttf in Resources */,
 				10C0689E270EC7F100FDF155 /* Roboto-Bold.ttf in Resources */,
 				10C0689C270EC7F100FDF155 /* LICENSE.txt in Resources */,
 				10C06899270EC7F100FDF155 /* Roboto-BoldItalic.ttf in Resources */,
+				10A648292B70C17800367543 /* Kanit-Bold.ttf in Resources */,
 				10CD6201273506F200350D51 /* SideMenuCell.xib in Resources */,
 				1016AFEB2803EA49005EB4A6 /* EDocument.storyboard in Resources */,
 				10C06896270EC7F100FDF155 /* Roboto-Regular.ttf in Resources */,
+				10A648242B70C17800367543 /* Kanit-Italic.ttf in Resources */,
 				10C0689A270EC7F100FDF155 /* Roboto-LightItalic.ttf in Resources */,
 				10ED6FD427857B4400E057C1 /* TutorialView.xib in Resources */,
 				10F367742727DB94001BE388 /* Attendance.storyboard in Resources */,
 				1027BB6428A0EFB30056A023 /* Localizable.strings in Resources */,
 				10C06894270EC7F100FDF155 /* Roboto-Medium.ttf in Resources */,
+				10A648272B70C17800367543 /* Kanit-ExtraBoldItalic.ttf in Resources */,
 				10A5741929D56F2E00150A43 /* Alert.storyboard in Resources */,
 				10EF1EDF270E97DF0030C936 /* LaunchScreen.storyboard in Resources */,
 				10C0689D270EC7F100FDF155 /* Roboto-BlackItalic.ttf in Resources */,
 				1049F8F2272E714E00F23465 /* HRService.storyboard in Resources */,
 				10F367702727DAC1001BE388 /* Login.storyboard in Resources */,
+				10A648202B70C17800367543 /* Kanit-BoldItalic.ttf in Resources */,
+				10A648232B70C17800367543 /* Kanit-Regular.ttf in Resources */,
 				10C0689F270EC7F100FDF155 /* Roboto-Thin.ttf in Resources */,
 				10C06895270EC7F100FDF155 /* Roboto-Light.ttf in Resources */,
 				10C06898270EC7F100FDF155 /* Roboto-ThinItalic.ttf in Resources */,
 				10C068A0270EC7F100FDF155 /* Roboto-Black.ttf in Resources */,
+				10A6481F2B70C17800367543 /* Kanit-ThinItalic.ttf in Resources */,
+				10A6482D2B70C17800367543 /* Kanit-Light.ttf in Resources */,
+				10A648222B70C17800367543 /* Kanit-Black.ttf in Resources */,
+				10A6482E2B70C17800367543 /* Kanit-LightItalic.ttf in Resources */,
+				10A648282B70C17800367543 /* Kanit-ExtraBold.ttf in Resources */,
+				10A6481E2B70C17800367543 /* Kanit-ExtraLight.ttf in Resources */,
 				10C06897270EC7F100FDF155 /* Roboto-MediumItalic.ttf in Resources */,
+				10A648302B70C17800367543 /* Kanit-Medium.ttf in Resources */,
+				10A6482A2B70C17800367543 /* Kanit-SemiBoldItalic.ttf in Resources */,
 				10EF1EDC270E97DF0030C936 /* Assets.xcassets in Resources */,
 				10C0689B270EC7F100FDF155 /* Roboto-Italic.ttf in Resources */,
 				10EF1EDA270E97DD0030C936 /* Main.storyboard in Resources */,
 				10ED6FCD2785557100E057C1 /* GoogleService-Info.plist in Resources */,
 				103A602A278EB6C00099C1CE /* Reward.storyboard in Resources */,
 				101480C627F5F9A700315E2F /* Setting.storyboard in Resources */,
+				10A6482C2B70C17800367543 /* Kanit-BlackItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -791,6 +878,7 @@
 				104A092927733F9D00DD0055 /* Attendance.swift in Sources */,
 				103065372733169200EE4F42 /* ResetPassword.swift in Sources */,
 				10E664A62769BC3F00B22C1F /* CalendarList.swift in Sources */,
+				10A648322B70C90C00367543 /* Font.swift in Sources */,
 				10BF12FD274CCB89001E48BB /* CheckInMap.swift in Sources */,
 				103A6030278EBE670099C1CE /* OTHistory.swift in Sources */,
 				105C78F82ADD0AFA00F61D20 /* PrivacyPolicy.swift in Sources */,
@@ -1005,7 +1093,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Saw Grow/Saw Grow.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = ANTR249Q57;
 				EXCLUDED_ARCHS = "";
@@ -1015,7 +1103,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.9.6;
+				MARKETING_VERSION = 1.9.7;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.softcakes.Saw-Grow";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1034,7 +1122,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Saw Grow/Saw Grow.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = ANTR249Q57;
 				EXCLUDED_ARCHS = "";
 				INFOPLIST_FILE = "Saw Grow/Info.plist";
@@ -1042,7 +1130,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.9.6;
+				MARKETING_VERSION = 1.9.7;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.softcakes.Saw-Grow";
 				PRODUCT_NAME = "$(TARGET_NAME)";
