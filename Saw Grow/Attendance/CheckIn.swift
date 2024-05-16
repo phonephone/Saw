@@ -99,7 +99,7 @@ class CheckIn: UIViewController, UITextViewDelegate {
             switch result {
             case .failure(let error):
                 print(error)
-                ProgressHUD.dismiss()
+                //ProgressHUD.dismiss()
                 
             case .success(let responseObject):
                 let json = JSON(responseObject)
@@ -388,7 +388,7 @@ class CheckIn: UIViewController, UITextViewDelegate {
     
     func loadCheckIn(action:String) {
         
-        let timeStamp = appStringFromDate(date: Date(), format: "yyyy-MM-dd HH:mm:ss")//2021-11-24 08:08:08
+        let timeStamp = appStringFromDate(date: Date(), format: "yyyy-MM-dd HH:mm:ss") //2021-11-24 08:08:08
         
         var descriptionStr:String
         if remarkText.text == remarkStr {
@@ -416,7 +416,7 @@ class CheckIn: UIViewController, UITextViewDelegate {
             switch result {
             case .failure(let error):
                 print(error)
-                ProgressHUD.dismiss()
+                //ProgressHUD.dismiss()
                 
             case .success(let responseObject):
                 let json = JSON(responseObject)

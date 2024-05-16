@@ -41,6 +41,44 @@ class MyView: UIView {
             return UIColor(cgColor: color)
         }
     }
+    
+    @IBInspectable var shadowColor: UIColor?{
+        set {
+            guard let uiColor = newValue else { return }
+            layer.shadowColor = uiColor.cgColor
+        }
+        get{
+            guard let color = layer.shadowColor else { return nil }
+            return UIColor(cgColor: color)
+        }
+    }
+    
+    @IBInspectable var shadowOpacity: Float{
+        set {
+            layer.shadowOpacity = newValue
+        }
+        get{
+            return layer.shadowOpacity
+        }
+    }
+    
+    @IBInspectable var shadowOffset: CGSize{
+        set {
+            layer.shadowOffset = newValue
+        }
+        get{
+            return layer.shadowOffset
+        }
+    }
+    
+    @IBInspectable var shadowRadius: CGFloat{
+        set {
+            layer.shadowRadius = newValue
+        }
+        get{
+            return layer.shadowRadius
+        }
+    }
 }
 
 
@@ -74,6 +112,44 @@ class MyImageView: UIImageView {
         get {
             guard let color = layer.borderColor else { return nil }
             return UIColor(cgColor: color)
+        }
+    }
+    
+    @IBInspectable var shadowColor: UIColor?{
+        set {
+            guard let uiColor = newValue else { return }
+            layer.shadowColor = uiColor.cgColor
+        }
+        get{
+            guard let color = layer.shadowColor else { return nil }
+            return UIColor(cgColor: color)
+        }
+    }
+    
+    @IBInspectable var shadowOpacity: Float{
+        set {
+            layer.shadowOpacity = newValue
+        }
+        get{
+            return layer.shadowOpacity
+        }
+    }
+    
+    @IBInspectable var shadowOffset: CGSize{
+        set {
+            layer.shadowOffset = newValue
+        }
+        get{
+            return layer.shadowOffset
+        }
+    }
+    
+    @IBInspectable var shadowRadius: CGFloat{
+        set {
+            layer.shadowRadius = newValue
+        }
+        get{
+            return layer.shadowRadius
         }
     }
 }
@@ -120,6 +196,44 @@ class MyButton: UIButton {
         get {
             guard let color = layer.borderColor else { return nil }
             return UIColor(cgColor: color)
+        }
+    }
+    
+    @IBInspectable var shadowColor: UIColor?{
+        set {
+            guard let uiColor = newValue else { return }
+            layer.shadowColor = uiColor.cgColor
+        }
+        get{
+            guard let color = layer.shadowColor else { return nil }
+            return UIColor(cgColor: color)
+        }
+    }
+    
+    @IBInspectable var shadowOpacity: Float{
+        set {
+            layer.shadowOpacity = newValue
+        }
+        get{
+            return layer.shadowOpacity
+        }
+    }
+    
+    @IBInspectable var shadowOffset: CGSize{
+        set {
+            layer.shadowOffset = newValue
+        }
+        get{
+            return layer.shadowOffset
+        }
+    }
+    
+    @IBInspectable var shadowRadius: CGFloat{
+        set {
+            layer.shadowRadius = newValue
+        }
+        get{
+            return layer.shadowRadius
         }
     }
 }
@@ -190,6 +304,44 @@ class MyField: UITextField {
             return UIColor(cgColor: color)
         }
     }
+    
+    @IBInspectable var shadowColor: UIColor?{
+        set {
+            guard let uiColor = newValue else { return }
+            layer.shadowColor = uiColor.cgColor
+        }
+        get{
+            guard let color = layer.shadowColor else { return nil }
+            return UIColor(cgColor: color)
+        }
+    }
+    
+    @IBInspectable var shadowOpacity: Float{
+        set {
+            layer.shadowOpacity = newValue
+        }
+        get{
+            return layer.shadowOpacity
+        }
+    }
+    
+    @IBInspectable var shadowOffset: CGSize{
+        set {
+            layer.shadowOffset = newValue
+        }
+        get{
+            return layer.shadowOffset
+        }
+    }
+    
+    @IBInspectable var shadowRadius: CGFloat{
+        set {
+            layer.shadowRadius = newValue
+        }
+        get{
+            return layer.shadowRadius
+        }
+    }
 }
 
 
@@ -227,6 +379,44 @@ class MyTextView: UITextView {
             return UIColor(cgColor: color)
         }
     }
+    
+    @IBInspectable var shadowColor: UIColor?{
+        set {
+            guard let uiColor = newValue else { return }
+            layer.shadowColor = uiColor.cgColor
+        }
+        get{
+            guard let color = layer.shadowColor else { return nil }
+            return UIColor(cgColor: color)
+        }
+    }
+    
+    @IBInspectable var shadowOpacity: Float{
+        set {
+            layer.shadowOpacity = newValue
+        }
+        get{
+            return layer.shadowOpacity
+        }
+    }
+    
+    @IBInspectable var shadowOffset: CGSize{
+        set {
+            layer.shadowOffset = newValue
+        }
+        get{
+            return layer.shadowOffset
+        }
+    }
+    
+    @IBInspectable var shadowRadius: CGFloat{
+        set {
+            layer.shadowRadius = newValue
+        }
+        get{
+            return layer.shadowRadius
+        }
+    }
 }
 
 // MARK: - UISCROLLVIEW
@@ -262,16 +452,261 @@ class MyScrollView: UIScrollView {
         }
     }
     
-    func dropShadow(scale: Bool = true) {
-        layer.masksToBounds = false
-        layer.shadowColor = UIColor.gray.cgColor
-        layer.shadowOpacity = 0.5
-        layer.shadowOffset = .zero//CGSize(width: -1, height: 1)
-        layer.shadowRadius = 5
-        
-//        layer.shadowPath = UIBezierPath(rect: bounds).cgPath
-//        layer.shouldRasterize = true
-//        layer.rasterizationScale = scale ? UIScreen.main.scale : 1
+    @IBInspectable var shadowColor: UIColor?{
+        set {
+            guard let uiColor = newValue else { return }
+            layer.shadowColor = uiColor.cgColor
+        }
+        get{
+            guard let color = layer.shadowColor else { return nil }
+            return UIColor(cgColor: color)
+        }
+    }
+    
+    @IBInspectable var shadowOpacity: Float{
+        set {
+            layer.shadowOpacity = newValue
+        }
+        get{
+            return layer.shadowOpacity
+        }
+    }
+    
+    @IBInspectable var shadowOffset: CGSize{
+        set {
+            layer.shadowOffset = newValue
+        }
+        get{
+            return layer.shadowOffset
+        }
+    }
+    
+    @IBInspectable var shadowRadius: CGFloat{
+        set {
+            layer.shadowRadius = newValue
+        }
+        get{
+            return layer.shadowRadius
+        }
+    }
+}
+
+
+// MARK: - UIStackView
+@IBDesignable
+class MyStackView: UIStackView {
+    
+    @IBInspectable var borderWidth: CGFloat {
+        set {
+            layer.borderWidth = newValue
+        }
+        get {
+            return layer.borderWidth
+        }
+    }
+    
+    @IBInspectable var cornerRadius: CGFloat {
+        set {
+            layer.cornerRadius = newValue
+        }
+        get {
+            return layer.cornerRadius
+        }
+    }
+    
+    @IBInspectable var borderColor: UIColor? {
+        set {
+            guard let uiColor = newValue else { return }
+            layer.borderColor = uiColor.cgColor
+        }
+        get {
+            guard let color = layer.borderColor else { return nil }
+            return UIColor(cgColor: color)
+        }
+    }
+    
+    @IBInspectable var shadowColor: UIColor?{
+        set {
+            guard let uiColor = newValue else { return }
+            layer.shadowColor = uiColor.cgColor
+        }
+        get{
+            guard let color = layer.shadowColor else { return nil }
+            return UIColor(cgColor: color)
+        }
+    }
+    
+    @IBInspectable var shadowOpacity: Float{
+        set {
+            layer.shadowOpacity = newValue
+        }
+        get{
+            return layer.shadowOpacity
+        }
+    }
+    
+    @IBInspectable var shadowOffset: CGSize{
+        set {
+            layer.shadowOffset = newValue
+        }
+        get{
+            return layer.shadowOffset
+        }
+    }
+    
+    @IBInspectable var shadowRadius: CGFloat{
+        set {
+            layer.shadowRadius = newValue
+        }
+        get{
+            return layer.shadowRadius
+        }
+    }
+}
+
+
+// MARK: - UITableView
+@IBDesignable
+class MyTableView: UITableView {
+    
+    @IBInspectable var borderWidth: CGFloat {
+        set {
+            layer.borderWidth = newValue
+        }
+        get {
+            return layer.borderWidth
+        }
+    }
+    
+    @IBInspectable var cornerRadius: CGFloat {
+        set {
+            layer.cornerRadius = newValue
+        }
+        get {
+            return layer.cornerRadius
+        }
+    }
+    
+    @IBInspectable var borderColor: UIColor? {
+        set {
+            guard let uiColor = newValue else { return }
+            layer.borderColor = uiColor.cgColor
+        }
+        get {
+            guard let color = layer.borderColor else { return nil }
+            return UIColor(cgColor: color)
+        }
+    }
+    
+    @IBInspectable var shadowColor: UIColor?{
+        set {
+            guard let uiColor = newValue else { return }
+            layer.shadowColor = uiColor.cgColor
+        }
+        get{
+            guard let color = layer.shadowColor else { return nil }
+            return UIColor(cgColor: color)
+        }
+    }
+    
+    @IBInspectable var shadowOpacity: Float{
+        set {
+            layer.shadowOpacity = newValue
+        }
+        get{
+            return layer.shadowOpacity
+        }
+    }
+    
+    @IBInspectable var shadowOffset: CGSize{
+        set {
+            layer.shadowOffset = newValue
+        }
+        get{
+            return layer.shadowOffset
+        }
+    }
+    
+    @IBInspectable var shadowRadius: CGFloat{
+        set {
+            layer.shadowRadius = newValue
+        }
+        get{
+            return layer.shadowRadius
+        }
+    }
+}
+
+
+// MARK: - UICollectionView
+@IBDesignable
+class MyCollectionView: UICollectionView {
+    
+    @IBInspectable var borderWidth: CGFloat {
+        set {
+            layer.borderWidth = newValue
+        }
+        get {
+            return layer.borderWidth
+        }
+    }
+    
+    @IBInspectable var cornerRadius: CGFloat {
+        set {
+            layer.cornerRadius = newValue
+        }
+        get {
+            return layer.cornerRadius
+        }
+    }
+    
+    @IBInspectable var borderColor: UIColor? {
+        set {
+            guard let uiColor = newValue else { return }
+            layer.borderColor = uiColor.cgColor
+        }
+        get {
+            guard let color = layer.borderColor else { return nil }
+            return UIColor(cgColor: color)
+        }
+    }
+    
+    @IBInspectable var shadowColor: UIColor?{
+        set {
+            guard let uiColor = newValue else { return }
+            layer.shadowColor = uiColor.cgColor
+        }
+        get{
+            guard let color = layer.shadowColor else { return nil }
+            return UIColor(cgColor: color)
+        }
+    }
+    
+    @IBInspectable var shadowOpacity: Float{
+        set {
+            layer.shadowOpacity = newValue
+        }
+        get{
+            return layer.shadowOpacity
+        }
+    }
+    
+    @IBInspectable var shadowOffset: CGSize{
+        set {
+            layer.shadowOffset = newValue
+        }
+        get{
+            return layer.shadowOffset
+        }
+    }
+    
+    @IBInspectable var shadowRadius: CGFloat{
+        set {
+            layer.shadowRadius = newValue
+        }
+        get{
+            return layer.shadowRadius
+        }
     }
 }
 

@@ -41,6 +41,7 @@ class Profile: UIViewController , MFMailComposeViewControllerDelegate {
     @IBOutlet weak var emailBtn: UIButton!
     @IBOutlet weak var employeeCardBtn: UIButton!
     @IBOutlet weak var stickerBtn: UIButton!
+    @IBOutlet weak var editProfileBtn: UIButton!
     
     @IBOutlet weak var statusTitle: UILabel!
     @IBOutlet weak var statusIcon: UIImageView!
@@ -63,6 +64,11 @@ class Profile: UIViewController , MFMailComposeViewControllerDelegate {
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        loadProfile()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -75,9 +81,12 @@ class Profile: UIViewController , MFMailComposeViewControllerDelegate {
             userBtn.setImage(UIImage(named: "profile_camera"), for: .normal)
             userBtn.isHidden = false
             //userBtn.imageView!.contentMode = .scaleAspectFit
+            
+            editProfileBtn.isHidden = true
         }
         else{
             employeeCardBtn.isHidden = true
+            editProfileBtn.isHidden = true
             userBtn.isHidden = true
         }
         
@@ -103,8 +112,6 @@ class Profile: UIViewController , MFMailComposeViewControllerDelegate {
         myTableView.tableFooterView = UIView(frame: CGRect(x: 0, y: 0, width: self.myTableView.frame.size.width, height: 1))
         
         warningView.isHidden = true
-        
-        loadProfile()
     }
     
     func loadProfile() {
@@ -113,7 +120,7 @@ class Profile: UIViewController , MFMailComposeViewControllerDelegate {
             switch result {
             case .failure(let error):
                 print(error)
-                ProgressHUD.dismiss()
+                //ProgressHUD.dismiss()
                 
             case .success(let responseObject):
                 let json = JSON(responseObject)
@@ -135,6 +142,10 @@ class Profile: UIViewController , MFMailComposeViewControllerDelegate {
         
         //self.userPosition.text = self.profileJSON!["designation_name"].stringValue
         userPosition.text = "\(profileJSON!["first_name"].stringValue) \(profileJSON!["last_name"].stringValue)"
+        
+        if whoMode == .Me && profileJSON!["editable"].count > 0 {
+            editProfileBtn.isHidden = false
+        }
         
         statusTitle.text = profileJSON!["empstatusdetail"].stringValue
         statusTitle.textColor = colorFromRGB(rgbString: profileJSON!["empstatuscolor"].stringValue)
@@ -237,6 +248,12 @@ class Profile: UIViewController , MFMailComposeViewControllerDelegate {
             else{
                 ProgressHUD.showError("STICKER_Reach_Max".localized())
             }
+            
+        case 5://Edit Profile
+            let vc = UIStoryboard.mainStoryBoard.instantiateViewController(withIdentifier: "EditProfile") as! EditProfile
+            vc.editJSON = profileJSON!["editable"]
+            self.navigationController!.pushViewController(vc, animated: true)
+            
         default:
             break
         }
@@ -271,7 +288,7 @@ class Profile: UIViewController , MFMailComposeViewControllerDelegate {
             switch result {
             case .failure(let error):
                 print(error)
-                ProgressHUD.dismiss()
+                //ProgressHUD.dismiss()
 
             case .success(let responseObject):
                 let json = JSON(responseObject)
@@ -345,8 +362,8 @@ extension Profile: UITableViewDataSource {
             cell.profileDetail.text = self.profileJSON!["headname"].stringValue
         case 3:
             cell.profileTitle.text = "PROFILE_Title_Hire".localized()
-            let hireDate = dateFromServerString(dateStr: self.profileJSON!["date_of_joining"].stringValue)
-            cell.profileDetail.text = appStringFromDate(date: hireDate!, format: "d MMMM yyyy")
+            let hireDate = appDateFromServerString(dateStr: self.profileJSON!["date_of_joining"].stringValue)
+            cell.profileDetail.text = appStringFromDate(date: hireDate!, format: DateFormatter.appDateFormatStr)
         case 4:
             cell.profileTitle.text = "PROFILE_Title_Email".localized()
             cell.profileDetail.text = self.profileJSON!["email"].stringValue

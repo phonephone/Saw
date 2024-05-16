@@ -129,7 +129,7 @@ class OTManual: UIViewController, UITextFieldDelegate, UITextViewDelegate {
             switch result {
             case .failure(let error):
                 print(error)
-                ProgressHUD.dismiss()
+                //ProgressHUD.dismiss()
                 
             case .success(let responseObject):
                 let json = JSON(responseObject)
@@ -198,7 +198,7 @@ class OTManual: UIViewController, UITextFieldDelegate, UITextViewDelegate {
     }
     
     @objc func datePickerChanged(picker: UIDatePicker) {
-        let selectDate = appStringFromDate(date: picker.date, format: "dd MMM yyyy HH:mm")
+        let selectDate = appStringFromDate(date: picker.date, format: DateFormatter.appDateWithTimeFormatStr)
         var endDate = picker.date.addingTimeInterval(TimeInterval(1.0))//Add day diff 1 second
         
         if picker == startPicker {
@@ -210,7 +210,7 @@ class OTManual: UIViewController, UITextFieldDelegate, UITextViewDelegate {
                 endDate = startPicker.date.addingTimeInterval(TimeInterval(addTime))
             }
             
-            let selectEndDate = appStringFromDate(date: endDate, format: "dd MMM yyyy HH:mm")
+            let selectEndDate = appStringFromDate(date: endDate, format: DateFormatter.appDateWithTimeFormatStr)
             endField.text = selectEndDate
             endIcon.setImage(UIImage(named: "form_date_on"), for: .normal)
             endPicker.date = endDate
@@ -309,7 +309,7 @@ class OTManual: UIViewController, UITextFieldDelegate, UITextViewDelegate {
             switch result {
             case .failure(let error):
                 print(error)
-                ProgressHUD.dismiss()
+                //ProgressHUD.dismiss()
 
             case .success(let responseObject):
                 let json = JSON(responseObject)

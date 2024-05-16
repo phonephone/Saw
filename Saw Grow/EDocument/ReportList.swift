@@ -84,8 +84,7 @@ class ReportList: UIViewController, UITextFieldDelegate {
     }
     
     func loadReport(monthYear:Date) {
-        let monthYearStr = appStringFromDate(date: monthYear, format: "yyyy-MM")
-        
+        let monthYearStr = monthAndYearToServerString(date: monthYear)
         let parameters:Parameters = ["group":"attendance",
                                      "ym":monthYearStr
         ]
@@ -93,7 +92,7 @@ class ReportList: UIViewController, UITextFieldDelegate {
             switch result {
             case .failure(let error):
                 print(error)
-                ProgressHUD.dismiss()
+                //ProgressHUD.dismiss()
                 
             case .success(let responseObject):
                 let json = JSON(responseObject)
@@ -109,8 +108,8 @@ class ReportList: UIViewController, UITextFieldDelegate {
     
     @objc func myDateChanged(notification:Notification){
         let userInfo = notification.userInfo
-        mySelectedDate = appDateFromString(dateStr: (userInfo?["date"]) as! String, format: "yyyy-MM-dd")!
-        monthYearField.text = appStringFromDate(date: mySelectedDate, format: "MMMM yyyy")
+        mySelectedDate = appDateFromServerString(dateStr: (userInfo?["date"]) as! String)!
+        monthYearField.text = appStringFromDate(date: mySelectedDate, format: DateFormatter.appMonthYearFormatStr)
         monthYearIcon.setImage(UIImage(named: "form_date_on"), for: .normal)
         loadReport(monthYear: mySelectedDate)
     }

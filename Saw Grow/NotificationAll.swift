@@ -55,7 +55,7 @@ class NotificationAll: UIViewController {
             switch result {
             case .failure(let error):
                 print(error)
-                ProgressHUD.dismiss()
+                //ProgressHUD.dismiss()
                 
             case .success(let responseObject):
                 let json = JSON(responseObject)
@@ -206,7 +206,7 @@ extension NotificationAll: UICollectionViewDelegate {
             switch result {
             case .failure(let error):
                 print(error)
-                ProgressHUD.dismiss()
+                //ProgressHUD.dismiss()
 
             case .success(let responseObject):
                 let json = JSON(responseObject)
@@ -222,7 +222,7 @@ extension NotificationAll: UICollectionViewDelegate {
                     switch header {
                     case "holiday":
                         let vc = self.tabBarController?.viewControllers![3] as! CalendarList
-                        vc.goToDate = self.appDateFromString(dateStr: date, format: "yyyy-MM-dd")
+                        vc.goToDate = self.appDateFromServerString(dateStr: date)
                         self.tabBarController?.selectedIndex = 3
                         
                     case "leave" :

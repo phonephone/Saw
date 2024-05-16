@@ -88,7 +88,7 @@ class LeaveDetail: UIViewController {
             switch result {
             case .failure(let error):
                 print(error)
-                ProgressHUD.dismiss()
+                //ProgressHUD.dismiss()
 
             case .success(let responseObject):
                 let json = JSON(responseObject)
@@ -107,7 +107,7 @@ class LeaveDetail: UIViewController {
             switch result {
             case .failure(let error):
                 print(error)
-                ProgressHUD.dismiss()
+                //ProgressHUD.dismiss()
 
             case .success(let responseObject):
                 let json = JSON(responseObject)
@@ -729,7 +729,7 @@ extension LeaveDetail: UITableViewDelegate {
             switch result {
             case .failure(let error):
                 print(error)
-                ProgressHUD.dismiss()
+                //ProgressHUD.dismiss()
 
             case .success(let responseObject):
                 let json = JSON(responseObject)

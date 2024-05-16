@@ -66,11 +66,10 @@ class Approve: UIViewController {
     }
     
     @IBAction func segmentClick(_ sender: UIButton) {
+        requestBtn.segmentOff()
+        historyBtn.segmentOff()
         
-        clearSegmentBtn(button: requestBtn)
-        clearSegmentBtn(button: historyBtn)
-        
-        setSegmentBtn(button: sender)
+        sender.segmentOn()
         
         switch sender.tag {
         case 1:
@@ -102,16 +101,6 @@ class Approve: UIViewController {
             vc.approveType = approveType
             embed(vc, inView: bottomView)
         }
-    }
-    
-    func setSegmentBtn(button: UIButton) {
-        button.backgroundColor = .themeColor
-        button.setTitleColor(UIColor.white, for: .normal)
-    }
-    
-    func clearSegmentBtn(button: UIButton) {
-        button.backgroundColor = UIColor.clear
-        button.setTitleColor(.textDarkGray, for: .normal)
     }
     
     @IBAction func back(_ sender: UIButton) {

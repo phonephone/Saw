@@ -131,17 +131,11 @@ class ProbationResult: UIViewController, UITextFieldDelegate, UITextViewDelegate
     
     func setSegmentBtn(button: UIButton) {
         if button.tag == 0 {//FAIL
-            button.backgroundColor = .buttonRed
+            button.segmentOn(color: .buttonRed)
         }
         if button.tag == 1 {//PASS
-            button.backgroundColor = .buttonGreen
+            button.segmentOn(color: .buttonGreen)
         }
-        button.setTitleColor(UIColor.white, for: .normal)
-    }
-    
-    func clearSegmentBtn(button: UIButton) {
-        button.backgroundColor = .buttonDisable
-        button.setTitleColor(.textDarkGray, for: .normal)
     }
     
     func textViewShouldBeginEditing(_ textView: UITextView) -> Bool {
@@ -184,8 +178,8 @@ class ProbationResult: UIViewController, UITextFieldDelegate, UITextViewDelegate
         selectedPass = ""
         selectedTypeID = ""
         
-        clearSegmentBtn(button: failBtn)
-        clearSegmentBtn(button: passBtn)
+        failBtn.segmentOff()
+        passBtn.segmentOff()
         
         typeField.text = ""
         //typeIcon.setImage(UIImage(named: "form_warning"), for: .normal)
@@ -243,7 +237,7 @@ class ProbationResult: UIViewController, UITextFieldDelegate, UITextViewDelegate
             switch result {
             case .failure(let error):
                 print(error)
-                ProgressHUD.dismiss()
+                //ProgressHUD.dismiss()
 
             case .success(let responseObject):
                 let json = JSON(responseObject)

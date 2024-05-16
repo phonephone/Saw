@@ -77,7 +77,7 @@ class EDocReimburse: UIViewController, UITextFieldDelegate, UITextViewDelegate {
             switch result {
             case .failure(let error):
                 print(error)
-                ProgressHUD.dismiss()
+                //ProgressHUD.dismiss()
                 
             case .success(let responseObject):
                 let json = JSON(responseObject)
@@ -142,7 +142,7 @@ class EDocReimburse: UIViewController, UITextFieldDelegate, UITextViewDelegate {
     }
     
     @objc func datePickerChanged(picker: UIDatePicker) {
-        let selectDate = appStringFromDate(date: picker.date, format: "dd MMM yyyy")
+        let selectDate = appStringFromDate(date: picker.date, format: DateFormatter.appDateFormatStr)
         
         if picker == startPicker {
             startField.text = selectDate
@@ -257,7 +257,7 @@ class EDocReimburse: UIViewController, UITextFieldDelegate, UITextViewDelegate {
             switch result {
             case .failure(let error):
                 print(error)
-                ProgressHUD.dismiss()
+                //ProgressHUD.dismiss()
 
             case .success(let responseObject):
                 let json = JSON(responseObject)

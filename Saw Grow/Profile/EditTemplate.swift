@@ -8,10 +8,16 @@
 import Foundation
 import UIKit
 
-class EditTextField: UIView {
+enum templateType {
+   case textField
+   case switchOnOff
+}
+
+class EditTemplate: UIView {
     
     @IBOutlet weak var editTitle: UILabel!
-    @IBOutlet weak var editTextField: UILabel!
+    @IBOutlet weak var editTextField: UITextField!
+    @IBOutlet weak var editSwitch: UISwitch!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -23,38 +29,24 @@ class EditTextField: UIView {
         //commonInit()
     }
     
-    func commonInit(withTemplate:Int, withTextColor:UIColor){
+    func commonInit(template:templateType){
+        let view = loadViewFromNib(withTemplate: template)
+        view.frame = self.bounds
+        view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        addSubview(view)
+    }
+    
+    func loadViewFromNib(withTemplate:templateType) -> UIView {
         var viewFromXib = UIView()
         
         switch withTemplate {
-        case 1:
-            viewFromXib = Bundle.main.loadNibNamed("ShareTemplate", owner: self, options: nil)![0] as! UIView
+        case .textField:
+            viewFromXib = Bundle.main.loadNibNamed("EditTextField", owner: self, options: nil)![0] as! UIView
             
-        case 2:
-            viewFromXib = Bundle.main.loadNibNamed("ShareTemplate2", owner: self, options: nil)![0] as! UIView
-            
-        default:
-            viewFromXib = Bundle.main.loadNibNamed("ShareTemplate", owner: self, options: nil)![0] as! UIView
+        case .switchOnOff:
+            viewFromXib = Bundle.main.loadNibNamed("EditSwitch", owner: self, options: nil)![0] as! UIView
         }
-        
-        dateLabel.textColor = withTextColor
-        
-        timeTitle.textColor = withTextColor
-        timeIcon.setImageColor(color: withTextColor)
-        timeLabel.textColor = withTextColor
-        
-        distanceTitle.textColor = withTextColor
-        distanceLabel.textColor = withTextColor
-        distanceSuffix.textColor = withTextColor
-        
-        calorieTitle.textColor = withTextColor
-        calorieIcon.setImageColor(color: withTextColor)
-        calorieLabel.textColor = withTextColor
-        
-//        let viewFromXib = Bundle.main.loadNibNamed("ShareTemplate", owner: self, options: nil)![0] as! UIView
-        viewFromXib.frame = self.bounds
-        
-        addSubview(viewFromXib)
+        return viewFromXib
     }
 }
 

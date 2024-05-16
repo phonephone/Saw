@@ -84,7 +84,7 @@ class DirectoryList: UIViewController, UITextFieldDelegate, MFMailComposeViewCon
         searchField.addTarget(self, action: #selector(self.textFieldDidChange(_:)),
                                   for: .editingChanged)
         
-        setSegmentBtn(button: btnAtoZ)
+        btnAtoZ.segmentOn()
     }
     
     func loadDirectory() {
@@ -192,17 +192,17 @@ class DirectoryList: UIViewController, UITextFieldDelegate, MFMailComposeViewCon
         
         switch sender {
         case btnAtoZ:
-            setSegmentBtn(button: sender)
+            sender.segmentOn()
             mode = .AtoZ
             loadDirectory()
             
         case btnFavorite:
-            setSegmentBtn(button: sender)
+            sender.segmentOn()
             mode = .Favorite
             loadDirectory()
             
         case btnMyTeam:
-            setSegmentBtn(button: sender)
+            sender.segmentOn()
             mode = .Myteam
             loadDirectory()
         
@@ -221,15 +221,9 @@ class DirectoryList: UIViewController, UITextFieldDelegate, MFMailComposeViewCon
         }
     }
     
-    func setSegmentBtn(button: UIButton) {
-        button.backgroundColor = UIColor.themeColor
-        button.setTitleColor(UIColor.white, for: .normal)
-    }
-    
     func clearSegmentBtn(button: UIButton) {
         if button.tag == 1 {
-            button.backgroundColor = UIColor.clear
-            button.setTitleColor(.textDarkGray, for: .normal)
+            button.segmentOff()
         }
         else if button.tag == 2 {
             btnList.setImage(UIImage(named: "directory_list_off"), for: .normal)
@@ -596,7 +590,7 @@ extension DirectoryList: UICollectionViewDelegate {
             switch result {
             case .failure(let error):
                 print(error)
-                ProgressHUD.dismiss()
+                //ProgressHUD.dismiss()
                 
             case .success(let responseObject):
                 let json = JSON(responseObject)

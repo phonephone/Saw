@@ -56,6 +56,8 @@ extension UIStoryboard  {
     static let rewardStoryBoard = UIStoryboard(name: "Reward", bundle: nil)
     static let eDocumentStoryBoard = UIStoryboard(name: "EDocument", bundle: nil)
     static let settingStoryBoard = UIStoryboard(name: "Setting", bundle: nil)
+    static let alertStoryBoard = UIStoryboard(name: "Alert", bundle: nil)
+    static let moodStoryBoard = UIStoryboard(name: "Mood", bundle: nil)
 }
 
 extension Bundle {
@@ -193,7 +195,7 @@ extension UIViewController {
             switch result {
             case .failure(let error):
                 print(error)
-                ProgressHUD.dismiss()
+                //ProgressHUD.dismiss()
                 
             case .success(let responseObject):
                 let json = JSON(responseObject)
@@ -383,6 +385,7 @@ extension UIViewController {
                 
             case .failure(let error):
                 completion(.failure(error))
+                ProgressHUD.showError("Connection_Error".localized())
                 
             default:
                 fatalError("received non-dictionary JSON response")
@@ -401,7 +404,7 @@ extension UIViewController {
     }
     
     func blurViewSetup() -> UIVisualEffectView{
-        let blurEffect = UIBlurEffect(style: .systemThinMaterialDark)
+        let blurEffect = UIBlurEffect(style: .prominent)
         let blurView = UIVisualEffectView (effect: blurEffect)
         blurView.bounds = self.view.bounds
         blurView.center = self.view.center
@@ -467,13 +470,6 @@ extension UIViewController {
         return color
     }
     
-    func dateFromServerString(dateStr:String) -> Date? {
-        if let dtDate = DateFormatter.serverFormatter.date(from: dateStr){
-            return dtDate as Date?
-        }
-        return nil
-    }
-    
     func dateToServerString(date:Date) -> String{
         let strdt = DateFormatter.serverFormatter.string(from: date)
         if let dtDate = DateFormatter.serverFormatter.date(from: strdt){
@@ -490,7 +486,22 @@ extension UIViewController {
         return "-"
     }
     
-    func appDateFromString(dateStr:String, format:String) -> Date?{
+    func monthAndYearToServerString(date:Date) -> String{
+        let strdt = DateFormatter.serverFormatterMonthYear.string(from: date)
+        if let dtDate = DateFormatter.serverFormatterMonthYear.date(from: strdt){
+            return DateFormatter.serverFormatterMonthYear.string(from: dtDate)
+        }
+        return "-"
+    }
+    
+    func appDateFromServerString(dateStr:String) -> Date? {
+        if let dtDate = DateFormatter.serverFormatter.date(from: dateStr){
+            return dtDate as Date?
+        }
+        return nil
+    }
+    
+    func appDateFromString(dateStr:String, format:String) -> Date?{//Case for HH:mm
         let dateFormatter:DateFormatter = DateFormatter.customFormatter
         dateFormatter.locale = Locale(identifier: "Formatter_Locale".localized())//Locale(identifier: "en_US_POSIX")
         dateFormatter.dateFormat = format
@@ -555,6 +566,12 @@ extension UIView {
     
     func setGradientBackground(colorTop: UIColor? = nil, colorBottom: UIColor? = nil, mainPage: Bool? = false){
         
+        for sublayer in self.layer.sublayers! {
+            if sublayer.name == "GRADIENT" {
+                sublayer.removeFromSuperlayer()
+            }
+        }
+        
         let gradientLayer = CAGradientLayer()
         
         if colorTop != nil && colorBottom != nil {
@@ -575,8 +592,24 @@ extension UIView {
         gradientLayer.endPoint = CGPoint(x: 0.5, y: 0.0)
         gradientLayer.locations = [NSNumber(floatLiteral: 0.0), NSNumber(floatLiteral: 1.0)]
         gradientLayer.frame = self.bounds
-
+        gradientLayer.name = "GRADIENT"
+        
         self.layer.insertSublayer(gradientLayer, at: 0)
+    }
+    
+    func asImage() -> UIImage {
+        if #available(iOS 10.0, *) {
+            let renderer = UIGraphicsImageRenderer(bounds: bounds)
+            return renderer.image { rendererContext in
+                layer.render(in: rendererContext.cgContext)
+            }
+        } else {
+            UIGraphicsBeginImageContext(self.frame.size)
+            self.layer.render(in:UIGraphicsGetCurrentContext()!)
+            let image = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
+            return UIImage(cgImage: image!.cgImage!)
+        }
     }
 }
 
@@ -646,6 +679,16 @@ extension UIButton {
         backgroundColor = UIColor.themeColor
         setTitleColor(.white, for: .normal)
     }
+    
+    func segmentOn(color:UIColor? = .themeColor ) {
+        backgroundColor = color
+        setTitleColor(UIColor.white, for: .normal)
+    }
+    
+    func segmentOff() {
+        backgroundColor = UIColor.clear
+        setTitleColor(.textDarkGray, for: .normal)
+    }
 }
 
 
@@ -709,6 +752,10 @@ extension DateFormatter {
     //        return formatter
     //    }()
     
+    static let appDateFormatStr: String = "d MMM yyyy"
+    static let appDateWithTimeFormatStr: String = "dd MMM yyyy HH:mm"
+    static let appMonthYearFormatStr: String = "MMMM yyyy"
+    
     static let serverFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd"
@@ -720,6 +767,14 @@ extension DateFormatter {
     static let serverFormatterWithTime: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd HH:mm"
+        formatter.locale = Locale(identifier: "en_US_POSIX")//Locale(identifier: "en_US_POSIX")
+        formatter.calendar = Calendar(identifier: .gregorian)
+        return formatter
+    }()
+    
+    static let serverFormatterMonthYear: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM"
         formatter.locale = Locale(identifier: "en_US_POSIX")//Locale(identifier: "en_US_POSIX")
         formatter.calendar = Calendar(identifier: .gregorian)
         return formatter

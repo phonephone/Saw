@@ -34,6 +34,8 @@
 "Receive_Date" = "Receive Date";
 "MonthYear_Field" = "Select Month,Year";
 "Search_Field" = "Search contacts";
+"Comment_Field" = "Write something...";
+"Connection_Error" = "Connection Error";
 
 ////////////////////////////////////////////////////////////////////////////////////
 
@@ -45,6 +47,7 @@
 "LOGIN_Password_Title" = "Password";
 "LOGIN_Password_Field" = "Password";
 "LOGIN_ForgetPassword_Button" = "Forget Password ?";
+"LOGIN_Register_Button" = "Register";
 "LOGIN_SignIn_Button" = "Sign In";
 
 //RESET PASSWORD
@@ -94,6 +97,7 @@
 "PROFILE_Email_Button" = "  Email";
 "PROFILE_EmpCard_Button" = "  Employee Card";
 "PROFILE_SendSticker_Button" = "  Send Sticker";
+"PROFILE_Edit_Button" = "  Edit Profile";
 "PROFILE_Status" = "Status";
 "PROFILE_Warning" = "Warning";
 "PROFILE_Title_Header" = "Profile Information";
@@ -103,6 +107,7 @@
 "PROFILE_Title_Hire" = "Hire";
 "PROFILE_Title_Email" = "Email";
 "PROFILE_Title_Phone" = "Phone Number";
+"PROFILE_Edit_Confirm" = "Confirm edit personal information";
 
 //HOME TAB
 "HOME_Mood_Ask" = "How are you feeling today ?";
@@ -119,6 +124,7 @@
 "HOME_Location_Allow" = "Please allow location service to use this feature";
 "HOME_Location_Disable" = "Location services are disable";
 "HOME_Location_Check" = "Please check your device privacy settings";
+"HOME_Admin_Setting" = "Set usage information";
 
 //CALENDAR TAB
 "CALENDAR_Language" = "en_US";
@@ -168,9 +174,13 @@
 "LEAVE_Type_Field" = "Leave Type";
 "LEAVE_Start_Date" = "Start Date";
 "LEAVE_End_Date" = "End Date";
-"LEAVE_Full_Date" = "Full-Date";
+"LEAVE_Start_Time" = "Start Time";
+"LEAVE_End_Time" = "End Time";
+"LEAVE_Full_Date" = "Full-Day";
+"LEAVE_Half_Date" = "Half-Day";
 "LEAVE_Half_Date1" = "1st Half";
 "LEAVE_Half_Date2" = "2nd Half";
+"LEAVE_Hour" = "Hours";
 "LEAVE_Reason" = "Reason";
 "LEAVE_Head" = "Head of Department";
 "LEAVE_Submit_Button" = "Submit Request";

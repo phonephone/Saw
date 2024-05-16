@@ -22,6 +22,7 @@ class Home: UIViewController, OverlayContainerViewControllerDelegate, UIScrollVi
     var categoryJSON:JSON?
     var annoucementJSON:JSON?
     var recommendJSON:JSON?
+    var moodJSON:JSON?
     
     var announcementTimer: Timer?
     var announcementIndex: Int = 0
@@ -65,20 +66,6 @@ class Home: UIViewController, OverlayContainerViewControllerDelegate, UIScrollVi
     @IBOutlet weak var announcementCollectionView: UICollectionView!
     @IBOutlet weak var recommendCollectionView: UICollectionView!
     
-    var feelingView: UIView!
-    @IBOutlet var feelingView1: UIView!
-    @IBOutlet var feelingView2: UIView!
-    @IBOutlet var feelingView3: UIView!
-    @IBOutlet var feelingBtn1: [UIButton]!
-    @IBOutlet var feelingBtn2: [UIButton]!
-    @IBOutlet var feelingBtn3: [UIButton]!
-    @IBOutlet var feelingBtn4: [UIButton]!
-    
-    @IBOutlet var feelingTitle1: [UILabel]!
-    @IBOutlet var feelingTitle2: [UILabel]!
-    @IBOutlet var feelingTitle3: [UILabel]!
-    @IBOutlet var feelingTitle4: [UILabel]!
-    
     @IBOutlet var popupView: UIView!
     @IBOutlet weak var popupPic: UIImageView!
     @IBOutlet weak var popupTitle: UILabel!
@@ -109,8 +96,11 @@ class Home: UIViewController, OverlayContainerViewControllerDelegate, UIScrollVi
             //self.tabBarController?.setStatusBarColor(backgroundColor: .red)
             self.tabBarController?.setStatusBarColor()
             self.tabBarController?.tabBar.tintColor = UIColor.customThemeColor()
-            headerView.setGradientBackground(mainPage: true)
-
+            
+            DispatchQueue.main.async {
+                self.headerView.setGradientBackground(mainPage: true)
+            }
+            
             ProgressHUD.colorAnimation = UIColor.customThemeColor()
             ProgressHUD.colorStatus = UIColor.customThemeColor()
 
@@ -149,28 +139,6 @@ class Home: UIViewController, OverlayContainerViewControllerDelegate, UIScrollVi
         //self.announcementCollectionView.register(AnnouncementCell.nib, forCellReuseIdentifier: announcementCell.identifier)
         
         blurView = blurViewSetup()
-        //        let feelingWidth = self.view.bounds.width*0.9
-        //        let feelingHeight = feelingWidth*0.5
-        //feelingView.frame = CGRect(x: (self.view.bounds.width-feelingWidth)/2, y: qiuckActionView.frame.origin.y, width: feelingWidth, height: feelingHeight)
-        //feelingView.center = qiuckActionView.center
-        
-        let randomInt = Int.random(in: 0...2)
-        switch randomInt {
-        case 0:
-            feelingView = feelingView1
-            feelingView.frame = CGRect(x: 0, y: 180, width: 388, height: 190)
-        case 1:
-            feelingView = feelingView2
-            feelingView.frame = CGRect(x: 0, y: 0, width: 300, height: 512)
-            feelingView.center.y = self.view.center.y
-        case 2:
-            feelingView = feelingView3
-            feelingView.frame = CGRect(x: 0, y: 180, width: 300, height: 308)
-            
-        default:
-            break
-        }
-        feelingView.center.x = self.view.center.x
         
         let popupWidth = self.view.bounds.width*0.9
         let popupHeight = popupWidth*1.4
@@ -212,7 +180,7 @@ class Home: UIViewController, OverlayContainerViewControllerDelegate, UIScrollVi
             switch result {
             case .failure(let error):
                 print(error)
-                ProgressHUD.dismiss()
+                //ProgressHUD.dismiss()
                 
             case .success(let responseObject):
                 let json = JSON(responseObject)
@@ -247,6 +215,9 @@ class Home: UIViewController, OverlayContainerViewControllerDelegate, UIScrollVi
                     if theme[0]["background_image"].stringValue != "" {
                         self.headerImage.sd_setImage(with: URL(string:theme[0]["background_image"].stringValue), placeholderImage: nil)
                     }
+                    else {
+                        self.headerImage.image = nil
+                    }
                     setColor = true
                 }
                 
@@ -263,24 +234,6 @@ class Home: UIViewController, OverlayContainerViewControllerDelegate, UIScrollVi
                     self.tabBarController!.tabBar.items!.last!.badgeValue = badgeNo
                 }
                 self.tabBarController!.tabBar.items!.last!.badgeColor = UIColor.customThemeColor()
-                
-                self.showMood = false
-                if json["data"][0]["todaymood"] == "" {
-                    showMood = true
-                }
-                
-                if json["data"][0]["ispopup"].stringValue != popupShown {
-                    self.popupPic.sd_setImage(with: URL(string:json["data"][0]["popup"][0]["image_url"].stringValue), placeholderImage: nil)
-                    self.popupTitle.text = json["data"][0]["popup"][0]["title"].stringValue
-                    self.popupDescription.text = json["data"][0]["popup"][0]["detail"].stringValue
-                    self.popIn(popupView: self.blurView)
-                    self.popIn(popupView: self.popupView)
-                    popupShown = json["data"][0]["ispopup"].stringValue
-                }
-                else if showMood {
-                    self.popIn(popupView: self.blurView)
-                    self.popIn(popupView: self.feelingView)
-                }
                 
                 self.quickMenuJSON = json["data"][0]["quickmenu"]
                 quickBtn1.sd_setImage(with: URL(string: self.quickMenuJSON![0]["menu_image_url"].stringValue), for: .normal, placeholderImage: UIImage(named: "logo_circle"))
@@ -337,89 +290,51 @@ class Home: UIViewController, OverlayContainerViewControllerDelegate, UIScrollVi
                 
                 self.view.bringSubviewToFront(announcementPageControl)
                 
+                self.showMood = false
+                if json["data"][0]["todaymood"] == "" {
+                    moodJSON = json["data"][0]["mood"]
+                    showMood = true
+                }
+                
                 if json["data"][0]["privacy_policy_accept"] == "0" {
                     let vc = UIStoryboard.loginStoryBoard.instantiateViewController(withIdentifier: "PrivacyPolicy") as! PrivacyPolicy
                     vc.agreementShow = true
                     self.navigationController!.pushViewController(vc, animated: true)
                 }
+                else if json["data"][0]["flag_complete_setting"] == "0" {
+                    let vc = UIStoryboard.mainStoryBoard.instantiateViewController(withIdentifier: "Web") as! Web
+                    vc.titleString = "HOME_Admin_Setting".localized()
+                    vc.webUrlString = json["data"][0]["complete_setting_url"].stringValue
+                    self.navigationController!.pushViewController(vc, animated: true)
+                }
+                else if json["data"][0]["ispopup"].stringValue != popupShown {
+                    self.popupPic.sd_setImage(with: URL(string:json["data"][0]["popup"][0]["image_url"].stringValue), placeholderImage: nil)
+                    self.popupTitle.text = json["data"][0]["popup"][0]["title"].stringValue
+                    self.popupDescription.text = json["data"][0]["popup"][0]["detail"].stringValue
+                    self.popIn(popupView: self.blurView)
+                    self.popIn(popupView: self.popupView)
+                    popupShown = json["data"][0]["ispopup"].stringValue
+                }
+                else if showMood {
+                    self.popIn(popupView: self.blurView)
+                    self.showMoodView()
+                }
             }
         }
     }
     
-    @IBAction func feelingClick(_ sender: UIButton) {
-        clearFeeling()
-        
-        switch sender.tag {
-        case 1:
-            setFeelingBorder(button: feelingBtn1 ,title: feelingTitle1)
-            submitMood(moodID: "1")
-        case 2:
-            setFeelingBorder(button: feelingBtn2 ,title: feelingTitle2)
-            submitMood(moodID: "2")
-        case 3:
-            setFeelingBorder(button: feelingBtn3 ,title: feelingTitle3)
-            submitMood(moodID: "3")
-        case 4:
-            setFeelingBorder(button: feelingBtn4 ,title: feelingTitle4)
-            submitMood(moodID: "4")
-        default:
-            break
+    func showMoodView() {
+        let alertService = AlertService()
+        let alertSlide = alertService.alertMood(moodJSON: moodJSON!) {
+            self.popOut(popupView: self.blurView)
         }
-    }
-    
-    func clearFeeling() {
-        clearFeelingBorder(button: feelingBtn1 ,title: feelingTitle1)
-        clearFeelingBorder(button: feelingBtn2 ,title: feelingTitle2)
-        clearFeelingBorder(button: feelingBtn3 ,title: feelingTitle3)
-        clearFeelingBorder(button: feelingBtn4 ,title: feelingTitle4)
-    }
-    
-    func setFeelingBorder(button: [UIButton], title: [UILabel]) {
-        for item in button {
-            item.layer.cornerRadius = item.frame.size.width/2
-            item.layer.borderColor = UIColor.textPointGold.cgColor
-            item.layer.borderWidth = 4
-        }
-        
-        for item in title {
-            item.textColor = .textPointGold
-        }
-    }
-    
-    func clearFeelingBorder(button: [UIButton], title: [UILabel]) {
-        for item in button {
-            item.layer.borderWidth = 0
-        }
-        
-        for item in title {
-            item.textColor = .textDarkGray
-        }
-    }
-    
-    func submitMood(moodID:String) {
-        print(moodID)
-        let parameters:Parameters = ["mood_id":moodID]
-        loadRequest(method:.post, apiName:"auth/setmoodlog", authorization:true, showLoadingHUD:true, dismissHUD:true, parameters: parameters){ result in
-            switch result {
-            case .failure(let error):
-                print(error)
-                ProgressHUD.dismiss()
-                
-            case .success(let responseObject):
-                let json = JSON(responseObject)
-                print("SUCCESS SETMOOD\(json)")
-                
-                self.popOut(popupView: self.blurView)
-                self.popOut(popupView: self.feelingView)
-                self.clearFeeling()
-            }
-        }
+        present(alertSlide, animated: true)
     }
     
     @IBAction func popupClose(_ sender: UIButton) {
         self.popOut(popupView: self.popupView)
         if showMood {
-            self.popIn(popupView: self.feelingView)
+            showMoodView()
         }
         else{
             self.popOut(popupView: self.blurView)
@@ -615,7 +530,7 @@ extension Home: UICollectionViewDelegateFlowLayout {
         //viewHeight*2.33
         
         if collectionView == categoryCollectionView {//Category
-            return CGSize(width: 72 , height: collectionView.frame.height)
+            return CGSize(width: 75 , height: (collectionView.frame.height-10)/2)
         }
         else if collectionView == announcementCollectionView {//Announcement
             return CGSize(width: viewWidth , height: viewHeight-8)
@@ -631,7 +546,7 @@ extension Home: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout,
                         insetForSectionAt section: Int) -> UIEdgeInsets {
         if collectionView == categoryCollectionView {//Category
-            return UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20) //.zero
+            return UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10) //.zero
         }
         else if collectionView == announcementCollectionView {//Announcement
             return UIEdgeInsets(top: 4, left: 20, bottom: 4, right: 20) //.zero
@@ -646,13 +561,13 @@ extension Home: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout,
                         minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
+        return 10
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout,
                         minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         if collectionView == categoryCollectionView {//Category
-            return 5
+            return 10
         }
         else if collectionView == announcementCollectionView {//Announcement
             return 10
@@ -749,7 +664,7 @@ extension Home: UICollectionViewDelegate {
     }
     
     @objc func autoScrollAnnouncement() {
-        print("auto")
+        //print("Auto scrolling")
         if announcementIndex < announcementCollectionView.numberOfItems(inSection: 0)-1 {
             announcementIndex += 1
         }

@@ -37,6 +37,8 @@ class CalendarList: UIViewController {
     let datesWithEvent = ["2022-03-03", "2022-03-05", "2022-03-07", "2022-03-09"]
     let datesWithMultipleEvents = ["2022-03-11", "2022-03-13", "2022-03-15", "2022-03-17"]
     
+    let shortMonthYearFormat = "MMM yyyy"
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -74,7 +76,7 @@ class CalendarList: UIViewController {
         mytableView.delegate = self
         mytableView.dataSource = self
         
-        monthLabel.text = appStringFromDate(date: Date(), format: "MMM yyyy")
+        monthLabel.text = appStringFromDate(date: Date(), format: shortMonthYearFormat)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -95,14 +97,14 @@ class CalendarList: UIViewController {
     func loadCalendar(monthYear:Date, scrollToDate:Bool) {
         
         firstTime = false
-        let monthYearStr = appStringFromDate(date: monthYear, format: "yyyy-MM")
+        let monthYearStr = monthAndYearToServerString(date: monthYear)
         let parameters:Parameters = ["ym":monthYearStr]
         
         loadRequest(method:.get, apiName:"attendance/gettimesheets", authorization:true, showLoadingHUD:true, dismissHUD:false, parameters: parameters){ result in
             switch result {
             case .failure(let error):
                 print(error)
-                ProgressHUD.dismiss()
+                //ProgressHUD.dismiss()
                 
             case .success(let responseObject):
                 let json = JSON(responseObject)
@@ -198,12 +200,6 @@ class CalendarList: UIViewController {
     @IBAction func leftMenuShow(_ sender: UIButton) {
         self.sideMenuController!.revealMenu()
     }
-    
-    fileprivate lazy var dateFormatter2: DateFormatter = {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd"
-        return formatter
-    }()
 }
 
 
@@ -249,7 +245,7 @@ extension CalendarList: FSCalendarDataSource {
     //    }
     
     func calendar(_ calendar: FSCalendar, numberOfEventsFor date: Date) -> Int {
-        let dateString = self.dateFormatter2.string(from: date)
+        let dateString = DateFormatter.serverFormatter.string(from: date)
         //print(dateString)
 //        if self.datesWithEvent.contains(dateString) {
 //                return 1
@@ -268,7 +264,7 @@ extension CalendarList: FSCalendarDataSource {
     }
 
     func calendar(_ calendar: FSCalendar, appearance: FSCalendarAppearance, eventDefaultColorsFor date: Date) -> [UIColor]? {
-        let dateString = self.dateFormatter2.string(from: date)
+        let dateString = DateFormatter.serverFormatter.string(from: date)
         if self.datesWithMultipleEvents.contains(dateString) {
             return [UIColor.magenta, appearance.eventDefaultColor, UIColor.black]
         }
@@ -284,7 +280,7 @@ extension CalendarList: FSCalendarDelegate {
         //        let month = Calendar.current.component(.month, from: calendar.currentPage)
         //        let year = Calendar.current.component(.year, from: calendar.currentPage)
         
-        monthLabel.text = appStringFromDate(date: calendar.currentPage, format: "MMM yyyy")
+        monthLabel.text = appStringFromDate(date: calendar.currentPage, format: shortMonthYearFormat)
         myCarlendar.select(calendar.currentPage)
     }
     
@@ -292,7 +288,7 @@ extension CalendarList: FSCalendarDelegate {
         
         calendar.setCurrentPage(date, animated: true)
         calendar.select(date)
-        //print(appStringFromDate(date: date, format: "dd MMM yyyy"))
+        //print(appStringFromDate(date: date, format: DateFormatter.appDateFormatStr))
         scrollToDate(date: date)
         
         //        let currentPageDate = calendar.currentPage
@@ -380,8 +376,8 @@ extension CalendarList: UITableViewDataSource {
         let dateArray = self.calendarJSON![indexPath.section]
         let cellArray = dateArray["event"][indexPath.row]
         
-        let dateSection = dateFromServerString(dateStr: dateArray["date"].stringValue)!
-        //let dateSection = dateFromServerString(dateStr: dateArray["date"].stringValue)!
+        let dateSection = appDateFromServerString(dateStr: dateArray["date"].stringValue)!
+        //let dateSection = appDateFromServerString(dateStr: dateArray["date"].stringValue)!
         let dateStr = appStringFromDate(date: dateSection, format: "dd")
         let weekDayStr = appStringFromDate(date: dateSection, format: "EE")
         

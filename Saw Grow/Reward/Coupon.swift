@@ -55,11 +55,11 @@ class Coupon: UIViewController {
     
     @IBAction func segmentClick(_ sender: UIButton) {
         self.view.endEditing(true)
-        clearSegmentBtn(button: validBtn)
-        clearSegmentBtn(button: usedBtn)
-        clearSegmentBtn(button: expiredBtn)
+        validBtn.segmentOff()
+        usedBtn.segmentOff()
+        expiredBtn.segmentOff()
         
-        setSegmentBtn(button: sender)
+        sender.segmentOn()
         
         switch sender.tag {
         case 1:
@@ -98,16 +98,6 @@ class Coupon: UIViewController {
             vc.couponTab = .expired
             embed(vc, inView: bottomView)
         }
-    }
-    
-    func setSegmentBtn(button: UIButton) {
-        button.backgroundColor = .themeColor
-        button.setTitleColor(UIColor.white, for: .normal)
-    }
-    
-    func clearSegmentBtn(button: UIButton) {
-        button.backgroundColor = UIColor.clear
-        button.setTitleColor(.textDarkGray, for: .normal)
     }
     
     @IBAction func back(_ sender: UIButton) {

@@ -14,7 +14,6 @@ class SideMenu: UIViewController {
     
     var profileJSON : JSON?
     var menuJSON:JSON?
-    var footerMenuJSON:JSON?
     
     var firstTime = true
     
@@ -121,7 +120,7 @@ class SideMenu: UIViewController {
             switch result {
             case .failure(let error):
                 print(error)
-                ProgressHUD.dismiss()
+                //ProgressHUD.dismiss()
 
             case .success(let responseObject):
                 let json = JSON(responseObject)
@@ -133,14 +132,9 @@ class SideMenu: UIViewController {
                 self.userName.text = json["data"][0]["company_name"].stringValue
 //                self.userPosition.text =  self.profileJSON!["designation_name"].stringValue
 //                self.userPoint.text = "\(json["data"][0]["point"].stringValue) Points"
-                
-                self.contactBtn.setTitle(json["data"][0]["footermenu"][0][self.menuNameKey()].stringValue, for: .normal)
-                self.helpBtn.setTitle(json["data"][0]["footermenu"][1][self.menuNameKey()].stringValue, for: .normal)
             
                 self.menuJSON = json["data"][0]["leftmenu"]
                 self.sideMenuTableView.reloadData()
-                
-                self.footerMenuJSON = json["data"][0]["footermenu"]
                 
                 self.deselectAll(self.sideMenuTableView)
                 self.selectDefaultMenu(rowNo:0)
@@ -157,20 +151,6 @@ class SideMenu: UIViewController {
             cell.menuImage.setImageColor(color: UIColor.customThemeColor())
             cell.menuTitle.textColor = UIColor.customThemeColor()
         }
-    }
-    
-    @IBAction func contactUsClick(_ sender: UIButton) {
-        let vc = UIStoryboard.mainStoryBoard.instantiateViewController(withIdentifier: "Web") as! Web
-        vc.titleString = contactBtn.titleLabel?.text//"Contact Us"
-        vc.webUrlString = footerMenuJSON![0]["link_url"].stringValue
-        self.navigationController!.pushViewController(vc, animated: true)
-    }
-    
-    @IBAction func helpClick(_ sender: UIButton) {
-        let vc = UIStoryboard.mainStoryBoard.instantiateViewController(withIdentifier: "Web") as! Web
-        vc.titleString = helpBtn.titleLabel?.text//"Help"
-        vc.webUrlString = footerMenuJSON![1]["link_url"].stringValue
-        self.navigationController!.pushViewController(vc, animated: true)
     }
     
 }//end ViewController
@@ -200,17 +180,19 @@ extension SideMenu: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: SideMenuCell.identifier, for: indexPath) as? SideMenuCell else { fatalError("xib doesn't exist") }
 
-        cell.menuImage.sd_setImage(with: URL(string:self.menuJSON![indexPath.row]["menu_image_url"].stringValue), placeholderImage: UIImage(named: "logo_circle"))
+        let cellArray = menuJSON![indexPath.row]
+        
+        cell.menuImage.sd_setImage(with: URL(string:cellArray["menu_image_url"].stringValue), placeholderImage: UIImage(named: "logo_circle"))
         //cell.menuImage.setImageColor(color: UIColor.customThemeColor())
         
-        cell.menuTitle.text = self.menuJSON![indexPath.row][menuNameKey()].stringValue
+        cell.menuTitle.text = cellArray[menuNameKey()].stringValue
         
         cell.menuAlert.layer.cornerRadius = cell.menuAlert.frame.size.height/2
         cell.menuAlert.layer.masksToBounds = true
         
-        if self.menuJSON![indexPath.row]["menu_key_id"].stringValue == "LEFT_HEAD_APPROVAL" {
+        if cellArray["menu_key_id"].stringValue == "LEFT_HEAD_APPROVAL" {
             cell.menuAlert.isHidden = false
-            cell.menuAlert.text = self.menuJSON![indexPath.row]["notification"].stringValue
+            cell.menuAlert.text = cellArray["notification"].stringValue
             
             if cell.menuAlert.text == "0" {
                 cell.menuAlert.isHidden = true
@@ -308,6 +290,20 @@ extension SideMenu: UITableViewDelegate {
         case "LEFT_PRIVACY_POLICY":
             let vc = UIStoryboard.loginStoryBoard.instantiateViewController(withIdentifier: "PrivacyPolicy") as! PrivacyPolicy
             vc.agreementShow = false
+            self.navigationController!.pushViewController(vc, animated: true)
+            deselectAll(self.sideMenuTableView)
+            
+        case "LEFT_G2_CONTRACT_US":
+            let vc = UIStoryboard.mainStoryBoard.instantiateViewController(withIdentifier: "Web") as! Web
+            vc.titleString = menuJSON![menuNo]["menu_name"].stringValue
+            vc.webUrlString = menuJSON![menuNo]["link_url"].stringValue
+            self.navigationController!.pushViewController(vc, animated: true)
+            deselectAll(self.sideMenuTableView)
+            
+        case "LEFT_G2_HELP":
+            let vc = UIStoryboard.mainStoryBoard.instantiateViewController(withIdentifier: "Web") as! Web
+            vc.titleString = menuJSON![menuNo]["menu_name"].stringValue
+            vc.webUrlString = menuJSON![menuNo]["link_url"].stringValue
             self.navigationController!.pushViewController(vc, animated: true)
             deselectAll(self.sideMenuTableView)
             

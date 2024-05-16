@@ -75,7 +75,7 @@ class CheckInMap: UIViewController {
             switch result {
             case .failure(let error):
                 print(error)
-                ProgressHUD.dismiss()
+                //ProgressHUD.dismiss()
                 
             case .success(let responseObject):
                 let json = JSON(responseObject)
@@ -117,24 +117,13 @@ class CheckInMap: UIViewController {
     }
     
     @IBAction func gpsClick(_ sender: UIButton) {
-        clearSegmentBtn(button: qrCodeBtn)
-        setSegmentBtn(button: gpsBtn)
-        
+        qrCodeBtn.segmentOff()
+        gpsBtn.segmentOn()
     }
     
     @IBAction func qrCodeClick(_ sender: UIButton) {
-        clearSegmentBtn(button: gpsBtn)
-        setSegmentBtn(button: qrCodeBtn)
-    }
-    
-    func setSegmentBtn(button: UIButton) {
-        button.backgroundColor = .themeColor
-        button.setTitleColor(UIColor.white, for: .normal)
-    }
-    
-    func clearSegmentBtn(button: UIButton) {
-        button.backgroundColor = UIColor.clear
-        button.setTitleColor(.textDarkGray, for: .normal)
+        gpsBtn.segmentOff()
+        qrCodeBtn.segmentOn()
     }
     
     @IBAction func back(_ sender: UIButton) {

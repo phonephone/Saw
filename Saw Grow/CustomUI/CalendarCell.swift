@@ -92,10 +92,11 @@ class CalendarCell_Mood: UITableViewCell {
     @IBOutlet var cellTimeLine: UIView!
     @IBOutlet var cellDot: UIView!
     
+    @IBOutlet var cellMoodBgView: UIView!
     @IBOutlet var cellMoodIcon: UIImageView!
     @IBOutlet var cellMoodTitle: UILabel!
     @IBOutlet var cellMoodAttach: UIButton!
-    @IBOutlet var cellMoodComment: UITextField!
+    @IBOutlet var cellMoodComment: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

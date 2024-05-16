@@ -75,8 +75,8 @@ class EDocRequest: UIViewController, UITextFieldDelegate {
     
     @objc func myDateChanged(notification:Notification){
         let userInfo = notification.userInfo
-        mySelectedDate = appDateFromString(dateStr: (userInfo?["date"]) as! String, format: "yyyy-MM-dd")!
-        monthYearField.text = appStringFromDate(date: mySelectedDate, format: "MMMM yyyy")
+        mySelectedDate = appDateFromServerString(dateStr: (userInfo?["date"]) as! String)!
+        monthYearField.text = appStringFromDate(date: mySelectedDate, format: DateFormatter.appMonthYearFormatStr)
         monthYearIcon.setImage(UIImage(named: "form_date_on"), for: .normal)
     }
     
@@ -162,7 +162,7 @@ class EDocRequest: UIViewController, UITextFieldDelegate {
             switch result {
             case .failure(let error):
                 print(error)
-                ProgressHUD.dismiss()
+                //ProgressHUD.dismiss()
 
             case .success(let responseObject):
                 let json = JSON(responseObject)

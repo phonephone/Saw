@@ -53,63 +53,78 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             }
 
             // MARK: - Bypass Login
-            let vc = UIStoryboard.mainStoryBoard.instantiateViewController(withIdentifier: "TabBar") as! TabBar
+            var bypassVC = UIViewController()
             
-            //let vc = UIStoryboard.mainStoryBoard.instantiateViewController(withIdentifier: "Reward") as! Reward
+            //bypassVC = UIStoryboard.mainStoryBoard.instantiateViewController(withIdentifier: "Reward") as! Reward
             
-            //let vc = UIStoryboard.rewardStoryBoard.instantiateViewController(withIdentifier: "Coupon") as! Coupon
+            //bypassVC = UIStoryboard.rewardStoryBoard.instantiateViewController(withIdentifier: "Coupon") as! Coupon
             
-            //let vc = UIStoryboard.attendanceStoryBoard.instantiateViewController(withIdentifier: "Leave") as! Leave
+            //bypassVC = UIStoryboard.attendanceStoryBoard.instantiateViewController(withIdentifier: "Leave") as! Leave
             
-            //let vc = UIStoryboard.attendanceStoryBoard.instantiateViewController(withIdentifier: "Attendance") as! Attendance
+            //bypassVC = UIStoryboard.attendanceStoryBoard.instantiateViewController(withIdentifier: "Attendance") as! Attendance
             
-            //let vc = UIStoryboard.attendanceStoryBoard.instantiateViewController(withIdentifier: "OT") as! OT
+            //bypassVC = UIStoryboard.attendanceStoryBoard.instantiateViewController(withIdentifier: "OT") as! OT
             
-            //let vc = UIStoryboard.attendanceStoryBoard.instantiateViewController(withIdentifier: "OTManual") as! OTManual
+            //bypassVC = UIStoryboard.attendanceStoryBoard.instantiateViewController(withIdentifier: "OTManual") as! OTManual
             
-            //let vc = UIStoryboard.attendanceStoryBoard.instantiateViewController(withIdentifier: "ApproveMenu") as! ApproveMenu
+            //bypassVC = UIStoryboard.attendanceStoryBoard.instantiateViewController(withIdentifier: "ApproveMenu") as! ApproveMenu
             
-            //let vc = UIStoryboard.loginStoryBoard.instantiateViewController(withIdentifier: "NewPasscode") as! NewPasscode
+            //bypassVC = UIStoryboard.loginStoryBoard.instantiateViewController(withIdentifier: "NewPasscode") as! NewPasscode
             
-            //let vc = UIStoryboard.loginStoryBoard.instantiateViewController(withIdentifier: "Tutorial") as! Tutorial
-            //vc.mode = .later
+            //bypassVC = UIStoryboard.loginStoryBoard.instantiateViewController(withIdentifier: "Tutorial") as! Tutorial
+            //bypassVC.mode = .later
             
-            //let vc = UIStoryboard.eDocumentStoryBoard.instantiateViewController(withIdentifier: "ReportMenu") as! ReportMenu
+            //bypassVC = UIStoryboard.eDocumentStoryBoard.instantiateViewController(withIdentifier: "ReportMenu") as! ReportMenu
             
-            //let vc = UIStoryboard.eDocumentStoryBoard.instantiateViewController(withIdentifier: "EDocMenu") as! EDocMenu
+            //bypassVC = UIStoryboard.eDocumentStoryBoard.instantiateViewController(withIdentifier: "EDocMenu") as! EDocMenu
             
-//            let vc = UIStoryboard.eDocumentStoryBoard.instantiateViewController(withIdentifier: "EDoc") as! EDoc
+//            bypassVC = UIStoryboard.eDocumentStoryBoard.instantiateViewController(withIdentifier: "EDoc") as! EDoc
 //            vc.edocType = .probation
             
-//            let vc = UIStoryboard.eDocumentStoryBoard.instantiateViewController(withIdentifier: "EDocDetail") as! EDocDetail
+//            bypassVC = UIStoryboard.eDocumentStoryBoard.instantiateViewController(withIdentifier: "EDocDetail") as! EDocDetail
 //            vc.edocType = .salary_cert
 //            vc.detailID = "695"
             
-            //let vc = UIStoryboard.eDocumentStoryBoard.instantiateViewController(withIdentifier: "EDocWeb") as! EDocWeb
+            //bypassVC = UIStoryboard.eDocumentStoryBoard.instantiateViewController(withIdentifier: "EDocWeb") as! EDocWeb
             
-            //let vc = UIStoryboard.eDocumentStoryBoard.instantiateViewController(withIdentifier: "EDocSalaryQR") as! EDocSalaryQR
+            //bypassVC = UIStoryboard.eDocumentStoryBoard.instantiateViewController(withIdentifier: "EDocSalaryQR") as! EDocSalaryQR
             
-            //let vc = UIStoryboard.eDocumentStoryBoard.instantiateViewController(withIdentifier: "Warning") as! Warning
+            //bypassVC = UIStoryboard.eDocumentStoryBoard.instantiateViewController(withIdentifier: "Warning") as! Warning
             
-            //let vc = UIStoryboard.eDocumentStoryBoard.instantiateViewController(withIdentifier: "WarningHead") as! WarningHead
+            //bypassVC = UIStoryboard.eDocumentStoryBoard.instantiateViewController(withIdentifier: "WarningHead") as! WarningHead
             
-            //let vc = UIStoryboard.eDocumentStoryBoard.instantiateViewController(withIdentifier: "ProbationScore") as! ProbationScore
+            //bypassVC = UIStoryboard.eDocumentStoryBoard.instantiateViewController(withIdentifier: "ProbationScore") as! ProbationScore
             
-            //let vc = UIStoryboard.eDocumentStoryBoard.instantiateViewController(withIdentifier: "ProbationResult") as! ProbationResult
+            //bypassVC = UIStoryboard.eDocumentStoryBoard.instantiateViewController(withIdentifier: "ProbationResult") as! ProbationResult
             
-            //let vc = UIStoryboard.settingStoryBoard.instantiateViewController(withIdentifier: "Setting") as! Setting
+            //bypassVC = UIStoryboard.settingStoryBoard.instantiateViewController(withIdentifier: "Setting") as! Setting
             
-            //let vc = UIStoryboard.settingStoryBoard.instantiateViewController(withIdentifier: "Language") as! Language
+            //bypassVC = UIStoryboard.settingStoryBoard.instantiateViewController(withIdentifier: "Language") as! Language
             
-            //let vc = UIStoryboard.attendanceStoryBoard.instantiateViewController(withIdentifier: "SwapShift") as! SwapShift
+            //bypassVC = UIStoryboard.attendanceStoryBoard.instantiateViewController(withIdentifier: "SwapShift") as! SwapShift
             
-            //let vc = UIStoryboard.loginStoryBoard.instantiateViewController(withIdentifier: "TermOfService") as! TermOfService
+            //bypassVC = UIStoryboard.loginStoryBoard.instantiateViewController(withIdentifier: "TermOfService") as! TermOfService
             
-//            let vc = UIStoryboard.loginStoryBoard.instantiateViewController(withIdentifier: "PrivacyPolicy") as! PrivacyPolicy
-//            vc.agreementShow = true
+//            bypassVC = UIStoryboard.loginStoryBoard.instantiateViewController(withIdentifier: "PrivacyPolicy") as! PrivacyPolicy
+//            bypassVC.agreementShow = true
             
+            //bypassVC = UIStoryboard.mainStoryBoard.instantiateViewController(withIdentifier: "EditProfile") as! EditProfile
             
-            //navigationController = UINavigationController.init(rootViewController: vc)
+//            bypassVC = UIStoryboard.mainStoryBoard.instantiateViewController(withIdentifier: "TabBar") as! TabBar
+            
+//            bypassVC = UIStoryboard.moodStoryBoard.instantiateViewController(withIdentifier: "MoodJournal") as! MoodJournal
+//            
+//            bypassVC = UIStoryboard.moodStoryBoard.instantiateViewController(withIdentifier: "MoodJournalHead") as! MoodJournalHead
+            
+//            bypassVC = UIStoryboard.moodStoryBoard.instantiateViewController(withIdentifier: "MyMood") as! MyMood
+            
+//            bypassVC = UIStoryboard.moodStoryBoard.instantiateViewController(withIdentifier: "MoodReport") as! MoodReport
+            
+//            bypassVC = UIStoryboard.moodStoryBoard.instantiateViewController(withIdentifier: "MoodDashBoard") as! MoodDashBoard
+            
+//            bypassVC = UIStoryboard.loginStoryBoard.instantiateViewController(withIdentifier: "Login") as! Login
+            
+//            navigationController = UINavigationController.init(rootViewController: bypassVC)
             //Localize.setCurrentLanguage("en")
             //Localize.setCurrentLanguage("th")
             //Localize.setCurrentLanguage("zh")

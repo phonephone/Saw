@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -50,7 +50,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Setting" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6er-K3-iVq">
-                                        <rect key="frame" x="174.5" y="15" width="65" height="30"/>
+                                        <rect key="frame" x="174.5" y="15" width="65.5" height="30"/>
                                         <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="20"/>
                                         <color key="textColor" name="Text_White"/>
                                         <nil key="highlightedColor"/>
@@ -85,7 +85,7 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="category_payroll" translatesAutoresizingMaskIntoConstraints="NO" id="Ar2-kG-Enn" customClass="MyImageView" customModule="Saw_Grow" customModuleProvider="target">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_circle" translatesAutoresizingMaskIntoConstraints="NO" id="Ar2-kG-Enn" customClass="MyImageView" customModule="Saw_Grow" customModuleProvider="target">
                                                             <rect key="frame" x="20.5" y="17" width="46" height="46"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="Ar2-kG-Enn" secondAttribute="height" multiplier="1:1" id="5SY-Te-peJ"/>
@@ -97,7 +97,7 @@
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phongkhanet Kaewrit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ffc-Yi-I7c">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Setting" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ffc-Yi-I7c">
                                                             <rect key="frame" x="86.5" y="29" width="283.5" height="22.5"/>
                                                             <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="15"/>
                                                             <color key="textColor" name="Text_Dark_Gray"/>
@@ -135,7 +135,7 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="category_payroll" translatesAutoresizingMaskIntoConstraints="NO" id="3WQ-cb-eyD" customClass="MyImageView" customModule="Saw_Grow" customModuleProvider="target">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_circle" translatesAutoresizingMaskIntoConstraints="NO" id="3WQ-cb-eyD" customClass="MyImageView" customModule="Saw_Grow" customModuleProvider="target">
                                                             <rect key="frame" x="20.5" y="17" width="46" height="46"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="3WQ-cb-eyD" secondAttribute="height" multiplier="1:1" id="Ny2-57-eku"/>
@@ -147,7 +147,7 @@
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phongkhanet Kaewrit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6In-Rm-skH">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Setting" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6In-Rm-skH">
                                                             <rect key="frame" x="86.5" y="29" width="245.5" height="22.5"/>
                                                             <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="15"/>
                                                             <color key="textColor" name="Text_Dark_Gray"/>
@@ -279,7 +279,7 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="374" height="90"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="demo_profile3" translatesAutoresizingMaskIntoConstraints="NO" id="EA1-r5-OZP" customClass="MyImageView" customModule="Saw_Grow" customModuleProvider="target">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_circle" translatesAutoresizingMaskIntoConstraints="NO" id="EA1-r5-OZP" customClass="MyImageView" customModule="Saw_Grow" customModuleProvider="target">
                                                             <rect key="frame" x="20" y="14" width="62" height="62"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="62" id="DS8-E9-NAS"/>
@@ -291,7 +291,7 @@
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aticha Sunthornponsin" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bEz-tO-gra">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Softcakes" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bEz-tO-gra">
                                                             <rect key="frame" x="107" y="32.5" width="247" height="25.5"/>
                                                             <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="17"/>
                                                             <color key="textColor" name="Text_Dark_Gray"/>
@@ -686,7 +686,7 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phongkhanet Kaewrit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EQH-7Y-SvV">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Setting" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EQH-7Y-SvV">
                                                             <rect key="frame" x="20.5" y="29" width="343.5" height="22.5"/>
                                                             <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="15"/>
                                                             <color key="textColor" name="Text_Dark_Gray"/>
@@ -753,13 +753,13 @@
     </scenes>
     <designables>
         <designable name="3WQ-cb-eyD">
-            <size key="intrinsicContentSize" width="52" height="52"/>
+            <size key="intrinsicContentSize" width="62.5" height="62.5"/>
         </designable>
         <designable name="Ar2-kG-Enn">
-            <size key="intrinsicContentSize" width="52" height="52"/>
+            <size key="intrinsicContentSize" width="62.5" height="62.5"/>
         </designable>
         <designable name="EA1-r5-OZP">
-            <size key="intrinsicContentSize" width="62" height="62"/>
+            <size key="intrinsicContentSize" width="62.5" height="62.5"/>
         </designable>
         <designable name="Gr1-H5-SIa">
             <size key="intrinsicContentSize" width="65" height="42"/>
@@ -767,9 +767,8 @@
     </designables>
     <resources>
         <image name="btn_back_white" width="55.5" height="21"/>
-        <image name="category_payroll" width="52" height="52"/>
-        <image name="demo_profile3" width="62" height="62"/>
         <image name="header_short" width="428" height="128"/>
+        <image name="logo_circle" width="62.5" height="62.5"/>
         <image name="setting_arrow" width="11" height="17.5"/>
         <image name="setting_checkmark" width="18.5" height="13"/>
         <image name="tabbar_notification" width="20" height="25"/>

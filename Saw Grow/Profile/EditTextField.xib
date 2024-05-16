@@ -1,18 +1,96 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Kanit-Regular.ttf">
+            <string>Kanit-Regular</string>
+        </array>
+    </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditTemplate" customModule="Saw_Grow" customModuleProvider="target">
+            <connections>
+                <outlet property="editTextField" destination="WX4-7a-VG0" id="HKF-QR-Fq1"/>
+                <outlet property="editTitle" destination="tXK-z9-30m" id="HeZ-La-VDW"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+        <view contentMode="scaleToFill" id="R3v-xS-cKl">
+            <rect key="frame" x="0.0" y="0.0" width="429" height="159"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="BeV-8s-q7n">
+                    <rect key="frame" x="0.0" y="0.0" width="429" height="159"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tXK-z9-30m">
+                            <rect key="frame" x="10" y="0.0" width="409" height="101"/>
+                            <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="15"/>
+                            <color key="textColor" name="Text_Gray"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WX4-7a-VG0" customClass="MyField" customModule="Saw_Grow" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="109" width="429" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="yMz-Rc-xj3"/>
+                            </constraints>
+                            <color key="textColor" name="Text_Dark_Gray"/>
+                            <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="16"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" name="Btn_Disable"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="15"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="paddingLeftCustom">
+                                    <real key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </textField>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="tXK-z9-30m" firstAttribute="leading" secondItem="BeV-8s-q7n" secondAttribute="leading" constant="10" id="MwT-x8-Ffy"/>
+                        <constraint firstAttribute="trailing" secondItem="WX4-7a-VG0" secondAttribute="trailing" id="Xzy-ai-BfY"/>
+                        <constraint firstItem="WX4-7a-VG0" firstAttribute="leading" secondItem="BeV-8s-q7n" secondAttribute="leading" id="sa9-gP-7ya"/>
+                        <constraint firstAttribute="trailing" secondItem="tXK-z9-30m" secondAttribute="trailing" constant="10" id="zJt-KS-z37"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="9BS-SZ-kQ8"/>
+            <constraints>
+                <constraint firstItem="BeV-8s-q7n" firstAttribute="top" secondItem="R3v-xS-cKl" secondAttribute="top" id="0f8-24-Vbp"/>
+                <constraint firstItem="9BS-SZ-kQ8" firstAttribute="trailing" secondItem="BeV-8s-q7n" secondAttribute="trailing" id="22b-rd-CF6"/>
+                <constraint firstItem="BeV-8s-q7n" firstAttribute="leading" secondItem="9BS-SZ-kQ8" secondAttribute="leading" id="HuJ-Mo-y1Z"/>
+                <constraint firstAttribute="bottom" secondItem="BeV-8s-q7n" secondAttribute="bottom" id="I9u-Ub-Amb"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-803.81679389312978" y="-198.94366197183101"/>
         </view>
     </objects>
+    <designables>
+        <designable name="WX4-7a-VG0">
+            <size key="intrinsicContentSize" width="5" height="20.333333333333332"/>
+        </designable>
+    </designables>
+    <resources>
+        <namedColor name="Btn_Disable">
+            <color red="0.87450980392156863" green="0.88235294117647056" blue="0.90588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Text_Dark_Gray">
+            <color red="0.18431372549019609" green="0.21176470588235294" blue="0.25490196078431371" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Text_Gray">
+            <color red="0.60784313725490191" green="0.60784313725490191" blue="0.60784313725490191" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

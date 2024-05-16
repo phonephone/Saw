@@ -9,6 +9,7 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 import ProgressHUD
+import Localize_Swift
 
 class Login: UIViewController, UITextFieldDelegate {
     
@@ -48,6 +49,11 @@ class Login: UIViewController, UITextFieldDelegate {
             signInBtn.disableBtn()
         }
         
+        if emailField.text == "666" {//Bypass Test Account
+            emailField.text = "admin@sawinzpy.com"
+            passField.text = "saw1234"
+            signInBtn.enableBtn()
+        }
         if emailField.text == "777" {//Bypass Login Employee
             emailField.text = "yuya101@gmail.com"
             passField.text = "123456"
@@ -97,6 +103,13 @@ class Login: UIViewController, UITextFieldDelegate {
         }
     }
     
+    @IBAction func registerClick(_ sender: UIButton) {
+        let vc = UIStoryboard.mainStoryBoard.instantiateViewController(withIdentifier: "Web") as! Web
+        vc.titleString = "LOGIN_Register_Button".localized()
+        vc.webUrlString = "https://sawgrow.com/erp/register-new-account"
+        self.navigationController!.pushViewController(vc, animated: true)
+    }
+    
     @IBAction func forgetClick(_ sender: UIButton) {
         let vc = UIStoryboard.loginStoryBoard.instantiateViewController(withIdentifier: "ResetPassword")
         self.navigationController!.pushViewController(vc, animated: true)
@@ -112,7 +125,7 @@ class Login: UIViewController, UITextFieldDelegate {
             switch result {
             case .failure(let error):
                 print(error)
-                ProgressHUD.dismiss()
+                //ProgressHUD.dismiss()
 
             case .success(let responseObject):
                 let json = JSON(responseObject)

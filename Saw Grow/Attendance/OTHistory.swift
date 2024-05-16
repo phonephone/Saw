@@ -63,14 +63,14 @@ class OTHistory: UIViewController, UITextFieldDelegate {
     }
     
     func loadOT(monthYear:Date) {
-        let monthYearStr = appStringFromDate(date: monthYear, format: "yyyy-MM")
+        let monthYearStr = monthAndYearToServerString(date: monthYear)
         let parameters:Parameters = ["ym":monthYearStr]
         
         loadRequest(method:.get, apiName:"attendance/gettimeotstatus", authorization:true, showLoadingHUD:true, dismissHUD:false, parameters: parameters){ result in
             switch result {
             case .failure(let error):
                 print(error)
-                ProgressHUD.dismiss()
+                //ProgressHUD.dismiss()
                 
             case .success(let responseObject):
                 let json = JSON(responseObject)
@@ -95,8 +95,8 @@ class OTHistory: UIViewController, UITextFieldDelegate {
     @objc func myDateChanged(notification:Notification){
         clearForm()
         let userInfo = notification.userInfo
-        mySelectedDate = appDateFromString(dateStr: (userInfo?["date"]) as! String, format: "yyyy-MM-dd")!
-        monthYearField.text = appStringFromDate(date: mySelectedDate, format: "MMMM yyyy")
+        mySelectedDate = appDateFromServerString(dateStr: (userInfo?["date"]) as! String)!
+        monthYearField.text = appStringFromDate(date: mySelectedDate, format: DateFormatter.appMonthYearFormatStr)
         monthYearIcon.setImage(UIImage(named: "form_date_on"), for: .normal)
         loadOT(monthYear: mySelectedDate)
     }
@@ -291,7 +291,7 @@ extension OTHistory: UICollectionViewDelegate {
             switch result {
             case .failure(let error):
                 print(error)
-                ProgressHUD.dismiss()
+                //ProgressHUD.dismiss()
 
             case .success(let responseObject):
                 let json = JSON(responseObject)

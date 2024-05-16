@@ -63,11 +63,11 @@ class SwapShift: UIViewController {
     
     @IBAction func segmentClick(_ sender: UIButton) {
         self.view.endEditing(true)
-        clearSegmentBtn(button: requestBtn)
-        clearSegmentBtn(button: responseBtn)
-        clearSegmentBtn(button: historyBtn)
+        requestBtn.segmentOff()
+        responseBtn.segmentOff()
+        historyBtn.segmentOff()
         
-        setSegmentBtn(button: sender)
+        sender.segmentOn()
         
         switch sender.tag {
         case 1:
@@ -106,16 +106,6 @@ class SwapShift: UIViewController {
             let vc = UIStoryboard.attendanceStoryBoard.instantiateViewController(withIdentifier: "SwapShiftHistory") as! SwapShiftHistory
             embed(vc, inView: bottomView)
         }
-    }
-    
-    func setSegmentBtn(button: UIButton) {
-        button.backgroundColor = .themeColor
-        button.setTitleColor(UIColor.white, for: .normal)
-    }
-    
-    func clearSegmentBtn(button: UIButton) {
-        button.backgroundColor = UIColor.clear
-        button.setTitleColor(.textDarkGray, for: .normal)
     }
     
     @IBAction func back(_ sender: UIButton) {

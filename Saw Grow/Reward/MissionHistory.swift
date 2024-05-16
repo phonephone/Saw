@@ -95,8 +95,7 @@ class MissionHistory: UIViewController, UITextFieldDelegate {
     }
     
     func loadHistory(monthYear:Date) {
-        //let monthYearStr = appStringFromDate(date: monthYearPicker.date, format: "yyyy-MM")
-        let monthYearStr = appStringFromDate(date: monthYear, format: "yyyy-MM")
+        let monthYearStr = monthAndYearToServerString(date: monthYear)
         let parameters:Parameters = ["ym":monthYearStr]
         //print(parameters)
         
@@ -104,7 +103,7 @@ class MissionHistory: UIViewController, UITextFieldDelegate {
             switch result {
             case .failure(let error):
                 print(error)
-                ProgressHUD.dismiss()
+                //ProgressHUD.dismiss()
 
             case .success(let responseObject):
                 let json = JSON(responseObject)
@@ -128,8 +127,8 @@ class MissionHistory: UIViewController, UITextFieldDelegate {
     @objc func myDateChanged(notification:Notification){
         clearForm()
         let userInfo = notification.userInfo
-        mySelectedDate = appDateFromString(dateStr: (userInfo?["date"]) as! String, format: "yyyy-MM-dd")!
-        monthYearField.text = appStringFromDate(date: mySelectedDate, format: "MMMM yyyy")
+        mySelectedDate = appDateFromServerString(dateStr: (userInfo?["date"]) as! String)!
+        monthYearField.text = appStringFromDate(date: mySelectedDate, format: DateFormatter.appMonthYearFormatStr)
         monthYearIcon.setImage(UIImage(named: "form_date_on"), for: .normal)
         thisMonthLabel.text = appStringFromDate(date: mySelectedDate, format: "MMMM")
         loadHistory(monthYear: mySelectedDate)
@@ -170,7 +169,7 @@ class MissionHistory: UIViewController, UITextFieldDelegate {
 //    @objc func datePickerChanged(picker: UIDatePicker) {
 //        if picker == monthYearPicker {
 //            clearForm()
-//            let selectDate = appStringFromDate(date: picker.date, format: "MMMM yyyy")
+//            let selectDate = appStringFromDate(date: picker.date, format: DateFormatter.appMonthYearFormatStr)
 //            monthYearField.text = selectDate
 //            monthYearIcon.setImage(UIImage(named: "form_date_on"), for: .normal)
 //            loadHistory()

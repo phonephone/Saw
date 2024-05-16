@@ -82,7 +82,7 @@ class RewardDetail: UIViewController, WKNavigationDelegate {
             switch result {
             case .failure(let error):
                 print(error)
-                ProgressHUD.dismiss()
+                //ProgressHUD.dismiss()
                 
             case .success(let responseObject):
                 let json = JSON(responseObject)
@@ -120,7 +120,7 @@ class RewardDetail: UIViewController, WKNavigationDelegate {
             switch result {
             case .failure(let error):
                 print(error)
-                ProgressHUD.dismiss()
+                //ProgressHUD.dismiss()
                 
             case .success(let responseObject):
                 let json = JSON(responseObject)
@@ -206,8 +206,8 @@ class RewardDetail: UIViewController, WKNavigationDelegate {
         alert.actions.last?.titleTextColor = .buttonRed
         
         alert.title = "REWARD_DETAIL_Redeem_Confirm".localized()
-        let expireDate = dateFromServerString(dateStr: rewardJSON!["expire_date"].stringValue)
-        alert.message = "\("REWARD_DETAIL_Alert_Expire".localized()) \(appStringFromDate(date: expireDate!, format: "dd MMM yyyy"))"
+        let expireDate = appDateFromServerString(dateStr: rewardJSON!["expire_date"].stringValue)
+        alert.message = "\("REWARD_DETAIL_Alert_Expire".localized()) \(appStringFromDate(date: expireDate!, format: DateFormatter.appDateFormatStr))"
         alert.addAction(UIAlertAction(title: "Confirm".localized(), style: .default, handler: { action in
             self.loadSubmitRedeem()
         }))
@@ -226,7 +226,7 @@ class RewardDetail: UIViewController, WKNavigationDelegate {
             switch result {
             case .failure(let error):
                 print(error)
-                ProgressHUD.dismiss()
+                //ProgressHUD.dismiss()
 
             case .success(let responseObject):
                 let json = JSON(responseObject)
@@ -267,7 +267,7 @@ class RewardDetail: UIViewController, WKNavigationDelegate {
             switch result {
             case .failure(let error):
                 print(error)
-                ProgressHUD.dismiss()
+                //ProgressHUD.dismiss()
 
             case .success(let responseObject):
                 let json = JSON(responseObject)

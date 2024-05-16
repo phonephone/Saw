@@ -6,13 +6,13 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class AlertService {
     
     func alert(title: String, body: String, buttonTitle: String, completion: @escaping () -> Void) -> AlertVC {
         
-        let storyboard = UIStoryboard(name: "Alert", bundle: .main)
-        let alertVC = storyboard.instantiateViewController(withIdentifier: "AlertVC") as! AlertVC
+        let alertVC = UIStoryboard.alertStoryBoard.instantiateViewController(withIdentifier: "AlertVC") as! AlertVC
         
         alertVC.alertTitle = title
         alertVC.alertBody = body
@@ -25,8 +25,7 @@ class AlertService {
     
     func alertSlide(title: String, slideTitle: String, completion: @escaping () -> Void) -> AlertSlideVC {
         
-        let storyboard = UIStoryboard(name: "Alert", bundle: .main)
-        let alertVC = storyboard.instantiateViewController(withIdentifier: "AlertSlideVC") as! AlertSlideVC
+        let alertVC = UIStoryboard.alertStoryBoard.instantiateViewController(withIdentifier: "AlertSlideVC") as! AlertSlideVC
         
         alertVC.alertTitle = title
         alertVC.slideTitle = slideTitle
@@ -36,11 +35,21 @@ class AlertService {
         return alertVC
     }
     
-    func alertMood(completion: @escaping () -> Void) -> AlertMoodVC {
+    func alertMood(moodJSON: JSON, completion: @escaping () -> Void) -> AlertMoodVC {
         
-        let storyboard = UIStoryboard(name: "Alert", bundle: .main)
-        let alertVC = storyboard.instantiateViewController(withIdentifier: "AlertMoodVC") as! AlertMoodVC
+        let alertVC = UIStoryboard.alertStoryBoard.instantiateViewController(withIdentifier: "AlertMoodVC") as! AlertMoodVC
         
+        alertVC.moodJSON = moodJSON
+        alertVC.complete = completion
+        
+        return alertVC
+    }
+    
+    func alertMoodReport(moodJSON: JSON, completion: @escaping () -> Void) -> AlertMoodReportVC {
+        
+        let alertVC = UIStoryboard.alertStoryBoard.instantiateViewController(withIdentifier: "AlertMoodReportVC") as! AlertMoodReportVC
+        
+        alertVC.moodJSON = moodJSON
         alertVC.complete = completion
         
         return alertVC

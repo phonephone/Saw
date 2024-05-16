@@ -24,13 +24,25 @@ class LeaveRequest: UIViewController, UITextFieldDelegate, UITextViewDelegate {
     
     let remarkStr = "LEAVE_Reason".localized()
     
+    @IBOutlet weak var myScrollView: UIScrollView!
+    
     @IBOutlet weak var typeIcon: UIButton!
     @IBOutlet weak var typeField: UITextField!
     @IBOutlet weak var typeBtn: UIButton!
     
-    @IBOutlet weak var fullDayBtn: MyButton!
-    @IBOutlet weak var halfDayBtn1: MyButton!
-    @IBOutlet weak var halfDayBtn2: MyButton!
+    @IBOutlet weak var fullDayBtn: UIButton!
+    @IBOutlet weak var halfDayBtn: UIButton!
+    
+    @IBOutlet weak var halfView: UIView!
+    @IBOutlet weak var halfDayBtn1: UIButton!
+    @IBOutlet weak var halfDayBtn2: UIButton!
+    @IBOutlet weak var hourBtn: UIButton!
+    
+    @IBOutlet weak var timeStack: UIStackView!
+    @IBOutlet weak var startTimeIcon: UIButton!
+    @IBOutlet weak var startTimeField: UITextField!
+    @IBOutlet weak var endTimeIcon: UIButton!
+    @IBOutlet weak var endTimeField: UITextField!
     
     @IBOutlet weak var startIcon: UIButton!
     @IBOutlet weak var startField: UITextField!
@@ -56,13 +68,20 @@ class LeaveRequest: UIViewController, UITextFieldDelegate, UITextViewDelegate {
     var startPicker: UIDatePicker! = UIDatePicker()
     var endPicker: UIDatePicker! = UIDatePicker()
     
+    var startTimePicker: UIDatePicker! = UIDatePicker()
+    var endTimePicker: UIDatePicker! = UIDatePicker()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print("LEAVE REQUEST")
         
+        myScrollView.contentInset = UIEdgeInsets(top: 20, left: 0, bottom: 20, right: 0)
+        
         typeField.delegate = self
         startField.delegate = self
         endField.delegate = self
+        startTimeField.delegate = self
+        endTimeField.delegate = self
         remarkText.delegate = self
         headField.delegate = self
         
@@ -74,6 +93,12 @@ class LeaveRequest: UIViewController, UITextFieldDelegate, UITextViewDelegate {
         
         datePickerSetup(picker: endPicker)
         endField.inputView = endPicker
+        
+        timePickerSetup(picker: startTimePicker)
+        startTimeField.inputView = startTimePicker
+        
+        timePickerSetup(picker: endTimePicker)
+        endTimeField.inputView = endTimePicker
         
         //remarkText.contentInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
         //remarkText.contentOffset = CGPoint(x: 0, y: -10)
@@ -88,7 +113,7 @@ class LeaveRequest: UIViewController, UITextFieldDelegate, UITextViewDelegate {
         
         if dateFromCalendar != nil//Come From Calendar
         {
-            let calendarDate = appStringFromDate(date: dateFromCalendar!, format: "d MMM yyyy")
+            let calendarDate = appStringFromDate(date: dateFromCalendar!, format: DateFormatter.appDateFormatStr)
             startField.text = calendarDate
             startIcon.setImage(UIImage(named: "form_date_on"), for: .normal)
             startPicker.date = dateFromCalendar!
@@ -100,13 +125,20 @@ class LeaveRequest: UIViewController, UITextFieldDelegate, UITextViewDelegate {
         loadLeave()
     }
     
+    func pickerSetup(picker:UIPickerView) {
+        picker.delegate = self
+        picker.dataSource = self
+        picker.backgroundColor = .white
+        picker.setValue(UIColor.textDarkGray, forKeyPath: "textColor")
+    }
+    
     func loadLeave() {
         let parameters:Parameters = [:]
         loadRequest(method:.get, apiName:"attendance/getleavetypes", authorization:true, showLoadingHUD:true, dismissHUD:true, parameters: parameters){ result in
             switch result {
             case .failure(let error):
                 print(error)
-                ProgressHUD.dismiss()
+                //ProgressHUD.dismiss()
                 
             case .success(let responseObject):
                 let json = JSON(responseObject)
@@ -134,66 +166,16 @@ class LeaveRequest: UIViewController, UITextFieldDelegate, UITextViewDelegate {
         else if textField == endField && endField.text == "" {
             datePickerChanged(picker: endPicker)
         }
+        else if textField == startTimeField && startTimeField.text == "" {
+            timePickerChanged(picker: startTimePicker)
+        }
+        else if textField == endTimeField && endTimeField.text == "" {
+            timePickerChanged(picker: endTimePicker)
+        }
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        if typeField.text == "" || startField.text == "" || endField.text == "" || headField.text == ""  {
-            submitBtn.disableBtn()
-        }
-        else{
-            submitBtn.enableBtn()
-        }
-    }
-    
-    func pickerSetup(picker:UIPickerView) {
-        picker.delegate = self
-        picker.dataSource = self
-        picker.backgroundColor = .white
-        picker.setValue(UIColor.textDarkGray, forKeyPath: "textColor")
-    }
-    
-    func datePickerSetup(picker:UIDatePicker) {
-        if #available(iOS 13.4, *) {
-            picker.preferredDatePickerStyle = .wheels
-        } else {
-            // Fallback on earlier versions
-        }
-        
-        picker.datePickerMode = .date
-        picker.locale = Locale(identifier: "Formatter_Locale".localized())
-        //picker.minimumDate = Date()
-        picker.calendar = Calendar(identifier: .gregorian)
-        picker.date = Date()
-        picker.addTarget(self, action: #selector(datePickerChanged(picker:)), for: .valueChanged)
-        
-        picker.setValue(false, forKey: "highlightsToday")
-        picker.setValue(UIColor.white, forKeyPath: "backgroundColor")
-        picker.setValue(UIColor.textDarkGray, forKeyPath: "textColor")
-    }
-    
-    @objc func datePickerChanged(picker: UIDatePicker) {
-        let selectDate = appStringFromDate(date: picker.date, format: "dd MMM yyyy")
-        let endDate = picker.date.addingTimeInterval(TimeInterval(1.0))//Add day diff 1 second
-        
-        if picker == startPicker {
-            startField.text = selectDate
-            startIcon.setImage(UIImage(named: "form_date_on"), for: .normal)
-            
-            if startPicker.date > endPicker.date {
-                endField.text = selectDate
-                endPicker.date = endDate
-            }
-            endPicker.minimumDate = endDate
-        }
-        else if picker == endPicker {
-            endField.text = selectDate
-            endIcon.setImage(UIImage(named: "form_date_on"), for: .normal)
-        }
-        
-//        print("START \(startPicker.date)")
-//        print("END \(endPicker.date)")
-//        let totalDay = daysBetween(start: startPicker.date, end: endPicker.date)
-//        print("DIFF \(totalDay)")
+        checkForm()
     }
     
     @IBAction func dropdownClick(_ sender: UIButton) {
@@ -210,33 +192,52 @@ class LeaveRequest: UIViewController, UITextFieldDelegate, UITextViewDelegate {
     }
     
     @IBAction func dayClick(_ sender: UIButton) {
+        halfView.isHidden = true
+        fullDayBtn.segmentOff()
+        halfDayBtn.segmentOff()
         
-        clearSegmentBtn(button: fullDayBtn)
-        clearSegmentBtn(button: halfDayBtn1)
-        clearSegmentBtn(button: halfDayBtn2)
-        
-        setSegmentBtn(button: sender)
+        sender.segmentOn()
         
         switch sender.tag {
         case 1:
             selectedHalfDay = "0"
+            halfView.isHidden = true
+            clearTime()
+            
         case 2:
             selectedHalfDay = "1"
-        case 3:
-            selectedHalfDay = "2"
+            halfView.isHidden = false
+            halfDayBtn1.segmentOn()
+            halfDayBtn2.segmentOff()
+            hourBtn.segmentOff()
+        
         default:
             break
         }
+        checkForm()
     }
     
-    func setSegmentBtn(button: UIButton) {
-        button.backgroundColor = .themeColor
-        button.setTitleColor(UIColor.white, for: .normal)
-    }
-    
-    func clearSegmentBtn(button: UIButton) {
-        button.backgroundColor = UIColor.clear
-        button.setTitleColor(.textDarkGray, for: .normal)
+    @IBAction func halfClick(_ sender: UIButton) {
+        halfDayBtn1.segmentOff()
+        halfDayBtn2.segmentOff()
+        hourBtn.segmentOff()
+        clearTime()
+        
+        sender.segmentOn()
+        
+        switch sender.tag {
+        case 1:
+            selectedHalfDay = "1"
+        case 2:
+            selectedHalfDay = "2"
+        case 3:
+            selectedHalfDay = "3"
+            timeStack.isHidden = false
+            
+        default:
+            break
+        }
+        checkForm()
     }
     
     func textViewShouldBeginEditing(_ textView: UITextView) -> Bool {
@@ -296,7 +297,31 @@ class LeaveRequest: UIViewController, UITextFieldDelegate, UITextViewDelegate {
         }))
         alert.actions.last?.titleTextColor = .buttonRed
         
-        alert.title = "\("LEAVE_Confirm".localized())\n(\(totalDay) \("Day".localized()))"
+        let dateFormat = "dd/MM/yyyy"
+        let startDate = appStringFromDate(date: startPicker.date, format: dateFormat)
+        let endDate = appStringFromDate(date: endPicker.date, format: dateFormat)
+        
+        switch selectedHalfDay {
+        case "0"://Full Day
+            if startDate == endDate {
+                alert.title = "\("LEAVE_Confirm".localized())\n\(startDate)\n(\(totalDay) \("Day".localized()))"
+            }
+            else {
+                alert.title = "\("LEAVE_Confirm".localized())\n\(startDate) - \(endDate)\n(\(totalDay) \("Day".localized()))"
+            }
+            
+        case "1"://1st Half
+            alert.title = "\("LEAVE_Confirm".localized())\n\(startDate)\n(\("LEAVE_Half_Date".localized()), \("LEAVE_Half_Date1".localized()))"
+            
+        case "2"://2nd Half
+            alert.title = "\("LEAVE_Confirm".localized())\n\(startDate)\n(\("LEAVE_Half_Date".localized()), \("LEAVE_Half_Date2".localized()))"
+            
+        case "3"://Hour
+            alert.title = "\("LEAVE_Confirm".localized())\n\(startDate)\n(\(startTimeField.text!) - \(endTimeField.text!))"
+            
+        default:
+            break
+        }
         //alert.message = "plaes make sure before..."
         alert.addAction(UIAlertAction(title: "Confirm".localized(), style: .default, handler: { action in
             self.loadSubmit()
@@ -310,7 +335,10 @@ class LeaveRequest: UIViewController, UITextFieldDelegate, UITextViewDelegate {
     
     func loadSubmit() {
         let startDate = dateToServerString(date: startPicker.date)
-        let endDate = dateToServerString(date: endPicker.date)
+        var endDate = dateToServerString(date: endPicker.date)
+        if selectedHalfDay != "0" {
+            endDate = startDate
+        }
         
         var descriptionStr:String
         if remarkText.text == remarkStr {
@@ -328,17 +356,21 @@ class LeaveRequest: UIViewController, UITextFieldDelegate, UITextViewDelegate {
                                      "leave_half_day":selectedHalfDay,
                                      "head_id":selectedHeadID
         ]
+        if selectedHalfDay == "3" {//Hour
+            parameters.updateValue(startTimeField.text!, forKey: "time_in")
+            parameters.updateValue(endTimeField.text!, forKey: "time_out")
+        }
         if uploadImage.image != nil {
             let base64Image = uploadImage.image!.convertImageToBase64String()
             parameters.updateValue(base64Image, forKey: "image")
         }
-        //print(parameters)
+        print(parameters)
         
         loadRequest(method:.post, apiName:"attendance/setleaves", authorization:true, showLoadingHUD:true, dismissHUD:false, parameters: parameters){ result in
             switch result {
             case .failure(let error):
                 print(error)
-                ProgressHUD.dismiss()
+                //ProgressHUD.dismiss()
                 
             case .success(let responseObject):
                 let json = JSON(responseObject)
@@ -364,6 +396,14 @@ class LeaveRequest: UIViewController, UITextFieldDelegate, UITextViewDelegate {
         endIcon.setImage(UIImage(named: "form_date_off"), for: .normal)
         
         selectedHalfDay = "0"
+        fullDayBtn.segmentOn()
+        
+        halfDayBtn.segmentOff()
+        halfView.isHidden = true
+        halfDayBtn1.segmentOff()
+        halfDayBtn2.segmentOff()
+        hourBtn.segmentOff()
+        clearTime()
         
         remarkText.text = remarkStr
         remarkText.textColor = UIColor.lightGray
@@ -374,6 +414,37 @@ class LeaveRequest: UIViewController, UITextFieldDelegate, UITextViewDelegate {
         clearAttachFile()
         
         submitBtn.disableBtn()
+    }
+    
+    func clearTime() {
+        timeStack.isHidden = true
+        startTimeField.text = ""
+        startTimePicker.date = Date()
+        startTimeIcon.setImage(UIImage(named: "form_time_off"), for: .normal)
+        
+        endTimeField.text = ""
+        endTimePicker.date = Date()
+        endTimeIcon.setImage(UIImage(named: "form_time_off"), for: .normal)
+    }
+    
+    func checkForm() {
+        if typeField.text == "" || startField.text == "" || endField.text == "" || headField.text == "" {
+            
+            submitBtn.disableBtn()
+        }
+        else{
+            if selectedHalfDay == "3" {
+                if startTimeField.text == "" || endTimeField.text == "" {
+                    submitBtn.disableBtn()
+                }
+                else {
+                    submitBtn.enableBtn()
+                }
+            }
+            else {
+                submitBtn.enableBtn()
+            }
+        }
     }
 }
 
@@ -454,8 +525,104 @@ extension LeaveRequest: UIPickerViewDelegate {
     }
 }
 
-// MARK: - Date Diff
+// MARK: - Date Date & Time
 extension LeaveRequest {
+    func datePickerSetup(picker:UIDatePicker) {
+        if #available(iOS 13.4, *) {
+            picker.preferredDatePickerStyle = .wheels
+        } else {
+            // Fallback on earlier versions
+        }
+        
+        picker.datePickerMode = .date
+        picker.locale = Locale(identifier: "Formatter_Locale".localized())
+        //picker.minimumDate = Date()
+        picker.calendar = Calendar(identifier: .gregorian)
+        picker.date = Date()
+        picker.addTarget(self, action: #selector(datePickerChanged(picker:)), for: .valueChanged)
+        
+        picker.setValue(false, forKey: "highlightsToday")
+        picker.setValue(UIColor.white, forKeyPath: "backgroundColor")
+        picker.setValue(UIColor.textDarkGray, forKeyPath: "textColor")
+    }
+    
+    @objc func datePickerChanged(picker: UIDatePicker) {
+        let selectDate = appStringFromDate(date: picker.date, format: DateFormatter.appDateFormatStr)
+        let endDate = picker.date.addingTimeInterval(TimeInterval(1.0))//Add day diff 1 second
+        
+        if picker == startPicker {
+            startField.text = selectDate
+            startIcon.setImage(UIImage(named: "form_date_on"), for: .normal)
+            
+            if startPicker.date > endPicker.date {
+                endField.text = selectDate
+                endPicker.date = endDate
+            }
+            endPicker.minimumDate = endDate
+        }
+        else if picker == endPicker {
+            endField.text = selectDate
+            endIcon.setImage(UIImage(named: "form_date_on"), for: .normal)
+        }
+        
+        checkForm()
+//        print("START \(startPicker.date)")
+//        print("END \(endPicker.date)")
+//        let totalDay = daysBetween(start: startPicker.date, end: endPicker.date)
+//        print("DIFF \(totalDay)")
+    }
+    
+    func timePickerSetup(picker:UIDatePicker) {
+        if #available(iOS 13.4, *) {
+            picker.preferredDatePickerStyle = .wheels
+        } else {
+            // Fallback on earlier versions
+        }
+        
+        picker.datePickerMode = .time
+        picker.minuteInterval = 30
+        picker.locale = Locale(identifier: "en_GB")
+        //picker.minimumDate = Date()
+        picker.calendar = Calendar(identifier: .gregorian)
+        picker.date = Date()
+        picker.addTarget(self, action: #selector(timePickerChanged(picker:)), for: .valueChanged)
+        
+        picker.setValue(UIColor.white, forKeyPath: "backgroundColor")
+        picker.setValue(UIColor.textDarkGray, forKeyPath: "textColor")
+    }
+    
+    @objc func timePickerChanged(picker: UIDatePicker) {
+        let timeFormatter = DateFormatter()
+        timeFormatter.dateFormat = "HH:mm"
+        let selectTime = timeFormatter.string(from: picker.date)
+        
+        if picker == startTimePicker {
+            startTimeField.text = selectTime
+            startTimeIcon.setImage(UIImage(named: "form_time_on"), for: .normal)
+            
+            let endTimeAddHour = picker.date.addingTimeInterval(TimeInterval(60*60))//Add 1 hour
+            
+            let time1 = 60*Calendar.current.component(.hour, from: startTimePicker.date) + Calendar.current.component(.minute, from: startTimePicker.date)
+            let time2 =  60*Calendar.current.component(.hour, from: endTimePicker.date) + Calendar.current.component(.minute, from: endTimePicker.date)
+            
+            print(time1)
+            print(time2)
+            
+            if time2 - time1 <= 30 {
+                endTimeField.text = timeFormatter.string(from: endTimeAddHour)
+                endTimePicker.date = endTimeAddHour
+                endTimeIcon.setImage(UIImage(named: "form_time_on"), for: .normal)
+            }
+            endTimePicker.minimumDate = endTimeAddHour
+        }
+        else if picker == endTimePicker {
+            endTimeField.text = selectTime
+            endTimeIcon.setImage(UIImage(named: "form_time_on"), for: .normal)
+        }
+        
+        checkForm()
+    }
+    
     func daysBetween(start: Date, end: Date) -> Int {
         return Calendar.current.dateComponents([.day], from: start, to: end).day! + 1
     }

@@ -34,6 +34,8 @@
 "Receive_Date" = "วันที่ได้รับ";
 "MonthYear_Field" = "เลือกเดือน,ปี";
 "Search_Field" = "ค้นหารายชื่อ";
+"Comment_Field" = "เขียนเพิ่มเติม...";
+"Connection_Error" = "การเชื่อมต่อมีปัญหา";
 
 ////////////////////////////////////////////////////////////////////////////////////
 
@@ -45,6 +47,7 @@
 "LOGIN_Password_Title" = "รหัสผ่าน";
 "LOGIN_Password_Field" = "รหัสผ่านของคุณ";
 "LOGIN_ForgetPassword_Button" = "ลืมรหัสผ่าน ?";
+"LOGIN_Register_Button" = "ลงทะเบียน";
 "LOGIN_SignIn_Button" = "ลงชื่อเข้าใช้";
 
 //RESET PASSWORD
@@ -94,6 +97,7 @@
 "PROFILE_Email_Button" = "  อีเมล";
 "PROFILE_EmpCard_Button" = "  บัตรพนักงาน";
 "PROFILE_SendSticker_Button" = "  ส่งสติกเกอร์";
+"PROFILE_Edit_Button" = "  แก้ไขข้อมูลส่วนตัว";
 "PROFILE_Status" = "สถานะ";
 "PROFILE_Warning" = "การเตือน";
 "PROFILE_Title_Header" = "ข้อมูลโปรไฟล์";
@@ -103,6 +107,7 @@
 "PROFILE_Title_Hire" = "วันที่จ้างงาน";
 "PROFILE_Title_Email" = "อีเมล";
 "PROFILE_Title_Phone" = "เบอร์โทร";
+"PROFILE_Edit_Confirm" = "ยืนยันการแก้ไขข้อมูลส่วนตัว";
 
 //HOME TAB
 "HOME_Mood_Ask" = "วันนี้คุณรู้สึกอย่างไร ?";
@@ -119,6 +124,7 @@
 "HOME_Location_Allow" = "กรุณาอนุญาตให้เข้าถึงตำแหน่งของคุณเพื่อใช้งาน";
 "HOME_Location_Disable" = "การเข้าถึงตำแหน่งของคุณถูกปิดไว้";
 "HOME_Location_Check" = "กรุณาตรวจสอบการตั้งค่าความเป็นส่วนตัวของอุปกรณ์";
+"HOME_Admin_Setting" = "ตั้งค่าข้อมูลการใช้งาน";
 
 //CALENDAR TAB
 "CALENDAR_Language" = "th";
@@ -168,9 +174,13 @@
 "LEAVE_Type_Field" = "ประเภทการลา";
 "LEAVE_Start_Date" = "วันที่เริ่มต้น";
 "LEAVE_End_Date" = "วันที่สิ้นสุด";
+"LEAVE_Start_Time" = "เวลาเริ่มต้น";
+"LEAVE_End_Time" = "เวลาสิ้นสุด";
 "LEAVE_Full_Date" = "เต็มวัน";
+"LEAVE_Half_Date" = "ครึ่งวัน";
 "LEAVE_Half_Date1" = "ครึ่งวันเช้า";
 "LEAVE_Half_Date2" = "ครึ่งวันบ่าย";
+"LEAVE_Hour" = "ชั่วโมง";
 "LEAVE_Reason" = "เหตุผล";
 "LEAVE_Head" = "หัวหน้าผู้อนุมัติ";
 "LEAVE_Submit_Button" = "ส่งคำขอ";

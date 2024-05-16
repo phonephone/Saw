@@ -64,6 +64,7 @@
 		<string>Kanit-Light.ttf</string>
 		<string>Kanit-Medium.ttf</string>
 		<string>Kanit-Regular.ttf</string>
+		<string>Kanit-SemiBold.ttf</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>

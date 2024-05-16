@@ -34,6 +34,8 @@
 "Receive_Date" = "接收日期";
 "MonthYear_Field" = "选择月、年";
 "Search_Field" = "搜索联系人";
+"Comment_Field" = "写一些东西...";
+"Connection_Error" = "连接错误";
 
 ////////////////////////////////////////////////////////////////////////////////////
 
@@ -45,6 +47,7 @@
 "LOGIN_Password_Title" = "密码";
 "LOGIN_Password_Field" = "密码";
 "LOGIN_ForgetPassword_Button" = "忘记密码？";
+"LOGIN_Register_Button" = "登记";
 "LOGIN_SignIn_Button" = "登录";
 
 //RESET PASSWORD
@@ -94,6 +97,7 @@
 "PROFILE_Email_Button" = "电子邮件";
 "PROFILE_EmpCard_Button" = " 员工卡";
 "PROFILE_SendSticker_Button" = " 发送贴纸";
+"PROFILE_Edit_Button" = "  编辑个人资料";
 "PROFILE_Status" = "状态";
 "PROFILE_Warning" = "警告";
 "PROFILE_Title_Header" = "个人资料信息";
@@ -103,6 +107,7 @@
 "PROFILE_Title_Hire" = "雇佣";
 "PROFILE_Title_Email" = "电子邮件";
 "PROFILE_Title_Phone" = "电话号码";
+"PROFILE_Edit_Confirm" = "确认编辑个人信息";
 
 //HOME TAB
 "HOME_Mood_Ask" = "你今天感觉怎么样？";
@@ -119,6 +124,7 @@
 "HOME_Location_Allow" = "请允许访问您的位置以使用它";
 "HOME_Location_Disable" = "访问您的位置已被禁用";
 "HOME_Location_Check" = "请检查您设备的隐私设置";
+"HOME_Admin_Setting" = "設定使用資訊";
 
 //CALENDAR TAB
 "CALENDAR_Language" = "zh";
@@ -168,9 +174,13 @@
 "LEAVE_Type_Field" = "离开类型";
 "LEAVE_Start_Date" = "开始日期";
 "LEAVE_End_Date" = "结束日期";
+"LEAVE_Start_Time" = "开始时间";
+"LEAVE_End_Time" = "时间结束";
 "LEAVE_Full_Date" = "完整日期";
+"LEAVE_Half_Date" = "半天";
 "LEAVE_Half_Date1" = "半天早上";
 "LEAVE_Half_Date2" = "半天下午";
+"LEAVE_Hour" = "小时";
 "LEAVE_Reason" = "原因";
 "LEAVE_Head" = "部门主管";
 "LEAVE_Submit_Button" = "提交请求";

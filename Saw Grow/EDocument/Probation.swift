@@ -69,7 +69,7 @@ class Probation: UIViewController, UITextFieldDelegate, UITextViewDelegate {
             switch result {
             case .failure(let error):
                 print(error)
-                ProgressHUD.dismiss()
+                //ProgressHUD.dismiss()
                 
             case .success(let responseObject):
                 let json = JSON(responseObject)
@@ -184,11 +184,11 @@ extension Probation: UIPickerViewDelegate {
             positionField.text = cellArray["designation_name"].stringValue
             positionIcon.setImage(UIImage(named: "form_person_on"), for: .normal)
             
-            if let joinDate = dateFromServerString(dateStr: cellArray["date_of_joining"].stringValue) {
-                startDateField.text = appStringFromDate(date: joinDate, format: "d MMMM yyyy")
+            if let joinDate = appDateFromServerString(dateStr: cellArray["date_of_joining"].stringValue) {
+                startDateField.text = appStringFromDate(date: joinDate, format:DateFormatter.appDateFormatStr)
                 startDateIcon.setImage(UIImage(named: "form_date_on"), for: .normal)
                 
-                requestDateField.text = appStringFromDate(date: Date(), format: "d MMMM yyyy")
+                requestDateField.text = appStringFromDate(date: Date(), format:DateFormatter.appDateFormatStr)
                 requestDateIcon.setImage(UIImage(named: "form_date_on"), for: .normal)
             }
             

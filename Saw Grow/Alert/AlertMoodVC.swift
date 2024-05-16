@@ -13,7 +13,9 @@ import SDWebImage
 
 class AlertMoodVC : UIViewController {
     
-    var selectedMood = 0
+    var moodJSON:JSON?
+    
+    var selectedMood = ""
     
     @IBOutlet weak var moodIcon1: UIButton!
     @IBOutlet weak var moodTitle1: UILabel!
@@ -34,7 +36,10 @@ class AlertMoodVC : UIViewController {
     @IBOutlet weak var moodTitle6: UILabel!
     
     @IBOutlet weak var moodTextFiled: UITextField!
+    
+    @IBOutlet weak var moodImageMainView: UIView!
     @IBOutlet weak var moodImageView: UIImageView!
+    @IBOutlet weak var moodImageDeleteBtn: UIButton!
     
     @IBOutlet weak var moodSubmitBtn: UIButton!
     
@@ -44,69 +49,63 @@ class AlertMoodVC : UIViewController {
         super.viewDidLoad()
         
         setupView()
-        
-        moodImageView.isHidden = true
     }
     
     func setupView() {
-//        titleLabel.text = alertTitle
-//        bodyLabel.text = alertBody
-//        actionButton.setTitle(alertActionButtonTitle, for: .normal)
-        
         clearMood(thenSelect: 0)
     }
     
     func clearMood(thenSelect:Int) {
         
-        let unselectImage = UIImage(named: "home_feeling1")
-        let unselectTitle = "ไม่มีความสุข"
+        setMood(on:false ,moodBtn: moodIcon1, moodTitle: moodTitle1)
+        setMood(on:false ,moodBtn: moodIcon2, moodTitle: moodTitle2)
+        setMood(on:false ,moodBtn: moodIcon3, moodTitle: moodTitle3)
+        setMood(on:false ,moodBtn: moodIcon4, moodTitle: moodTitle4)
+        setMood(on:false ,moodBtn: moodIcon5, moodTitle: moodTitle5)
+        setMood(on:false ,moodBtn: moodIcon6, moodTitle: moodTitle6)
         
-        moodIcon1.setImage(unselectImage, for: .normal)
-        moodIcon2.setImage(unselectImage, for: .normal)
-        moodIcon3.setImage(unselectImage, for: .normal)
-        moodIcon4.setImage(unselectImage, for: .normal)
-        moodIcon5.setImage(unselectImage, for: .normal)
-        moodIcon6.setImage(unselectImage, for: .normal)
-        
-        moodTitle1.text = unselectTitle
-        moodTitle2.text = unselectTitle
-        moodTitle3.text = unselectTitle
-        moodTitle4.text = unselectTitle
-        moodTitle5.text = unselectTitle
-        moodTitle6.text = unselectTitle
-        
-        selectedMood = thenSelect
-        switch selectedMood {
+        switch thenSelect {
         case 1:
-            setMood(moodBtn: moodIcon1, moodTitle: moodTitle1)
+            setMood(on:true ,moodBtn: moodIcon1, moodTitle: moodTitle1)
             
         case 2:
-            setMood(moodBtn: moodIcon2, moodTitle: moodTitle2)
+            setMood(on:true ,moodBtn: moodIcon2, moodTitle: moodTitle2)
             
         case 3:
-            setMood(moodBtn: moodIcon3, moodTitle: moodTitle3)
+            setMood(on:true ,moodBtn: moodIcon3, moodTitle: moodTitle3)
             
         case 4:
-            setMood(moodBtn: moodIcon4, moodTitle: moodTitle4)
+            setMood(on:true ,moodBtn: moodIcon4, moodTitle: moodTitle4)
             
         case 5:
-            setMood(moodBtn: moodIcon5, moodTitle: moodTitle5)
+            setMood(on:true ,moodBtn: moodIcon5, moodTitle: moodTitle5)
             
         case 6:
-            setMood(moodBtn: moodIcon6, moodTitle: moodTitle6)
+            setMood(on:true ,moodBtn: moodIcon6, moodTitle: moodTitle6)
             
-        default:
+        default://Clear All
+            moodTextFiled.text = ""
+            moodImageView.image = nil
+            moodImageMainView.isHidden = true
             moodSubmitBtn.disableBtn()
         }
     }
     
-    func setMood(moodBtn:UIButton, moodTitle:UILabel) {
-        let selectImage = UIImage(named: "home_feeling4")
-        let selectTitle = "มีความสุขมาก"
+    func setMood(on:Bool, moodBtn:UIButton, moodTitle:UILabel) {
+        moodBtn.imageView!.contentMode = .scaleAspectFit
         
-        moodBtn.setImage(selectImage, for: .normal)
-        moodTitle.text = selectTitle
-        moodSubmitBtn.enableBtn()
+        var selectedMoodJSON = moodJSON![moodBtn.tag-1]
+        
+        if on {//ACTIVE
+            moodBtn.sd_setImage(with: URL(string:selectedMoodJSON["icon_url_active"].stringValue), for: .normal, placeholderImage: nil)
+            
+            selectedMood = selectedMoodJSON["value"].stringValue
+            moodSubmitBtn.enableBtn()
+        }
+        else {//INACTIVE
+            moodBtn.sd_setImage(with: URL(string:selectedMoodJSON["icon_url"].stringValue), for: .normal, placeholderImage: nil)
+        }
+        moodTitle.text = selectedMoodJSON["name"].stringValue
     }
     
     @IBAction func didTapMood(_ sender: UIButton) {
@@ -124,9 +123,14 @@ class AlertMoodVC : UIViewController {
             
             AttachmentHandler.shared.imagePickedBlock = { (image) in
                 self.moodImageView.image = image
-                self.moodImageView.isHidden = false
+                self.moodImageMainView.isHidden = false
             }
         }
+    }
+    
+    @IBAction func deleteClick(_ sender: UIButton) {
+        moodImageView.image = nil
+        moodImageMainView.isHidden = true
     }
     
     @IBAction func didTapDone(_ sender: UIButton) {
@@ -134,34 +138,35 @@ class AlertMoodVC : UIViewController {
     }
     
     func submitMood(moodID:String) {
-        self.complete?()
-        self.dismiss(animated: true)
+//        print("Select Mood \(selectedMood)")
+//        print("With Comment \(String(describing: moodTextFiled.text))")
         
-//        var parameters:Parameters = ["mood_id":moodID]
-//        
-//        if moodImageView.image != nil {
-//            let base64Image = moodImageView.image!.convertImageToBase64String()
-//            parameters.updateValue(base64Image, forKey: "image")
-//        }
-//        
-//        print(parameters)
-//        
-//        loadRequest(method:.post, apiName:"auth/setmoodlog", authorization:true, showLoadingHUD:true, dismissHUD:true, parameters: parameters){ result in
-//            switch result {
-//            case .failure(let error):
-//                print(error)
-//                //ProgressHUD.dismiss()
-//                
-//            case .success(let responseObject):
-//                let json = JSON(responseObject)
-//                print("SUCCESS SETMOOD\(json)")
-//                
-//                self.clearMood(thenSelect: 0)
-//                
-//                self.complete?()
-//                self.dismiss(animated: true)
-//            }
-//        }
+        var parameters:Parameters = ["mood_id":moodID,
+                                     "remark":moodTextFiled.text ?? ""
+        ]
+        
+        if moodImageView.image != nil {
+            let base64Image = moodImageView.image!.convertImageToBase64String()
+            parameters.updateValue(base64Image, forKey: "image")
+        }
+        //print(parameters)
+        
+        loadRequest(method:.post, apiName:"auth/setmoodlog", authorization:true, showLoadingHUD:true, dismissHUD:true, parameters: parameters){ result in
+            switch result {
+            case .failure(let error):
+                print(error)
+                //ProgressHUD.dismiss()
+                
+            case .success(let responseObject):
+                let json = JSON(responseObject)
+                print("SUCCESS SETMOOD\(json)")
+                
+                self.clearMood(thenSelect: 0)
+                
+                self.complete?()
+                self.dismiss(animated: true)
+            }
+        }
     }
 }
 
