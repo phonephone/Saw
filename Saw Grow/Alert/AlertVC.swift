@@ -1,13 +1,13 @@
 //
-//  AlertViewController.swift
+//  AlertVC.swift
 //  Saw Grow
 //
-//  Created by Truk Karawawattana on 30/3/2566 BE.
+//  Created by Truk Karawawattana on 28/3/2567 BE.
 //
 
 import UIKit
 
-class AlertViewController : UIViewController {
+class AlertVC : UIViewController {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var bodyLabel: UILabel!
@@ -41,3 +41,4 @@ class AlertViewController : UIViewController {
         buttonAction?()
     }
 }
+

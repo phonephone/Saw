@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Kanit-Medium.ttf">
+            <string>Kanit-Medium</string>
+        </array>
+        <array key="Kanit-Regular.ttf">
+            <string>Kanit-Regular</string>
+        </array>
+        <array key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
+        </array>
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--AlertVC-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="AlertVC" modalTransitionStyle="crossDissolve" modalPresentationStyle="overFullScreen" id="Y6W-OH-hqX" customClass="AlertVC" customModule="Saw_Grow" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZG8-GA-M8q" customClass="MyView" customModule="Saw_Grow" customModuleProvider="target">
+                                <rect key="frame" x="24" y="351.5" width="366" height="193"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="729-hD-BGj">
+                                        <rect key="frame" x="0.0" y="0.0" width="366" height="60"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UEm-TN-YuD">
+                                                <rect key="frame" x="8" y="8" width="350" height="44"/>
+                                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="24"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" name="Main_Theme_1"/>
+                                        <constraints>
+                                            <constraint firstItem="UEm-TN-YuD" firstAttribute="top" secondItem="729-hD-BGj" secondAttribute="topMargin" id="61O-Sq-mxZ"/>
+                                            <constraint firstItem="UEm-TN-YuD" firstAttribute="leading" secondItem="729-hD-BGj" secondAttribute="leadingMargin" id="G8t-6z-jXT"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="UEm-TN-YuD" secondAttribute="bottom" id="N0J-Bi-H2T"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="UEm-TN-YuD" secondAttribute="trailing" id="SyF-4o-7Il"/>
+                                            <constraint firstAttribute="height" constant="60" id="n21-ya-S5R"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Body Body Body Body Body Body Body Body Body Body Body Body" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gP1-oU-2CL">
+                                        <rect key="frame" x="16" y="76" width="334" height="40"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="r3g-lh-O2M">
+                                        <rect key="frame" x="16" y="132" width="334" height="45"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tC9-Di-LtF" customClass="MyButton" customModule="Saw_Grow" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="159" height="45"/>
+                                                <color key="backgroundColor" name="Text_Light_Gray"/>
+                                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="20"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Cancel"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="15"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="didTapCancel:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="613-Fh-FNJ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6WQ-Kx-THN" customClass="MyButton" customModule="Saw_Grow" customModuleProvider="target">
+                                                <rect key="frame" x="175" y="0.0" width="159" height="45"/>
+                                                <color key="backgroundColor" name="Main_Theme_1"/>
+                                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="20"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Action"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="15"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="didTapActionButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="e0s-ns-1vP"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="CQS-yL-CId"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="729-hD-BGj" firstAttribute="top" secondItem="ZG8-GA-M8q" secondAttribute="top" id="21e-T8-xnc"/>
+                                    <constraint firstAttribute="trailing" secondItem="gP1-oU-2CL" secondAttribute="trailing" constant="16" id="8tn-QP-hr1"/>
+                                    <constraint firstAttribute="trailing" secondItem="729-hD-BGj" secondAttribute="trailing" id="RHZ-UW-IJ8"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="r3g-lh-O2M" secondAttribute="bottom" constant="8" id="WaS-mx-03n"/>
+                                    <constraint firstItem="r3g-lh-O2M" firstAttribute="top" secondItem="gP1-oU-2CL" secondAttribute="bottom" constant="16" id="Yvt-IV-92t"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="r3g-lh-O2M" secondAttribute="trailing" constant="8" id="cVc-nR-W7E"/>
+                                    <constraint firstItem="r3g-lh-O2M" firstAttribute="leading" secondItem="ZG8-GA-M8q" secondAttribute="leadingMargin" constant="8" id="i8N-l8-Xje"/>
+                                    <constraint firstItem="gP1-oU-2CL" firstAttribute="leading" secondItem="ZG8-GA-M8q" secondAttribute="leading" constant="16" id="ow6-7a-TCw"/>
+                                    <constraint firstItem="gP1-oU-2CL" firstAttribute="top" secondItem="729-hD-BGj" secondAttribute="bottom" constant="16" id="qSJ-AS-enw"/>
+                                    <constraint firstItem="729-hD-BGj" firstAttribute="leading" secondItem="ZG8-GA-M8q" secondAttribute="leading" id="vKQ-IM-VT2"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.35390093537414968" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="ZG8-GA-M8q" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="VF8-v9-qPl"/>
+                            <constraint firstItem="ZG8-GA-M8q" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="aEW-KJ-d8c"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ZG8-GA-M8q" secondAttribute="trailing" constant="24" id="h6E-F8-5IF"/>
+                            <constraint firstItem="ZG8-GA-M8q" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="roD-k8-AW0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="actionButton" destination="6WQ-Kx-THN" id="2RR-UP-N84"/>
+                        <outlet property="bodyLabel" destination="gP1-oU-2CL" id="Br8-gy-Jvc"/>
+                        <outlet property="titleLabel" destination="UEm-TN-YuD" id="UJS-Zf-THh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="52.901785714285715"/>
+        </scene>
+        <!--Alert SlideVC-->
+        <scene sceneID="sKY-Hg-GSY">
+            <objects>
+                <viewController storyboardIdentifier="AlertSlideVC" modalTransitionStyle="crossDissolve" modalPresentationStyle="overFullScreen" id="0Ga-KB-3FN" customClass="AlertSlideVC" customModule="Saw_Grow" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="x3H-2e-hGH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9pc-UC-j2o" customClass="MyView" customModule="Saw_Grow" customModuleProvider="target">
+                                <rect key="frame" x="24" y="368.5" width="366" height="159.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cqp-AE-qSb">
+                                        <rect key="frame" x="8" y="28" width="350" height="23.5"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Omh-cK-nNk">
+                                        <rect key="frame" x="338" y="8" width="20" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="m9v-4v-2oa"/>
+                                            <constraint firstAttribute="width" constant="20" id="nNC-DK-HHm"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="btn_x_white"/>
+                                        <connections>
+                                            <action selector="didTapCancel:" destination="0Ga-KB-3FN" eventType="touchUpInside" id="5FG-Z2-ljW"/>
+                                        </connections>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iPA-w9-qAU" customClass="MTSlideToOpenView" customModule="MTSlideToOpen">
+                                        <rect key="frame" x="16" y="75.5" width="334" height="60"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="mqZ-hR-x6o"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" name="Main_Theme_1"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailingMargin" secondItem="cqp-AE-qSb" secondAttribute="trailing" id="Ab4-BR-sRc"/>
+                                    <constraint firstItem="Omh-cK-nNk" firstAttribute="top" secondItem="9pc-UC-j2o" secondAttribute="topMargin" id="DmW-ON-VxT"/>
+                                    <constraint firstItem="cqp-AE-qSb" firstAttribute="top" secondItem="Omh-cK-nNk" secondAttribute="bottom" id="JTf-5H-fUm"/>
+                                    <constraint firstAttribute="trailing" secondItem="iPA-w9-qAU" secondAttribute="trailing" constant="16" id="K59-Gv-laF"/>
+                                    <constraint firstItem="cqp-AE-qSb" firstAttribute="leading" secondItem="9pc-UC-j2o" secondAttribute="leadingMargin" id="aXT-3m-7UR"/>
+                                    <constraint firstItem="iPA-w9-qAU" firstAttribute="leading" secondItem="9pc-UC-j2o" secondAttribute="leading" constant="16" id="gsU-6b-VuS"/>
+                                    <constraint firstAttribute="bottom" secondItem="iPA-w9-qAU" secondAttribute="bottom" constant="24" id="sjs-4C-chr"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="Omh-cK-nNk" secondAttribute="trailing" id="xNl-Wd-4bM"/>
+                                    <constraint firstItem="iPA-w9-qAU" firstAttribute="top" secondItem="cqp-AE-qSb" secondAttribute="bottom" constant="24" id="yge-Ab-tk6"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Z6l-r0-2pm"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.35390093540000001" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="9pc-UC-j2o" firstAttribute="centerX" secondItem="x3H-2e-hGH" secondAttribute="centerX" id="GYB-pU-bzX"/>
+                            <constraint firstItem="9pc-UC-j2o" firstAttribute="leading" secondItem="Z6l-r0-2pm" secondAttribute="leading" constant="24" id="TK0-18-rDN"/>
+                            <constraint firstItem="Z6l-r0-2pm" firstAttribute="trailing" secondItem="9pc-UC-j2o" secondAttribute="trailing" constant="24" id="e9v-s9-D24"/>
+                            <constraint firstItem="9pc-UC-j2o" firstAttribute="centerY" secondItem="x3H-2e-hGH" secondAttribute="centerY" id="vAs-BP-tMN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="slideView" destination="iPA-w9-qAU" id="Tul-hf-9kD"/>
+                        <outlet property="titleLabel" destination="cqp-AE-qSb" id="EYp-M0-2C5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wrq-I7-Cw2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="718.84057971014499" y="52.901785714285715"/>
+        </scene>
+        <!--Alert MoodVC-->
+        <scene sceneID="Byg-Nc-PIn">
+            <objects>
+                <viewController storyboardIdentifier="AlertMoodVC" modalTransitionStyle="crossDissolve" modalPresentationStyle="overFullScreen" id="6gY-92-082" customClass="AlertMoodVC" customModule="Saw_Grow" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KeP-wx-JNu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GML-bd-VIC" customClass="MyView" customModule="Saw_Grow" customModuleProvider="target">
+                                <rect key="frame" x="24" y="98" width="366" height="700"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="n7h-n7-Qnz">
+                                        <rect key="frame" x="15" y="15" width="336" height="670"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How are you feeling today ?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T5i-yy-yAC">
+                                                <rect key="frame" x="0.0" y="0.0" width="336" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="5N5-Ap-Tc8"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="17"/>
+                                                <color key="textColor" name="Text_Dark_Gray"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="HOME_Mood_Ask"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ClH-6V-Mxo">
+                                                <rect key="frame" x="0.0" y="45" width="336" height="182"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="mj3-Je-ZlB">
+                                                        <rect key="frame" x="0.0" y="0.0" width="336" height="86"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="jWB-ko-qkg">
+                                                                <rect key="frame" x="0.0" y="0.0" width="112" height="86"/>
+                                                                <subviews>
+                                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GSp-ty-YWP">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="112" height="66"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="66" id="PUp-Nw-JRL"/>
+                                                                        </constraints>
+                                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                        <state key="normal" image="home_feeling1"/>
+                                                                        <connections>
+                                                                            <action selector="didTapMood:" destination="6gY-92-082" eventType="touchUpInside" id="n3s-q2-kiQ"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="มีความสุขมาก" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jKb-HN-AQi">
+                                                                        <rect key="frame" x="0.0" y="66" width="112" height="20"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="20" id="AhO-Hh-Wmz"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="11"/>
+                                                                        <color key="textColor" name="Text_Dark_Gray"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="7Ew-Ra-7dK">
+                                                                <rect key="frame" x="112" y="0.0" width="112" height="86"/>
+                                                                <subviews>
+                                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VH8-5L-T96">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="112" height="66"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="66" id="mT7-Z3-cGN"/>
+                                                                        </constraints>
+                                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                        <state key="normal" image="home_feeling1"/>
+                                                                        <connections>
+                                                                            <action selector="didTapMood:" destination="6gY-92-082" eventType="touchUpInside" id="7cD-IW-1OB"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="มีความสุขมาก" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bmy-tS-P1D">
+                                                                        <rect key="frame" x="0.0" y="66" width="112" height="20"/>
+                                                                        <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="11"/>
+                                                                        <color key="textColor" name="Text_Dark_Gray"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="9b5-54-biY">
+                                                                <rect key="frame" x="224" y="0.0" width="112" height="86"/>
+                                                                <subviews>
+                                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0pv-pB-4Um">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="112" height="66"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="66" id="zpx-mD-Tu4"/>
+                                                                        </constraints>
+                                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                        <state key="normal" image="home_feeling1"/>
+                                                                        <connections>
+                                                                            <action selector="didTapMood:" destination="6gY-92-082" eventType="touchUpInside" id="9Om-qn-0ZF"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="มีความสุขมาก" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vm9-GU-df4">
+                                                                        <rect key="frame" x="0.0" y="66" width="112" height="20"/>
+                                                                        <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="11"/>
+                                                                        <color key="textColor" name="Text_Dark_Gray"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="kxP-S2-gwh">
+                                                        <rect key="frame" x="0.0" y="96" width="336" height="86"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ivO-JZ-hES">
+                                                                <rect key="frame" x="0.0" y="0.0" width="112" height="86"/>
+                                                                <subviews>
+                                                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yG3-gg-1Mk">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="112" height="66"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="66" id="Obt-On-2tf"/>
+                                                                        </constraints>
+                                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                        <state key="normal" image="home_feeling1"/>
+                                                                        <connections>
+                                                                            <action selector="didTapMood:" destination="6gY-92-082" eventType="touchUpInside" id="Oc0-CO-iAf"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="มีความสุขมาก" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dz2-Fw-y60">
+                                                                        <rect key="frame" x="0.0" y="66" width="112" height="20"/>
+                                                                        <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="11"/>
+                                                                        <color key="textColor" name="Text_Dark_Gray"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="H2c-pQ-hu8">
+                                                                <rect key="frame" x="112" y="0.0" width="112" height="86"/>
+                                                                <subviews>
+                                                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ul-Gd-cT2">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="112" height="66"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="66" id="vg0-aM-1Vb"/>
+                                                                        </constraints>
+                                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                        <state key="normal" image="home_feeling1"/>
+                                                                        <connections>
+                                                                            <action selector="didTapMood:" destination="6gY-92-082" eventType="touchUpInside" id="5aU-Gn-yDq"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="มีความสุขมาก" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3e1-YG-nHt">
+                                                                        <rect key="frame" x="0.0" y="66" width="112" height="20"/>
+                                                                        <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="11"/>
+                                                                        <color key="textColor" name="Text_Dark_Gray"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="VCa-lf-R0M">
+                                                                <rect key="frame" x="224" y="0.0" width="112" height="86"/>
+                                                                <subviews>
+                                                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kSZ-Lb-6yW">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="112" height="66"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="66" id="T0f-79-Lut"/>
+                                                                        </constraints>
+                                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                        <state key="normal" image="home_feeling1"/>
+                                                                        <connections>
+                                                                            <action selector="didTapMood:" destination="6gY-92-082" eventType="touchUpInside" id="SuQ-oj-Zli"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="มีความสุขมาก" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W4Q-4V-513">
+                                                                        <rect key="frame" x="0.0" y="66" width="112" height="20"/>
+                                                                        <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="11"/>
+                                                                        <color key="textColor" name="Text_Dark_Gray"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CoX-E7-7uo" customClass="MyView" customModule="Saw_Grow" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="242" width="336" height="50"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="write..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DgB-wI-hqN">
+                                                        <rect key="frame" x="15" y="0.0" width="272" height="50"/>
+                                                        <color key="textColor" name="Text_Dark_Gray"/>
+                                                        <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="13"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Comment_Field"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </textField>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jtt-fm-See">
+                                                        <rect key="frame" x="297" y="14" width="24" height="22"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="jtt-fm-See" secondAttribute="height" multiplier="12:11" id="fex-Aq-fkS"/>
+                                                            <constraint firstAttribute="height" constant="22" id="rV3-Xf-tDx"/>
+                                                        </constraints>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" image="mood_camera"/>
+                                                        <connections>
+                                                            <action selector="didTapCamera:" destination="6gY-92-082" eventType="touchUpInside" id="CiB-96-L9A"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="DgB-wI-hqN" firstAttribute="top" secondItem="CoX-E7-7uo" secondAttribute="top" id="26P-ha-OUg"/>
+                                                    <constraint firstItem="jtt-fm-See" firstAttribute="leading" secondItem="DgB-wI-hqN" secondAttribute="trailing" constant="10" id="3w4-Pg-UJU"/>
+                                                    <constraint firstAttribute="bottom" secondItem="DgB-wI-hqN" secondAttribute="bottom" id="8Mw-Zf-Aba"/>
+                                                    <constraint firstItem="DgB-wI-hqN" firstAttribute="leading" secondItem="CoX-E7-7uo" secondAttribute="leading" constant="15" id="IiU-Ks-Tej"/>
+                                                    <constraint firstAttribute="trailing" secondItem="jtt-fm-See" secondAttribute="trailing" constant="15" id="N9D-mX-SEc"/>
+                                                    <constraint firstItem="jtt-fm-See" firstAttribute="centerY" secondItem="CoX-E7-7uo" secondAttribute="centerY" id="PgP-2V-Nru"/>
+                                                    <constraint firstAttribute="height" constant="50" id="QyQ-QN-1BV"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" name="Btn_Disable"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="25"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="demo_profile" translatesAutoresizingMaskIntoConstraints="NO" id="pMa-bb-ubr">
+                                                <rect key="frame" x="0.0" y="307" width="336" height="289"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ddI-TT-4uR" customClass="MyButton" customModule="Saw_Grow" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="611" width="336" height="59"/>
+                                                <color key="backgroundColor" name="Main_Theme_1"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="59" id="MPI-pl-I2T"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="20"/>
+                                                <state key="normal" title="Done">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="15"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Done"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="didTapDone:" destination="6gY-92-082" eventType="touchUpInside" id="efh-Qu-ikR"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="n7h-n7-Qnz" firstAttribute="leading" secondItem="GML-bd-VIC" secondAttribute="leading" constant="15" id="6xM-Ja-03T"/>
+                                    <constraint firstAttribute="bottom" secondItem="n7h-n7-Qnz" secondAttribute="bottom" constant="15" id="W4r-FI-j06"/>
+                                    <constraint firstAttribute="trailing" secondItem="n7h-n7-Qnz" secondAttribute="trailing" constant="15" id="c1U-1h-OXh"/>
+                                    <constraint firstItem="n7h-n7-Qnz" firstAttribute="top" secondItem="GML-bd-VIC" secondAttribute="top" constant="15" id="wgz-Hs-bDu"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="J0P-Tw-mzM"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.35390093540000001" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="GML-bd-VIC" firstAttribute="centerY" secondItem="KeP-wx-JNu" secondAttribute="centerY" id="FO8-Mh-op8"/>
+                            <constraint firstItem="GML-bd-VIC" firstAttribute="top" relation="greaterThanOrEqual" secondItem="J0P-Tw-mzM" secondAttribute="top" constant="50" id="SwA-hU-1y3"/>
+                            <constraint firstItem="GML-bd-VIC" firstAttribute="leading" secondItem="J0P-Tw-mzM" secondAttribute="leading" constant="24" id="d4E-5v-vF7"/>
+                            <constraint firstItem="GML-bd-VIC" firstAttribute="centerX" secondItem="KeP-wx-JNu" secondAttribute="centerX" id="iJH-oJ-UuJ"/>
+                            <constraint firstItem="J0P-Tw-mzM" firstAttribute="trailing" secondItem="GML-bd-VIC" secondAttribute="trailing" constant="24" id="jLT-Re-zrh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="moodIcon1" destination="GSp-ty-YWP" id="t3L-MJ-lY6"/>
+                        <outlet property="moodIcon2" destination="VH8-5L-T96" id="ZME-RO-CK9"/>
+                        <outlet property="moodIcon3" destination="0pv-pB-4Um" id="2SU-gB-9aP"/>
+                        <outlet property="moodIcon4" destination="yG3-gg-1Mk" id="TI5-5E-RBQ"/>
+                        <outlet property="moodIcon5" destination="3ul-Gd-cT2" id="FJv-T0-SeA"/>
+                        <outlet property="moodIcon6" destination="kSZ-Lb-6yW" id="RpU-bd-9EW"/>
+                        <outlet property="moodImageView" destination="pMa-bb-ubr" id="ABe-Ip-BBT"/>
+                        <outlet property="moodSubmitBtn" destination="ddI-TT-4uR" id="UMg-hY-wJJ"/>
+                        <outlet property="moodTextFiled" destination="DgB-wI-hqN" id="t3T-yb-OkB"/>
+                        <outlet property="moodTitle1" destination="jKb-HN-AQi" id="fmW-vQ-erz"/>
+                        <outlet property="moodTitle2" destination="bmy-tS-P1D" id="vab-fw-zOQ"/>
+                        <outlet property="moodTitle3" destination="Vm9-GU-df4" id="h1x-e7-WF7"/>
+                        <outlet property="moodTitle4" destination="dz2-Fw-y60" id="1BS-xN-ZWH"/>
+                        <outlet property="moodTitle5" destination="3e1-YG-nHt" id="LY7-pS-jFT"/>
+                        <outlet property="moodTitle6" destination="W4Q-4V-513" id="2VY-85-gfN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uz4-Jl-v6x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1430.4347826086957" y="52.901785714285715"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="6WQ-Kx-THN">
+            <size key="intrinsicContentSize" width="59" height="36"/>
+        </designable>
+        <designable name="ddI-TT-4uR">
+            <size key="intrinsicContentSize" width="48" height="42"/>
+        </designable>
+        <designable name="tC9-Di-LtF">
+            <size key="intrinsicContentSize" width="62" height="36"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="btn_x_white" width="16.5" height="16.5"/>
+        <image name="demo_profile" width="327" height="461"/>
+        <image name="home_feeling1" width="60" height="60"/>
+        <image name="mood_camera" width="24" height="21"/>
+        <namedColor name="Btn_Disable">
+            <color red="0.87450980392156863" green="0.88235294117647056" blue="0.90588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Main_Theme_1">
+            <color red="0.023529411764705882" green="0.77254901960784317" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Text_Dark_Gray">
+            <color red="0.18431372549019609" green="0.21176470588235294" blue="0.25490196078431371" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Text_Light_Gray">
+            <color red="0.6705882352941176" green="0.70980392156862748" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

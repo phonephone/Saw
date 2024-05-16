@@ -80,3 +80,30 @@ class CalendarCell_Header: UITableViewCell {
         //self.menuTitle.textColor = .white
     }
 }
+
+class CalendarCell_Mood: UITableViewCell {
+    
+    class var identifier: String { return String(describing: self) }
+    class var nib: UINib { return UINib(nibName: identifier, bundle: nil) }
+    
+    @IBOutlet var cellDate: UILabel!
+    @IBOutlet var cellWeekDay: UILabel!
+    
+    @IBOutlet var cellTimeLine: UIView!
+    @IBOutlet var cellDot: UIView!
+    
+    @IBOutlet var cellMoodIcon: UIImageView!
+    @IBOutlet var cellMoodTitle: UILabel!
+    @IBOutlet var cellMoodAttach: UIButton!
+    @IBOutlet var cellMoodComment: UITextField!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        // Background
+        self.backgroundColor = .clear
+        
+        // Title
+        //self.menuTitle.textColor = .white
+    }
+}

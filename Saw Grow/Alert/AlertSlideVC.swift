@@ -1,14 +1,14 @@
 //
-//  AlertViewSlideController.swift
+//  AlertSlideVC.swift
 //  Saw Grow
 //
-//  Created by Truk Karawawattana on 30/3/2566 BE.
+//  Created by Truk Karawawattana on 28/3/2567 BE.
 //
 
 import UIKit
 import MTSlideToOpen
 
-class AlertViewSlideController : UIViewController, MTSlideToOpenDelegate {
+class AlertSlideVC : UIViewController, MTSlideToOpenDelegate {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var slideView: MTSlideToOpenView!
@@ -52,4 +52,5 @@ class AlertViewSlideController : UIViewController, MTSlideToOpenDelegate {
         dismiss(animated: true)
     }
 }
+
 
