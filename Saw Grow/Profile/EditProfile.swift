@@ -17,6 +17,8 @@ class EditProfile: UIViewController, UITextFieldDelegate, UITextViewDelegate {
     
     var setColor: Bool = true
     
+    let alertService = AlertService()
+    
     @IBOutlet weak var myScrollView: UIScrollView!
     
     @IBOutlet weak var textFieldStack: UIStackView!
@@ -240,23 +242,11 @@ class EditProfile: UIViewController, UITextFieldDelegate, UITextViewDelegate {
     }
     
     func confirmAsk() {
-        var alert = UIAlertController()
-        
-        alert = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Cancel".localized(), style: .default, handler: { action in
-        }))
-        alert.actions.last?.titleTextColor = .buttonRed
-        
-        alert.title = "PROFILE_Edit_Confirm".localized()
-        //alert.message = "plaes make sure before..."
-        alert.addAction(UIAlertAction(title: "Confirm".localized(), style: .default, handler: { action in
+        let alertMain = alertService.alertMain(title: "PROFILE_Edit_Confirm".localized(), buttonTitle: "Confirm".localized(), buttonColor: .themeColor)
+        {
             self.loadSubmit()
-        }))
-        alert.actions.last?.titleTextColor = .themeColor
-        
-        alert.setColorAndFont()
-        
-        self.present(alert, animated: true)
+        }
+        present(alertMain, animated: true)
     }
     
     func loadSubmit() {

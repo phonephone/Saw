@@ -16,6 +16,8 @@ class ApproveRequest: UIViewController, UITextFieldDelegate {
     var approveType:approveType?
     var approveJSON:JSON?
     
+    let alertService = AlertService()
+    
     @IBOutlet weak var myCollectionView: UICollectionView!
     
     override func viewWillAppear(_ animated: Bool) {
@@ -287,15 +289,8 @@ extension ApproveRequest: UICollectionViewDelegate {
         
         let cellArray = self.approveJSON![indexPath.item]
         
-        var alert = UIAlertController()
-        alert = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
-        alert.title = "APPROVE_Confirm".localized()
-        //alert.message = "plaes make sure before..."
-        
-        alert.addAction(UIAlertAction(title: "Cancel".localized(), style: .default, handler: { action in
-        }))
-        
-        alert.addAction(UIAlertAction(title: "APPROVE_Approve".localized(), style: .default, handler: { action in
+        let alertMain = alertService.alertMain(title: "APPROVE_Confirm".localized(), buttonTitle: "APPROVE_Approve".localized(), buttonColor: .buttonGreen)
+        {
             if self.approveType == .ot {
                 self.loadAction(requestID: cellArray["request_id"].stringValue, statusID:"1", reason:"")
             }
@@ -305,11 +300,8 @@ extension ApproveRequest: UICollectionViewDelegate {
             else{
                 self.loadAction(requestID: cellArray["request_id"].stringValue, statusID:"2", reason:"")
             }
-        }))
-        alert.actions.last?.titleTextColor = .buttonGreen
-        alert.setColorAndFont()
-        
-        self.present(alert, animated: true)
+        }
+        present(alertMain, animated: true)
     }
     
     @IBAction func rejectClick(_ sender: UIButton) {
@@ -328,35 +320,6 @@ extension ApproveRequest: UICollectionViewDelegate {
         let cellArray = self.approveJSON![indexPath.item]
         
         pushToDetail(detailID: cellArray["noti_id"].stringValue)
-        
-//        var alert = UIAlertController()
-//        alert = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
-//        alert.title = "Confirm Reject"
-//
-//        alert.addTextField() { reasonTextField in
-//            reasonTextField.placeholder = "Enter some reason"
-//            reasonTextField.textColor = .textDarkGray
-//            reasonTextField.font = UIFont.Kanit_Regular(ofSize: 16)
-//        }
-//
-//        alert.addAction(UIAlertAction(title: "Cancel", style: .default, handler: { action in
-//
-//        }))
-//
-//        alert.addAction(UIAlertAction(title: "Reject", style: .default, handler: { action in
-//            if
-//                let textFields = alert.textFields,
-//                let firstField = textFields.first,
-//                let result = firstField.text
-//            {
-//                print("REASON \(result)")
-//            }
-//            //self.loadDelete(leaveID:cellArray["leaveid"].stringValue)
-//        }))
-//        alert.actions.last?.titleTextColor = .buttonRed
-//        alert.setColorAndFont()
-//
-//        self.present(alert, animated: true)
     }
     
     func loadAction(requestID:String, statusID:String, reason:String) {

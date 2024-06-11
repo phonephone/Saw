@@ -17,6 +17,8 @@ class NotificationAll: UIViewController {
     
     var setColor: Bool = true
     
+    let alertService = AlertService()
+    
     @IBOutlet weak var headerView: UIView!
     
     @IBOutlet weak var myCollectionView: UICollectionView!
@@ -289,24 +291,11 @@ extension NotificationAll: UICollectionViewDelegate {
     }
     
     @IBAction func readAllClick(_ sender: UIButton) {
-        
-        var alert = UIAlertController()
-        
-        alert = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Cancel".localized(), style: .default, handler: { action in
-            
-        }))
-        alert.actions.last?.titleTextColor = .buttonRed
-        
-        alert.title = "NOTIFICATION_Confirm".localized()
-        //alert.message = "plaes make sure before..."
-        alert.addAction(UIAlertAction(title: "Confirm".localized(), style: .default, handler: { action in
+        let alertMain = alertService.alertMain(title: "NOTIFICATION_Confirm".localized(), buttonTitle: "Confirm".localized(), buttonColor: .themeColor)
+        {
             self.loadRead(header:"All", date: "", noti_id: "", linkUrl: "", linkTitle: "", withLoadingHUD: true)
-        }))
-        alert.actions.last?.titleTextColor = .themeColor
-        alert.setColorAndFont()
-        
-        self.present(alert, animated: true)
+        }
+        present(alertMain, animated: true)
     }
 }
 

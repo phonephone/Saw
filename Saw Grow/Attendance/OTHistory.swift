@@ -17,6 +17,8 @@ class OTHistory: UIViewController, UITextFieldDelegate {
     
     var firstTime = true
     
+    let alertService = AlertService()
+    
     @IBOutlet weak var monthYearIcon: UIButton!
     @IBOutlet weak var monthYearField: UITextField!
     @IBOutlet weak var monthYearBtn: UIButton!
@@ -260,23 +262,11 @@ extension OTHistory: UICollectionViewDelegate {
         
         let cellArray = self.otJSON![indexPath.item]
         
-        var alert = UIAlertController()
-        
-        alert = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Cancel".localized(), style: .default, handler: { action in
-            
-        }))
-        //alert.actions.last?.titleTextColor = .buttonRed
-        
-        alert.title = "Confirm_Delete".localized()
-        //alert.message = "plaes make sure before..."
-        alert.addAction(UIAlertAction(title: "Delete".localized(), style: .default, handler: { action in
+        let alertMain = alertService.alertMain(title: "Confirm_Delete".localized(), buttonTitle: "Delete".localized(), buttonColor: .buttonRed)
+        {
             self.loadDelete(timeRequestID:cellArray["timerequest_id"].stringValue)
-        }))
-        alert.actions.last?.titleTextColor = .buttonRed
-        alert.setColorAndFont()
-        
-        self.present(alert, animated: true)
+        }
+        present(alertMain, animated: true)
     }
     
     func loadDelete(timeRequestID:String) {

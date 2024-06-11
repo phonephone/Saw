@@ -16,6 +16,8 @@ class WarningHistory: UIViewController  {
     var warningTab:warningTab?
     var warningJSON:JSON?
     
+    let alertService = AlertService()
+    
     @IBOutlet weak var myCollectionView: UICollectionView!
     
     override func viewWillAppear(_ animated: Bool) {
@@ -193,23 +195,11 @@ extension WarningHistory: UICollectionViewDelegate {
         
         let cellArray = self.warningJSON![indexPath.item]
         
-        var alert = UIAlertController()
-        
-        alert = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Cancel".localized(), style: .default, handler: { action in
-            
-        }))
-        //alert.actions.last?.titleTextColor = .buttonRed
-        
-        alert.title = "Confirm_Delete".localized()
-        //alert.message = "plaes make sure before..."
-        alert.addAction(UIAlertAction(title: "Delete".localized(), style: .default, handler: { action in
+        let alertMain = alertService.alertMain(title: "Confirm_Delete".localized(), buttonTitle: "Delete".localized(), buttonColor: .buttonRed)
+        {
             self.loadDelete(leaveID:cellArray["leaveid"].stringValue)
-        }))
-        alert.actions.last?.titleTextColor = .buttonRed
-        alert.setColorAndFont()
-        
-        self.present(alert, animated: true)
+        }
+        present(alertMain, animated: true)
     }
     
     func loadDelete(leaveID:String) {

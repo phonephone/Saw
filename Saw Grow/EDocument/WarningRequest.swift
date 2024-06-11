@@ -25,6 +25,8 @@ class WarningRequest: UIViewController, UITextFieldDelegate, UITextViewDelegate,
     
     let remarkStr = "WARNING_REQUEST_Reason".localized()
     
+    let alertService = AlertService()
+    
     @IBOutlet weak var typeIcon: UIButton!
     @IBOutlet weak var typeField: UITextField!
     @IBOutlet weak var typeBtn: UIButton!
@@ -218,24 +220,12 @@ class WarningRequest: UIViewController, UITextFieldDelegate, UITextViewDelegate,
         confirmAsk()
     }
     
-    func confirmAsk() {
-        var alert = UIAlertController()
-        
-        alert = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Cancel".localized(), style: .default, handler: { action in
-        }))
-        alert.actions.last?.titleTextColor = .buttonRed
-        
-        alert.title = "WARNING_REQUEST_Confirm".localized()
-        //alert.message = "plaes make sure before..."
-        alert.addAction(UIAlertAction(title: "Confirm".localized(), style: .default, handler: { action in
+    func confirmAsk() {        
+        let alertMain = alertService.alertMain(title: "WARNING_REQUEST_Confirm".localized(), buttonTitle: "Confirm".localized(), buttonColor: .themeColor)
+        {
             self.loadSubmit()
-        }))
-        alert.actions.last?.titleTextColor = .themeColor
-        
-        alert.setColorAndFont()
-        
-        self.present(alert, animated: true)
+        }
+        present(alertMain, animated: true)
     }
     
     func loadSubmit() {

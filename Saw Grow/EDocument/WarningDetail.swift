@@ -19,6 +19,8 @@ class WarningDetail: UIViewController {
     
     var setColor: Bool = true
     
+    let alertService = AlertService()
+    
     @IBOutlet weak var headerView: UIView!
     
     @IBOutlet var pdfBtn: UIButton!
@@ -200,21 +202,11 @@ extension WarningDetail: UITableViewDelegate {
         //print("Delete \(indexPath.section) - \(indexPath.item)")
         //let cellArray = self.detailJSON![indexPath.item]
         
-        var alert = UIAlertController()
-        alert = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
-        alert.title = "WARNING_DETAIL_Confirm".localized()
-        //alert.message = "plaes make sure before..."
-        
-        alert.addAction(UIAlertAction(title: "Cancel".localized(), style: .default, handler: { action in
-        }))
-        
-        alert.addAction(UIAlertAction(title: "Confirm".localized(), style: .default, handler: { action in
+        let alertMain = alertService.alertMain(title: "WARNING_DETAIL_Confirm".localized(), buttonTitle: "Confirm".localized(), buttonColor: .buttonRed)
+        {
             self.loadAction(requestID: self.detailJSON!["request_id"].stringValue, statusID:"2")
-        }))
-        alert.actions.last?.titleTextColor = .buttonRed
-        alert.setColorAndFont()
-        
-        self.present(alert, animated: true)
+        }
+        present(alertMain, animated: true)
     }
     
     

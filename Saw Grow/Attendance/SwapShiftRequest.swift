@@ -28,6 +28,8 @@ class SwapShiftRequest: UIViewController, UITextFieldDelegate, UITextViewDelegat
     
     let remarkStr = "SWAP_Note".localized()
     
+    let alertService = AlertService()
+    
     @IBOutlet weak var myNameField: UITextField!
     
     @IBOutlet weak var myShiftIcon: UIButton!
@@ -215,24 +217,12 @@ class SwapShiftRequest: UIViewController, UITextFieldDelegate, UITextViewDelegat
         confirmAsk()
     }
     
-    func confirmAsk() {
-        var alert = UIAlertController()
-        
-        alert = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Cancel".localized(), style: .default, handler: { action in
-        }))
-        alert.actions.last?.titleTextColor = .buttonRed
-        
-        alert.title = "SWAP_Confirm".localized()
-        //alert.message = "plaes make sure before..."
-        alert.addAction(UIAlertAction(title: "Confirm".localized(), style: .default, handler: { action in
+    func confirmAsk() {        
+        let alertMain = alertService.alertMain(title: "SWAP_Confirm".localized(), buttonTitle: "Confirm".localized(), buttonColor: .themeColor)
+        {
             self.loadSubmit()
-        }))
-        alert.actions.last?.titleTextColor = .themeColor
-        
-        alert.setColorAndFont()
-        
-        self.present(alert, animated: true)
+        }
+        present(alertMain, animated: true)
     }
     
     func loadSubmit() {

@@ -15,6 +15,8 @@ class AttendanceHistory: UIViewController, UITextFieldDelegate {
     
     var attendanceJSON:JSON?
     
+    let alertService = AlertService()
+    
     @IBOutlet weak var myCollectionView: UICollectionView!
     
     override func viewWillAppear(_ animated: Bool) {
@@ -177,23 +179,11 @@ extension AttendanceHistory: UICollectionViewDelegate {
         
         let cellArray = self.attendanceJSON![indexPath.item]
         
-        var alert = UIAlertController()
-        
-        alert = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Cancel".localized(), style: .default, handler: { action in
-            
-        }))
-        //alert.actions.last?.titleTextColor = .buttonRed
-        
-        alert.title = "Confirm_Delete".localized()
-        //alert.message = "plaes make sure before..."
-        alert.addAction(UIAlertAction(title: "Delete".localized(), style: .default, handler: { action in
+        let alertMain = alertService.alertMain(title: "Confirm_Delete".localized(), buttonTitle: "Delete".localized(), buttonColor: .buttonRed)
+        {
             self.loadDelete(timeRequestID:cellArray["timerequest_id"].stringValue)
-        }))
-        alert.actions.last?.titleTextColor = .buttonRed
-        alert.setColorAndFont()
-        
-        self.present(alert, animated: true)
+        }
+        present(alertMain, animated: true)
     }
     
     func loadDelete(timeRequestID:String) {

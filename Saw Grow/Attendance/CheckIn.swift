@@ -28,6 +28,7 @@ class CheckIn: UIViewController, UITextViewDelegate {
     var inArea = false
     var isWFH = false
     var isBioScan = false
+    var isForceTakePhoto = false
     
     var userLat = ""
     var userLong = ""
@@ -77,6 +78,8 @@ class CheckIn: UIViewController, UITextViewDelegate {
         
         NotificationCenter.default.addObserver(self, selector: #selector(recieveMapInfo), name: Notification.Name("sendMapInfo"), object: nil)
         
+        NotificationCenter.default.addObserver(self, selector: #selector(updateClick(_:)), name: NSNotification.Name(rawValue: "updateClick"), object: nil)
+        
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.updateTimeDisplay), userInfo: nil, repeats: true)
         loadMap(withLoadingHUD: true)
         
@@ -86,6 +89,7 @@ class CheckIn: UIViewController, UITextViewDelegate {
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         timer?.invalidate()
+        NotificationCenter.default.removeObserver(self)
     }
     
     @objc func reloadMap() {
@@ -109,25 +113,32 @@ class CheckIn: UIViewController, UITextViewDelegate {
                 self.empstatus = json["data"][0]["profile"][0]["empstatus"].stringValue
                 self.isWFH = json["data"][0]["iswfh"].boolValue
                 self.isBioScan = json["data"][0]["isbioscan"].boolValue
+                //self.isForceTakePhoto = json["data"][0]["xxx"].boolValue
                 self.updateEmpStatus()
             }
         }
     }
     
     func updateEmpStatus() {
+        var showUpdate = Bool()
         switch self.empstatus {
         case ""://Show Check In
             self.mode = .checkIn
+            showUpdate = false
             
         case "checkin"://Show Check Out & Update
             self.mode = .update
+            showUpdate = true
             
         case "checkout"://Show Check In
             self.mode = .checkedOut
+            showUpdate = false
             
         default:
             break
         }
+        
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "showUpdate"), object: showUpdate)
         self.changeBtnDisplay()
     }
     
@@ -153,7 +164,8 @@ class CheckIn: UIViewController, UITextViewDelegate {
         }
         else if mode == .update {
             checkInBtn.isHidden = true
-            updateBtn.isHidden = false
+            //updateBtn.isHidden = false/ย้ายปุ่มไปไว้ด้านบน
+            updateBtn.isHidden = true
             checkOutBtn.isHidden = false
             
             updateBtn.enableBtn()//เปิด update นอกวงกลม
@@ -250,7 +262,8 @@ class CheckIn: UIViewController, UITextViewDelegate {
     
     @IBAction func attachmentAdd(_ sender: UIButton) {
         DispatchQueue.main.async {
-            AttachmentHandler.shared.showAttachmentActionSheet(vc: self, allowEdit: false)
+            //AttachmentHandler.shared.showAttachmentActionSheet(vc: self, allowEdit: false)
+            AttachmentHandler.shared.showCameraOnly(vc: self, allowEdit: false)
             AttachmentHandler.shared.imagePickedBlock = { (image) in
                 /* get your image here */
                 self.uploadImage.image = image
@@ -275,7 +288,6 @@ class CheckIn: UIViewController, UITextViewDelegate {
     }
     
     @IBAction func btnClick(_ sender: UIButton) {
-        
         if sender.tag == 1 {//CHECKIN
             if isBioScan {
                 let context = LAContext()
@@ -316,7 +328,7 @@ class CheckIn: UIViewController, UITextViewDelegate {
                         confirmAsk(sender)
                     }
             }
-            else{
+            else{//No Bioscan
                 confirmAsk(sender)
             }
         }
@@ -325,44 +337,27 @@ class CheckIn: UIViewController, UITextViewDelegate {
         }
     }
     
+    @objc func updateClick(_ notification: NSNotification) {
+        if let sender = notification.object as? UIButton {
+            confirmAsk(sender)
+        }
+    }
+    
     func confirmAsk(_ sender: UIButton) {
-        var alert = UIAlertController()
-        
-//        //to change font of title and message.
-//            let titleFont = [NSFontAttributeName: UIFont(name: "ArialHebrew-Bold", size: 18.0)!]
-//            let messageFont = [NSFontAttributeName: UIFont(name: "Avenir-Roman", size: 12.0)!]
-//
-//            let titleAttrString = NSMutableAttributedString(string: "Title Here", attributes: titleFont)
-//            let messageAttrString = NSMutableAttributedString(string: "Message Here", attributes: messageFont)
-//
-//            alertController.setValue(titleAttrString, forKey: "attributedTitle")
-//            alertController.setValue(messageAttrString, forKey: "attributedMessage")
-        
-//        alertController.view.tintColor = UIColor.blue
-//            alertController.view.backgroundColor = UIColor.black
-//            alertController.view.layer.cornerRadius = 40
-        
-        alert = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Cancel".localized(), style: .default, handler: { action in
-            
-        }))
-        alert.actions.last?.titleTextColor = .textDarkGray
-        
         switch sender.tag {
         case 1://Check In
-            alert.title = "CHECKIN_Confirm_In".localized()
-            //alert.message = "plaes make sure before..."
-            alert.addAction(UIAlertAction(title: "CHECKIN_In".localized(), style: .default, handler: { action in
+            let alertMain = alertService.alertMain(title: "CHECKIN_Confirm_In".localized(), buttonTitle: "CHECKIN_In".localized(), buttonColor: .themeColor)
+            {
                 self.loadCheckIn(action: "in")
-            }))
-            alert.actions.last?.titleTextColor = .themeColor
+            }
+            present(alertMain, animated: true)
             
         case 2://Update
-            alert.title = "CHECKIN_Confirm_Update".localized()
-            alert.addAction(UIAlertAction(title: "CHECKIN_Update".localized(), style: .default, handler: { action in
+            let alertMain = alertService.alertMain(title: "CHECKIN_Confirm_Update".localized(), buttonTitle: "CHECKIN_Update".localized(), buttonColor: .themeColor)
+            {
                 self.loadCheckIn(action: "update")
-            }))
-            alert.actions.last?.titleTextColor = .themeColor
+            }
+            present(alertMain, animated: true)
             
         case 3://Check Out
             let alertSlide = alertService.alertSlide(title: "CHECKIN_Confirm_Out".localized(), slideTitle: "CHECKIN_Confirm_Swipe".localized()){
@@ -379,10 +374,6 @@ class CheckIn: UIViewController, UITextViewDelegate {
         default:
             break
         }
-        
-        alert.setColorAndFont()
-        
-        self.present(alert, animated: true)
     }
     
     

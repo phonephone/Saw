@@ -10,13 +10,27 @@ import SwiftyJSON
 
 class AlertService {
     
-    func alert(title: String, body: String, buttonTitle: String, completion: @escaping () -> Void) -> AlertVC {
+    func alertMain(title: String, buttonTitle: String, buttonColor: UIColor, completion: @escaping () -> Void) -> AlertMain {
         
-        let alertVC = UIStoryboard.alertStoryBoard.instantiateViewController(withIdentifier: "AlertVC") as! AlertVC
+        let alertVC = UIStoryboard.alertStoryBoard.instantiateViewController(withIdentifier: "AlertMain") as! AlertMain
+        
+        alertVC.alertTitle = title
+        alertVC.alertActionButtonTitle = buttonTitle
+        alertVC.alertActionButtonColor = buttonColor
+        
+        alertVC.buttonAction = completion
+        
+        return alertVC
+    }
+    
+    func alertMainWithBody(title: String, body: String, buttonTitle: String, buttonColor: UIColor, completion: @escaping () -> Void) -> AlertMainBody {
+        
+        let alertVC = UIStoryboard.alertStoryBoard.instantiateViewController(withIdentifier: "AlertMainBody") as! AlertMainBody
         
         alertVC.alertTitle = title
         alertVC.alertBody = body
         alertVC.alertActionButtonTitle = buttonTitle
+        alertVC.alertActionButtonColor = buttonColor
         
         alertVC.buttonAction = completion
         

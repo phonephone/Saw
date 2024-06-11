@@ -566,9 +566,11 @@ extension UIView {
     
     func setGradientBackground(colorTop: UIColor? = nil, colorBottom: UIColor? = nil, mainPage: Bool? = false){
         
-        for sublayer in self.layer.sublayers! {
-            if sublayer.name == "GRADIENT" {
-                sublayer.removeFromSuperlayer()
+        if let sublayerArray = self.layer.sublayers {
+            for sublayer in sublayerArray {
+                if sublayer.name == "GRADIENT" {
+                    sublayer.removeFromSuperlayer()
+                }
             }
         }
         

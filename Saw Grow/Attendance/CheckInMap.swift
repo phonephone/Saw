@@ -29,6 +29,8 @@ class CheckInMap: UIViewController {
     @IBOutlet weak var gpsBtn: MyButton!
     @IBOutlet weak var qrCodeBtn: MyButton!
     
+    @IBOutlet weak var updateBtn: MyButton!
+    
     @IBOutlet weak var myMap: GMSMapView!
     
     override func viewDidLoad() {
@@ -36,6 +38,10 @@ class CheckInMap: UIViewController {
         print("CHECK IN MAP")
         
         self.hideKeyboardWhenTappedAround()
+        
+        updateBtn.imageView?.contentMode = .scaleAspectFit
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(showUpdate), name: NSNotification.Name(rawValue: "showUpdate"), object: nil)
         
         // Initialize the location manager.
         locationManager = CLLocationManager()
@@ -67,6 +73,11 @@ class CheckInMap: UIViewController {
 //        }
         
         loadMap()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        NotificationCenter.default.removeObserver(self)
     }
     
     func loadMap() {
@@ -124,6 +135,16 @@ class CheckInMap: UIViewController {
     @IBAction func qrCodeClick(_ sender: UIButton) {
         gpsBtn.segmentOff()
         qrCodeBtn.segmentOn()
+    }
+    
+    @objc func showUpdate(_ notification: NSNotification) {
+        if let show = notification.object as? Bool {
+            updateBtn.isHidden = !show
+        }
+    }
+    
+    @IBAction func updateClick(_ sender: UIButton) {
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "updateClick"), object: sender)
     }
     
     @IBAction func back(_ sender: UIButton) {

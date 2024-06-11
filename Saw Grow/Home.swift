@@ -12,7 +12,6 @@ import ProgressHUD
 import SDWebImage
 import OverlayContainer
 import CoreLocation
-import FirebaseMessaging
 import Localize_Swift
 
 class Home: UIViewController, OverlayContainerViewControllerDelegate, UIScrollViewDelegate {
@@ -26,6 +25,8 @@ class Home: UIViewController, OverlayContainerViewControllerDelegate, UIScrollVi
     
     var announcementTimer: Timer?
     var announcementIndex: Int = 0
+    
+    let alertService = AlertService()
     
     @IBOutlet weak var categoryStack: UIStackView!
     
@@ -307,6 +308,14 @@ class Home: UIViewController, OverlayContainerViewControllerDelegate, UIScrollVi
                     vc.webUrlString = json["data"][0]["complete_setting_url"].stringValue
                     self.navigationController!.pushViewController(vc, animated: true)
                 }
+                else if json["data"][0]["flag_expire"] == "1" {
+                    let vc = UIStoryboard.mainStoryBoard.instantiateViewController(withIdentifier: "Web") as! Web
+                    vc.titleString = ""
+                    vc.webUrlString = json["data"][0]["flag_expire_url"].stringValue
+                    
+                    //let vc = UIStoryboard.mainStoryBoard.instantiateViewController(withIdentifier: "DemoExpired") as! DemoExpired
+                    self.navigationController!.pushViewController(vc, animated: true)
+                }
                 else if json["data"][0]["ispopup"].stringValue != popupShown {
                     self.popupPic.sd_setImage(with: URL(string:json["data"][0]["popup"][0]["image_url"].stringValue), placeholderImage: nil)
                     self.popupTitle.text = json["data"][0]["popup"][0]["title"].stringValue
@@ -356,20 +365,12 @@ class Home: UIViewController, OverlayContainerViewControllerDelegate, UIScrollVi
                 switch CLLocationManager.authorizationStatus() {
                 case .notDetermined, .restricted, .denied:
                     print("No access")
-                    let alert = UIAlertController(title: "HOME_Location_Denied".localized(), message: "HOME_Location_Allow".localized(), preferredStyle: .alert)
                     
-                    alert.addAction(UIAlertAction(title: "Cancel".localized(), style: .cancel, handler: { action in
-                        
-                    }))
-                    alert.actions.last?.titleTextColor = .buttonRed
-                    
-                    alert.addAction(UIAlertAction(title: "GO_Setting".localized(), style: .default, handler: { action in
-                        
+                    let alertMainBody = alertService.alertMainWithBody(title: "HOME_Location_Denied".localized(), body: "HOME_Location_Allow".localized(), buttonTitle: "GO_Setting".localized(), buttonColor: .themeColor)
+                    {
                         UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!, options: [:], completionHandler: nil)
-                    }))
-                    alert.actions.last?.titleTextColor = .themeColor
-                    
-                    self.present(alert, animated: true)
+                    }
+                    present(alertMainBody, animated: true)
                     
                 case .authorizedAlways, .authorizedWhenInUse:
                     print("Access")
@@ -391,14 +392,12 @@ class Home: UIViewController, OverlayContainerViewControllerDelegate, UIScrollVi
                 }
             } else {
                 print("Location Not enabled")
-                let alert = UIAlertController(title: "HOME_Location_Disable".localized(), message: "HOME_Location_Check".localized(), preferredStyle: .alert)
                 
-                alert.addAction(UIAlertAction(title: "OK".localized(), style: .default, handler: { action in
-                    //UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!, options: [:], completionHandler: nil)
-                }))
-                alert.actions.last?.titleTextColor = .themeColor
-                
-                self.present(alert, animated: true)
+                let alertMainBody = alertService.alertMainWithBody(title: "HOME_Location_Disable".localized(), body: "HOME_Location_Check".localized(), buttonTitle: "OK".localized(), buttonColor: .themeColor)
+                {
+                    
+                }
+                present(alertMainBody, animated: true)
             }
             
         case "QUICK_ATTENDANCE"://Attendance

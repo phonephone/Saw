@@ -18,6 +18,8 @@ class EDocHistory: UIViewController  {
     var edocName:String?
     var edocType:edocType?
     
+    let alertService = AlertService()
+    
     @IBOutlet weak var myCollectionView: UICollectionView!
     
     override func viewWillAppear(_ animated: Bool) {
@@ -265,23 +267,11 @@ extension EDocHistory: UICollectionViewDelegate {
         
         let cellArray = self.historyJSON![indexPath.item]
         
-        var alert = UIAlertController()
-        
-        alert = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Cancel".localized(), style: .default, handler: { action in
-            
-        }))
-        //alert.actions.last?.titleTextColor = .buttonRed
-        
-        alert.title = "Confirm_Delete".localized()
-        //alert.message = "plaes make sure before..."
-        alert.addAction(UIAlertAction(title: "Delete".localized(), style: .default, handler: { action in
+        let alertMain = alertService.alertMain(title: "Confirm_Delete".localized(), buttonTitle: "Delete".localized(), buttonColor: .buttonRed)
+        {
             self.loadDelete(requestID:cellArray["request_id"].stringValue)
-        }))
-        alert.actions.last?.titleTextColor = .buttonRed
-        alert.setColorAndFont()
-        
-        self.present(alert, animated: true)
+        }
+        present(alertMain, animated: true)
     }
     
     func loadDelete(requestID:String) {

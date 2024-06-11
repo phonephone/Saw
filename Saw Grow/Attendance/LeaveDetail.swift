@@ -28,6 +28,8 @@ class LeaveDetail: UIViewController {
     
     var setColor: Bool = true
     
+    let alertService = AlertService()
+    
     @IBOutlet weak var headerView: UIView!
     
     @IBOutlet weak var headerTitle: UILabel!
@@ -603,16 +605,8 @@ extension LeaveDetail: UITableViewDelegate {
         //print("Delete \(indexPath.section) - \(indexPath.item)")
         //let cellArray = self.detailJSON![indexPath.item]
         
-        var alert = UIAlertController()
-        alert = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
-        alert.title = "LEAVE_DETAIL_Confirm_Cancel".localized()
-        //alert.message = "plaes make sure before..."
-        
-        alert.addAction(UIAlertAction(title: "Cancel".localized(), style: .default, handler: { action in
-        }))
-        
-        alert.addAction(UIAlertAction(title: "Confirm".localized(), style: .default, handler: { action in
-            
+        let alertMain = alertService.alertMain(title: "LEAVE_DETAIL_Confirm_Cancel".localized(), buttonTitle: "Confirm".localized(), buttonColor: .buttonRed)
+        {
             if self.mode == .shift {
                 self.loadAction(requestID: self.detailJSON!["timerequest_id"].stringValue, statusID:"3", reason:"LEAVE_Cancel_Employee".localized(), iswithdraw:"0")
             }
@@ -622,11 +616,8 @@ extension LeaveDetail: UITableViewDelegate {
             else{
                 self.loadAction(requestID: self.detailJSON!["request_id"].stringValue, statusID:"3", reason:"LEAVE_Cancel_Employee".localized(), iswithdraw:"0")
             }
-        }))
-        alert.actions.last?.titleTextColor = .buttonRed
-        alert.setColorAndFont()
-        
-        self.present(alert, animated: true)
+        }
+        present(alertMain, animated: true)
     }
     
     @IBAction func withdrawClick(_ sender: UIButton) {
@@ -643,21 +634,11 @@ extension LeaveDetail: UITableViewDelegate {
         //print("Delete \(indexPath.section) - \(indexPath.item)")
         //let cellArray = self.detailJSON![indexPath.item]
         
-        var alert = UIAlertController()
-        alert = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
-        alert.title = "LEAVE_DETAIL_Confirm_Withdraw".localized()
-
-        alert.addAction(UIAlertAction(title: "Cancel".localized(), style: .default, handler: { action in
-
-        }))
-
-        alert.addAction(UIAlertAction(title: "LEAVE_DETAIL_Withdraw".localized(), style: .default, handler: { action in
+        let alertMain = alertService.alertMain(title: "LEAVE_DETAIL_Confirm_Withdraw".localized(), buttonTitle: "LEAVE_DETAIL_Withdraw".localized(), buttonColor: .buttonRed)
+        {
             self.loadAction(requestID: self.detailJSON!["request_id"].stringValue, statusID:"1", reason:"LEAVE_DETAIL_Withdraw".localized(), iswithdraw:"1")
-        }))
-        alert.actions.last?.titleTextColor = .buttonRed
-        alert.setColorAndFont()
-
-        self.present(alert, animated: true)
+        }
+        present(alertMain, animated: true)
     }
     
     @IBAction func acceptClick(_ sender: UIButton) {
@@ -674,21 +655,11 @@ extension LeaveDetail: UITableViewDelegate {
         //print("Delete \(indexPath.section) - \(indexPath.item)")
         //let cellArray = self.detailJSON![indexPath.item]
         
-        var alert = UIAlertController()
-        alert = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
-        alert.title = "LEAVE_DETAIL_Confirm_Accept".localized()
-
-        alert.addAction(UIAlertAction(title: "Cancel".localized(), style: .default, handler: { action in
-
-        }))
-
-        alert.addAction(UIAlertAction(title: "LEAVE_DETAIL_Accept".localized(), style: .default, handler: { action in
+        let alertMain = alertService.alertMain(title: "LEAVE_DETAIL_Confirm_Accept".localized(), buttonTitle: "LEAVE_DETAIL_Accept".localized(), buttonColor: .buttonGreen)
+        {
             self.loadAction(requestID: self.detailJSON!["timerequest_id"].stringValue, statusID:"1", reason:"", iswithdraw:"0")
-        }))
-        alert.actions.last?.titleTextColor = .buttonGreen
-        alert.setColorAndFont()
-
-        self.present(alert, animated: true)
+        }
+        present(alertMain, animated: true)
     }
     
     func loadAction(requestID:String, statusID:String, reason:String ,iswithdraw:String) {

@@ -16,6 +16,7 @@ class AlertVC : UIViewController {
     var alertTitle = String()
     var alertBody = String()
     var alertActionButtonTitle = String()
+    var alertActionButtonColor = UIColor()
     
     var buttonAction: (() -> Void)?
     
@@ -29,6 +30,7 @@ class AlertVC : UIViewController {
         titleLabel.text = alertTitle
         bodyLabel.text = alertBody
         actionButton.setTitle(alertActionButtonTitle, for: .normal)
+        actionButton.backgroundColor = alertActionButtonColor
     }
     
     @IBAction func didTapCancel(_ sender: UIButton) {

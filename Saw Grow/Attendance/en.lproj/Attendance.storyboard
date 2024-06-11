@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -40,19 +40,19 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bannai Ratchada Soi5 Apartment" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1BV-go-Juk">
-                                        <rect key="frame" x="59" y="18" width="335" height="33"/>
+                                        <rect key="frame" x="59" y="18" width="335" height="26"/>
                                         <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="22"/>
                                         <color key="textColor" name="Text_Dark_Gray"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fri, Sep 2021 14:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nrg-2l-oJz">
-                                        <rect key="frame" x="59" y="51" width="121" height="22.5"/>
+                                        <rect key="frame" x="59" y="44" width="131.5" height="17.5"/>
                                         <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="15"/>
                                         <color key="textColor" name="Text_Gray_2"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="kLo-qS-xKh" customClass="MyTextView" customModule="Saw_Grow" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="83.5" width="374" height="309.5"/>
+                                        <rect key="frame" x="20" y="71.5" width="374" height="321.5"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <color key="textColor" name="Text_Dark_Gray"/>
@@ -356,6 +356,29 @@
                                 <rect key="frame" x="0.0" y="537.5" width="414" height="358.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
+                            <button hidden="YES" opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g4G-zx-Eq8" customClass="MyButton" customModule="Saw_Grow" customModuleProvider="target">
+                                <rect key="frame" x="279" y="54.5" width="120" height="30"/>
+                                <color key="backgroundColor" name="Main_Theme_1"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="g4G-zx-Eq8" secondAttribute="height" multiplier="4:1" id="WHI-Ms-oWa"/>
+                                    <constraint firstAttribute="height" constant="30" id="afM-r5-fPu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="18"/>
+                                <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="8" maxX="5" maxY="8"/>
+                                <state key="normal" title="Update" image="checkin_update">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="CHECKIN_Update"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="updateClick:" destination="ZU4-ok-d0i" eventType="touchUpInside" id="0vn-cr-YNo"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="65u-Nf-DoH"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -363,7 +386,9 @@
                             <constraint firstItem="Ive-4L-aHh" firstAttribute="leading" secondItem="65u-Nf-DoH" secondAttribute="leading" constant="20" id="7B1-gY-276"/>
                             <constraint firstAttribute="bottom" secondItem="QXT-NK-GTm" secondAttribute="bottom" id="KwU-67-nTG"/>
                             <constraint firstItem="QXT-NK-GTm" firstAttribute="leading" secondItem="65u-Nf-DoH" secondAttribute="leading" id="Ptq-Ld-2a1"/>
+                            <constraint firstItem="65u-Nf-DoH" firstAttribute="trailing" secondItem="g4G-zx-Eq8" secondAttribute="trailing" constant="15" id="Qiz-In-ZEP"/>
                             <constraint firstItem="m4c-6t-F9r" firstAttribute="trailing" secondItem="65u-Nf-DoH" secondAttribute="trailing" id="SVz-ks-VZ7"/>
+                            <constraint firstItem="g4G-zx-Eq8" firstAttribute="centerY" secondItem="Ive-4L-aHh" secondAttribute="centerY" id="YWh-eu-Yld"/>
                             <constraint firstItem="QXT-NK-GTm" firstAttribute="trailing" secondItem="65u-Nf-DoH" secondAttribute="trailing" id="Ycp-Zb-63U"/>
                             <constraint firstItem="m4c-6t-F9r" firstAttribute="leading" secondItem="65u-Nf-DoH" secondAttribute="leading" id="c8P-I9-jU9"/>
                             <constraint firstItem="QXT-NK-GTm" firstAttribute="height" secondItem="0He-bd-sIq" secondAttribute="height" multiplier="0.4" id="eGk-FZ-wsM"/>
@@ -376,11 +401,12 @@
                         <outlet property="gpsBtn" destination="YbN-6O-Ufq" id="B4r-sC-fUa"/>
                         <outlet property="myMap" destination="355-fU-VOE" id="Gbs-LA-Lqf"/>
                         <outlet property="qrCodeBtn" destination="2bb-cb-xOW" id="MSD-3C-V7Q"/>
+                        <outlet property="updateBtn" destination="g4G-zx-Eq8" id="0nO-WU-BEV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QK4-Du-aiX" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4061" y="-1175"/>
+            <point key="canvasLocation" x="4060.8695652173915" y="-1175.2232142857142"/>
         </scene>
         <!--Leave-->
         <scene sceneID="86r-3T-SdA">
@@ -484,7 +510,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Leave Request" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gcK-Zf-mWs">
-                                        <rect key="frame" x="142" y="15.5" width="130.5" height="30"/>
+                                        <rect key="frame" x="140.5" y="19" width="133.5" height="23.5"/>
                                         <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="20"/>
                                         <color key="textColor" name="Text_White"/>
                                         <nil key="highlightedColor"/>
@@ -569,7 +595,7 @@
                                                                         <state key="normal" image="form_type_off"/>
                                                                     </button>
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Leave Type" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yMr-bR-Oge">
-                                                                        <rect key="frame" x="0.0" y="16.5" width="299" height="25.5"/>
+                                                                        <rect key="frame" x="0.0" y="19" width="299" height="20.5"/>
                                                                         <color key="textColor" name="Text_Dark_Gray"/>
                                                                         <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="16"/>
                                                                         <textInputTraits key="textInputTraits"/>
@@ -623,7 +649,7 @@
                                                                                 <state key="normal" image="form_date_off"/>
                                                                             </button>
                                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Start Date" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U0A-67-dXW">
-                                                                                <rect key="frame" x="30" y="16.5" width="124.5" height="25.5"/>
+                                                                                <rect key="frame" x="30" y="19" width="124.5" height="20.5"/>
                                                                                 <color key="textColor" name="Text_Dark_Gray"/>
                                                                                 <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="16"/>
                                                                                 <textInputTraits key="textInputTraits"/>
@@ -663,7 +689,7 @@
                                                                                 <state key="normal" image="form_date_off"/>
                                                                             </button>
                                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="End Date" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H0W-ic-K9D">
-                                                                                <rect key="frame" x="27" y="16.5" width="127.5" height="25.5"/>
+                                                                                <rect key="frame" x="27" y="19" width="127.5" height="20.5"/>
                                                                                 <color key="textColor" name="Text_Dark_Gray"/>
                                                                                 <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="16"/>
                                                                                 <textInputTraits key="textInputTraits"/>
@@ -839,7 +865,7 @@
                                                                                 <state key="normal" image="form_time_off"/>
                                                                             </button>
                                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Start Time" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Iv7-e7-MVl">
-                                                                                <rect key="frame" x="30" y="16" width="124.5" height="25.5"/>
+                                                                                <rect key="frame" x="30" y="18.5" width="124.5" height="20.5"/>
                                                                                 <color key="textColor" name="Text_Dark_Gray"/>
                                                                                 <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="16"/>
                                                                                 <textInputTraits key="textInputTraits"/>
@@ -879,7 +905,7 @@
                                                                                 <state key="normal" image="form_time_off"/>
                                                                             </button>
                                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="End Time" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yPA-Zx-bL3">
-                                                                                <rect key="frame" x="27" y="16" width="127.5" height="25.5"/>
+                                                                                <rect key="frame" x="27" y="18.5" width="127.5" height="20.5"/>
                                                                                 <color key="textColor" name="Text_Dark_Gray"/>
                                                                                 <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="16"/>
                                                                                 <textInputTraits key="textInputTraits"/>
@@ -938,7 +964,7 @@
                                                                 <rect key="frame" x="20" y="0.0" width="339" height="58"/>
                                                                 <subviews>
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Head of Department" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uzl-yv-6Df">
-                                                                        <rect key="frame" x="0.0" y="16" width="299" height="25.5"/>
+                                                                        <rect key="frame" x="0.0" y="18.5" width="299" height="20.5"/>
                                                                         <color key="textColor" name="Text_Dark_Gray"/>
                                                                         <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="16"/>
                                                                         <textInputTraits key="textInputTraits"/>
@@ -1595,7 +1621,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Leave Detail" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FPe-Jl-Lob">
-                                        <rect key="frame" x="151.5" y="15" width="111.5" height="30"/>
+                                        <rect key="frame" x="152" y="18.5" width="110" height="23.5"/>
                                         <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="20"/>
                                         <color key="textColor" name="Text_White"/>
                                         <nil key="highlightedColor"/>
@@ -1692,14 +1718,14 @@
                                                 </connections>
                                             </tableViewCell>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LeaveDetail_Standard" id="8Xs-Ld-cOA" customClass="LeaveDetail_Cell" customModule="Saw_Grow" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="157" width="374" height="86"/>
+                                                <rect key="frame" x="0.0" y="157" width="374" height="81"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8Xs-Ld-cOA" id="WJ8-6s-9VL">
-                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="86"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="81"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="F7j-kr-5UE">
-                                                            <rect key="frame" x="20" y="15" width="334" height="56"/>
+                                                            <rect key="frame" x="20" y="15" width="334" height="51"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Duration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xXV-NG-WLm">
                                                                     <rect key="frame" x="0.0" y="0.0" width="334" height="18"/>
@@ -1711,7 +1737,7 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="September 22,2021 - September 25,2021" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ckv-mH-jg6">
-                                                                    <rect key="frame" x="0.0" y="33" width="334" height="23"/>
+                                                                    <rect key="frame" x="0.0" y="33" width="334" height="18"/>
                                                                     <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="15"/>
                                                                     <color key="textColor" name="Text_Dark_Gray"/>
                                                                     <nil key="highlightedColor"/>
@@ -1737,14 +1763,14 @@
                                                 </connections>
                                             </tableViewCell>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LeaveDetail_DoubleColumn" id="jyU-ah-uJF" customClass="LeaveDetail_Cell" customModule="Saw_Grow" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="243" width="374" height="86"/>
+                                                <rect key="frame" x="0.0" y="238" width="374" height="81"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jyU-ah-uJF" id="BCG-VT-dG3">
-                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="86"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="81"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="tut-7o-S6F">
-                                                            <rect key="frame" x="20" y="15" width="167" height="56"/>
+                                                            <rect key="frame" x="20" y="15" width="167" height="51"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Attendance Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bW4-9Y-amt">
                                                                     <rect key="frame" x="0.0" y="0.0" width="167" height="18"/>
@@ -1756,7 +1782,7 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8:30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PIF-vQ-54a">
-                                                                    <rect key="frame" x="0.0" y="33" width="167" height="23"/>
+                                                                    <rect key="frame" x="0.0" y="33" width="167" height="18"/>
                                                                     <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="15"/>
                                                                     <color key="textColor" name="Text_Dark_Gray"/>
                                                                     <nil key="highlightedColor"/>
@@ -1764,7 +1790,7 @@
                                                             </subviews>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="R7Z-gE-RAQ">
-                                                            <rect key="frame" x="187" y="15" width="167" height="56"/>
+                                                            <rect key="frame" x="187" y="15" width="167" height="51"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change To" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8OP-VB-ddj">
                                                                     <rect key="frame" x="0.0" y="0.0" width="167" height="18"/>
@@ -1776,7 +1802,7 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QBI-ts-uL3">
-                                                                    <rect key="frame" x="0.0" y="33" width="167" height="23"/>
+                                                                    <rect key="frame" x="0.0" y="33" width="167" height="18"/>
                                                                     <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="15"/>
                                                                     <color key="textColor" name="Text_Dark_Gray"/>
                                                                     <nil key="highlightedColor"/>
@@ -1808,7 +1834,7 @@
                                                 </connections>
                                             </tableViewCell>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LeaveDetail_Head" id="EdD-HM-gAi" customClass="LeaveDetail_Cell" customModule="Saw_Grow" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="329" width="374" height="140.5"/>
+                                                <rect key="frame" x="0.0" y="319" width="374" height="140.5"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EdD-HM-gAi" id="bOr-6P-S19">
                                                     <rect key="frame" x="0.0" y="0.0" width="374" height="140.5"/>
@@ -1833,16 +1859,16 @@
                                                                             </userDefinedRuntimeAttributes>
                                                                         </imageView>
                                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="TiW-3g-sEe">
-                                                                            <rect key="frame" x="57" y="0.0" width="141.5" height="46.5"/>
+                                                                            <rect key="frame" x="57" y="0.0" width="142.5" height="46.5"/>
                                                                             <subviews>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Awiruth Suwannarat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="saG-Ht-OIg">
-                                                                                    <rect key="frame" x="0.0" y="0.0" width="141.5" height="23.5"/>
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="142.5" height="23.5"/>
                                                                                     <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="15"/>
                                                                                     <color key="textColor" name="Text_Dark_Gray"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cheif Technology Officer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nLE-qa-H0n">
-                                                                                    <rect key="frame" x="0.0" y="23.5" width="141.5" height="23"/>
+                                                                                    <rect key="frame" x="0.0" y="23.5" width="142.5" height="23"/>
                                                                                     <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="13"/>
                                                                                     <color key="textColor" name="Text_Dark_Gray"/>
                                                                                     <nil key="highlightedColor"/>
@@ -1850,7 +1876,7 @@
                                                                             </subviews>
                                                                         </stackView>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reject" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sjo-Kh-gd3">
-                                                                            <rect key="frame" x="209.5" y="0.0" width="124.5" height="46.5"/>
+                                                                            <rect key="frame" x="210.5" y="0.0" width="123.5" height="46.5"/>
                                                                             <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="15"/>
                                                                             <color key="textColor" name="Text_Red"/>
                                                                             <nil key="highlightedColor"/>
@@ -1934,14 +1960,14 @@
                                                 </connections>
                                             </tableViewCell>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LeaveDetail_Reason" id="aMW-e8-6Qs" customClass="LeaveDetail_Cell" customModule="Saw_Grow" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="469.5" width="374" height="435"/>
+                                                <rect key="frame" x="0.0" y="459.5" width="374" height="430"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aMW-e8-6Qs" id="MIi-bO-PES">
-                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="435"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="430"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="h9u-dW-Mxs">
-                                                            <rect key="frame" x="20" y="15" width="334" height="405"/>
+                                                            <rect key="frame" x="20" y="15" width="334" height="400"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reason" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cmK-lp-Zf7">
                                                                     <rect key="frame" x="0.0" y="0.0" width="334" height="18"/>
@@ -1953,13 +1979,13 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reason" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ihe-eg-3Md">
-                                                                    <rect key="frame" x="0.0" y="33" width="334" height="23"/>
+                                                                    <rect key="frame" x="0.0" y="33" width="334" height="18"/>
                                                                     <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="15"/>
                                                                     <color key="textColor" name="Text_Dark_Gray"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vo9-lA-Vcs">
-                                                                    <rect key="frame" x="0.0" y="71" width="334" height="334"/>
+                                                                    <rect key="frame" x="0.0" y="66" width="334" height="334"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" secondItem="Vo9-lA-Vcs" secondAttribute="height" multiplier="1:1" id="AF0-6W-Sgy"/>
                                                                     </constraints>
@@ -1986,14 +2012,14 @@
                                                 </connections>
                                             </tableViewCell>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LeaveDetail_Shift" rowHeight="201" id="6de-Hj-hW3" customClass="LeaveDetail_Cell" customModule="Saw_Grow" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="904.5" width="374" height="201"/>
+                                                <rect key="frame" x="0.0" y="889.5" width="374" height="201"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6de-Hj-hW3" id="mex-g4-x6g">
                                                     <rect key="frame" x="0.0" y="0.0" width="374" height="201"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Request" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GLX-uW-GuP">
-                                                            <rect key="frame" x="20" y="15" width="314" height="19"/>
+                                                            <rect key="frame" x="20" y="15" width="314" height="23.5"/>
                                                             <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="15"/>
                                                             <color key="textColor" name="Text_Gray"/>
                                                             <nil key="highlightedColor"/>
@@ -2002,7 +2028,7 @@
                                                             </userDefinedRuntimeAttributes>
                                                         </label>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="sPy-Hr-eY3">
-                                                            <rect key="frame" x="10" y="44" width="162" height="134"/>
+                                                            <rect key="frame" x="10" y="48.5" width="162" height="129.5"/>
                                                             <subviews>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="demo_profile1" translatesAutoresizingMaskIntoConstraints="NO" id="fKb-yt-7oR" customClass="MyImageView" customModule="Saw_Grow" customModuleProvider="target">
                                                                     <rect key="frame" x="49" y="0.0" width="64" height="64"/>
@@ -2017,22 +2043,22 @@
                                                                     </userDefinedRuntimeAttributes>
                                                                 </imageView>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="XRb-wf-2BE">
-                                                                    <rect key="frame" x="14" y="74" width="134" height="60"/>
+                                                                    <rect key="frame" x="14" y="74" width="134.5" height="55.5"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phongkhanet Kaewrit" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dkq-Vi-kUW">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="134" height="18"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="134.5" height="16.5"/>
                                                                             <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="14"/>
                                                                             <color key="textColor" name="Text_Dark_Gray"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="27 September 2021" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EbT-a5-2fq">
-                                                                            <rect key="frame" x="0.0" y="21" width="134" height="18"/>
+                                                                            <rect key="frame" x="0.0" y="19.5" width="134.5" height="16.5"/>
                                                                             <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="12"/>
                                                                             <color key="textColor" name="Text_Gray_1"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="13:00 - 17:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tCG-ga-TG8">
-                                                                            <rect key="frame" x="0.0" y="42" width="134" height="18"/>
+                                                                            <rect key="frame" x="0.0" y="39" width="134.5" height="16.5"/>
                                                                             <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="12"/>
                                                                             <color key="textColor" name="Text_Gray"/>
                                                                             <nil key="highlightedColor"/>
@@ -2042,14 +2068,14 @@
                                                             </subviews>
                                                         </stackView>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="swap_icon" translatesAutoresizingMaskIntoConstraints="NO" id="eb9-mM-xio">
-                                                            <rect key="frame" x="177" y="66" width="20" height="20"/>
+                                                            <rect key="frame" x="177" y="70.5" width="20" height="20"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="eb9-mM-xio" secondAttribute="height" multiplier="1:1" id="5Bn-5j-ZPd"/>
                                                                 <constraint firstAttribute="width" constant="20" id="5qt-N3-dea"/>
                                                             </constraints>
                                                         </imageView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="6ah-uw-002">
-                                                            <rect key="frame" x="202" y="44" width="162" height="134"/>
+                                                            <rect key="frame" x="202" y="48.5" width="162" height="129.5"/>
                                                             <subviews>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="demo_profile2" translatesAutoresizingMaskIntoConstraints="NO" id="ghR-j5-kOO" customClass="MyImageView" customModule="Saw_Grow" customModuleProvider="target">
                                                                     <rect key="frame" x="49" y="0.0" width="64" height="64"/>
@@ -2064,22 +2090,22 @@
                                                                     </userDefinedRuntimeAttributes>
                                                                 </imageView>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="4c3-aY-2pR">
-                                                                    <rect key="frame" x="28.5" y="74" width="105" height="60"/>
+                                                                    <rect key="frame" x="28" y="74" width="106.5" height="55.5"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kasidate Suksart" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="arL-cJ-Tnf">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="105" height="18"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="106.5" height="16.5"/>
                                                                             <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="14"/>
                                                                             <color key="textColor" name="Text_Dark_Gray"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25 September 2021" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dE3-2L-kxR">
-                                                                            <rect key="frame" x="0.0" y="21" width="105" height="18"/>
+                                                                            <rect key="frame" x="0.0" y="19.5" width="106.5" height="16.5"/>
                                                                             <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="12"/>
                                                                             <color key="textColor" name="Text_Gray_1"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="08:00 - 12:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hKc-cd-lfm">
-                                                                            <rect key="frame" x="0.0" y="42" width="105" height="18"/>
+                                                                            <rect key="frame" x="0.0" y="39" width="106.5" height="16.5"/>
                                                                             <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="12"/>
                                                                             <color key="textColor" name="Text_Gray"/>
                                                                             <nil key="highlightedColor"/>
@@ -2240,7 +2266,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Working Hours" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0qj-l2-glg">
-                                        <rect key="frame" x="141" y="15.5" width="132.5" height="30"/>
+                                        <rect key="frame" x="141" y="19" width="132.5" height="23.5"/>
                                         <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="20"/>
                                         <color key="textColor" name="Text_White"/>
                                         <nil key="highlightedColor"/>
@@ -2321,7 +2347,7 @@
                                                                 <state key="normal" image="form_date_off"/>
                                                             </button>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Select Month,Year" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="acO-F1-7ae">
-                                                                <rect key="frame" x="40" y="16.5" width="259" height="25.5"/>
+                                                                <rect key="frame" x="40" y="19" width="259" height="20.5"/>
                                                                 <color key="textColor" name="Text_Dark_Gray"/>
                                                                 <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="16"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -2372,7 +2398,7 @@
                                                                 <state key="normal" image="form_date_off"/>
                                                             </button>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Select Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XaX-ld-TtG">
-                                                                <rect key="frame" x="40" y="16.5" width="259" height="25.5"/>
+                                                                <rect key="frame" x="40" y="19" width="259" height="20.5"/>
                                                                 <color key="textColor" name="Text_Dark_Gray"/>
                                                                 <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="16"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -2426,7 +2452,7 @@
                                                                         <state key="normal" image="form_date_off"/>
                                                                     </button>
                                                                     <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Normal Time" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wcM-1m-Dpg">
-                                                                        <rect key="frame" x="0.0" y="16.5" width="154.5" height="25.5"/>
+                                                                        <rect key="frame" x="0.0" y="19" width="154.5" height="20.5"/>
                                                                         <color key="textColor" name="Main_Theme_1"/>
                                                                         <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="16"/>
                                                                         <textInputTraits key="textInputTraits"/>
@@ -2466,7 +2492,7 @@
                                                                         <state key="normal" image="form_date_off"/>
                                                                     </button>
                                                                     <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Attendance Time" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wq3-4m-Nhx">
-                                                                        <rect key="frame" x="0.0" y="16.5" width="154.5" height="25.5"/>
+                                                                        <rect key="frame" x="0.0" y="19" width="154.5" height="20.5"/>
                                                                         <color key="textColor" name="Btn_Red"/>
                                                                         <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="16"/>
                                                                         <textInputTraits key="textInputTraits"/>
@@ -2508,7 +2534,7 @@
                                                                 <state key="normal" image="form_time_off"/>
                                                             </button>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Time Attendance Request" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1eo-4c-av6">
-                                                                <rect key="frame" x="40" y="16.5" width="259" height="25.5"/>
+                                                                <rect key="frame" x="40" y="19" width="259" height="20.5"/>
                                                                 <color key="textColor" name="Text_Dark_Gray"/>
                                                                 <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="16"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -2798,7 +2824,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OT Request" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OJW-MM-haY">
-                                        <rect key="frame" x="155.5" y="15.5" width="103" height="30"/>
+                                        <rect key="frame" x="153.5" y="19" width="107" height="23.5"/>
                                         <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="20"/>
                                         <color key="textColor" name="Text_White"/>
                                         <nil key="highlightedColor"/>
@@ -2938,7 +2964,7 @@
                                                                 <state key="normal" image="form_date_off"/>
                                                             </button>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Select Month,Year" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tns-XN-6By">
-                                                                <rect key="frame" x="40" y="16.5" width="241" height="25.5"/>
+                                                                <rect key="frame" x="40" y="19" width="241" height="20.5"/>
                                                                 <color key="textColor" name="Text_Dark_Gray"/>
                                                                 <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="16"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -3008,19 +3034,19 @@
                                                                     <rect key="frame" x="20" y="10" width="265" height="66"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="17 October 2021" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RtX-dc-Ejo">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="96" height="18.5"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="106" height="18.5"/>
                                                                             <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="14"/>
                                                                             <color key="textColor" name="Text_Dark_Gray"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OT Time : 17:00 - 18:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="orH-w5-eaj">
-                                                                            <rect key="frame" x="0.0" y="23.5" width="139" height="19"/>
+                                                                            <rect key="frame" x="0.0" y="23.5" width="148.5" height="19"/>
                                                                             <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="14"/>
                                                                             <color key="textColor" name="Main_Theme_1"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total 1 Hours" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HMH-I4-t1r">
-                                                                            <rect key="frame" x="0.0" y="47.5" width="79.5" height="18.5"/>
+                                                                            <rect key="frame" x="0.0" y="47.5" width="83" height="18.5"/>
                                                                             <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="14"/>
                                                                             <color key="textColor" name="Main_Theme_1"/>
                                                                             <nil key="highlightedColor"/>
@@ -3080,19 +3106,19 @@
                                                                     <rect key="frame" x="20" y="10" width="265" height="66"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="22 October 2021" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kEM-Tv-ORf">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="99" height="18.5"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="106" height="18.5"/>
                                                                             <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="14"/>
                                                                             <color key="textColor" name="Text_Dark_Gray"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OT Time : 17:00 - 19:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R3u-hq-hKH">
-                                                                            <rect key="frame" x="0.0" y="23.5" width="139" height="19"/>
+                                                                            <rect key="frame" x="0.0" y="23.5" width="148.5" height="19"/>
                                                                             <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="14"/>
                                                                             <color key="textColor" name="Main_Theme_1"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total 2 Hours" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pCY-1v-gEl">
-                                                                            <rect key="frame" x="0.0" y="47.5" width="82" height="18.5"/>
+                                                                            <rect key="frame" x="0.0" y="47.5" width="83" height="18.5"/>
                                                                             <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="14"/>
                                                                             <color key="textColor" name="Main_Theme_1"/>
                                                                             <nil key="highlightedColor"/>
@@ -3160,7 +3186,7 @@
                                                         <rect key="frame" x="10" y="10" width="354" height="90"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please update all Attendance Request !" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EIT-ir-ZA6">
-                                                                <rect key="frame" x="0.0" y="0.0" width="263.5" height="31.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="264" height="31"/>
                                                                 <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="15"/>
                                                                 <color key="textColor" name="Btn_Red"/>
                                                                 <nil key="highlightedColor"/>
@@ -3169,7 +3195,7 @@
                                                                 </userDefinedRuntimeAttributes>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7fU-Cp-cSx" customClass="MyLabelTopAligned" customModule="Saw_Grow" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="31.5" width="333.5" height="58.5"/>
+                                                                <rect key="frame" x="0.0" y="31" width="332" height="59"/>
                                                                 <string key="text">For the accuracy of the information and your benefits
 Please update all attendance before OT Request.</string>
                                                                 <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="14"/>
@@ -3603,7 +3629,7 @@ Please update all attendance before OT Request.</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OT Request" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hfO-Ns-HOM">
-                                        <rect key="frame" x="155.5" y="15" width="103" height="30"/>
+                                        <rect key="frame" x="153.5" y="18.5" width="107" height="23.5"/>
                                         <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="20"/>
                                         <color key="textColor" name="Text_White"/>
                                         <nil key="highlightedColor"/>
@@ -3645,7 +3671,7 @@ Please update all attendance before OT Request.</string>
                                                                 <state key="normal" image="form_type_off"/>
                                                             </button>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="OT Type" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ksl-52-8lk">
-                                                                <rect key="frame" x="0.0" y="16.5" width="299" height="25.5"/>
+                                                                <rect key="frame" x="0.0" y="19" width="299" height="20.5"/>
                                                                 <color key="textColor" name="Text_Dark_Gray"/>
                                                                 <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="16"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -3696,7 +3722,7 @@ Please update all attendance before OT Request.</string>
                                                                 <state key="normal" image="form_date_off"/>
                                                             </button>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Start Date &amp; Time" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hem-Tp-qnD">
-                                                                <rect key="frame" x="40" y="16.5" width="259" height="25.5"/>
+                                                                <rect key="frame" x="40" y="19" width="259" height="20.5"/>
                                                                 <color key="textColor" name="Text_Dark_Gray"/>
                                                                 <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="16"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -3748,7 +3774,7 @@ Please update all attendance before OT Request.</string>
                                                                 <state key="normal" image="form_time_off"/>
                                                             </button>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Hour" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nrt-RV-eGj">
-                                                                <rect key="frame" x="40" y="16.5" width="259" height="25.5"/>
+                                                                <rect key="frame" x="40" y="19" width="259" height="20.5"/>
                                                                 <color key="textColor" name="Text_Dark_Gray"/>
                                                                 <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="16"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -3800,7 +3826,7 @@ Please update all attendance before OT Request.</string>
                                                                 <state key="normal" image="form_date_off"/>
                                                             </button>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="End Date &amp; Time" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZMK-Ny-oSz">
-                                                                <rect key="frame" x="40" y="16.5" width="299" height="25.5"/>
+                                                                <rect key="frame" x="40" y="19" width="299" height="20.5"/>
                                                                 <color key="textColor" name="Text_Dark_Gray"/>
                                                                 <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="16"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -3870,7 +3896,7 @@ Please update all attendance before OT Request.</string>
                                                         <rect key="frame" x="20" y="0.0" width="339" height="58"/>
                                                         <subviews>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Head of Department" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fuR-hZ-L9o">
-                                                                <rect key="frame" x="0.0" y="16" width="299" height="25.5"/>
+                                                                <rect key="frame" x="0.0" y="18.5" width="299" height="20.5"/>
                                                                 <color key="textColor" name="Text_Dark_Gray"/>
                                                                 <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="16"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -4079,7 +4105,7 @@ Please update all attendance before OT Request.</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swap Shift" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ze1-dA-7E7">
-                                        <rect key="frame" x="159.5" y="15.5" width="95" height="30"/>
+                                        <rect key="frame" x="158.5" y="19" width="97.5" height="23.5"/>
                                         <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="20"/>
                                         <color key="textColor" name="Text_White"/>
                                         <nil key="highlightedColor"/>
@@ -4162,7 +4188,7 @@ Please update all attendance before OT Request.</string>
                                                                 <state key="normal" image="form_person_on"/>
                                                             </button>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Your Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pie-Lp-Ws1">
-                                                                <rect key="frame" x="40" y="16.5" width="299" height="25.5"/>
+                                                                <rect key="frame" x="40" y="19" width="299" height="20.5"/>
                                                                 <color key="textColor" name="Text_Dark_Gray"/>
                                                                 <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="16"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -4207,7 +4233,7 @@ Please update all attendance before OT Request.</string>
                                                                 <state key="normal" image="form_date_off"/>
                                                             </button>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Select Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l8w-eW-GqA">
-                                                                <rect key="frame" x="40" y="16.5" width="259" height="25.5"/>
+                                                                <rect key="frame" x="40" y="19" width="259" height="20.5"/>
                                                                 <color key="textColor" name="Text_Dark_Gray"/>
                                                                 <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="16"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -4259,7 +4285,7 @@ Please update all attendance before OT Request.</string>
                                                                 <state key="normal" image="form_person_off"/>
                                                             </button>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Select Person" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2WB-hQ-uj2">
-                                                                <rect key="frame" x="40" y="16.5" width="259" height="25.5"/>
+                                                                <rect key="frame" x="40" y="19" width="259" height="20.5"/>
                                                                 <color key="textColor" name="Text_Dark_Gray"/>
                                                                 <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="16"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -4310,7 +4336,7 @@ Please update all attendance before OT Request.</string>
                                                                 <state key="normal" image="form_date_off"/>
                                                             </button>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Select Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oDS-te-fzC">
-                                                                <rect key="frame" x="40" y="16.5" width="259" height="25.5"/>
+                                                                <rect key="frame" x="40" y="19" width="259" height="20.5"/>
                                                                 <color key="textColor" name="Text_Dark_Gray"/>
                                                                 <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="16"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -5181,7 +5207,7 @@ Please update all attendance before OT Request.</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Leave Request" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hX5-ak-ToI">
-                                        <rect key="frame" x="142" y="15.5" width="130.5" height="30"/>
+                                        <rect key="frame" x="140.5" y="19" width="133.5" height="23.5"/>
                                         <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="20"/>
                                         <color key="textColor" name="Text_White"/>
                                         <nil key="highlightedColor"/>
@@ -5813,7 +5839,7 @@ Please update all attendance before OT Request.</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Approve Detail" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nTr-oh-Odz">
-                                        <rect key="frame" x="139" y="15" width="136" height="30"/>
+                                        <rect key="frame" x="141.5" y="18.5" width="131.5" height="23.5"/>
                                         <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="20"/>
                                         <color key="textColor" name="Text_White"/>
                                         <nil key="highlightedColor"/>
@@ -5910,14 +5936,14 @@ Please update all attendance before OT Request.</string>
                                                 </connections>
                                             </tableViewCell>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ApproveDetail_Standard" id="uOk-ki-kok" customClass="ApproveDetail_Cell" customModule="Saw_Grow" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="157" width="374" height="86"/>
+                                                <rect key="frame" x="0.0" y="157" width="374" height="81"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uOk-ki-kok" id="JvH-Um-jun">
-                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="86"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="81"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="f1c-vx-wZm">
-                                                            <rect key="frame" x="20" y="15" width="334" height="56"/>
+                                                            <rect key="frame" x="20" y="15" width="334" height="51"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Duration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bhN-nq-hVu">
                                                                     <rect key="frame" x="0.0" y="0.0" width="334" height="18"/>
@@ -5929,7 +5955,7 @@ Please update all attendance before OT Request.</string>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="September 22,2021 - September 25,2021" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IeV-eZ-ZkI">
-                                                                    <rect key="frame" x="0.0" y="33" width="334" height="23"/>
+                                                                    <rect key="frame" x="0.0" y="33" width="334" height="18"/>
                                                                     <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="15"/>
                                                                     <color key="textColor" name="Text_Dark_Gray"/>
                                                                     <nil key="highlightedColor"/>
@@ -5955,14 +5981,14 @@ Please update all attendance before OT Request.</string>
                                                 </connections>
                                             </tableViewCell>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ApproveDetail_DoubleColumn" id="XCB-Gb-Ilj" customClass="ApproveDetail_Cell" customModule="Saw_Grow" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="243" width="374" height="86"/>
+                                                <rect key="frame" x="0.0" y="238" width="374" height="81"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XCB-Gb-Ilj" id="iNa-Ep-Lg7">
-                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="86"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="81"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="VjH-K7-LV1">
-                                                            <rect key="frame" x="20" y="15" width="167" height="56"/>
+                                                            <rect key="frame" x="20" y="15" width="167" height="51"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Attendance Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kMM-XR-5UK">
                                                                     <rect key="frame" x="0.0" y="0.0" width="167" height="18"/>
@@ -5974,7 +6000,7 @@ Please update all attendance before OT Request.</string>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8:30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GfR-Or-qHm">
-                                                                    <rect key="frame" x="0.0" y="33" width="167" height="23"/>
+                                                                    <rect key="frame" x="0.0" y="33" width="167" height="18"/>
                                                                     <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="15"/>
                                                                     <color key="textColor" name="Text_Dark_Gray"/>
                                                                     <nil key="highlightedColor"/>
@@ -5982,7 +6008,7 @@ Please update all attendance before OT Request.</string>
                                                             </subviews>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="ScY-6y-Irc">
-                                                            <rect key="frame" x="187" y="15" width="167" height="56"/>
+                                                            <rect key="frame" x="187" y="15" width="167" height="51"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change To" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ucm-tb-CYt">
                                                                     <rect key="frame" x="0.0" y="0.0" width="167" height="18"/>
@@ -5994,7 +6020,7 @@ Please update all attendance before OT Request.</string>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J80-gS-vq4">
-                                                                    <rect key="frame" x="0.0" y="33" width="167" height="23"/>
+                                                                    <rect key="frame" x="0.0" y="33" width="167" height="18"/>
                                                                     <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="15"/>
                                                                     <color key="textColor" name="Text_Dark_Gray"/>
                                                                     <nil key="highlightedColor"/>
@@ -6026,7 +6052,7 @@ Please update all attendance before OT Request.</string>
                                                 </connections>
                                             </tableViewCell>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ApproveDetail_Head" id="mJf-TD-oON" customClass="ApproveDetail_Cell" customModule="Saw_Grow" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="329" width="374" height="215.5"/>
+                                                <rect key="frame" x="0.0" y="319" width="374" height="215.5"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mJf-TD-oON" id="6CN-e0-NgP">
                                                     <rect key="frame" x="0.0" y="0.0" width="374" height="215.5"/>
@@ -6051,16 +6077,16 @@ Please update all attendance before OT Request.</string>
                                                                             </userDefinedRuntimeAttributes>
                                                                         </imageView>
                                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="5dO-uu-tYF">
-                                                                            <rect key="frame" x="57" y="0.0" width="141.5" height="46.5"/>
+                                                                            <rect key="frame" x="57" y="0.0" width="142.5" height="46.5"/>
                                                                             <subviews>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Awiruth Suwannarat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PtB-p6-npG">
-                                                                                    <rect key="frame" x="0.0" y="0.0" width="141.5" height="23.5"/>
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="142.5" height="23.5"/>
                                                                                     <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="15"/>
                                                                                     <color key="textColor" name="Text_Dark_Gray"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cheif Technology Officer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2g1-rx-mWQ">
-                                                                                    <rect key="frame" x="0.0" y="23.5" width="141.5" height="23"/>
+                                                                                    <rect key="frame" x="0.0" y="23.5" width="142.5" height="23"/>
                                                                                     <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="13"/>
                                                                                     <color key="textColor" name="Text_Dark_Gray"/>
                                                                                     <nil key="highlightedColor"/>
@@ -6068,7 +6094,7 @@ Please update all attendance before OT Request.</string>
                                                                             </subviews>
                                                                         </stackView>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reject" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xu1-zh-vl2">
-                                                                            <rect key="frame" x="209.5" y="0.0" width="124.5" height="46.5"/>
+                                                                            <rect key="frame" x="210.5" y="0.0" width="123.5" height="46.5"/>
                                                                             <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="15"/>
                                                                             <color key="textColor" name="Text_Red"/>
                                                                             <nil key="highlightedColor"/>
@@ -6160,14 +6186,14 @@ Please update all attendance before OT Request.</string>
                                                 </connections>
                                             </tableViewCell>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ApproveDetail_Reason" id="o4u-He-rbX" customClass="ApproveDetail_Cell" customModule="Saw_Grow" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="544.5" width="374" height="435"/>
+                                                <rect key="frame" x="0.0" y="534.5" width="374" height="430"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="o4u-He-rbX" id="ciR-BB-1T4">
-                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="435"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="430"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="8JA-Hm-IUk">
-                                                            <rect key="frame" x="20" y="15" width="334" height="405"/>
+                                                            <rect key="frame" x="20" y="15" width="334" height="400"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reason" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8kw-E8-juB">
                                                                     <rect key="frame" x="0.0" y="0.0" width="334" height="18"/>
@@ -6179,13 +6205,13 @@ Please update all attendance before OT Request.</string>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reason" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rBF-KU-S4p">
-                                                                    <rect key="frame" x="0.0" y="33" width="334" height="23"/>
+                                                                    <rect key="frame" x="0.0" y="33" width="334" height="18"/>
                                                                     <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="15"/>
                                                                     <color key="textColor" name="Text_Dark_Gray"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MLE-vt-Vyj">
-                                                                    <rect key="frame" x="0.0" y="71" width="334" height="334"/>
+                                                                    <rect key="frame" x="0.0" y="66" width="334" height="334"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" secondItem="MLE-vt-Vyj" secondAttribute="height" multiplier="1:1" id="IW5-ue-TRQ"/>
                                                                     </constraints>
@@ -6212,14 +6238,14 @@ Please update all attendance before OT Request.</string>
                                                 </connections>
                                             </tableViewCell>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ApproveDetail_Shift" rowHeight="201" id="MLQ-2r-0Ho" customClass="ApproveDetail_Cell" customModule="Saw_Grow" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="979.5" width="374" height="201"/>
+                                                <rect key="frame" x="0.0" y="964.5" width="374" height="201"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MLQ-2r-0Ho" id="55o-fu-u9g">
                                                     <rect key="frame" x="0.0" y="0.0" width="374" height="201"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Request" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K2y-MX-NgQ">
-                                                            <rect key="frame" x="20" y="15" width="314" height="19"/>
+                                                            <rect key="frame" x="20" y="15" width="314" height="23.5"/>
                                                             <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="15"/>
                                                             <color key="textColor" name="Text_Gray"/>
                                                             <nil key="highlightedColor"/>
@@ -6228,7 +6254,7 @@ Please update all attendance before OT Request.</string>
                                                             </userDefinedRuntimeAttributes>
                                                         </label>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="7gn-dz-xg1">
-                                                            <rect key="frame" x="10" y="44" width="162" height="134"/>
+                                                            <rect key="frame" x="10" y="48.5" width="162" height="129.5"/>
                                                             <subviews>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="demo_profile1" translatesAutoresizingMaskIntoConstraints="NO" id="l9C-cH-eKr" customClass="MyImageView" customModule="Saw_Grow" customModuleProvider="target">
                                                                     <rect key="frame" x="49" y="0.0" width="64" height="64"/>
@@ -6243,22 +6269,22 @@ Please update all attendance before OT Request.</string>
                                                                     </userDefinedRuntimeAttributes>
                                                                 </imageView>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="CzF-WP-cWo">
-                                                                    <rect key="frame" x="14" y="74" width="134" height="60"/>
+                                                                    <rect key="frame" x="14" y="74" width="134.5" height="55.5"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phongkhanet Kaewrit" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibH-yn-9M9">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="134" height="18"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="134.5" height="16.5"/>
                                                                             <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="14"/>
                                                                             <color key="textColor" name="Text_Dark_Gray"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="27 September 2021" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H6v-Bt-aoI">
-                                                                            <rect key="frame" x="0.0" y="21" width="134" height="18"/>
+                                                                            <rect key="frame" x="0.0" y="19.5" width="134.5" height="16.5"/>
                                                                             <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="12"/>
                                                                             <color key="textColor" name="Text_Gray_1"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="13:00 - 17:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cGf-rd-OOc">
-                                                                            <rect key="frame" x="0.0" y="42" width="134" height="18"/>
+                                                                            <rect key="frame" x="0.0" y="39" width="134.5" height="16.5"/>
                                                                             <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="12"/>
                                                                             <color key="textColor" name="Text_Gray"/>
                                                                             <nil key="highlightedColor"/>
@@ -6268,14 +6294,14 @@ Please update all attendance before OT Request.</string>
                                                             </subviews>
                                                         </stackView>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="swap_icon" translatesAutoresizingMaskIntoConstraints="NO" id="V6f-LQ-qfu">
-                                                            <rect key="frame" x="177" y="66" width="20" height="20"/>
+                                                            <rect key="frame" x="177" y="70.5" width="20" height="20"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="V6f-LQ-qfu" secondAttribute="height" multiplier="1:1" id="7dw-Zc-6zU"/>
                                                                 <constraint firstAttribute="width" constant="20" id="iGq-UO-rK5"/>
                                                             </constraints>
                                                         </imageView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bQb-k8-tAJ">
-                                                            <rect key="frame" x="202" y="44" width="162" height="134"/>
+                                                            <rect key="frame" x="202" y="48.5" width="162" height="129.5"/>
                                                             <subviews>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="demo_profile2" translatesAutoresizingMaskIntoConstraints="NO" id="wZG-CG-QId" customClass="MyImageView" customModule="Saw_Grow" customModuleProvider="target">
                                                                     <rect key="frame" x="49" y="0.0" width="64" height="64"/>
@@ -6290,22 +6316,22 @@ Please update all attendance before OT Request.</string>
                                                                     </userDefinedRuntimeAttributes>
                                                                 </imageView>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="T7L-KW-zsZ">
-                                                                    <rect key="frame" x="28.5" y="74" width="105" height="60"/>
+                                                                    <rect key="frame" x="28" y="74" width="106.5" height="55.5"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kasidate Suksart" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jJ9-cx-NVu">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="105" height="18"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="106.5" height="16.5"/>
                                                                             <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="14"/>
                                                                             <color key="textColor" name="Text_Dark_Gray"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25 September 2021" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WFT-4q-CQ2">
-                                                                            <rect key="frame" x="0.0" y="21" width="105" height="18"/>
+                                                                            <rect key="frame" x="0.0" y="19.5" width="106.5" height="16.5"/>
                                                                             <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="12"/>
                                                                             <color key="textColor" name="Text_Gray_1"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="08:00 - 12:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m9p-1O-7fu">
-                                                                            <rect key="frame" x="0.0" y="42" width="105" height="18"/>
+                                                                            <rect key="frame" x="0.0" y="39" width="106.5" height="16.5"/>
                                                                             <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="12"/>
                                                                             <color key="textColor" name="Text_Gray"/>
                                                                             <nil key="highlightedColor"/>
@@ -6387,31 +6413,31 @@ Please update all attendance before OT Request.</string>
             <size key="intrinsicContentSize" width="75" height="75"/>
         </designable>
         <designable name="1eR-Pi-KU4">
-            <size key="intrinsicContentSize" width="67" height="42"/>
+            <size key="intrinsicContentSize" width="66" height="36"/>
         </designable>
         <designable name="2bb-cb-xOW">
-            <size key="intrinsicContentSize" width="54" height="33"/>
+            <size key="intrinsicContentSize" width="59" height="29"/>
         </designable>
         <designable name="2zq-vU-gOJ">
-            <size key="intrinsicContentSize" width="56" height="35"/>
+            <size key="intrinsicContentSize" width="57" height="30"/>
         </designable>
         <designable name="4al-bO-7lN">
-            <size key="intrinsicContentSize" width="48" height="35"/>
+            <size key="intrinsicContentSize" width="48" height="30"/>
         </designable>
         <designable name="4eE-wc-8no">
-            <size key="intrinsicContentSize" width="52" height="36"/>
+            <size key="intrinsicContentSize" width="51" height="31"/>
         </designable>
         <designable name="7RD-wf-SFi">
-            <size key="intrinsicContentSize" width="59" height="36"/>
+            <size key="intrinsicContentSize" width="60" height="31"/>
         </designable>
         <designable name="7fU-Cp-cSx">
-            <size key="intrinsicContentSize" width="333.5" height="42"/>
+            <size key="intrinsicContentSize" width="332" height="33"/>
         </designable>
         <designable name="9D8-nP-WIL">
             <size key="intrinsicContentSize" width="75" height="75"/>
         </designable>
         <designable name="BaY-W9-ppg">
-            <size key="intrinsicContentSize" width="59" height="36"/>
+            <size key="intrinsicContentSize" width="60" height="31"/>
         </designable>
         <designable name="BuK-ky-7co">
             <size key="intrinsicContentSize" width="75" height="75"/>
@@ -6420,22 +6446,22 @@ Please update all attendance before OT Request.</string>
             <size key="intrinsicContentSize" width="75" height="75"/>
         </designable>
         <designable name="HTw-ix-WMd">
-            <size key="intrinsicContentSize" width="43" height="35"/>
+            <size key="intrinsicContentSize" width="43" height="30"/>
         </designable>
         <designable name="I03-QR-G8P">
             <size key="intrinsicContentSize" width="62" height="62"/>
         </designable>
         <designable name="J30-xS-mhL">
-            <size key="intrinsicContentSize" width="52" height="36"/>
+            <size key="intrinsicContentSize" width="51" height="31"/>
         </designable>
         <designable name="Jzc-jp-fDd">
-            <size key="intrinsicContentSize" width="52" height="36"/>
+            <size key="intrinsicContentSize" width="51" height="31"/>
         </designable>
         <designable name="KP6-of-7lo">
-            <size key="intrinsicContentSize" width="70" height="36"/>
+            <size key="intrinsicContentSize" width="72" height="31"/>
         </designable>
         <designable name="Kdv-Qj-cgl">
-            <size key="intrinsicContentSize" width="59" height="36"/>
+            <size key="intrinsicContentSize" width="60" height="31"/>
         </designable>
         <designable name="Kw8-vp-FOb">
             <size key="intrinsicContentSize" width="62" height="62"/>
@@ -6444,37 +6470,37 @@ Please update all attendance before OT Request.</string>
             <size key="intrinsicContentSize" width="62" height="62"/>
         </designable>
         <designable name="Nja-4x-av6">
-            <size key="intrinsicContentSize" width="46" height="35"/>
+            <size key="intrinsicContentSize" width="47" height="30"/>
         </designable>
         <designable name="OLw-gw-zbG">
-            <size key="intrinsicContentSize" width="143" height="42"/>
+            <size key="intrinsicContentSize" width="144" height="36"/>
         </designable>
         <designable name="OhC-vw-euu">
-            <size key="intrinsicContentSize" width="58" height="35"/>
+            <size key="intrinsicContentSize" width="57" height="30"/>
         </designable>
         <designable name="QF2-FC-yaG">
             <size key="intrinsicContentSize" width="75" height="75"/>
         </designable>
         <designable name="QLU-wX-ctT">
-            <size key="intrinsicContentSize" width="66" height="35"/>
+            <size key="intrinsicContentSize" width="64" height="30"/>
         </designable>
         <designable name="TwW-ry-1Ux">
-            <size key="intrinsicContentSize" width="63" height="35"/>
+            <size key="intrinsicContentSize" width="61" height="30"/>
         </designable>
         <designable name="Xhz-Ag-d9E">
             <size key="intrinsicContentSize" width="75" height="75"/>
         </designable>
         <designable name="YbN-6O-Ufq">
-            <size key="intrinsicContentSize" width="30" height="33"/>
+            <size key="intrinsicContentSize" width="30" height="29"/>
         </designable>
         <designable name="Zxg-xg-fgx">
-            <size key="intrinsicContentSize" width="91" height="42"/>
+            <size key="intrinsicContentSize" width="92" height="36"/>
         </designable>
         <designable name="beE-ht-Rse">
-            <size key="intrinsicContentSize" width="65" height="35"/>
+            <size key="intrinsicContentSize" width="64" height="30"/>
         </designable>
         <designable name="cWI-82-ivz">
-            <size key="intrinsicContentSize" width="143" height="42"/>
+            <size key="intrinsicContentSize" width="144" height="36"/>
         </designable>
         <designable name="epu-8H-35m">
             <size key="intrinsicContentSize" width="62" height="62"/>
@@ -6483,7 +6509,10 @@ Please update all attendance before OT Request.</string>
             <size key="intrinsicContentSize" width="75" height="75"/>
         </designable>
         <designable name="flc-sK-rHM">
-            <size key="intrinsicContentSize" width="59" height="36"/>
+            <size key="intrinsicContentSize" width="60" height="31"/>
+        </designable>
+        <designable name="g4G-zx-Eq8">
+            <size key="intrinsicContentSize" width="80.5" height="21"/>
         </designable>
         <designable name="ghR-j5-kOO">
             <size key="intrinsicContentSize" width="62" height="62"/>
@@ -6495,52 +6524,52 @@ Please update all attendance before OT Request.</string>
             <size key="intrinsicContentSize" width="75" height="75"/>
         </designable>
         <designable name="jUM-j0-mrt">
-            <size key="intrinsicContentSize" width="52" height="36"/>
+            <size key="intrinsicContentSize" width="51" height="31"/>
         </designable>
         <designable name="jj5-8G-buu">
-            <size key="intrinsicContentSize" width="143" height="42"/>
+            <size key="intrinsicContentSize" width="144" height="36"/>
         </designable>
         <designable name="l9C-cH-eKr">
             <size key="intrinsicContentSize" width="75" height="75"/>
         </designable>
         <designable name="n8L-yK-BbN">
-            <size key="intrinsicContentSize" width="52" height="36"/>
+            <size key="intrinsicContentSize" width="51" height="31"/>
         </designable>
         <designable name="nB0-HK-4o1">
-            <size key="intrinsicContentSize" width="30" height="42"/>
+            <size key="intrinsicContentSize" width="30" height="36"/>
         </designable>
         <designable name="p30-2q-ILj">
-            <size key="intrinsicContentSize" width="143" height="42"/>
+            <size key="intrinsicContentSize" width="144" height="36"/>
         </designable>
         <designable name="pod-WO-J7L">
-            <size key="intrinsicContentSize" width="40" height="35"/>
+            <size key="intrinsicContentSize" width="41" height="30"/>
         </designable>
         <designable name="qgb-Xr-ZfP">
-            <size key="intrinsicContentSize" width="57" height="36"/>
+            <size key="intrinsicContentSize" width="58" height="36"/>
         </designable>
         <designable name="sLx-2W-seC">
-            <size key="intrinsicContentSize" width="109" height="24"/>
+            <size key="intrinsicContentSize" width="113" height="19"/>
         </designable>
         <designable name="ssF-X9-HUZ">
             <size key="intrinsicContentSize" width="75" height="75"/>
         </designable>
         <designable name="t7n-0Y-hSL">
-            <size key="intrinsicContentSize" width="59" height="36"/>
+            <size key="intrinsicContentSize" width="60" height="31"/>
         </designable>
         <designable name="vc7-c0-kSc">
             <size key="intrinsicContentSize" width="75" height="75"/>
         </designable>
         <designable name="vli-bI-phb">
-            <size key="intrinsicContentSize" width="46" height="36"/>
+            <size key="intrinsicContentSize" width="46" height="31"/>
         </designable>
         <designable name="wZG-CG-QId">
             <size key="intrinsicContentSize" width="62" height="62"/>
         </designable>
         <designable name="xVC-Zn-VTo">
-            <size key="intrinsicContentSize" width="48" height="35"/>
+            <size key="intrinsicContentSize" width="52" height="30"/>
         </designable>
         <designable name="zf0-P7-vNZ">
-            <size key="intrinsicContentSize" width="143" height="42"/>
+            <size key="intrinsicContentSize" width="144" height="36"/>
         </designable>
     </designables>
     <resources>
@@ -6553,6 +6582,7 @@ Please update all attendance before OT Request.</string>
         <image name="checkin_delete" width="25" height="25"/>
         <image name="checkin_handle" width="47" height="4"/>
         <image name="checkin_location" width="22" height="22"/>
+        <image name="checkin_update" width="20.5" height="19.5"/>
         <image name="demo_profile1" width="75" height="75"/>
         <image name="demo_profile2" width="62" height="62"/>
         <image name="demo_profile3" width="62" height="62"/>

@@ -41,6 +41,8 @@ class Home_Old: UIViewController, OverlayContainerViewControllerDelegate, UIScro
     var firstTime: Bool = true
     var setColor: Bool = true
     
+    let alertService = AlertService()
+    
     @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var headerImage: UIImageView!
     
@@ -447,20 +449,11 @@ class Home_Old: UIViewController, OverlayContainerViewControllerDelegate, UIScro
                 switch CLLocationManager.authorizationStatus() {
                 case .notDetermined, .restricted, .denied:
                     print("No access")
-                    let alert = UIAlertController(title: "HOME_Location_Denied".localized(), message: "HOME_Location_Allow".localized(), preferredStyle: .alert)
-                    
-                    alert.addAction(UIAlertAction(title: "Cancel".localized(), style: .cancel, handler: { action in
-                        
-                    }))
-                    alert.actions.last?.titleTextColor = .buttonRed
-                    
-                    alert.addAction(UIAlertAction(title: "GO_Setting".localized(), style: .default, handler: { action in
-                        
+                    let alertMainBody = alertService.alertMainWithBody(title: "HOME_Location_Denied".localized(), body: "HOME_Location_Allow".localized(), buttonTitle: "GO_Setting".localized(), buttonColor: .themeColor)
+                    {
                         UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!, options: [:], completionHandler: nil)
-                    }))
-                    alert.actions.last?.titleTextColor = .themeColor
-                    
-                    self.present(alert, animated: true)
+                    }
+                    present(alertMainBody, animated: true)
                     
                 case .authorizedAlways, .authorizedWhenInUse:
                     print("Access")
@@ -482,14 +475,11 @@ class Home_Old: UIViewController, OverlayContainerViewControllerDelegate, UIScro
                 }
             } else {
                 print("Location Not enabled")
-                let alert = UIAlertController(title: "HOME_Location_Disable".localized(), message: "HOME_Location_Check".localized(), preferredStyle: .alert)
-                
-                alert.addAction(UIAlertAction(title: "OK".localized(), style: .default, handler: { action in
-                    //UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!, options: [:], completionHandler: nil)
-                }))
-                alert.actions.last?.titleTextColor = .themeColor
-                
-                self.present(alert, animated: true)
+                let alertMainBody = alertService.alertMainWithBody(title: "HOME_Location_Disable".localized(), body: "HOME_Location_Check".localized(), buttonTitle: "OK".localized(), buttonColor: .themeColor)
+                {
+                    
+                }
+                present(alertMainBody, animated: true)
             }
             
         case "QUICK_ATTENDANCE"://Attendance

@@ -45,7 +45,7 @@
 		<true/>
 	</dict>
 	<key>NSCameraUsageDescription</key>
-	<string>Please allow camera access to upload photo</string>
+	<string>Please allow camera access to upload photo, define your daily mood (optional)</string>
 	<key>NSFaceIDUsageDescription</key>
 	<string>Allow login with Face ID</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
@@ -53,7 +53,7 @@
 	<key>NSPhotoLibraryAddUsageDescription</key>
 	<string>Please allow access to save photo in your photo library</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Please allow photo library access to upload photo</string>
+	<string>Please allow photo library access to upload profile photo, define your daily mood (optional)</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Roboto-Bold.ttf</string>

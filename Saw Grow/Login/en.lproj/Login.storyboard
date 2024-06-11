@@ -273,7 +273,7 @@
                                     <constraint firstItem="PZy-ND-jiM" firstAttribute="height" secondItem="RnG-NW-LRc" secondAttribute="height" id="ti2-dy-Thc"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KwW-5I-dhW">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KwW-5I-dhW">
                                 <rect key="frame" x="25" y="497.5" width="107" height="33"/>
                                 <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="14"/>
                                 <state key="normal" title="Register Account">
@@ -2009,16 +2009,16 @@
             <size key="intrinsicContentSize" width="42" height="42"/>
         </designable>
         <designable name="N5B-H1-gUW">
-            <size key="intrinsicContentSize" width="50.5" height="31.5"/>
+            <size key="intrinsicContentSize" width="60.5" height="31.5"/>
         </designable>
         <designable name="SL1-eB-9j3">
-            <size key="intrinsicContentSize" width="50.5" height="31.5"/>
+            <size key="intrinsicContentSize" width="60.5" height="31.5"/>
         </designable>
         <designable name="WAc-bg-4xR">
             <size key="intrinsicContentSize" width="13" height="59"/>
         </designable>
         <designable name="WSV-0w-3bT">
-            <size key="intrinsicContentSize" width="84" height="30"/>
+            <size key="intrinsicContentSize" width="94" height="30"/>
         </designable>
         <designable name="Zuz-ae-l4M">
             <size key="intrinsicContentSize" width="7" height="34.5"/>

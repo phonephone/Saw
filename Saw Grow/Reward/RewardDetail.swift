@@ -30,6 +30,8 @@ class RewardDetail: UIViewController, WKNavigationDelegate {
     
     var setColor: Bool = true
     
+    let alertService = AlertService()
+    
     @IBOutlet weak var headerView: UIView!
     
     @IBOutlet weak var headTitle: UILabel!
@@ -198,24 +200,14 @@ class RewardDetail: UIViewController, WKNavigationDelegate {
     }
     
     func confirmRedeem() {
-        var alert = UIAlertController()
-        
-        alert = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Cancel".localized(), style: .default, handler: { action in
-        }))
-        alert.actions.last?.titleTextColor = .buttonRed
-        
-        alert.title = "REWARD_DETAIL_Redeem_Confirm".localized()
         let expireDate = appDateFromServerString(dateStr: rewardJSON!["expire_date"].stringValue)
-        alert.message = "\("REWARD_DETAIL_Alert_Expire".localized()) \(appStringFromDate(date: expireDate!, format: DateFormatter.appDateFormatStr))"
-        alert.addAction(UIAlertAction(title: "Confirm".localized(), style: .default, handler: { action in
+        let message = "\("REWARD_DETAIL_Alert_Expire".localized()) \(appStringFromDate(date: expireDate!, format: DateFormatter.appDateFormatStr))"
+        
+        let alertMainBody = alertService.alertMainWithBody(title: "REWARD_DETAIL_Redeem_Confirm".localized(), body: message, buttonTitle: "Confirm".localized(), buttonColor: .themeColor)
+        {
             self.loadSubmitRedeem()
-        }))
-        alert.actions.last?.titleTextColor = .themeColor
-        
-        alert.setColorAndFont()
-        
-        self.present(alert, animated: true)
+        }
+        present(alertMainBody, animated: true)
     }
     
     func loadSubmitRedeem() {
@@ -240,23 +232,11 @@ class RewardDetail: UIViewController, WKNavigationDelegate {
     
     
     func confirmUseCoupon() {
-        var alert = UIAlertController()
-        
-        alert = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Cancel".localized(), style: .default, handler: { action in
-        }))
-        alert.actions.last?.titleTextColor = .buttonRed
-        
-        alert.title = "REWARD_COUPON_Use_Confirm".localized()
-        alert.message = self.rewardJSON!["remark"].stringValue
-        alert.addAction(UIAlertAction(title: "Confirm".localized(), style: .default, handler: { action in
+        let alertMainBody = alertService.alertMainWithBody(title: "REWARD_COUPON_Use_Confirm".localized(), body: self.rewardJSON!["remark"].stringValue, buttonTitle: "Confirm".localized(), buttonColor: .themeColor)
+        {
             self.loadUseCoupon()
-        }))
-        alert.actions.last?.titleTextColor = .themeColor
-        
-        alert.setColorAndFont()
-        
-        self.present(alert, animated: true)
+        }
+        present(alertMainBody, animated: true)
     }
     
     func loadUseCoupon() {

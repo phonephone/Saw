@@ -19,15 +19,15 @@ import Localize_Swift
  /* get your image here */
  }
  
-AttachmentHandler.shared.videoPickedBlock = {(url) in
-/* get your compressed video url here */
-}
+ AttachmentHandler.shared.videoPickedBlock = {(url) in
+ /* get your compressed video url here */
+ }
  
-AttachmentHandler.shared.filePickedBlock = {(filePath) in
-/* get your file path url here */
-}
+ AttachmentHandler.shared.filePickedBlock = {(filePath) in
+ /* get your file path url here */
+ }
  
-*/
+ */
 
 class AttachmentHandler: NSObject{
     static let shared = AttachmentHandler()
@@ -71,23 +71,23 @@ class AttachmentHandler: NSObject{
         let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
         actionSheet.addAction(UIAlertAction(title: "Camera".localized(), style: .default, handler: { (action) -> Void in
-            self.authorisationStatus(attachmentTypeEnum: .camera, vc: self.currentVC!, allowEdit: allowEdit)
+            self.authorisationStatusCamera(attachmentTypeEnum: .camera, vc: self.currentVC!, allowEdit: allowEdit)
         }))
         actionSheet.actions.last?.titleTextColor = .themeColor
         
         actionSheet.addAction(UIAlertAction(title: "Photo Library".localized(), style: .default, handler: { (action) -> Void in
-            self.authorisationStatus(attachmentTypeEnum: .photoLibrary, vc: self.currentVC!, allowEdit: allowEdit)
+            self.authorisationStatusPhotoLibrary(attachmentTypeEnum: .photoLibrary, vc: self.currentVC!, allowEdit: allowEdit)
         }))
         actionSheet.actions.last?.titleTextColor = .themeColor
         
-//        actionSheet.addAction(UIAlertAction(title: Constants.video, style: .default, handler: { (action) -> Void in
-//            self.authorisationStatus(attachmentTypeEnum: .video, vc: self.currentVC!)
-//
-//        }))
-//
-//        actionSheet.addAction(UIAlertAction(title: Constants.file, style: .default, handler: { (action) -> Void in
-//            self.documentPicker()
-//        }))
+        //        actionSheet.addAction(UIAlertAction(title: Constants.video, style: .default, handler: { (action) -> Void in
+        //            self.authorisationStatus(attachmentTypeEnum: .video, vc: self.currentVC!)
+        //
+        //        }))
+        //
+        //        actionSheet.addAction(UIAlertAction(title: Constants.file, style: .default, handler: { (action) -> Void in
+        //            self.documentPicker()
+        //        }))
         
         actionSheet.addAction(UIAlertAction(title: "Cancel".localized(), style: .cancel, handler: nil))
         actionSheet.actions.last?.titleTextColor = .buttonRed
@@ -95,19 +95,64 @@ class AttachmentHandler: NSObject{
         vc.present(actionSheet, animated: true, completion: nil)
     }
     
+    func showCameraOnly(vc: UIViewController, allowEdit: Bool) {
+        currentVC = vc
+        self.authorisationStatusCamera(attachmentTypeEnum: .camera, vc: self.currentVC!, allowEdit: allowEdit)
+    }
+    
+    func showPhotoLibraryOnly(vc: UIViewController, allowEdit: Bool) {
+        currentVC = vc
+        self.authorisationStatusPhotoLibrary(attachmentTypeEnum: .photoLibrary, vc: self.currentVC!, allowEdit: allowEdit)
+    }
+    
     //MARK: - Authorisation Status
     // This is used to check the authorisation status whether user gives access to import the image, photo library, video.
     // if the user gives access, then we can import the data safely
     // if not show them alert to access from settings.
-    func authorisationStatus(attachmentTypeEnum: AttachmentType, vc: UIViewController, allowEdit: Bool){
+    
+    func authorisationStatusCamera(attachmentTypeEnum: AttachmentType, vc: UIViewController, allowEdit: Bool){
         currentVC = vc
         
-        let status = PHPhotoLibrary.authorizationStatus()
+        let status = AVCaptureDevice.authorizationStatus(for: AVMediaType.video)
+        
         switch status {
         case .authorized:
             if attachmentTypeEnum == AttachmentType.camera{
-                openCamera()
+                openCamera(allowEdit: allowEdit)
             }
+        case .denied:
+            print("permission denied")
+            self.addAlertForSettings(attachmentTypeEnum)
+        case .notDetermined:
+            print("Permission Not Determined")
+            AVCaptureDevice.requestAccess(for: AVMediaType.video) { granted in
+                DispatchQueue.main.sync {
+                    if granted {
+                        print("Camera access given")
+                        if attachmentTypeEnum == AttachmentType.camera{
+                            self.openCamera(allowEdit: allowEdit)
+                        }
+                    } else {
+                        print("Camera restriced manually")
+                        self.addAlertForSettings(attachmentTypeEnum)
+                    }
+                }
+            }
+        case .restricted:
+            print("permission restricted")
+            self.addAlertForSettings(attachmentTypeEnum)
+        default:
+            break
+        }
+    }
+    
+    func authorisationStatusPhotoLibrary(attachmentTypeEnum: AttachmentType, vc: UIViewController, allowEdit: Bool){
+        currentVC = vc
+        
+        let status = PHPhotoLibrary.authorizationStatus()
+        
+        switch status {
+        case .authorized:
             if attachmentTypeEnum == AttachmentType.photoLibrary{
                 photoLibrary(allowEdit: allowEdit)
             }
@@ -120,21 +165,20 @@ class AttachmentHandler: NSObject{
         case .notDetermined:
             print("Permission Not Determined")
             PHPhotoLibrary.requestAuthorization({ (status) in
-                if status == PHAuthorizationStatus.authorized{
-                    // photo library access given
-                    print("access given")
-                    if attachmentTypeEnum == AttachmentType.camera{
-                        self.openCamera()
+                DispatchQueue.main.sync {
+                    if status == PHAuthorizationStatus.authorized{
+                        // photo library access given
+                        print("Photo Library access given")
+                        if attachmentTypeEnum == AttachmentType.photoLibrary{
+                            self.photoLibrary(allowEdit: allowEdit)
+                        }
+                        if attachmentTypeEnum == AttachmentType.video{
+                            self.videoLibrary()
+                        }
+                    }else{
+                        print("Photo Library restriced manually")
+                        self.addAlertForSettings(attachmentTypeEnum)
                     }
-                    if attachmentTypeEnum == AttachmentType.photoLibrary{
-                        self.photoLibrary(allowEdit: allowEdit)
-                    }
-                    if attachmentTypeEnum == AttachmentType.video{
-                        self.videoLibrary()
-                    }
-                }else{
-                    print("restriced manually")
-                    self.addAlertForSettings(attachmentTypeEnum)
                 }
             })
         case .restricted:
@@ -148,17 +192,17 @@ class AttachmentHandler: NSObject{
     
     //MARK: - CAMERA PICKER
     //This function is used to open camera from the iphone and
-    func openCamera(){
+    func openCamera(allowEdit: Bool){
         if UIImagePickerController.isSourceTypeAvailable(.camera){
             let myPickerController = UIImagePickerController()
             myPickerController.delegate = self
             myPickerController.sourceType = .camera
-            myPickerController.allowsEditing = true
+            myPickerController.allowsEditing = allowEdit
             currentVC?.present(myPickerController, animated: true, completion: nil)
         }
     }
     
-
+    
     //MARK: - PHOTO PICKER
     func photoLibrary(allowEdit: Bool){
         if UIImagePickerController.isSourceTypeAvailable(.photoLibrary){

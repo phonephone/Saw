@@ -19,6 +19,8 @@ class EDocRequest: UIViewController, UITextFieldDelegate {
     var edocType:edocType?
     
     var dateFromCalendar:Date?
+    
+    let alertService = AlertService()
 
     @IBOutlet weak var monthYearView: UIView!
     @IBOutlet weak var monthYearIcon: UIButton!
@@ -127,23 +129,11 @@ class EDocRequest: UIViewController, UITextFieldDelegate {
     }
     
     func confirmAsk() {
-        var alert = UIAlertController()
-        
-        alert = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Cancel".localized(), style: .default, handler: { action in
-        }))
-        alert.actions.last?.titleTextColor = .buttonRed
-        
-        alert.title = "EDOC_Confirm".localized()
-        //alert.message = "plaes make sure before..."
-        alert.addAction(UIAlertAction(title: "Confirm".localized(), style: .default, handler: { action in
+        let alertMain = alertService.alertMain(title: "EDOC_Confirm".localized(), buttonTitle: "Confirm".localized(), buttonColor: .themeColor)
+        {
             self.loadSubmit()
-        }))
-        alert.actions.last?.titleTextColor = .themeColor
-        
-        alert.setColorAndFont()
-        
-        self.present(alert, animated: true)
+        }
+        present(alertMain, animated: true)
     }
     
     func loadSubmit() {

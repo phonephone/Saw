@@ -24,6 +24,8 @@ class LeaveRequest: UIViewController, UITextFieldDelegate, UITextViewDelegate {
     
     let remarkStr = "LEAVE_Reason".localized()
     
+    let alertService = AlertService()
+    
     @IBOutlet weak var myScrollView: UIScrollView!
     
     @IBOutlet weak var typeIcon: UIButton!
@@ -290,12 +292,7 @@ class LeaveRequest: UIViewController, UITextFieldDelegate, UITextViewDelegate {
     func confirmAsk() {
         let totalDay = daysBetween(start: startPicker.date, end: endPicker.date)
         
-        var alert = UIAlertController()
-        
-        alert = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Cancel".localized(), style: .default, handler: { action in
-        }))
-        alert.actions.last?.titleTextColor = .buttonRed
+        var alertTitle = String()
         
         let dateFormat = "dd/MM/yyyy"
         let startDate = appStringFromDate(date: startPicker.date, format: dateFormat)
@@ -304,33 +301,30 @@ class LeaveRequest: UIViewController, UITextFieldDelegate, UITextViewDelegate {
         switch selectedHalfDay {
         case "0"://Full Day
             if startDate == endDate {
-                alert.title = "\("LEAVE_Confirm".localized())\n\(startDate)\n(\(totalDay) \("Day".localized()))"
+                alertTitle = "\("LEAVE_Confirm".localized())\n\(startDate)\n(\(totalDay) \("Day".localized()))"
             }
             else {
-                alert.title = "\("LEAVE_Confirm".localized())\n\(startDate) - \(endDate)\n(\(totalDay) \("Day".localized()))"
+                alertTitle = "\("LEAVE_Confirm".localized())\n\(startDate) - \(endDate)\n(\(totalDay) \("Day".localized()))"
             }
             
         case "1"://1st Half
-            alert.title = "\("LEAVE_Confirm".localized())\n\(startDate)\n(\("LEAVE_Half_Date".localized()), \("LEAVE_Half_Date1".localized()))"
+            alertTitle = "\("LEAVE_Confirm".localized())\n\(startDate)\n(\("LEAVE_Half_Date".localized()), \("LEAVE_Half_Date1".localized()))"
             
         case "2"://2nd Half
-            alert.title = "\("LEAVE_Confirm".localized())\n\(startDate)\n(\("LEAVE_Half_Date".localized()), \("LEAVE_Half_Date2".localized()))"
+            alertTitle = "\("LEAVE_Confirm".localized())\n\(startDate)\n(\("LEAVE_Half_Date".localized()), \("LEAVE_Half_Date2".localized()))"
             
         case "3"://Hour
-            alert.title = "\("LEAVE_Confirm".localized())\n\(startDate)\n(\(startTimeField.text!) - \(endTimeField.text!))"
+            alertTitle = "\("LEAVE_Confirm".localized())\n\(startDate)\n(\(startTimeField.text!) - \(endTimeField.text!))"
             
         default:
             break
         }
-        //alert.message = "plaes make sure before..."
-        alert.addAction(UIAlertAction(title: "Confirm".localized(), style: .default, handler: { action in
+        
+        let alertMain = alertService.alertMain(title: alertTitle, buttonTitle: "Confirm".localized(), buttonColor: .themeColor)
+        {
             self.loadSubmit()
-        }))
-        alert.actions.last?.titleTextColor = .themeColor
-        
-        alert.setColorAndFont()
-        
-        self.present(alert, animated: true)
+        }
+        present(alertMain, animated: true)
     }
     
     func loadSubmit() {

@@ -8,6 +8,7 @@
 import UIKit
 import Localize_Swift
 import LineSDK
+import AppTrackingTransparency
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -18,8 +19,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         
-        //UserDefaults.standard.removeObject(forKey:"access_token")
-        //UserDefaults.standard.removeObject(forKey:"passCode")
+//        UserDefaults.standard.removeObject(forKey:"access_token")
+//        UserDefaults.standard.removeObject(forKey:"passCode")
         
         let storyboard = UIStoryboard.loginStoryBoard
         var navigationController : UINavigationController
@@ -109,9 +110,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //            bypassVC.agreementShow = true
             
             //bypassVC = UIStoryboard.mainStoryBoard.instantiateViewController(withIdentifier: "EditProfile") as! EditProfile
-            
-//            bypassVC = UIStoryboard.mainStoryBoard.instantiateViewController(withIdentifier: "TabBar") as! TabBar
-            
+                     
 //            bypassVC = UIStoryboard.moodStoryBoard.instantiateViewController(withIdentifier: "MoodJournal") as! MoodJournal
 //            
 //            bypassVC = UIStoryboard.moodStoryBoard.instantiateViewController(withIdentifier: "MoodJournalHead") as! MoodJournalHead
@@ -122,7 +121,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             
 //            bypassVC = UIStoryboard.moodStoryBoard.instantiateViewController(withIdentifier: "MoodDashBoard") as! MoodDashBoard
             
+//            bypassVC = UIStoryboard.mainStoryBoard.instantiateViewController(withIdentifier: "DemoExpired") as! DemoExpired
+            
 //            bypassVC = UIStoryboard.loginStoryBoard.instantiateViewController(withIdentifier: "Login") as! Login
+            
+//            bypassVC = UIStoryboard.mainStoryBoard.instantiateViewController(withIdentifier: "TabBar") as! TabBar
             
 //            navigationController = UINavigationController.init(rootViewController: bypassVC)
             //Localize.setCurrentLanguage("en")
@@ -158,6 +161,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func sceneDidBecomeActive(_ scene: UIScene) {
         // Called when the scene has moved from an inactive state to an active state.
         // Use this method to restart any tasks that were paused (or not yet started) when the scene was inactive.
+        
+        //requestTrackingPermission()
     }
 
     func sceneWillResignActive(_ scene: UIScene) {
@@ -176,6 +181,30 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // to restore the scene back to its current state.
     }
 
-
+    func requestTrackingPermission() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            if #available(iOS 14, *) {
+                ATTrackingManager.requestTrackingAuthorization { (status) in
+                    switch status {
+                    case .authorized:
+                        // Tracking authorization dialog was shown
+                        // and we are authorized
+                        print("Authorized")
+                    case .denied:
+                        // Tracking authorization dialog was
+                        // shown and permission is denied
+                        print("Denied")
+                    case .notDetermined:
+                        // Tracking authorization dialog has not been shown
+                        print("Not Determined")
+                    case .restricted:
+                        print("Restricted")
+                    @unknown default:
+                        print("Unknown")
+                    }
+                }
+            }
+        }
+    }
 }
 

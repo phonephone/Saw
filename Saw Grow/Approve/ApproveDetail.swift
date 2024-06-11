@@ -23,6 +23,8 @@ class ApproveDetail: UIViewController, UITextViewDelegate {
     
     var setColor: Bool = true
     
+    let alertService = AlertService()
+    
     @IBOutlet weak var headerView: UIView!
     
     @IBOutlet weak var headerTitle: UILabel!
@@ -619,15 +621,8 @@ extension ApproveDetail: UITableViewDelegate {
         //print("Delete \(indexPath.section) - \(indexPath.item)")
         //let cellArray = self.detailJSON![indexPath.item]
         
-        var alert = UIAlertController()
-        alert = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
-        alert.title = "APPROVE_Confirm".localized()
-        //alert.message = "plaes make sure before..."
-        
-        alert.addAction(UIAlertAction(title: "Cancel".localized(), style: .default, handler: { action in
-        }))
-        
-        alert.addAction(UIAlertAction(title: "APPROVE_Approve".localized(), style: .default, handler: { action in
+        let alertMain = alertService.alertMain(title: "APPROVE_Confirm".localized(), buttonTitle: "APPROVE_Approve".localized(), buttonColor: .buttonGreen)
+        {
             let headCell = (self.myTableView.cellForRow(at: indexPath) as? ApproveDetail_Cell)!
             
             if self.approveType == .shift {
@@ -639,11 +634,8 @@ extension ApproveDetail: UITableViewDelegate {
             else{
                 self.loadAction(requestID: self.detailJSON!["request_id"].stringValue, statusID:"2", reason:headCell.cellReason.text)
             }
-        }))
-        alert.actions.last?.titleTextColor = .buttonGreen
-        alert.setColorAndFont()
-        
-        self.present(alert, animated: true)
+        }
+        present(alertMain, animated: true)
     }
     
     @IBAction func rejectClick(_ sender: UIButton) {
@@ -660,15 +652,8 @@ extension ApproveDetail: UITableViewDelegate {
         //print("Delete \(indexPath.section) - \(indexPath.item)")
         //let cellArray = self.detailJSON![indexPath.item]
         
-        var alert = UIAlertController()
-        alert = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
-        alert.title = "APPROVE_Reject_Confirm".localized()
-
-        alert.addAction(UIAlertAction(title: "Cancel".localized(), style: .default, handler: { action in
-
-        }))
-
-        alert.addAction(UIAlertAction(title: "APPROVE_Reject".localized(), style: .default, handler: { action in
+        let alertMain = alertService.alertMain(title: "APPROVE_Reject_Confirm".localized(), buttonTitle: "APPROVE_Reject".localized(), buttonColor: .buttonRed)
+        {
             let headCell = (self.myTableView.cellForRow(at: indexPath) as? ApproveDetail_Cell)!
             
             if self.approveType == .shift {
@@ -680,11 +665,8 @@ extension ApproveDetail: UITableViewDelegate {
             else{
                 self.loadAction(requestID: self.detailJSON!["request_id"].stringValue, statusID:"3", reason:headCell.cellReason.text)
             }
-        }))
-        alert.actions.last?.titleTextColor = .buttonRed
-        alert.setColorAndFont()
-
-        self.present(alert, animated: true)
+        }
+        present(alertMain, animated: true)
     }
     
     func loadAction(requestID:String, statusID:String, reason:String) {

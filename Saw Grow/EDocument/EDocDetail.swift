@@ -27,6 +27,8 @@ class EDocDetail: UIViewController, UITextViewDelegate {
     
     var setColor: Bool = true
     
+    let alertService = AlertService()
+    
     @IBOutlet weak var headerView: UIView!
     
     @IBOutlet var pdfBtn: UIButton!
@@ -468,15 +470,8 @@ extension EDocDetail: UITableViewDelegate {
         //print("Delete \(indexPath.section) - \(indexPath.item)")
         //let cellArray = self.detailJSON![indexPath.item]
         
-        var alert = UIAlertController()
-        alert = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
-        alert.title = "APPROVE_Confirm".localized()
-        //alert.message = "plaes make sure before..."
-        
-        alert.addAction(UIAlertAction(title: "Cancel".localized(), style: .default, handler: { action in
-        }))
-        
-        alert.addAction(UIAlertAction(title: "Confirm".localized(), style: .default, handler: { action in
+        let alertMain = alertService.alertMain(title: "APPROVE_Confirm".localized(), buttonTitle: "Confirm".localized(), buttonColor: .buttonGreen)
+        {
             let headCell = (self.myTableView.cellForRow(at: indexPath) as? LeaveDetail_Cell)!
             
             if self.edocType == .work_cert || self.edocType == .salary_cert {
@@ -485,11 +480,8 @@ extension EDocDetail: UITableViewDelegate {
             else if self.edocType == .reimburse {
                 self.loadAction(requestID: self.detailJSON!["request_id"].stringValue, statusID:self.detailJSON!["approve_next_status"].stringValue, reason: headCell.cellReason.text)
             }
-        }))
-        alert.actions.last?.titleTextColor = .buttonGreen
-        alert.setColorAndFont()
-        
-        self.present(alert, animated: true)
+        }
+        present(alertMain, animated: true)
     }
     
     @IBAction func cancelClick(_ sender: UIButton) {
@@ -506,19 +498,15 @@ extension EDocDetail: UITableViewDelegate {
         //print("Delete \(indexPath.section) - \(indexPath.item)")
         //let cellArray = self.detailJSON![indexPath.item]
         
-        var alert = UIAlertController()
-        alert = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
+        var alertTitle = String()
         if isHead! {
-            alert.title = "APPROVE_Reject_Confirm".localized()
+            alertTitle = "APPROVE_Reject_Confirm".localized()
         } else {
-            alert.title = "LEAVE_DETAIL_Confirm_Cancel".localized()
+            alertTitle = "LEAVE_DETAIL_Confirm_Cancel".localized()
         }
-        //alert.message = "plaes make sure before..."
         
-        alert.addAction(UIAlertAction(title: "Cancel".localized(), style: .default, handler: { action in
-        }))
-        
-        alert.addAction(UIAlertAction(title: "Confirm".localized(), style: .default, handler: { action in
+        let alertMain = alertService.alertMain(title: alertTitle, buttonTitle: "Confirm".localized(), buttonColor: .buttonRed)
+        {
             var reason:String
             if self.isHead! {
                 let headCell = (self.myTableView.cellForRow(at: indexPath) as? LeaveDetail_Cell)!
@@ -527,13 +515,8 @@ extension EDocDetail: UITableViewDelegate {
                 reason = "LEAVE_Cancel_Employee".localized()
             }
             self.loadAction(requestID: self.detailJSON!["request_id"].stringValue, statusID:"3", reason: reason)
-            
-        }))
-        alert.actions.last?.titleTextColor = .buttonRed
-        alert.setColorAndFont()
-        
-        self.present(alert, animated: true)
-        
+        }
+        present(alertMain, animated: true)
     }
     
     
