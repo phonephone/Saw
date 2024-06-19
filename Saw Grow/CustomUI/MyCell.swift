@@ -178,6 +178,7 @@ class LeaveDetail_Cell: UITableViewCell {
     @IBOutlet var cellBtnWithdraw: UIButton!
     @IBOutlet var cellBtnStackView: UIStackView!
     @IBOutlet var cellReason: UITextView!
+    @IBOutlet var cellBtnAction: UIButton!
     
     //Swap
     @IBOutlet var cellImage1: UIImageView!

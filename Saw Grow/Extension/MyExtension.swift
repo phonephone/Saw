@@ -58,6 +58,7 @@ extension UIStoryboard  {
     static let settingStoryBoard = UIStoryboard(name: "Setting", bundle: nil)
     static let alertStoryBoard = UIStoryboard(name: "Alert", bundle: nil)
     static let moodStoryBoard = UIStoryboard(name: "Mood", bundle: nil)
+    static let aiStoryBoard = UIStoryboard(name: "AI", bundle: nil)
 }
 
 extension Bundle {
@@ -613,6 +614,24 @@ extension UIView {
             return UIImage(cgImage: image!.cgImage!)
         }
     }
+    
+    func addTapGesture(action : @escaping ()->Void ){
+        let tap = MyTapGestureRecognizer(target: self , action: #selector(self.handleTap(_:)))
+        tap.action = action
+        tap.numberOfTapsRequired = 1
+        
+        self.addGestureRecognizer(tap)
+        self.isUserInteractionEnabled = true
+        
+    }
+    
+    @objc func handleTap(_ sender: MyTapGestureRecognizer) {
+        sender.action!()
+    }
+}
+
+class MyTapGestureRecognizer: UITapGestureRecognizer {
+    var action : (()->Void)? = nil
 }
 
 // MARK: - UIImageView
@@ -665,6 +684,20 @@ extension UIImage {
     //        let image = UIImage(data: imageData!)
     //        return image!
     //    }
+    
+    func fixOrientation() -> UIImage {
+        if self.imageOrientation == UIImage.Orientation.up {
+            return self
+        }
+        UIGraphicsBeginImageContextWithOptions(self.size, false, self.scale)
+        self.draw(in: CGRect(x: 0, y: 0, width: self.size.width, height: self.size.height))
+        if let normalizedImage: UIImage = UIGraphicsGetImageFromCurrentImageContext() {
+            UIGraphicsEndImageContext()
+            return normalizedImage
+        } else {
+            return self
+        }
+    }
 }
 
 

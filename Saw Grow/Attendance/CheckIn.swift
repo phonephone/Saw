@@ -16,12 +16,14 @@ import Localize_Swift
 enum actionType {
     case checkIn
     case update
-    case checkedOut
+    case checkOut
 }
 
 class CheckIn: UIViewController, UITextViewDelegate {
     
     var mapJSON:JSON?
+    
+    var firstTime = true
     
     var mode:actionType = .checkIn
     var empstatus:String?
@@ -54,6 +56,21 @@ class CheckIn: UIViewController, UITextViewDelegate {
     @IBOutlet weak var updateBtn: MyButton!
     @IBOutlet weak var checkOutBtn: MyButton!
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if firstTime {
+            NotificationCenter.default.addObserver(self, selector: #selector(recieveMapInfo), name: Notification.Name("sendMapInfo"), object: nil)
+            
+            NotificationCenter.default.addObserver(self, selector: #selector(updateClick(_:)), name: NSNotification.Name(rawValue: "updateClick"), object: nil)
+            
+            NotificationCenter.default.addObserver(self, selector:#selector(reloadMap),name: UIApplication.willEnterForegroundNotification, object: nil)
+            
+            timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.updateTimeDisplay), userInfo: nil, repeats: true)
+            firstTime = false
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print("CHECK IN BOTTOMSHEET")
@@ -76,20 +93,14 @@ class CheckIn: UIViewController, UITextViewDelegate {
         placeLabel.text = "CHECKIN_Place_Loading".localized()
         changeBtnDisplay()
         
-        NotificationCenter.default.addObserver(self, selector: #selector(recieveMapInfo), name: Notification.Name("sendMapInfo"), object: nil)
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(updateClick(_:)), name: NSNotification.Name(rawValue: "updateClick"), object: nil)
-        
-        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.updateTimeDisplay), userInfo: nil, repeats: true)
         loadMap(withLoadingHUD: true)
-        
-        NotificationCenter.default.addObserver(self, selector:#selector(reloadMap),name: UIApplication.willEnterForegroundNotification, object: nil)
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         timer?.invalidate()
         NotificationCenter.default.removeObserver(self)
+        firstTime = true
     }
     
     @objc func reloadMap() {
@@ -131,7 +142,7 @@ class CheckIn: UIViewController, UITextViewDelegate {
             showUpdate = true
             
         case "checkout"://Show Check In
-            self.mode = .checkedOut
+            self.mode = .checkOut
             showUpdate = false
             
         default:
@@ -172,7 +183,7 @@ class CheckIn: UIViewController, UITextViewDelegate {
             checkOutBtn.enableBtn()//เปิด checkout นอกวงกลม
             checkOutBtn.backgroundColor = .buttonRed
         }
-        else if mode == .checkedOut {
+        else if mode == .checkOut {
             checkInBtn.isHidden = false
             updateBtn.isHidden = true
             checkOutBtn.isHidden = true

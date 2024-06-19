@@ -362,8 +362,13 @@ extension Profile: UITableViewDataSource {
             cell.profileDetail.text = self.profileJSON!["headname"].stringValue
         case 3:
             cell.profileTitle.text = "PROFILE_Title_Hire".localized()
-            let hireDate = appDateFromServerString(dateStr: self.profileJSON!["date_of_joining"].stringValue)
-            cell.profileDetail.text = appStringFromDate(date: hireDate!, format: DateFormatter.appDateFormatStr)
+            
+            if  let hireDate = appDateFromServerString(dateStr: self.profileJSON!["date_of_joining"].stringValue) {
+                cell.profileDetail.text = appStringFromDate(date: hireDate, format: DateFormatter.appDateFormatStr)
+            }
+            else {
+                cell.profileDetail.text = "-"
+            }
         case 4:
             cell.profileTitle.text = "PROFILE_Title_Email".localized()
             cell.profileDetail.text = self.profileJSON!["email"].stringValue

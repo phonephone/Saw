@@ -26,12 +26,23 @@ class CheckInMap: UIViewController {
     
     var mapJSON:JSON?
     
+    var firstTime = true
+    
     @IBOutlet weak var gpsBtn: MyButton!
     @IBOutlet weak var qrCodeBtn: MyButton!
     
     @IBOutlet weak var updateBtn: MyButton!
     
     @IBOutlet weak var myMap: GMSMapView!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if firstTime {
+            NotificationCenter.default.addObserver(self, selector: #selector(showUpdate), name: NSNotification.Name(rawValue: "showUpdate"), object: nil)
+            firstTime = false
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,8 +51,6 @@ class CheckInMap: UIViewController {
         self.hideKeyboardWhenTappedAround()
         
         updateBtn.imageView?.contentMode = .scaleAspectFit
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(showUpdate), name: NSNotification.Name(rawValue: "showUpdate"), object: nil)
         
         // Initialize the location manager.
         locationManager = CLLocationManager()
@@ -71,13 +80,13 @@ class CheckInMap: UIViewController {
         }
 //        if UIDevice().userInterfaceIdiom == .phone && UIScreen.main.nativeBounds.height > 2208 {//iPhone 12 and upper
 //        }
-        
         loadMap()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         NotificationCenter.default.removeObserver(self)
+        firstTime = true
     }
     
     func loadMap() {

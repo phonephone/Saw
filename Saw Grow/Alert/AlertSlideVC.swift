@@ -16,7 +16,7 @@ class AlertSlideVC : UIViewController, MTSlideToOpenDelegate {
     var alertTitle = String()
     var slideTitle = String()
     
-    var buttonAction: (() -> Void)?
+    var complete: (() -> Void)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,7 +45,7 @@ class AlertSlideVC : UIViewController, MTSlideToOpenDelegate {
     func mtSlideToOpenDelegateDidFinish(_ sender: MTSlideToOpenView) {
         //print("Slide completed!");
         dismiss(animated: true)
-        buttonAction?()
+        complete?()
     }
     
     @IBAction func didTapCancel(_ sender: UIButton) {

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SideMenuCell" rowHeight="56" id="nsP-OB-JdD" customClass="SideMenuCell" customModule="Saw_Grow" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="260" height="56"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nsP-OB-JdD" id="FAC-to-38o">
+                <rect key="frame" x="0.0" y="0.0" width="260" height="56"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sidemenu_home" translatesAutoresizingMaskIntoConstraints="NO" id="BhT-Yg-x4g">
+                        <rect key="frame" x="17" y="14" width="28" height="28"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="28" id="YRw-NV-uED"/>
+                            <constraint firstAttribute="width" secondItem="BhT-Yg-x4g" secondAttribute="height" multiplier="1:1" id="ivb-iD-nW1"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KDT-dx-DBP">
+                        <rect key="frame" x="60" y="19" width="40.5" height="18"/>
+                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
+                        <color key="textColor" name="Text_Dark_Gray"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3   " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oKM-aK-IZZ" customClass="MyLabel" customModule="Saw_Grow" customModuleProvider="target">
+                        <rect key="frame" x="224.5" y="15.5" width="23.5" height="25"/>
+                        <color key="backgroundColor" name="Btn_Red"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="hfC-25-FNX"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="leftTextInset">
+                                <real key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="rightTextInset">
+                                <real key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="BhT-Yg-x4g" firstAttribute="leading" secondItem="FAC-to-38o" secondAttribute="leading" constant="17" id="E9p-nC-1l3"/>
+                    <constraint firstItem="BhT-Yg-x4g" firstAttribute="centerY" secondItem="FAC-to-38o" secondAttribute="centerY" id="WnQ-HU-FXz"/>
+                    <constraint firstItem="oKM-aK-IZZ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="KDT-dx-DBP" secondAttribute="trailing" constant="10" id="XAc-Vw-NC4"/>
+                    <constraint firstItem="oKM-aK-IZZ" firstAttribute="centerY" secondItem="FAC-to-38o" secondAttribute="centerY" id="XQV-kE-87R"/>
+                    <constraint firstAttribute="trailing" secondItem="oKM-aK-IZZ" secondAttribute="trailing" constant="12" id="d1m-Iy-dQT"/>
+                    <constraint firstItem="KDT-dx-DBP" firstAttribute="centerY" secondItem="BhT-Yg-x4g" secondAttribute="centerY" id="k9z-Hz-M5c"/>
+                    <constraint firstItem="KDT-dx-DBP" firstAttribute="leading" secondItem="BhT-Yg-x4g" secondAttribute="trailing" constant="15" id="vQi-k0-pyo"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="menuAlert" destination="oKM-aK-IZZ" id="M0g-de-569"/>
+                <outlet property="menuImage" destination="BhT-Yg-x4g" id="wjn-Zr-OsQ"/>
+                <outlet property="menuTitle" destination="KDT-dx-DBP" id="d5B-6n-8nt"/>
+            </connections>
+            <point key="canvasLocation" x="-862" y="-263"/>
+        </tableViewCell>
+    </objects>
+    <designables>
+        <designable name="oKM-aK-IZZ">
+            <size key="intrinsicContentSize" width="23.5" height="20.5"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="sidemenu_home" width="28" height="28"/>
+        <namedColor name="Btn_Red">
+            <color red="1" green="0.36078431372549019" blue="0.38823529411764707" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Text_Dark_Gray">
+            <color red="0.18431372549019609" green="0.21176470588235294" blue="0.25490196078431371" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Face EmotionAI-->
+        <scene sceneID="1PN-zT-NlW">
+            <objects>
+                <viewController storyboardIdentifier="FaceEmotionAI" id="Rra-gy-4aD" customClass="FaceEmotionAI" customModule="Saw_Grow" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dwo-Jq-UXi">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hotdogBackground" translatesAutoresizingMaskIntoConstraints="NO" id="wg1-xJ-O3f">
+                                <rect key="frame" x="76.666666666666686" y="362" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="1Yw-y2-hOc"/>
+                                    <constraint firstAttribute="height" constant="128" id="Vba-Qc-bbe"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Cbe-ym-eju">
+                                <rect key="frame" x="0.0" y="59" width="393" height="393"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Cbe-ym-eju" secondAttribute="height" multiplier="1:1" id="oLc-TY-YA6"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bcd-Sm-asp" customClass="MyLabelTopAligned" customModule="Saw_Grow" customModuleProvider="target">
+                                <rect key="frame" x="20" y="472" width="353" height="256"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Lm-1l-pss" customClass="MyButton" customModule="Saw_Grow" customModuleProvider="target">
+                                <rect key="frame" x="20" y="748" width="353" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="LWA-eX-h1l"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Take a photo" image="mood_camera">
+                                    <color key="titleColor" name="Text_Dark_Gray"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="cameraTapped:" destination="Rra-gy-4aD" eventType="touchUpInside" id="00Y-M4-R1H"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3g6-bd-oBy"/>
+                        <color key="backgroundColor" name="Calendar_1_Light"/>
+                        <constraints>
+                            <constraint firstItem="8Lm-1l-pss" firstAttribute="leading" secondItem="3g6-bd-oBy" secondAttribute="leading" constant="20" id="71d-fc-0z1"/>
+                            <constraint firstItem="3g6-bd-oBy" firstAttribute="bottom" secondItem="8Lm-1l-pss" secondAttribute="bottom" constant="20" id="9GG-Bo-sew"/>
+                            <constraint firstItem="Cbe-ym-eju" firstAttribute="top" secondItem="3g6-bd-oBy" secondAttribute="top" id="Gto-P2-Ghk"/>
+                            <constraint firstItem="3g6-bd-oBy" firstAttribute="trailing" secondItem="8Lm-1l-pss" secondAttribute="trailing" constant="20" id="IiY-1e-FhA"/>
+                            <constraint firstItem="wg1-xJ-O3f" firstAttribute="centerY" secondItem="dwo-Jq-UXi" secondAttribute="centerY" id="La2-ai-AnN"/>
+                            <constraint firstItem="wg1-xJ-O3f" firstAttribute="centerX" secondItem="3g6-bd-oBy" secondAttribute="centerX" id="XDc-4t-ea7"/>
+                            <constraint firstItem="bcd-Sm-asp" firstAttribute="leading" secondItem="3g6-bd-oBy" secondAttribute="leading" constant="20" id="aTO-dS-7BJ"/>
+                            <constraint firstItem="3g6-bd-oBy" firstAttribute="trailing" secondItem="Cbe-ym-eju" secondAttribute="trailing" id="guF-t2-aXa"/>
+                            <constraint firstItem="bcd-Sm-asp" firstAttribute="top" secondItem="Cbe-ym-eju" secondAttribute="bottom" constant="20" id="i41-0D-R53"/>
+                            <constraint firstItem="Cbe-ym-eju" firstAttribute="leading" secondItem="3g6-bd-oBy" secondAttribute="leading" id="nqg-sH-I7x"/>
+                            <constraint firstItem="3g6-bd-oBy" firstAttribute="trailing" secondItem="bcd-Sm-asp" secondAttribute="trailing" constant="20" id="p5l-gg-9Og"/>
+                            <constraint firstItem="8Lm-1l-pss" firstAttribute="top" secondItem="bcd-Sm-asp" secondAttribute="bottom" constant="20" id="uFM-Wg-3oV"/>
+                            <constraint firstItem="8Lm-1l-pss" firstAttribute="centerX" secondItem="dwo-Jq-UXi" secondAttribute="centerX" id="w6z-Zq-yo1"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Uuk-bf-ujV">
+                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="XKM-9H-pLm">
+                            <color key="tintColor" name="Text_Black"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="cameraBtn" destination="8Lm-1l-pss" id="5zr-nB-xPb"/>
+                        <outlet property="imageView" destination="Cbe-ym-eju" id="fpf-gl-saU"/>
+                        <outlet property="resultLabel" destination="bcd-Sm-asp" id="sK7-w6-Wa3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="92A-6J-Hhv" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="475.57251908396944" y="136.61971830985917"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="hotdogBackground" width="191" height="143"/>
+        <image name="mood_camera" width="24" height="21"/>
+        <namedColor name="Calendar_1_Light">
+            <color red="0.83529411764705885" green="0.93333333333333335" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Text_Black">
+            <color red="0.10196078431372549" green="0.12549019607843137" blue="0.18431372549019609" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Text_Dark_Gray">
+            <color red="0.18431372549019609" green="0.21176470588235294" blue="0.25490196078431371" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

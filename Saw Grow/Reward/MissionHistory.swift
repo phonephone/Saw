@@ -297,7 +297,7 @@ extension MissionHistory: UICollectionViewDelegate {
                         didSelectItemAt indexPath: IndexPath) {
         let cellArray = self.historyJSON![indexPath.item]
         
-        popupPic.sd_setImage(with: URL(string:cellArray["sticker_url"].stringValue), placeholderImage: UIImage(named: ""))
+        popupPic.sd_setImage(with: URL(string:cellArray["sticker_url"].stringValue), placeholderImage: nil)
         popupTitle.text = cellArray["send_header"].stringValue
         popupPoint.text = cellArray["send_point"].stringValue
         popupName.text = cellArray["send_text"].stringValue

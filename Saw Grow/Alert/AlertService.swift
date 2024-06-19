@@ -18,7 +18,7 @@ class AlertService {
         alertVC.alertActionButtonTitle = buttonTitle
         alertVC.alertActionButtonColor = buttonColor
         
-        alertVC.buttonAction = completion
+        alertVC.complete = completion
         
         return alertVC
     }
@@ -32,7 +32,21 @@ class AlertService {
         alertVC.alertActionButtonTitle = buttonTitle
         alertVC.alertActionButtonColor = buttonColor
         
-        alertVC.buttonAction = completion
+        alertVC.complete = completion
+        
+        return alertVC
+    }
+    
+    func alertImageWithText(image: UIImage? = nil, urlStr: String? = "", title: String? = "", description: String? = "", completion: @escaping () -> Void) -> AlertImageWithText {
+        
+        let alertVC = UIStoryboard.alertStoryBoard.instantiateViewController(withIdentifier: "AlertImageWithText") as! AlertImageWithText
+        
+        alertVC.alertImageFile = image
+        alertVC.alertImageURL = urlStr
+        alertVC.alertTitle = title
+        alertVC.alertDescription = description
+        
+        alertVC.complete = completion
         
         return alertVC
     }
@@ -44,7 +58,7 @@ class AlertService {
         alertVC.alertTitle = title
         alertVC.slideTitle = slideTitle
         
-        alertVC.buttonAction = completion
+        alertVC.complete = completion
         
         return alertVC
     }
@@ -64,6 +78,18 @@ class AlertService {
         let alertVC = UIStoryboard.alertStoryBoard.instantiateViewController(withIdentifier: "AlertMoodReportVC") as! AlertMoodReportVC
         
         alertVC.moodJSON = moodJSON
+        alertVC.complete = completion
+        
+        return alertVC
+    }
+    
+    func alertMap(title: String, lat: String, long: String, completion: @escaping () -> Void) -> AlertMapVC {
+        
+        let alertVC = UIStoryboard.alertStoryBoard.instantiateViewController(withIdentifier: "AlertMapVC") as! AlertMapVC
+        
+        alertVC.alertTitle = title
+        alertVC.alertLat = lat
+        alertVC.alertLong = long
         alertVC.complete = completion
         
         return alertVC

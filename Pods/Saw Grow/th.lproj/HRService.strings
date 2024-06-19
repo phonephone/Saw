@@ -1,0 +1,36 @@
+
+/* Class = "UITextField"; text = "Select Month"; ObjectID = "24i-5m-VRU"; */
+"24i-5m-VRU.text" = "Select Month";
+
+/* Class = "UILabel"; text = "22 October 2021"; ObjectID = "2rr-6s-cBP"; */
+"2rr-6s-cBP.text" = "22 October 2021";
+
+/* Class = "UITextField"; text = "Net Pay"; ObjectID = "6n3-h7-Kur"; */
+"6n3-h7-Kur.text" = "Net Pay";
+
+/* Class = "UILabel"; text = "Pay Slip"; ObjectID = "AIj-ih-2y4"; */
+"AIj-ih-2y4.text" = "Pay Slip";
+
+/* Class = "UIButton"; normalTitle = "   Download Pay Slip"; ObjectID = "EGl-YI-ibB"; */
+"EGl-YI-ibB.normalTitle" = "   Download Pay Slip";
+
+/* Class = "UIButton"; normalTitle = "Send to Email"; ObjectID = "FmD-gK-to4"; */
+"FmD-gK-to4.normalTitle" = "Send to Email";
+
+/* Class = "UITextField"; text = "Salary"; ObjectID = "SL2-Az-hWo"; */
+"SL2-Az-hWo.text" = "Salary";
+
+/* Class = "UITextField"; text = "20,000"; ObjectID = "XLZ-Br-Ce1"; */
+"XLZ-Br-Ce1.text" = "20,000";
+
+/* Class = "UILabel"; text = "17 October 2021"; ObjectID = "Zxm-7r-COY"; */
+"Zxm-7r-COY.text" = "17 October 2021";
+
+/* Class = "UITextField"; text = "20,000"; ObjectID = "psM-eX-XWq"; */
+"psM-eX-XWq.text" = "20,000";
+
+/* Class = "UILabel"; text = "Sent to"; ObjectID = "sW5-nn-hs2"; */
+"sW5-nn-hs2.text" = "Sent to";
+
+/* Class = "UITextField"; text = "Select Year"; ObjectID = "voQ-pC-Fde"; */
+"voQ-pC-Fde.text" = "Select Year";

@@ -153,10 +153,10 @@ extension RewardList: UICollectionViewDataSource {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier:"MenuCell", for: indexPath) as! CategoryCell
             
             if indexPath.item == selectedMenu{
-                cell.cellImage.sd_setImage(with: URL(string:cellArray["icon_url_alt"].stringValue), placeholderImage: UIImage(named: ""))
+                cell.cellImage.sd_setImage(with: URL(string:cellArray["icon_url_alt"].stringValue), placeholderImage: nil)
             }
             else{
-                cell.cellImage.sd_setImage(with: URL(string:cellArray["icon_url"].stringValue), placeholderImage: UIImage(named: ""))
+                cell.cellImage.sd_setImage(with: URL(string:cellArray["icon_url"].stringValue), placeholderImage: nil)
             }
             //cell.menuImage.setImageColor(color: .themeColor)
             cell.cellTitle.text = cellArray["category_name"].stringValue

@@ -19,6 +19,8 @@ class CalendarList: UIViewController {
     
     var setColor: Bool = true
     
+    let alertService = AlertService()
+    
     @IBOutlet weak var headerView: UIView!
     
     @IBOutlet weak var calendarMainView: UIView!
@@ -425,13 +427,13 @@ extension CalendarList: UITableViewDataSource {
             
             cell.cellRemark.backgroundColor = cellColor
             cell.cellRemark.addTarget(self, action: #selector(remarkClick(_:)), for: .touchUpInside)
-            if cellArray["remark"] == "" {
-                cell.cellRemark.isHidden = true
-                cell.isUserInteractionEnabled = false
-            }
-            else{
+            if cellArray["remark"] != "" || cellArray["image_path"] != "" {
                 cell.cellRemark.isHidden = false
                 cell.isUserInteractionEnabled = true
+            }
+            else{
+                cell.cellRemark.isHidden = true
+                cell.isUserInteractionEnabled = false
             }
             
             return cell
@@ -524,65 +526,11 @@ extension CalendarList: UITableViewDelegate {
     }
     
     func showRemark(indexPath: IndexPath) {
-        var alert = UIAlertController()
-        
-        alert = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
-        
         let dateArray = self.calendarJSON![indexPath.section]
         let cellArray = dateArray["event"][indexPath.row]
-        alert.title = cellArray["title"].stringValue//"Remark"
-        alert.message = "\n\(cellArray["remark"].stringValue)"
-        alert.setColorAndFont()
         
-        let urlStr = cellArray["image_path"].stringValue
-        if urlStr != "" {
-            let url = URL(string: cellArray["image_path"].stringValue)
-            DispatchQueue.main.async { [weak self] in
-                if let imageData = try? Data(contentsOf: url!) {
-                    if let image = UIImage(data: imageData) {
-                        
-                        let uiImageAlertAction = UIAlertAction(title: "", style: .default, handler: nil)
-                        let scaleSize = CGSize(width: 245, height: 245/image.size.width*image.size.height)
-                        let reSizedImage = image.imageResized(to: scaleSize)
-                        
-                        uiImageAlertAction.setValue(reSizedImage.withRenderingMode(.alwaysOriginal), forKey: "image")
-                        alert.addAction(uiImageAlertAction)
-                        
-                        alert.addAction(UIAlertAction(title: "OK".localized(), style: .default, handler: { action in
-                            
-                        }))
-                        alert.actions.last?.titleTextColor = .themeColor
-                        self!.present(alert, animated: true)
-                        
-                    }
-                }
-            }
-        }
-        else {
-            alert.addAction(UIAlertAction(title: "OK".localized(), style: .default, handler: { action in
-                
-            }))
-            alert.actions.last?.titleTextColor = .themeColor
-            self.present(alert, animated: true)
-        }
-        
-//        let imgView = UIImageView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
-//        imgView.sd_setImage(with: URL.init(string: cellArray["image_path"].stringValue)) { (image, err, type, url) in
-//            print((image?.size.height)! + (image?.size.width)!)
-//            
-//            let uiImageAlertAction = UIAlertAction(title: "", style: .default, handler: nil)
-//            let scaleSize = CGSize(width: 245, height: 245/image!.size.width*image!.size.height)
-//            let reSizedImage = image?.imageResized(to: scaleSize)
-//            
-//            uiImageAlertAction.setValue(reSizedImage!.withRenderingMode(.alwaysOriginal), forKey: "image")
-//            alert.addAction(uiImageAlertAction)
-//            
-//            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
-//                
-//            }))
-//            alert.actions.last?.titleTextColor = .themeColor
-//            
-//            self.present(alert, animated: true)
-//        }
+        let alertRemark = alertService.alertImageWithText(urlStr: cellArray["image_path"].stringValue,title: cellArray["title"].stringValue, description: cellArray["remark"].stringValue)
+        {print("Done Clicked")}
+        self.present(alertRemark, animated: true)
     }
 }

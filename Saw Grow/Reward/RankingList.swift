@@ -228,7 +228,7 @@ extension RankingList: UICollectionViewDataSource {
         }
         else{
             cell.cellRankingIcon.isHidden = false
-            cell.cellRankingIcon.sd_setImage(with: URL(string:cellArray["rankingicon"].stringValue), placeholderImage: UIImage(named: ""))
+            cell.cellRankingIcon.sd_setImage(with: URL(string:cellArray["rankingicon"].stringValue), placeholderImage: nil)
         }
         
         cell.cellRankingNo.text = cellArray["orderno"].stringValue

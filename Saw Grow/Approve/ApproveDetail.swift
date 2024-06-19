@@ -252,8 +252,13 @@ extension ApproveDetail: UITableViewDataSource {
                 
                 let urlStr = cellArray["image_path"].stringValue
                 if urlStr != "" {
-                    cell.cellImage.sd_setImage(with: URL(string:urlStr), placeholderImage: UIImage(named: ""))
+                    cell.cellImage.sd_setImage(with: URL(string:urlStr), placeholderImage: nil)
                     cell.cellImage.isHidden = false
+                    cell.cellImage.addTapGesture {
+                        let alertImage = self.alertService.alertImageWithText(image: cell.cellImage.image)
+                        {print("Done Clicked")}
+                        self.present(alertImage, animated: true)
+                    }
                 }
                 else{
                     cell.cellImage.image = nil

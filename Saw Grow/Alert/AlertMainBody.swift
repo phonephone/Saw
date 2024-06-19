@@ -18,7 +18,7 @@ class AlertMainBody : UIViewController {
     var alertActionButtonTitle = String()
     var alertActionButtonColor = UIColor()
     
-    var buttonAction: (() -> Void)?
+    var complete: (() -> Void)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,7 +40,7 @@ class AlertMainBody : UIViewController {
     @IBAction func didTapActionButton(_ sender: UIButton) {
         dismiss(animated: true)
         
-        buttonAction?()
+        complete?()
     }
 }
 

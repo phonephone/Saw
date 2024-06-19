@@ -108,3 +108,31 @@ class CalendarCell_Mood: UITableViewCell {
         //self.menuTitle.textColor = .white
     }
 }
+
+class CalendarCell_Report: UITableViewCell {
+    
+    class var identifier: String { return String(describing: self) }
+    class var nib: UINib { return UINib(nibName: identifier, bundle: nil) }
+    
+    @IBOutlet var cellDate: UILabel!
+    @IBOutlet var cellWeekDay: UILabel!
+    
+    @IBOutlet var cellTimeLine: UIView!
+    
+    @IBOutlet var cellHourTitle: UILabel!
+    @IBOutlet var cellStatusTitle: UILabel!
+    @IBOutlet var cellCheckInTime: UILabel!
+    @IBOutlet var cellUpdateTime: UILabel!
+    @IBOutlet var cellCheckOutTime: UILabel!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        // Background
+        self.backgroundColor = .clear
+        
+        // Title
+        //self.menuTitle.textColor = .white
+    }
+}
+

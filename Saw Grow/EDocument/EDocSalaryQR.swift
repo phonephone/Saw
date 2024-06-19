@@ -66,7 +66,7 @@ class EDocSalaryQR: UIViewController {
                 print("SUCCESS QR\(json)")
                 
                 if json["qr_code"].stringValue != "" {
-                    self.qrImageView.sd_setImage(with: URL(string:json["qr_code"].stringValue), placeholderImage: UIImage(named: ""))
+                    self.qrImageView.sd_setImage(with: URL(string:json["qr_code"].stringValue), placeholderImage: nil)
                     self.updateButton(qrExisted: true)
                 }
                 else {

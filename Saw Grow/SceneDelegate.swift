@@ -123,9 +123,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             
 //            bypassVC = UIStoryboard.mainStoryBoard.instantiateViewController(withIdentifier: "DemoExpired") as! DemoExpired
             
+            bypassVC = UIStoryboard.eDocumentStoryBoard.instantiateViewController(withIdentifier: "ReportCalendar") as! ReportCalendar
+            
+            bypassVC = UIStoryboard.eDocumentStoryBoard.instantiateViewController(withIdentifier: "Report") as! Report
+            
 //            bypassVC = UIStoryboard.loginStoryBoard.instantiateViewController(withIdentifier: "Login") as! Login
             
 //            bypassVC = UIStoryboard.mainStoryBoard.instantiateViewController(withIdentifier: "TabBar") as! TabBar
+            
+//            bypassVC = UIStoryboard.aiStoryBoard.instantiateViewController(withIdentifier: "FaceEmotionAI") as! FaceEmotionAI
+//            
             
 //            navigationController = UINavigationController.init(rootViewController: bypassVC)
             //Localize.setCurrentLanguage("en")
@@ -181,30 +188,30 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // to restore the scene back to its current state.
     }
 
-    func requestTrackingPermission() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-            if #available(iOS 14, *) {
-                ATTrackingManager.requestTrackingAuthorization { (status) in
-                    switch status {
-                    case .authorized:
-                        // Tracking authorization dialog was shown
-                        // and we are authorized
-                        print("Authorized")
-                    case .denied:
-                        // Tracking authorization dialog was
-                        // shown and permission is denied
-                        print("Denied")
-                    case .notDetermined:
-                        // Tracking authorization dialog has not been shown
-                        print("Not Determined")
-                    case .restricted:
-                        print("Restricted")
-                    @unknown default:
-                        print("Unknown")
-                    }
-                }
-            }
-        }
-    }
+//    func requestTrackingPermission() {
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+//            if #available(iOS 14, *) {
+//                ATTrackingManager.requestTrackingAuthorization { (status) in
+//                    switch status {
+//                    case .authorized:
+//                        // Tracking authorization dialog was shown
+//                        // and we are authorized
+//                        print("Authorized")
+//                    case .denied:
+//                        // Tracking authorization dialog was
+//                        // shown and permission is denied
+//                        print("Denied")
+//                    case .notDetermined:
+//                        // Tracking authorization dialog has not been shown
+//                        print("Not Determined")
+//                    case .restricted:
+//                        print("Restricted")
+//                    @unknown default:
+//                        print("Unknown")
+//                    }
+//                }
+//            }
+//        }
+//    }
 }
 

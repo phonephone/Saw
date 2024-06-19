@@ -97,7 +97,7 @@ class DirectoryList: UIViewController, UITextFieldDelegate, MFMailComposeViewCon
                     
                 case .success(let responseObject):
                     let json = JSON(responseObject)
-                    //print("SUCCESS A-Z\(json)")
+                    print("SUCCESS A-Z\(json)")
                     
                     self.allJSON = json["data"][0]["profile"]
                     self.directoryJSON = self.allJSON
@@ -337,7 +337,7 @@ extension DirectoryList: UICollectionViewDataSource {
                 cell.cellBtnCall.backgroundColor = color
                 cell.cellBtnEmail.backgroundColor = color
                 
-                cell.cellIcon.sd_setImage(with: URL(string:cellArray["icon_url"].stringValue), placeholderImage: UIImage(named: "xxx"))
+                cell.cellIcon.sd_setImage(with: URL(string:cellArray["icon_url"].stringValue), placeholderImage: nil)
                 cell.cellIcon.isHidden = false
             }
             else{
