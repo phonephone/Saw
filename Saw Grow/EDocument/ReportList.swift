@@ -67,7 +67,8 @@ class ReportList: UIViewController, UITextFieldDelegate {
         myDatePicker.delegate = myDatePicker
         myDatePicker.backgroundColor = .white
         myDatePicker.buildMonthCollection(previous: 12, next: 0)
-        NotificationCenter.default.addObserver(self, selector: #selector(myDateChanged(notification:)), name:.dateChanged, object: nil)
+        myDatePicker.notificationName = .reportList
+        NotificationCenter.default.addObserver(self, selector: #selector(myDateChanged(notification:)), name:myDatePicker.notificationName, object: nil)
         
         monthYearField.delegate = self
         monthYearField.inputView = myDatePicker
@@ -96,7 +97,7 @@ class ReportList: UIViewController, UITextFieldDelegate {
                 
             case .success(let responseObject):
                 let json = JSON(responseObject)
-                //print("SUCCESS REPORT\(json)")
+                print("SUCCESS REPORT\(json)")
                 
                 self.allJSON = json["data"][0]["profile"]
                 self.reportJSON = self.allJSON

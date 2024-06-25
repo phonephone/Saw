@@ -56,7 +56,8 @@ class ReportCalendar: UIViewController, UITextFieldDelegate {
         myDatePicker.delegate = myDatePicker
         myDatePicker.backgroundColor = .white
         myDatePicker.buildMonthCollection(previous: 12, next: 0)
-        NotificationCenter.default.addObserver(self, selector: #selector(myDateChanged(notification:)), name:.dateChanged, object: nil)
+        myDatePicker.notificationName = .reportCalendar
+        NotificationCenter.default.addObserver(self, selector: #selector(myDateChanged(notification:)), name:myDatePicker.notificationName, object: nil)
         
         monthYearField.delegate = self
         monthYearField.inputView = myDatePicker
@@ -73,15 +74,17 @@ class ReportCalendar: UIViewController, UITextFieldDelegate {
     }
     
     func loadCalendar(monthYear:Date) {
+        self.calendarJSON = nil
         let monthYearStr = monthAndYearToServerString(date: monthYear)
         let parameters:Parameters = ["ym":monthYearStr,
                                      "q":userID!
         ]
         print(parameters)
-        loadRequest(method:.get, apiName:"report/getprofile", authorization:true, showLoadingHUD:true, dismissHUD:true, parameters: parameters){ result in
+        loadRequest(method:.get, apiName:"report/getprofile", authorization:true, showLoadingHUD:true, dismissHUD:false, parameters: parameters){ result in
             switch result {
             case .failure(let error):
                 print(error)
+                ProgressHUD.dismiss()
                 
             case .success(let responseObject):
                 let json = JSON(responseObject)
@@ -96,6 +99,7 @@ class ReportCalendar: UIViewController, UITextFieldDelegate {
                     self.mytableView.isHidden = true
                 }
                 else{
+                    ProgressHUD.dismiss()
                     self.mytableView.isHidden = false
                     
                     if self.scrollToday && self.calendarJSON?.count != 0 {//Scroll to Bottom
@@ -200,7 +204,6 @@ extension ReportCalendar: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cellArray = self.calendarJSON![indexPath.section]
-        //let cellArray = dateArray["event"][indexPath.row]
         
         let dateSection = appDateFromServerString(dateStr: cellArray["date"].stringValue)!
         

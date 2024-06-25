@@ -39,7 +39,8 @@ class OTHistory: UIViewController, UITextFieldDelegate {
         myDatePicker.delegate = myDatePicker
         myDatePicker.backgroundColor = .white
         myDatePicker.buildMonthCollection(previous: 12, next: 0)
-        NotificationCenter.default.addObserver(self, selector: #selector(myDateChanged(notification:)), name:.dateChanged, object: nil)
+        myDatePicker.notificationName = .history
+        NotificationCenter.default.addObserver(self, selector: #selector(myDateChanged(notification:)), name:myDatePicker.notificationName, object: nil)
         
         monthYearField.delegate = self
         monthYearField.inputView = myDatePicker

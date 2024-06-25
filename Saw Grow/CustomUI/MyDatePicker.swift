@@ -13,6 +13,8 @@ class MyDatePicker : UIPickerView{
     var monthCollection = [Date]()
 //    var yearCollection = [Date]()
     
+    var notificationName:Notification.Name = .dateChanged
+    
 //        func buildDateCollection()-> [Date]{
 //            dateCollection.removeAll()
 //            dateCollection.append(contentsOf: Date.previousYearDay())
@@ -73,7 +75,8 @@ class MyDatePicker : UIPickerView{
 extension MyDatePicker : UIPickerViewDelegate{
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         let date = formatDate(date: self.monthCollection[row])
-        NotificationCenter.default.post(name: .dateChanged, object: nil, userInfo:["date":date])
+        //NotificationCenter.default.post(name: .dateChanged, object: nil, userInfo:["date":date])
+        NotificationCenter.default.post(name: notificationName, object: nil, userInfo:["date":date])
     }
     func formatDate(date: Date) -> String{
         return DateFormatter.serverFormatter.string(from: date)
@@ -128,6 +131,22 @@ extension MyDatePicker : UIPickerViewDataSource{
 extension Notification.Name{
     static var dateChanged : Notification.Name{
         return .init("myDateChanged")
+    }
+    
+    static var request : Notification.Name{
+        return .init("request")
+    }
+    
+    static var history : Notification.Name{
+        return .init("history")
+    }
+    
+    static var reportList : Notification.Name{
+        return .init("reportList")
+    }
+    
+    static var reportCalendar : Notification.Name{
+        return .init("reportCalendar")
     }
 }
 
