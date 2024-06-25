@@ -45,6 +45,10 @@ class AlertImageWithText : UIViewController {
         
         if let imageFile = alertImageFile {
             myImage.image = imageFile
+            
+            let ratio = imageFile.size.width / imageFile.size.height
+            let newHeight = myImage.frame.width / ratio
+            imageHeight.constant = newHeight
             myImage.isHidden = false
         }
         else if alertImageURL != "" {

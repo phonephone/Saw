@@ -387,6 +387,7 @@
 "REPORT_Late" = "迟到";
 "REPORT_Absent" = "缺席";
 "REPORT_Leave" = "离开";
+"REPORT_Button_Location" = "显示位置";
 
 //WARNING LETTER
 "WARNING_HEADER" = "警告信历史";

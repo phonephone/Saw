@@ -13,10 +13,14 @@ import Localize_Swift
 
 class ReportCalendar: UIViewController, UITextFieldDelegate {
     
+    var userID:String?
     var calendarJSON:JSON?
+    var detailJSON : JSON?
+    
     var setColor: Bool = true
     
     var firstTime = true
+    var scrollToday = true
     
     @IBOutlet weak var headerView: UIView!
     
@@ -70,30 +74,44 @@ class ReportCalendar: UIViewController, UITextFieldDelegate {
     
     func loadCalendar(monthYear:Date) {
         let monthYearStr = monthAndYearToServerString(date: monthYear)
-        let parameters:Parameters = ["ym":monthYearStr]
-        
-        loadRequest(method:.get, apiName:"attendance/gettimesheets", authorization:true, showLoadingHUD:true, dismissHUD:false, parameters: parameters){ result in
+        let parameters:Parameters = ["ym":monthYearStr,
+                                     "q":userID!
+        ]
+        print(parameters)
+        loadRequest(method:.get, apiName:"report/getprofile", authorization:true, showLoadingHUD:true, dismissHUD:true, parameters: parameters){ result in
             switch result {
             case .failure(let error):
                 print(error)
-                //ProgressHUD.dismiss()
                 
             case .success(let responseObject):
                 let json = JSON(responseObject)
-                //print("SUCCESS CALENDAR\(json)")
+                print("SUCCESS REPORT CALENDAR\(json)")
                 
-                self.calendarJSON = json["data"]["timesheet"]
+                self.calendarJSON = json["data"][0]["profile"]
+                self.mytableView.reloadData()
+                
                 if self.calendarJSON?.count == 0
                 {
                     self.showErrorNoData()
+                    self.mytableView.isHidden = true
                 }
                 else{
-                    ProgressHUD.dismiss()
+                    self.mytableView.isHidden = false
+                    
+                    if self.scrollToday && self.calendarJSON?.count != 0 {//Scroll to Bottom
+                        DispatchQueue.main.async {
+                            let indexPath = IndexPath(row: 0, section: self.calendarJSON!.count-1)
+                            self.mytableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
+                        }
+                        self.scrollToday = false
+                    }
+                    else {//Scroll to Top
+                        DispatchQueue.main.async {
+                            let indexPath = IndexPath(row: 0, section: 0)
+                            self.mytableView.scrollToRow(at: indexPath, at: .top, animated: true)
+                        }
+                    }
                 }
-                
-                //self.myCarlendar.reloadData()
-                self.mytableView.isHidden = false
-                self.mytableView.reloadData()
             }
         }
     }
@@ -181,10 +199,10 @@ extension ReportCalendar: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let dateArray = self.calendarJSON![indexPath.section]
-        let cellArray = dateArray["event"][indexPath.row]
+        let cellArray = self.calendarJSON![indexPath.section]
+        //let cellArray = dateArray["event"][indexPath.row]
         
-        let dateSection = appDateFromServerString(dateStr: dateArray["date"].stringValue)!
+        let dateSection = appDateFromServerString(dateStr: cellArray["date"].stringValue)!
         
         let dateStr = appStringFromDate(date: dateSection, format: "dd")
         let weekDayStr = appStringFromDate(date: dateSection, format: "EE")
@@ -194,19 +212,19 @@ extension ReportCalendar: UITableViewDataSource {
         cell.cellDate.text = dateStr
         cell.cellWeekDay.text = weekDayStr
 
-//        cell.cellHourTitle.text = cellArray["xxx"].stringValue
-//        
-//        cell.cellStatusTitle.text = cellArray["xxx"].stringValue
-//        cell.cellStatusTitle.textColor = colorFromRGB(rgbString: cellArray["color"].stringValue)
-//        
-//        cell.cellCheckInTime.text = cellArray["xxx"].stringValue
-//        cell.cellCheckInTime.textColor = colorFromRGB(rgbString: cellArray["color"].stringValue)
-//        
-//        cell.cellUpdateTime.text = cellArray["xxx"].stringValue
-//        cell.cellUpdateTime.textColor = colorFromRGB(rgbString: cellArray["color"].stringValue)
-//        
-//        cell.cellCheckOutTime.text = cellArray["xxx"].stringValue
-//        cell.cellCheckOutTime.textColor = colorFromRGB(rgbString: cellArray["color"].stringValue)
+        cell.cellHourTitle.text = cellArray["shiftname"].stringValue
+        
+        cell.cellStatusTitle.text = cellArray["empstatusdetail"].stringValue
+        cell.cellStatusTitle.textColor = colorFromRGB(rgbString: cellArray["empstatuscolor"].stringValue)
+        
+        cell.cellCheckInTime.text = cellArray["checkindetail"].stringValue
+        cell.cellCheckInTime.textColor = colorFromRGB(rgbString: cellArray["checkincolor"].stringValue)
+        
+        cell.cellUpdateTime.text = cellArray["checkupdatedetail"].stringValue
+        cell.cellUpdateTime.textColor = colorFromRGB(rgbString: cellArray["checkupdatecolor"].stringValue)
+        
+        cell.cellCheckOutTime.text = cellArray["checkoutdetail"].stringValue
+        cell.cellCheckOutTime.textColor = colorFromRGB(rgbString: cellArray["checkoutcolor"].stringValue)
         
         return cell
     }
@@ -217,6 +235,36 @@ extension ReportCalendar: UITableViewDataSource {
 extension ReportCalendar: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("Select \(indexPath.section)")
+        
+        let cellArray = calendarJSON![indexPath.section]
+        loadCalendarDetail(monthYearDate: cellArray["date"].stringValue)
+    }
+    
+    func loadCalendarDetail(monthYearDate:String) {
+        let parameters:Parameters = ["ymd":monthYearDate,
+                                     "q":userID!
+        ]
+        
+        loadRequest(method:.get, apiName:"report/getprofilecheckin", authorization:true, showLoadingHUD:true, dismissHUD:false, parameters: parameters){ result in
+            switch result {
+            case .failure(let error):
+                print(error)
+                ProgressHUD.dismiss()
+                
+            case .success(let responseObject):
+                let json = JSON(responseObject)
+                print("SUCCESS CALENDAR Detail\(json)")
+                
+                self.pushToCalendarDetail(selectedArray: json["data"][0]["profile"][0])
+                ProgressHUD.dismiss()
+            }
+        }
+    }
+    
+    func pushToCalendarDetail(selectedArray:JSON) {
+        let vc = UIStoryboard.eDocumentStoryBoard.instantiateViewController(withIdentifier: "Report") as! Report
+        vc.detailJSON = selectedArray
+        self.navigationController!.pushViewController(vc, animated: true)
     }
 }
 

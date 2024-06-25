@@ -62,8 +62,6 @@ class CheckIn: UIViewController, UITextViewDelegate {
         if firstTime {
             NotificationCenter.default.addObserver(self, selector: #selector(recieveMapInfo), name: Notification.Name("sendMapInfo"), object: nil)
             
-            NotificationCenter.default.addObserver(self, selector: #selector(updateClick(_:)), name: NSNotification.Name(rawValue: "updateClick"), object: nil)
-            
             NotificationCenter.default.addObserver(self, selector:#selector(reloadMap),name: UIApplication.willEnterForegroundNotification, object: nil)
             
             timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.updateTimeDisplay), userInfo: nil, repeats: true)
@@ -79,6 +77,8 @@ class CheckIn: UIViewController, UITextViewDelegate {
         self.view.layer.shadowOffset = CGSize(width: 0, height: -1)
         self.view.layer.shadowRadius = 5;
         self.view.layer.shadowOpacity = 0.5;
+        
+        updateBtn.imageView?.contentMode = .scaleAspectFit
         
         remarkText.delegate = self
         remarkText.contentInset = UIEdgeInsets(top: 5, left: 10, bottom: 5, right: 10)
@@ -131,25 +131,20 @@ class CheckIn: UIViewController, UITextViewDelegate {
     }
     
     func updateEmpStatus() {
-        var showUpdate = Bool()
         switch self.empstatus {
         case ""://Show Check In
             self.mode = .checkIn
-            showUpdate = false
             
         case "checkin"://Show Check Out & Update
             self.mode = .update
-            showUpdate = true
             
         case "checkout"://Show Check In
             self.mode = .checkOut
-            showUpdate = false
             
         default:
             break
         }
-        
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "showUpdate"), object: showUpdate)
+
         self.changeBtnDisplay()
     }
     
@@ -175,11 +170,11 @@ class CheckIn: UIViewController, UITextViewDelegate {
         }
         else if mode == .update {
             checkInBtn.isHidden = true
-            //updateBtn.isHidden = false/ย้ายปุ่มไปไว้ด้านบน
-            updateBtn.isHidden = true
+            updateBtn.isHidden = false
             checkOutBtn.isHidden = false
             
-            updateBtn.enableBtn()//เปิด update นอกวงกลม
+            //updateBtn.enableBtn()//เปิด update นอกวงกลม
+            //updateBtn.backgroundColor = .white
             checkOutBtn.enableBtn()//เปิด checkout นอกวงกลม
             checkOutBtn.backgroundColor = .buttonRed
         }
@@ -400,11 +395,12 @@ class CheckIn: UIViewController, UITextViewDelegate {
             descriptionStr = remarkText.text
         }
         
-        var parameters:Parameters = ["timestamp":timeStamp ,
-                                     "source":"gps" ,//gps, qr
-                                     "type":action ,//in, update, out
-                                     "latitude":userLat ,
-                                     "longitude":userLong ,
+        var parameters:Parameters = ["timestamp":timeStamp,
+                                     "source":"gps",//gps, qr
+                                     "type":action,//in, update, out
+                                     "latitude":userLat,
+                                     "longitude":userLong,
+                                     "location_text":placeLabel.text ?? "",
                                      "description":descriptionStr
         ]
         

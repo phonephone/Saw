@@ -96,11 +96,10 @@ class ReportList: UIViewController, UITextFieldDelegate {
                 
             case .success(let responseObject):
                 let json = JSON(responseObject)
-                print("SUCCESS REPORT\(json)")
+                //print("SUCCESS REPORT\(json)")
                 
                 self.allJSON = json["data"][0]["profile"]
                 self.reportJSON = self.allJSON
-                
                 self.directoryCollectionView.reloadData()
             }
         }
@@ -262,7 +261,7 @@ extension ReportList: UICollectionViewDelegate {
                         didSelectItemAt indexPath: IndexPath) {
         
         let cellArray = self.reportJSON![indexPath.item]
-        openReport(urlStr: cellArray["report_url"].stringValue)
+        pushToReportCalendar(selectedArray: cellArray)
     }
     
     @IBAction func reportClick(_ sender: UIButton) {
@@ -281,13 +280,12 @@ extension ReportList: UICollectionViewDelegate {
         print("Report \(indexPath.section) - \(indexPath.item)")
         
         let cellArray = self.reportJSON![indexPath.item]
-        openReport(urlStr: cellArray["report_url"].stringValue)
+        pushToReportCalendar(selectedArray: cellArray)
     }
     
-    func openReport(urlStr:String) {
-        let vc = UIStoryboard.mainStoryBoard.instantiateViewController(withIdentifier: "Web") as! Web
-        vc.titleString = "REPORT_HEADER".localized()
-        vc.webUrlString = urlStr
+    func pushToReportCalendar(selectedArray:JSON) {
+        let vc = UIStoryboard.eDocumentStoryBoard.instantiateViewController(withIdentifier: "ReportCalendar") as! ReportCalendar
+        vc.userID = selectedArray["user_id"].stringValue
         self.navigationController!.pushViewController(vc, animated: true)
     }
 }

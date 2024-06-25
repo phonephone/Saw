@@ -123,9 +123,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             
 //            bypassVC = UIStoryboard.mainStoryBoard.instantiateViewController(withIdentifier: "DemoExpired") as! DemoExpired
             
-            bypassVC = UIStoryboard.eDocumentStoryBoard.instantiateViewController(withIdentifier: "ReportCalendar") as! ReportCalendar
-            
-            bypassVC = UIStoryboard.eDocumentStoryBoard.instantiateViewController(withIdentifier: "Report") as! Report
+            bypassVC = UIStoryboard.eDocumentStoryBoard.instantiateViewController(withIdentifier: "ReportList") as! ReportList
             
 //            bypassVC = UIStoryboard.loginStoryBoard.instantiateViewController(withIdentifier: "Login") as! Login
             
@@ -134,7 +132,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //            bypassVC = UIStoryboard.aiStoryBoard.instantiateViewController(withIdentifier: "FaceEmotionAI") as! FaceEmotionAI
 //            
             
-//            navigationController = UINavigationController.init(rootViewController: bypassVC)
+            //navigationController = UINavigationController.init(rootViewController: bypassVC)
             //Localize.setCurrentLanguage("en")
             //Localize.setCurrentLanguage("th")
             //Localize.setCurrentLanguage("zh")

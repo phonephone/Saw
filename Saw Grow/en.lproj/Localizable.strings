@@ -387,6 +387,7 @@
 "REPORT_Late" = "Late";
 "REPORT_Absent" = "Absent";
 "REPORT_Leave" = "Leave";
+"REPORT_Button_Location" = "View Location";
 
 //WARNING LETTER
 "WARNING_HEADER" = "Warning Letter History";

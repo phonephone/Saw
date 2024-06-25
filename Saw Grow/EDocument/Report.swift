@@ -12,6 +12,8 @@ import ProgressHUD
 
 class Report: UIViewController {
     
+    var detailJSON : JSON?
+    
     var reportTab:actionType?
     
     var setColor: Bool = true
@@ -55,7 +57,7 @@ class Report: UIViewController {
         case 2:
             setTab(tab: .update)
         case 3:
-            setTab(tab: .checkIn)
+            setTab(tab: .checkOut)
         default:
             break
         }
@@ -72,6 +74,7 @@ class Report: UIViewController {
         
         let vc = UIStoryboard.eDocumentStoryBoard.instantiateViewController(withIdentifier: "ReportDetail") as! ReportDetail
         vc.reportType = tab
+        vc.allJSON = detailJSON
         embed(vc, inView: bottomView)
     }
     

@@ -63,7 +63,7 @@ class ReportMenu: UIViewController {
                 
             case .success(let responseObject):
                 let json = JSON(responseObject)
-                print("SUCCESS REPORT MENU\(json)")
+                //print("SUCCESS REPORT MENU\(json)")
                 
                 self.reportJSON = json["data"][0]["reportmenu"]
                 

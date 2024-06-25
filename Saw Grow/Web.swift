@@ -9,7 +9,7 @@ import UIKit
 import ProgressHUD
 import WebKit
 
-class Web: UIViewController, WKNavigationDelegate {
+class Web: UIViewController, WKNavigationDelegate, WKUIDelegate {
     
     var titleString:String?
     var webUrlString:String?
@@ -19,7 +19,7 @@ class Web: UIViewController, WKNavigationDelegate {
     @IBOutlet weak var headerView: UIView!
     
     @IBOutlet weak var headerTitle: UILabel!
-    @IBOutlet weak var myWebView: WKWebView!
+    @IBOutlet var myWebView: WKWebView!
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
@@ -38,6 +38,9 @@ class Web: UIViewController, WKNavigationDelegate {
         
         headerTitle.text = titleString
         
+        myWebView.uiDelegate = self
+        myWebView.navigationDelegate = self
+        
         let url = URL(string: webUrlString!)!
         //let url = URL(string: "https://www.google.com")!
         myWebView.load(URLRequest(url: url))
@@ -51,6 +54,27 @@ class Web: UIViewController, WKNavigationDelegate {
 
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         ProgressHUD.dismiss()
+    }
+    
+    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+        decisionHandler(.allow)
+        
+        if let url = navigationAction.request.url, let scheme = url.scheme?.lowercased() {
+            if scheme != "https" && scheme != "http" {//Check deeplink?
+                if UIApplication.shared.canOpenURL(url){
+                    UIApplication.shared.open(url)
+                }
+            }
+            else {
+            }
+        }
+    }
+    
+    func webView(_ webView: WKWebView, createWebViewWith configuration: WKWebViewConfiguration, for navigationAction: WKNavigationAction, windowFeatures: WKWindowFeatures) -> WKWebView? {
+        if navigationAction.targetFrame == nil {
+            webView.load(navigationAction.request)
+        }
+        return nil
     }
     
     @IBAction func back(_ sender: UIButton) {

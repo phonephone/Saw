@@ -13,7 +13,7 @@ import Localize_Swift
 
 class ReportDetail: UIViewController {
     
-    var detailID:String?
+    var allJSON : JSON?
     var detailJSON : JSON?
     
     var reportType:actionType?
@@ -40,43 +40,18 @@ class ReportDetail: UIViewController {
         
         myTableView.showsVerticalScrollIndicator = false
         
-        //loadDetail(withLoadingHUD: true)
-    }
-    
-    func loadDetail(withLoadingHUD:Bool) {
-        let parameters:Parameters = ["noti_id":detailID!]
-        var url:String = ""
-        var key:String = ""
-        
         switch reportType {
         case .checkIn:
-            url = "edocument/xxx"
-            key = "empcer"
+            detailJSON = allJSON!["checkin"]
         case .update:
-            url = "edocument/xxx"
-            key = "empcer"
+            detailJSON = allJSON!["update"]
         case .checkOut:
-            url = "edocument/xxx"
-            key = "empcer"
-            
+            detailJSON = allJSON!["checkout"]
         default:
             break
         }
-        print(parameters)
-        loadRequest(method:.get, apiName:url, authorization:true, showLoadingHUD:withLoadingHUD, dismissHUD:true, parameters: parameters){ result in
-            switch result {
-            case .failure(let error):
-                print(error)
-                //ProgressHUD.dismiss()
-                
-            case .success(let responseObject):
-                let json = JSON(responseObject)
-                print("SUCCESS REPORT DETAIL\(json)")
-                
-                self.detailJSON = json["data"][0][key][0]
-                self.myTableView.reloadData()
-            }
-        }
+        //print("REPORT DETAIL JSON \(detailJSON!)")
+        self.myTableView.reloadData()
     }
     
     @IBAction func back(_ sender: UIButton) {
@@ -142,15 +117,16 @@ extension ReportDetail: UITableViewDataSource {
         
         let hideSeperator = UIEdgeInsets.init(top: 0, left: 400,bottom: 0, right: 0)
         
-        //let cellArray = self.detailJSON!
+        let cellArray = self.detailJSON![indexPath.section]
         
         switch indexPath.row {
         case 0://Time Cell
             cell = standardCell
+            cell.cellTitle.text = cellArray["textcheckin"].stringValue
+            cell.cellTitle2.text = cellArray["late"].stringValue
+            cell.cellTitle2.textColor = colorFromRGB(rgbString: cellArray["textcolor"].stringValue)
             cell.cellTitle2.isHidden = false
-            //            cell.cellTitle.text = cellArray["xxx"].stringValue
-            //            cell.cellTitle2.text = cellArray["xxx"].stringValue
-            //            cell.cellDescription.text = cellArray["xxx"].stringValue
+            cell.cellDescription.text = cellArray["time"].stringValue
             
             DispatchQueue.main.async {
                 cell.cellBg.roundCorners(corners: [.topLeft,.topRight], radius: 15)
@@ -158,40 +134,47 @@ extension ReportDetail: UITableViewDataSource {
             
         case 1://Attach Cell
             cell = imageCell
-            //            cell.cellTitle.text = cellArray["xxx"].stringValue
-            //            cell.cellDescription.text = emptyReason
-            //
+            cell.cellTitle.text = cellArray["textpicture"].stringValue
+            cell.cellDescription.text = emptyReason
             
-            //            if cellArray["image"].stringValue == "" {
-            //                cell.cellDescription.isHidden = false
-            //                cell.cellImage.isHidden = true
-            //            }
-            //            else{
-            //                cell.cellImage.sd_setImage(with: URL(string:cellArray["xxx"].stringValue), placeholderImage: nil)
-            cell.cellDescription.isHidden = true
-            //                cell.cellImage.isHidden = false
-            cell.cellImage.addTapGesture {
-                let alertImage = self.alertService.alertImageWithText(image: cell.cellImage.image)
-                {print("Done Clicked")}
-                self.present(alertImage, animated: true)
+            
+            if cellArray["image"].stringValue == "" {
+                cell.cellDescription.isHidden = false
+                cell.cellImage.isHidden = true
             }
-            //            }
+            else{
+                cell.cellImage.sd_setImage(with: URL(string:cellArray["image"].stringValue), placeholderImage: nil)
+                cell.cellDescription.isHidden = true
+                cell.cellImage.isHidden = false
+                cell.cellImage.addTapGesture {
+                    let alertImage = self.alertService.alertImageWithText(image: cell.cellImage.image)
+                    {print("Done Clicked")}
+                    self.present(alertImage, animated: true)
+                }
+            }
             
         case 2://Note Cell
             cell = standardCell
             cell.cellTitle2.isHidden = true
-            cell.cellTitle.text = "Note"//cellArray["xxx"].stringValue
-            cell.cellDescription.text = "Test Report Description Test Report Description Test Report Description Test Report Description"//cellArray["xxx"].stringValue
-            //            if cell.cellDescription.text == "" {
-            //                cell.cellDescription.text = emptyReason
-            //            }
+            cell.cellTitle.text = cellArray["textnote"].stringValue
+            cell.cellDescription.text = cellArray["note"].stringValue
+            if cell.cellDescription.text == "" {
+                cell.cellDescription.text = emptyReason
+            }
             
         case 3://Location Cell
             cell = actionCell
-            cell.cellTitle.text = "Location"//cellArray["xxx"].stringValue
-            cell.cellBtnAction.addTarget(self, action: #selector(locationClick(_:)), for: .touchUpInside)
-            cell.cellDescription.text = "Test Report Description Test Report Description Test Report Description Test Report Description"//cellArray["xxx"].stringValue
+            cell.cellTitle.text = cellArray["textlocation"].stringValue
             
+            if cellArray["latitude"].stringValue != "" && cellArray["longitude"].stringValue != "" {
+                cell.cellBtnAction.addTarget(self, action: #selector(locationClick(_:)), for: .touchUpInside)
+                cell.cellBtnAction.isHidden = false
+                cell.cellDescription.text = cellArray["location"].stringValue
+            }
+            else {
+                cell.cellBtnAction.isHidden = true
+                cell.cellDescription.text = "-"
+            }
             
             DispatchQueue.main.async {
                 cell.cellBg.roundCorners(corners: [.bottomRight,.bottomLeft], radius: 15)
@@ -213,23 +196,6 @@ extension ReportDetail: UITableViewDelegate {
         print("Select \(indexPath.row)")
     }
     
-    @IBAction func imageClick(_ sender: UIButton) {
-        var superview = sender.superview
-        while let view = superview, !(view is UITableViewCell) {
-            superview = view.superview
-        }
-        guard let cell = superview as? UITableViewCell else {
-            return
-        }
-        guard let indexPath = myTableView.indexPath(for: cell) else {
-            return
-        }
-        print("Action \(indexPath.section) - \(indexPath.item)")
-        //let cellArray = self.detailJSON![indexPath.item]
-        
-        
-    }
-    
     @IBAction func locationClick(_ sender: UIButton) {
         var superview = sender.superview
         while let view = superview, !(view is UITableViewCell) {
@@ -242,9 +208,14 @@ extension ReportDetail: UITableViewDelegate {
             return
         }
         print("Action \(indexPath.section) - \(indexPath.item)")
-        //let cellArray = self.detailJSON![indexPath.item]
+        let cellArray = self.detailJSON![indexPath.section]
         
-        let alertMap = alertService.alertMap(title: "144/102 Kubon 27 Bangkok Bangkok 10220 Thailand", lat: "13.805997", long: "100.618")
+//        let alertMap = alertService.alertMap(title: "144/102 Kubon 27 Bangkok Bangkok 10220 Thailand", lat: "13.805997", long: "100.618")
+//        {
+//            print("Done Clicked")
+//        }
+        
+        let alertMap = alertService.alertMap(title: cellArray["location"].stringValue, lat: cellArray["latitude"].stringValue, long: cellArray["longitude"].stringValue)
         {
             print("Done Clicked")
         }

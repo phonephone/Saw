@@ -387,6 +387,7 @@
 "REPORT_Late" = "มาสาย";
 "REPORT_Absent" = "ขาดงาน";
 "REPORT_Leave" = "ลา";
+"REPORT_Button_Location" = "แสดงตำแหน่ง";
 
 //WARNING LETTER
 "WARNING_HEADER" = "ประวัติหนังสือเตือน";

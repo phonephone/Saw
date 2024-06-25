@@ -461,14 +461,16 @@ extension UIViewController {
     }
     
     func colorFromRGB(rgbString : String) -> UIColor{
-        let rgbArray = rgbString.components(separatedBy: ", ")
+        let rgbNoSpace = rgbString.replacingOccurrences(of: " ", with: "")
+        let rgbArray = rgbNoSpace.components(separatedBy: ",")
         
-        let red = Float(rgbArray[0])!
-        let green = Float(rgbArray[1])!
-        let blue = Float(rgbArray[2])!
-        
-        let color = UIColor(red: CGFloat(red/255), green: CGFloat(green/255), blue: CGFloat(blue/255), alpha: 1.0)
-        return color
+        if let red = Float(rgbArray[0]), let green = Float(rgbArray[1]), let blue = Float(rgbArray[2]) {
+            let color = UIColor(red: CGFloat(red/255), green: CGFloat(green/255), blue: CGFloat(blue/255), alpha: 1.0)
+            return color
+        }
+        else {
+            return .textDarkGray
+        }
     }
     
     func dateToServerString(date:Date) -> String{

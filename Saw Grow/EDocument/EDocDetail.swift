@@ -567,8 +567,12 @@ extension EDocDetail: UITableViewDelegate {
                 print("SUCCESS WARNING ACCEPT\(json)")
 
                 self.submitSuccess()
-                self.loadDetail(withLoadingHUD: false)
-                self.myTableView.reloadData()
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1.6) {
+                    self.navigationController!.popViewController(animated: true)
+                }
+//                self.loadDetail(withLoadingHUD: false)
+//                self.myTableView.reloadData()
+                
             }
         }
     }

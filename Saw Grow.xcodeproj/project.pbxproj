@@ -476,6 +476,16 @@
 			path = Mood;
 			sourceTree = "<group>";
 		};
+		106DAADE2C2AA14000F2ADA1 /* AI */ = {
+			isa = PBXGroup;
+			children = (
+				10141F5A2C19773200C353C2 /* FaceEmotionAI.swift */,
+				10141F5E2C197A7F00C353C2 /* AI.storyboard */,
+				10141F5C2C19791B00C353C2 /* Inceptionv3.mlmodel */,
+			);
+			path = AI;
+			sourceTree = "<group>";
+		};
 		107865042BFB3E2000B995E6 /* Kanit */ = {
 			isa = PBXGroup;
 			children = (
@@ -672,9 +682,7 @@
 				104CECC02BB56F6700F328C8 /* Alert */,
 				10177DB22786220C008701FC /* Web.swift */,
 				109CAF812C11AC5B00D391E2 /* DemoExpired.swift */,
-				10141F5A2C19773200C353C2 /* FaceEmotionAI.swift */,
-				10141F5E2C197A7F00C353C2 /* AI.storyboard */,
-				10141F5C2C19791B00C353C2 /* Inceptionv3.mlmodel */,
+				106DAADE2C2AA14000F2ADA1 /* AI */,
 				1049F8F0272E714E00F23465 /* HRService.storyboard */,
 				101D450C2732A58B0081AEDD /* Extension */,
 				101D45102732AA140081AEDD /* CustomUI */,
@@ -1245,7 +1253,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.1.1;
+				MARKETING_VERSION = 2.1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.softcakes.Saw-Grow";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1272,7 +1280,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.1.1;
+				MARKETING_VERSION = 2.1.3;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.softcakes.Saw-Grow";
 				PRODUCT_NAME = "$(TARGET_NAME)";
