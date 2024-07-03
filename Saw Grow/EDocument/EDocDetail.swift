@@ -380,10 +380,18 @@ extension EDocDetail: UITableViewDataSource {
                         {print("Done Clicked")}
                         self.present(alertImage, animated: true)
                     }
+                    cell.cellBtnAction.isHidden = true
+                }
+                else if cellArray["pdf_path"].stringValue != "" {
+                    cell.cellImage.image = nil
+                    cell.cellImage.isHidden = true
+                    cell.cellBtnAction.isHidden = false
+                    cell.cellBtnAction.addTarget(self, action: #selector(pdfClick(_:)), for: .touchUpInside)
                 }
                 else{
                     cell.cellImage.image = nil
                     cell.cellImage.isHidden = true
+                    cell.cellBtnAction.isHidden = true
                 }
                 
             case 6+indexAdd://Head Cell
@@ -459,6 +467,13 @@ extension EDocDetail: UITableViewDelegate {
         //var cell = (tableView.cellForRow(at: indexPath) as? LeaveDetail_Cell)!
         //cell.menuImage.setImageColor(color: .themeColor)
         //cell.menuTitle.textColor = .themeColor
+    }
+    
+    @IBAction func pdfClick(_ sender: UIButton) {
+        let vc = UIStoryboard.mainStoryBoard.instantiateViewController(withIdentifier: "Web") as! Web
+        vc.titleString = "PDF"
+        vc.webUrlString = detailJSON!["pdf_path"].stringValue
+        self.navigationController!.pushViewController(vc, animated: true)
     }
     
     @IBAction func acceptClick(_ sender: UIButton) {

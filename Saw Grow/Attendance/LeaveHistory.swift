@@ -91,7 +91,7 @@ extension LeaveHistory: UICollectionViewDataSource {
         cell.layer.cornerRadius = 15
         
         cell.cellImage.sd_setImage(with: URL(string:cellArray["statusurl"].stringValue), placeholderImage: UIImage(named: "logo_circle"))
-        cell.cellTitle.text = cellArray[categoryNameKey()].stringValue
+        cell.cellTitle.text = cellArray["category_name"].stringValue
         cell.cellDate.text = cellArray["date"].stringValue
         cell.cellSentDate.text = "\("Sent_Date".localized())  \(cellArray["sentdate"].stringValue)"
         cell.cellStatus.text = cellArray["status_text"].stringValue

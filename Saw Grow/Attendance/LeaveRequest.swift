@@ -261,7 +261,7 @@ class LeaveRequest: UIViewController, UITextFieldDelegate, UITextViewDelegate {
     
     @IBAction func attachmentAdd(_ sender: UIButton) {
         DispatchQueue.main.async {
-            AttachmentHandler.shared.showAttachmentActionSheet(vc: self, allowEdit: false)
+            AttachmentHandler.shared.showCameraAndPhotoLibrary(vc: self, allowEdit: false)
             AttachmentHandler.shared.imagePickedBlock = { (image) in
                 /* get your image here */
                 self.uploadImage.image = image
@@ -482,20 +482,6 @@ extension LeaveRequest: UIPickerViewDataSource {
         
         return pickerLabel!
     }
-    
-    /*
-     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-     if pickerView == typePicker && leaveJSON!.count > 0{
-     return leaveJSON![row]["category_name_en"].stringValue
-     }
-     else if pickerView == headPicker && headJSON!.count > 0{
-     return "\(headJSON![row]["first_name"].stringValue) \(headJSON![row]["last_name"].stringValue)"
-     }
-     else{
-     return ""
-     }
-     }
-     */
 }
 
 // MARK: - Picker Delegate

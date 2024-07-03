@@ -470,7 +470,11 @@
 
 //CAMERA
 "Camera" = "กล้อง";
-"Photo Library" = "คลังรูปภาพ";
+"Photo_Library" = "คลังรูปภาพ";
+"Video" = "วีดีโอ";
+"File" = "ไฟล์";
+"Upload_File" = "อัพโหลดไฟล์";
+"Upload_File_Limit" = "ไฟล์มีขนาดใหญ่เกินกว่าจะอัปโหลดได้";
 "GO_Setting" = "ไปที่การตั้งค่า";
 "Warning" = "คำเตือน";
 "CAMERA_Denied" = "การเข้าถึงกล้องของคุณถูกปฏิเสธ";

@@ -21,6 +21,8 @@ class EDocReimburse: UIViewController, UITextFieldDelegate, UITextViewDelegate {
     
     let alertService = AlertService()
     
+    var uploadFileURL:URL? = nil
+    
     @IBOutlet weak var typeIcon: UIButton!
     @IBOutlet weak var typeField: UITextField!
     @IBOutlet weak var typeBtn: UIButton!
@@ -47,7 +49,6 @@ class EDocReimburse: UIViewController, UITextFieldDelegate, UITextViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("REIMBURSE REQUEST")
-        
         
         typeField.delegate = self
         startField.delegate = self
@@ -184,7 +185,7 @@ class EDocReimburse: UIViewController, UITextFieldDelegate, UITextViewDelegate {
     
     @IBAction func attachmentAdd(_ sender: UIButton) {
         DispatchQueue.main.async {
-            AttachmentHandler.shared.showAttachmentActionSheet(vc: self, allowEdit: false)
+            AttachmentHandler.shared.showImageAndFileActionSheet(vc: self, allowEdit: false)
             AttachmentHandler.shared.imagePickedBlock = { (image) in
                 /* get your image here */
                 self.uploadImage.image = image
@@ -192,6 +193,38 @@ class EDocReimburse: UIViewController, UITextFieldDelegate, UITextViewDelegate {
                 self.uploadLabel.text = "image.jpg"
                 self.addBtn.isHidden = true
                 self.deleteBtn.isHidden = false
+            }
+            AttachmentHandler.shared.filePickedBlock = { (fileURLPath) in
+                /* get your file URL path here */
+                //print(fileURL)
+                let fileData = NSData(contentsOf: fileURLPath)
+                print(fileData!.count)
+                print(fileData!.count.byteSize)
+                
+                let fileSizeLimit = 2000000//2 MB
+                if fileData!.count > fileSizeLimit {
+                    let alertTitle = "\("Upload_File_Limit".localized()) (\(fileSizeLimit.byteSize))"
+                    let alertOK = self.alertService.alertOK(title: alertTitle, buttonColor: .buttonRed)
+                    {
+                    }
+                    self.present(alertOK, animated: true)
+                }
+                else {
+                    self.uploadFileURL = fileURLPath
+                    
+                    let fullName = fileURLPath.lastPathComponent
+                    if fullName.count > 30 {
+                        let shortName = fullName.replacingOccurrences(of: fullName.dropFirst(12).dropLast(12), with: "...")
+                        self.uploadLabel.text = shortName
+                    }
+                    else {
+                        self.uploadLabel.text = fullName
+                    }
+                    self.uploadImage.isHidden = true
+                    
+                    self.addBtn.isHidden = true
+                    self.deleteBtn.isHidden = false
+                }
             }
         }
     }
@@ -201,11 +234,13 @@ class EDocReimburse: UIViewController, UITextFieldDelegate, UITextViewDelegate {
     }
     
     func clearAttachFile() {
-        self.uploadImage.image = nil
-        self.uploadImage.isHidden = true
-        self.uploadLabel.text = "CHECKIN_Upload".localized()
-        self.addBtn.isHidden = false
-        self.deleteBtn.isHidden = true
+        uploadImage.image = nil
+        uploadImage.isHidden = true
+        uploadLabel.text = "Upload_File".localized()
+        addBtn.isHidden = false
+        deleteBtn.isHidden = true
+        
+        uploadFileURL = nil
     }
     
     @IBAction func submitClick(_ sender: UIButton) {
@@ -240,6 +275,12 @@ class EDocReimburse: UIViewController, UITextFieldDelegate, UITextViewDelegate {
         if uploadImage.image != nil {
             let base64Image = uploadImage.image!.convertImageToBase64String()
             parameters.updateValue(base64Image, forKey: "image")
+        }
+        if uploadFileURL != nil {
+            let fileData = NSData(contentsOf: uploadFileURL!)
+            let base64PDF = fileData!.base64EncodedString(options: .endLineWithLineFeed)
+            //print(base64PDF.count)
+            parameters.updateValue(base64PDF, forKey: "pdf")
         }
         //print(parameters)
         
@@ -314,20 +355,6 @@ extension EDocReimburse: UIPickerViewDataSource {
 
         return pickerLabel!
     }
-    
-    /*
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        if pickerView == typePicker && leaveJSON!.count > 0{
-            return leaveJSON![row]["category_name_en"].stringValue
-        }
-        else if pickerView == headPicker && headJSON!.count > 0{
-            return "\(headJSON![row]["first_name"].stringValue) \(headJSON![row]["last_name"].stringValue)"
-        }
-        else{
-            return ""
-        }
-    }
- */
 }
 
 // MARK: - Picker Delegate

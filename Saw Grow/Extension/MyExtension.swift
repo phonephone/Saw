@@ -545,11 +545,6 @@ extension UIViewController {
         return "menu_name"
     }
     
-    func categoryNameKey() -> String{
-        //return "Category_Name".localized()
-        return "category_name"
-    }
-    
     func requestNameKey() -> String{
         //return "Request_Name".localized()
         return "request_name"
@@ -740,6 +735,13 @@ extension UITextField {
         let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: self.frame.size.height))
         self.leftView = paddingView
         self.leftViewMode = .always
+    }
+}
+
+// MARK: - Int
+extension Int {
+    var byteSize: String {
+        return ByteCountFormatter().string(fromByteCount: Int64(self))
     }
 }
 

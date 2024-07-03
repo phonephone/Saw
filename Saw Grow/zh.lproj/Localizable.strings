@@ -470,7 +470,11 @@
 
 //CAMERA
 "Camera" = "相机";
-"Photo Library" = "照片库";
+"Photo_Library" = "照片库";
+"Video" = "视频";
+"File" = "文件";
+"Upload_File" = "上传文件";
+"Upload_File_Limit" = "文件太大，无法上传";
 "GO_Setting" = "转到设置";
 "Warning" = "警告";
 "CAMERA_Denied" = "您的相机访问被拒绝";

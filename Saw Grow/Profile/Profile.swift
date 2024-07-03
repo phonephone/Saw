@@ -270,7 +270,7 @@ class Profile: UIViewController , MFMailComposeViewControllerDelegate {
     func chooseImageSource()
     {
         DispatchQueue.main.async {
-            AttachmentHandler.shared.showAttachmentActionSheet(vc: self, allowEdit: true)
+            AttachmentHandler.shared.showCameraAndPhotoLibrary(vc: self, allowEdit: true)
             AttachmentHandler.shared.imagePickedBlock = { (image) in
                 self.uploadToServer(image: image)
             }

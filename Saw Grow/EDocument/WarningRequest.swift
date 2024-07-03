@@ -330,20 +330,6 @@ extension WarningRequest: UIPickerViewDataSource {
 
         return pickerLabel!
     }
-    
-    /*
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        if pickerView == typePicker && leaveJSON!.count > 0{
-            return leaveJSON![row]["category_name_en"].stringValue
-        }
-        else if pickerView == headPicker && headJSON!.count > 0{
-            return "\(headJSON![row]["first_name"].stringValue) \(headJSON![row]["last_name"].stringValue)"
-        }
-        else{
-            return ""
-        }
-    }
- */
 }
 
 // MARK: - Picker Delegate

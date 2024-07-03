@@ -86,7 +86,7 @@ extension LeaveStatus: UICollectionViewDataSource {
         
         cell.layer.cornerRadius = 15
         
-        cell.cellTitle.text = cellArray[categoryNameKey()].stringValue
+        cell.cellTitle.text = cellArray["category_name"].stringValue
         cell.cellTotal.text = cellArray["total"].stringValue
         cell.cellRemain.text = cellArray["remain"].stringValue
         

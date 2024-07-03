@@ -470,7 +470,11 @@
 
 //CAMERA
 "Camera" = "Camera";
-"Photo Library" = "Photo Library";
+"Photo_Library" = "Photo Library";
+"Video" = "Video";
+"File" = "File";
+"Upload_File" = "Upload File";
+"Upload_File_Limit" = "File is too large to be uploaded";
 "GO_Setting" = "Go to Setting";
 "Warning" = "Warning";
 "CAMERA_Denied" = "Your Camera Access Denied";

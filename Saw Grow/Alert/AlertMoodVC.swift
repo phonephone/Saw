@@ -119,7 +119,7 @@ class AlertMoodVC : UIViewController {
     func chooseImageSource()
     {
         DispatchQueue.main.async {
-            AttachmentHandler.shared.showAttachmentActionSheet(vc: self, allowEdit: false)
+            AttachmentHandler.shared.showCameraAndPhotoLibrary(vc: self, allowEdit: false)
             
             AttachmentHandler.shared.imagePickedBlock = { (image) in
                 self.moodImageView.image = image

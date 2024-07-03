@@ -37,6 +37,18 @@ class AlertService {
         return alertVC
     }
     
+    func alertOK(title: String, buttonColor: UIColor, completion: @escaping () -> Void) -> AlertOK {
+        
+        let alertVC = UIStoryboard.alertStoryBoard.instantiateViewController(withIdentifier: "AlertOK") as! AlertOK
+        
+        alertVC.alertTitle = title
+        alertVC.alertActionButtonColor = buttonColor
+        
+        alertVC.complete = completion
+        
+        return alertVC
+    }
+    
     func alertImageWithText(image: UIImage? = nil, urlStr: String? = "", title: String? = "", description: String? = "", completion: @escaping () -> Void) -> AlertImageWithText {
         
         let alertVC = UIStoryboard.alertStoryBoard.instantiateViewController(withIdentifier: "AlertImageWithText") as! AlertImageWithText

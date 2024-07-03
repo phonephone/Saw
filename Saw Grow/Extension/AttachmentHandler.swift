@@ -46,10 +46,10 @@ class AttachmentHandler: NSObject{
     struct Constants {
         static let actionFileTypeHeading = "Add a File"
         static let actionFileTypeDescription = "Choose a filetype to add..."
-        static let camera = "Camera"
-        static let phoneLibrary = "Photo Library"
-        static let video = "Video"
-        static let file = "File"
+        static let camera = "Camera".localized()
+        static let photoLibrary = "Photo_Library".localized()
+        static let video = "Video".localized()
+        static let file = "File".localized()
         
         
         static let alertForPhotoLibraryMessage = "App does not have access to your photos. To enable access, tap settings and turn on Photo Library Access."
@@ -59,41 +59,41 @@ class AttachmentHandler: NSObject{
         static let alertForVideoLibraryMessage = "App does not have access to your video. To enable access, tap settings and turn on Video Library Access."
         
         
-        static let settingsBtnTitle = "Settings"
-        static let cancelBtnTitle = "Cancel"
+        static let settingsBtnTitle = "GO_Setting".localized()
+        static let cancelBtnTitle = "Cancel".localized()
     }
     
     //MARK: - showAttachmentActionSheet
-    // This function is used to show the attachment sheet for image, video, photo and file.
-    func showAttachmentActionSheet(vc: UIViewController, allowEdit: Bool) {
-        currentVC = vc
-        //let actionSheet = UIAlertController(title: Constants.actionFileTypeHeading, message: Constants.actionFileTypeDescription, preferredStyle: .actionSheet)
-        let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-        
-        actionSheet.addAction(UIAlertAction(title: "Camera".localized(), style: .default, handler: { (action) -> Void in
-            self.authorisationStatusCamera(attachmentTypeEnum: .camera, vc: self.currentVC!, allowEdit: allowEdit)
-        }))
-        actionSheet.actions.last?.titleTextColor = .themeColor
-        
-        actionSheet.addAction(UIAlertAction(title: "Photo Library".localized(), style: .default, handler: { (action) -> Void in
-            self.authorisationStatusPhotoLibrary(attachmentTypeEnum: .photoLibrary, vc: self.currentVC!, allowEdit: allowEdit)
-        }))
-        actionSheet.actions.last?.titleTextColor = .themeColor
-        
-        //        actionSheet.addAction(UIAlertAction(title: Constants.video, style: .default, handler: { (action) -> Void in
-        //            self.authorisationStatus(attachmentTypeEnum: .video, vc: self.currentVC!)
-        //
-        //        }))
-        //
-        //        actionSheet.addAction(UIAlertAction(title: Constants.file, style: .default, handler: { (action) -> Void in
-        //            self.documentPicker()
-        //        }))
-        
-        actionSheet.addAction(UIAlertAction(title: "Cancel".localized(), style: .cancel, handler: nil))
-        actionSheet.actions.last?.titleTextColor = .buttonRed
-        
-        vc.present(actionSheet, animated: true, completion: nil)
-    }
+//    // This function is used to show the attachment sheet for image, video, photo and file.
+//    func showAttachmentActionSheet(vc: UIViewController, allowEdit: Bool) {
+//        currentVC = vc
+//        //let actionSheet = UIAlertController(title: Constants.actionFileTypeHeading, message: Constants.actionFileTypeDescription, preferredStyle: .actionSheet)
+//        let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+//        
+//        actionSheet.addAction(UIAlertAction(title: "Camera".localized(), style: .default, handler: { (action) -> Void in
+//            self.authorisationStatusCamera(attachmentTypeEnum: .camera, vc: self.currentVC!, allowEdit: allowEdit)
+//        }))
+//        actionSheet.actions.last?.titleTextColor = .themeColor
+//        
+//        actionSheet.addAction(UIAlertAction(title: "Photo_Library".localized(), style: .default, handler: { (action) -> Void in
+//            self.authorisationStatusPhotoLibrary(attachmentTypeEnum: .photoLibrary, vc: self.currentVC!, allowEdit: allowEdit)
+//        }))
+//        actionSheet.actions.last?.titleTextColor = .themeColor
+//        
+//        //        actionSheet.addAction(UIAlertAction(title: Constants.video, style: .default, handler: { (action) -> Void in
+//        //            self.authorisationStatus(attachmentTypeEnum: .video, vc: self.currentVC!)
+//        //
+//        //        }))
+//        //
+//        //        actionSheet.addAction(UIAlertAction(title: Constants.file, style: .default, handler: { (action) -> Void in
+//        //            self.documentPicker()
+//        //        }))
+//        
+//        actionSheet.addAction(UIAlertAction(title: "Cancel".localized(), style: .cancel, handler: nil))
+//        actionSheet.actions.last?.titleTextColor = .buttonRed
+//        
+//        vc.present(actionSheet, animated: true, completion: nil)
+//    }
     
     func showCameraOnly(vc: UIViewController, allowEdit: Bool) {
         currentVC = vc
@@ -103,6 +103,52 @@ class AttachmentHandler: NSObject{
     func showPhotoLibraryOnly(vc: UIViewController, allowEdit: Bool) {
         currentVC = vc
         self.authorisationStatusPhotoLibrary(attachmentTypeEnum: .photoLibrary, vc: self.currentVC!, allowEdit: allowEdit)
+    }
+    
+    func showCameraAndPhotoLibrary(vc: UIViewController, allowEdit: Bool) {
+        currentVC = vc
+        //let actionSheet = UIAlertController(title: Constants.actionFileTypeHeading, message: Constants.actionFileTypeDescription, preferredStyle: .actionSheet)
+        let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        
+        actionSheet.addAction(UIAlertAction(title: Constants.camera, style: .default, handler: { (action) -> Void in
+            self.authorisationStatusCamera(attachmentTypeEnum: .camera, vc: self.currentVC!, allowEdit: allowEdit)
+        }))
+        actionSheet.actions.last?.titleTextColor = .themeColor
+        
+        actionSheet.addAction(UIAlertAction(title: Constants.photoLibrary, style: .default, handler: { (action) -> Void in
+            self.authorisationStatusPhotoLibrary(attachmentTypeEnum: .photoLibrary, vc: self.currentVC!, allowEdit: allowEdit)
+        }))
+        actionSheet.actions.last?.titleTextColor = .themeColor
+        
+        actionSheet.addAction(UIAlertAction(title: Constants.cancelBtnTitle, style: .cancel, handler: nil))
+        actionSheet.actions.last?.titleTextColor = .buttonRed
+        
+        vc.present(actionSheet, animated: true, completion: nil)
+    }
+    
+    func showImageAndFileActionSheet(vc: UIViewController, allowEdit: Bool) {
+        currentVC = vc
+        let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        
+        actionSheet.addAction(UIAlertAction(title: Constants.camera, style: .default, handler: { (action) -> Void in
+            self.authorisationStatusCamera(attachmentTypeEnum: .camera, vc: self.currentVC!, allowEdit: allowEdit)
+        }))
+        actionSheet.actions.last?.titleTextColor = .themeColor
+        
+        actionSheet.addAction(UIAlertAction(title: Constants.photoLibrary, style: .default, handler: { (action) -> Void in
+            self.authorisationStatusPhotoLibrary(attachmentTypeEnum: .photoLibrary, vc: self.currentVC!, allowEdit: allowEdit)
+        }))
+        actionSheet.actions.last?.titleTextColor = .themeColor
+        
+        actionSheet.addAction(UIAlertAction(title: Constants.file, style: .default, handler: { (action) -> Void in
+            self.documentPicker()
+        }))
+        actionSheet.actions.last?.titleTextColor = .themeColor
+        
+        actionSheet.addAction(UIAlertAction(title: Constants.cancelBtnTitle, style: .cancel, handler: nil))
+        actionSheet.actions.last?.titleTextColor = .buttonRed
+        
+        vc.present(actionSheet, animated: true, completion: nil)
     }
     
     //MARK: - Authorisation Status
@@ -248,13 +294,13 @@ class AttachmentHandler: NSObject{
         
         let cameraUnavailableAlertController = UIAlertController (title: alertTitle , message: nil, preferredStyle: .alert)
         
-        let settingsAction = UIAlertAction(title: "GO_Setting".localized(), style: .destructive) { (_) -> Void in
+        let settingsAction = UIAlertAction(title: Constants.settingsBtnTitle, style: .destructive) { (_) -> Void in
             let settingsUrl = NSURL(string:UIApplication.openSettingsURLString)
             if let url = settingsUrl {
                 UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
             }
         }
-        let cancelAction = UIAlertAction(title: "Cancel".localized(), style: .default, handler: nil)
+        let cancelAction = UIAlertAction(title: Constants.cancelBtnTitle, style: .default, handler: nil)
         cameraUnavailableAlertController .addAction(cancelAction)
         cameraUnavailableAlertController .addAction(settingsAction)
         
@@ -293,7 +339,7 @@ extension AttachmentHandler: UIImagePickerControllerDelegate, UINavigationContro
             compressWithSessionStatusFunc(videoUrl)
         }
         else{
-            print("Something went wrong in  video")
+            print("Something went wrong in video")
         }
         currentVC?.dismiss(animated: true, completion: nil)
     }

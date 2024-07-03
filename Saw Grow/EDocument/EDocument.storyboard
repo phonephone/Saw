@@ -543,11 +543,11 @@
                                                             </subviews>
                                                         </stackView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pending" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J1t-vF-GCE">
-                                                            <rect key="frame" x="268" y="53.5" width="70" height="22.5"/>
+                                                            <rect key="frame" x="268" y="56.5" width="70" height="19.5"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="70" id="8f7-h5-kmr"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="15"/>
+                                                            <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="13"/>
                                                             <color key="textColor" name="Text_Gray"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -687,8 +687,8 @@
                                                             </subviews>
                                                         </stackView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pass" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jCS-6S-zKd">
-                                                            <rect key="frame" x="317" y="51" width="31" height="22.5"/>
-                                                            <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="15"/>
+                                                            <rect key="frame" x="321" y="52.5" width="27" height="19.5"/>
+                                                            <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="13"/>
                                                             <color key="textColor" name="Btn_Green"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -806,7 +806,7 @@
                                             <constraint firstAttribute="width" secondItem="OEa-yx-oV1" secondAttribute="height" multiplier="100:32" id="LwI-ry-OXX"/>
                                             <constraint firstAttribute="height" constant="32" id="cfb-Qr-axF"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="16"/>
+                                        <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="13"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="View pdf">
                                             <color key="titleColor" name="Main_Theme_1"/>
@@ -1167,7 +1167,7 @@
                                                                         </stackView>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reject" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ng-SQ-j5Z">
                                                                             <rect key="frame" x="209.5" y="0.0" width="114.5" height="46.5"/>
-                                                                            <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="15"/>
+                                                                            <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="13"/>
                                                                             <color key="textColor" name="Text_Red"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
@@ -1273,17 +1273,17 @@
                                                 </connections>
                                             </tableViewCell>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LeaveDetail_Reason" id="D2l-uJ-2H6" customClass="LeaveDetail_Cell" customModule="Saw_Grow" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="565.5" width="364" height="263"/>
+                                                <rect key="frame" x="0.0" y="565.5" width="364" height="312"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="D2l-uJ-2H6" id="lDx-L1-64U">
-                                                    <rect key="frame" x="0.0" y="0.0" width="364" height="263"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="364" height="312"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="blM-gZ-VZh">
-                                                            <rect key="frame" x="20" y="15" width="324" height="233"/>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="blM-gZ-VZh">
+                                                            <rect key="frame" x="20" y="15" width="324" height="282"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reason" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5pW-xB-Qmp">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="324" height="18"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="49.5" height="18"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="18" id="iU9-Ga-2Zy"/>
                                                                     </constraints>
@@ -1292,13 +1292,33 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reason" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="09k-s3-yjA">
-                                                                    <rect key="frame" x="0.0" y="33" width="324" height="23"/>
+                                                                    <rect key="frame" x="0.0" y="33" width="49.5" height="23"/>
                                                                     <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="15"/>
                                                                     <color key="textColor" name="Text_Dark_Gray"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
+                                                                <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lre-H7-PXA" customClass="MyButton" customModule="Saw_Grow" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="71" width="150" height="34"/>
+                                                                    <color key="backgroundColor" red="0.94509803921568625" green="0.95294117647058818" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="34" id="Nfy-Qj-2C1"/>
+                                                                        <constraint firstAttribute="width" constant="150" id="dkv-20-vFA"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="13"/>
+                                                                    <color key="tintColor" systemColor="systemGrayColor"/>
+                                                                    <inset key="imageEdgeInsets" minX="15" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                    <state key="normal" title="View pdf" image="doc" catalog="system">
+                                                                        <color key="titleColor" systemColor="systemGrayColor"/>
+                                                                    </state>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                            <real key="value" value="17"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                        <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="EDOC_DETAIL_Button_PDF"/>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </button>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gN7-7v-yar">
-                                                                    <rect key="frame" x="0.0" y="71" width="324" height="162"/>
+                                                                    <rect key="frame" x="0.0" y="120" width="324" height="162"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" secondItem="gN7-7v-yar" secondAttribute="height" multiplier="2:1" id="wCf-IL-TMM"/>
                                                                     </constraints>
@@ -1319,6 +1339,7 @@
                                                 <inset key="separatorInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
                                                 <connections>
                                                     <outlet property="cellBg" destination="lDx-L1-64U" id="fsF-yl-6qm"/>
+                                                    <outlet property="cellBtnAction" destination="lre-H7-PXA" id="H0P-3n-nMQ"/>
                                                     <outlet property="cellDescription" destination="09k-s3-yjA" id="ur7-zn-Vw6"/>
                                                     <outlet property="cellImage" destination="gN7-7v-yar" id="zKm-ar-odg"/>
                                                     <outlet property="cellTitle" destination="5pW-xB-Qmp" id="Xdn-xE-CSj"/>
@@ -1864,7 +1885,7 @@
                                                                 <rect key="frame" x="40" y="16.5" width="281" height="25.5"/>
                                                                 <color key="textColor" name="Text_Dark_Gray"/>
                                                                 <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="16"/>
-                                                                <textInputTraits key="textInputTraits"/>
+                                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="REIMBURSE_REQUEST_Amount_Field"/>
                                                                 </userDefinedRuntimeAttributes>
@@ -3540,11 +3561,11 @@
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pending" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qed-Wd-AmL">
-                                                            <rect key="frame" x="268" y="53.5" width="70" height="22.5"/>
+                                                            <rect key="frame" x="268" y="56.5" width="70" height="19.5"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="70" id="968-wU-ewq"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="15"/>
+                                                            <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="13"/>
                                                             <color key="textColor" name="Text_Gray"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -4029,7 +4050,7 @@
                                                                 </stackView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pending" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B0h-kh-9JI">
                                                                     <rect key="frame" x="219.5" y="0.0" width="109.5" height="46"/>
-                                                                    <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="15"/>
+                                                                    <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="13"/>
                                                                     <color key="textColor" name="Text_Gray"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
@@ -4682,14 +4703,14 @@
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="ssf-rL-eL3">
                                                                     <rect key="frame" x="15" y="15" width="326" height="220"/>
                                                                     <subviews>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ชื่อหัวข้อ: ชื่อหัวข้อ: ชื่อหัวข้อ: ชื่อหัวข้อ: ชื่อหัวข้อ: ชื่อหัวข้อ: ชื่อหัวข้อ: " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ie0-Sn-LYh">
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="ชื่อหัวข้อ: ชื่อหัวข้อ: ชื่อหัวข้อ: ชื่อหัวข้อ: ชื่อหัวข้อ: ชื่อหัวข้อ: ชื่อหัวข้อ: " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ie0-Sn-LYh">
                                                                             <rect key="frame" x="0.0" y="0.0" width="326" height="45"/>
                                                                             <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="15"/>
                                                                             <color key="textColor" name="Text_Dark_Gray"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="76K-5I-Ld4" userLabel="ชื่อหัวข้อ: ชื่อหัวข้อ: ชื่อหัวข้อ: ชื่อหัวข้อ: ชื่อหัวข้อ: ชื่อหัวข้อ: ชื่อหัวข้อ:" customClass="MyLabel" customModule="Saw_Grow" customModuleProvider="target">
-                                                                            <rect key="frame" x="0.0" y="76" width="326" height="67.5"/>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="76K-5I-Ld4" userLabel="ชื่อหัวข้อ: ชื่อหัวข้อ: ชื่อหัวข้อ: ชื่อหัวข้อ: ชื่อหัวข้อ: ชื่อหัวข้อ: ชื่อหัวข้อ:" customClass="MyLabel" customModule="Saw_Grow" customModuleProvider="target">
+                                                                            <rect key="frame" x="0.0" y="60" width="326" height="99"/>
                                                                             <string key="text">คำอธิบายหัวข้อ คำอธิบายหัวข้อคำอธิบายหัวข้อคำอธิบายหัวข้อคำอธิบายหัวข้อคำอธิบายหัวข้อคำอธิบายหัวข้อคำอธิบายหัวข้อคำอธิบายหัวข้อคำอธิบายหัวข้อ</string>
                                                                             <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="15"/>
                                                                             <color key="textColor" name="Text_Gray"/>
@@ -5461,7 +5482,7 @@
                                                                                 </stackView>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ผู้ประเมิน" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hLY-9E-UHS">
                                                                                     <rect key="frame" x="209.5" y="0.0" width="106.5" height="46.5"/>
-                                                                                    <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="15"/>
+                                                                                    <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="13"/>
                                                                                     <color key="textColor" name="Text_Red"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                     <userDefinedRuntimeAttributes>
@@ -6456,15 +6477,16 @@
                                                             <color key="textColor" name="Text_Gray"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rjV-v6-laV" customClass="MyButton" customModule="Saw_Grow" customModuleProvider="target">
+                                                        <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jXG-tW-pT1" customClass="MyButton" customModule="Saw_Grow" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="28" width="150" height="34"/>
-                                                            <color key="backgroundColor" red="0.94509803921568625" green="0.95294117647058818" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="backgroundColor" red="0.94509803920000002" green="0.95294117649999999" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="34" id="TdL-EN-Dhr"/>
-                                                                <constraint firstAttribute="width" constant="150" id="rSq-Rh-iTP"/>
+                                                                <constraint firstAttribute="height" constant="34" id="QUl-fR-oh6"/>
+                                                                <constraint firstAttribute="width" constant="150" id="sTx-K6-Lpm"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
-                                                            <inset key="imageEdgeInsets" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                            <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="13"/>
+                                                            <color key="tintColor" systemColor="systemGrayColor"/>
+                                                            <inset key="imageEdgeInsets" minX="15" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                             <state key="normal" title="View Location" image="report_location">
                                                                 <color key="titleColor" systemColor="systemGrayColor"/>
                                                             </state>
@@ -6497,7 +6519,7 @@
                                         <inset key="separatorInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
                                         <connections>
                                             <outlet property="cellBg" destination="5BI-eB-RNQ" id="yub-Ou-AHa"/>
-                                            <outlet property="cellBtnAction" destination="rjV-v6-laV" id="8ee-S8-Q2H"/>
+                                            <outlet property="cellBtnAction" destination="jXG-tW-pT1" id="gzd-z8-rrb"/>
                                             <outlet property="cellDescription" destination="HwP-iT-3p0" id="yQY-qY-IJL"/>
                                             <outlet property="cellTitle" destination="A84-sr-XyJ" id="vOz-wg-d9Z"/>
                                         </connections>
@@ -6548,7 +6570,7 @@
             <size key="intrinsicContentSize" width="59" height="36"/>
         </designable>
         <designable name="76K-5I-Ld4">
-            <size key="intrinsicContentSize" width="914.5" height="22.5"/>
+            <size key="intrinsicContentSize" width="934.5" height="42.5"/>
         </designable>
         <designable name="8lg-UZ-nLn">
             <size key="intrinsicContentSize" width="203.5" height="26"/>
@@ -6584,7 +6606,7 @@
             <size key="intrinsicContentSize" width="276" height="35"/>
         </designable>
         <designable name="OEa-yx-oV1">
-            <size key="intrinsicContentSize" width="63" height="36"/>
+            <size key="intrinsicContentSize" width="52" height="32"/>
         </designable>
         <designable name="OOU-UA-k0O">
             <size key="intrinsicContentSize" width="52" height="36"/>
@@ -6640,6 +6662,9 @@
         <designable name="j7b-hk-owg">
             <size key="intrinsicContentSize" width="30" height="33"/>
         </designable>
+        <designable name="jXG-tW-pT1">
+            <size key="intrinsicContentSize" width="94" height="20"/>
+        </designable>
         <designable name="kwh-29-qkb">
             <size key="intrinsicContentSize" width="52" height="36"/>
         </designable>
@@ -6649,6 +6674,9 @@
         <designable name="lnL-ht-akx">
             <size key="intrinsicContentSize" width="143" height="42"/>
         </designable>
+        <designable name="lre-H7-PXA">
+            <size key="intrinsicContentSize" width="70" height="21.5"/>
+        </designable>
         <designable name="n3g-dt-UZY">
             <size key="intrinsicContentSize" width="39" height="38"/>
         </designable>
@@ -6657,9 +6685,6 @@
         </designable>
         <designable name="rg8-Hu-u7B">
             <size key="intrinsicContentSize" width="42" height="42"/>
-        </designable>
-        <designable name="rjV-v6-laV">
-            <size key="intrinsicContentSize" width="87" height="15.5"/>
         </designable>
         <designable name="sGi-IH-J7C">
             <size key="intrinsicContentSize" width="143" height="42"/>
@@ -6686,6 +6711,7 @@
         <image name="demo_profile3" width="62" height="62"/>
         <image name="demo_profile5" width="75" height="75"/>
         <image name="directory_delete" width="37" height="37"/>
+        <image name="doc" catalog="system" width="115" height="128"/>
         <image name="form_checkbox_off" width="26" height="26"/>
         <image name="form_date_off" width="24.5" height="22"/>
         <image name="form_dropdown_off" width="15" height="9.5"/>
@@ -6742,13 +6768,13 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray5Color">
-            <color red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray6Color">
-            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGrayColor">
-            <color red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

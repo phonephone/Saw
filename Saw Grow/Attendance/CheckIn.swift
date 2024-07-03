@@ -268,7 +268,7 @@ class CheckIn: UIViewController, UITextViewDelegate {
     
     @IBAction func attachmentAdd(_ sender: UIButton) {
         DispatchQueue.main.async {
-            //AttachmentHandler.shared.showAttachmentActionSheet(vc: self, allowEdit: false)
+            //AttachmentHandler.shared.showCameraAndPhotoLibrary(vc: self, allowEdit: false)
             AttachmentHandler.shared.showCameraOnly(vc: self, allowEdit: false)
             AttachmentHandler.shared.imagePickedBlock = { (image) in
                 /* get your image here */

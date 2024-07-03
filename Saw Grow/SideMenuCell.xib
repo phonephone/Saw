@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -29,14 +29,14 @@
                             <constraint firstAttribute="width" secondItem="BhT-Yg-x4g" secondAttribute="height" multiplier="1:1" id="ivb-iD-nW1"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KDT-dx-DBP">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KDT-dx-DBP">
                         <rect key="frame" x="60" y="17" width="39.5" height="22.5"/>
                         <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="15"/>
                         <color key="textColor" name="Text_Dark_Gray"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3   " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oKM-aK-IZZ" customClass="MyLabel" customModule="Saw_Grow" customModuleProvider="target">
-                        <rect key="frame" x="211" y="15.5" width="37" height="25"/>
+                        <rect key="frame" x="227" y="15.5" width="21" height="25"/>
                         <color key="backgroundColor" name="Btn_Red"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="25" id="hfC-25-FNX"/>
@@ -74,7 +74,7 @@
     </objects>
     <designables>
         <designable name="oKM-aK-IZZ">
-            <size key="intrinsicContentSize" width="37" height="25.5"/>
+            <size key="intrinsicContentSize" width="21" height="25.5"/>
         </designable>
     </designables>
     <resources>
