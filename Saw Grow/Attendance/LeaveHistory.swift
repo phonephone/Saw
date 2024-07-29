@@ -99,7 +99,7 @@ extension LeaveHistory: UICollectionViewDataSource {
         
         cell.cellBtnDelete.addTarget(self, action: #selector(deleteClick(_:)), for: .touchUpInside)
         
-        if cell.cellStatus.text == "Pending" {
+        if cellArray["status_id"].stringValue == "1" {//Pending
             cell.cellBtnDelete.isHidden = false
         }
         else{
@@ -191,7 +191,7 @@ extension LeaveHistory: UICollectionViewDelegate {
         //print("Submit ID =\(typeID) \nSTART =\(startDate) \nEND =\(endDate) \nHALF =\(halfDay) \nREMARK =\(descriptionStr) \n")
 
         let parameters:Parameters = ["leave_id":leaveID ,
-                                     "status":"3" ,//3=cancel,reject
+                                     "status":"4" ,//Cancel
                                      "remarks":"LEAVE_Cancel_Employee".localized()
         ]
         //print(parameters)

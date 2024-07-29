@@ -3,7 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -1444,20 +1444,20 @@
                                                             <rect key="frame" x="87" y="14" width="232" height="58"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vacation Leaves" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E6R-vs-2DX">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="125.5" height="23"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="125.5" height="22.5"/>
                                                                     <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="17"/>
                                                                     <color key="textColor" name="Main_Theme_1"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="22 - 25 Sep 2021" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eDE-8a-Xqg">
-                                                                    <rect key="frame" x="0.0" y="23" width="99.5" height="19"/>
+                                                                    <rect key="frame" x="0.0" y="22.5" width="99.5" height="18.5"/>
                                                                     <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="14"/>
                                                                     <color key="textColor" name="Text_Dark_Gray"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sent date   19 Sep 2021" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9jn-CD-q5X">
-                                                                    <rect key="frame" x="0.0" y="42" width="120" height="16"/>
-                                                                    <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="12"/>
+                                                                    <rect key="frame" x="0.0" y="41" width="130" height="17"/>
+                                                                    <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="13"/>
                                                                     <color key="textColor" name="Text_Gray"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
@@ -1644,9 +1644,6 @@
                                                             <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="15"/>
                                                             <color key="textColor" name="Text_Gray"/>
                                                             <nil key="highlightedColor"/>
-                                                            <userDefinedRuntimeAttributes>
-                                                                <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="LEAVE_DETAIL_Request"/>
-                                                            </userDefinedRuntimeAttributes>
                                                         </label>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Kks-C4-Ou6">
                                                             <rect key="frame" x="20" y="46" width="339" height="46"/>
@@ -1701,6 +1698,7 @@
                                                     <outlet property="cellImage" destination="vc7-c0-kSc" id="1QW-BF-OkX"/>
                                                     <outlet property="cellName" destination="XhV-Ov-7Ae" id="Tln-OY-K6v"/>
                                                     <outlet property="cellPosition" destination="xYU-Q5-n3U" id="mmG-Of-pk0"/>
+                                                    <outlet property="cellTitle" destination="RuD-xQ-rFx" id="Yb9-H7-N6V"/>
                                                 </connections>
                                             </tableViewCell>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LeaveDetail_Standard" id="8Xs-Ld-cOA" customClass="LeaveDetail_Cell" customModule="Saw_Grow" customModuleProvider="target">
@@ -2009,9 +2007,6 @@
                                                             <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="15"/>
                                                             <color key="textColor" name="Text_Gray"/>
                                                             <nil key="highlightedColor"/>
-                                                            <userDefinedRuntimeAttributes>
-                                                                <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="LEAVE_DETAIL_Request"/>
-                                                            </userDefinedRuntimeAttributes>
                                                         </label>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="sPy-Hr-eY3">
                                                             <rect key="frame" x="10" y="44" width="162" height="134"/>
@@ -2130,6 +2125,7 @@
                                                     <outlet property="cellName2" destination="arL-cJ-Tnf" id="hFm-pD-M0u"/>
                                                     <outlet property="cellTime1" destination="tCG-ga-TG8" id="zb6-j7-Kbk"/>
                                                     <outlet property="cellTime2" destination="hKc-cd-lfm" id="7IT-YE-IQi"/>
+                                                    <outlet property="cellTitle" destination="GLX-uW-GuP" id="Nbj-Ak-aHG"/>
                                                 </connections>
                                             </tableViewCell>
                                         </prototypes>
@@ -5298,8 +5294,8 @@ Please update all attendance before OT Request.</string>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="22 - 25 Sep 2021" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dkS-7D-CZp">
-                                                                    <rect key="frame" x="0.0" y="38.5" width="85.5" height="19.5"/>
-                                                                    <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="12"/>
+                                                                    <rect key="frame" x="0.0" y="38.5" width="92.5" height="19.5"/>
+                                                                    <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="13"/>
                                                                     <color key="textColor" name="Text_Gray_1"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
@@ -5593,8 +5589,8 @@ Please update all attendance before OT Request.</string>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="22 - 25 Sep 2021" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="paI-bl-ip1">
-                                                                    <rect key="frame" x="0.0" y="38.5" width="85.5" height="19.5"/>
-                                                                    <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="12"/>
+                                                                    <rect key="frame" x="0.0" y="38.5" width="92.5" height="19.5"/>
+                                                                    <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="13"/>
                                                                     <color key="textColor" name="Text_Gray_1"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
@@ -5862,9 +5858,6 @@ Please update all attendance before OT Request.</string>
                                                             <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="15"/>
                                                             <color key="textColor" name="Text_Gray"/>
                                                             <nil key="highlightedColor"/>
-                                                            <userDefinedRuntimeAttributes>
-                                                                <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="LEAVE_DETAIL_Request"/>
-                                                            </userDefinedRuntimeAttributes>
                                                         </label>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="sTo-u5-wDp">
                                                             <rect key="frame" x="20" y="46" width="339" height="46"/>
@@ -5919,6 +5912,7 @@ Please update all attendance before OT Request.</string>
                                                     <outlet property="cellImage" destination="9D8-nP-WIL" id="uic-gr-2q4"/>
                                                     <outlet property="cellName" destination="5Vl-tL-Q7W" id="YkL-VM-Gnd"/>
                                                     <outlet property="cellPosition" destination="DGp-pK-oWa" id="Ugd-KI-bwX"/>
+                                                    <outlet property="cellTitle" destination="R5R-hV-ceI" id="VMl-c3-c2i"/>
                                                 </connections>
                                             </tableViewCell>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ApproveDetail_Standard" id="uOk-ki-kok" customClass="ApproveDetail_Cell" customModule="Saw_Grow" customModuleProvider="target">
@@ -6235,9 +6229,6 @@ Please update all attendance before OT Request.</string>
                                                             <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="15"/>
                                                             <color key="textColor" name="Text_Gray"/>
                                                             <nil key="highlightedColor"/>
-                                                            <userDefinedRuntimeAttributes>
-                                                                <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="LEAVE_DETAIL_Request"/>
-                                                            </userDefinedRuntimeAttributes>
                                                         </label>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="7gn-dz-xg1">
                                                             <rect key="frame" x="10" y="44" width="162" height="134"/>
@@ -6356,6 +6347,7 @@ Please update all attendance before OT Request.</string>
                                                     <outlet property="cellName2" destination="jJ9-cx-NVu" id="zCo-jk-oCt"/>
                                                     <outlet property="cellTime1" destination="cGf-rd-OOc" id="0Kp-qT-YRp"/>
                                                     <outlet property="cellTime2" destination="m9p-1O-7fu" id="lko-Zo-59g"/>
+                                                    <outlet property="cellTitle" destination="K2y-MX-NgQ" id="mVK-Nl-cXD"/>
                                                 </connections>
                                             </tableViewCell>
                                         </prototypes>
@@ -6631,10 +6623,10 @@ Please update all attendance before OT Request.</string>
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray5Color">
-            <color red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGrayColor">
-            <color red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

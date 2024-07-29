@@ -165,7 +165,7 @@ extension NotificationAll: UICollectionViewDelegateFlowLayout {
         
         let viewWidth = collectionView.frame.width
         //let viewHeight = collectionView.frame.height
-        return CGSize(width: viewWidth , height:88)
+        return CGSize(width: viewWidth , height:98)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout,

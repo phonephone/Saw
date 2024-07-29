@@ -73,8 +73,6 @@
 "ENTER_PASSCODE_ForgetPasscode_Button" = "Forget Passcode";
 
 //TUTORIAL
-"TUTORIAL_KEY_Title" = "title"; //ขาดภาษาอังกฤษ
-"TUTORIAL_KEY_Description" = "desc"; //ขาดภาษาอังกฤษ
 "TUTORIAL_Next_Button" = "Next";
 "TUTORIAL_Next_Button_Done" = "Done";
 "TUTORIAL_Skip_Button" = "Skip";

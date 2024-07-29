@@ -315,7 +315,7 @@ extension UIViewController {
             loadingHUD()
         }
         
-        let baseURL = "https://sawgrow.com/api/v2/"
+        let baseURL = "https://sawgrow.com/api/v3/"
         let fullURL = baseURL+apiName
         
         var headers: HTTPHeaders
@@ -326,7 +326,7 @@ extension UIViewController {
                        "Lang": "Formatter_Locale".localized()
             ]
             
-            //V2 TEST (P'Dui ID)
+            //V3 TEST (P'Dui ID)
             //headers = ["Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IlV6MVBNV3IzZVFYaXVHRl9XVnd1TWJvM0t5Y2h5bGlQOGdCZE5aZUJQdXMiLCJjb20iOiJxdWRIZmZLUXhwWG9sdUFZdC1OZ3NRX0Q3SEVuQzZyQVpXWmJQYW55RlBNIiwiaWF0IjoxNjYwMjEyMDY0LCJleHAiOjI2NjAyMTIwNjN9.-1_ZRDlu6mCQL6e1eWXoCgNJW0fsdqR99m61rw0ZlNg", "Accept": "application/json","Lang": "Formatter_Locale".localized()]
             
             //MANAGER TEST (P'Ae ID)

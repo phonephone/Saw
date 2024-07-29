@@ -291,15 +291,7 @@ extension ApproveRequest: UICollectionViewDelegate {
         
         let alertMain = alertService.alertMain(title: "APPROVE_Confirm".localized(), buttonTitle: "APPROVE_Approve".localized(), buttonColor: .buttonGreen)
         {
-            if self.approveType == .ot {
-                self.loadAction(requestID: cellArray["request_id"].stringValue, statusID:"1", reason:"")
-            }
-            else if self.approveType == .reimburse {
-                self.loadAction(requestID: cellArray["request_id"].stringValue, statusID:cellArray["approve_next_status"].stringValue, reason:"")
-            }
-            else{
-                self.loadAction(requestID: cellArray["request_id"].stringValue, statusID:"2", reason:"")
-            }
+            self.loadAction(requestID: cellArray["request_id"].stringValue, statusID:cellArray["next_approve_status_id"].stringValue, reason:"")
         }
         present(alertMain, animated: true)
     }
@@ -333,17 +325,17 @@ extension ApproveRequest: UICollectionViewDelegate {
         case .leave:
             url = "attendance/setleavesstatus"
             parameters = ["leave_id":requestID ,
-                          "status":statusID ,//1=pending, 2=approve, 3=cancel,reject
+                          "status":statusID ,//1=pending, 2=approve, 3=reject, 4=cancel
                           "remarks":reason]
         case .attendance:
             url = "attendance/settimerequeststatus"
             parameters = ["request_id":requestID ,
-                          "status":statusID ,//1=pending, 2=approve, 3=cancel,reject
+                          "status":statusID ,//1=pending, 2=approve, 3=reject, 4=cancel
                           "remark":reason]
         case .ot:
             url = "attendance/settimeotstatus"
             parameters = ["time_request_id":requestID ,
-                          "status":statusID ,//0=pending, 1=approve, 2=cancel,reject
+                          "status":statusID ,//1=pending, 2=approve, 3=reject, 4=cancel
                           "remark":reason]
         case .shift:
             url = ""

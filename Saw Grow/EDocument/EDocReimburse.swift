@@ -102,6 +102,50 @@ class EDocReimburse: UIViewController, UITextFieldDelegate, UITextViewDelegate {
         }
     }
     
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if textField == amountField {
+            
+            if textField.text!.contains(".") && string == "." {//Check more than 2 dot
+                return false
+            }
+            
+            if ((string == "0" || string == "") && (textField.text! as NSString).range(of: ".").location < range.location) {
+                return true
+            }
+            
+            // First check whether the replacement string's numeric...
+            let cs = NSCharacterSet(charactersIn: "0123456789.").inverted
+            let filtered = string.components(separatedBy: cs)
+            let component = filtered.joined(separator: "")
+            let isNumeric = string == component
+
+            if isNumeric {
+                let formatter = NumberFormatter()
+                formatter.numberStyle = .decimal
+                formatter.maximumFractionDigits = 2
+                let newString = (textField.text! as NSString).replacingCharacters(in: range, with: string)
+                let numberWithOutCommas = newString.replacingOccurrences(of: ",", with: "")
+                let number = formatter.number(from: numberWithOutCommas)
+                if number != nil {
+                    var formattedString = formatter.string(from: number!)
+                    // If the last entry was a decimal or a zero after a decimal,
+                    // re-add it here because the formatter will naturally remove
+                    // it.
+                    if string == "." && range.location == textField.text?.count {
+                        formattedString = formattedString?.appending(".")
+                    }
+                    textField.text = formattedString
+                } else {
+                    textField.text = nil
+                }
+            }
+            return false
+        }
+        else {
+            return true
+        }
+    }
+    
     func textFieldDidEndEditing(_ textField: UITextField) {
         if typeField.text == "" || startField.text == "" || amountField.text == "" {
             submitBtn.disableBtn()
@@ -266,7 +310,7 @@ class EDocReimburse: UIViewController, UITextFieldDelegate, UITextViewDelegate {
             descriptionStr = remarkText.text
         }
         //print("Submit ID =\(typeID) \nSTART =\(startDate) \nEND =\(endDate) \nHALF =\(halfDay) \nREMARK =\(descriptionStr) \n")
-
+        
         var parameters:Parameters = ["document_type_id":selectedTypeID ,
                                      "selectdate":startDate ,
                                      "amount":amountField.text! ,
@@ -289,11 +333,11 @@ class EDocReimburse: UIViewController, UITextFieldDelegate, UITextViewDelegate {
             case .failure(let error):
                 print(error)
                 //ProgressHUD.dismiss()
-
+                
             case .success(let responseObject):
                 let json = JSON(responseObject)
                 print("SUCCESS REQUEST\(json)")
-
+                
                 self.submitSuccess()
                 self.clearForm()
             }
@@ -352,7 +396,7 @@ extension EDocReimburse: UIPickerViewDataSource {
         }
         
         pickerLabel?.textColor = .textDarkGray
-
+        
         return pickerLabel!
     }
 }

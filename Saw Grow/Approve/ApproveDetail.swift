@@ -156,28 +156,28 @@ extension ApproveDetail: UITableViewDataSource {
         if (detailJSON != nil) {
             switch approveType {
             case .leave:
-                if detailJSON!["status"].stringValue == "Rejected" {
+                if detailJSON!["status_id"].stringValue == "3" {//Rejected
                     return 7
                 }
                 else {
                     return 6
                 }
             case .attendance:
-                if detailJSON!["status"].stringValue == "Rejected" {
+                if detailJSON!["status_id"].stringValue == "3" {//Rejected
                     return 7
                 }
                 else {
                     return 6
                 }
             case .ot:
-                if detailJSON!["status"].stringValue == "Rejected" {
+                if detailJSON!["status_id"].stringValue == "3" {//Rejected
                     return 6
                 }
                 else {
                     return 5
                 }
             case .shift:
-                if detailJSON!["status"].stringValue == "Rejected" {
+                if detailJSON!["status_id"].stringValue == "3" {//Rejected
                     return 5
                 }
                 else {
@@ -217,6 +217,7 @@ extension ApproveDetail: UITableViewDataSource {
             switch indexPath.row {
             case 0://User Cell
                 cell = userCell
+                cell.cellTitle.text = "\("Sent_Date".localized()) \(cellArray["sentdate"].stringValue)"
                 cell.cellImage.sd_setImage(with: URL(string:cellArray["empphoto"].stringValue), placeholderImage: UIImage(named: "logo_circle"))
                 cell.cellName.text = cellArray["empname"].stringValue
                 cell.cellPosition.text = cellArray["empposition"].stringValue
@@ -283,7 +284,7 @@ extension ApproveDetail: UITableViewDataSource {
                 cell.cellBtnApprove.addTarget(self, action: #selector(approveClick(_:)), for: .touchUpInside)
                 cell.cellBtnReject.addTarget(self, action: #selector(rejectClick(_:)), for: .touchUpInside)
                 
-                if detailJSON!["status"].stringValue == "Pending" {
+                if detailJSON!["status_id"].stringValue == "1" && detailJSON!["approval_match"].stringValue == "1" {//Pending
                     cell.cellReason.isHidden = false
                     cell.cellBtnStackView.isHidden = false
                     DispatchQueue.main.async {
@@ -294,7 +295,7 @@ extension ApproveDetail: UITableViewDataSource {
                 else{
                     cell.cellReason.isHidden = true
                     cell.cellBtnStackView.isHidden = true
-                    if detailJSON!["status"].stringValue != "Rejected" {
+                    if detailJSON!["status_id"].stringValue != "3" {//Rejected
                         DispatchQueue.main.async {
                             cell.cellBg.roundCorners(corners: [.bottomRight,.bottomLeft], radius: 15)
                         }
@@ -325,6 +326,7 @@ extension ApproveDetail: UITableViewDataSource {
             switch indexPath.row {
             case 0://User Cell
                 cell = userCell
+                cell.cellTitle.text = "\("Sent_Date".localized()) \(cellArray["sentdate"].stringValue)"
                 cell.cellImage.sd_setImage(with: URL(string:cellArray["empphoto"].stringValue), placeholderImage: UIImage(named: "logo_circle"))
                 cell.cellName.text = cellArray["empname"].stringValue
                 cell.cellPosition.text = cellArray["empposition"].stringValue
@@ -384,7 +386,7 @@ extension ApproveDetail: UITableViewDataSource {
                 cell.cellBtnApprove.addTarget(self, action: #selector(approveClick(_:)), for: .touchUpInside)
                 cell.cellBtnReject.addTarget(self, action: #selector(rejectClick(_:)), for: .touchUpInside)
                 
-                if detailJSON!["status"].stringValue == "Pending" {
+                if detailJSON!["status_id"].stringValue == "1" && detailJSON!["approval_match"].stringValue == "1" {//Pending
                     cell.cellReason.isHidden = false
                     cell.cellBtnStackView.isHidden = false
                     DispatchQueue.main.async {
@@ -395,7 +397,7 @@ extension ApproveDetail: UITableViewDataSource {
                 else{
                     cell.cellReason.isHidden = true
                     cell.cellBtnStackView.isHidden = true
-                    if detailJSON!["status"].stringValue != "Rejected" {
+                    if detailJSON!["status_id"].stringValue != "3" {//Rejected
                         DispatchQueue.main.async {
                             cell.cellBg.roundCorners(corners: [.bottomRight,.bottomLeft], radius: 15)
                         }
@@ -426,6 +428,7 @@ extension ApproveDetail: UITableViewDataSource {
             switch indexPath.row {
             case 0://User Cell
                 cell = userCell
+                cell.cellTitle.text = "\("Sent_Date".localized()) \(cellArray["sentdate"].stringValue)"
                 cell.cellImage.sd_setImage(with: URL(string:cellArray["empphoto"].stringValue), placeholderImage: UIImage(named: "logo_circle"))
                 cell.cellName.text = cellArray["empname"].stringValue
                 cell.cellPosition.text = cellArray["empposition"].stringValue
@@ -467,7 +470,7 @@ extension ApproveDetail: UITableViewDataSource {
                 cell.cellBtnApprove.addTarget(self, action: #selector(approveClick(_:)), for: .touchUpInside)
                 cell.cellBtnReject.addTarget(self, action: #selector(rejectClick(_:)), for: .touchUpInside)
                 
-                if detailJSON!["status"].stringValue == "Pending" {
+                if detailJSON!["status_id"].stringValue == "1" && detailJSON!["approval_match"].stringValue == "1" {//Pending
                     cell.cellReason.isHidden = false
                     cell.cellBtnStackView.isHidden = false
                     DispatchQueue.main.async {
@@ -478,7 +481,7 @@ extension ApproveDetail: UITableViewDataSource {
                 else{
                     cell.cellReason.isHidden = true
                     cell.cellBtnStackView.isHidden = true
-                    if detailJSON!["status"].stringValue != "Rejected" {
+                    if detailJSON!["status_id"].stringValue != "3" {//Rejected
                         DispatchQueue.main.async {
                             cell.cellBg.roundCorners(corners: [.bottomRight,.bottomLeft], radius: 15)
                         }
@@ -509,6 +512,7 @@ extension ApproveDetail: UITableViewDataSource {
             switch indexPath.row {
             case 0://User Cell
                 cell = swapCell
+                cell.cellTitle.text = "\("Sent_Date".localized()) \(cellArray["sentdate"].stringValue)"
                 cell.cellImage1.sd_setImage(with: URL(string:cellArray["empphoto"].stringValue), placeholderImage: UIImage(named: "logo_circle"))
                 cell.cellName1.text = cellArray["empname"].stringValue
                 cell.cellDate1.text = cellArray["date"].stringValue
@@ -567,7 +571,7 @@ extension ApproveDetail: UITableViewDataSource {
                 else{
                     cell.cellReason.isHidden = true
                     cell.cellBtnStackView.isHidden = true
-                    if detailJSON!["status"].stringValue != "Rejected" {
+                    if detailJSON!["status_id"].stringValue != "3" {//Rejected
                         DispatchQueue.main.async {
                             cell.cellBg.roundCorners(corners: [.bottomRight,.bottomLeft], radius: 15)
                         }
@@ -624,7 +628,7 @@ extension ApproveDetail: UITableViewDelegate {
             return
         }
         //print("Delete \(indexPath.section) - \(indexPath.item)")
-        //let cellArray = self.detailJSON![indexPath.item]
+        let cellArray = self.detailJSON![indexPath.item]
         
         let alertMain = alertService.alertMain(title: "APPROVE_Confirm".localized(), buttonTitle: "APPROVE_Approve".localized(), buttonColor: .buttonGreen)
         {
@@ -633,11 +637,8 @@ extension ApproveDetail: UITableViewDelegate {
             if self.approveType == .shift {
                 self.loadAction(requestID: self.detailJSON!["timerequest_id"].stringValue, statusID:"2", reason:headCell.cellReason.text)
             }
-            else if self.approveType == .ot {
-                self.loadAction(requestID: self.detailJSON!["request_id"].stringValue, statusID:"1", reason:headCell.cellReason.text)
-            }
             else{
-                self.loadAction(requestID: self.detailJSON!["request_id"].stringValue, statusID:"2", reason:headCell.cellReason.text)
+                self.loadAction(requestID: self.detailJSON!["request_id"].stringValue, statusID:cellArray["next_approve_status_id"].stringValue, reason:headCell.cellReason.text)
             }
         }
         present(alertMain, animated: true)
@@ -655,7 +656,7 @@ extension ApproveDetail: UITableViewDelegate {
             return
         }
         //print("Delete \(indexPath.section) - \(indexPath.item)")
-        //let cellArray = self.detailJSON![indexPath.item]
+        let cellArray = self.detailJSON![indexPath.item]
         
         let alertMain = alertService.alertMain(title: "APPROVE_Reject_Confirm".localized(), buttonTitle: "APPROVE_Reject".localized(), buttonColor: .buttonRed)
         {
@@ -664,11 +665,8 @@ extension ApproveDetail: UITableViewDelegate {
             if self.approveType == .shift {
                 self.loadAction(requestID: self.detailJSON!["timerequest_id"].stringValue, statusID:"3", reason:headCell.cellReason.text)
             }
-            else if self.approveType == .ot {
-                self.loadAction(requestID: self.detailJSON!["request_id"].stringValue, statusID:"2", reason:headCell.cellReason.text)
-            }
             else{
-                self.loadAction(requestID: self.detailJSON!["request_id"].stringValue, statusID:"3", reason:headCell.cellReason.text)
+                self.loadAction(requestID: self.detailJSON!["request_id"].stringValue, statusID:cellArray["rejected_status_id"].stringValue, reason:headCell.cellReason.text)
             }
         }
         present(alertMain, animated: true)

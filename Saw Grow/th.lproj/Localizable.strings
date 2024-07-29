@@ -29,7 +29,7 @@
 "OK" = "ตกลง";
 "Done" = "เสร็จสิ้น";
 "Day" = "วัน";
-"Request_Date" = "วันที่";
+"Select_Date" = "เลือกวันที่";
 "Sent_Date" = "วันที่ส่ง";
 "Receive_Date" = "วันที่ได้รับ";
 "MonthYear_Field" = "เลือกเดือน,ปี";
@@ -73,8 +73,6 @@
 "ENTER_PASSCODE_ForgetPasscode_Button" = "ลืมรหัส PIN ?";
 
 //TUTORIAL
-"TUTORIAL_KEY_Title" = "title"; //ขาด KEY ภาษาอังกฤษ
-"TUTORIAL_KEY_Description" = "desc"; //ขาด KEY ภาษาอังกฤษ
 "TUTORIAL_Next_Button" = "ถัดไป";
 "TUTORIAL_Next_Button_Done" = "เสร็จสิ้น";
 "TUTORIAL_Skip_Button" = "ข้าม";

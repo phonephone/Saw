@@ -155,7 +155,7 @@ extension WarningDetail: UITableViewDataSource {
                 cell.cellDescription.text = cellArray["reason"].stringValue
             }
             
-            if warningTab == .status && cellArray["status"].stringValue == "Pending" {
+            if warningTab == .status && cellArray["status_id"].stringValue == "1" {//Pending
                 cell.cellBtnAccept.isHidden = false
             }
             else {

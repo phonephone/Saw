@@ -96,7 +96,7 @@ class EDocDetail: UIViewController, UITextViewDelegate {
                 self.detailJSON = json["data"][0][key][0]
                 self.myTableView.reloadData()
                 
-                if (self.edocType == .salary_cert || self.edocType == .work_cert) && self.detailJSON!["status"].stringValue == "Approved" {
+                if (self.edocType == .salary_cert || self.edocType == .work_cert) && self.detailJSON!["status_id"].stringValue == "2" {//Approved
                     self.pdfBtn.isHidden = false
                 } else {
                     self.pdfBtn.isHidden = true
@@ -170,7 +170,7 @@ extension EDocDetail: UITableViewDataSource {
                 return 3
                 
             case .reimburse:
-                if detailJSON!["status_code"].stringValue == "3" {//Rejected,Cancel
+                if detailJSON!["status_id"].stringValue == "3" {//Rejected,Cancel
                     return 6
                 }
                 else {
@@ -208,6 +208,7 @@ extension EDocDetail: UITableViewDataSource {
             switch indexPath.row {
             case 0://User Cell
                 cell = userCell
+                cell.cellTitle.text = "\("Sent_Date".localized()) \(cellArray["senddate"].stringValue)"
                 cell.cellImage.sd_setImage(with: URL(string:cellArray["empphoto"].stringValue), placeholderImage: UIImage(named: "logo_circle"))
                 cell.cellName.text = cellArray["empname"].stringValue
                 cell.cellPosition.text = cellArray["empposition"].stringValue
@@ -240,7 +241,7 @@ extension EDocDetail: UITableViewDataSource {
                 cell.cellBtnReject.addTarget(self, action: #selector(cancelClick(_:)), for: .touchUpInside)
                 cell.cellBtnCancel.addTarget(self, action: #selector(cancelClick(_:)), for: .touchUpInside)
                 
-                if detailJSON!["status"].stringValue == "Pending" {
+                if detailJSON!["status_id"].stringValue == "1" && detailJSON!["approval_match"].stringValue == "1" {//Pending
                     cell.cellBtnStackView.isHidden = false
                     
                     if isHead! {
@@ -257,7 +258,7 @@ extension EDocDetail: UITableViewDataSource {
                         cell.cellBtnCancel.isHidden = false
                     }
                 }
-                else if detailJSON!["status"].stringValue == "Rejected" {
+                else if detailJSON!["status_id"].stringValue == "3" {//Rejected
                     cell.cellReason.isHidden = false
                     cell.cellReason.isUserInteractionEnabled = false
                     cell.cellReason.text = detailJSON!["reason"].stringValue
@@ -279,7 +280,7 @@ extension EDocDetail: UITableViewDataSource {
             
         case .reimburse:
             var indexAdd = 0
-            if detailJSON!["status_code"].stringValue == "3" {
+            if detailJSON!["status_id"].stringValue == "3" {
                 indexAdd = -1
             }
             else{
@@ -304,10 +305,18 @@ extension EDocDetail: UITableViewDataSource {
                 cell.cellLine1.backgroundColor = .textGray
                 cell.cellLine2.backgroundColor = .textGray
                 
-                switch detailJSON!["status_code"].stringValue {
-                case "1"://Pending
+                switch detailJSON!["status_id"].stringValue {
+                case "0"://Pending
                     cell.cellImage1.isHidden = false
                     cell.cellCircle2.isHidden = false
+                    cell.cellCircle3.isHidden = false
+                    
+                case "1"://Checking
+                    cell.cellCircle1.isHidden = false
+                    cell.cellCircle1.backgroundColor = .themeColor
+                    cell.cellLine1.backgroundColor = .themeColor
+                    
+                    cell.cellImage2.isHidden = false
                     cell.cellCircle3.isHidden = false
                     
                 case "2"://Approved
@@ -321,13 +330,8 @@ extension EDocDetail: UITableViewDataSource {
                     
                     cell.cellImage3.isHidden = false
                     
-                default: //Checking = "4" or other
-                    cell.cellCircle1.isHidden = false
-                    cell.cellCircle1.backgroundColor = .themeColor
-                    cell.cellLine1.backgroundColor = .themeColor
-                    
-                    cell.cellImage2.isHidden = false
-                    cell.cellCircle3.isHidden = false
+                default:
+                    break
                 }
                 
                 DispatchQueue.main.async {
@@ -336,11 +340,12 @@ extension EDocDetail: UITableViewDataSource {
                 
             case 1+indexAdd://User Cell
                 cell = userCell
+                cell.cellTitle.text = "\("Sent_Date".localized()) \(cellArray["senddate"].stringValue)"
                 cell.cellImage.sd_setImage(with: URL(string:cellArray["empphoto"].stringValue), placeholderImage: UIImage(named: "logo_circle"))
                 cell.cellName.text = cellArray["empname"].stringValue
                 cell.cellPosition.text = cellArray["empposition"].stringValue
                 
-                if detailJSON!["status_code"].stringValue == "3" {
+                if detailJSON!["status_id"].stringValue == "3" {
                     DispatchQueue.main.async {
                         cell.cellBg.roundCorners(corners: [.topLeft,.topRight], radius: 15)
                     }
@@ -413,11 +418,11 @@ extension EDocDetail: UITableViewDataSource {
                 cell.cellBtnReject.addTarget(self, action: #selector(cancelClick(_:)), for: .touchUpInside)
                 cell.cellBtnCancel.addTarget(self, action: #selector(cancelClick(_:)), for: .touchUpInside)
                 
-                if detailJSON!["status_code"].stringValue == "2" {//Approve
+                if detailJSON!["status_id"].stringValue == "2" {//Approve
                     cell.cellReason.isHidden = true
                     cell.cellBtnStackView.isHidden = true
                 }
-                else if detailJSON!["status_code"].stringValue == "3" {//Rejected
+                else if detailJSON!["status_id"].stringValue == "3" {//Rejected
                     cell.cellReason.isHidden = false
                     cell.cellReason.isUserInteractionEnabled = false
                     cell.cellReason.text = detailJSON!["reason"].stringValue

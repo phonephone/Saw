@@ -74,38 +74,24 @@ class LeaveDetail: UIViewController {
             break
         }
         
-        if (mode == .shift) {
-            loadShiftDetail(withLoadingHUD: true)
-        }
-        else {
-            loadDetail(withLoadingHUD: true)
-        }
-        
+        loadDetail(withLoadingHUD: true)
     }
     
     func loadDetail(withLoadingHUD:Bool) {
         let parameters:Parameters = ["noti_id":detailID!]
+        var url:String = ""
+        var arrayName:String = ""
         
-        loadRequest(method:.get, apiName:"workflow/getapprovaldetail", authorization:true, showLoadingHUD:withLoadingHUD, dismissHUD:true, parameters: parameters){ result in
-            switch result {
-            case .failure(let error):
-                print(error)
-                //ProgressHUD.dismiss()
-
-            case .success(let responseObject):
-                let json = JSON(responseObject)
-                print("SUCCESS LEAVE DETAIL\(json)")
-                
-                self.detailJSON = json["data"][0]["approvaldetail"][0]
-                self.myTableView.reloadData()
-            }
+        if mode == .shift {
+            url = "attendance/gettimeswapdetail"
+            arrayName = "timeswap"
         }
-    }
-    
-    func loadShiftDetail(withLoadingHUD:Bool) {
-        let parameters:Parameters = ["noti_id":detailID!]
+        else {
+            url = "workflow/getapprovaldetail"
+            arrayName = "approvaldetail"
+        }
         
-        loadRequest(method:.get, apiName:"attendance/gettimeswapdetail", authorization:true, showLoadingHUD:withLoadingHUD, dismissHUD:true, parameters: parameters){ result in
+        loadRequest(method:.get, apiName:url, authorization:true, showLoadingHUD:withLoadingHUD, dismissHUD:true, parameters: parameters){ result in
             switch result {
             case .failure(let error):
                 print(error)
@@ -115,7 +101,7 @@ class LeaveDetail: UIViewController {
                 let json = JSON(responseObject)
                 print("SUCCESS LEAVE DETAIL\(json)")
                 
-                self.detailJSON = json["data"][0]["timeswap"][0]
+                self.detailJSON = json["data"][0][arrayName][0]
                 self.myTableView.reloadData()
             }
         }
@@ -134,28 +120,28 @@ extension LeaveDetail: UITableViewDataSource {
         if (detailJSON != nil) {
             switch mode {
             case .leave:
-                if detailJSON!["status"].stringValue == "Rejected" || detailJSON!["status"].stringValue == "Cancel" {
+                if detailJSON!["status_id"].stringValue == "3" || detailJSON!["status_id"].stringValue == "4" {//Pending , Cancel
                     return 8
                 }
                 else {
                     return 7
                 }
             case .attendance:
-                if detailJSON!["status"].stringValue == "Rejected" || detailJSON!["status"].stringValue == "Cancel" {
+                if detailJSON!["status_id"].stringValue == "3" || detailJSON!["status_id"].stringValue == "4" {//Pending , Cancel
                     return 7
                 }
                 else {
                     return 6
                 }
             case .ot:
-                if detailJSON!["status"].stringValue == "Rejected" || detailJSON!["status"].stringValue == "Cancel" {
+                if detailJSON!["status_id"].stringValue == "3" || detailJSON!["status_id"].stringValue == "4" {//Pending , Cancel
                     return 6
                 }
                 else {
                     return 5
                 }
             case .shift:
-                if detailJSON!["status"].stringValue == "Rejected" || detailJSON!["status"].stringValue == "Cancel" {
+                if detailJSON!["status_id"].stringValue == "3" || detailJSON!["status_id"].stringValue == "4" {//Pending , Cancel
                     return 5
                 }
                 else {
@@ -195,6 +181,7 @@ extension LeaveDetail: UITableViewDataSource {
             switch indexPath.row {
             case 0://User Cell
                 cell = userCell
+                cell.cellTitle.text = "\("Sent_Date".localized()) \(cellArray["sentdate"].stringValue)"
                 cell.cellImage.sd_setImage(with: URL(string:cellArray["empphoto"].stringValue), placeholderImage: UIImage(named: "logo_circle"))
                 cell.cellName.text = cellArray["empname"].stringValue
                 cell.cellPosition.text = cellArray["empposition"].stringValue
@@ -260,7 +247,7 @@ extension LeaveDetail: UITableViewDataSource {
                 cell.cellBtnCancel.addTarget(self, action: #selector(cancelClick(_:)), for: .touchUpInside)
                 cell.cellBtnWithdraw.addTarget(self, action: #selector(withdrawClick(_:)), for: .touchUpInside)
                 
-                if detailJSON!["status"].stringValue == "Pending" {
+                if detailJSON!["status_id"].stringValue == "1" {//Pending
                     cell.cellBtnStackView.isHidden = false
                     cell.cellBtnCancel.isHidden = false
                     cell.cellBtnWithdraw.isHidden = true
@@ -270,7 +257,7 @@ extension LeaveDetail: UITableViewDataSource {
                     }
                     cell.separatorInset = hideSeperator
                 }
-                else if detailJSON!["status"].stringValue == "Approved" {
+                else if detailJSON!["status_id"].stringValue == "2" {//Approved
                     cell.cellBtnStackView.isHidden = false
                     cell.cellBtnCancel.isHidden = true
                     cell.cellBtnWithdraw.isHidden = false
@@ -280,9 +267,9 @@ extension LeaveDetail: UITableViewDataSource {
                     }
                     cell.separatorInset = hideSeperator
                 }
-                else{//Cancel, Rejected
+                else{//3,4 = Rejected,Cancel
                     cell.cellBtnStackView.isHidden = true
-                    if detailJSON!["status"].stringValue != "Rejected" {
+                    if detailJSON!["status_id"].stringValue != "3" {//Rejected
                         DispatchQueue.main.async {
                             cell.cellBg.roundCorners(corners: [.bottomRight,.bottomLeft], radius: 15)
                         }
@@ -311,6 +298,7 @@ extension LeaveDetail: UITableViewDataSource {
             switch indexPath.row {
             case 0://User Cell
                 cell = userCell
+                cell.cellTitle.text = "\("Sent_Date".localized()) \(cellArray["sentdate"].stringValue)"
                 cell.cellImage.sd_setImage(with: URL(string:cellArray["empphoto"].stringValue), placeholderImage: UIImage(named: "logo_circle"))
                 cell.cellName.text = cellArray["empname"].stringValue
                 cell.cellPosition.text = cellArray["empposition"].stringValue
@@ -364,7 +352,7 @@ extension LeaveDetail: UITableViewDataSource {
                 cell.cellBtnCancel.addTarget(self, action: #selector(cancelClick(_:)), for: .touchUpInside)
                 cell.cellBtnWithdraw.addTarget(self, action: #selector(withdrawClick(_:)), for: .touchUpInside)
                 
-                if detailJSON!["status"].stringValue == "Pending" {
+                if detailJSON!["status_id"].stringValue == "1" {//Pending
                     cell.cellBtnStackView.isHidden = false
                     cell.cellBtnCancel.isHidden = false
                     cell.cellBtnWithdraw.isHidden = true
@@ -374,9 +362,9 @@ extension LeaveDetail: UITableViewDataSource {
                     }
                     cell.separatorInset = hideSeperator
                 }
-                else{//Approved, Cancel, Rejected
+                else{//2,3,4 = Approved, Rejected, Cancel
                     cell.cellBtnStackView.isHidden = true
-                    if detailJSON!["status"].stringValue == "Approved" {
+                    if detailJSON!["status_id"].stringValue == "2" {//Approved
                         DispatchQueue.main.async {
                             cell.cellBg.roundCorners(corners: [.bottomRight,.bottomLeft], radius: 15)
                         }
@@ -406,6 +394,7 @@ extension LeaveDetail: UITableViewDataSource {
             switch indexPath.row {
             case 0://User Cell
                 cell = userCell
+                cell.cellTitle.text = "\("Sent_Date".localized()) \(cellArray["sentdate"].stringValue)"
                 cell.cellImage.sd_setImage(with: URL(string:cellArray["empphoto"].stringValue), placeholderImage: UIImage(named: "logo_circle"))
                 cell.cellName.text = cellArray["empname"].stringValue
                 cell.cellPosition.text = cellArray["empposition"].stringValue
@@ -441,7 +430,7 @@ extension LeaveDetail: UITableViewDataSource {
                 cell.cellBtnCancel.addTarget(self, action: #selector(cancelClick(_:)), for: .touchUpInside)
                 cell.cellBtnWithdraw.addTarget(self, action: #selector(withdrawClick(_:)), for: .touchUpInside)
                 
-                if detailJSON!["status"].stringValue == "Pending" {
+                if detailJSON!["status_id"].stringValue == "1" {//Pending
                     cell.cellBtnStackView.isHidden = false
                     cell.cellBtnCancel.isHidden = false
                     cell.cellBtnWithdraw.isHidden = true
@@ -451,9 +440,9 @@ extension LeaveDetail: UITableViewDataSource {
                     }
                     cell.separatorInset = hideSeperator
                 }
-                else{//Approved, Cancel, Rejected
+                else{//2,3,4 = Approved, Rejected, Cancel
                     cell.cellBtnStackView.isHidden = true
-                    if detailJSON!["status"].stringValue == "Approved" {
+                    if detailJSON!["status_id"].stringValue == "2" {//Approved
                         DispatchQueue.main.async {
                             cell.cellBg.roundCorners(corners: [.bottomRight,.bottomLeft], radius: 15)
                         }
@@ -483,6 +472,7 @@ extension LeaveDetail: UITableViewDataSource {
             switch indexPath.row {
             case 0://Swap Cell
                 cell = swapCell
+                cell.cellTitle.text = "\("Sent_Date".localized()) \(cellArray["sentdate"].stringValue)"
                 cell.cellImage1.sd_setImage(with: URL(string:cellArray["empphoto"].stringValue), placeholderImage: UIImage(named: "logo_circle"))
                 cell.cellName1.text = cellArray["empname"].stringValue
                 cell.cellDate1.text = cellArray["date"].stringValue
@@ -553,7 +543,7 @@ extension LeaveDetail: UITableViewDataSource {
                     cell.cellBtnStackView.isHidden = true
                 }
                 
-                if detailJSON!["status"].stringValue != "Rejected" {
+                if detailJSON!["status_id"].stringValue != "3" {//Rejected
                     DispatchQueue.main.async {
                         cell.cellBg.roundCorners(corners: [.bottomRight,.bottomLeft], radius: 15)
                     }
@@ -608,18 +598,14 @@ extension LeaveDetail: UITableViewDelegate {
             return
         }
         //print("Delete \(indexPath.section) - \(indexPath.item)")
-        //let cellArray = self.detailJSON![indexPath.item]
+        let cellArray = self.detailJSON![indexPath.item]
         
         let alertMain = alertService.alertMain(title: "LEAVE_DETAIL_Confirm_Cancel".localized(), buttonTitle: "Confirm".localized(), buttonColor: .buttonRed)
         {
             if self.mode == .shift {
-                self.loadAction(requestID: self.detailJSON!["timerequest_id"].stringValue, statusID:"3", reason:"LEAVE_Cancel_Employee".localized(), iswithdraw:"0")
-            }
-            else if self.mode == .ot {
-                self.loadAction(requestID: self.detailJSON!["request_id"].stringValue, statusID:"2", reason:"LEAVE_Cancel_Employee".localized(), iswithdraw:"0")
-            }
-            else{
-                self.loadAction(requestID: self.detailJSON!["request_id"].stringValue, statusID:"3", reason:"LEAVE_Cancel_Employee".localized(), iswithdraw:"0")
+                self.loadAction(requestID: self.detailJSON!["timerequest_id"].stringValue, statusID:"4", reason:"LEAVE_Cancel_Employee".localized(), iswithdraw:"0")
+            }else{
+                self.loadAction(requestID: self.detailJSON!["request_id"].stringValue, statusID:cellArray["cancel_status_id"].stringValue, reason:"LEAVE_Cancel_Employee".localized(), iswithdraw:"0")
             }
         }
         present(alertMain, animated: true)
@@ -641,12 +627,12 @@ extension LeaveDetail: UITableViewDelegate {
         
         let alertMain = alertService.alertMain(title: "LEAVE_DETAIL_Confirm_Withdraw".localized(), buttonTitle: "LEAVE_DETAIL_Withdraw".localized(), buttonColor: .buttonRed)
         {
-            self.loadAction(requestID: self.detailJSON!["request_id"].stringValue, statusID:"1", reason:"LEAVE_DETAIL_Withdraw".localized(), iswithdraw:"1")
+            self.loadAction(requestID: self.detailJSON!["request_id"].stringValue, statusID:"4", reason:"LEAVE_DETAIL_Withdraw".localized(), iswithdraw:"1")
         }
         present(alertMain, animated: true)
     }
     
-    @IBAction func acceptClick(_ sender: UIButton) {
+    @IBAction func acceptClick(_ sender: UIButton) {//Shift Accept Response
         var superview = sender.superview
         while let view = superview, !(view is UITableViewCell) {
             superview = view.superview

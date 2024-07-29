@@ -118,7 +118,7 @@ extension EDocHistory: UICollectionViewDataSource {
         let cellArray = self.historyJSON![indexPath.item]
         
         switch edocType {
-        case .work_cert,.salary_cert,.reimburse:
+        case .work_cert,.salary_cert:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier:"EdocHistory_Cell", for: indexPath) as! LeaveHistory_Cell
             
             cell.layer.cornerRadius = 15
@@ -132,7 +132,31 @@ extension EDocHistory: UICollectionViewDataSource {
             
             cell.cellBtnDelete.addTarget(self, action: #selector(deleteClick(_:)), for: .touchUpInside)
             
-            if cell.cellStatus.text == "Pending" {
+            if cellArray["status_id"].stringValue == "1" {//Pending
+                cell.cellBtnDelete.isHidden = false
+            }
+            else{
+                cell.cellBtnDelete.isHidden = true
+            }
+            
+            return cell
+            
+        case .reimburse:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier:"ReimburseHistory_Cell", for: indexPath) as! LeaveHistory_Cell
+            
+            cell.layer.cornerRadius = 15
+            
+            cell.cellImage.sd_setImage(with: URL(string:cellArray["icon_url"].stringValue), placeholderImage: UIImage(named: "logo_circle"))
+    //        cell.cellName.text = cellArray["empname"].stringValue
+            cell.cellTitle.text = cellArray[requestNameKey()].stringValue
+            cell.cellTitle2.text = cellArray["amount"].stringValue
+            cell.cellDate.text = "\("Sent_Date".localized()) \(cellArray["senddate"].stringValue)"
+            cell.cellStatus.text = cellArray["status_text"].stringValue
+            cell.cellStatus.textColor = self.colorFromRGB(rgbString: cellArray["statuscolor"].stringValue)
+            
+            cell.cellBtnDelete.addTarget(self, action: #selector(deleteClick(_:)), for: .touchUpInside)
+            
+            if cellArray["status_id"].stringValue == "1" {//Pending
                 cell.cellBtnDelete.isHidden = false
             }
             else{

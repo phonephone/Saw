@@ -85,8 +85,8 @@ class Tutorial: UIViewController, UIScrollViewDelegate {
             let slide:TutorialView = Bundle.main.loadNibNamed("TutorialView", owner: self, options: nil)?.first as! TutorialView
             slide.tutorialImage.image = UIImage(named: "demo_profile")
             slide.tutorialImage.sd_setImage(with: URL(string:tutorialJSON![i]["image_url"].stringValue), placeholderImage: UIImage(named: "xxx"))
-            slide.tutorialTitle.text = tutorialJSON![i]["TUTORIAL_KEY_Title".localized()].stringValue
-            slide.tutorialDescription.text = tutorialJSON![i]["TUTORIAL_KEY_Description".localized()].stringValue
+            slide.tutorialTitle.text = tutorialJSON![i]["title"].stringValue
+            slide.tutorialDescription.text = tutorialJSON![i]["desc"].stringValue
             tutorialArray.append(slide)
         }
         

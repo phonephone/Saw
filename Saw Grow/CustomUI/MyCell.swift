@@ -144,6 +144,7 @@ class LeaveHistory_Cell: UICollectionViewCell {
     
     @IBOutlet var cellImage: UIImageView!
     @IBOutlet var cellTitle: UILabel!
+    @IBOutlet var cellTitle2: UILabel!
     @IBOutlet var cellName: UILabel!
     @IBOutlet var cellDate: UILabel!
     @IBOutlet var cellSentDate: UILabel!

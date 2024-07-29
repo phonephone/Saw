@@ -99,7 +99,7 @@ extension AttendanceHistory: UICollectionViewDataSource {
         
         cell.cellBtnDelete.addTarget(self, action: #selector(deleteClick(_:)), for: .touchUpInside)
         
-        if cell.cellStatus.text == "Pending" {
+        if cellArray["status_id"].stringValue == "1" {//Pending
             cell.cellBtnDelete.isHidden = false
         }
         else{
