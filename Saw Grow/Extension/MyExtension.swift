@@ -314,7 +314,6 @@ extension UIViewController {
         {
             loadingHUD()
         }
-        
         let baseURL = "https://sawgrow.com/api/v3/"
         let fullURL = baseURL+apiName
         
@@ -343,6 +342,7 @@ extension UIViewController {
             
             //P'Sorn
             //headers = ["Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IlJkWEt5NzlaV1NPb2xDMHlrMUYyOS1oSGN1ZmgySXNacm10Zm92b1ViOFkiLCJjb20iOiJBU2VfelFDNGNoSndiS3dQenF0aEVXZmdLVDc4Qkdva0k3YVpZTjFYWHdBIiwiaWF0IjoxNjkwNDI1NzA0LCJleHAiOjI2OTA0MjU3MDN9.QLrjMcTjg0uwmC270JLLdyO_2ywX066n_mCUF8rN0lw", "Accept": "application/json","Lang": "Formatter_Locale".localized()]
+
         }
         else{
             headers = ["Accept": "application/json",

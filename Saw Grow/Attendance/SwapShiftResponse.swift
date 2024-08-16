@@ -93,7 +93,7 @@ extension SwapShiftResponse: UICollectionViewDataSource {
         
         cell.cellImage1.sd_setImage(with: URL(string:cellArray["empphoto"].stringValue), placeholderImage: UIImage(named: "logo_circle"))
         cell.cellImage2.sd_setImage(with: URL(string:cellArray["to_empphoto"].stringValue), placeholderImage: UIImage(named: "logo_circle"))
-        cell.cellTitle.text = "\(cellArray["empname"].stringValue) \("SWAP_Response_Title".localized()) \(cellArray["empname"].stringValue)"
+        cell.cellTitle.text = "\(cellArray["empname"].stringValue) \("SWAP_Response_Title".localized()) \(cellArray["to_empname"].stringValue)"
         cell.cellDate.text = "\("Sent_Date".localized())  \(cellArray["sentdate"].stringValue)"
         cell.cellRemark.text = "\("SWAP_Note".localized()) : \(cellArray["reason"].stringValue)"
         

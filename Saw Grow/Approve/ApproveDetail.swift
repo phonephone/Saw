@@ -628,7 +628,7 @@ extension ApproveDetail: UITableViewDelegate {
             return
         }
         //print("Delete \(indexPath.section) - \(indexPath.item)")
-        let cellArray = self.detailJSON![indexPath.item]
+        //let cellArray = self.detailJSON![indexPath.item]
         
         let alertMain = alertService.alertMain(title: "APPROVE_Confirm".localized(), buttonTitle: "APPROVE_Approve".localized(), buttonColor: .buttonGreen)
         {
@@ -638,7 +638,7 @@ extension ApproveDetail: UITableViewDelegate {
                 self.loadAction(requestID: self.detailJSON!["timerequest_id"].stringValue, statusID:"2", reason:headCell.cellReason.text)
             }
             else{
-                self.loadAction(requestID: self.detailJSON!["request_id"].stringValue, statusID:cellArray["next_approve_status_id"].stringValue, reason:headCell.cellReason.text)
+                self.loadAction(requestID: self.detailJSON!["request_id"].stringValue, statusID:self.detailJSON!["next_approve_status_id"].stringValue, reason:headCell.cellReason.text)
             }
         }
         present(alertMain, animated: true)
@@ -656,7 +656,7 @@ extension ApproveDetail: UITableViewDelegate {
             return
         }
         //print("Delete \(indexPath.section) - \(indexPath.item)")
-        let cellArray = self.detailJSON![indexPath.item]
+        //let cellArray = self.detailJSON![indexPath.item]
         
         let alertMain = alertService.alertMain(title: "APPROVE_Reject_Confirm".localized(), buttonTitle: "APPROVE_Reject".localized(), buttonColor: .buttonRed)
         {
@@ -666,7 +666,7 @@ extension ApproveDetail: UITableViewDelegate {
                 self.loadAction(requestID: self.detailJSON!["timerequest_id"].stringValue, statusID:"3", reason:headCell.cellReason.text)
             }
             else{
-                self.loadAction(requestID: self.detailJSON!["request_id"].stringValue, statusID:cellArray["rejected_status_id"].stringValue, reason:headCell.cellReason.text)
+                self.loadAction(requestID: self.detailJSON!["request_id"].stringValue, statusID:self.detailJSON!["rejected_status_id"].stringValue, reason:headCell.cellReason.text)
             }
         }
         present(alertMain, animated: true)
@@ -712,6 +712,9 @@ extension ApproveDetail: UITableViewDelegate {
         default:
             break
         }
+        
+        print(url)
+        print(parameters)
 
         loadRequest(method:.post, apiName:url, authorization:true, showLoadingHUD:true, dismissHUD:false, parameters: parameters){ result in
             switch result {

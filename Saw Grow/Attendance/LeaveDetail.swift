@@ -605,7 +605,7 @@ extension LeaveDetail: UITableViewDelegate {
             if self.mode == .shift {
                 self.loadAction(requestID: self.detailJSON!["timerequest_id"].stringValue, statusID:"4", reason:"LEAVE_Cancel_Employee".localized(), iswithdraw:"0")
             }else{
-                self.loadAction(requestID: self.detailJSON!["request_id"].stringValue, statusID:cellArray["cancel_status_id"].stringValue, reason:"LEAVE_Cancel_Employee".localized(), iswithdraw:"0")
+                self.loadAction(requestID: self.detailJSON!["request_id"].stringValue, statusID:self.detailJSON!["cancel_status_id"].stringValue, reason:"LEAVE_Cancel_Employee".localized(), iswithdraw:"0")
             }
         }
         present(alertMain, animated: true)
@@ -627,7 +627,7 @@ extension LeaveDetail: UITableViewDelegate {
         
         let alertMain = alertService.alertMain(title: "LEAVE_DETAIL_Confirm_Withdraw".localized(), buttonTitle: "LEAVE_DETAIL_Withdraw".localized(), buttonColor: .buttonRed)
         {
-            self.loadAction(requestID: self.detailJSON!["request_id"].stringValue, statusID:"4", reason:"LEAVE_DETAIL_Withdraw".localized(), iswithdraw:"1")
+            self.loadAction(requestID: self.detailJSON!["request_id"].stringValue, statusID:self.detailJSON!["cancel_status_id"].stringValue, reason:"LEAVE_DETAIL_Withdraw".localized(), iswithdraw:"1")
         }
         present(alertMain, animated: true)
     }

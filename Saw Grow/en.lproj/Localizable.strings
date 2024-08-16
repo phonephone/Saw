@@ -16,6 +16,7 @@
 
 //GENERAL
 "Formatter_Locale" = "en";//"en_US_POSIX";
+"Map_Locale" = "en";
 "Thai" = "Thai";
 "English" = "English";
 "Loading" = "Loading";
@@ -28,6 +29,7 @@
 "Confirm_Delete" = "Confirm Delete";
 "OK" = "OK";
 "Done" = "Done";
+"Back" = "Back";
 "Day" = "Day";
 "Select_Date" = "Select Date";
 "Sent_Date" = "Sent Date";
@@ -124,6 +126,10 @@
 "HOME_Location_Check" = "Please check your device privacy settings";
 "HOME_Admin_Setting" = "Set usage information";
 
+//TERM & PRIVACY POLICY
+"TERM_Title" = "Terms of Service";
+"POLICY_Title" = "Privacy Policy";
+
 //CALENDAR TAB
 "CALENDAR_Language" = "en_US";
 "CALENDAR_Sheet_Request" = "Request";
@@ -153,7 +159,8 @@
 "CHECKIN_Place_Loading" = "Checking your location...";
 "CHECKIN_Place_Unknow" = "Unknown place name";
 "CHECKIN_Note" = "Note";
-"CHECKIN_Upload" = "Upload Picture";
+"CHECKIN_Upload" = "Upload Photo";
+"CHECKIN_Force_Upload" = "Please Upload Photo";
 "CHECKIN_In" = "Check in";
 "CHECKIN_Update" = "Update";
 "CHECKIN_Out" = "Check out";
@@ -379,12 +386,17 @@
 "EDOC_WEB_Button_Send" = "Send";
 "EDOC_WEB_Button_Cancel" = "Cancel";
 
+"EDOC_STATUS_Pending" = "Pending";
+"EDOC_STATUS_Checking" = "Checking";
+"EDOC_STATUS_Approved" = "Approve";
+
 //REPORT
 "REPORT_HEADER" = "Report";
 "REPORT_Work" = "Working Day";
 "REPORT_Late" = "Late";
 "REPORT_Absent" = "Absent";
 "REPORT_Leave" = "Leave";
+"REPORT_Button_View" = "View report";
 "REPORT_Button_Location" = "View Location";
 
 //WARNING LETTER

@@ -43,14 +43,19 @@
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RuF-cO-CGX">
-                                        <rect key="frame" x="29" y="19.5" width="53.5" height="21"/>
+                                        <rect key="frame" x="29" y="17.5" width="62" height="25"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="21" id="AuC-II-aUi"/>
-                                            <constraint firstAttribute="width" secondItem="RuF-cO-CGX" secondAttribute="height" multiplier="28:11" id="Ls8-Hu-rkz"/>
+                                            <constraint firstAttribute="height" constant="25" id="0Y2-ht-5vG"/>
                                         </constraints>
-                                        <state key="normal" image="btn_back_white">
+                                        <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="18"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="-10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Back" image="back_arrow_white">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Back"/>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="back:" destination="Mbi-XQ-ITm" eventType="touchUpInside" id="jEM-Ez-txv"/>
                                         </connections>
@@ -183,13 +188,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a1n-Iz-amX" userLabel="HeaderView">
-                                <rect key="frame" x="0.0" y="48" width="414" height="121"/>
+                                <rect key="frame" x="0.0" y="48" width="414" height="125"/>
                                 <subviews>
                                     <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="header_medium" translatesAutoresizingMaskIntoConstraints="NO" id="AwK-HR-AmL">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="121"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="125"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wcW-94-xzA" customClass="MyView" customModule="Saw_Grow" customModuleProvider="target">
-                                        <rect key="frame" x="29" y="56" width="356" height="50"/>
+                                        <rect key="frame" x="29" y="60" width="356" height="50"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="Zwe-zq-Cnh">
                                                 <rect key="frame" x="7" y="7" width="342" height="36"/>
@@ -246,20 +251,25 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nnX-Bu-JLj">
-                                        <rect key="frame" x="29" y="20" width="53.5" height="21"/>
+                                        <rect key="frame" x="29" y="20" width="62" height="25"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="21" id="NSb-bN-VtD"/>
-                                            <constraint firstAttribute="width" secondItem="nnX-Bu-JLj" secondAttribute="height" multiplier="28:11" id="i06-0a-mdf"/>
+                                            <constraint firstAttribute="height" constant="25" id="rJf-I2-QpU"/>
                                         </constraints>
-                                        <state key="normal" image="btn_back_white">
+                                        <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="18"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="-10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Back" image="back_arrow_white">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Back"/>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="back:" destination="Xrw-oN-e8F" eventType="touchUpInside" id="ani-6d-Hwb"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="e-Document" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ec6-ID-qcF">
-                                        <rect key="frame" x="150.5" y="15.5" width="113.5" height="30"/>
+                                        <rect key="frame" x="150.5" y="17.5" width="113.5" height="30"/>
                                         <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="20"/>
                                         <color key="textColor" name="Text_White"/>
                                         <nil key="highlightedColor"/>
@@ -281,7 +291,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cjy-fD-kD9" userLabel="BottomView">
-                                <rect key="frame" x="0.0" y="169" width="414" height="727"/>
+                                <rect key="frame" x="0.0" y="173" width="414" height="723"/>
                                 <color key="backgroundColor" name="Bg_Light_Gray"/>
                             </view>
                         </subviews>
@@ -526,7 +536,7 @@
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="JhC-It-NPO">
-                                                            <rect key="frame" x="87" y="14" width="176" height="58"/>
+                                                            <rect key="frame" x="87" y="14" width="186" height="58"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vacation Leaves" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XGw-ot-1cS">
                                                                     <rect key="frame" x="0.0" y="0.0" width="102" height="30"/>
@@ -543,7 +553,7 @@
                                                             </subviews>
                                                         </stackView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pending" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J1t-vF-GCE">
-                                                            <rect key="frame" x="268" y="56.5" width="70" height="19.5"/>
+                                                            <rect key="frame" x="278" y="56.5" width="70" height="19.5"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="70" id="8f7-h5-kmr"/>
                                                             </constraints>
@@ -552,7 +562,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cx7-0b-1Z0">
-                                                            <rect key="frame" x="303" y="15" width="30" height="30"/>
+                                                            <rect key="frame" x="308" y="15" width="30" height="30"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="Cx7-0b-1Z0" secondAttribute="height" multiplier="1:1" id="Lz8-a9-Bnv"/>
                                                                 <constraint firstAttribute="height" constant="30" id="vFw-gx-uK5"/>
@@ -562,8 +572,8 @@
                                                     </subviews>
                                                     <constraints>
                                                         <constraint firstItem="J1t-vF-GCE" firstAttribute="leading" secondItem="JhC-It-NPO" secondAttribute="trailing" constant="5" id="Lbh-pr-P9k"/>
-                                                        <constraint firstAttribute="trailing" secondItem="Cx7-0b-1Z0" secondAttribute="trailing" constant="25" id="b8g-7V-vJ6"/>
-                                                        <constraint firstAttribute="trailing" secondItem="J1t-vF-GCE" secondAttribute="trailing" constant="20" id="bpG-mz-sWv"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Cx7-0b-1Z0" secondAttribute="trailing" constant="20" id="b8g-7V-vJ6"/>
+                                                        <constraint firstAttribute="trailing" secondItem="J1t-vF-GCE" secondAttribute="trailing" constant="10" id="bpG-mz-sWv"/>
                                                         <constraint firstItem="IBZ-to-aUz" firstAttribute="leading" secondItem="jpY-OO-n9I" secondAttribute="leading" constant="14" id="eFv-nH-j4M"/>
                                                         <constraint firstItem="JhC-It-NPO" firstAttribute="top" secondItem="IBZ-to-aUz" secondAttribute="top" id="g4N-qq-OXm"/>
                                                         <constraint firstAttribute="bottom" secondItem="J1t-vF-GCE" secondAttribute="bottom" constant="10" id="nGJ-Wb-VPs"/>
@@ -733,7 +743,7 @@
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Sv2-E0-rIO">
-                                                            <rect key="frame" x="87" y="14" width="176" height="58"/>
+                                                            <rect key="frame" x="87" y="14" width="186" height="58"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vacation Leaves" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k2B-TK-Agl">
                                                                     <rect key="frame" x="0.0" y="0.0" width="102" height="20"/>
@@ -741,8 +751,8 @@
                                                                     <color key="textColor" name="Text_Dark_Gray"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vacation Leaves" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8xG-8E-vKh">
-                                                                    <rect key="frame" x="0.0" y="20" width="102" height="19.5"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8xG-8E-vKh">
+                                                                    <rect key="frame" x="0.0" y="20" width="45" height="19.5"/>
                                                                     <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="14"/>
                                                                     <color key="textColor" name="Text_Gray"/>
                                                                     <nil key="highlightedColor"/>
@@ -756,7 +766,7 @@
                                                             </subviews>
                                                         </stackView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pending" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x3i-GQ-bS6">
-                                                            <rect key="frame" x="268" y="56.5" width="70" height="19.5"/>
+                                                            <rect key="frame" x="278" y="56.5" width="70" height="19.5"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="70" id="kQN-hc-zL1"/>
                                                             </constraints>
@@ -765,7 +775,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NWJ-kh-uqz">
-                                                            <rect key="frame" x="303" y="15" width="30" height="30"/>
+                                                            <rect key="frame" x="308" y="15" width="30" height="30"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="NWJ-kh-uqz" secondAttribute="height" multiplier="1:1" id="7Fc-CP-QeN"/>
                                                                 <constraint firstAttribute="height" constant="30" id="iqx-QW-vc1"/>
@@ -779,8 +789,8 @@
                                                         <constraint firstItem="Sv2-E0-rIO" firstAttribute="top" secondItem="Ckn-fb-5Uc" secondAttribute="top" id="CR1-ZN-3Ho"/>
                                                         <constraint firstItem="Sv2-E0-rIO" firstAttribute="bottom" secondItem="Ckn-fb-5Uc" secondAttribute="bottom" id="D62-IW-mDe"/>
                                                         <constraint firstItem="x3i-GQ-bS6" firstAttribute="leading" secondItem="Sv2-E0-rIO" secondAttribute="trailing" constant="5" id="XQ1-r4-fiH"/>
-                                                        <constraint firstAttribute="trailing" secondItem="x3i-GQ-bS6" secondAttribute="trailing" constant="20" id="aJL-II-Qzk"/>
-                                                        <constraint firstAttribute="trailing" secondItem="NWJ-kh-uqz" secondAttribute="trailing" constant="25" id="jCi-0X-hf4"/>
+                                                        <constraint firstAttribute="trailing" secondItem="x3i-GQ-bS6" secondAttribute="trailing" constant="10" id="aJL-II-Qzk"/>
+                                                        <constraint firstAttribute="trailing" secondItem="NWJ-kh-uqz" secondAttribute="trailing" constant="20" id="jCi-0X-hf4"/>
                                                         <constraint firstItem="Ckn-fb-5Uc" firstAttribute="leading" secondItem="ekO-t9-2kf" secondAttribute="leading" constant="14" id="ngS-UR-N4f"/>
                                                         <constraint firstItem="NWJ-kh-uqz" firstAttribute="top" secondItem="ekO-t9-2kf" secondAttribute="top" constant="15" id="oh0-Nv-Bka"/>
                                                         <constraint firstItem="Ckn-fb-5Uc" firstAttribute="centerY" secondItem="ekO-t9-2kf" secondAttribute="centerY" id="wwT-iJ-8jJ"/>
@@ -862,14 +872,19 @@
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="56l-P0-Tmc">
-                                        <rect key="frame" x="29" y="19.5" width="53.5" height="21"/>
+                                        <rect key="frame" x="29" y="17.5" width="62" height="25"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="56l-P0-Tmc" secondAttribute="height" multiplier="28:11" id="YKo-A8-H63"/>
-                                            <constraint firstAttribute="height" constant="21" id="f3o-Z9-UBi"/>
+                                            <constraint firstAttribute="height" constant="25" id="D7h-EO-KXA"/>
                                         </constraints>
-                                        <state key="normal" image="btn_back_white">
+                                        <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="18"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="-10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Back" image="back_arrow_white">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Back"/>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="back:" destination="kzF-AB-HpA" eventType="touchUpInside" id="MF9-Hf-gzj"/>
                                         </connections>
@@ -1042,18 +1057,27 @@
                                                                             <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="12"/>
                                                                             <color key="textColor" name="Text_Gray_1"/>
                                                                             <nil key="highlightedColor"/>
+                                                                            <userDefinedRuntimeAttributes>
+                                                                                <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="EDOC_STATUS_Pending"/>
+                                                                            </userDefinedRuntimeAttributes>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Checking" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lzi-uG-ZcH">
                                                                             <rect key="frame" x="131.5" y="0.0" width="50" height="18"/>
                                                                             <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="12"/>
                                                                             <color key="textColor" name="Text_Gray_1"/>
                                                                             <nil key="highlightedColor"/>
+                                                                            <userDefinedRuntimeAttributes>
+                                                                                <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="EDOC_STATUS_Checking"/>
+                                                                            </userDefinedRuntimeAttributes>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Approve" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MCK-o0-iio">
                                                                             <rect key="frame" x="267.5" y="0.0" width="46.5" height="18"/>
                                                                             <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="12"/>
                                                                             <color key="textColor" name="Text_Gray_1"/>
                                                                             <nil key="highlightedColor"/>
+                                                                            <userDefinedRuntimeAttributes>
+                                                                                <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="EDOC_STATUS_Approved"/>
+                                                                            </userDefinedRuntimeAttributes>
                                                                         </label>
                                                                     </subviews>
                                                                 </stackView>
@@ -1480,14 +1504,19 @@
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kCV-uC-Zdc">
-                                        <rect key="frame" x="29" y="19.5" width="53.5" height="21"/>
+                                        <rect key="frame" x="29" y="17.5" width="62" height="25"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="21" id="6Qu-Ig-Goe"/>
-                                            <constraint firstAttribute="width" secondItem="kCV-uC-Zdc" secondAttribute="height" multiplier="28:11" id="m3u-FV-mqj"/>
+                                            <constraint firstAttribute="height" constant="25" id="45c-64-4rH"/>
                                         </constraints>
-                                        <state key="normal" image="btn_back_white">
+                                        <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="18"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="-10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Back" image="back_arrow_white">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Back"/>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="back:" destination="WWd-Qg-Dsx" eventType="touchUpInside" id="F6j-IY-oLc"/>
                                         </connections>
@@ -1579,12 +1608,12 @@
                         <outlet property="sendMailBtn" destination="c95-mF-RU5" id="ent-YC-zLx"/>
                     </connections>
                 </viewController>
-                <view contentMode="scaleToFill" ambiguous="YES" id="VSy-ZY-JGG" customClass="MyView" customModule="Saw_Grow" customModuleProvider="target">
+                <view contentMode="scaleToFill" id="VSy-ZY-JGG" customClass="MyView" customModule="Saw_Grow" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="388" height="210"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Send to email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="We7-Pn-kN5">
-                            <rect key="frame" x="132" y="-5.5" width="124" height="23.5"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Send to email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="We7-Pn-kN5">
+                            <rect key="frame" x="132" y="-12" width="124" height="30"/>
                             <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="20"/>
                             <color key="textColor" name="Text_Dark_Gray"/>
                             <nil key="highlightedColor"/>
@@ -1592,7 +1621,7 @@
                                 <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="EDOC_WEB_Button_Send_Email"/>
                             </userDefinedRuntimeAttributes>
                         </label>
-                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="afg-ha-zE0" customClass="MyView" customModule="Saw_Grow" customModuleProvider="target">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="afg-ha-zE0" customClass="MyView" customModule="Saw_Grow" customModuleProvider="target">
                             <rect key="frame" x="20" y="28" width="348" height="58"/>
                             <subviews>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="email" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="3wB-hm-kiy">
@@ -1625,7 +1654,7 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                         </view>
-                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="MfO-6i-h3M">
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="MfO-6i-h3M">
                             <rect key="frame" x="20" y="106" width="348" height="50"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PrM-H3-lvW" customClass="MyButton" customModule="Saw_Grow" customModuleProvider="target">
@@ -2175,14 +2204,19 @@
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G3w-I8-vTC">
-                                        <rect key="frame" x="29" y="19.5" width="53.5" height="21"/>
+                                        <rect key="frame" x="29" y="17.5" width="62" height="25"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="G3w-I8-vTC" secondAttribute="height" multiplier="28:11" id="EKB-Fw-SVJ"/>
-                                            <constraint firstAttribute="height" constant="21" id="mDJ-L8-nhh"/>
+                                            <constraint firstAttribute="height" constant="25" id="Ugr-mb-dS6"/>
                                         </constraints>
-                                        <state key="normal" image="btn_back_white">
+                                        <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="18"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="-10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Back" image="back_arrow_white">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Back"/>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="back:" destination="N4I-WZ-rzQ" eventType="touchUpInside" id="Vo7-K5-IFm"/>
                                         </connections>
@@ -2390,14 +2424,19 @@
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tVR-hg-7vs">
-                                        <rect key="frame" x="29" y="19.5" width="53.5" height="21"/>
+                                        <rect key="frame" x="29" y="17.5" width="62" height="25"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="21" id="it5-bF-2pj"/>
-                                            <constraint firstAttribute="width" secondItem="tVR-hg-7vs" secondAttribute="height" multiplier="28:11" id="ts7-qe-U2v"/>
+                                            <constraint firstAttribute="height" constant="25" id="vUP-rr-unL"/>
                                         </constraints>
-                                        <state key="normal" image="btn_back_white">
+                                        <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="18"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="-10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Back" image="back_arrow_white">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Back"/>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="back:" destination="0LV-NZ-Lyj" eventType="touchUpInside" id="cd5-qh-Nd7"/>
                                         </connections>
@@ -2530,26 +2569,31 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I91-Cc-cu1" userLabel="HeaderView">
-                                <rect key="frame" x="0.0" y="48" width="414" height="121"/>
+                                <rect key="frame" x="0.0" y="48" width="414" height="125"/>
                                 <subviews>
                                     <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="header_medium" translatesAutoresizingMaskIntoConstraints="NO" id="aos-6x-VX1">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="121"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="125"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kq6-4Z-3MR">
-                                        <rect key="frame" x="29" y="20" width="53.5" height="21"/>
+                                        <rect key="frame" x="29" y="20" width="62" height="25"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="Kq6-4Z-3MR" secondAttribute="height" multiplier="28:11" id="39e-Z8-czO"/>
-                                            <constraint firstAttribute="height" constant="21" id="oVX-DA-a5t"/>
+                                            <constraint firstAttribute="height" constant="25" id="oBG-M8-wO4"/>
                                         </constraints>
-                                        <state key="normal" image="btn_back_white">
+                                        <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="18"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="-10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Back" image="back_arrow_white">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Back"/>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="back:" destination="89d-sM-I6J" eventType="touchUpInside" id="qUc-iS-xW1"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Report" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mYP-86-V0W">
-                                        <rect key="frame" x="176.5" y="15.5" width="61.5" height="30"/>
+                                        <rect key="frame" x="176.5" y="17.5" width="61.5" height="30"/>
                                         <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="20"/>
                                         <color key="textColor" name="Text_White"/>
                                         <nil key="highlightedColor"/>
@@ -2558,7 +2602,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fOV-St-umn" customClass="MyView" customModule="Saw_Grow" customModuleProvider="target">
-                                        <rect key="frame" x="29" y="56" width="356" height="50"/>
+                                        <rect key="frame" x="29" y="60" width="356" height="50"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tabbar_search" translatesAutoresizingMaskIntoConstraints="NO" id="b27-tc-6Bg">
                                                 <rect key="frame" x="15" y="13.5" width="23" height="23"/>
@@ -2611,10 +2655,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DU0-vb-d2O" userLabel="BottomView">
-                                <rect key="frame" x="0.0" y="169" width="414" height="727"/>
+                                <rect key="frame" x="0.0" y="173" width="414" height="723"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="H6Z-kC-W10">
-                                        <rect key="frame" x="20" y="88" width="374" height="614"/>
+                                        <rect key="frame" x="20" y="88" width="374" height="610"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="bXz-Vl-XRd">
                                             <size key="itemSize" width="367" height="65"/>
                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -2661,13 +2705,23 @@
                                                                         </label>
                                                                     </subviews>
                                                                 </stackView>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TVJ-VX-BwR">
+                                                                <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TVJ-VX-BwR" customClass="MyButton" customModule="Saw_Grow" customModuleProvider="target">
                                                                     <rect key="frame" x="283" y="8" width="83" height="25"/>
+                                                                    <color key="backgroundColor" name="Main_Theme_1"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" secondItem="TVJ-VX-BwR" secondAttribute="height" multiplier="83:25" id="WFy-34-CIe"/>
                                                                         <constraint firstAttribute="height" constant="25" id="mQK-4H-NdI"/>
                                                                     </constraints>
-                                                                    <state key="normal" image="report_view"/>
+                                                                    <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="10"/>
+                                                                    <inset key="titleEdgeInsets" minX="-5" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                                    <inset key="imageEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                                    <state key="normal" title="View report" image="report_view"/>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                            <real key="value" value="5"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                        <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="REPORT_Button_View"/>
+                                                                    </userDefinedRuntimeAttributes>
                                                                 </button>
                                                             </subviews>
                                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -2961,14 +3015,19 @@
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cs9-ek-MlW">
-                                        <rect key="frame" x="29" y="19.5" width="53.5" height="21"/>
+                                        <rect key="frame" x="29" y="17.5" width="62" height="25"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="cs9-ek-MlW" secondAttribute="height" multiplier="28:11" id="Tvm-r1-pmV"/>
-                                            <constraint firstAttribute="height" constant="21" id="j6g-VJ-l0S"/>
+                                            <constraint firstAttribute="height" constant="25" id="1X1-B6-MRy"/>
                                         </constraints>
-                                        <state key="normal" image="btn_back_white">
+                                        <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="18"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="-10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Back" image="back_arrow_white">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Back"/>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="back:" destination="fkL-Wd-KXh" eventType="touchUpInside" id="vaO-Jb-sul"/>
                                         </connections>
@@ -3120,13 +3179,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oHy-54-5nJ" userLabel="HeaderView">
-                                <rect key="frame" x="0.0" y="48" width="414" height="121"/>
+                                <rect key="frame" x="0.0" y="48" width="414" height="125"/>
                                 <subviews>
                                     <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="header_medium" translatesAutoresizingMaskIntoConstraints="NO" id="CGo-Ro-E9Z">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="121"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="125"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v8k-rf-cHz" customClass="MyView" customModule="Saw_Grow" customModuleProvider="target">
-                                        <rect key="frame" x="29" y="56" width="356" height="50"/>
+                                        <rect key="frame" x="29" y="60" width="356" height="50"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="T5E-13-bw6">
                                                 <rect key="frame" x="7" y="7" width="342" height="36"/>
@@ -3200,20 +3259,25 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zyw-hP-kid">
-                                        <rect key="frame" x="29" y="20" width="53.5" height="21"/>
+                                        <rect key="frame" x="29" y="20" width="62" height="25"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="zyw-hP-kid" secondAttribute="height" multiplier="28:11" id="aGe-VE-Bda"/>
-                                            <constraint firstAttribute="height" constant="21" id="j7C-4A-UTl"/>
+                                            <constraint firstAttribute="height" constant="25" id="MDR-Ds-w1U"/>
                                         </constraints>
-                                        <state key="normal" image="btn_back_white">
+                                        <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="18"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="-10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Back" image="back_arrow_white">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Back"/>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="back:" destination="Uuv-B9-eRd" eventType="touchUpInside" id="RaY-HU-JhL"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Warning Letter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YQy-zs-4uA">
-                                        <rect key="frame" x="140.5" y="15.5" width="133.5" height="30"/>
+                                        <rect key="frame" x="140.5" y="17.5" width="133.5" height="30"/>
                                         <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="20"/>
                                         <color key="textColor" name="Text_White"/>
                                         <nil key="highlightedColor"/>
@@ -3238,7 +3302,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mYl-ht-Y12" userLabel="BottomView">
-                                <rect key="frame" x="0.0" y="169" width="414" height="727"/>
+                                <rect key="frame" x="0.0" y="173" width="414" height="723"/>
                                 <color key="backgroundColor" name="Bg_Light_Gray"/>
                             </view>
                         </subviews>
@@ -3597,7 +3661,7 @@
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="daf-xY-yfO">
-                                                            <rect key="frame" x="87" y="14" width="176" height="58"/>
+                                                            <rect key="frame" x="87" y="14" width="186" height="58"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vacation Leaves" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HHc-RH-6Jr">
                                                                     <rect key="frame" x="0.0" y="0.0" width="102" height="20"/>
@@ -3620,7 +3684,7 @@
                                                             </subviews>
                                                         </stackView>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IfN-U0-nRm" customClass="MyView" customModule="Saw_Grow" customModuleProvider="target">
-                                                            <rect key="frame" x="303" y="15" width="30" height="30"/>
+                                                            <rect key="frame" x="308" y="15" width="30" height="30"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hLq-2l-gJg">
                                                                     <rect key="frame" x="10" y="5" width="10" height="20"/>
@@ -3643,7 +3707,7 @@
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pending" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qed-Wd-AmL">
-                                                            <rect key="frame" x="268" y="56.5" width="70" height="19.5"/>
+                                                            <rect key="frame" x="278" y="56.5" width="70" height="19.5"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="70" id="968-wU-ewq"/>
                                                             </constraints>
@@ -3653,7 +3717,7 @@
                                                         </label>
                                                     </subviews>
                                                     <constraints>
-                                                        <constraint firstAttribute="trailing" secondItem="qed-Wd-AmL" secondAttribute="trailing" constant="20" id="16n-DF-TSR"/>
+                                                        <constraint firstAttribute="trailing" secondItem="qed-Wd-AmL" secondAttribute="trailing" constant="10" id="16n-DF-TSR"/>
                                                         <constraint firstAttribute="bottom" secondItem="qed-Wd-AmL" secondAttribute="bottom" constant="10" id="DiM-vO-21p"/>
                                                         <constraint firstItem="qfl-6G-9M5" firstAttribute="centerY" secondItem="jTl-fG-67c" secondAttribute="centerY" id="Ds0-iG-NQL"/>
                                                         <constraint firstItem="IfN-U0-nRm" firstAttribute="top" secondItem="jTl-fG-67c" secondAttribute="top" constant="15" id="MUl-hw-bx1"/>
@@ -3662,7 +3726,7 @@
                                                         <constraint firstItem="daf-xY-yfO" firstAttribute="top" secondItem="qfl-6G-9M5" secondAttribute="top" id="cU5-YB-FJ0"/>
                                                         <constraint firstItem="qfl-6G-9M5" firstAttribute="leading" secondItem="jTl-fG-67c" secondAttribute="leading" constant="14" id="d9p-dm-Ubh"/>
                                                         <constraint firstItem="qed-Wd-AmL" firstAttribute="leading" secondItem="daf-xY-yfO" secondAttribute="trailing" constant="5" id="evT-IT-w8p"/>
-                                                        <constraint firstAttribute="trailing" secondItem="IfN-U0-nRm" secondAttribute="trailing" constant="25" id="v3o-8Q-n9w"/>
+                                                        <constraint firstAttribute="trailing" secondItem="IfN-U0-nRm" secondAttribute="trailing" constant="20" id="v3o-8Q-n9w"/>
                                                     </constraints>
                                                 </collectionViewCellContentView>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -3733,26 +3797,31 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3US-Xt-7pe" userLabel="HeaderView">
-                                <rect key="frame" x="0.0" y="48" width="414" height="121"/>
+                                <rect key="frame" x="0.0" y="48" width="414" height="125"/>
                                 <subviews>
                                     <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="header_medium" translatesAutoresizingMaskIntoConstraints="NO" id="tVn-q4-rob">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="121"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="125"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z6w-u3-6hC">
-                                        <rect key="frame" x="29" y="20" width="53.5" height="21"/>
+                                        <rect key="frame" x="29" y="20" width="62" height="25"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="21" id="73x-qU-ylA"/>
-                                            <constraint firstAttribute="width" secondItem="z6w-u3-6hC" secondAttribute="height" multiplier="28:11" id="wzd-2U-QP2"/>
+                                            <constraint firstAttribute="height" constant="25" id="WgE-gc-s25"/>
                                         </constraints>
-                                        <state key="normal" image="btn_back_white">
+                                        <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="18"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="-10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Back" image="back_arrow_white">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Back"/>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="back:" destination="hOq-nS-8gj" eventType="touchUpInside" id="D7a-5Z-kl9"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Person" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y5E-rS-ygo">
-                                        <rect key="frame" x="145.5" y="15.5" width="123" height="30"/>
+                                        <rect key="frame" x="145.5" y="17.5" width="123" height="30"/>
                                         <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="20"/>
                                         <color key="textColor" name="Text_White"/>
                                         <nil key="highlightedColor"/>
@@ -3761,7 +3830,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="otm-KC-5lK" customClass="MyView" customModule="Saw_Grow" customModuleProvider="target">
-                                        <rect key="frame" x="29" y="56" width="356" height="50"/>
+                                        <rect key="frame" x="29" y="60" width="356" height="50"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tabbar_search" translatesAutoresizingMaskIntoConstraints="NO" id="9cl-lk-ZpB">
                                                 <rect key="frame" x="15" y="13.5" width="23" height="23"/>
@@ -3814,10 +3883,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AQX-md-SqA" userLabel="BottomView">
-                                <rect key="frame" x="0.0" y="169" width="414" height="727"/>
+                                <rect key="frame" x="0.0" y="173" width="414" height="723"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ciH-wU-Jtu">
-                                        <rect key="frame" x="20" y="0.0" width="374" height="702"/>
+                                        <rect key="frame" x="20" y="0.0" width="374" height="698"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="mtp-F9-kZV">
                                             <size key="itemSize" width="367" height="65"/>
                                             <size key="headerReferenceSize" width="50" height="35"/>
@@ -3939,14 +4008,19 @@
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TRe-kf-YB6">
-                                        <rect key="frame" x="29" y="19.5" width="53.5" height="21"/>
+                                        <rect key="frame" x="29" y="17.5" width="62" height="25"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="21" id="5Nz-1W-7Wy"/>
-                                            <constraint firstAttribute="width" secondItem="TRe-kf-YB6" secondAttribute="height" multiplier="28:11" id="wIB-h7-sOB"/>
+                                            <constraint firstAttribute="height" constant="25" id="9PY-iU-KIF"/>
                                         </constraints>
-                                        <state key="normal" image="btn_back_white">
+                                        <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="18"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="-10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Back" image="back_arrow_white">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Back"/>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="back:" destination="JKf-Y6-yTe" eventType="touchUpInside" id="b64-BW-lpu"/>
                                         </connections>
@@ -4017,14 +4091,19 @@
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sLs-ab-wBg">
-                                        <rect key="frame" x="29" y="19.5" width="53.5" height="21"/>
+                                        <rect key="frame" x="29" y="17.5" width="62" height="25"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="21" id="K8J-dm-76e"/>
-                                            <constraint firstAttribute="width" secondItem="sLs-ab-wBg" secondAttribute="height" multiplier="28:11" id="dii-7H-Q3i"/>
+                                            <constraint firstAttribute="height" constant="25" id="ymL-7F-QMN"/>
                                         </constraints>
-                                        <state key="normal" image="btn_back_white">
+                                        <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="18"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="-10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Back" image="back_arrow_white">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Back"/>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="back:" destination="zvX-71-4xo" eventType="touchUpInside" id="pQH-cF-OQb"/>
                                         </connections>
@@ -4679,14 +4758,19 @@
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="geR-eb-CkJ">
-                                        <rect key="frame" x="29" y="19.5" width="53.5" height="21"/>
+                                        <rect key="frame" x="29" y="17.5" width="62" height="25"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="21" id="L9b-yb-ocZ"/>
-                                            <constraint firstAttribute="width" secondItem="geR-eb-CkJ" secondAttribute="height" multiplier="28:11" id="jf5-H4-kM0"/>
+                                            <constraint firstAttribute="height" constant="25" id="9aE-Zm-znv"/>
                                         </constraints>
-                                        <state key="normal" image="btn_back_white">
+                                        <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="18"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="-10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Back" image="back_arrow_white">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Back"/>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="back:" destination="FPD-IK-ssb" eventType="touchUpInside" id="qRg-sV-7H6"/>
                                         </connections>
@@ -4785,14 +4869,14 @@
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="ssf-rL-eL3">
                                                                     <rect key="frame" x="15" y="15" width="326" height="220"/>
                                                                     <subviews>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ชื่อหัวข้อ: ชื่อหัวข้อ: ชื่อหัวข้อ: ชื่อหัวข้อ: ชื่อหัวข้อ: ชื่อหัวข้อ: ชื่อหัวข้อ: " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ie0-Sn-LYh">
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="ชื่อหัวข้อ: ชื่อหัวข้อ: ชื่อหัวข้อ: ชื่อหัวข้อ: ชื่อหัวข้อ: ชื่อหัวข้อ: ชื่อหัวข้อ: " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ie0-Sn-LYh">
                                                                             <rect key="frame" x="0.0" y="0.0" width="326" height="45"/>
                                                                             <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="15"/>
                                                                             <color key="textColor" name="Text_Dark_Gray"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="76K-5I-Ld4" userLabel="ชื่อหัวข้อ: ชื่อหัวข้อ: ชื่อหัวข้อ: ชื่อหัวข้อ: ชื่อหัวข้อ: ชื่อหัวข้อ: ชื่อหัวข้อ:" customClass="MyLabel" customModule="Saw_Grow" customModuleProvider="target">
-                                                                            <rect key="frame" x="0.0" y="76" width="326" height="67.5"/>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="76K-5I-Ld4" userLabel="ชื่อหัวข้อ: ชื่อหัวข้อ: ชื่อหัวข้อ: ชื่อหัวข้อ: ชื่อหัวข้อ: ชื่อหัวข้อ: ชื่อหัวข้อ:" customClass="MyLabel" customModule="Saw_Grow" customModuleProvider="target">
+                                                                            <rect key="frame" x="0.0" y="60" width="326" height="99"/>
                                                                             <string key="text">คำอธิบายหัวข้อ คำอธิบายหัวข้อคำอธิบายหัวข้อคำอธิบายหัวข้อคำอธิบายหัวข้อคำอธิบายหัวข้อคำอธิบายหัวข้อคำอธิบายหัวข้อคำอธิบายหัวข้อคำอธิบายหัวข้อ</string>
                                                                             <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="15"/>
                                                                             <color key="textColor" name="Text_Gray"/>
@@ -4997,14 +5081,19 @@
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZZX-m2-dme">
-                                        <rect key="frame" x="29" y="19.5" width="53.5" height="21"/>
+                                        <rect key="frame" x="29" y="17.5" width="62" height="25"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="21" id="VX1-fZ-vlS"/>
-                                            <constraint firstAttribute="width" secondItem="ZZX-m2-dme" secondAttribute="height" multiplier="28:11" id="vMI-yU-YvW"/>
+                                            <constraint firstAttribute="height" constant="25" id="RNT-N5-pEB"/>
                                         </constraints>
-                                        <state key="normal" image="btn_back_white">
+                                        <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="18"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="-10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Back" image="back_arrow_white">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Back"/>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="back:" destination="jh9-Fu-iM1" eventType="touchUpInside" id="Gi5-Wu-5T8"/>
                                         </connections>
@@ -5275,14 +5364,19 @@
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gtU-lf-21Q">
-                                        <rect key="frame" x="29" y="19.5" width="53.5" height="21"/>
+                                        <rect key="frame" x="29" y="17.5" width="62" height="25"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="gtU-lf-21Q" secondAttribute="height" multiplier="28:11" id="ZoF-HE-ceD"/>
-                                            <constraint firstAttribute="height" constant="21" id="dDS-V6-VAD"/>
+                                            <constraint firstAttribute="height" constant="25" id="2jd-zq-Cc4"/>
                                         </constraints>
-                                        <state key="normal" image="btn_back_white">
+                                        <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="18"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="-10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Back" image="back_arrow_white">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Back"/>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="back:" destination="gCS-0a-N1y" eventType="touchUpInside" id="ETl-42-xJc"/>
                                         </connections>
@@ -5674,14 +5768,19 @@
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3C0-wb-IIS">
-                                        <rect key="frame" x="29" y="19.5" width="53.5" height="21"/>
+                                        <rect key="frame" x="29" y="17.5" width="62" height="25"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="21" id="JLc-JY-lfq"/>
-                                            <constraint firstAttribute="width" secondItem="3C0-wb-IIS" secondAttribute="height" multiplier="28:11" id="hQ2-8v-0WE"/>
+                                            <constraint firstAttribute="height" constant="25" id="AQn-zq-m72"/>
                                         </constraints>
-                                        <state key="normal" image="btn_back_white">
+                                        <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="18"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="-10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Back" image="back_arrow_white">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Back"/>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="back:" destination="SyY-Gq-hQy" eventType="touchUpInside" id="6vx-nE-CfF"/>
                                         </connections>
@@ -6266,13 +6365,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aJN-Wm-lPQ" userLabel="HeaderView">
-                                <rect key="frame" x="0.0" y="48" width="414" height="121"/>
+                                <rect key="frame" x="0.0" y="48" width="414" height="125"/>
                                 <subviews>
                                     <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="header_medium" translatesAutoresizingMaskIntoConstraints="NO" id="g68-db-QHV">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="121"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="125"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7EK-3W-ALs" customClass="MyView" customModule="Saw_Grow" customModuleProvider="target">
-                                        <rect key="frame" x="29" y="56" width="356" height="50"/>
+                                        <rect key="frame" x="29" y="60" width="356" height="50"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="Xth-R2-64Y">
                                                 <rect key="frame" x="7" y="7" width="342" height="36"/>
@@ -6346,20 +6445,25 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qz8-PW-pW2">
-                                        <rect key="frame" x="29" y="20" width="53.5" height="21"/>
+                                        <rect key="frame" x="29" y="20" width="62" height="25"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="qz8-PW-pW2" secondAttribute="height" multiplier="28:11" id="ZsC-io-HWZ"/>
-                                            <constraint firstAttribute="height" constant="21" id="rgO-gA-nj7"/>
+                                            <constraint firstAttribute="height" constant="25" id="lDC-I4-bwt"/>
                                         </constraints>
-                                        <state key="normal" image="btn_back_white">
+                                        <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="18"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="-10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Back" image="back_arrow_white">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Back"/>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="back:" destination="lDA-TF-nZc" eventType="touchUpInside" id="e1M-3S-6zB"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Report" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S0V-Fy-btx">
-                                        <rect key="frame" x="176.5" y="15.5" width="61.5" height="30"/>
+                                        <rect key="frame" x="176.5" y="17.5" width="61.5" height="30"/>
                                         <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="20"/>
                                         <color key="textColor" name="Text_White"/>
                                         <nil key="highlightedColor"/>
@@ -6384,7 +6488,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R8x-q9-A2A" userLabel="BottomView">
-                                <rect key="frame" x="0.0" y="169" width="414" height="727"/>
+                                <rect key="frame" x="0.0" y="173" width="414" height="723"/>
                                 <color key="backgroundColor" name="Bg_Light_Gray"/>
                             </view>
                         </subviews>
@@ -6652,7 +6756,7 @@
             <size key="intrinsicContentSize" width="59" height="36"/>
         </designable>
         <designable name="76K-5I-Ld4">
-            <size key="intrinsicContentSize" width="914.5" height="22.5"/>
+            <size key="intrinsicContentSize" width="934.5" height="42.5"/>
         </designable>
         <designable name="8lg-UZ-nLn">
             <size key="intrinsicContentSize" width="203.5" height="26"/>
@@ -6707,6 +6811,9 @@
         </designable>
         <designable name="Sh3-w0-exT">
             <size key="intrinsicContentSize" width="30" height="36"/>
+        </designable>
+        <designable name="TVJ-VX-BwR">
+            <size key="intrinsicContentSize" width="65.5" height="15"/>
         </designable>
         <designable name="TqL-Br-NCX">
             <size key="intrinsicContentSize" width="75" height="75"/>
@@ -6788,7 +6895,7 @@
         </designable>
     </designables>
     <resources>
-        <image name="btn_back_white" width="55.5" height="21"/>
+        <image name="back_arrow_white" width="11" height="17.5"/>
         <image name="checkin_add" width="25" height="25"/>
         <image name="checkin_delete" width="25" height="25"/>
         <image name="demo_profile" width="327" height="461"/>
@@ -6814,7 +6921,7 @@
         <image name="qr_icon" width="71.5" height="71.5"/>
         <image name="qr_upload" width="24.5" height="24.5"/>
         <image name="report_location" width="11" height="15.5"/>
-        <image name="report_view" width="83" height="25"/>
+        <image name="report_view" width="13.5" height="11.5"/>
         <image name="tabbar_search" width="23" height="22.5"/>
         <namedColor name="Bg_Light_Gray">
             <color red="0.96470588235294119" green="0.97254901960784312" blue="0.98431372549019602" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -6853,13 +6960,13 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray5Color">
-            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray6Color">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGrayColor">
-            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

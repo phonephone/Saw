@@ -144,7 +144,7 @@ class LeaveRequest: UIViewController, UITextFieldDelegate, UITextViewDelegate {
                 
             case .success(let responseObject):
                 let json = JSON(responseObject)
-                //print("SUCCESS LEAVE\(json)")
+                print("SUCCESS LEAVE\(json)")
                 
                 self.leaveJSON = json["data"][0]["leavetypes"]
                 self.headJSON = json["data"][0]["head"]

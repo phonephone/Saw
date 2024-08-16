@@ -536,10 +536,12 @@ extension EDocDetail: UITableViewDelegate {
             if self.isHead! {
                 let headCell = (self.myTableView.cellForRow(at: indexPath) as? LeaveDetail_Cell)!
                 reason = headCell.cellReason.text
+                self.loadAction(requestID: self.detailJSON!["request_id"].stringValue, statusID:self.detailJSON!["rejected_status_id"].stringValue, reason: reason)
             } else {
                 reason = "LEAVE_Cancel_Employee".localized()
+                self.loadAction(requestID: self.detailJSON!["request_id"].stringValue, statusID:self.detailJSON!["cancel_status_id"].stringValue, reason: reason)
             }
-            self.loadAction(requestID: self.detailJSON!["request_id"].stringValue, statusID:"3", reason: reason)
+            
         }
         present(alertMain, animated: true)
     }

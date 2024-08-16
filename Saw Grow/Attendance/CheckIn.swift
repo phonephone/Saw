@@ -30,7 +30,8 @@ class CheckIn: UIViewController, UITextViewDelegate {
     var inArea = false
     var isWFH = false
     var isBioScan = false
-    var isForceTakePhoto = false
+    var isForcePhoto = false
+    var isAllowGallery = false
     
     var userLat = ""
     var userLong = ""
@@ -124,7 +125,8 @@ class CheckIn: UIViewController, UITextViewDelegate {
                 self.empstatus = json["data"][0]["profile"][0]["empstatus"].stringValue
                 self.isWFH = json["data"][0]["iswfh"].boolValue
                 self.isBioScan = json["data"][0]["isbioscan"].boolValue
-                //self.isForceTakePhoto = json["data"][0]["xxx"].boolValue
+                self.isForcePhoto = json["data"][0]["is_force_photo"].boolValue
+                self.isAllowGallery = json["data"][0]["is_allow_gallery"].boolValue
                 self.updateEmpStatus()
             }
         }
@@ -203,8 +205,8 @@ class CheckIn: UIViewController, UITextViewDelegate {
             userLong = userLocation.coordinate.longitude.description
             
             let geocoder = CLGeocoder()
-            geocoder.reverseGeocodeLocation(userLocation) { (placemarksArray, error) in
-                //print("Place \(placemarksArray)\nError \(error)")
+            geocoder.reverseGeocodeLocation(userLocation,preferredLocale: Locale.init(identifier: "Map_Locale".localized())) { (placemarksArray, error) in
+                print("Place \(placemarksArray)\nError \(error)")
                 if placemarksArray != nil {//(placemarksArray?.count)! > 0 {
 
                     let placemark = placemarksArray?.first
@@ -268,8 +270,12 @@ class CheckIn: UIViewController, UITextViewDelegate {
     
     @IBAction func attachmentAdd(_ sender: UIButton) {
         DispatchQueue.main.async {
-            //AttachmentHandler.shared.showCameraAndPhotoLibrary(vc: self, allowEdit: false)
-            AttachmentHandler.shared.showCameraOnly(vc: self, allowEdit: false)
+            if self.isAllowGallery{
+                AttachmentHandler.shared.showCameraAndPhotoLibrary(vc: self, allowEdit: false)
+            }
+            else {
+                AttachmentHandler.shared.showCameraOnly(vc: self, allowEdit: false)
+            }
             AttachmentHandler.shared.imagePickedBlock = { (image) in
                 /* get your image here */
                 self.uploadImage.image = image
@@ -295,50 +301,67 @@ class CheckIn: UIViewController, UITextViewDelegate {
     
     @IBAction func btnClick(_ sender: UIButton) {
         if sender.tag == 1 {//CHECKIN
-            if isBioScan {
-                let context = LAContext()
-                    var error: NSError?
-
-                    if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
-                        
-                        let reason = "CHECKIN_TouchID".localized()
-
-                        context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) {
-                            [weak self] success, authenticationError in
-
-                            DispatchQueue.main.async {
-                                if success {
-                                    print("SUCCESS")
-                                    switch sender.tag {
-                                    case 1://Check In
-                                        self!.loadCheckIn(action: "in")
-                                        
-                                    case 2://Update
-                                        self!.loadCheckIn(action: "update")
-                                        
-                                    case 3://Check Out
-                                        self!.loadCheckIn(action: "out")
-                                        
-                                    default:
-                                        break
-                                    }
-                                } else {
-                                    // error
-                                    print("CANCLE")
-                                }
-                            }
-                        }
-                    } else {
-                        // no biometry
-                        print("NO BIO")
-                        confirmAsk(sender)
+            if isForcePhoto {
+                if uploadImage.image != nil {
+                    checkBioScan(sender)
+                }
+                else {
+                    let alertOK = self.alertService.alertOK(title: "CHECKIN_Force_Upload".localized(), buttonColor: .themeColor)
+                    {
                     }
+                    self.present(alertOK, animated: true)
+                }
             }
-            else{//No Bioscan
-                confirmAsk(sender)
+            else {
+                checkBioScan(sender)
             }
         }
         else {//UPDATE & CHECKOUT
+            confirmAsk(sender)
+        }
+    }
+    
+    func checkBioScan(_ sender: UIButton) {
+        if isBioScan {
+            let context = LAContext()
+                var error: NSError?
+
+                if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
+                    
+                    let reason = "CHECKIN_TouchID".localized()
+
+                    context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) {
+                        [weak self] success, authenticationError in
+
+                        DispatchQueue.main.async {
+                            if success {
+                                print("SUCCESS")
+                                switch sender.tag {
+                                case 1://Check In
+                                    self!.loadCheckIn(action: "in")
+                                    
+                                case 2://Update
+                                    self!.loadCheckIn(action: "update")
+                                    
+                                case 3://Check Out
+                                    self!.loadCheckIn(action: "out")
+                                    
+                                default:
+                                    break
+                                }
+                            } else {
+                                // error
+                                print("CANCLE")
+                            }
+                        }
+                    }
+                } else {
+                    // no biometry
+                    print("NO BIO")
+                    confirmAsk(sender)
+                }
+        }
+        else{//No Bioscan
             confirmAsk(sender)
         }
     }

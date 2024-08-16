@@ -397,7 +397,7 @@ extension DirectoryList: UICollectionViewDataSource {
                 cell.cellBtnCall.backgroundColor = color
                 cell.cellBtnEmail.backgroundColor = color
                 
-                cell.cellIcon.sd_setImage(with: URL(string:cellArray["icon_url"].stringValue), placeholderImage: UIImage(named: "xxx"))
+                cell.cellIcon.sd_setImage(with: URL(string:cellArray["icon_url"].stringValue), placeholderImage: nil)
                 cell.cellIcon.isHidden = false
             }
             else{

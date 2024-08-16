@@ -126,6 +126,9 @@ extension ApproveHistory: UICollectionViewDataSource {
         if approveType == .shift {
             cell = collectionView.dequeueReusableCell(withReuseIdentifier:"Approve_Swap_Cell", for: indexPath) as! Approve_Cell
         }
+        else if approveType == .reimburse {
+            cell = collectionView.dequeueReusableCell(withReuseIdentifier:"Approve_Reimburse", for: indexPath) as! Approve_Cell
+        }
         else {
             cell = collectionView.dequeueReusableCell(withReuseIdentifier:"Approve_Cell", for: indexPath) as! Approve_Cell
         }
@@ -170,9 +173,9 @@ extension ApproveHistory: UICollectionViewDataSource {
             cell.cellStatus.text = cellArray["status"].stringValue
             
         case .reimburse:
-            cell.cellTitle.text = cellArray["empname"].stringValue
+            cell.cellTitle.text = cellArray[requestNameKey()].stringValue
             cell.cellImage.sd_setImage(with: URL(string:cellArray["empphoto"].stringValue), placeholderImage: UIImage(named: "logo_circle"))
-            cell.cellApproveType.text = cellArray[requestNameKey()].stringValue
+            cell.cellApproveType.text = cellArray["amount"].stringValue
             cell.cellDate.text = "\("Sent_Date".localized())  \(cellArray["senddate"].stringValue)"
             cell.cellStatus.text = cellArray["status_text"].stringValue
             cell.cellStatus.textColor = self.colorFromRGB(rgbString: cellArray["statuscolor"].stringValue)

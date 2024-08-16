@@ -16,6 +16,7 @@
 
 //GENERAL
 "Formatter_Locale" = "zh";
+"Map_Locale" = "en";
 "Thai" = "泰语";
 "English" = "英语";
 "Loading" = "正在下载";
@@ -28,6 +29,7 @@
 "Confirm_Delete" = "确认删除";
 "OK" = "同意";
 "Done" = "完成";
+"Back" = "返回";
 "Day" = "日期";
 "Select_Date" = "选择日期";
 "Sent_Date" = "交货日期";
@@ -124,6 +126,10 @@
 "HOME_Location_Check" = "请检查设备的隐私设置";
 "HOME_Admin_Setting" = "管理设置";
 
+//TERM & PRIVACY POLICY
+"TERM_Title" = "服务条款";
+"POLICY_Title" = "隐私政策";
+
 //CALENDAR TAB
 "CALENDAR_Language" = "zh";
 "CALENDAR_Sheet_Request" = "请求";
@@ -154,6 +160,7 @@
 "CHECKIN_Place_Unknow" = "未知地点";
 "CHECKIN_Note" = "备注";
 "CHECKIN_Upload" = "上传照片";
+"CHECKIN_Force_Upload" = "请上传照片";
 "CHECKIN_In" = "签到";
 "CHECKIN_Update" = "更新";
 "CHECKIN_Out" = "签退";
@@ -379,12 +386,17 @@
 "EDOC_WEB_Button_Send" = "发送";
 "EDOC_WEB_Button_Cancel" = "取消";
 
+"EDOC_STATUS_Pending" = "待处理";
+"EDOC_STATUS_Checking" = "检查中";
+"EDOC_STATUS_Approved" = "批准";
+
 //REPORT
 "REPORT_HEADER" = "报告";
 "REPORT_Work" = "工作日";
 "REPORT_Late" = "迟到";
 "REPORT_Absent" = "缺勤";
 "REPORT_Leave" = "请假";
+"REPORT_Button_View" = "查看报告";
 "REPORT_Button_Location" = "显示位置";
 
 //WARNING LETTER

@@ -56,6 +56,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             // MARK: - Bypass Login
             var bypassVC = UIViewController()
             
+            //bypassVC = UIStoryboard.mainStoryBoard.instantiateViewController(withIdentifier: "Profile") as! Profile
+            
             //bypassVC = UIStoryboard.mainStoryBoard.instantiateViewController(withIdentifier: "Reward") as! Reward
             
             //bypassVC = UIStoryboard.rewardStoryBoard.instantiateViewController(withIdentifier: "Coupon") as! Coupon
@@ -77,7 +79,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             
             //bypassVC = UIStoryboard.eDocumentStoryBoard.instantiateViewController(withIdentifier: "ReportMenu") as! ReportMenu
             
-            bypassVC = UIStoryboard.eDocumentStoryBoard.instantiateViewController(withIdentifier: "EDocMenu") as! EDocMenu
+            //bypassVC = UIStoryboard.eDocumentStoryBoard.instantiateViewController(withIdentifier: "EDocMenu") as! EDocMenu
             
 //            bypassVC = UIStoryboard.eDocumentStoryBoard.instantiateViewController(withIdentifier: "EDoc") as! EDoc
 //            vc.edocType = .probation
@@ -132,7 +134,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //            bypassVC = UIStoryboard.aiStoryBoard.instantiateViewController(withIdentifier: "FaceEmotionAI") as! FaceEmotionAI
 //            
             
-//            navigationController = UINavigationController.init(rootViewController: bypassVC)
+            //navigationController = UINavigationController.init(rootViewController: bypassVC)
             //Localize.setCurrentLanguage("en")
             //Localize.setCurrentLanguage("th")
             //Localize.setCurrentLanguage("zh")

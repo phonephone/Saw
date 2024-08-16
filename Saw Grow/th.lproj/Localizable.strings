@@ -16,6 +16,7 @@
 
 //GENERAL
 "Formatter_Locale" = "th";
+"Map_Locale" = "th";
 "Thai" = "ไทย";
 "English" = "อังกฤษ";
 "Loading" = "กำลังโหลด";
@@ -28,6 +29,7 @@
 "Confirm_Delete" = "ยืนยันการลบ";
 "OK" = "ตกลง";
 "Done" = "เสร็จสิ้น";
+"Back" = "กลับ";
 "Day" = "วัน";
 "Select_Date" = "เลือกวันที่";
 "Sent_Date" = "วันที่ส่ง";
@@ -124,6 +126,10 @@
 "HOME_Location_Check" = "กรุณาตรวจสอบการตั้งค่าความเป็นส่วนตัวของอุปกรณ์";
 "HOME_Admin_Setting" = "ตั้งค่าข้อมูลการใช้งาน";
 
+//TERM & PRIVACY POLICY
+"TERM_Title" = "เงื่อนไขการใช้บริการ";
+"POLICY_Title" = "นโยบายความเป็นส่วนตัว";
+
 //CALENDAR TAB
 "CALENDAR_Language" = "th";
 "CALENDAR_Sheet_Request" = "คำขอ";
@@ -154,6 +160,7 @@
 "CHECKIN_Place_Unknow" = "ไม่รู้สถานที่";
 "CHECKIN_Note" = "หมายเหตุ";
 "CHECKIN_Upload" = "แนบรูปภาพ";
+"CHECKIN_Force_Upload" = "กรุณาแนบรูปภาพ";
 "CHECKIN_In" = "เข้างาน";
 "CHECKIN_Update" = "อัปเดต";
 "CHECKIN_Out" = "ออกงาน";
@@ -379,12 +386,17 @@
 "EDOC_WEB_Button_Send" = "ส่ง";
 "EDOC_WEB_Button_Cancel" = "ยกเลิก";
 
+"EDOC_STATUS_Pending" = "รอดำเนินการ";
+"EDOC_STATUS_Checking" = "ตรวจสอบ";
+"EDOC_STATUS_Approved" = "อนุมัติ";
+
 //REPORT
 "REPORT_HEADER" = "รายงาน";
 "REPORT_Work" = "วันทำงาน";
 "REPORT_Late" = "มาสาย";
 "REPORT_Absent" = "ขาดงาน";
 "REPORT_Leave" = "ลา";
+"REPORT_Button_View" = "ดูรายงาน";
 "REPORT_Button_Location" = "แสดงตำแหน่ง";
 
 //WARNING LETTER
