@@ -33,7 +33,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MG7-uu-eeS">
-                                <rect key="frame" x="25" y="93" width="364" height="48"/>
+                                <rect key="frame" x="25" y="93" width="364" height="37.5"/>
                                 <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="32"/>
                                 <color key="textColor" name="Text_Dark_Gray"/>
                                 <nil key="highlightedColor"/>
@@ -42,7 +42,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign in to continue!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="7CF-0d-wBG">
-                                <rect key="frame" x="25" y="151" width="364" height="31.5"/>
+                                <rect key="frame" x="25" y="140.5" width="364" height="24.5"/>
                                 <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="21"/>
                                 <color key="textColor" name="Text_Gray"/>
                                 <nil key="highlightedColor"/>
@@ -51,13 +51,13 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="GlY-fw-D4J">
-                                <rect key="frame" x="25" y="257.5" width="364" height="230"/>
+                                <rect key="frame" x="25" y="240" width="364" height="219"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="4pd-HK-twA">
-                                        <rect key="frame" x="0.0" y="0.0" width="364" height="106.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="364" height="101"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pic-FZ-Gv9">
-                                                <rect key="frame" x="0.0" y="0.0" width="364" height="25.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="364" height="20"/>
                                                 <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="17"/>
                                                 <color key="textColor" name="Text_Gray_2"/>
                                                 <nil key="highlightedColor"/>
@@ -66,7 +66,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="SL1-eB-9j3" customClass="MyField" customModule="Saw_Grow" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="41.5" width="364" height="65"/>
+                                                <rect key="frame" x="0.0" y="36" width="364" height="65"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="65" id="etd-Iz-QnG"/>
                                                 </constraints>
@@ -92,10 +92,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="6bC-w8-cV8">
-                                        <rect key="frame" x="0.0" y="123.5" width="364" height="106.5"/>
+                                        <rect key="frame" x="0.0" y="118" width="364" height="101"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CwC-lA-VA0">
-                                                <rect key="frame" x="0.0" y="0.0" width="71.5" height="41.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="75.5" height="36"/>
                                                 <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="17"/>
                                                 <color key="textColor" name="Text_Gray_2"/>
                                                 <nil key="highlightedColor"/>
@@ -104,7 +104,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UH4-ck-2VC">
-                                                <rect key="frame" x="0.0" y="41.5" width="364" height="65"/>
+                                                <rect key="frame" x="0.0" y="36" width="364" height="65"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WSV-0w-3bT" customClass="MyField" customModule="Saw_Grow" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="364" height="65"/>
@@ -175,7 +175,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Lv-Em-qv0">
-                                <rect key="frame" x="248.5" y="497.5" width="140.5" height="33"/>
+                                <rect key="frame" x="248.5" y="469" width="140.5" height="29"/>
                                 <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="14"/>
                                 <state key="normal" title="Forget Password ?">
                                     <color key="titleColor" name="Text_Gray_2"/>
@@ -188,7 +188,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e8N-4W-Ffc" customClass="MyButton" customModule="Saw_Grow" customModuleProvider="target">
-                                <rect key="frame" x="25" y="549.5" width="364" height="59"/>
+                                <rect key="frame" x="25" y="517" width="364" height="59"/>
                                 <color key="backgroundColor" name="Main_Theme_1"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="59" id="R0q-Am-RGc"/>
@@ -208,27 +208,27 @@
                                 </connections>
                             </button>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BOq-Zd-ktH">
-                                <rect key="frame" x="25" y="638.5" width="364" height="100.5"/>
+                                <rect key="frame" x="25" y="606" width="364" height="95.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or continue with" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8UI-9n-luY">
-                                        <rect key="frame" x="127" y="0.0" width="110" height="22.5"/>
+                                        <rect key="frame" x="128" y="0.0" width="108" height="17.5"/>
                                         <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="15"/>
                                         <color key="textColor" name="Text_Gray_2"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RnG-NW-LRc">
-                                        <rect key="frame" x="0.0" y="11" width="107" height="1"/>
+                                        <rect key="frame" x="0.0" y="8.5" width="108" height="1"/>
                                         <color key="backgroundColor" red="0.84106707570000006" green="0.85498410459999996" blue="0.88084161279999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="t6a-vw-ZrX"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PZy-ND-jiM">
-                                        <rect key="frame" x="257" y="11" width="107" height="1"/>
+                                        <rect key="frame" x="256" y="8.5" width="108" height="1"/>
                                         <color key="backgroundColor" red="0.84106707570000006" green="0.85498410459999996" blue="0.88084161279999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="jj0-ID-j25">
-                                        <rect key="frame" x="35.5" y="52.5" width="293" height="48"/>
+                                        <rect key="frame" x="35.5" y="47.5" width="293" height="48"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HFz-r2-bjY">
                                                 <rect key="frame" x="0.0" y="0.0" width="89" height="48"/>
@@ -274,7 +274,7 @@
                                 </constraints>
                             </view>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KwW-5I-dhW">
-                                <rect key="frame" x="25" y="497.5" width="107" height="33"/>
+                                <rect key="frame" x="25" y="469" width="108" height="29"/>
                                 <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="14"/>
                                 <state key="normal" title="Register Account">
                                     <color key="titleColor" name="Text_Gray_2"/>
@@ -333,7 +333,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Passcode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hBg-Cc-Edm">
-                                <rect key="frame" x="31" y="114" width="204.5" height="48"/>
+                                <rect key="frame" x="31" y="114" width="215.5" height="37.5"/>
                                 <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="32"/>
                                 <color key="textColor" name="Text_Dark_Gray"/>
                                 <nil key="highlightedColor"/>
@@ -342,7 +342,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="For the security of your account, please enter the security code" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="see-s5-Rek">
-                                <rect key="frame" x="31" y="172" width="368" height="63"/>
+                                <rect key="frame" x="31" y="161.5" width="368" height="49"/>
                                 <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="21"/>
                                 <color key="textColor" name="Text_Gray"/>
                                 <nil key="highlightedColor"/>
@@ -351,7 +351,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IwT-OJ-fdD">
-                                <rect key="frame" x="31" y="59" width="70" height="25"/>
+                                <rect key="frame" x="20" y="59" width="71" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="R60-Sh-OHc"/>
                                 </constraints>
@@ -369,7 +369,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="MFE-UG-3iw">
-                                <rect key="frame" x="44" y="321" width="326" height="63"/>
+                                <rect key="frame" x="44" y="296.5" width="326" height="63"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uLS-qJ-I9o" customClass="MyField" customModule="Saw_Grow" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="63" height="63"/>
@@ -455,7 +455,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8uQ-Tb-3MQ" customClass="MyButton" customModule="Saw_Grow" customModuleProvider="target">
-                                <rect key="frame" x="25" y="542" width="364" height="59"/>
+                                <rect key="frame" x="25" y="517.5" width="364" height="59"/>
                                 <color key="backgroundColor" name="Main_Theme_1"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="59" id="DBx-5g-06j"/>
@@ -481,7 +481,7 @@
                             <constraint firstItem="see-s5-Rek" firstAttribute="top" secondItem="hBg-Cc-Edm" secondAttribute="bottom" constant="10" id="4c8-3b-AHS"/>
                             <constraint firstItem="MFE-UG-3iw" firstAttribute="leading" secondItem="xDs-ob-Jrg" secondAttribute="leading" constant="44" id="8HP-Oc-2hX"/>
                             <constraint firstItem="MFE-UG-3iw" firstAttribute="centerX" secondItem="zlY-5F-nej" secondAttribute="centerX" id="8Sk-lm-UP6"/>
-                            <constraint firstItem="IwT-OJ-fdD" firstAttribute="leading" secondItem="xDs-ob-Jrg" secondAttribute="leading" constant="31" id="9oQ-Gu-bgu"/>
+                            <constraint firstItem="IwT-OJ-fdD" firstAttribute="leading" secondItem="xDs-ob-Jrg" secondAttribute="leading" constant="20" id="9oQ-Gu-bgu"/>
                             <constraint firstItem="hBg-Cc-Edm" firstAttribute="top" secondItem="IwT-OJ-fdD" secondAttribute="bottom" constant="30" id="Efi-Pb-cX8"/>
                             <constraint firstItem="xDs-ob-Jrg" firstAttribute="trailing" secondItem="MFE-UG-3iw" secondAttribute="trailing" constant="44" id="G6J-Qf-fSf"/>
                             <constraint firstItem="8uQ-Tb-3MQ" firstAttribute="leading" secondItem="xDs-ob-Jrg" secondAttribute="leading" constant="25" id="N4c-yA-EUK"/>
@@ -517,7 +517,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm Passcode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7SQ-gv-qdg">
-                                <rect key="frame" x="31" y="114" width="256.5" height="48"/>
+                                <rect key="frame" x="31" y="114" width="264.5" height="37.5"/>
                                 <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="32"/>
                                 <color key="textColor" name="Text_Dark_Gray"/>
                                 <nil key="highlightedColor"/>
@@ -526,7 +526,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="For the security of your account, please enter the security code" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="V9o-gQ-gZf">
-                                <rect key="frame" x="31" y="172" width="368" height="63"/>
+                                <rect key="frame" x="31" y="161.5" width="368" height="49"/>
                                 <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="21"/>
                                 <color key="textColor" name="Text_Gray"/>
                                 <nil key="highlightedColor"/>
@@ -535,7 +535,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mPV-Fm-lKb">
-                                <rect key="frame" x="31" y="59" width="70" height="25"/>
+                                <rect key="frame" x="20" y="59" width="71" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="7ef-OK-Nbk"/>
                                 </constraints>
@@ -553,7 +553,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="enU-oW-5Yv">
-                                <rect key="frame" x="44" y="321" width="326" height="63"/>
+                                <rect key="frame" x="44" y="296.5" width="326" height="63"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Eb-AN-Dvy" customClass="MyField" customModule="Saw_Grow" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="63" height="63"/>
@@ -639,7 +639,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Igd-5p-t2F" customClass="MyButton" customModule="Saw_Grow" customModuleProvider="target">
-                                <rect key="frame" x="25" y="542" width="364" height="59"/>
+                                <rect key="frame" x="25" y="517.5" width="364" height="59"/>
                                 <color key="backgroundColor" name="Main_Theme_1"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="59" id="4mg-yV-zNp"/>
@@ -665,7 +665,7 @@
                             <constraint firstItem="Igd-5p-t2F" firstAttribute="top" secondItem="enU-oW-5Yv" secondAttribute="bottom" constant="158" id="8G7-op-tON"/>
                             <constraint firstItem="V9o-gQ-gZf" firstAttribute="top" secondItem="7SQ-gv-qdg" secondAttribute="bottom" constant="10" id="97N-69-svl"/>
                             <constraint firstItem="enU-oW-5Yv" firstAttribute="centerX" secondItem="ACc-EW-dVo" secondAttribute="centerX" id="E1S-C7-gCQ"/>
-                            <constraint firstItem="mPV-Fm-lKb" firstAttribute="leading" secondItem="8Mo-qa-DE7" secondAttribute="leading" constant="31" id="Lf5-1f-b4f"/>
+                            <constraint firstItem="mPV-Fm-lKb" firstAttribute="leading" secondItem="8Mo-qa-DE7" secondAttribute="leading" constant="20" id="Lf5-1f-b4f"/>
                             <constraint firstItem="Igd-5p-t2F" firstAttribute="centerX" secondItem="ACc-EW-dVo" secondAttribute="centerX" id="QGk-fr-FCJ"/>
                             <constraint firstItem="mPV-Fm-lKb" firstAttribute="top" secondItem="8Mo-qa-DE7" secondAttribute="top" constant="11" id="Xnd-wQ-Hwb"/>
                             <constraint firstItem="enU-oW-5Yv" firstAttribute="top" secondItem="V9o-gQ-gZf" secondAttribute="bottom" constant="86" id="Xz5-ZZ-dnm"/>
@@ -701,7 +701,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Passcode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zp9-b5-uN0">
-                                <rect key="frame" x="31" y="114" width="220" height="48"/>
+                                <rect key="frame" x="31" y="114" width="226" height="37.5"/>
                                 <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="32"/>
                                 <color key="textColor" name="Text_Dark_Gray"/>
                                 <nil key="highlightedColor"/>
@@ -710,7 +710,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="For the security of your account, please enter the security code" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="vMr-Bi-nKW">
-                                <rect key="frame" x="31" y="172" width="368" height="63"/>
+                                <rect key="frame" x="31" y="161.5" width="368" height="49"/>
                                 <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="21"/>
                                 <color key="textColor" name="Text_Gray"/>
                                 <nil key="highlightedColor"/>
@@ -719,7 +719,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wjY-r6-nX1">
-                                <rect key="frame" x="31" y="59" width="70" height="25"/>
+                                <rect key="frame" x="20" y="59" width="71" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="dRy-aO-mEc"/>
                                 </constraints>
@@ -737,7 +737,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="7wY-EK-HDx">
-                                <rect key="frame" x="44" y="321" width="326" height="63"/>
+                                <rect key="frame" x="44" y="296.5" width="326" height="63"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WAc-bg-4xR" customClass="MyField" customModule="Saw_Grow" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="63" height="63"/>
@@ -823,7 +823,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mFT-VR-A9a">
-                                <rect key="frame" x="141.5" y="464" width="131" height="39"/>
+                                <rect key="frame" x="138.5" y="439.5" width="137" height="33"/>
                                 <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="18"/>
                                 <state key="normal" title="Forget Passcode">
                                     <color key="titleColor" name="Main_Theme_1"/>
@@ -844,7 +844,7 @@
                             <constraint firstItem="4Dy-0H-aXy" firstAttribute="trailing" secondItem="7wY-EK-HDx" secondAttribute="trailing" constant="44" id="FfG-X1-y8p"/>
                             <constraint firstItem="wjY-r6-nX1" firstAttribute="top" secondItem="4Dy-0H-aXy" secondAttribute="top" constant="11" id="Fo2-5f-cS3"/>
                             <constraint firstItem="7wY-EK-HDx" firstAttribute="centerX" secondItem="om2-iX-XUJ" secondAttribute="centerX" id="OK1-2P-lbt"/>
-                            <constraint firstItem="wjY-r6-nX1" firstAttribute="leading" secondItem="4Dy-0H-aXy" secondAttribute="leading" constant="31" id="QZ9-UG-jJB"/>
+                            <constraint firstItem="wjY-r6-nX1" firstAttribute="leading" secondItem="4Dy-0H-aXy" secondAttribute="leading" constant="20" id="QZ9-UG-jJB"/>
                             <constraint firstItem="7wY-EK-HDx" firstAttribute="top" secondItem="vMr-Bi-nKW" secondAttribute="bottom" constant="86" id="dl7-hl-fJ2"/>
                             <constraint firstItem="vMr-Bi-nKW" firstAttribute="leading" secondItem="Zp9-b5-uN0" secondAttribute="leading" id="fIc-ec-Tui"/>
                             <constraint firstAttribute="trailing" secondItem="vMr-Bi-nKW" secondAttribute="trailing" constant="15" id="gZk-Nu-MEE"/>
@@ -875,7 +875,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reset Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G6B-rA-ydT">
-                                <rect key="frame" x="31" y="114" width="358" height="48"/>
+                                <rect key="frame" x="31" y="114" width="358" height="37.5"/>
                                 <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="32"/>
                                 <color key="textColor" name="Text_Dark_Gray"/>
                                 <nil key="highlightedColor"/>
@@ -884,7 +884,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter the email associated with your account and we'll send an email with instructions to reset your password." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="B2X-vk-uwI">
-                                <rect key="frame" x="31" y="172" width="358" height="76.5"/>
+                                <rect key="frame" x="31" y="161.5" width="358" height="59.5"/>
                                 <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="17"/>
                                 <color key="textColor" name="Text_Gray"/>
                                 <nil key="highlightedColor"/>
@@ -893,7 +893,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VVF-E6-Urn">
-                                <rect key="frame" x="31" y="59" width="70" height="25"/>
+                                <rect key="frame" x="20" y="59" width="71" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="JDQ-fL-jhv"/>
                                 </constraints>
@@ -911,7 +911,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gzE-34-kOD" customClass="MyButton" customModule="Saw_Grow" customModuleProvider="target">
-                                <rect key="frame" x="25" y="461.5" width="364" height="59"/>
+                                <rect key="frame" x="25" y="428.5" width="364" height="59"/>
                                 <color key="backgroundColor" name="Main_Theme_1"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="59" id="svO-6K-pgJ"/>
@@ -931,7 +931,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wH5-UD-vrA">
-                                <rect key="frame" x="31" y="287" width="358" height="25.5"/>
+                                <rect key="frame" x="31" y="259.5" width="358" height="20"/>
                                 <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="17"/>
                                 <color key="textColor" name="Text_Gray_2"/>
                                 <nil key="highlightedColor"/>
@@ -940,7 +940,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="N5B-H1-gUW" customClass="MyField" customModule="Saw_Grow" customModuleProvider="target">
-                                <rect key="frame" x="31" y="328.5" width="358" height="65"/>
+                                <rect key="frame" x="31" y="295.5" width="358" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="SNB-0w-B3k"/>
                                 </constraints>
@@ -979,7 +979,7 @@
                             <constraint firstAttribute="trailing" secondItem="B2X-vk-uwI" secondAttribute="trailing" constant="25" id="iZ3-kv-FnH"/>
                             <constraint firstItem="N5B-H1-gUW" firstAttribute="trailing" secondItem="B2X-vk-uwI" secondAttribute="trailing" id="j0L-bo-XYE"/>
                             <constraint firstItem="N5B-H1-gUW" firstAttribute="top" secondItem="wH5-UD-vrA" secondAttribute="bottom" constant="16" id="ocd-zF-jFJ"/>
-                            <constraint firstItem="VVF-E6-Urn" firstAttribute="leading" secondItem="SRd-p4-Rob" secondAttribute="leading" constant="31" id="okB-Fb-Chy"/>
+                            <constraint firstItem="VVF-E6-Urn" firstAttribute="leading" secondItem="SRd-p4-Rob" secondAttribute="leading" constant="20" id="okB-Fb-Chy"/>
                             <constraint firstItem="G6B-rA-ydT" firstAttribute="leading" secondItem="SRd-p4-Rob" secondAttribute="leading" constant="31" id="plw-Jw-Nb1"/>
                             <constraint firstItem="SRd-p4-Rob" firstAttribute="trailing" secondItem="wH5-UD-vrA" secondAttribute="trailing" constant="25" id="rbb-LA-CPz"/>
                             <constraint firstItem="VVF-E6-Urn" firstAttribute="top" secondItem="SRd-p4-Rob" secondAttribute="top" constant="11" id="spn-3h-J1V"/>
@@ -1044,7 +1044,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KFc-Uy-Euf">
-                                        <rect key="frame" x="189.5" y="120" width="35" height="34"/>
+                                        <rect key="frame" x="189" y="120" width="36" height="34"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="34" id="qfT-Yi-eN2"/>
                                         </constraints>
@@ -1125,7 +1125,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="คุณ ได้รับ 0 คะแนนจากการอ่าน Tutorial" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vwp-t2-8tM">
-                                <rect key="frame" x="77.5" y="729" width="259.5" height="24"/>
+                                <rect key="frame" x="76" y="734" width="262" height="19"/>
                                 <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="16"/>
                                 <color key="textColor" name="Text_Dark_Gray"/>
                                 <nil key="highlightedColor"/>
@@ -1137,16 +1137,16 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="tIq-Qv-FWq">
-                                <rect key="frame" x="167.5" y="258" width="79" height="138"/>
+                                <rect key="frame" x="166.5" y="273" width="81" height="108"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pV4-Ps-lG0">
-                                        <rect key="frame" x="0.0" y="0.0" width="79" height="105"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="81" height="82"/>
                                         <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="70"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Points" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c9X-7s-178">
-                                        <rect key="frame" x="6.5" y="105" width="66" height="33"/>
+                                        <rect key="frame" x="9.5" y="82" width="62" height="26"/>
                                         <fontDescription key="fontDescription" name="Kanit-Bold" family="Kanit" pointSize="22"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -1157,7 +1157,7 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ทุกกิจกรรมคือคะแนน" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vt0-Kt-fZ0">
-                                <rect key="frame" x="88" y="678.5" width="238" height="40.5"/>
+                                <rect key="frame" x="90" y="692.5" width="234" height="31.5"/>
                                 <fontDescription key="fontDescription" name="Kanit-Bold" family="Kanit" pointSize="27"/>
                                 <color key="textColor" name="Text_Dark_Gray"/>
                                 <nil key="highlightedColor"/>
@@ -1212,7 +1212,7 @@
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2EZ-ix-c41">
-                                        <rect key="frame" x="29" y="17.5" width="62" height="25"/>
+                                        <rect key="frame" x="20" y="17.5" width="62" height="25"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="b3t-tM-PDN"/>
                                         </constraints>
@@ -1243,8 +1243,8 @@
                                     <constraint firstItem="bhU-cw-O3M" firstAttribute="leading" secondItem="58h-AR-lPY" secondAttribute="leading" id="0wo-bA-UW5"/>
                                     <constraint firstItem="bhU-cw-O3M" firstAttribute="top" secondItem="58h-AR-lPY" secondAttribute="top" id="6ju-Uf-vr8"/>
                                     <constraint firstAttribute="bottom" secondItem="bhU-cw-O3M" secondAttribute="bottom" id="99h-lB-VBv"/>
-                                    <constraint firstItem="2EZ-ix-c41" firstAttribute="leading" secondItem="58h-AR-lPY" secondAttribute="leading" constant="29" id="IuJ-zO-Dwv"/>
-                                    <constraint firstItem="7pP-cV-LjK" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="2EZ-ix-c41" secondAttribute="trailing" constant="10" id="PhM-eR-e1d"/>
+                                    <constraint firstItem="2EZ-ix-c41" firstAttribute="leading" secondItem="58h-AR-lPY" secondAttribute="leading" constant="20" id="IuJ-zO-Dwv"/>
+                                    <constraint firstItem="7pP-cV-LjK" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="2EZ-ix-c41" secondAttribute="trailing" constant="5" id="PhM-eR-e1d"/>
                                     <constraint firstItem="7pP-cV-LjK" firstAttribute="centerX" secondItem="58h-AR-lPY" secondAttribute="centerX" id="Rmw-R0-ctq"/>
                                     <constraint firstItem="2EZ-ix-c41" firstAttribute="centerY" secondItem="58h-AR-lPY" secondAttribute="centerY" id="ijP-69-jJI"/>
                                     <constraint firstItem="7pP-cV-LjK" firstAttribute="centerY" secondItem="58h-AR-lPY" secondAttribute="centerY" id="ubr-us-Oxl"/>
@@ -1620,7 +1620,7 @@
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qfL-pn-qMm">
-                                        <rect key="frame" x="29" y="17.5" width="62" height="25"/>
+                                        <rect key="frame" x="20" y="17.5" width="63" height="25"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="dN8-r4-VUC"/>
                                         </constraints>
@@ -1638,7 +1638,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Privacy Policy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NFK-EM-D25">
-                                        <rect key="frame" x="142.5" y="15" width="129.5" height="30"/>
+                                        <rect key="frame" x="144.5" y="18.5" width="125.5" height="23.5"/>
                                         <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="20"/>
                                         <color key="textColor" name="Text_White"/>
                                         <nil key="highlightedColor"/>
@@ -1649,10 +1649,10 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="ai4-Bn-7bg" secondAttribute="trailing" id="6lA-th-B83"/>
-                                    <constraint firstItem="qfL-pn-qMm" firstAttribute="leading" secondItem="sEC-mp-rH2" secondAttribute="leading" constant="29" id="FL3-yE-SOf"/>
+                                    <constraint firstItem="qfL-pn-qMm" firstAttribute="leading" secondItem="sEC-mp-rH2" secondAttribute="leading" constant="20" id="FL3-yE-SOf"/>
                                     <constraint firstAttribute="bottom" secondItem="ai4-Bn-7bg" secondAttribute="bottom" id="W0i-52-TEg"/>
                                     <constraint firstItem="ai4-Bn-7bg" firstAttribute="top" secondItem="sEC-mp-rH2" secondAttribute="top" id="ZI0-Ne-LgK"/>
-                                    <constraint firstItem="NFK-EM-D25" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="qfL-pn-qMm" secondAttribute="trailing" constant="10" id="fcj-cR-PWp"/>
+                                    <constraint firstItem="NFK-EM-D25" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="qfL-pn-qMm" secondAttribute="trailing" constant="5" id="fcj-cR-PWp"/>
                                     <constraint firstItem="NFK-EM-D25" firstAttribute="centerY" secondItem="sEC-mp-rH2" secondAttribute="centerY" id="gsJ-Tb-BQs"/>
                                     <constraint firstItem="NFK-EM-D25" firstAttribute="centerX" secondItem="sEC-mp-rH2" secondAttribute="centerX" id="hoE-yq-enX"/>
                                     <constraint firstItem="ai4-Bn-7bg" firstAttribute="leading" secondItem="sEC-mp-rH2" secondAttribute="leading" id="lV0-De-X0M"/>
@@ -1669,25 +1669,25 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="364" height="3720"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="LeM-gV-0df">
-                                                        <rect key="frame" x="0.0" y="0.0" width="324" height="5400"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="324" height="4361"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="นโยบายความเป็นส่วนตัว และ คุ้มครองข้อมูลส่วนบุคคล" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WgY-WD-Shu">
-                                                                <rect key="frame" x="0.0" y="0.0" width="324" height="60"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="324" height="47"/>
                                                                 <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="20"/>
                                                                 <color key="textColor" name="Text_Dark_Gray"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="privacy_icon" translatesAutoresizingMaskIntoConstraints="NO" id="az8-JV-m16">
-                                                                <rect key="frame" x="0.0" y="75" width="324" height="189"/>
+                                                                <rect key="frame" x="0.0" y="62" width="324" height="189"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="189" id="aER-VI-sFl"/>
                                                                 </constraints>
                                                             </imageView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="rdq-ui-0T6">
-                                                                <rect key="frame" x="0.0" y="279" width="324" height="253"/>
+                                                                <rect key="frame" x="0.0" y="266" width="324" height="197"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2l0-pO-mVM">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="324" height="253"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="324" height="197"/>
                                                                         <string key="text">บริษัท ซอฟท์เค๊ก จำกัด  (สำนักงานใหญ่) ผู้ให้บริการ www.sawgrow.com ขอแนะนำให้ท่านทำความเข้าใจนโยบายส่วนบุคคล (privacy policy) นี้ เนื่องจาก นโยบายนี้อธิบายถึงวิธีการที่บริษัทปฏิบัติต่อข้อมูลส่วนบุคคลของท่าน เช่น การเก็บรวบรวม การจัดเก็บรักษา การใช้ การเปิดเผย รวมถึงสิทธิต่างๆ ของท่าน เป็นต้น เพื่อให้ท่านได้รับทราบถึงนโยบายในการคุ้มครองข้อมูลส่วนบุคคลของบริษัท บริษัท ตระหนักถึงความสำคัญของการปกป้องข้อมูลส่วนบุคคลของลูกค้า พนักงาน รวมตลอดถึงคู่ค้าของบริษัท ด้วยเหตุนี้บริษัทจึงได้จัดให้มีมาตรการในการเก็บรักษา และป้องกันตามมาตราฐานของกฎหมาย ข้อกำหนด และระเบียบเกี่ยวกับการคุ้มครองข้อมูลส่วนบุคคล อย่างเคร่งครัด ดังต่อไปนี้
 </string>
                                                                         <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="13"/>
@@ -1697,16 +1697,16 @@
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="zt8-mb-lXO">
-                                                                <rect key="frame" x="0.0" y="547" width="324" height="272.5"/>
+                                                                <rect key="frame" x="0.0" y="478" width="324" height="212.5"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1. คำนิยาม" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ap3-kW-weO">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="324" height="19.5"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="324" height="15.5"/>
                                                                         <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="13"/>
                                                                         <color key="textColor" name="Text_Dark_Gray"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="It7-JJ-g7n">
-                                                                        <rect key="frame" x="0.0" y="19.5" width="324" height="253"/>
+                                                                        <rect key="frame" x="0.0" y="15.5" width="324" height="197"/>
                                                                         <string key="text">“ข้อมูลส่วนบุคคล” หมายความว่า ข้อมูลเกี่ยวกับบุคคลซึ่งทำให้สามารถระบุตัวบุคคลนั้นได้ไม่ว่าทางตรงหรือทางอ้อม แต่ไม่รวมถึงข้อมูลของผู้ถึงแก่กรรมโดยเฉพาะ “ผู้ควบคุมข้อมูลส่วนบุคคล” หมายความว่า บุคคลหรือนิติบุคคลซึ่งทำให้มีอำนาจหน้าที่ตัดสินใจเกี่ยวกับการเก็บรวบรวม ใช้ หรือเปิดเผยข้อมูลส่วนบุคคล “ผู้ประมวลผลข้อมูลส่วนบุคคล” หมายความว่า บุคคลหรือนิติบุคคลซึ่งดำเนินการเกี่ยวกับรวบรวม ใช้ หรือเปิดเผยข้อมูลส่วนบุคคลตามคำสั่งหรือในนามของผู้ควบคุมข้อมูลส่วนบุคคล ทั้งนี้ บุคคลหรือนิติบุคคลซึ่งดำเนินการดังกล่าวไม่เป็นผู้ควบคุมข้อมูลส่วนบุคคล “เจ้าของข้อมูล” หมายความว่า ลูกค้า พนักงาน คู่ค้า ซึ่งเป็นบุคคลธรรมดา “บุคคล” หมายความว่า บุคคลธรรมดา
 </string>
                                                                         <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="13"/>
@@ -1716,16 +1716,16 @@
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="bbb-Ca-pNt">
-                                                                <rect key="frame" x="0.0" y="834.5" width="324" height="194.5"/>
+                                                                <rect key="frame" x="0.0" y="705.5" width="324" height="152"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2. วัตถุประสงค์ในการจัดทำนโยบายการคุ้มครองข้อมูลส่วนบุคคล" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QgP-Qu-Rsm">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="324" height="39"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="324" height="30.5"/>
                                                                         <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="13"/>
                                                                         <color key="textColor" name="Text_Dark_Gray"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oMB-y0-Xfm">
-                                                                        <rect key="frame" x="0.0" y="39" width="324" height="155.5"/>
+                                                                        <rect key="frame" x="0.0" y="30.5" width="324" height="121.5"/>
                                                                         <string key="text">บริษัทจัดทำนโยบายการคุ้มครองข้อมูลส่วนบุคคลเพื่อคุ้มครองข้อมูลของลูกค้า พนักงาน รวมตลอดถึง คู่ค้าของบริษัท ในการทำธุรกรรมต่าง ๆ กับบริษัท ให้มีความปลอดภัย น่าเชื่อถือ และเพื่อให้เจ้าของข้อมูลได้รับการคุ้มครองอย่างมีประสิทธิภาพและได้รับการป้องการการนำข้อมูลส่วนบุคคลของเจ้าของข้อมูลไปใช้โดยไม่ได้รับอนุญาต อีกทั้งเพื่อให้มีการเยียวยาเจ้าของข้อมูลส่วนบุคคตามกฎหมายที่เกี่ยวข้อง
 </string>
                                                                         <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="13"/>
@@ -1735,16 +1735,16 @@
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Ude-vD-E1Z">
-                                                                <rect key="frame" x="0.0" y="1044" width="324" height="875"/>
+                                                                <rect key="frame" x="0.0" y="872.5" width="324" height="697.5"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3. การเก็บข้อมูลส่วนบุคคลอย่างจำกัด" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4pP-Mg-kyq">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="324" height="19.5"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="324" height="15.5"/>
                                                                         <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="13"/>
                                                                         <color key="textColor" name="Text_Dark_Gray"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P46-tC-oDY">
-                                                                        <rect key="frame" x="0.0" y="19.5" width="324" height="855.5"/>
+                                                                        <rect key="frame" x="0.0" y="15.5" width="324" height="682"/>
                                                                         <string key="text">การจัดเก็บรวบรวมข้อมูลส่วนบุคคลจะกระทำโดยมี วัตถุประสงค์ ขอบเขต และใช้วิธีการที่ชอบด้วยกฎหมายและเป็นธรรม ในการเก็บรวบรวมและจัดเก็บข้อมูล ตลอดจนเก็บรวบรวม และจัดเก็บข้อมูลส่วนบุคคลอย่างจำกัดเพียงเท่าที่จำเป็นแก่การให้บริการ หรือบริการด้วยวิธีการทางอิเล็กทรอนิกส์อื่นใดภายใต้วัตถุประสงค์ของบริษัทเท่านั้น ทั้งนี้บริษัทจะดำเนินการให้เจ้าของข้อมูล รับรู้ ให้ความยินยอม ทางอิเล็กทรอนิกส์ ตามแบบวิธีการของบริษัท  บริษัท ได้เก็บรวบรวมข้อมูลของท่านผ่านทาง ข้อมูลที่ท่านแสดงและส่งมอบให้กับบริษัท  บริษัทอาจจัดเก็บข้อมูลส่วนบุคคลของท่านซึ่งเกี่ยวกับความสนใจและบริการที่ท่านใช้ ซึ่งอาจประกอบด้วยเรื่อง เชื้อชาติ ศาสนาหรือปรัชญา ข้อมูลสุขภาพของท่าน ข้อมูลชีวภาพ ทุพพลภาพ ความพิการ อัตลักษณ์ หรือข้อมูลอื่นใด ที่จะเป็นประโยชน์ในการให้บริการ ทั้งนี้ การดำเนินการดังกล่าวข้างต้น บริษัทจะขอความยินยอมจากท่านก่อนทำการเก็บรวบรวม เว้นแต่ 3.1. เป็นการปฏิบัติตามกฎหมาย เช่น พระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคล พระราชบัญญัติว่าด้วยธุรกรรมทางอิเล็กทรอนิกส์ พระราชบัญญัติการประกอบกิจการโทรคมนาคม พระราชบัญญัติป้องกันและปราบปรามการฟอกเงิน ประมวลกฎหมายแพ่งและอาญา ประมวลกฎหมายวิธีพิจารณาความแพ่งและอาญา เป็นต้น 3.2. เป็นไปเพื่อประโยชน์แก่การสอบสวนของพนักงานสอบสวน หรือการพิจารณาพิพากษาคดีของศาล 3.3. เพื่อประโยชน์ของท่าน และการขอความยินยอมไม่อาจกระทำได้ในเวลานั้น 3.4. เป็นการจำเป็นเพื่อประโยชน์โดยชอบด้วยกฎหมายของบริษัท หรือของบุคคลหรือนิติบุคคลอื่นที่ไม่ใช่บริษัท 3.5. เป็นการจำเป็นเพื่อป้องกันหรือระงับอันตรายต่อชีวิต ร่างกาย หรือสุขภาพของบุคคล 3.6. เป็นการจำเป็นเพื่อการปฏิบัติตามสัญญาซึ่งเจ้าของข้อมูลส่วนบุคคลเป็นคู่สัญญาหรือเพื่อใช้ในการดำเนินการตามคำขอของเจ้าของข้อมูลส่วนบุคคลก่อนเข้าทำสัญญานั้น 3.7. เพื่อให้บรรลุวัตถุประสงค์ที่เกี่ยวกับการจัดทำเอกสารประวัติศาสตร์หรือจดหมายเหตุ เพื่อประโยชน์สาธารณะ หรือเพื่อการศึกษา วิจัย การจัดทำสถิติ ซึ่งได้จัดให้มีมาตรการป้องกันที่เหมาะสม 3.8 ข้อมูลพฤติกรรมการใช้งาน จะถูกนำไปวิเคราะห์ความสามารถของ platform รวมถึงวางแผนการพัฒนา platform ในอนาคต โดยเป็นข้อมูลการใช้งานและไม่เกี่ยวข้องกับข้อมูลส่วนบุคคลใดๆทั้งสิ้น </string>
                                                                         <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="13"/>
                                                                         <color key="textColor" name="Text_Dark_Gray"/>
@@ -1753,16 +1753,16 @@
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xq4-h6-Zf2">
-                                                                <rect key="frame" x="0.0" y="1934" width="324" height="680.5"/>
+                                                                <rect key="frame" x="0.0" y="1585" width="324" height="561"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4. วัตถุประสงค์ในการเก็บรวบรวมข้อมูลส่วนบุคคล" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7I5-pw-6dK">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="324" height="19.5"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="324" height="15.5"/>
                                                                         <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="13"/>
                                                                         <color key="textColor" name="Text_Dark_Gray"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j7n-YC-auW">
-                                                                        <rect key="frame" x="0.0" y="19.5" width="324" height="661"/>
+                                                                        <rect key="frame" x="0.0" y="15.5" width="324" height="545.5"/>
                                                                         <string key="text">บริษัทจะดำเนินการจัดเก็บรวบรวม ใช้ ปรับปรุงและเปิดเผยข้อมูลส่วนบุคคลของผู้ให้ข้อมูลตามวัตถุประสงค์ ขอบเขต และตามวิธีการที่กฎหมายหมายกำหนด โดยจะจัดเก็บเพียงเท่าที่จำเป็นแก่การให้บริการ และการดำเนินงานของบริษัทเพื่อประโยชน์ของเจ้าของข้อมูลเป็นหลัก และการอื่น ๆตามกฎหมายเพื่อวัตถุประสงค์ ดังนี้  4.1) เพื่อใช้ในการประมวลผล บริหารจัดการ พิจารณา ให้บริการและการดำเนินงานต่าง ๆ ซึ่งเกี่ยวกับธุรกิจของบริษัทที่มีอยู่ในปัจจุบัน และอาจมีขึ้นในอนาคต และรวมถึงการใด ๆ เพื่อประโยชน์ของเจ้าของข้อมูล ตลอดจนนำไปใช้ในการจัดทำบัญชี งบการเงิน และข้อมูลทางบัญชีของบริษัท 4.2) เพื่อนำส่งข้อมูลส่วนบุคคลไปยังบริษัท ข้อมูลเครดิตแห่งชาติ จำกัด เพื่อใช้ในการขออนุมัติสินเชื่อ หรือหน่วยงานราชการอื่นใดที่เกี่ยวข้องเพื่อประโยชน์ในการใช้พิจารณาสินเชื่อให้กับผู้ให้ข้อมูล 4.3) เพื่อใช้ในการติดตามและเรียกเก็บค่างวดตามสัญญาเช่าซื้อ และหนี้สินอื่นใด (ถ้ามี) จากเจ้าของข้อมูล ซึ่งบริษัทมีสิทธิตามกฎหมาย 4.4) เพื่อใช้ในการแก้ไข ยกเลิก และ/หรือต่ออายุสัญญาเช่าซื้อ สัญญาจ้าง และสัญญาอื่นใดระหว่างเจ้าของข้อมูลกับบริษัท 4.5) เพื่อใช้เป็นข้อมูลในการวิเคราะห์ เสนอ ให้ใช้ เพื่อการวิจัยการตลาดและ/หรือการจัดกิจกรรมส่งเสริมการขาย และ/หรือเพื่อประโยชน์ในการจัดทำฐานข้อมูลและใช้ข้อมูลเพื่อเสนอสิทธิประโยชน์ตามความสนใจของ เจ้าของข้อมูล และ/หรือปรับปรุงการให้บริการ การดำเนินการ หรือผลิตภัณฑ์ของบริษัท 4.6) เพื่อปฏิบัติตามระเบียบ ประกาศ ข้อบังคับ รวมตลอดถึงข้อกำหนดอื่นใดซึ่งบริษัทมีหน้าที่ผูกพันในการปฏิบัติตามกฎหมาย 4.7) เพื่อการนำเสนอข้อมูล ติดตาม ประสานงาน และการให้บริการหลังการขายรวมตลอดถึงเพื่อการจัดทำบริการทางอิเล็คทรอนิกส์ 4.8) เพื่อดำเนินการอื่นใดที่เกี่ยวข้องเพื่อให้บรรลุวัตถุประสงค์ดังที่ได้กล่าวมาข้างต้น </string>
                                                                         <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="13"/>
                                                                         <color key="textColor" name="Text_Dark_Gray"/>
@@ -1771,16 +1771,16 @@
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="qsL-aA-nto">
-                                                                <rect key="frame" x="0.0" y="2629.5" width="324" height="467"/>
+                                                                <rect key="frame" x="0.0" y="2161" width="324" height="364"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5. ข้อจำกัดในการใช้ข้อมูลส่วนบุคคล" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XKf-tF-UZS">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="324" height="19.5"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="324" height="15.5"/>
                                                                         <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="13"/>
                                                                         <color key="textColor" name="Text_Dark_Gray"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8gi-q5-rpa">
-                                                                        <rect key="frame" x="0.0" y="19.5" width="324" height="447.5"/>
+                                                                        <rect key="frame" x="0.0" y="15.5" width="324" height="348.5"/>
                                                                         <string key="text">บริษัทจะทำการเก็บข้อมูลส่วนบุคคลตามมาตรฐานที่กฎหมายกำหนดและจะไม่ทำการใช้หรือเปิด เผยข้อมูลดังกล่าวต่อบุคคลภายนอกโดยไม่ได้รับความยินยอมของเจ้าของข้อมูล เว้นแต่เพื่อปฏิบัติตามวัตถุประสงค์ที่ระบุไว้ข้างต้น หรือตามที่กฎหมายกำหนดให้ต้องทำการเปิดเผย โดยจะเปิดเผยข้อมูลส่วนบุคคลให้กับหน่วยงานหรือบุคคลที่เกี่ยวข้องดังนี้  5.1) กลุ่มธุรกิจ พันธมิตรทางธุรกิจ ของบริษัท รวมตลอดถึงหน่วยงานของรัฐที่เกี่ยวข้อง ในการให้บริการในการประมวลผล บริหารจัดการ พิจารณา ให้บริการและการดำเนินงานต่าง ๆ ที่เจ้าของข้อมูลได้รับและอาจได้รับในอนาคต 5.2) บริษัท ข้อมูลเครดิตแห่งชาติ จำกัด รวมตลอดถึงบริษัทในเครือกิจการหรือเครือธุรกิจเดียวกัน หรือหน่วยงานอื่นที่เกี่ยวข้อง 5.3) พนักงาน ผู้รับมอบอำนาจ ตัวแทน บุคคลหรือนิติบุคคลผู้ให้บริการการรับจดทะเบียนยานพาหนะ และ/หรือบริการด้านการเร่งรัดหนี้สิน และ/หรือผู้ตรวจสอบบัญชีของบริษัท และ/หรือบริการและการดำเนินงานต่าง ๆ ซึ่งเกี่ยวกับธุรกิจของบริษัทที่มีอยู่ในปัจจุบันและอาจมีขึ้นในอนาคต 5.4) พนักงาน ผู้รับมอบอำนาจ ตัวแทน บุคคล นิติบุคคลหรือหน่วยงานอื่นใด เพื่อปฏิบัติตามข้อกำหนดของกฎหมายหรือก่อตั้งสิทธิตามสัญญาของบริษัท </string>
                                                                         <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="13"/>
                                                                         <color key="textColor" name="Text_Dark_Gray"/>
@@ -1789,16 +1789,16 @@
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="lWp-Y0-X4t">
-                                                                <rect key="frame" x="0.0" y="3111.5" width="324" height="583.5"/>
+                                                                <rect key="frame" x="0.0" y="2540" width="324" height="455"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6. สิทธิของเจ้าของข้อมูลส่วนบุคคล" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lmj-vV-hKy">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="324" height="19.5"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="324" height="15.5"/>
                                                                         <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="13"/>
                                                                         <color key="textColor" name="Text_Dark_Gray"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3wK-cE-GKr">
-                                                                        <rect key="frame" x="0.0" y="19.5" width="324" height="564"/>
+                                                                        <rect key="frame" x="0.0" y="15.5" width="324" height="439.5"/>
                                                                         <string key="text">บริษัทให้ความสำคัญกับสิทธิของเจ้าของข้อมูลส่วนบุคคล จึงได้กำหนดสิทธิของเจ้าของข้อมูลในการดำเนินการกับข้อมูลส่วนบุคคลของตนซึ่งบริษัทเก็บรวบรวมไว้เพื่อให้สอดคล้องกับกฎหมาย ดังนี้  6.1) ขอเข้าถึงและขอรับสำเนาข้อมูลส่วนบุคคลที่เกี่ยวกับตน ซึ่งอยู่ในความรับผิดชอบของบริษัทได้ตามหลักเกณฑ์และวิธีการที่บริษัทกำหนด หรือขอให้เปิดเผยถึงการได้มาซึ่งข้อมูลส่วนบุคคลดังกล่าวที่ตนไม่ได้ให้ความยินยอม 6.2) ขอรับข้อมูลส่วนบุคคลที่เกี่ยวกับตนจากบริษัทได้ ในกรณีที่บริษัทได้ทำให้ข้อมูลส่วนบุคคลนั้นอยู่ในรูปแบบที่สามารถอ่านหรือใช้งานโดยทั่วไปได้ด้วยเครื่องมือหรืออุปกรณ์ที่ทำงานได้โดยอัตโนมัติ และสามารถใช้หรือเปิดเผยข้อมูลส่วนบุคคลได้ด้วยวิธีการอัตโนมัติ 6.3) คัดค้านการเก็บรวบรวม ใช้ หรือเปิดเผยข้อมูลส่วนบุคคลที่เกี่ยวกับตน ที่กฎหมายอนุญาตให้เก็บได้โดยไม่ต้องได้รับความยินยอมจากผู้ให้ข้อมูล เมื่อใดก็ได้ 6.4) ขอให้บริษัทลบหรือทำลาย หรือทำให้ข้อมูลส่วนบุคคลเป็นข้อมูลที่ไม่สามารถระบุตัวบุคคลที่เป็นเจ้าของข้อมูลส่วนบุคคลได้ ในกรณีตามที่กฎหมายกำหนด 6.5) ขอให้บริษัทระงับการใช้ข้อมูลส่วนบุคคลได้ ในกรณีตามที่กฎหมายกำหนด 6.6) แจ้งให้บริษัทดำเนินการให้ข้อมูลส่วนบุคคลนั้นถูกต้องเป็นปัจจุบัน สมบูรณ์ และไม่ก่อให้เกิดความเข้าใจผิด 6.7) ร้องเรียนในกรณีที่ผู้ควบคุมข้อมูลส่วนบุคคลหรือผู้ประมวลผลข้อมูลส่วนบุคคล รวมทั้งลูกจ้างหรือผู้รับจ้างของผู้ควบคุมข้อมูลส่วนบุคคลหรือผู้ประมวลผลข้อมูลส่วนบุคคล ฝ่าฝืนหรือ ไม่ปฏิบัติตามกฎหมายคุ้มครองข้อมูลส่วนบุคคล </string>
                                                                         <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="13"/>
                                                                         <color key="textColor" name="Text_Dark_Gray"/>
@@ -1807,16 +1807,16 @@
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Rhq-rg-cLu">
-                                                                <rect key="frame" x="0.0" y="3710" width="324" height="233.5"/>
+                                                                <rect key="frame" x="0.0" y="3010" width="324" height="182.5"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7. การเพิกถอนความยินยอม" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sp1-4j-DRN">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="324" height="19.5"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="324" height="15.5"/>
                                                                         <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="13"/>
                                                                         <color key="textColor" name="Text_Dark_Gray"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xdR-Lt-oHP">
-                                                                        <rect key="frame" x="0.0" y="19.5" width="324" height="214"/>
+                                                                        <rect key="frame" x="0.0" y="15.5" width="324" height="167"/>
                                                                         <string key="text">เจ้าของข้อมูลสามารถเพิกถอนความยินยอมที่ได้ให้ไว้กับบริษัทในการเก็บรวบรวม ใช้ หรือเปิดเผยข้อมูลส่วนบุคคลดังกล่าวข้างต้นเสียเมื่อใดก็ได้ ด้วยการแจ้งความประสงค์ให้บริษัททราบพร้อมทั้งเหตุผลแห่งการนั้น โดยบริษัทจะดำเนินการตามที่ได้รับแจ้งเว้นแต่กรณีมีข้อจำกัดสิทธิในการถอนความยินยอมโดยกฎหมายหรือสัญญาที่ให้ประโยชน์แก่ เจ้าของข้อมูล ทั้งนี้ การเพิกถอนความยินยอมของเจ้าของข้อมูลส่วนบุคคล จะไม่ส่งผลกระทบต่อการเก็บรวบรวมใช้ หรือเปิดเผยข้อมูลส่วนบุคคล ที่เจ้าของข้อมูลส่วนบุคคลได้ให้ความยินยอมไปแล้วก่อนหน้านั้น </string>
                                                                         <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="13"/>
                                                                         <color key="textColor" name="Text_Dark_Gray"/>
@@ -1825,16 +1825,16 @@
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Hs2-qH-WTK">
-                                                                <rect key="frame" x="0.0" y="3958.5" width="324" height="525"/>
+                                                                <rect key="frame" x="0.0" y="3207.5" width="324" height="424.5"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8. การปฏิเสธและการจัดทำบันทึก" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EAI-O3-ghj">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="324" height="19.5"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="324" height="15.5"/>
                                                                         <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="13"/>
                                                                         <color key="textColor" name="Text_Dark_Gray"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RQV-cX-nNZ">
-                                                                        <rect key="frame" x="0.0" y="19.5" width="324" height="505.5"/>
+                                                                        <rect key="frame" x="0.0" y="15.5" width="324" height="409"/>
                                                                         <string key="text">ในกรณีที่เจ้าของข้อมูลร้องขอให้บริษัทดำเนินการตามที่ระบุไว้ในข้อ 6.1-6.7 หรือ ข้อ 7 บริษัทจะดำเนินการตามที่ได้รับคำร้องขอภายในเวลาที่เหมาะสมและตามขั้นตอนการปฏิบัติของบริษัท เว้นแต่ในกรณีดังนี้ บริษัทอาจปฏิเสธการดำเนินการดังกล่าวได้  8.1) โดยสภาพแล้วไม่อาจดำเนินการดังกล่าวได้ 8.2) เป็นการปฏิเสธตามกฎหมายหรือตามคำสั่งศาล และการเข้าถึงและขอรับสำเนาข้อมูลส่วนบุคคลนั้นจะส่งผลกระทบที่อาจก่อให้เกิดความเสียหาต่อสิทธิและเสรีภาพบุคคลอื่น 8.3) การส่งหรือการโอนข้อมูลส่วนบุคคลนั้นเป็นการปฏิบัติหน้าที่เพื่อประโยชน์สาธารณะหรือเป็นการปฏิบัติหน้าที่ตามกฎหมาย หรือการใช้สิทธิดังกล่าวอาจเป็นการละเมิดสิทธิหรือเสรีภาพของบุคคลอื่น 8.4) การเก็บรวบรวม ใช้ หรือเปิดเผยข้อมูลส่วนบุคคลนั้น ผู้ควบคุมข้อมูลส่วนบุคคลได้แสดงให้เห็นถึงเหตุอันชอบด้วยกฎหมายที่สำคัญยิ่งกว่า 8.5) การเก็บรวบรวม ใช้ หรือเปิดเผยข้อมูลส่วนบุคคลนั้นเป็นไปเพื่อก่อตั้งสิทธิเรียกร้องตามกฎหมายการปฏิบัติตามหรือการใช้สิทธิเรียกร้องตามกฎหมาย หรือการยกขึ้นต่อสู้สิทธิเรียกร้องตามกฎหมายในกรณีที่บริษัทปฏิเสธไม่ดำเนินการตามคำร้องขอของเจ้าของข้อมูลให้ดำเนินการอย่างใดอย่างหนึ่งตามข้อ 7.1-7.8 หรือ ข้อ 8 นั้น บริษัทจะจัดทำรายงานการบันทึกการปฏิเสธพร้อมเหตุผลแห่งการปฏิเสธจัดเก็บไว้ในฝ่าย แผนก หรือหน่วยงานอื่นใดภายในบริษัทซึ่งปฏิเสธคำร้องขอของเจ้าของข้อมูล </string>
                                                                         <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="13"/>
                                                                         <color key="textColor" name="Text_Dark_Gray"/>
@@ -1843,16 +1843,16 @@
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="roI-sI-WKF">
-                                                                <rect key="frame" x="0.0" y="4498.5" width="324" height="292"/>
+                                                                <rect key="frame" x="0.0" y="3647" width="324" height="228"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9. มาตรการรักษาความมั่นคงปลอดภัยและคุณภาพของข้อมูล" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ffz-hX-P0a">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="324" height="19.5"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="324" height="15.5"/>
                                                                         <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="13"/>
                                                                         <color key="textColor" name="Text_Dark_Gray"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3zN-AS-ci5">
-                                                                        <rect key="frame" x="0.0" y="19.5" width="324" height="272.5"/>
+                                                                        <rect key="frame" x="0.0" y="15.5" width="324" height="212.5"/>
                                                                         <string key="text">บริษัทตระหนักถึงความสำคัญของการรักษาความมั่นคงปลอดภัยของข้อมูลส่วนบุคคลของท่าน บริษัทจึงกำหนดให้มีมาตรการในการรักษาความมั่นคงปลอดภัยของข้อมูลส่วนบุคคลอย่างเหมาะสมและสอดคล้องกับการรักษาความลับของข้อมูลส่วนบุคคลเพื่อป้องกันการสูญหาย การเข้าถึง ทำลาย ใช้ แปลง แก้ไขหรือเปิดเผยข้อมูลส่วนบุคคลโดยไม่มีสิทธิหรือโดยไม่ชอบด้วยกฎหมาย ตลอดจนการป้องกันมิให้มีการนำข้อมูลส่วนบุคคลไปใช้โดยมิได้รับอนุญาต นอกจากนี้คณะกรรมการของบริษัทยังได้จัดทำนโยบาย ระเบียบปฏิบัติ คู่มือ แนวทางและอบรมให้ความรู้ ในการเก็บรักษา ใช้ และเปิดเผยข้อมูลส่วนบุคคล เพื่อให้พนักงานของบริษัทในทุกระดับชั้นดำเนินการเก็บรักษา ใช้ และ เปิดเผยข้อมูลส่วนบุคคลปฏิบัติตามมาตราฐานของบริษัทและสอดคล้องกับกฎหมายที่เกี่ยวข้อง </string>
                                                                         <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="13"/>
                                                                         <color key="textColor" name="Text_Dark_Gray"/>
@@ -1861,16 +1861,16 @@
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Zrh-dS-H1f">
-                                                                <rect key="frame" x="0.0" y="4805.5" width="324" height="272.5"/>
+                                                                <rect key="frame" x="0.0" y="3890" width="324" height="212.5"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10. เจ้าหน้าที่คุ้มครองข้อมูลส่วนบุคคล" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N8u-T6-xrZ">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="324" height="19.5"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="324" height="15.5"/>
                                                                         <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="13"/>
                                                                         <color key="textColor" name="Text_Dark_Gray"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gXW-NG-vfw">
-                                                                        <rect key="frame" x="0.0" y="19.5" width="324" height="253"/>
+                                                                        <rect key="frame" x="0.0" y="15.5" width="324" height="197"/>
                                                                         <string key="text">บริษัทได้มีการดำเนินการปฏิบัติตามพระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคล พ.ศ. 2562 โดยแต่งตั้งเจ้าหน้าที่คุ้มครองข้อมูลส่วนบุคคล (Data Protection Officer : DPO) เพื่อตรวจสอบการดำเนินการของบริษัทที่เกี่ยวกับการเก็บรวบรวม ใช้และเปิดเผยข้อมูลส่วนบุคคลให้สอดคล้องกับพระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคล พ.ศ. 2562 รวมถึงกฎหมายที่เกี่ยวข้องกับการคุ้มครองข้อมูลส่วนบุคคล นอกจากนี้ บริษัทได้จัดทำระเบียบ คำสั่งให้ผู้เกี่ยวข้องดำเนินการตามที่กำหนดไว้ เพื่อให้การดำเนินงานตามแนวนโยบายเกี่ยวกับการคุ้มครองข้อมูลส่วนบุคคลให้เป็นไปด้วยความเรียบร้อย อีกทั้ง ยังเป็นไปตามนโยบายของคณะกรรมการกำกับการบริหารข้อมูลส่วนบุคคลและความมั่นคงปลอดภัยไซเบอร์ของบริษัทที่กำหนด </string>
                                                                         <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="13"/>
                                                                         <color key="textColor" name="Text_Dark_Gray"/>
@@ -1879,16 +1879,16 @@
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="JL2-WG-iCq">
-                                                                <rect key="frame" x="0.0" y="5093" width="324" height="194.5"/>
+                                                                <rect key="frame" x="0.0" y="4117.5" width="324" height="152"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11. ระยะเวลาการเก็บและการทำลายข้อมูลส่วนบุคคล" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Kz-Eq-PGu">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="324" height="19.5"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="324" height="15.5"/>
                                                                         <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="13"/>
                                                                         <color key="textColor" name="Text_Dark_Gray"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v2k-IX-EM7">
-                                                                        <rect key="frame" x="0.0" y="19.5" width="324" height="175"/>
+                                                                        <rect key="frame" x="0.0" y="15.5" width="324" height="136.5"/>
                                                                         <string key="text">บริษัทจะจัดเก็บรักษาข้อมูลตามที่ได้รับจากเจ้าของข้อมูลตามระยะเวลาเท่าที่จำเป็นในการดำเนินการตามวัตถุประสงค์ดังที่ได้กล่าวมาข้างต้นเท่านั้น เว้นแต่ในกรณีที่มีกฎหมายกำหนดไว้โดยเฉพาะให้เก็บไว้ได้นานกว่านั้น หรือ เป็นการจำเป็นเพื่อการก่อตั้งสิทธิเรียกร้องตามกฎหมาย การปฏิบัติตามหรือการใช้สิทธิเรียกร้องตามกฎหมาย หรือการยกขึ้นต่อสู้ซึ่งสิทธิเรียกร้องตามกฎหมาย หรือเพื่อดำเนินการตามสัญญาซึ่งบริษัทมีสิทธิตามกฎหมาย </string>
                                                                         <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="13"/>
                                                                         <color key="textColor" name="Text_Dark_Gray"/>
@@ -1897,16 +1897,16 @@
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="9Kv-rX-gDF">
-                                                                <rect key="frame" x="0.0" y="5302.5" width="324" height="97.5"/>
+                                                                <rect key="frame" x="0.0" y="4284.5" width="324" height="76.5"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12. ช่องทางการติดต่อบริษัท" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xyE-Yp-9fb">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="324" height="19.5"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="324" height="15.5"/>
                                                                         <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="13"/>
                                                                         <color key="textColor" name="Text_Dark_Gray"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wCd-Ca-bJU">
-                                                                        <rect key="frame" x="0.0" y="19.5" width="324" height="78"/>
+                                                                        <rect key="frame" x="0.0" y="15.5" width="324" height="61"/>
                                                                         <string key="text">บริษัท ซอฟท์เค๊ก จำกัด  (สำนักงานใหญ่)   เลขที่ 290/112 หมู่ที่11 ถนนสวนผัก แขวงตลิ่งชัน เขตตลิ่งชัน กรุงเทพมหานคร 10170 Email: sawhr@gmail.com</string>
                                                                         <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="13"/>
                                                                         <color key="textColor" name="Text_Dark_Gray"/>
@@ -2029,73 +2029,73 @@
     </scenes>
     <designables>
         <designable name="2aa-2j-uXD">
-            <size key="intrinsicContentSize" width="7" height="34.5"/>
+            <size key="intrinsicContentSize" width="8" height="34.5"/>
         </designable>
         <designable name="3Gb-9f-6FG">
-            <size key="intrinsicContentSize" width="7" height="34.5"/>
+            <size key="intrinsicContentSize" width="8" height="34.5"/>
         </designable>
         <designable name="4i0-su-olO">
             <size key="intrinsicContentSize" width="113" height="100"/>
         </designable>
         <designable name="8uQ-Tb-3MQ">
-            <size key="intrinsicContentSize" width="42" height="42"/>
+            <size key="intrinsicContentSize" width="42" height="36"/>
         </designable>
         <designable name="9Eb-AN-Dvy">
-            <size key="intrinsicContentSize" width="7" height="34.5"/>
+            <size key="intrinsicContentSize" width="8" height="34.5"/>
         </designable>
         <designable name="AjV-ZW-5Jx">
-            <size key="intrinsicContentSize" width="7" height="34.5"/>
+            <size key="intrinsicContentSize" width="8" height="34.5"/>
         </designable>
         <designable name="Igd-5p-t2F">
-            <size key="intrinsicContentSize" width="72" height="42"/>
+            <size key="intrinsicContentSize" width="72" height="36"/>
         </designable>
         <designable name="Lde-oH-nj3">
-            <size key="intrinsicContentSize" width="42" height="42"/>
+            <size key="intrinsicContentSize" width="42" height="36"/>
         </designable>
         <designable name="N5B-H1-gUW">
-            <size key="intrinsicContentSize" width="60.5" height="31.5"/>
+            <size key="intrinsicContentSize" width="59" height="25"/>
         </designable>
         <designable name="SL1-eB-9j3">
-            <size key="intrinsicContentSize" width="60.5" height="31.5"/>
+            <size key="intrinsicContentSize" width="59" height="25"/>
         </designable>
         <designable name="WAc-bg-4xR">
-            <size key="intrinsicContentSize" width="13" height="59"/>
+            <size key="intrinsicContentSize" width="14" height="59"/>
         </designable>
         <designable name="WSV-0w-3bT">
-            <size key="intrinsicContentSize" width="94" height="30"/>
+            <size key="intrinsicContentSize" width="98.5" height="24"/>
         </designable>
         <designable name="Zuz-ae-l4M">
-            <size key="intrinsicContentSize" width="7" height="34.5"/>
+            <size key="intrinsicContentSize" width="8" height="34.5"/>
         </designable>
         <designable name="daj-7J-7OJ">
-            <size key="intrinsicContentSize" width="7" height="34.5"/>
+            <size key="intrinsicContentSize" width="8" height="34.5"/>
         </designable>
         <designable name="e8N-4W-Ffc">
-            <size key="intrinsicContentSize" width="61" height="42"/>
+            <size key="intrinsicContentSize" width="62" height="36"/>
         </designable>
         <designable name="gzE-34-kOD">
-            <size key="intrinsicContentSize" width="46" height="42"/>
+            <size key="intrinsicContentSize" width="47" height="36"/>
         </designable>
         <designable name="oQL-a7-337">
-            <size key="intrinsicContentSize" width="13" height="59"/>
+            <size key="intrinsicContentSize" width="14" height="59"/>
         </designable>
         <designable name="pp8-Vv-HxQ">
-            <size key="intrinsicContentSize" width="7" height="34.5"/>
+            <size key="intrinsicContentSize" width="8" height="34.5"/>
         </designable>
         <designable name="sfy-dX-93T">
-            <size key="intrinsicContentSize" width="13" height="59"/>
+            <size key="intrinsicContentSize" width="14" height="59"/>
         </designable>
         <designable name="uLS-qJ-I9o">
-            <size key="intrinsicContentSize" width="7" height="34.5"/>
+            <size key="intrinsicContentSize" width="8" height="34.5"/>
         </designable>
         <designable name="wJb-xi-zsF">
-            <size key="intrinsicContentSize" width="63" height="36"/>
+            <size key="intrinsicContentSize" width="64" height="36"/>
         </designable>
         <designable name="wOW-cf-UHB">
-            <size key="intrinsicContentSize" width="123" height="42"/>
+            <size key="intrinsicContentSize" width="122" height="36"/>
         </designable>
         <designable name="xcE-j2-sxu">
-            <size key="intrinsicContentSize" width="13" height="59"/>
+            <size key="intrinsicContentSize" width="14" height="59"/>
         </designable>
     </designables>
     <resources>

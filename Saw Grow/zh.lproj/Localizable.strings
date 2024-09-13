@@ -279,7 +279,7 @@
 "APPROVE_OT_Header" = "批准延迟请求";
 "APPROVE_EDOC_Header" = "批准文件请求";
 "APPROVE_SWAP_Header" = "批准交换班请求";
-"APPROVE_REIMBURSE_Header" = "批准提款请求";
+"APPROVE_REIMBURSE_Header" = "批准报销标题";
 "APPROVE_Tab_1" = "请求";
 "APPROVE_Tab_2" = "历史";
 "APPROVE_Approve" = "批准";
@@ -426,8 +426,8 @@
 "WARNING_DETAIL_Confirm" = "确认接受警告";
 
 //REIMBURSE
-"REIMBURSE_Confirm" = "确认提交报销申请";
-"REIMBURSE_REQUEST_Type_Field" = "选择报销类型";
+"REIMBURSE_Confirm" = "确认报销";
+"REIMBURSE_REQUEST_Type_Field" = "报销请求类型";
 "REIMBURSE_REQUEST_Amount_Field" = "输入金额";
 "REIMBURSE_DETAIL_Amount_Field" = "金额";
 

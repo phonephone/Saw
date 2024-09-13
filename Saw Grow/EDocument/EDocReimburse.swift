@@ -84,7 +84,7 @@ class EDocReimburse: UIViewController, UITextFieldDelegate, UITextViewDelegate {
                 
             case .success(let responseObject):
                 let json = JSON(responseObject)
-                //print("SUCCESS LEAVE\(json)")
+                print("SUCCESS TYPE\(json)")
                 
                 self.reimburseJSON = json["data"][0]["reimbursetypes"]
                 

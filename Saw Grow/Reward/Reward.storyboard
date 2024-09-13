@@ -46,7 +46,7 @@
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4aa-HR-IHl">
-                                        <rect key="frame" x="29" y="17.5" width="62" height="25"/>
+                                        <rect key="frame" x="20" y="17.5" width="63" height="25"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="e9O-Jv-yV0"/>
                                         </constraints>
@@ -64,7 +64,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reward" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ETO-0b-13e">
-                                        <rect key="frame" x="174" y="15" width="66.5" height="30"/>
+                                        <rect key="frame" x="173" y="18.5" width="68.5" height="23.5"/>
                                         <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="20"/>
                                         <color key="textColor" name="Text_White"/>
                                         <nil key="highlightedColor"/>
@@ -78,8 +78,8 @@
                                     <constraint firstItem="ETO-0b-13e" firstAttribute="centerY" secondItem="4aa-HR-IHl" secondAttribute="centerY" id="Dg9-ay-gVR"/>
                                     <constraint firstAttribute="trailing" secondItem="kdy-1n-EyQ" secondAttribute="trailing" id="MU3-II-Eg6"/>
                                     <constraint firstItem="kdy-1n-EyQ" firstAttribute="top" secondItem="hey-Bg-gTk" secondAttribute="top" id="PfJ-kr-uIf"/>
-                                    <constraint firstItem="ETO-0b-13e" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="4aa-HR-IHl" secondAttribute="trailing" constant="10" id="R46-wb-2ab"/>
-                                    <constraint firstItem="4aa-HR-IHl" firstAttribute="leading" secondItem="hey-Bg-gTk" secondAttribute="leading" constant="29" id="SLY-R3-mwM"/>
+                                    <constraint firstItem="ETO-0b-13e" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="4aa-HR-IHl" secondAttribute="trailing" constant="5" id="R46-wb-2ab"/>
+                                    <constraint firstItem="4aa-HR-IHl" firstAttribute="leading" secondItem="hey-Bg-gTk" secondAttribute="leading" constant="20" id="SLY-R3-mwM"/>
                                     <constraint firstItem="4aa-HR-IHl" firstAttribute="centerY" secondItem="hey-Bg-gTk" secondAttribute="centerY" id="THk-yy-tJ8"/>
                                     <constraint firstItem="kdy-1n-EyQ" firstAttribute="leading" secondItem="hey-Bg-gTk" secondAttribute="leading" id="nSr-xd-z1K"/>
                                     <constraint firstItem="ETO-0b-13e" firstAttribute="centerX" secondItem="hey-Bg-gTk" secondAttribute="centerX" id="ngC-ql-PLL"/>
@@ -399,7 +399,7 @@
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OFZ-5G-7TR">
-                                        <rect key="frame" x="29" y="17.5" width="62" height="25"/>
+                                        <rect key="frame" x="20" y="17.5" width="63" height="25"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="IPh-WS-pft"/>
                                         </constraints>
@@ -417,7 +417,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reward Detail" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h8l-iC-B3u">
-                                        <rect key="frame" x="144.5" y="15" width="125" height="30"/>
+                                        <rect key="frame" x="144.5" y="18.5" width="125" height="23.5"/>
                                         <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="20"/>
                                         <color key="textColor" name="Text_White"/>
                                         <nil key="highlightedColor"/>
@@ -426,10 +426,10 @@
                                 <constraints>
                                     <constraint firstItem="OFZ-5G-7TR" firstAttribute="centerY" secondItem="Cdn-7Q-L9Z" secondAttribute="centerY" id="DEs-B6-1vX"/>
                                     <constraint firstAttribute="bottom" secondItem="HV1-QD-hEs" secondAttribute="bottom" id="VbI-zL-fsh"/>
-                                    <constraint firstItem="h8l-iC-B3u" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="OFZ-5G-7TR" secondAttribute="trailing" constant="10" id="aw3-p9-KGS"/>
+                                    <constraint firstItem="h8l-iC-B3u" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="OFZ-5G-7TR" secondAttribute="trailing" constant="5" id="aw3-p9-KGS"/>
                                     <constraint firstItem="HV1-QD-hEs" firstAttribute="top" secondItem="Cdn-7Q-L9Z" secondAttribute="top" id="bJ5-1B-11Z"/>
                                     <constraint firstAttribute="trailing" secondItem="HV1-QD-hEs" secondAttribute="trailing" id="gSJ-XA-Q5q"/>
-                                    <constraint firstItem="OFZ-5G-7TR" firstAttribute="leading" secondItem="Cdn-7Q-L9Z" secondAttribute="leading" constant="29" id="gve-VN-E7n"/>
+                                    <constraint firstItem="OFZ-5G-7TR" firstAttribute="leading" secondItem="Cdn-7Q-L9Z" secondAttribute="leading" constant="20" id="gve-VN-E7n"/>
                                     <constraint firstItem="h8l-iC-B3u" firstAttribute="centerY" secondItem="OFZ-5G-7TR" secondAttribute="centerY" id="peb-tC-0Zf"/>
                                     <constraint firstItem="HV1-QD-hEs" firstAttribute="leading" secondItem="Cdn-7Q-L9Z" secondAttribute="leading" id="v97-zC-FOp"/>
                                     <constraint firstItem="h8l-iC-B3u" firstAttribute="centerX" secondItem="Cdn-7Q-L9Z" secondAttribute="centerX" id="vPE-q2-Lio"/>
@@ -605,7 +605,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xue-gA-S3j">
-                                        <rect key="frame" x="29" y="20" width="62" height="25"/>
+                                        <rect key="frame" x="20" y="20" width="63" height="25"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="kGJ-7n-EX8"/>
                                         </constraints>
@@ -623,7 +623,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Coupon" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BLQ-I8-C2g">
-                                        <rect key="frame" x="156" y="17.5" width="102.5" height="30"/>
+                                        <rect key="frame" x="155" y="21" width="104.5" height="23.5"/>
                                         <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="20"/>
                                         <color key="textColor" name="Text_White"/>
                                         <nil key="highlightedColor"/>
@@ -636,9 +636,10 @@
                                     <constraint firstAttribute="bottom" secondItem="jmS-6L-3Hl" secondAttribute="bottom" constant="15" id="8td-i2-cW2"/>
                                     <constraint firstAttribute="bottom" secondItem="bA3-E2-FaK" secondAttribute="bottom" id="BHg-qQ-3Q3"/>
                                     <constraint firstItem="Xue-gA-S3j" firstAttribute="top" secondItem="ipS-3r-9Ys" secondAttribute="top" constant="20" id="Ed2-vD-JnX"/>
-                                    <constraint firstItem="Xue-gA-S3j" firstAttribute="leading" secondItem="ipS-3r-9Ys" secondAttribute="leading" constant="29" id="QnO-Hi-FQp"/>
+                                    <constraint firstItem="Xue-gA-S3j" firstAttribute="leading" secondItem="ipS-3r-9Ys" secondAttribute="leading" constant="20" id="QnO-Hi-FQp"/>
                                     <constraint firstItem="jmS-6L-3Hl" firstAttribute="leading" secondItem="ipS-3r-9Ys" secondAttribute="leading" constant="29" id="Urd-uD-NV0"/>
                                     <constraint firstItem="jmS-6L-3Hl" firstAttribute="top" secondItem="Xue-gA-S3j" secondAttribute="bottom" constant="15" id="WYZ-ft-DRJ"/>
+                                    <constraint firstItem="BLQ-I8-C2g" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Xue-gA-S3j" secondAttribute="trailing" constant="5" id="bep-HK-0a2"/>
                                     <constraint firstAttribute="trailing" secondItem="bA3-E2-FaK" secondAttribute="trailing" id="fd6-i5-67N"/>
                                     <constraint firstAttribute="trailing" secondItem="jmS-6L-3Hl" secondAttribute="trailing" constant="29" id="pK3-fa-twv"/>
                                     <constraint firstItem="bA3-E2-FaK" firstAttribute="leading" secondItem="ipS-3r-9Ys" secondAttribute="leading" id="rux-cK-5BO"/>
@@ -949,7 +950,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="125"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1j9-Bq-5yY">
-                                        <rect key="frame" x="29" y="20" width="62" height="25"/>
+                                        <rect key="frame" x="20" y="20" width="62" height="25"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="Oz2-FS-P4N"/>
                                         </constraints>
@@ -1012,12 +1013,12 @@
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="xjh-yo-qWV" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="1j9-Bq-5yY" secondAttribute="trailing" constant="10" id="C7G-pM-g5R"/>
+                                    <constraint firstItem="xjh-yo-qWV" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="1j9-Bq-5yY" secondAttribute="trailing" constant="5" id="C7G-pM-g5R"/>
                                     <constraint firstItem="H9w-xi-6aC" firstAttribute="top" secondItem="1j9-Bq-5yY" secondAttribute="bottom" constant="15" id="NSu-nN-si0"/>
                                     <constraint firstItem="H9w-xi-6aC" firstAttribute="leading" secondItem="Cf3-QQ-J8t" secondAttribute="leading" constant="29" id="Qj8-jV-RGg"/>
                                     <constraint firstAttribute="trailing" secondItem="H9w-xi-6aC" secondAttribute="trailing" constant="29" id="SGx-Cl-ru9"/>
                                     <constraint firstAttribute="bottom" secondItem="H9w-xi-6aC" secondAttribute="bottom" constant="15" id="TBb-ld-9Z0"/>
-                                    <constraint firstItem="1j9-Bq-5yY" firstAttribute="leading" secondItem="Cf3-QQ-J8t" secondAttribute="leading" constant="29" id="aDz-4a-i2g"/>
+                                    <constraint firstItem="1j9-Bq-5yY" firstAttribute="leading" secondItem="Cf3-QQ-J8t" secondAttribute="leading" constant="20" id="aDz-4a-i2g"/>
                                     <constraint firstItem="1j9-Bq-5yY" firstAttribute="top" secondItem="Cf3-QQ-J8t" secondAttribute="top" constant="20" id="bpP-JY-50e"/>
                                     <constraint firstItem="lAd-C1-shB" firstAttribute="leading" secondItem="Cf3-QQ-J8t" secondAttribute="leading" id="rAH-OD-jdd"/>
                                     <constraint firstItem="lAd-C1-shB" firstAttribute="top" secondItem="Cf3-QQ-J8t" secondAttribute="top" id="tCR-nJ-jgH"/>
@@ -1278,7 +1279,7 @@ Wisarnwan</string>
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="125"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JyK-ch-AXP">
-                                        <rect key="frame" x="29" y="20" width="62" height="25"/>
+                                        <rect key="frame" x="20" y="20" width="62" height="25"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="unz-RD-RFp"/>
                                         </constraints>
@@ -1343,10 +1344,10 @@ Wisarnwan</string>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="zpp-qd-7aE" secondAttribute="trailing" id="0Wh-c0-xiJ"/>
                                     <constraint firstItem="Soq-qI-IHg" firstAttribute="centerX" secondItem="NWJ-aU-kQb" secondAttribute="centerX" id="3hi-qX-Mer"/>
-                                    <constraint firstItem="JyK-ch-AXP" firstAttribute="leading" secondItem="NWJ-aU-kQb" secondAttribute="leading" constant="29" id="ASF-Zg-W05"/>
+                                    <constraint firstItem="JyK-ch-AXP" firstAttribute="leading" secondItem="NWJ-aU-kQb" secondAttribute="leading" constant="20" id="ASF-Zg-W05"/>
                                     <constraint firstAttribute="trailing" secondItem="TyS-59-36y" secondAttribute="trailing" constant="29" id="DsQ-93-fNB"/>
                                     <constraint firstItem="TyS-59-36y" firstAttribute="leading" secondItem="NWJ-aU-kQb" secondAttribute="leading" constant="29" id="MBZ-nN-5ir"/>
-                                    <constraint firstItem="Soq-qI-IHg" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="JyK-ch-AXP" secondAttribute="trailing" constant="10" id="jGv-VL-PUf"/>
+                                    <constraint firstItem="Soq-qI-IHg" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="JyK-ch-AXP" secondAttribute="trailing" constant="5" id="jGv-VL-PUf"/>
                                     <constraint firstItem="zpp-qd-7aE" firstAttribute="leading" secondItem="NWJ-aU-kQb" secondAttribute="leading" id="jds-jQ-1C5"/>
                                     <constraint firstItem="JyK-ch-AXP" firstAttribute="top" secondItem="NWJ-aU-kQb" secondAttribute="top" constant="20" id="nwm-Dg-Ko6"/>
                                     <constraint firstAttribute="bottom" secondItem="zpp-qd-7aE" secondAttribute="bottom" id="t1A-3D-O8w"/>
@@ -1511,7 +1512,7 @@ Wisarnwan</string>
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nmV-H3-AZd">
-                                        <rect key="frame" x="29" y="17.5" width="62" height="25"/>
+                                        <rect key="frame" x="20" y="17.5" width="63" height="25"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="Swe-xn-iZO"/>
                                         </constraints>
@@ -1529,7 +1530,7 @@ Wisarnwan</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Send Sticker" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="elg-Bt-KcV">
-                                        <rect key="frame" x="151" y="15" width="112" height="30"/>
+                                        <rect key="frame" x="150" y="18.5" width="114.5" height="23.5"/>
                                         <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="20"/>
                                         <color key="textColor" name="Text_White"/>
                                         <nil key="highlightedColor"/>
@@ -1543,11 +1544,11 @@ Wisarnwan</string>
                                     <constraint firstAttribute="bottom" secondItem="KLr-Ok-7GA" secondAttribute="bottom" id="M2Z-9Y-ryR"/>
                                     <constraint firstItem="KLr-Ok-7GA" firstAttribute="leading" secondItem="It9-fu-6ur" secondAttribute="leading" id="Pjp-x4-aRa"/>
                                     <constraint firstAttribute="trailing" secondItem="KLr-Ok-7GA" secondAttribute="trailing" id="RZP-9M-jOX"/>
-                                    <constraint firstItem="elg-Bt-KcV" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="nmV-H3-AZd" secondAttribute="trailing" constant="10" id="SX6-h2-BW3"/>
+                                    <constraint firstItem="elg-Bt-KcV" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="nmV-H3-AZd" secondAttribute="trailing" constant="5" id="SX6-h2-BW3"/>
                                     <constraint firstItem="elg-Bt-KcV" firstAttribute="centerX" secondItem="It9-fu-6ur" secondAttribute="centerX" id="SqN-0e-nHP"/>
                                     <constraint firstItem="nmV-H3-AZd" firstAttribute="centerY" secondItem="It9-fu-6ur" secondAttribute="centerY" id="dXY-SF-g86"/>
                                     <constraint firstItem="KLr-Ok-7GA" firstAttribute="top" secondItem="It9-fu-6ur" secondAttribute="top" id="lDE-P7-TuU"/>
-                                    <constraint firstItem="nmV-H3-AZd" firstAttribute="leading" secondItem="It9-fu-6ur" secondAttribute="leading" constant="29" id="qcb-AM-lg6"/>
+                                    <constraint firstItem="nmV-H3-AZd" firstAttribute="leading" secondItem="It9-fu-6ur" secondAttribute="leading" constant="20" id="qcb-AM-lg6"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SRi-9m-4pW" userLabel="BottomView">
@@ -1624,10 +1625,10 @@ Wisarnwan</string>
                                         <rect key="frame" x="0.0" y="290" width="414" height="498"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="PES-F8-xJR">
-                                                <rect key="frame" x="50" y="30" width="334" height="22.5"/>
+                                                <rect key="frame" x="50" y="30" width="334" height="17.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Send to :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lJ8-et-LVb">
-                                                        <rect key="frame" x="0.0" y="0.0" width="75" height="22.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="75" height="17.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="75" id="CMh-p0-gfE"/>
                                                         </constraints>
@@ -1639,7 +1640,7 @@ Wisarnwan</string>
                                                         </userDefinedRuntimeAttributes>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wankawee Wisarnwan" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mee-vd-LVF">
-                                                        <rect key="frame" x="75" y="0.0" width="259" height="22.5"/>
+                                                        <rect key="frame" x="75" y="0.0" width="259" height="17.5"/>
                                                         <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="15"/>
                                                         <color key="textColor" name="Text_Dark_Gray"/>
                                                         <nil key="highlightedColor"/>
@@ -1647,10 +1648,10 @@ Wisarnwan</string>
                                                 </subviews>
                                             </stackView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WVB-Ed-C1C" customClass="MyView" customModule="Saw_Grow" customModuleProvider="target">
-                                                <rect key="frame" x="30" y="72.5" width="354" height="296.5"/>
+                                                <rect key="frame" x="30" y="67.5" width="354" height="301.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Note" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hfn-uQ-mfS">
-                                                        <rect key="frame" x="20" y="15" width="32.5" height="22.5"/>
+                                                        <rect key="frame" x="20" y="15" width="32.5" height="17.5"/>
                                                         <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="15"/>
                                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -1659,7 +1660,7 @@ Wisarnwan</string>
                                                         </userDefinedRuntimeAttributes>
                                                     </label>
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Write Somthing" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="SIg-hu-0b5" customClass="MyTextView" customModule="Saw_Grow" customModuleProvider="target">
-                                                        <rect key="frame" x="15" y="52.5" width="324" height="229"/>
+                                                        <rect key="frame" x="15" y="47.5" width="324" height="239"/>
                                                         <color key="backgroundColor" name="Bg_Light_Gray"/>
                                                         <color key="textColor" name="Text_Gray"/>
                                                         <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="15"/>
@@ -1671,7 +1672,7 @@ Wisarnwan</string>
                                                         </userDefinedRuntimeAttributes>
                                                     </textView>
                                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0/150" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sm4-r9-c8P">
-                                                        <rect key="frame" x="308" y="19.5" width="31" height="18"/>
+                                                        <rect key="frame" x="308" y="18.5" width="31" height="14"/>
                                                         <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="12"/>
                                                         <color key="textColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -1792,7 +1793,7 @@ Wisarnwan</string>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Complete" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oul-UQ-3Do">
-                                        <rect key="frame" x="163" y="15" width="88" height="30"/>
+                                        <rect key="frame" x="163.5" y="18.5" width="87.5" height="23.5"/>
                                         <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="20"/>
                                         <color key="textColor" name="Text_White"/>
                                         <nil key="highlightedColor"/>
@@ -1829,13 +1830,13 @@ Wisarnwan</string>
                                 <rect key="frame" x="0.0" y="108" width="414" height="788"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CMP-6w-xJ2" customClass="MyView" customModule="Saw_Grow" customModuleProvider="target">
-                                        <rect key="frame" x="29" y="40" width="356" height="452"/>
+                                        <rect key="frame" x="29" y="40" width="356" height="444"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="bnc-x5-374">
-                                                <rect key="frame" x="20" y="30" width="316" height="402"/>
+                                                <rect key="frame" x="20" y="30" width="316" height="394"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gift sent" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RBn-vt-PmE">
-                                                        <rect key="frame" x="110.5" y="0.0" width="95" height="37.5"/>
+                                                        <rect key="frame" x="111" y="0.0" width="94.5" height="29.5"/>
                                                         <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="25"/>
                                                         <color key="textColor" name="Main_Theme_1"/>
                                                         <nil key="highlightedColor"/>
@@ -1844,14 +1845,14 @@ Wisarnwan</string>
                                                         </userDefinedRuntimeAttributes>
                                                     </label>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="reward_icon1" translatesAutoresizingMaskIntoConstraints="NO" id="SE4-gX-FZe">
-                                                        <rect key="frame" x="58" y="57.5" width="200" height="200"/>
+                                                        <rect key="frame" x="58" y="49.5" width="200" height="200"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="SE4-gX-FZe" secondAttribute="height" multiplier="1:1" id="Bdo-Yu-BPz"/>
                                                             <constraint firstAttribute="width" constant="200" id="kcD-qm-7gb"/>
                                                         </constraints>
                                                     </imageView>
                                                     <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="mcu-3l-ySe">
-                                                        <rect key="frame" x="81.5" y="267.5" width="153.5" height="37"/>
+                                                        <rect key="frame" x="81" y="259.5" width="154" height="37"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_point" translatesAutoresizingMaskIntoConstraints="NO" id="AZw-uh-P75">
                                                                 <rect key="frame" x="0.0" y="0.0" width="37" height="37"/>
@@ -1861,7 +1862,7 @@ Wisarnwan</string>
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+ 10 Points" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FkE-EL-h90">
-                                                                <rect key="frame" x="47" y="6" width="106.5" height="25"/>
+                                                                <rect key="frame" x="47" y="6.5" width="107" height="24.5"/>
                                                                 <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="21"/>
                                                                 <color key="textColor" name="Text_Point_Gold"/>
                                                                 <nil key="highlightedColor"/>
@@ -1869,19 +1870,19 @@ Wisarnwan</string>
                                                         </subviews>
                                                     </stackView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d9P-9H-fWz" customClass="MyView" customModule="Saw_Grow" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="277.5" width="316" height="124.5"/>
+                                                        <rect key="frame" x="0.0" y="269.5" width="316" height="124.5"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="N4A-Nv-wch">
                                                                 <rect key="frame" x="15" y="10" width="286" height="99.5"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sent to : Wankawee Wisarnwan" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g5C-jC-Bxv">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="286" height="24"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="286" height="19"/>
                                                                         <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="16"/>
                                                                         <color key="textColor" name="Main_Theme_1"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Good job Ball, keep doing like this. You are one of my best teamGood job Ball, keep doing like this." textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dT5-rG-duc">
-                                                                        <rect key="frame" x="0.0" y="32" width="286" height="67.5"/>
+                                                                        <rect key="frame" x="0.0" y="47" width="286" height="52.5"/>
                                                                         <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="15"/>
                                                                         <color key="textColor" name="Text_Dark_Gray"/>
                                                                         <nil key="highlightedColor"/>
@@ -2005,7 +2006,7 @@ Wisarnwan</string>
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="giC-wo-LbF">
-                                        <rect key="frame" x="29" y="17.5" width="62" height="25"/>
+                                        <rect key="frame" x="20" y="17.5" width="62" height="25"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="Q9e-yW-y6d"/>
                                         </constraints>
@@ -2038,9 +2039,9 @@ Wisarnwan</string>
                                     <constraint firstItem="8If-QU-TmU" firstAttribute="centerY" secondItem="giC-wo-LbF" secondAttribute="centerY" id="Nhz-dM-zwp"/>
                                     <constraint firstItem="JB6-bO-ElC" firstAttribute="top" secondItem="iWb-D8-RXc" secondAttribute="top" id="Ogm-Jt-fD2"/>
                                     <constraint firstItem="giC-wo-LbF" firstAttribute="centerY" secondItem="iWb-D8-RXc" secondAttribute="centerY" id="QTN-6S-vbh"/>
-                                    <constraint firstItem="8If-QU-TmU" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="giC-wo-LbF" secondAttribute="trailing" constant="10" id="dBo-BA-5gm"/>
+                                    <constraint firstItem="8If-QU-TmU" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="giC-wo-LbF" secondAttribute="trailing" constant="5" id="dBo-BA-5gm"/>
                                     <constraint firstAttribute="bottom" secondItem="JB6-bO-ElC" secondAttribute="bottom" id="flu-Wn-MbL"/>
-                                    <constraint firstItem="giC-wo-LbF" firstAttribute="leading" secondItem="iWb-D8-RXc" secondAttribute="leading" constant="29" id="hcA-tV-ST9"/>
+                                    <constraint firstItem="giC-wo-LbF" firstAttribute="leading" secondItem="iWb-D8-RXc" secondAttribute="leading" constant="20" id="hcA-tV-ST9"/>
                                     <constraint firstItem="JB6-bO-ElC" firstAttribute="leading" secondItem="iWb-D8-RXc" secondAttribute="leading" id="vjO-es-JQC"/>
                                 </constraints>
                             </view>
@@ -2339,7 +2340,7 @@ Wisarnwan</string>
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yac-rY-fET">
-                                        <rect key="frame" x="29" y="17.5" width="62" height="25"/>
+                                        <rect key="frame" x="20" y="17.5" width="62" height="25"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="y8W-dk-BE3"/>
                                         </constraints>
@@ -2371,9 +2372,9 @@ Wisarnwan</string>
                                     <constraint firstItem="Yac-rY-fET" firstAttribute="centerY" secondItem="ACz-of-Q9B" secondAttribute="centerY" id="PpV-dk-wni"/>
                                     <constraint firstAttribute="trailing" secondItem="ryz-Bx-QzM" secondAttribute="trailing" id="RKB-5h-18n"/>
                                     <constraint firstItem="ryz-Bx-QzM" firstAttribute="leading" secondItem="ACz-of-Q9B" secondAttribute="leading" id="VZm-7p-eBz"/>
-                                    <constraint firstItem="Yac-rY-fET" firstAttribute="leading" secondItem="ACz-of-Q9B" secondAttribute="leading" constant="29" id="m7s-8S-RBe"/>
+                                    <constraint firstItem="Yac-rY-fET" firstAttribute="leading" secondItem="ACz-of-Q9B" secondAttribute="leading" constant="20" id="m7s-8S-RBe"/>
                                     <constraint firstAttribute="bottom" secondItem="ryz-Bx-QzM" secondAttribute="bottom" id="otp-GC-ZJB"/>
-                                    <constraint firstItem="bIR-Dk-dor" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Yac-rY-fET" secondAttribute="trailing" constant="10" id="pRV-N3-blN"/>
+                                    <constraint firstItem="bIR-Dk-dor" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Yac-rY-fET" secondAttribute="trailing" constant="5" id="pRV-N3-blN"/>
                                     <constraint firstItem="bIR-Dk-dor" firstAttribute="centerY" secondItem="Yac-rY-fET" secondAttribute="centerY" id="utQ-yl-Ukd"/>
                                     <constraint firstItem="bIR-Dk-dor" firstAttribute="centerX" secondItem="ACz-of-Q9B" secondAttribute="centerX" id="uxf-Cr-mtB"/>
                                 </constraints>
@@ -2511,19 +2512,19 @@ Wisarnwan</string>
                                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="v1r-2G-14b">
                                                                             <rect key="frame" x="118" y="12.5" width="186" height="65.5"/>
                                                                             <subviews>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phonekhanet Kaewrit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oDU-Iq-mLc">
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Phonekhanet Kaewrit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oDU-Iq-mLc">
                                                                                     <rect key="frame" x="0.0" y="0.0" width="136" height="21"/>
                                                                                     <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="14"/>
                                                                                     <color key="textColor" name="Text_Black"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sent Gift for You" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3by-5u-NYa">
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Sent Gift for You" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3by-5u-NYa">
                                                                                     <rect key="frame" x="0.0" y="26" width="95" height="19.5"/>
                                                                                     <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="13"/>
                                                                                     <color key="textColor" name="Text_Dark_Gray"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2 minutes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kEZ-Y1-9G1">
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="2 minutes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kEZ-Y1-9G1">
                                                                                     <rect key="frame" x="0.0" y="50.5" width="44" height="15"/>
                                                                                     <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="10"/>
                                                                                     <color key="textColor" name="Text_Gray"/>
@@ -2631,20 +2632,20 @@ Wisarnwan</string>
                                     <rect key="frame" x="58" y="0.0" width="200" height="257.5"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Gift sent" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MWA-Ln-sA0">
-                                            <rect key="frame" x="52.5" y="0.0" width="95.5" height="22.5"/>
+                                            <rect key="frame" x="53" y="0.0" width="94.5" height="23"/>
                                             <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="25"/>
                                             <color key="textColor" name="Main_Theme_1"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="reward_icon1" translatesAutoresizingMaskIntoConstraints="NO" id="2ba-FA-7iN">
-                                            <rect key="frame" x="0.0" y="27.5" width="200" height="200"/>
+                                            <rect key="frame" x="0.0" y="28" width="200" height="200"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="2ba-FA-7iN" secondAttribute="height" multiplier="1:1" id="jHH-fw-0yi"/>
                                                 <constraint firstAttribute="width" constant="200" id="sN6-Hb-tex"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="You recieve 20 Point" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qHq-NP-Wme">
-                                            <rect key="frame" x="4" y="232.5" width="192.5" height="25"/>
+                                            <rect key="frame" x="4.5" y="233" width="191.5" height="24.5"/>
                                             <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="21"/>
                                             <color key="textColor" name="Btn_Green"/>
                                             <nil key="highlightedColor"/>
@@ -2804,7 +2805,7 @@ Wisarnwan</string>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bHf-QJ-ZYZ">
-                                        <rect key="frame" x="29" y="20" width="62" height="25"/>
+                                        <rect key="frame" x="20" y="20" width="63" height="25"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="Hwb-Pi-7Em"/>
                                         </constraints>
@@ -2822,7 +2823,7 @@ Wisarnwan</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ranking" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wbx-20-INQ">
-                                        <rect key="frame" x="170.5" y="17.5" width="73.5" height="30"/>
+                                        <rect key="frame" x="170.5" y="21" width="73" height="23.5"/>
                                         <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="20"/>
                                         <color key="textColor" name="Text_White"/>
                                         <nil key="highlightedColor"/>
@@ -2840,9 +2841,10 @@ Wisarnwan</string>
                                     <constraint firstItem="wSv-lY-l8n" firstAttribute="leading" secondItem="RoZ-kd-hFC" secondAttribute="leading" id="VlN-Pk-6AI"/>
                                     <constraint firstAttribute="trailing" secondItem="wSv-lY-l8n" secondAttribute="trailing" id="Xl3-h0-krH"/>
                                     <constraint firstAttribute="trailing" secondItem="aXW-LO-JWC" secondAttribute="trailing" constant="29" id="YSL-q8-iar"/>
-                                    <constraint firstItem="bHf-QJ-ZYZ" firstAttribute="leading" secondItem="RoZ-kd-hFC" secondAttribute="leading" constant="29" id="br5-W4-jdO"/>
+                                    <constraint firstItem="bHf-QJ-ZYZ" firstAttribute="leading" secondItem="RoZ-kd-hFC" secondAttribute="leading" constant="20" id="br5-W4-jdO"/>
                                     <constraint firstAttribute="bottom" secondItem="aXW-LO-JWC" secondAttribute="bottom" constant="15" id="e6Y-Ew-uvW"/>
                                     <constraint firstAttribute="bottom" secondItem="wSv-lY-l8n" secondAttribute="bottom" id="ez9-rb-aTm"/>
+                                    <constraint firstItem="wbx-20-INQ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="bHf-QJ-ZYZ" secondAttribute="trailing" constant="5" id="qU9-QL-O5F"/>
                                     <constraint firstItem="aXW-LO-JWC" firstAttribute="top" secondItem="bHf-QJ-ZYZ" secondAttribute="bottom" constant="15" id="wwj-BN-o2X"/>
                                 </constraints>
                             </view>
@@ -3093,58 +3095,58 @@ Wisarnwan</string>
             <size key="intrinsicContentSize" width="75" height="75"/>
         </designable>
         <designable name="9bL-Wq-FsT">
-            <size key="intrinsicContentSize" width="29.5" height="18"/>
+            <size key="intrinsicContentSize" width="30.5" height="14"/>
         </designable>
         <designable name="BcB-DB-RJk">
             <size key="intrinsicContentSize" width="62.5" height="62.5"/>
         </designable>
         <designable name="Bnh-Ui-Eoe">
-            <size key="intrinsicContentSize" width="48" height="42"/>
+            <size key="intrinsicContentSize" width="48" height="36"/>
         </designable>
         <designable name="Dzt-tg-IIX">
-            <size key="intrinsicContentSize" width="83" height="42"/>
+            <size key="intrinsicContentSize" width="85" height="36"/>
         </designable>
         <designable name="F31-8e-kxz">
-            <size key="intrinsicContentSize" width="36" height="36"/>
+            <size key="intrinsicContentSize" width="38" height="31"/>
         </designable>
         <designable name="IeK-yr-ZTe">
             <size key="intrinsicContentSize" width="62.5" height="62.5"/>
         </designable>
         <designable name="Kx8-vu-Aop">
-            <size key="intrinsicContentSize" width="143.5" height="45"/>
+            <size key="intrinsicContentSize" width="148.5" height="35"/>
         </designable>
         <designable name="Nfa-DV-UGE">
-            <size key="intrinsicContentSize" width="63" height="30"/>
+            <size key="intrinsicContentSize" width="64" height="26"/>
         </designable>
         <designable name="PnZ-rD-63j">
             <size key="intrinsicContentSize" width="75" height="75"/>
         </designable>
         <designable name="TN3-Zx-Waq">
-            <size key="intrinsicContentSize" width="37" height="36"/>
+            <size key="intrinsicContentSize" width="35" height="31"/>
         </designable>
         <designable name="Vl4-QR-KUw">
             <size key="intrinsicContentSize" width="63" height="63"/>
         </designable>
         <designable name="gff-L9-VcM">
-            <size key="intrinsicContentSize" width="30" height="42"/>
+            <size key="intrinsicContentSize" width="30" height="36"/>
         </designable>
         <designable name="n0f-Oc-sth">
-            <size key="intrinsicContentSize" width="54" height="36"/>
+            <size key="intrinsicContentSize" width="55" height="31"/>
         </designable>
         <designable name="o95-2n-QgG">
             <size key="intrinsicContentSize" width="75" height="75"/>
         </designable>
         <designable name="rYc-gF-on8">
-            <size key="intrinsicContentSize" width="62" height="36"/>
+            <size key="intrinsicContentSize" width="62" height="31"/>
         </designable>
         <designable name="w5B-9E-evV">
             <size key="intrinsicContentSize" width="50" height="50"/>
         </designable>
         <designable name="xYP-mM-90p">
-            <size key="intrinsicContentSize" width="648" height="18"/>
+            <size key="intrinsicContentSize" width="663.5" height="17.5"/>
         </designable>
         <designable name="zTt-Dj-2vj">
-            <size key="intrinsicContentSize" width="116" height="36"/>
+            <size key="intrinsicContentSize" width="115" height="31"/>
         </designable>
     </designables>
     <resources>

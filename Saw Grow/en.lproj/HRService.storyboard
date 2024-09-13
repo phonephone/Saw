@@ -36,7 +36,7 @@
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k05-gA-1A6">
-                                        <rect key="frame" x="29" y="17.5" width="62" height="25"/>
+                                        <rect key="frame" x="20" y="17.5" width="62" height="25"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="NQB-zM-sti"/>
                                         </constraints>
@@ -61,8 +61,8 @@
                                     <constraint firstAttribute="trailing" secondItem="yfS-Nz-g83" secondAttribute="trailing" id="4g1-YK-CDe"/>
                                     <constraint firstAttribute="bottom" secondItem="yfS-Nz-g83" secondAttribute="bottom" id="9UE-tZ-ma9"/>
                                     <constraint firstItem="AIj-ih-2y4" firstAttribute="centerY" secondItem="k05-gA-1A6" secondAttribute="centerY" id="9Xv-yV-pO9"/>
-                                    <constraint firstItem="AIj-ih-2y4" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="k05-gA-1A6" secondAttribute="trailing" constant="10" id="EJg-r8-Wt4"/>
-                                    <constraint firstItem="k05-gA-1A6" firstAttribute="leading" secondItem="e2h-qe-3iH" secondAttribute="leading" constant="29" id="MNF-nO-jlt"/>
+                                    <constraint firstItem="AIj-ih-2y4" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="k05-gA-1A6" secondAttribute="trailing" constant="5" id="EJg-r8-Wt4"/>
+                                    <constraint firstItem="k05-gA-1A6" firstAttribute="leading" secondItem="e2h-qe-3iH" secondAttribute="leading" constant="20" id="MNF-nO-jlt"/>
                                     <constraint firstItem="yfS-Nz-g83" firstAttribute="leading" secondItem="e2h-qe-3iH" secondAttribute="leading" id="Tie-Fi-hGY"/>
                                     <constraint firstItem="AIj-ih-2y4" firstAttribute="centerX" secondItem="e2h-qe-3iH" secondAttribute="centerX" id="Wzi-qj-Uvl"/>
                                     <constraint firstItem="yfS-Nz-g83" firstAttribute="top" secondItem="e2h-qe-3iH" secondAttribute="top" id="kD8-zN-Kj8"/>

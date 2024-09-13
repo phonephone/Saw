@@ -138,10 +138,10 @@ class Profile: UIViewController , MFMailComposeViewControllerDelegate {
     
     func updateDisplay() {
         userPic.sd_setImage(with: URL(string:profileJSON!["profile_photo"].stringValue), placeholderImage: UIImage(named: "logo_circle"))
-        userName.text = "\(profileJSON!["first_name_en"].stringValue) \(profileJSON!["last_name_en"].stringValue)"
+        userName.text = "\(profileJSON!["first_name"].stringValue) \(profileJSON!["last_name"].stringValue)"
         
-        //self.userPosition.text = self.profileJSON!["designation_name"].stringValue
-        userPosition.text = "\(profileJSON!["first_name"].stringValue) \(profileJSON!["last_name"].stringValue)"
+        userPosition.text = self.profileJSON!["designation_name"].stringValue
+        //userPosition.text = "\(profileJSON!["first_name"].stringValue) \(profileJSON!["last_name"].stringValue)"
         
         if whoMode == .Me && profileJSON!["editable"].count > 0 {
             editProfileBtn.isHidden = false

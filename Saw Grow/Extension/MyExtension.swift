@@ -342,6 +342,12 @@ extension UIViewController {
             
             //P'Sorn
             //headers = ["Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IlJkWEt5NzlaV1NPb2xDMHlrMUYyOS1oSGN1ZmgySXNacm10Zm92b1ViOFkiLCJjb20iOiJBU2VfelFDNGNoSndiS3dQenF0aEVXZmdLVDc4Qkdva0k3YVpZTjFYWHdBIiwiaWF0IjoxNjkwNDI1NzA0LCJleHAiOjI2OTA0MjU3MDN9.QLrjMcTjg0uwmC270JLLdyO_2ywX066n_mCUF8rN0lw", "Accept": "application/json","Lang": "Formatter_Locale".localized()]
+            
+            //360 CEO (Chen)
+            //headers = ["Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjJaNmRqRHdieHBNRVZuYUZra2Ita2UzY1p6WUxrSHBIQTg3UGpETXZaRVUiLCJjb20iOiJNbHE5OEgyZzh4ME1mcEJ2RkNFRWpqQ1Z0Yk9MS3hXUEpBUVFuQnVWYklBIiwiaWF0IjoxNzI0ODI3ODkxLCJleHAiOjI3MjQ4Mjc4OTB9.sDVdWJRRS0tIGjCai527gVV28rWKOYWZpMWTzrzLskM", "Accept": "application/json","Lang": "Formatter_Locale".localized()]
+            
+            //360 Employee (Throne)
+            //headers = ["Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6Inhqdlh1MDN4eXJqa01rVzI3MktWZElkbTE4LXNuMjlpTl9LT1oyZVZfUEkiLCJjb20iOiJWelJORm0xaTRYTDdfaDNUd2lhVklnUHFhT3NscjhDNWxOcl82MUwySUMwIiwiaWF0IjoxNzI0ODI5ODAyLCJleHAiOjI3MjQ4Mjk4MDF9.a8wdF8HR0uQ5uDObNbhXnRsG1HWikwhKJpUKcgg98HU", "Accept": "application/json","Lang": "Formatter_Locale".localized()]
 
         }
         else{

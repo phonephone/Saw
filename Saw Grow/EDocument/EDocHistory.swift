@@ -43,8 +43,15 @@ class EDocHistory: UIViewController  {
         var key:String = ""
         
         switch edocType {
-        case .work_cert,.salary_cert:
-            parameters = ["group":"status"]
+        case .work_cert:
+            parameters = ["group":"status",
+                          "type":"empcer"]
+            url = "edocument/getempcerlist"
+            key = "empcer"
+            
+        case .salary_cert:
+            parameters = ["group":"status",
+                          "type":"empsalary"]
             url = "edocument/getempcerlist"
             key = "empcer"
             

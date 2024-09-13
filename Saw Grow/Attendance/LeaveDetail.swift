@@ -135,10 +135,10 @@ extension LeaveDetail: UITableViewDataSource {
                 }
             case .ot:
                 if detailJSON!["status_id"].stringValue == "3" || detailJSON!["status_id"].stringValue == "4" {//Pending , Cancel
-                    return 6
+                    return 7
                 }
                 else {
-                    return 5
+                    return 6
                 }
             case .shift:
                 if detailJSON!["status_id"].stringValue == "3" || detailJSON!["status_id"].stringValue == "4" {//Pending , Cancel
@@ -418,7 +418,17 @@ extension LeaveDetail: UITableViewDataSource {
                 cell.cellTitle.text = "OT_Total".localized()
                 cell.cellDescription.text = cellArray["total_hours"].stringValue
                 
-            case 4://Head Cell
+            case 4://Reason
+                cell = standardCell
+                cell.cellTitle.text = "LEAVE_DETAIL_Reason".localized()
+                if cellArray["reason"].stringValue == "" {
+                    cell.cellDescription.text = emptyReason
+                }
+                else{
+                    cell.cellDescription.text = cellArray["reason"].stringValue
+                }
+                
+            case 5://Head Cell
                 cell = headCell
                 cell.cellImage.sd_setImage(with: URL(string:cellArray["headphoto"].stringValue), placeholderImage: UIImage(named: "logo_circle"))
                 cell.cellName.text = cellArray["headname"].stringValue
@@ -450,7 +460,7 @@ extension LeaveDetail: UITableViewDataSource {
                     }
                 }
                 
-            case 5://Reject Reason
+            case 6://Reject Reason
                 cell = standardCell
                 cell.cellTitle.text = "LEAVE_DETAIL_Reject_Reason".localized()
                 if cellArray["remark"].stringValue == "" {
@@ -513,7 +523,7 @@ extension LeaveDetail: UITableViewDataSource {
                 cell.cellName.text = cellArray["headname"].stringValue
                 cell.cellPosition.text = cellArray["headposition"].stringValue
                 
-                cell.cellStatus.text = cellArray["status"].stringValue
+                cell.cellStatus.text = cellArray["status_text"].stringValue
                 cell.cellStatus.textColor = self.colorFromRGB(rgbString: cellArray["statuscolor"].stringValue)
                 
                 cell.cellBtnCancel.addTarget(self, action: #selector(cancelClick(_:)), for: .touchUpInside)

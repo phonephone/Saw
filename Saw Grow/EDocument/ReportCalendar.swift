@@ -194,7 +194,7 @@ extension ReportCalendar: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if (calendarJSON != nil) {
-            return 88
+            return 95
         }
         else{
             return 0

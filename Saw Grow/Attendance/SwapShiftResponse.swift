@@ -97,7 +97,7 @@ extension SwapShiftResponse: UICollectionViewDataSource {
         cell.cellDate.text = "\("Sent_Date".localized())  \(cellArray["sentdate"].stringValue)"
         cell.cellRemark.text = "\("SWAP_Note".localized()) : \(cellArray["reason"].stringValue)"
         
-        cell.cellStatus.text = cellArray["status"].stringValue
+        cell.cellStatus.text = cellArray["status_text"].stringValue
         cell.cellStatus.textColor = self.colorFromRGB(rgbString: cellArray["statuscolor"].stringValue)
         
         return cell

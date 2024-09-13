@@ -77,7 +77,7 @@ class OTHistory: UIViewController, UITextFieldDelegate {
                 
             case .success(let responseObject):
                 let json = JSON(responseObject)
-                //print("SUCCESS LEAVE\(json)")
+                print("SUCCESS OT\(json)")
                 
                 self.otJSON = json["data"][0]["timeot"]
                 self.thisYearLabel.text = json["data"][0]["yearcount"].stringValue
