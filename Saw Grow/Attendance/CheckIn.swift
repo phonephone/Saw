@@ -30,7 +30,8 @@ class CheckIn: UIViewController, UITextViewDelegate {
     var inArea = false
     var isWFH = false
     var isBioScan = false
-    var isForcePhoto = false
+    var isForcePhotoIn = false
+    var isForcePhotoOut = false
     var isAllowGallery = false
     
     var userLat = ""
@@ -125,7 +126,8 @@ class CheckIn: UIViewController, UITextViewDelegate {
                 self.empstatus = json["data"][0]["profile"][0]["empstatus"].stringValue
                 self.isWFH = json["data"][0]["iswfh"].boolValue
                 self.isBioScan = json["data"][0]["isbioscan"].boolValue
-                self.isForcePhoto = json["data"][0]["is_force_photo"].boolValue
+                self.isForcePhotoIn = json["data"][0]["is_force_photo"].boolValue
+                self.isForcePhotoOut = json["data"][0]["is_force_photo_out"].boolValue
                 self.isAllowGallery = json["data"][0]["is_allow_gallery"].boolValue
                 self.updateEmpStatus()
             }
@@ -301,7 +303,7 @@ class CheckIn: UIViewController, UITextViewDelegate {
     
     @IBAction func btnClick(_ sender: UIButton) {
         if sender.tag == 1 {//CHECKIN
-            if isForcePhoto {
+            if isForcePhotoIn {
                 if uploadImage.image != nil {
                     checkBioScan(sender)
                 }
@@ -314,6 +316,22 @@ class CheckIn: UIViewController, UITextViewDelegate {
             }
             else {
                 checkBioScan(sender)
+            }
+        }
+        else if sender.tag == 3 {//CHECKOUT
+            if isForcePhotoOut {
+                if uploadImage.image != nil {
+                    confirmAsk(sender)
+                }
+                else {
+                    let alertOK = self.alertService.alertOK(title: "CHECKIN_Force_Upload".localized(), buttonColor: .themeColor)
+                    {
+                    }
+                    self.present(alertOK, animated: true)
+                }
+            }
+            else {
+                confirmAsk(sender)
             }
         }
         else {//UPDATE & CHECKOUT

@@ -84,7 +84,7 @@
 "TUTORIAL_COMPLETE_Point" = "คะแนน";
 "TUTORIAL_COMPLETE_Header" = "ทุกกิจกรรมคือคะแนน";
 "TUTORIAL_COMPLETE_Sub_Header_1" = "คุณได้รับ";
-"TUTORIAL_COMPLETE_Sub_Header_2" = "คะแนนจากการอ่านคู่มือ";
+"TUTORIAL_COMPLETE_Sub_Header_2" = "คะแนนจากการผ่าน Tutorial";
 "TUTORIAL_COMPLETE_Receive_Button" = "ได้รับคะแนน";
 
 ////////////////////////////////////////////////////////////////////////////////////

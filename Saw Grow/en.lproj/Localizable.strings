@@ -83,8 +83,8 @@
 //TUTORIAL COMPLETE
 "TUTORIAL_COMPLETE_Point" = "Points";
 "TUTORIAL_COMPLETE_Header" = "Every Activities Earn Points";
-"TUTORIAL_COMPLETE_Sub_Header_1" = "You have recieved";
-"TUTORIAL_COMPLETE_Sub_Header_2" = "points from tutorial completion";
+"TUTORIAL_COMPLETE_Sub_Header_1" = "You earned";
+"TUTORIAL_COMPLETE_Sub_Header_2" = "points for completing the tutorial.";
 "TUTORIAL_COMPLETE_Receive_Button" = "Received points";
 
 ////////////////////////////////////////////////////////////////////////////////////

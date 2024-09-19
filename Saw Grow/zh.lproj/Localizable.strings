@@ -82,9 +82,9 @@
 
 //TUTORIAL COMPLETE
 "TUTORIAL_COMPLETE_Point" = "分数";
-"TUTORIAL_COMPLETE_Header" = "每个活动都是分数";
-"TUTORIAL_COMPLETE_Sub_Header_1" = "您获得";
-"TUTORIAL_COMPLETE_Sub_Header_2" = "阅读教程的分数";
+"TUTORIAL_COMPLETE_Header" = "每项活动都能获得积分";
+"TUTORIAL_COMPLETE_Sub_Header_1" = "您完成教程获得";
+"TUTORIAL_COMPLETE_Sub_Header_2" = "积分。";
 "TUTORIAL_COMPLETE_Receive_Button" = "获得分数";
 
 ////////////////////////////////////////////////////////////////////////////////////

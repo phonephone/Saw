@@ -758,6 +758,7 @@ E-Document</string>
                         <outlet property="announcementCollectionView" destination="D9y-el-3It" id="LLW-Lk-rAm"/>
                         <outlet property="announcementPageControl" destination="6fY-jT-dec" id="TmS-XK-aan"/>
                         <outlet property="categoryCollectionView" destination="S30-MZ-GfH" id="m7l-Ei-BbP"/>
+                        <outlet property="categoryHeight" destination="6PS-B5-3ks" id="47J-SK-mCe"/>
                         <outlet property="categoryStack" destination="gNn-Ph-ahd" id="3bR-0F-aAL"/>
                         <outlet property="headerImage" destination="j9B-aq-HIf" id="4ij-ov-yPA"/>
                         <outlet property="headerView" destination="QQX-SR-edG" id="waA-PM-dxT"/>
@@ -3028,7 +3029,7 @@ E-Document</string>
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="260"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PLs-1u-MHG">
-                                        <rect key="frame" x="20" y="10" width="62" height="25"/>
+                                        <rect key="frame" x="20" y="10" width="63" height="25"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="Mig-Vm-Ipb"/>
                                         </constraints>
@@ -3087,16 +3088,16 @@ E-Document</string>
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="xze-e7-NBK">
-                                        <rect key="frame" x="126" y="125" width="123.33333333333331" height="60"/>
+                                        <rect key="frame" x="124.66666666666666" y="125" width="125.66666666666666" height="60"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name Surname" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ivT-yR-aSZ">
-                                                <rect key="frame" x="0.0" y="0.0" width="123.33333333333333" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="125.66666666666667" height="30"/>
                                                 <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="18"/>
                                                 <color key="textColor" name="Text_White"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Position" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JjJ-LI-DDg">
-                                                <rect key="frame" x="0.0" y="30" width="123.33333333333333" height="30"/>
+                                                <rect key="frame" x="0.0" y="30" width="125.66666666666667" height="30"/>
                                                 <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="18"/>
                                                 <color key="textColor" name="Text_White"/>
                                                 <nil key="highlightedColor"/>
@@ -3241,7 +3242,7 @@ E-Document</string>
                                                 <rect key="frame" x="0.0" y="0.0" width="345" height="50"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Status" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iU2-QA-weU">
-                                                        <rect key="frame" x="19.999999999999986" y="13.666666666666687" width="238.66666666666663" height="22.666666666666671"/>
+                                                        <rect key="frame" x="20.000000000000014" y="16.333333333333314" width="238.33333333333337" height="17.666666666666671"/>
                                                         <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="15"/>
                                                         <color key="textColor" name="Text_Dark_Gray"/>
                                                         <nil key="highlightedColor"/>
@@ -3250,7 +3251,7 @@ E-Document</string>
                                                         </userDefinedRuntimeAttributes>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Work" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v45-zK-qL0">
-                                                        <rect key="frame" x="258.66666666666669" y="13.666666666666687" width="34.333333333333314" height="22.666666666666671"/>
+                                                        <rect key="frame" x="258.33333333333331" y="16.333333333333314" width="34.666666666666686" height="17.666666666666671"/>
                                                         <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="15"/>
                                                         <color key="textColor" name="Main_Theme_1"/>
                                                         <nil key="highlightedColor"/>
@@ -3284,7 +3285,7 @@ E-Document</string>
                                                 <rect key="frame" x="0.0" y="60" width="345" height="50"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Warning" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8OA-cG-mbo">
-                                                        <rect key="frame" x="20.000000000000014" y="13.666666666666687" width="222.33333333333337" height="22.666666666666671"/>
+                                                        <rect key="frame" x="19.999999999999986" y="16.333333333333314" width="222.66666666666663" height="17.666666666666671"/>
                                                         <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="15"/>
                                                         <color key="textColor" name="Text_Dark_Gray"/>
                                                         <nil key="highlightedColor"/>
@@ -3293,7 +3294,7 @@ E-Document</string>
                                                         </userDefinedRuntimeAttributes>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 timed" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ra4-wR-cSD">
-                                                        <rect key="frame" x="242.33333333333329" y="13.666666666666687" width="50.666666666666657" height="22.666666666666671"/>
+                                                        <rect key="frame" x="242.66666666666671" y="16.333333333333314" width="50.333333333333343" height="17.666666666666671"/>
                                                         <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="15"/>
                                                         <color key="textColor" name="Btn_Red"/>
                                                         <nil key="highlightedColor"/>
@@ -3326,7 +3327,7 @@ E-Document</string>
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile Information" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xFn-ye-rPU">
-                                        <rect key="frame" x="25" y="150" width="325" height="24"/>
+                                        <rect key="frame" x="25" y="150" width="325" height="18.666666666666657"/>
                                         <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="16"/>
                                         <color key="textColor" name="Main_Theme_1"/>
                                         <nil key="highlightedColor"/>
@@ -3335,7 +3336,7 @@ E-Document</string>
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="g9d-1u-1yP" customClass="MyTableView" customModule="Saw_Grow" customModuleProvider="target">
-                                        <rect key="frame" x="15" y="184" width="345" height="298"/>
+                                        <rect key="frame" x="15" y="178.66666666666671" width="345" height="303.33333333333326"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <color key="separatorColor" name="Text_Light_Gray"/>
                                         <inset key="separatorInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
@@ -3351,13 +3352,13 @@ E-Document</string>
                                                             <rect key="frame" x="20" y="0.0" width="305" height="70"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Position" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g2z-pg-Krr">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="56" height="40"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="54.333333333333336" height="40"/>
                                                                     <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="15"/>
                                                                     <color key="textColor" name="Text_Gray"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Frontend Developer" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7MX-OE-ZB6">
-                                                                    <rect key="frame" x="0.0" y="30" width="132" height="40"/>
+                                                                    <rect key="frame" x="0.0" y="30" width="132.66666666666666" height="40"/>
                                                                     <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="15"/>
                                                                     <color key="textColor" name="Text_Dark_Gray"/>
                                                                     <nil key="highlightedColor"/>
@@ -4211,7 +4212,7 @@ sales@hrinzpy.com</string>
             <size key="intrinsicContentSize" width="30" height="30"/>
         </designable>
         <designable name="34v-mh-ASG">
-            <size key="intrinsicContentSize" width="109" height="24"/>
+            <size key="intrinsicContentSize" width="111" height="24"/>
         </designable>
         <designable name="3z5-mx-czh">
             <size key="intrinsicContentSize" width="64" height="26"/>
@@ -4253,10 +4254,10 @@ sales@hrinzpy.com</string>
             <size key="intrinsicContentSize" width="75" height="75"/>
         </designable>
         <designable name="M0L-T5-ES8">
-            <size key="intrinsicContentSize" width="81.666666666666671" height="54"/>
+            <size key="intrinsicContentSize" width="81.666666666666671" height="42"/>
         </designable>
         <designable name="MH3-kQ-2jW">
-            <size key="intrinsicContentSize" width="70" height="24"/>
+            <size key="intrinsicContentSize" width="71" height="19"/>
         </designable>
         <designable name="Q4d-0L-tlw">
             <size key="intrinsicContentSize" width="22" height="22"/>
@@ -4283,7 +4284,7 @@ sales@hrinzpy.com</string>
             <size key="intrinsicContentSize" width="126.66666666666667" height="18.666666666666668"/>
         </designable>
         <designable name="VLW-8F-EXw">
-            <size key="intrinsicContentSize" width="168" height="30"/>
+            <size key="intrinsicContentSize" width="181" height="26"/>
         </designable>
         <designable name="Vx9-2U-PSr">
             <size key="intrinsicContentSize" width="281.66666666666669" height="15.333333333333334"/>
@@ -4304,7 +4305,7 @@ sales@hrinzpy.com</string>
             <size key="intrinsicContentSize" width="30" height="30"/>
         </designable>
         <designable name="cjJ-UN-GS2">
-            <size key="intrinsicContentSize" width="118" height="24"/>
+            <size key="intrinsicContentSize" width="123" height="22.666666666666668"/>
         </designable>
         <designable name="dpA-Kh-Ljf">
             <size key="intrinsicContentSize" width="51.666666666666664" height="51.666666666666664"/>
@@ -4325,7 +4326,7 @@ sales@hrinzpy.com</string>
             <size key="intrinsicContentSize" width="245.66666666666666" height="44.666666666666664"/>
         </designable>
         <designable name="i4h-FL-xGV">
-            <size key="intrinsicContentSize" width="141" height="24"/>
+            <size key="intrinsicContentSize" width="145" height="19.666666666666668"/>
         </designable>
         <designable name="jY8-iA-NQ6">
             <size key="intrinsicContentSize" width="65" height="31"/>
@@ -4358,7 +4359,7 @@ sales@hrinzpy.com</string>
             <size key="intrinsicContentSize" width="48" height="36"/>
         </designable>
         <designable name="zyI-mB-uv8">
-            <size key="intrinsicContentSize" width="52" height="24"/>
+            <size key="intrinsicContentSize" width="54" height="19"/>
         </designable>
     </designables>
     <resources>

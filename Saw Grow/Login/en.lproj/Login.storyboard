@@ -1136,26 +1136,6 @@
                                     <constraint firstAttribute="width" secondItem="Sxm-WA-k1d" secondAttribute="height" multiplier="393:586" id="r65-QJ-oTg"/>
                                 </constraints>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="tIq-Qv-FWq">
-                                <rect key="frame" x="166.5" y="273" width="81" height="108"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pV4-Ps-lG0">
-                                        <rect key="frame" x="0.0" y="0.0" width="81" height="82"/>
-                                        <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="70"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Points" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c9X-7s-178">
-                                        <rect key="frame" x="9.5" y="82" width="62" height="26"/>
-                                        <fontDescription key="fontDescription" name="Kanit-Bold" family="Kanit" pointSize="22"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="TUTORIAL_COMPLETE_Point"/>
-                                        </userDefinedRuntimeAttributes>
-                                    </label>
-                                </subviews>
-                            </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ทุกกิจกรรมคือคะแนน" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vt0-Kt-fZ0">
                                 <rect key="frame" x="90" y="692.5" width="234" height="31.5"/>
                                 <fontDescription key="fontDescription" name="Kanit-Bold" family="Kanit" pointSize="27"/>
@@ -1170,7 +1150,6 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="vwp-t2-8tM" firstAttribute="top" secondItem="vt0-Kt-fZ0" secondAttribute="bottom" constant="10" id="00m-ek-o4g"/>
-                            <constraint firstItem="tIq-Qv-FWq" firstAttribute="centerY" secondItem="Sxm-WA-k1d" secondAttribute="centerY" id="4xK-Va-3mp"/>
                             <constraint firstItem="wOW-cf-UHB" firstAttribute="top" secondItem="vwp-t2-8tM" secondAttribute="bottom" constant="30" id="9uX-Vd-sEt"/>
                             <constraint firstItem="nGl-VO-f5w" firstAttribute="bottom" secondItem="wOW-cf-UHB" secondAttribute="bottom" constant="20" id="DhE-ZP-Ciy"/>
                             <constraint firstItem="vt0-Kt-fZ0" firstAttribute="centerX" secondItem="vru-Tm-RUB" secondAttribute="centerX" id="EGA-Lh-MYC"/>
@@ -1179,14 +1158,12 @@
                             <constraint firstItem="vwp-t2-8tM" firstAttribute="centerX" secondItem="vru-Tm-RUB" secondAttribute="centerX" id="Uv2-lD-hPP"/>
                             <constraint firstItem="wOW-cf-UHB" firstAttribute="leading" secondItem="nGl-VO-f5w" secondAttribute="leading" constant="25" id="gdh-zr-d0G"/>
                             <constraint firstItem="nGl-VO-f5w" firstAttribute="trailing" secondItem="wOW-cf-UHB" secondAttribute="trailing" constant="25" id="kWw-Xw-SGJ"/>
-                            <constraint firstItem="tIq-Qv-FWq" firstAttribute="centerX" secondItem="vru-Tm-RUB" secondAttribute="centerX" id="vQ1-oj-1ql"/>
                             <constraint firstItem="Sxm-WA-k1d" firstAttribute="top" secondItem="nGl-VO-f5w" secondAttribute="top" id="yXJ-j6-72h"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="5y3-JF-DEF"/>
                     <connections>
                         <outlet property="descriptionLabel" destination="vwp-t2-8tM" id="fVc-kG-HHS"/>
-                        <outlet property="pointLabel" destination="pV4-Ps-lG0" id="syz-NT-DSd"/>
                         <outlet property="submitBtn" destination="wOW-cf-UHB" id="Qto-mL-5c7"/>
                     </connections>
                 </viewController>
@@ -2053,16 +2030,16 @@
             <size key="intrinsicContentSize" width="42" height="36"/>
         </designable>
         <designable name="N5B-H1-gUW">
-            <size key="intrinsicContentSize" width="59" height="25"/>
+            <size key="intrinsicContentSize" width="49" height="25"/>
         </designable>
         <designable name="SL1-eB-9j3">
-            <size key="intrinsicContentSize" width="59" height="25"/>
+            <size key="intrinsicContentSize" width="49" height="25"/>
         </designable>
         <designable name="WAc-bg-4xR">
             <size key="intrinsicContentSize" width="14" height="59"/>
         </designable>
         <designable name="WSV-0w-3bT">
-            <size key="intrinsicContentSize" width="98.5" height="24"/>
+            <size key="intrinsicContentSize" width="88.5" height="24"/>
         </designable>
         <designable name="Zuz-ae-l4M">
             <size key="intrinsicContentSize" width="8" height="34.5"/>
@@ -2108,7 +2085,7 @@
         <image name="login_google" width="89" height="48"/>
         <image name="login_password_hide" width="113" height="100"/>
         <image name="privacy_icon" width="214" height="214"/>
-        <image name="tutorial_complete" width="393" height="586"/>
+        <image name="tutorial_complete" width="660" height="711"/>
         <namedColor name="Bg_Light_Gray">
             <color red="0.96470588235294119" green="0.97254901960784312" blue="0.98431372549019602" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

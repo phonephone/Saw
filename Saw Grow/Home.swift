@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Foundation
 import Alamofire
 import SwiftyJSON
 import ProgressHUD
@@ -29,6 +30,7 @@ class Home: UIViewController, OverlayContainerViewControllerDelegate, UIScrollVi
     let alertService = AlertService()
     
     @IBOutlet weak var categoryStack: UIStackView!
+    @IBOutlet weak var categoryHeight: NSLayoutConstraint!
     
     @IBOutlet weak var annoucementStack: UIStackView!
     @IBOutlet weak var announcementPageControl: UIPageControl!
@@ -107,6 +109,12 @@ class Home: UIViewController, OverlayContainerViewControllerDelegate, UIScrollVi
 
             setColor = false
         }
+        
+        var categoryRow = 1//Float(Float(self.categoryJSON?.count ?? 0)/4).rounded()
+        if categoryJSON?.count ?? 0 > 4 {
+            categoryRow = 2
+        }
+        categoryHeight.constant = CGFloat(95*categoryRow)
     }
     
     override func viewDidLoad() {
@@ -529,7 +537,7 @@ extension Home: UICollectionViewDelegateFlowLayout {
         //viewHeight*2.33
         
         if collectionView == categoryCollectionView {//Category
-            return CGSize(width: 75 , height: (collectionView.frame.height-10)/2)
+            return CGSize(width: 75 , height: 90)
         }
         else if collectionView == announcementCollectionView {//Announcement
             return CGSize(width: viewWidth , height: viewHeight-8)
@@ -545,7 +553,7 @@ extension Home: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout,
                         insetForSectionAt section: Int) -> UIEdgeInsets {
         if collectionView == categoryCollectionView {//Category
-            return UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10) //.zero
+            return UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20) //.zero
         }
         else if collectionView == announcementCollectionView {//Announcement
             return UIEdgeInsets(top: 4, left: 20, bottom: 4, right: 20) //.zero
@@ -566,7 +574,7 @@ extension Home: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout,
                         minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         if collectionView == categoryCollectionView {//Category
-            return 10
+            return (collectionView.frame.width-(75*4)-(20*2))/3//10
         }
         else if collectionView == announcementCollectionView {//Announcement
             return 10
