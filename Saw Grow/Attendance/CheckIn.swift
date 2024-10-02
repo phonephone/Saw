@@ -344,11 +344,11 @@ class CheckIn: UIViewController, UITextViewDelegate {
             let context = LAContext()
                 var error: NSError?
 
-                if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
+                if context.canEvaluatePolicy(.deviceOwnerAuthentication, error: &error) {
                     
                     let reason = "CHECKIN_TouchID".localized()
 
-                    context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) {
+                    context.evaluatePolicy(.deviceOwnerAuthentication, localizedReason: reason) {
                         [weak self] success, authenticationError in
 
                         DispatchQueue.main.async {

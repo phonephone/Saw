@@ -28,23 +28,6 @@ public class Updater: NSObject {
         return (version, downLoadUrl)
     }
     
-    public class func isUpdateAvailable() -> Bool {
-        guard let data = versionAndDownloadUrl() else { return false }
-        let appStoreVewsion = data.version
-        
-        return compare(appstoreVersion: appStoreVewsion)
-    }
-    
-    private class func compare(appstoreVersion: String) -> Bool {
-        guard let deviceVersion = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String else { return false }
-        
-        if appstoreVersion.compare(deviceVersion, options: .numeric) == .orderedDescending {
-            return true
-        } else {
-            return false
-        }
-    }
-    
     public class func showUpdateAlert(isForce:Bool = false) {
         guard let applicationName = Bundle.main.object(forInfoDictionaryKey: "CFBundleName") as? String, let data = versionAndDownloadUrl() else { return }
         
@@ -60,12 +43,7 @@ public class Updater: NSObject {
             if !isForce {
                 alert?.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: nil))
             }
-        } else {
-//            if !isForce {
-//                alert = UIAlertController(title: applicationName, message: "Version \(data.version) is the latest version on the AppStore", preferredStyle: UIAlertController.Style.alert)
-//                alert?.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.cancel, handler: nil))
-//            }
-        }
+        } 
         
         guard let _alert = alert else { return }
         UIApplication
@@ -80,5 +58,50 @@ public class Updater: NSObject {
 //        UIApplication.shared.keyWindow?.rootViewController?.present(_alert, animated: true, completion: {
 //
 //        })
+    }
+    
+    private class func normalizeVersion(_ version: String, toLength length: Int) -> String {
+        var components = version.split(separator: ".").map(String.init)
+        while components.count < length {
+            components.append("0")
+        }
+        return components.joined(separator: ".")
+    }
+
+    private class func compareVersions(_ current: String, _ appStore: String) -> ComparisonResult {
+        let currentComponents = current.split(separator: ".").map(String.init)
+        let appStoreComponents = appStore.split(separator: ".").map(String.init)
+        let maxLength = max(currentComponents.count, appStoreComponents.count)
+        
+        let normalizedCurrent = normalizeVersion(current, toLength: maxLength)
+        let normalizedAppStore = normalizeVersion(appStore, toLength: maxLength)
+        
+        return normalizedCurrent.compare(normalizedAppStore, options: .numeric)
+    }
+    
+    private class func compare(appstoreVersion: String) -> Bool {
+        guard let deviceVersion = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String else { return false }
+        
+        print(deviceVersion)
+        print(appstoreVersion)
+        
+        let versionCompare = compareVersions(deviceVersion, appstoreVersion)
+        
+        if versionCompare == .orderedSame {
+            print("Same version")
+            return false
+        } else if versionCompare == .orderedAscending {
+            print("Ask user to update")
+            return true
+        } else { //if versionCompare == .orderedDescending {
+            print("Don't expect happen...")
+            return false
+        }
+        
+//        if appstoreVersion.compare(deviceVersion, options: .numeric) == .orderedDescending {
+//            return true
+//        } else {
+//            return false
+//        }
     }
 }
