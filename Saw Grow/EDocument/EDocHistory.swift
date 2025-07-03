@@ -179,7 +179,7 @@ extension EDocHistory: UICollectionViewDataSource {
             
             cell.cellImage.sd_setImage(with: URL(string:cellArray["icon_url"].stringValue), placeholderImage: UIImage(named: "logo_circle"))
             cell.cellTitle.text = cellArray[requestNameKey()].stringValue
-            cell.cellDate.text = "\("EDOC_SLIP_Period".localized()) \(cellArray["period"].stringValue)"
+            cell.cellDate.text = "\("EDOC_SLIP_Period".localized()) \(cellArray["period_str"].stringValue)"
             cell.cellSentDate.text = "\("Sent_Date".localized()) \(cellArray["senddate"].stringValue)"
             
             return cell

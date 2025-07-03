@@ -19,14 +19,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         
-//        UserDefaults.standard.removeObject(forKey:"access_token")
-//        UserDefaults.standard.removeObject(forKey:"passCode")
+        let defaults = UserDefaults.standard
+        //defaults.dictionaryRepresentation().keys.forEach(defaults.removeObject(forKey:))
         
         let storyboard = UIStoryboard.loginStoryBoard
         var navigationController : UINavigationController
         
-        let accessToken = UserDefaults.standard.string(forKey:"access_token")
-        let passCode = UserDefaults.standard.string(forKey:"passCode")
+        let accessToken = defaults.string(forKey:"access_token")
+        let passCode = defaults.string(forKey:"passCode")
         
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
@@ -63,6 +63,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             //bypassVC = UIStoryboard.rewardStoryBoard.instantiateViewController(withIdentifier: "Coupon") as! Coupon
             
             //bypassVC = UIStoryboard.attendanceStoryBoard.instantiateViewController(withIdentifier: "Leave") as! Leave
+            
+            //bypassVC = UIStoryboard.attendanceStoryBoard.instantiateViewController(withIdentifier: "LeaveDetail") as! LeaveDetail
+
             
             //bypassVC = UIStoryboard.attendanceStoryBoard.instantiateViewController(withIdentifier: "Attendance") as! Attendance
             

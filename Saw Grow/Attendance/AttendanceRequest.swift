@@ -122,7 +122,8 @@ class AttendanceRequest: UIViewController, UITextFieldDelegate, UITextViewDelega
                 {
                     ProgressHUD.dismiss()
                     self.dateField.isUserInteractionEnabled = true
-                    self.selectPicker(self.datePicker, didSelectRow: 0)
+                    //self.selectPicker(self.datePicker, didSelectRow: 0)
+                    //self.datePicker.selectRow(0, inComponent: 0, animated: true)
                     self.adjustTimeField.isUserInteractionEnabled = true
                 }
                 else{
@@ -151,6 +152,7 @@ class AttendanceRequest: UIViewController, UITextFieldDelegate, UITextViewDelega
         }
         else if textField == dateField && dateField.text == "" {
             selectPicker(datePicker, didSelectRow: 0)
+            datePicker.selectRow(0, inComponent: 0, animated: false)
         }
         else if textField == adjustTimeField && adjustTimeField.text == "" {
             datePickerChanged(picker: adjustTimePicker)
@@ -296,13 +298,13 @@ class AttendanceRequest: UIViewController, UITextFieldDelegate, UITextViewDelega
         selectedClockTime = ""
         selectedAdjustTime = ""
         
-        monthYearField.text = ""
-        //monthYearPicker.date = Date()
-        monthYearIcon.setImage(UIImage(named: "form_date_off"), for: .normal)
+//        monthYearField.text = ""
+//        //monthYearPicker.date = Date()
+//        monthYearIcon.setImage(UIImage(named: "form_date_off"), for: .normal)
         
         dateField.text = ""
-        datePicker.reloadAllComponents()
         dateIcon.setImage(UIImage(named: "form_date_off"), for: .normal)
+        datePicker.reloadAllComponents()
         
         normalTimeField.text = ""
         realTimeField.text = ""
@@ -310,6 +312,8 @@ class AttendanceRequest: UIViewController, UITextFieldDelegate, UITextViewDelega
         adjustTimeField.text = ""
         adjustTimePicker.date = Date()
         adjustTimeIcon.setImage(UIImage(named: "form_time_off"), for: .normal)
+        adjustTimeField.isUserInteractionEnabled = false
+        loadAttendance(monthYear: mySelectedDate)
         
         remarkText.text = remarkStr
         remarkText.textColor = UIColor.lightGray

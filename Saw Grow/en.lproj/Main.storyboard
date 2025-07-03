@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IyO-dQ-C0k">
-    <device id="retina5_9" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IyO-dQ-C0k">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -55,11 +55,11 @@
             <objects>
                 <viewController storyboardIdentifier="SideMenu" id="zMs-dx-Yh8" userLabel="Side_Menu" customClass="SideMenu" customModule="Saw_Grow" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rTc-xs-cTY">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UHD-v6-evw">
-                                <rect key="frame" x="75" y="50" width="300" height="762"/>
+                                <rect key="frame" x="78.666666666666657" y="59" width="314.33333333333337" height="793"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_circle" translatesAutoresizingMaskIntoConstraints="NO" id="Und-nX-KcR" customClass="MyImageView" customModule="Saw_Grow" customModuleProvider="target">
                                         <rect key="frame" x="15" y="20" width="60" height="60"/>
@@ -74,20 +74,20 @@
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Company Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YeD-cx-V7t">
-                                        <rect key="frame" x="85" y="36.666666666666671" width="205" height="27"/>
+                                        <rect key="frame" x="84.999999999999986" y="36.666666666666671" width="219.33333333333331" height="27"/>
                                         <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="18"/>
                                         <color key="textColor" name="Text_Dark_Gray"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HCT-MO-Trt">
-                                        <rect key="frame" x="10" y="100" width="280" height="612"/>
+                                        <rect key="frame" x="10" y="100" width="294.33333333333331" height="643"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="56" id="erL-xy-K81">
-                                                <rect key="frame" x="0.0" y="50" width="280" height="56"/>
+                                                <rect key="frame" x="0.0" y="50" width="294.33333333333331" height="56"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="erL-xy-K81" id="y65-yo-a7g">
-                                                    <rect key="frame" x="0.0" y="0.0" width="280" height="56"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="294.33333333333331" height="56"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sidemenu_home" translatesAutoresizingMaskIntoConstraints="NO" id="COE-6f-0r3">
@@ -104,7 +104,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3   " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="50v-jp-nne">
-                                                            <rect key="frame" x="240" y="15.666666666666664" width="25" height="25"/>
+                                                            <rect key="frame" x="254.33333333333337" y="15.666666666666664" width="25" height="25"/>
                                                             <color key="backgroundColor" name="Btn_Red"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="50v-jp-nne" secondAttribute="height" multiplier="1:1" id="45G-qQ-XpN"/>
@@ -129,13 +129,13 @@
                                         </prototypes>
                                     </tableView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ljr-0S-91s">
-                                        <rect key="frame" x="10" y="712" width="280" height="50"/>
+                                        <rect key="frame" x="10" y="743" width="294.33333333333331" height="50"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eck-L9-87a">
-                                                <rect key="frame" x="0.0" y="0.0" width="280" height="50"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="294.33333333333331" height="50"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IgS-re-uOh">
-                                                        <rect key="frame" x="60" y="13.666666666666631" width="95" height="22.666666666666671"/>
+                                                        <rect key="frame" x="59.999999999999986" y="13.666666666666631" width="102.00000000000001" height="22.666666666666671"/>
                                                         <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="15"/>
                                                         <color key="textColor" name="Text_Dark_Gray"/>
                                                         <nil key="highlightedColor"/>
@@ -144,7 +144,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="V 1.0 (1)" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q9q-yK-lWG">
-                                                        <rect key="frame" x="165" y="13.666666666666631" width="95" height="22.666666666666671"/>
+                                                        <rect key="frame" x="172" y="13.666666666666631" width="102.33333333333331" height="22.666666666666671"/>
                                                         <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="15"/>
                                                         <color key="textColor" name="Text_Gray"/>
                                                         <nil key="highlightedColor"/>
@@ -207,14 +207,14 @@
             <objects>
                 <viewController storyboardIdentifier="Home" id="5sU-H9-qfd" userLabel="Home" customClass="Home" customModule="Saw_Grow" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GcL-tw-4se">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QQX-SR-edG" userLabel="HeaderView" customClass="MyView" customModule="Saw_Grow" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="50" width="375" height="225"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="225"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="j9B-aq-HIf">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="225"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="225"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ber-0z-2IA">
                                         <rect key="frame" x="20" y="10" width="40" height="40"/>
@@ -229,8 +229,8 @@
                                             <action selector="leftMenuShow:" destination="5sU-H9-qfd" eventType="touchUpInside" id="kCZ-0B-dR0"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JfK-xg-6Bn" customClass="MyButton" customModule="Saw_Grow" customModuleProvider="target">
-                                        <rect key="frame" x="147.66666666666666" y="10" width="80" height="80"/>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JfK-xg-6Bn" customClass="MyButton" customModule="Saw_Grow" customModuleProvider="target">
+                                        <rect key="frame" x="156.66666666666666" y="10" width="80" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="JfK-xg-6Bn" secondAttribute="height" multiplier="1:1" id="7Z8-wH-zd7"/>
                                             <constraint firstAttribute="height" constant="80" id="NTb-rw-t52"/>
@@ -252,10 +252,10 @@
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="n0B-v1-NjH">
-                                        <rect key="frame" x="124.66666666666666" y="100" width="125.66666666666666" height="60"/>
+                                        <rect key="frame" x="135" y="100" width="123.33333333333331" height="60"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name Surname" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oMm-cl-Exu">
-                                                <rect key="frame" x="0.0" y="0.0" width="125.66666666666667" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="123.33333333333333" height="30"/>
                                                 <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="18"/>
                                                 <color key="textColor" name="Text_White"/>
                                                 <nil key="highlightedColor"/>
@@ -263,7 +263,7 @@
                                                 <size key="shadowOffset" width="0.0" height="2"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Position" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eO3-te-AXj">
-                                                <rect key="frame" x="0.0" y="30" width="125.66666666666667" height="30"/>
+                                                <rect key="frame" x="0.0" y="30" width="123.33333333333333" height="30"/>
                                                 <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="16"/>
                                                 <color key="textColor" name="Text_White"/>
                                                 <nil key="highlightedColor"/>
@@ -290,16 +290,16 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="szG-Z1-FLj" userLabel="BottomView">
-                                <rect key="frame" x="0.0" y="275" width="375" height="454"/>
+                                <rect key="frame" x="0.0" y="284" width="393" height="485"/>
                                 <subviews>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QoC-Be-x58">
-                                        <rect key="frame" x="0.0" y="65" width="375" height="389"/>
+                                        <rect key="frame" x="0.0" y="65" width="393" height="420"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="hES-qN-f6z">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="656"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="663.33333333333337"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="gNn-Ph-ahd">
-                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="230"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="393" height="230"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fGv-sX-iUP">
                                                                 <rect key="frame" x="0.0" y="0.0" width="117" height="30"/>
@@ -324,7 +324,7 @@
                                                                 </constraints>
                                                             </view>
                                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="S30-MZ-GfH">
-                                                                <rect key="frame" x="0.0" y="40" width="375" height="190"/>
+                                                                <rect key="frame" x="0.0" y="40" width="393" height="190"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="190" id="6PS-B5-3ks"/>
                                                                 </constraints>
@@ -383,7 +383,7 @@ E-Document</string>
                                                         </constraints>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="sif-hV-juu">
-                                                        <rect key="frame" x="0.0" y="235" width="375" height="182"/>
+                                                        <rect key="frame" x="0.0" y="235" width="393" height="189.33333333333337"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hrv-cf-mec">
                                                                 <rect key="frame" x="0.0" y="0.0" width="169.66666666666666" height="30"/>
@@ -408,7 +408,7 @@ E-Document</string>
                                                                 </constraints>
                                                             </view>
                                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="2" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="D9y-el-3It">
-                                                                <rect key="frame" x="0.0" y="30" width="375" height="152"/>
+                                                                <rect key="frame" x="0.0" y="30" width="393" height="159.33333333333334"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="D9y-el-3It" secondAttribute="height" multiplier="350:142" id="iQG-L5-Zvd"/>
@@ -421,7 +421,7 @@ E-Document</string>
                                                                 </collectionViewFlowLayout>
                                                                 <cells>
                                                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AnnouncementCell" id="k3i-RH-GTk" customClass="AnnouncementCell" customModule="Saw_Grow" customModuleProvider="target">
-                                                                        <rect key="frame" x="0.0" y="-8.6666666666666661" width="402" height="169.5"/>
+                                                                        <rect key="frame" x="0.0" y="-5" width="402" height="169.5"/>
                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Lyl-uu-aJR">
                                                                             <rect key="frame" x="0.0" y="0.0" width="402" height="169.5"/>
@@ -459,13 +459,13 @@ E-Document</string>
                                                         </constraints>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="sk9-B8-fU4">
-                                                        <rect key="frame" x="0.0" y="422" width="375" height="234"/>
+                                                        <rect key="frame" x="0.0" y="429.33333333333337" width="393" height="234"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Enk-Tp-vWT">
-                                                                <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="393" height="30"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recommend" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EJT-7E-erX">
-                                                                        <rect key="frame" x="20" y="0.0" width="261.33333333333331" height="30"/>
+                                                                        <rect key="frame" x="20" y="0.0" width="274.66666666666669" height="30"/>
                                                                         <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="16"/>
                                                                         <color key="textColor" name="Text_Gray_1"/>
                                                                         <nil key="highlightedColor"/>
@@ -474,7 +474,7 @@ E-Document</string>
                                                                         </userDefinedRuntimeAttributes>
                                                                     </label>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4bS-kj-wQ1">
-                                                                        <rect key="frame" x="275" y="0.0" width="80" height="30"/>
+                                                                        <rect key="frame" x="293" y="0.0" width="80" height="30"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="80" id="eDf-IF-GgY"/>
                                                                         </constraints>
@@ -505,7 +505,7 @@ E-Document</string>
                                                                 </constraints>
                                                             </view>
                                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="3" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Y9x-vO-ly6">
-                                                                <rect key="frame" x="0.0" y="30" width="375" height="204"/>
+                                                                <rect key="frame" x="0.0" y="30" width="393" height="204"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="204" id="6A5-Me-Y7d"/>
@@ -598,7 +598,7 @@ E-Document</string>
                                                 </constraints>
                                             </stackView>
                                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="1" translatesAutoresizingMaskIntoConstraints="NO" id="6fY-jT-dec">
-                                                <rect key="frame" x="147.66666666666666" y="391.33333333333337" width="80" height="25.666666666666686"/>
+                                                <rect key="frame" x="177.66666666666666" y="398.66666666666663" width="37.666666666666657" height="25.666666666666686"/>
                                                 <color key="pageIndicatorTintColor" name="Btn_Disable"/>
                                                 <color key="currentPageIndicatorTintColor" name="Main_Theme_1"/>
                                             </pageControl>
@@ -624,16 +624,16 @@ E-Document</string>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cvJ-92-pey" userLabel="MainMenuView" customClass="MyView" customModule="Saw_Grow" customModuleProvider="target">
-                                <rect key="frame" x="20" y="220" width="335" height="110"/>
+                                <rect key="frame" x="20" y="229" width="353" height="110"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="BgS-4S-r0p">
-                                        <rect key="frame" x="5" y="10" width="325" height="100"/>
+                                        <rect key="frame" x="5" y="10" width="343" height="100"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="DNB-om-V51">
-                                                <rect key="frame" x="0.0" y="0.0" width="81.333333333333329" height="100"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="85.666666666666671" height="100"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OOj-1V-ba4">
-                                                        <rect key="frame" x="0.0" y="0.0" width="81.333333333333329" height="45"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="85.666666666666671" height="45"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="45" id="Ewx-SH-ULa"/>
                                                         </constraints>
@@ -643,7 +643,7 @@ E-Document</string>
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check in" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ThX-8Y-2ja" customClass="MyLabelTopAligned" customModule="Saw_Grow" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="55" width="81.333333333333329" height="45"/>
+                                                        <rect key="frame" x="0.0" y="55" width="85.666666666666671" height="45"/>
                                                         <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="14"/>
                                                         <color key="textColor" name="Text_Dark_Gray"/>
                                                         <nil key="highlightedColor"/>
@@ -651,10 +651,10 @@ E-Document</string>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="E4G-D3-joE">
-                                                <rect key="frame" x="81.333333333333343" y="0.0" width="81.333333333333343" height="100"/>
+                                                <rect key="frame" x="85.666666666666686" y="0.0" width="86" height="100"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KL8-zo-Rom">
-                                                        <rect key="frame" x="0.0" y="0.0" width="81.333333333333329" height="45"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="86" height="45"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="45" id="Hmi-q3-0L8"/>
                                                         </constraints>
@@ -664,7 +664,7 @@ E-Document</string>
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7h7-q4-nCs" customClass="MyLabelTopAligned" customModule="Saw_Grow" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="55" width="81.333333333333329" height="45"/>
+                                                        <rect key="frame" x="0.0" y="55" width="86" height="45"/>
                                                         <string key="text">Working
  Hour</string>
                                                         <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="14"/>
@@ -674,10 +674,10 @@ E-Document</string>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="rxB-ne-g0h">
-                                                <rect key="frame" x="162.66666666666666" y="0.0" width="81" height="100"/>
+                                                <rect key="frame" x="171.66666666666666" y="0.0" width="85.666666666666657" height="100"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xqP-Na-mHT">
-                                                        <rect key="frame" x="0.0" y="0.0" width="81" height="45"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="85.666666666666671" height="45"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="45" id="CcY-N6-VP3"/>
                                                         </constraints>
@@ -687,7 +687,7 @@ E-Document</string>
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Leaves" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vMu-LN-iyn" customClass="MyLabelTopAligned" customModule="Saw_Grow" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="55" width="81" height="45"/>
+                                                        <rect key="frame" x="0.0" y="55" width="85.666666666666671" height="45"/>
                                                         <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="14"/>
                                                         <color key="textColor" name="Text_Dark_Gray"/>
                                                         <nil key="highlightedColor"/>
@@ -695,10 +695,10 @@ E-Document</string>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dss-Uc-fkN">
-                                                <rect key="frame" x="243.66666666666671" y="0.0" width="81.333333333333343" height="100"/>
+                                                <rect key="frame" x="257.33333333333331" y="0.0" width="85.666666666666686" height="100"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HdM-IM-Kwi">
-                                                        <rect key="frame" x="0.0" y="0.0" width="81.333333333333329" height="45"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="85.666666666666671" height="45"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="45" id="cQg-1P-mDl"/>
                                                         </constraints>
@@ -708,7 +708,7 @@ E-Document</string>
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OT Request" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1QD-f9-Jb3" customClass="MyLabelTopAligned" customModule="Saw_Grow" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="55" width="81.333333333333329" height="45"/>
+                                                        <rect key="frame" x="0.0" y="55" width="85.666666666666671" height="45"/>
                                                         <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="14"/>
                                                         <color key="textColor" name="Text_Dark_Gray"/>
                                                         <nil key="highlightedColor"/>
@@ -804,7 +804,7 @@ E-Document</string>
                             </connections>
                         </button>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="NCb-6x-LY5">
-                            <rect key="frame" x="25" y="45" width="324" height="310.66666666666669"/>
+                            <rect key="frame" x="25" y="45" width="324" height="322"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="reward_icon2" translatesAutoresizingMaskIntoConstraints="NO" id="3Xh-5q-E7z">
                                     <rect key="frame" x="52" y="0.0" width="220" height="220"/>
@@ -814,16 +814,16 @@ E-Document</string>
                                     </constraints>
                                 </imageView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="La0-aP-cFa">
-                                    <rect key="frame" x="1.6666666666666572" y="239.99999999999997" width="320.66666666666674" height="70.666666666666657"/>
+                                    <rect key="frame" x="5" y="240" width="314.33333333333331" height="82"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Happy Birthday" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QwZ-Xo-sTp">
-                                            <rect key="frame" x="0.0" y="0.0" width="320.66666666666669" height="28"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Happy Birthday" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QwZ-Xo-sTp">
+                                            <rect key="frame" x="0.0" y="0.0" width="314.33333333333331" height="36"/>
                                             <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="24"/>
                                             <color key="textColor" name="Text_Dark_Gray"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Happy Birthday to Saw Member Wish you a happy work life" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CEi-Rm-0rd">
-                                            <rect key="frame" x="0.0" y="38" width="320.66666666666669" height="32.666666666666657"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Happy Birthday to Saw Member Wish you a happy work life" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CEi-Rm-0rd">
+                                            <rect key="frame" x="0.0" y="46" width="314.33333333333331" height="36"/>
                                             <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="14"/>
                                             <color key="textColor" name="Text_Dark_Gray"/>
                                             <nil key="highlightedColor"/>
@@ -883,7 +883,7 @@ E-Document</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hx9-ml-Aei" userLabel="HeaderView">
-                                <rect key="frame" x="0.0" y="50" width="414" height="140"/>
+                                <rect key="frame" x="0.0" y="59" width="414" height="140"/>
                                 <subviews>
                                     <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="header_medium" translatesAutoresizingMaskIntoConstraints="NO" id="8mv-ox-dZg">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="140"/>
@@ -902,7 +902,7 @@ E-Document</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reward" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VMk-cP-Dch">
-                                        <rect key="frame" x="172.66666666666666" y="18.333333333333329" width="68.666666666666657" height="23.333333333333329"/>
+                                        <rect key="frame" x="174" y="15" width="66.333333333333314" height="30"/>
                                         <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="20"/>
                                         <color key="textColor" name="Text_White"/>
                                         <nil key="highlightedColor"/>
@@ -925,10 +925,10 @@ E-Document</string>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dcZ-WR-K7v" userLabel="BottomView">
-                                <rect key="frame" x="0.0" y="190" width="414" height="727"/>
+                                <rect key="frame" x="0.0" y="199" width="414" height="718"/>
                                 <subviews>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OwS-wB-kl1">
-                                        <rect key="frame" x="0.0" y="143.33333333333331" width="414" height="583.66666666666674"/>
+                                        <rect key="frame" x="0.0" y="146.66666666666669" width="414" height="571.33333333333326"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="AUr-vy-fI5">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="444"/>
@@ -1025,7 +1025,7 @@ E-Document</string>
                                                         </constraints>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="E0L-ee-kSy">
-                                                        <rect key="frame" x="0.0" y="180.00000000000006" width="414" height="264"/>
+                                                        <rect key="frame" x="0.0" y="179.99999999999994" width="414" height="264"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wi0-yP-sFx">
                                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
@@ -1348,28 +1348,28 @@ E-Document</string>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9o3-fR-baY" userLabel="CardView">
-                                <rect key="frame" x="20" y="116.66666666666667" width="374" height="206.66666666666663"/>
+                                <rect key="frame" x="20" y="129" width="374" height="206.66666666666663"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="reward_card_bg" translatesAutoresizingMaskIntoConstraints="NO" id="VJB-lW-mpl">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="206.66666666666666"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Demo Account" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sIQ-5s-fYM">
-                                        <rect key="frame" x="15" y="14.999999999999986" width="344" height="35"/>
+                                        <rect key="frame" x="15" y="15" width="344" height="45"/>
                                         <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="30"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="7Th-Oa-WlI">
-                                        <rect key="frame" x="10" y="103.33333333333334" width="354" height="93.333333333333343"/>
+                                        <rect key="frame" x="10" y="76.666666666666657" width="354" height="120"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cnh-qE-Wrx">
-                                                <rect key="frame" x="0.0" y="0.0" width="354" height="58.333333333333336"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="354" height="75"/>
                                                 <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="50"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Points" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ENv-H4-rN6">
-                                                <rect key="frame" x="0.0" y="58.333333333333314" width="354" height="35"/>
+                                                <rect key="frame" x="0.0" y="75.000000000000028" width="354" height="45"/>
                                                 <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="30"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -1433,27 +1433,27 @@ E-Document</string>
             <objects>
                 <viewController storyboardIdentifier="DirectoryList" id="Fe7-mC-XlA" userLabel="Directory_List" customClass="DirectoryList" customModule="Saw_Grow" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="axz-7N-CPN">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aal-J5-lP6" userLabel="HeaderView">
-                                <rect key="frame" x="0.0" y="50" width="375" height="198"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="198"/>
                                 <subviews>
                                     <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="header_tall" translatesAutoresizingMaskIntoConstraints="NO" id="NHE-d6-cWb">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="198"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="198"/>
                                         <color key="backgroundColor" name="Bg_Light_Gray"/>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="zlP-mW-vSS">
-                                        <rect key="frame" x="20" y="60" width="335" height="118"/>
+                                        <rect key="frame" x="20" y="60" width="353" height="118"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rbl-mE-nWP" customClass="MyView" customModule="Saw_Grow" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="335" height="50"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="353" height="50"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="D9q-7p-Kb5">
-                                                        <rect key="frame" x="7" y="7" width="321" height="36"/>
+                                                        <rect key="frame" x="7" y="7" width="339" height="36"/>
                                                         <subviews>
                                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TPc-hm-ZDe" customClass="MyButton" customModule="Saw_Grow" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="106.33333333333333" height="36"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="112.33333333333333" height="36"/>
                                                                 <color key="backgroundColor" name="Main_Theme_1"/>
                                                                 <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="16"/>
                                                                 <state key="normal" title="A-Z">
@@ -1470,7 +1470,7 @@ E-Document</string>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BBI-L9-gRm" customClass="MyButton" customModule="Saw_Grow" customModuleProvider="target">
-                                                                <rect key="frame" x="107.33333333333334" y="0.0" width="106.33333333333334" height="36"/>
+                                                                <rect key="frame" x="113.33333333333334" y="0.0" width="112.33333333333334" height="36"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="16"/>
                                                                 <state key="normal" title="Favorite">
@@ -1487,7 +1487,7 @@ E-Document</string>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jY8-iA-NQ6" customClass="MyButton" customModule="Saw_Grow" customModuleProvider="target">
-                                                                <rect key="frame" x="214.66666666666666" y="0.0" width="106.33333333333334" height="36"/>
+                                                                <rect key="frame" x="226.66666666666666" y="0.0" width="112.33333333333334" height="36"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="16"/>
                                                                 <state key="normal" title="My Team">
@@ -1521,7 +1521,7 @@ E-Document</string>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oEd-tF-7wE" customClass="MyView" customModule="Saw_Grow" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="68" width="335" height="50"/>
+                                                <rect key="frame" x="0.0" y="68" width="353" height="50"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tabbar_search" translatesAutoresizingMaskIntoConstraints="NO" id="wzX-gR-T7Q">
                                                         <rect key="frame" x="15" y="13.666666666666657" width="23" height="23"/>
@@ -1531,7 +1531,7 @@ E-Document</string>
                                                         </constraints>
                                                     </imageView>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search contacts" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="6MX-Bw-NHi">
-                                                        <rect key="frame" x="48" y="14.999999999999998" width="187" height="20.333333333333329"/>
+                                                        <rect key="frame" x="48" y="12.333333333333345" width="205" height="25.666666666666671"/>
                                                         <color key="textColor" name="Text_Dark_Gray"/>
                                                         <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="16"/>
                                                         <textInputTraits key="textInputTraits" returnKeyType="search"/>
@@ -1540,7 +1540,7 @@ E-Document</string>
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="xtg-Vi-16X">
-                                                        <rect key="frame" x="250" y="10" width="70" height="30"/>
+                                                        <rect key="frame" x="268" y="10" width="70" height="30"/>
                                                         <subviews>
                                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wyE-TH-xhu">
                                                                 <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
@@ -1615,10 +1615,10 @@ E-Document</string>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TNA-oE-Abe" userLabel="BottomView">
-                                <rect key="frame" x="0.0" y="248" width="375" height="481"/>
+                                <rect key="frame" x="0.0" y="257" width="393" height="512"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="G7Q-ea-fl9">
-                                        <rect key="frame" x="20" y="0.0" width="335" height="481"/>
+                                        <rect key="frame" x="20" y="0.0" width="353" height="512"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="15" minimumInteritemSpacing="10" id="OQG-hj-cmx">
                                             <size key="itemSize" width="356.5" height="88"/>
                                             <size key="headerReferenceSize" width="50" height="50"/>
@@ -1649,19 +1649,19 @@ E-Document</string>
                                                             <rect key="frame" x="91" y="13" width="175" height="62"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wankawee Wisarnwan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eDn-RK-JhT">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="141.33333333333334" height="20.666666666666668"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="139" height="20.666666666666668"/>
                                                                     <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="14"/>
                                                                     <color key="textColor" name="Text_Dark_Gray"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IT Director" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rVh-Ld-TGz">
-                                                                    <rect key="frame" x="0.0" y="20.666666666666664" width="56" height="20.666666666666664"/>
+                                                                    <rect key="frame" x="0.0" y="20.666666666666664" width="55.333333333333336" height="20.666666666666664"/>
                                                                     <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="12"/>
                                                                     <color key="textColor" name="Text_Gray"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Annual Leave" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U9j-mS-yWm">
-                                                                    <rect key="frame" x="0.0" y="41.333333333333336" width="72.333333333333329" height="20.666666666666664"/>
+                                                                    <rect key="frame" x="0.0" y="41.333333333333336" width="73" height="20.666666666666664"/>
                                                                     <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="12"/>
                                                                     <color key="textColor" name="Text_Gray"/>
                                                                     <nil key="highlightedColor"/>
@@ -1840,16 +1840,16 @@ E-Document</string>
                                                                     </constraints>
                                                                 </view>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="C3O-5Y-q4O">
-                                                                    <rect key="frame" x="14.333333333333329" y="72" width="141.33333333333337" height="45"/>
+                                                                    <rect key="frame" x="15.666666666666671" y="72" width="139" height="45"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wankawee Wisarnwan" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yNU-OA-Btk">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="141.33333333333334" height="22.666666666666668"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="139" height="22.666666666666668"/>
                                                                             <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="14"/>
                                                                             <color key="textColor" name="Text_Dark_Gray"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IT Director" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zoL-BW-WGF">
-                                                                            <rect key="frame" x="0.0" y="22.666666666666671" width="141.33333333333334" height="22.333333333333329"/>
+                                                                            <rect key="frame" x="0.0" y="22.666666666666671" width="139" height="22.333333333333329"/>
                                                                             <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="12"/>
                                                                             <color key="textColor" name="Text_Gray"/>
                                                                             <nil key="highlightedColor"/>
@@ -1931,7 +1931,7 @@ E-Document</string>
                                             </collectionViewCell>
                                         </cells>
                                         <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DirectoryHeader_Cell" id="DxB-uM-01m" customClass="DirectoryHeader_Cell" customModule="Saw_Grow" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="335" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="353" height="50"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ArQ-Hw-Gvg">
@@ -1957,7 +1957,7 @@ E-Document</string>
                                                     </subviews>
                                                 </stackView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qSX-vj-FSH">
-                                                    <rect key="frame" x="237" y="11.666666666666664" width="90" height="27"/>
+                                                    <rect key="frame" x="255" y="11.666666666666664" width="90" height="27"/>
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w0l-hA-ZV3" customClass="MyButton" customModule="Saw_Grow" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="0.0" width="45" height="27"/>
@@ -2057,14 +2057,14 @@ E-Document</string>
             <objects>
                 <viewController storyboardIdentifier="DirectoryFavorite" id="gy3-lW-J3P" userLabel="Directory_Favorite" customClass="DirectoryFavorite" customModule="Saw_Grow" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6DX-Sf-nAb">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sbe-OG-sCF" userLabel="HeaderView">
-                                <rect key="frame" x="0.0" y="50" width="375" height="135"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="135"/>
                                 <subviews>
                                     <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="header_medium" translatesAutoresizingMaskIntoConstraints="NO" id="gcI-cF-Ydj">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="135"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="135"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q9i-cF-2K6">
                                         <rect key="frame" x="20" y="20" width="62" height="25"/>
@@ -2085,7 +2085,7 @@ E-Document</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favorite" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jcq-Jy-TYp">
-                                        <rect key="frame" x="150.66666666666666" y="17.666666666666671" width="74" height="30"/>
+                                        <rect key="frame" x="159.66666666666666" y="17.666666666666671" width="74" height="30"/>
                                         <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="20"/>
                                         <color key="textColor" name="Text_White"/>
                                         <nil key="highlightedColor"/>
@@ -2094,7 +2094,7 @@ E-Document</string>
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k40-gW-McD" customClass="MyView" customModule="Saw_Grow" customModuleProvider="target">
-                                        <rect key="frame" x="15" y="65" width="345" height="50"/>
+                                        <rect key="frame" x="15" y="65" width="363" height="50"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tabbar_search" translatesAutoresizingMaskIntoConstraints="NO" id="t8Q-Ka-QCO">
                                                 <rect key="frame" x="15" y="13.666666666666657" width="23" height="23"/>
@@ -2104,7 +2104,7 @@ E-Document</string>
                                                 </constraints>
                                             </imageView>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search Contacts" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Cda-DN-y7i">
-                                                <rect key="frame" x="48" y="12.33333333333333" width="287" height="25.666666666666671"/>
+                                                <rect key="frame" x="48" y="12.333333333333345" width="305" height="25.666666666666671"/>
                                                 <color key="textColor" name="Text_Dark_Gray"/>
                                                 <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="search"/>
@@ -2146,10 +2146,10 @@ E-Document</string>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NFm-Y0-5wg" userLabel="BottomView">
-                                <rect key="frame" x="0.0" y="185" width="375" height="627"/>
+                                <rect key="frame" x="0.0" y="194" width="393" height="658"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="aLP-FD-O70">
-                                        <rect key="frame" x="20" y="0.0" width="335" height="602"/>
+                                        <rect key="frame" x="20" y="0.0" width="353" height="633"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="6V8-w9-3Yv">
                                             <size key="itemSize" width="367" height="65"/>
                                             <size key="headerReferenceSize" width="50" height="35"/>
@@ -2158,7 +2158,7 @@ E-Document</string>
                                         </collectionViewFlowLayout>
                                         <cells>
                                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Directory_Cell" id="0R8-L5-oai" customClass="Directory_Cell" customModule="Saw_Grow" customModuleProvider="target">
-                                                <rect key="frame" x="-19.666666666666668" y="35" width="374" height="65"/>
+                                                <rect key="frame" x="-10.666666666666666" y="35" width="374" height="65"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="8Ij-BD-RGw">
                                                     <rect key="frame" x="0.0" y="0.0" width="374" height="65"/>
@@ -2212,11 +2212,11 @@ E-Document</string>
                                             </collectionViewCell>
                                         </cells>
                                         <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DirectoryHeader_Cell" id="xNF-s1-Gdq" customClass="DirectoryHeader_Cell" customModule="Saw_Grow" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="335" height="35"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="353" height="35"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Favorite" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nMN-vi-cgp">
-                                                    <rect key="frame" x="8" y="6.3333333333333339" width="311" height="22.666666666666664"/>
+                                                    <rect key="frame" x="8" y="6.3333333333333339" width="329" height="22.666666666666664"/>
                                                     <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="15"/>
                                                     <color key="textColor" name="Main_Theme_1"/>
                                                     <nil key="highlightedColor"/>
@@ -2272,14 +2272,14 @@ E-Document</string>
             <objects>
                 <viewController storyboardIdentifier="CalendarList" id="XrM-Al-Ziz" userLabel="CalendarList" customClass="CalendarList" customModule="Saw_Grow" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="M15-5U-G7N">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7bg-VR-A9X" userLabel="HeaderView">
-                                <rect key="frame" x="0.0" y="50" width="375" height="140"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="140"/>
                                 <subviews>
                                     <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="header_medium" translatesAutoresizingMaskIntoConstraints="NO" id="YtH-w2-2yG">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="140"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="140"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1KU-b1-2Fy">
                                         <rect key="frame" x="20" y="10" width="40" height="40"/>
@@ -2306,17 +2306,17 @@ E-Document</string>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Lf-Mt-tXr" userLabel="BottomView">
-                                <rect key="frame" x="0.0" y="190" width="375" height="539"/>
+                                <rect key="frame" x="0.0" y="199" width="393" height="570"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="IXd-Hw-sBG">
-                                        <rect key="frame" x="20" y="260" width="335" height="279"/>
+                                        <rect key="frame" x="20" y="260" width="353" height="310"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="CalendarCell_Header" rowHeight="49" id="bQE-NM-13n" customClass="CalendarCell_Header" customModule="Saw_Grow" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="55.333332061767578" width="335" height="49"/>
+                                                <rect key="frame" x="0.0" y="55.333332061767578" width="353" height="49"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bQE-NM-13n" id="vAb-nX-Hqe">
-                                                    <rect key="frame" x="0.0" y="0.0" width="335" height="49"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="353" height="49"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hMx-aD-O2G" userLabel="dateView">
@@ -2327,7 +2327,7 @@ E-Document</string>
                                                             </constraints>
                                                         </view>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jk1-iG-hLd" userLabel="detailView">
-                                                            <rect key="frame" x="50" y="0.0" width="285" height="49"/>
+                                                            <rect key="frame" x="50" y="0.0" width="303" height="49"/>
                                                             <subviews>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IbC-2t-z3E">
                                                                     <rect key="frame" x="0.0" y="0.0" width="10" height="49"/>
@@ -2374,10 +2374,10 @@ E-Document</string>
                                                 </connections>
                                             </tableViewCell>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="CalendarCell_Normal" rowHeight="49" id="zyJ-e6-BQz" customClass="CalendarCell_Normal" customModule="Saw_Grow" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="104.33333206176758" width="335" height="49"/>
+                                                <rect key="frame" x="0.0" y="104.33333206176758" width="353" height="49"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zyJ-e6-BQz" id="sIp-Ms-Vta">
-                                                    <rect key="frame" x="0.0" y="0.0" width="335" height="49"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="353" height="49"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SxW-wE-OdJ" userLabel="dateView">
@@ -2409,7 +2409,7 @@ E-Document</string>
                                                             </constraints>
                                                         </view>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oaQ-Pa-g0Y" userLabel="detailView">
-                                                            <rect key="frame" x="50" y="0.0" width="285" height="49"/>
+                                                            <rect key="frame" x="50" y="0.0" width="303" height="49"/>
                                                             <subviews>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rks-rx-XYp">
                                                                     <rect key="frame" x="0.0" y="0.0" width="10" height="49"/>
@@ -2452,13 +2452,13 @@ E-Document</string>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00 AM" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FAe-bl-8Wf">
-                                                                    <rect key="frame" x="187.66666666666666" y="13.333333333333334" width="57.333333333333343" height="22.666666666666664"/>
+                                                                    <rect key="frame" x="205.66666666666666" y="13.333333333333334" width="57.333333333333343" height="22.666666666666664"/>
                                                                     <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="15"/>
                                                                     <color key="textColor" name="Text_Dark_Gray"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fdn-3P-Xqn" customClass="MyButton" customModule="Saw_Grow" customModuleProvider="target">
-                                                                    <rect key="frame" x="255" y="14.666666666666664" width="20" height="20"/>
+                                                                    <rect key="frame" x="273" y="14.666666666666664" width="20" height="20"/>
                                                                     <color key="backgroundColor" name="Main_Theme_1"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" secondItem="Fdn-3P-Xqn" secondAttribute="height" multiplier="1:1" id="RP6-vJ-vJe"/>
@@ -2514,10 +2514,10 @@ E-Document</string>
                                                 </connections>
                                             </tableViewCell>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="CalendarCell_Event" rowHeight="60" id="8KN-sG-kWX" customClass="CalendarCell_Event" customModule="Saw_Grow" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="153.33333206176758" width="335" height="60"/>
+                                                <rect key="frame" x="0.0" y="153.33333206176758" width="353" height="60"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8KN-sG-kWX" id="lS5-vt-sdI">
-                                                    <rect key="frame" x="0.0" y="0.0" width="335" height="60"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="353" height="60"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Plr-DH-GRN" userLabel="dateView">
@@ -2556,7 +2556,7 @@ E-Document</string>
                                                             </constraints>
                                                         </view>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hye-jM-JB2" customClass="MyView" customModule="Saw_Grow" customModuleProvider="target">
-                                                            <rect key="frame" x="50" y="5" width="285" height="50"/>
+                                                            <rect key="frame" x="50" y="5" width="303" height="50"/>
                                                             <subviews>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YBc-oW-YkU">
                                                                     <rect key="frame" x="0.0" y="0.0" width="10" height="50"/>
@@ -2566,16 +2566,16 @@ E-Document</string>
                                                                     </constraints>
                                                                 </view>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="b5s-Jh-FVS">
-                                                                    <rect key="frame" x="25" y="2.3333333333333321" width="245" height="45.333333333333343"/>
+                                                                    <rect key="frame" x="25" y="2.3333333333333321" width="263" height="45.333333333333343"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You didn't check out" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GEV-rU-2gj">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="245" height="22.666666666666668"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="263" height="22.666666666666668"/>
                                                                             <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="15"/>
                                                                             <color key="textColor" name="Text_Point_Gold"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please update Attendance" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1pO-5u-Upf">
-                                                                            <rect key="frame" x="0.0" y="22.666666666666664" width="245" height="22.666666666666664"/>
+                                                                            <rect key="frame" x="0.0" y="22.666666666666664" width="263" height="22.666666666666664"/>
                                                                             <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="15"/>
                                                                             <color key="textColor" name="Text_Point_Gold"/>
                                                                             <nil key="highlightedColor"/>
@@ -2633,10 +2633,10 @@ E-Document</string>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pEY-dl-Ggx">
-                                <rect key="frame" x="20" y="110" width="335" height="330"/>
+                                <rect key="frame" x="20" y="119" width="353" height="330"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="137-YY-VVq" customClass="FSCalendar">
-                                        <rect key="frame" x="0.0" y="50" width="335" height="280"/>
+                                        <rect key="frame" x="0.0" y="50" width="353" height="280"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="firstWeekday">
@@ -2689,10 +2689,10 @@ E-Document</string>
                                         </connections>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cE9-vQ-DDz">
-                                        <rect key="frame" x="0.0" y="0.0" width="335" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="50"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="gAP-11-UvY">
-                                                <rect key="frame" x="64.333333333333329" y="0.0" width="206.66666666666669" height="50"/>
+                                                <rect key="frame" x="73.333333333333329" y="0.0" width="206.66666666666669" height="50"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5tg-iK-C6n">
                                                         <rect key="frame" x="0.0" y="5" width="40" height="40"/>
@@ -2729,7 +2729,7 @@ E-Document</string>
                                                 </subviews>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ffb-77-YyV">
-                                                <rect key="frame" x="297.66666666666669" y="10" width="27.333333333333314" height="30"/>
+                                                <rect key="frame" x="315.66666666666669" y="10" width="27.333333333333314" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="67M-y4-BoP"/>
                                                     <constraint firstAttribute="width" secondItem="Ffb-77-YyV" secondAttribute="height" multiplier="10:11" id="mlL-Hu-6eS"/>
@@ -2801,14 +2801,14 @@ E-Document</string>
             <objects>
                 <viewController storyboardIdentifier="NotificationAll" id="Mfc-le-8hH" userLabel="Notification" customClass="NotificationAll" customModule="Saw_Grow" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hP2-vG-dbz">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bbo-rB-Z1F" userLabel="HeaderView">
-                                <rect key="frame" x="0.0" y="50" width="375" height="60"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="60"/>
                                 <subviews>
                                     <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="header_short" translatesAutoresizingMaskIntoConstraints="NO" id="oQA-OV-Of0">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="zcv-vy-Vhh"/>
                                         </constraints>
@@ -2827,7 +2827,7 @@ E-Document</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notifications" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5g3-UV-OfN">
-                                        <rect key="frame" x="131.66666666666666" y="18.333333333333329" width="112" height="23.333333333333329"/>
+                                        <rect key="frame" x="138.33333333333334" y="15" width="116.33333333333334" height="30"/>
                                         <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="20"/>
                                         <color key="textColor" name="Text_White"/>
                                         <nil key="highlightedColor"/>
@@ -2848,10 +2848,10 @@ E-Document</string>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PUo-g5-3a1" userLabel="BottomView">
-                                <rect key="frame" x="0.0" y="110" width="375" height="619"/>
+                                <rect key="frame" x="0.0" y="119" width="393" height="650"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bGi-jY-OoV">
-                                        <rect key="frame" x="20" y="0.0" width="335" height="599"/>
+                                        <rect key="frame" x="20" y="0.0" width="353" height="630"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="15" minimumInteritemSpacing="10" id="UQo-yG-2zX">
                                             <size key="itemSize" width="358" height="98"/>
                                             <size key="headerReferenceSize" width="50" height="40"/>
@@ -2860,7 +2860,7 @@ E-Document</string>
                                         </collectionViewFlowLayout>
                                         <cells>
                                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Notification_Cell" id="Aba-b7-ehh" customClass="Notification_Cell" customModule="Saw_Grow" customModuleProvider="target">
-                                                <rect key="frame" x="-19.666666666666668" y="40" width="374" height="90"/>
+                                                <rect key="frame" x="-10.666666666666666" y="40" width="374" height="90"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="8Ju-zl-7pu">
                                                     <rect key="frame" x="0.0" y="0.0" width="374" height="90"/>
@@ -2904,22 +2904,22 @@ E-Document</string>
                                                             </constraints>
                                                         </imageView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="Bxi-l3-37H">
-                                                            <rect key="frame" x="118" y="18.666666666666671" width="241" height="53"/>
+                                                            <rect key="frame" x="118" y="12" width="241" height="66.333333333333329"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phonekhanet Kaewrit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gtZ-OW-FlG">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="133.66666666666666" height="16.333333333333332"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Phonekhanet Kaewrit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gtZ-OW-FlG">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="135.66666666666666" height="21"/>
                                                                     <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="14"/>
                                                                     <color key="textColor" name="Text_Dark_Gray"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sent Gift for You" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BQt-JM-Fbh">
-                                                                    <rect key="frame" x="0.0" y="19.333333333333332" width="95.666666666666671" height="15.333333333333332"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Sent Gift for You" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BQt-JM-Fbh">
+                                                                    <rect key="frame" x="0.0" y="24" width="95" height="19.666666666666671"/>
                                                                     <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="13"/>
                                                                     <color key="textColor" name="Text_Dark_Gray"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2 minutes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t8e-wK-VRX">
-                                                                    <rect key="frame" x="0.0" y="37.666666666666671" width="57" height="15.333333333333336"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="2 minutes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t8e-wK-VRX">
+                                                                    <rect key="frame" x="0.0" y="46.666666666666664" width="57.333333333333336" height="19.666666666666664"/>
                                                                     <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="13"/>
                                                                     <color key="textColor" name="Text_Gray"/>
                                                                     <nil key="highlightedColor"/>
@@ -2950,11 +2950,11 @@ E-Document</string>
                                             </collectionViewCell>
                                         </cells>
                                         <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="NotificationHeader_Cell" id="Avo-NZ-eTl" customClass="NotificationHeader_Cell" customModule="Saw_Grow" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="335" height="40"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="353" height="40"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="etv-MU-Gxh" customClass="MyButton" customModule="Saw_Grow" customModuleProvider="target">
-                                                    <rect key="frame" x="265" y="5.6666666666666679" width="70" height="29.000000000000004"/>
+                                                    <rect key="frame" x="283" y="5.6666666666666679" width="70" height="29.000000000000004"/>
                                                     <color key="backgroundColor" name="Main_Theme_1"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="70" id="eHx-o1-006"/>
@@ -3019,17 +3019,17 @@ E-Document</string>
             <objects>
                 <viewController storyboardIdentifier="Profile" id="Qos-19-bgs" userLabel="Profile" customClass="Profile" customModule="Saw_Grow" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tbR-ia-RHf">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mgE-0v-fEl" userLabel="HeaderView">
-                                <rect key="frame" x="0.0" y="50" width="375" height="260"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="260"/>
                                 <subviews>
                                     <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_header" translatesAutoresizingMaskIntoConstraints="NO" id="b8d-uR-Y3n">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="260"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="260"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PLs-1u-MHG">
-                                        <rect key="frame" x="20" y="10" width="63" height="25"/>
+                                        <rect key="frame" x="20" y="10" width="62" height="25"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="Mig-Vm-Ipb"/>
                                         </constraints>
@@ -3047,7 +3047,7 @@ E-Document</string>
                                         </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_circle" translatesAutoresizingMaskIntoConstraints="NO" id="Idd-xP-Q87" customClass="MyImageView" customModule="Saw_Grow" customModuleProvider="target">
-                                        <rect key="frame" x="137.66666666666666" y="10" width="100" height="100"/>
+                                        <rect key="frame" x="146.66666666666666" y="10" width="100" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Idd-xP-Q87" secondAttribute="height" multiplier="1:1" id="8XE-iv-MBe"/>
                                             <constraint firstAttribute="height" constant="100" id="jz4-gK-5Rs"/>
@@ -3065,7 +3065,7 @@ E-Document</string>
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qPF-pz-nKW" customClass="MyButton" customModule="Saw_Grow" customModuleProvider="target">
-                                        <rect key="frame" x="207.66666666666666" y="80" width="30" height="30"/>
+                                        <rect key="frame" x="216.66666666666666" y="80" width="30" height="30"/>
                                         <color key="backgroundColor" name="Main_Theme_1"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="qPF-pz-nKW" secondAttribute="height" multiplier="1:1" id="Xmr-o4-amE"/>
@@ -3088,16 +3088,16 @@ E-Document</string>
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="xze-e7-NBK">
-                                        <rect key="frame" x="124.66666666666666" y="125" width="125.66666666666666" height="60"/>
+                                        <rect key="frame" x="135" y="125" width="123.33333333333331" height="60"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name Surname" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ivT-yR-aSZ">
-                                                <rect key="frame" x="0.0" y="0.0" width="125.66666666666667" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="123.33333333333333" height="30"/>
                                                 <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="18"/>
                                                 <color key="textColor" name="Text_White"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Position" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JjJ-LI-DDg">
-                                                <rect key="frame" x="0.0" y="30" width="125.66666666666667" height="30"/>
+                                                <rect key="frame" x="0.0" y="30" width="123.33333333333333" height="30"/>
                                                 <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="18"/>
                                                 <color key="textColor" name="Text_White"/>
                                                 <nil key="highlightedColor"/>
@@ -3108,7 +3108,7 @@ E-Document</string>
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="k6P-Vn-33S">
-                                        <rect key="frame" x="-152.66666666666666" y="200" width="680.33333333333337" height="40"/>
+                                        <rect key="frame" x="-143.66666666666666" y="200" width="680.33333333333337" height="40"/>
                                         <subviews>
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zyI-mB-uv8" customClass="MyButton" customModule="Saw_Grow" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="82.333333333333329" height="40"/>
@@ -3233,16 +3233,16 @@ E-Document</string>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nKe-U3-NdE" userLabel="BottomView">
-                                <rect key="frame" x="0.0" y="310" width="375" height="502"/>
+                                <rect key="frame" x="0.0" y="319" width="393" height="533"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Gr8-hZ-Vki">
-                                        <rect key="frame" x="15" y="20" width="345" height="110"/>
+                                        <rect key="frame" x="15" y="20" width="363" height="110"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1yq-cC-1du" customClass="MyView" customModule="Saw_Grow" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="345" height="50"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="363" height="50"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Status" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iU2-QA-weU">
-                                                        <rect key="frame" x="20.000000000000014" y="16.333333333333314" width="238.33333333333337" height="17.666666666666671"/>
+                                                        <rect key="frame" x="20" y="13.666666666666687" width="256.66666666666669" height="22.666666666666671"/>
                                                         <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="15"/>
                                                         <color key="textColor" name="Text_Dark_Gray"/>
                                                         <nil key="highlightedColor"/>
@@ -3251,13 +3251,13 @@ E-Document</string>
                                                         </userDefinedRuntimeAttributes>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Work" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v45-zK-qL0">
-                                                        <rect key="frame" x="258.33333333333331" y="16.333333333333314" width="34.666666666666686" height="17.666666666666671"/>
+                                                        <rect key="frame" x="276.66666666666669" y="13.666666666666687" width="34.333333333333314" height="22.666666666666671"/>
                                                         <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="15"/>
                                                         <color key="textColor" name="Main_Theme_1"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_status_work" translatesAutoresizingMaskIntoConstraints="NO" id="ORk-y0-eVr">
-                                                        <rect key="frame" x="303" y="9" width="32" height="32"/>
+                                                        <rect key="frame" x="321" y="9" width="32" height="32"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="32" id="puk-d6-VX3"/>
                                                             <constraint firstAttribute="width" secondItem="ORk-y0-eVr" secondAttribute="height" multiplier="1:1" id="uLa-0Y-6eJ"/>
@@ -3282,10 +3282,10 @@ E-Document</string>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p9O-dR-f2z" customClass="MyView" customModule="Saw_Grow" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="60" width="345" height="50"/>
+                                                <rect key="frame" x="0.0" y="60" width="363" height="50"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Warning" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8OA-cG-mbo">
-                                                        <rect key="frame" x="19.999999999999986" y="16.333333333333314" width="222.66666666666663" height="17.666666666666671"/>
+                                                        <rect key="frame" x="20.000000000000014" y="13.666666666666687" width="240.33333333333337" height="22.666666666666671"/>
                                                         <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="15"/>
                                                         <color key="textColor" name="Text_Dark_Gray"/>
                                                         <nil key="highlightedColor"/>
@@ -3294,13 +3294,13 @@ E-Document</string>
                                                         </userDefinedRuntimeAttributes>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 timed" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ra4-wR-cSD">
-                                                        <rect key="frame" x="242.66666666666671" y="16.333333333333314" width="50.333333333333343" height="17.666666666666671"/>
+                                                        <rect key="frame" x="260.33333333333331" y="13.666666666666687" width="50.666666666666686" height="22.666666666666671"/>
                                                         <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="15"/>
                                                         <color key="textColor" name="Btn_Red"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="btn_x_red" translatesAutoresizingMaskIntoConstraints="NO" id="zkc-as-1tl">
-                                                        <rect key="frame" x="303" y="9" width="32" height="32"/>
+                                                        <rect key="frame" x="321" y="9" width="32" height="32"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="zkc-as-1tl" secondAttribute="height" multiplier="1:1" id="D8J-eh-SFj"/>
                                                             <constraint firstAttribute="height" constant="32" id="WzI-G9-WDT"/>
@@ -3327,7 +3327,7 @@ E-Document</string>
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile Information" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xFn-ye-rPU">
-                                        <rect key="frame" x="25" y="150" width="325" height="18.666666666666657"/>
+                                        <rect key="frame" x="25" y="150" width="343" height="24"/>
                                         <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="16"/>
                                         <color key="textColor" name="Main_Theme_1"/>
                                         <nil key="highlightedColor"/>
@@ -3336,29 +3336,29 @@ E-Document</string>
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="g9d-1u-1yP" customClass="MyTableView" customModule="Saw_Grow" customModuleProvider="target">
-                                        <rect key="frame" x="15" y="178.66666666666671" width="345" height="303.33333333333326"/>
+                                        <rect key="frame" x="15" y="184" width="363" height="329"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <color key="separatorColor" name="Text_Light_Gray"/>
                                         <inset key="separatorInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProfileCell" rowHeight="70" id="mOZ-Vw-ZzS" customClass="ProfileCell" customModule="Saw_Grow" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="50" width="345" height="70"/>
+                                                <rect key="frame" x="0.0" y="50" width="363" height="70"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mOZ-Vw-ZzS" id="BFb-en-qMm">
-                                                    <rect key="frame" x="0.0" y="0.0" width="345" height="70"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="363" height="70"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="-10" translatesAutoresizingMaskIntoConstraints="NO" id="rdu-4S-0Cy">
-                                                            <rect key="frame" x="20" y="0.0" width="305" height="70"/>
+                                                            <rect key="frame" x="20" y="0.0" width="323" height="70"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Position" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g2z-pg-Krr">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="54.333333333333336" height="40"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="56" height="40"/>
                                                                     <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="15"/>
                                                                     <color key="textColor" name="Text_Gray"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Frontend Developer" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7MX-OE-ZB6">
-                                                                    <rect key="frame" x="0.0" y="30" width="132.66666666666666" height="40"/>
+                                                                    <rect key="frame" x="0.0" y="30" width="132" height="40"/>
                                                                     <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="15"/>
                                                                     <color key="textColor" name="Text_Dark_Gray"/>
                                                                     <nil key="highlightedColor"/>
@@ -3439,20 +3439,20 @@ E-Document</string>
             <objects>
                 <viewController storyboardIdentifier="EditProfile" id="ZYW-gq-ahL" customClass="EditProfile" customModule="Saw_Grow" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xs6-cN-j8R">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8RH-Qh-qI6" userLabel="HeaderView">
-                                <rect key="frame" x="0.0" y="50" width="375" height="60"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="60"/>
                                 <subviews>
                                     <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="header_short" translatesAutoresizingMaskIntoConstraints="NO" id="ZFT-D8-p2P">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="eNl-mY-xQ6"/>
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bnm-Ly-t5D">
-                                        <rect key="frame" x="20" y="17.666666666666671" width="63" height="25"/>
+                                        <rect key="frame" x="20" y="17.666666666666671" width="62" height="25"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="8p2-AL-dgM"/>
                                         </constraints>
@@ -3470,7 +3470,7 @@ E-Document</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit Profile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="imY-EV-l1Y">
-                                        <rect key="frame" x="139.33333333333334" y="18.333333333333329" width="96.666666666666657" height="23.333333333333329"/>
+                                        <rect key="frame" x="147.33333333333334" y="15" width="98.666666666666657" height="30"/>
                                         <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="20"/>
                                         <color key="textColor" name="Text_White"/>
                                         <nil key="highlightedColor"/>
@@ -3492,19 +3492,19 @@ E-Document</string>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rGv-wq-ks9" userLabel="BottomView">
-                                <rect key="frame" x="0.0" y="110" width="375" height="702"/>
+                                <rect key="frame" x="0.0" y="119" width="393" height="733"/>
                                 <subviews>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BCB-0u-43T">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="702"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="733"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="375" placeholderIntrinsicHeight="10" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="ktP-qp-1e7">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="188"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="188"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9WF-Gr-Ib4" customClass="MyView" customModule="Saw_Grow" customModuleProvider="target">
-                                                        <rect key="frame" x="20" y="0.0" width="335" height="99"/>
+                                                        <rect key="frame" x="20" y="0.0" width="353" height="99"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="2LM-1Q-Kyb">
-                                                                <rect key="frame" x="20" y="20" width="295" height="59"/>
+                                                                <rect key="frame" x="20" y="20" width="313" height="59"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </stackView>
                                                         </subviews>
@@ -3534,7 +3534,7 @@ E-Document</string>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XxR-8L-kzX" customClass="MyButton" customModule="Saw_Grow" customModuleProvider="target">
-                                                        <rect key="frame" x="20" y="129" width="335" height="59"/>
+                                                        <rect key="frame" x="20" y="129" width="353" height="59"/>
                                                         <color key="backgroundColor" name="Main_Theme_1"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="59" id="p3W-ng-idC"/>
@@ -3611,11 +3611,11 @@ E-Document</string>
             <objects>
                 <viewController storyboardIdentifier="EmployeeCard" id="KXV-MC-JFN" userLabel="Ecard" customClass="EmployeeCard" customModule="Saw_Grow" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="f1x-IY-80S">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zc5-w1-M3a">
-                                <rect key="frame" x="20" y="70" width="35" height="35"/>
+                                <rect key="frame" x="20" y="79" width="35" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="35" id="7ZC-uy-N0R"/>
                                     <constraint firstAttribute="width" secondItem="Zc5-w1-M3a" secondAttribute="height" multiplier="1:1" id="7ee-vh-skG"/>
@@ -3626,7 +3626,7 @@ E-Document</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k6I-Xg-AZI">
-                                <rect key="frame" x="320" y="70" width="35" height="35"/>
+                                <rect key="frame" x="338" y="79" width="35" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="k6I-Xg-AZI" secondAttribute="height" multiplier="1:1" id="CU9-G1-yUE"/>
                                 </constraints>
@@ -3636,25 +3636,25 @@ E-Document</string>
                                 </connections>
                             </button>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S9x-zA-YeJ" customClass="MyView" customModule="Saw_Grow" customModuleProvider="target">
-                                <rect key="frame" x="20" y="170" width="335" height="472"/>
+                                <rect key="frame" x="20" y="177.33333333333334" width="353" height="497.33333333333326"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zcp-UK-eV6">
-                                        <rect key="frame" x="0.0" y="0.0" width="335" height="328.66666666666669"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="346.33333333333331"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_logo" translatesAutoresizingMaskIntoConstraints="NO" id="ktm-DH-zfw">
-                                        <rect key="frame" x="271.33333333333331" y="20.000000000000004" width="43.666666666666686" height="43.333333333333343"/>
+                                        <rect key="frame" x="287" y="19.999999999999996" width="46" height="45.666666666666657"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="ktm-DH-zfw" secondAttribute="height" multiplier="1:1" id="EHi-nG-8Fm"/>
                                         </constraints>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u5N-6v-ekS">
-                                        <rect key="frame" x="0.0" y="328.66666666666669" width="335" height="143.33333333333331"/>
+                                        <rect key="frame" x="0.0" y="346.33333333333326" width="353" height="151"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2XG-AC-n9c" customClass="MyView" customModule="Saw_Grow" customModuleProvider="target">
-                                                <rect key="frame" x="19.999999999999993" y="14.999999999999936" width="108.33333333333331" height="108.33333333333331"/>
+                                                <rect key="frame" x="20" y="15" width="116" height="116"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="demo_qr" translatesAutoresizingMaskIntoConstraints="NO" id="ypj-Yr-i64" customClass="MyImageView" customModule="Saw_Grow" customModuleProvider="target">
-                                                        <rect key="frame" x="5" y="5" width="98.333333333333329" height="98.333333333333329"/>
+                                                        <rect key="frame" x="5" y="5" width="106" height="106"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="ypj-Yr-i64" secondAttribute="height" multiplier="1:1" id="jx1-0O-2oi"/>
                                                         </constraints>
@@ -3686,10 +3686,10 @@ E-Document</string>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="LnS-Ua-znV">
-                                                <rect key="frame" x="138.33333333333337" y="5" width="186.66666666666663" height="133.33333333333334"/>
+                                                <rect key="frame" x="146" y="5" width="197" height="141"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ts3-gm-i8A">
-                                                        <rect key="frame" x="0.0" y="0.0" width="186.66666666666666" height="64.333333333333329"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="197" height="68"/>
                                                         <string key="text">Phongkhanet
 Kaewrit</string>
                                                         <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="20"/>
@@ -3697,7 +3697,7 @@ Kaewrit</string>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M0L-T5-ES8" customClass="MyLabelTopAligned" customModule="Saw_Grow" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="69.333333333333314" width="186.66666666666666" height="64"/>
+                                                        <rect key="frame" x="0.0" y="73" width="197" height="68"/>
                                                         <string key="text">Frontend 
 Developer</string>
                                                         <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="18"/>
@@ -3747,7 +3747,7 @@ Developer</string>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VLW-8F-EXw" customClass="MyButton" customModule="Saw_Grow" customModuleProvider="target">
-                                <rect key="frame" x="85.666666666666686" y="685.66666666666663" width="204" height="50"/>
+                                <rect key="frame" x="94.666666666666686" y="720.66666666666663" width="204" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="6PF-sx-0IM"/>
@@ -3800,14 +3800,14 @@ Developer</string>
             <objects>
                 <viewController storyboardIdentifier="Web" id="7Oy-ld-UkS" userLabel="Web" customClass="Web" customModule="Saw_Grow" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DAY-aI-iie">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fiZ-GY-TSm" userLabel="HeaderView">
-                                <rect key="frame" x="0.0" y="50" width="375" height="60"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="60"/>
                                 <subviews>
                                     <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="header_short" translatesAutoresizingMaskIntoConstraints="NO" id="5xb-ul-D7H">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="0aL-ZO-Lzw"/>
                                         </constraints>
@@ -3831,7 +3831,7 @@ Developer</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Web" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kOX-cD-XO5">
-                                        <rect key="frame" x="168.33333333333334" y="15" width="38.666666666666657" height="30"/>
+                                        <rect key="frame" x="177.33333333333334" y="15" width="38.666666666666657" height="30"/>
                                         <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="20"/>
                                         <color key="textColor" name="Text_White"/>
                                         <nil key="highlightedColor"/>
@@ -3850,10 +3850,10 @@ Developer</string>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="geX-J3-QYn" userLabel="BottomView">
-                                <rect key="frame" x="0.0" y="110" width="375" height="702"/>
+                                <rect key="frame" x="0.0" y="119" width="393" height="733"/>
                                 <subviews>
                                     <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="slG-gt-dlp">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="702"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="733"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <wkWebViewConfiguration key="configuration">
                                             <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -3897,17 +3897,17 @@ Developer</string>
             <objects>
                 <viewController storyboardIdentifier="Coming_Soon" title="Coming Soon" id="5gI-Xa-AKe" userLabel="Coming_Soon" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="q6e-EZ-xcb">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coming_soon_logo" translatesAutoresizingMaskIntoConstraints="NO" id="MNZ-xZ-OsA">
-                                <rect key="frame" x="72" y="176.33333333333337" width="231" height="297"/>
+                                <rect key="frame" x="81" y="192.33333333333337" width="231" height="297"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="MNZ-xZ-OsA" secondAttribute="height" multiplier="7:9" id="0y8-4c-ifv"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coming Soon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4RF-Xy-KM1">
-                                <rect key="frame" x="97" y="503.33333333333326" width="181" height="45"/>
+                                <rect key="frame" x="106" y="519.33333333333337" width="181" height="45"/>
                                 <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -3932,20 +3932,20 @@ Developer</string>
             <objects>
                 <viewController storyboardIdentifier="DemoExpired" id="ORa-hJ-SOf" customClass="DemoExpired" customModule="Saw_Grow" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Zz5-Vd-m9X">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mnv-Sb-fNs" userLabel="HeaderView">
-                                <rect key="frame" x="0.0" y="50" width="375" height="60"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="60"/>
                                 <subviews>
                                     <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="header_short" translatesAutoresizingMaskIntoConstraints="NO" id="M34-JL-Y4A">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="33c-gp-rZm"/>
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hvs-Ri-D0o">
-                                        <rect key="frame" x="20" y="17.666666666666671" width="63" height="25"/>
+                                        <rect key="frame" x="20" y="17.666666666666671" width="62" height="25"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="dfa-Bm-PIQ"/>
                                         </constraints>
@@ -3963,7 +3963,7 @@ Developer</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d1j-mB-jes">
-                                        <rect key="frame" x="187.66666666666666" y="30" width="0.0" height="0.0"/>
+                                        <rect key="frame" x="196.66666666666666" y="30" width="0.0" height="0.0"/>
                                         <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="20"/>
                                         <color key="textColor" name="Text_White"/>
                                         <nil key="highlightedColor"/>
@@ -3982,28 +3982,28 @@ Developer</string>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J5W-rO-Hyy" userLabel="BottomView">
-                                <rect key="frame" x="0.0" y="110" width="375" height="702"/>
+                                <rect key="frame" x="0.0" y="119" width="393" height="733"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="sO0-1d-Sgc">
-                                        <rect key="frame" x="10" y="10" width="355" height="550.66666666666663"/>
+                                        <rect key="frame" x="10" y="10" width="373" height="586"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="expired_Icon" translatesAutoresizingMaskIntoConstraints="NO" id="jHz-uh-Kjv">
-                                                <rect key="frame" x="80.666666666666671" y="0.0" width="193.66666666666663" height="121.66666666666667"/>
+                                                <rect key="frame" x="89.666666666666671" y="0.0" width="193.66666666666663" height="121.66666666666667"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="jHz-uh-Kjv" secondAttribute="height" multiplier="97:61" id="Y3X-O5-EK4"/>
                                                 </constraints>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="rfy-WR-sCa">
-                                                <rect key="frame" x="1.3333333333333428" y="141.66666666666669" width="352.33333333333326" height="61"/>
+                                                <rect key="frame" x="14" y="141.66666666666669" width="345.33333333333331" height="77"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="แพ็กเกจทดลองใช้ของคุณหมดอายุแล้ว " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QUS-rA-21V" customClass="MyLabelTopAligned" customModule="Saw_Grow" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="352.33333333333331" height="21"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="345.33333333333331" height="27"/>
                                                         <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="18"/>
                                                         <color key="textColor" name="Text_Dark_Gray"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="สิ้นสุดช่วงทดลองใช้งานแล้ว สามารถติดต่อเราได้ทันที เพื่อเลือกแพ็กเกจที่่เหมาะกับองค์กรของคุณ" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z6J-yd-caB" customClass="MyLabelTopAligned" customModule="Saw_Grow" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="26" width="352.33333333333331" height="35"/>
+                                                        <rect key="frame" x="0.0" y="32" width="345.33333333333331" height="45"/>
                                                         <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="15"/>
                                                         <color key="textColor" name="Text_Dark_Gray"/>
                                                         <nil key="highlightedColor"/>
@@ -4011,22 +4011,22 @@ Developer</string>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="wpT-uP-a9Q">
-                                                <rect key="frame" x="20" y="222.66666666666669" width="315" height="328.00000000000006"/>
+                                                <rect key="frame" x="20" y="238.66666666666671" width="333" height="347.33333333333326"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="BaF-Tc-E9I">
-                                                        <rect key="frame" x="0.0" y="0.0" width="315" height="94"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="333" height="103.66666666666667"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="yhD-2t-raa">
-                                                                <rect key="frame" x="0.0" y="0.0" width="127.33333333333333" height="34"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="125.66666666666667" height="43.666666666666664"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ติดต่อทางโทรศัพท์ " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uu8-o1-ssI" customClass="MyLabelTopAligned" customModule="Saw_Grow" customModuleProvider="target">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="127.33333333333333" height="18.666666666666668"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="125.66666666666667" height="24"/>
                                                                         <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="16"/>
                                                                         <color key="textColor" name="Text_Dark_Gray"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="จ - ศ 08:00 - 18:00  น." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YcK-S2-IbV" customClass="MyLabelTopAligned" customModule="Saw_Grow" customModuleProvider="target">
-                                                                        <rect key="frame" x="0.0" y="18.666666666666629" width="127.33333333333333" height="15.333333333333336"/>
+                                                                        <rect key="frame" x="0.0" y="24" width="125.66666666666667" height="19.666666666666671"/>
                                                                         <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="13"/>
                                                                         <color key="textColor" name="Text_Dark_Gray"/>
                                                                         <nil key="highlightedColor"/>
@@ -4034,7 +4034,7 @@ Developer</string>
                                                                 </subviews>
                                                             </stackView>
                                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ICL-2p-fE9" customClass="MyButton" customModule="Saw_Grow" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="44" width="315" height="50"/>
+                                                                <rect key="frame" x="0.0" y="53.666666666666629" width="333" height="50"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="50" id="Rab-fo-ve7"/>
@@ -4061,19 +4061,19 @@ Developer</string>
                                                         </constraints>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Rvx-iZ-wpp">
-                                                        <rect key="frame" x="0.0" y="114" width="315" height="214"/>
+                                                        <rect key="frame" x="0.0" y="123.66666666666661" width="333" height="223.66666666666663"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="4fZ-NL-eWJ">
-                                                                <rect key="frame" x="0.0" y="0.0" width="281.66666666666669" height="34"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="266.33333333333331" height="43.666666666666664"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ติดต่อทางช่องทางอื่นๆ" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eq5-Jd-zhC" customClass="MyLabelTopAligned" customModule="Saw_Grow" customModuleProvider="target">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="281.66666666666669" height="18.666666666666668"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="266.33333333333331" height="24"/>
                                                                         <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="16"/>
                                                                         <color key="textColor" name="Text_Dark_Gray"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="สอบถามการทดลองใช้งาน สนใจบริการและโปรโมชัน" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vx9-2U-PSr" customClass="MyLabelTopAligned" customModule="Saw_Grow" customModuleProvider="target">
-                                                                        <rect key="frame" x="0.0" y="18.666666666666629" width="281.66666666666669" height="15.333333333333336"/>
+                                                                        <rect key="frame" x="0.0" y="24.000000000000057" width="266.33333333333331" height="19.666666666666671"/>
                                                                         <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="13"/>
                                                                         <color key="textColor" name="Text_Dark_Gray"/>
                                                                         <nil key="highlightedColor"/>
@@ -4081,7 +4081,7 @@ Developer</string>
                                                                 </subviews>
                                                             </stackView>
                                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="QD6-gV-u81" customClass="MyButton" customModule="Saw_Grow" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="44" width="315" height="50"/>
+                                                                <rect key="frame" x="0.0" y="53.666666666666686" width="333" height="50"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="50" id="EOb-wj-L8v"/>
@@ -4105,7 +4105,7 @@ Developer</string>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="hct-a8-tyj" customClass="MyButton" customModule="Saw_Grow" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="103.99999999999994" width="315" height="50"/>
+                                                                <rect key="frame" x="0.0" y="113.66666666666669" width="333" height="50"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="50" id="BwD-a9-MPS"/>
@@ -4129,7 +4129,7 @@ Developer</string>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="gzc-qH-kDn" customClass="MyButton" customModule="Saw_Grow" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="163.99999999999994" width="315" height="50"/>
+                                                                <rect key="frame" x="0.0" y="173.66666666666669" width="333" height="50"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="50" id="gxd-XW-feT"/>
@@ -4201,167 +4201,6 @@ sales@hrinzpy.com</string>
             <point key="canvasLocation" x="2863" y="-616"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="1QD-f9-Jb3">
-            <size key="intrinsicContentSize" width="75" height="16.333333333333332"/>
-        </designable>
-        <designable name="1cW-40-SZQ">
-            <size key="intrinsicContentSize" width="17" height="22"/>
-        </designable>
-        <designable name="2mv-I9-pRq">
-            <size key="intrinsicContentSize" width="30" height="30"/>
-        </designable>
-        <designable name="34v-mh-ASG">
-            <size key="intrinsicContentSize" width="111" height="24"/>
-        </designable>
-        <designable name="3z5-mx-czh">
-            <size key="intrinsicContentSize" width="64" height="26"/>
-        </designable>
-        <designable name="5Mi-PK-Vcl">
-            <size key="intrinsicContentSize" width="62.666666666666664" height="62.666666666666664"/>
-        </designable>
-        <designable name="63n-QF-Hg5">
-            <size key="intrinsicContentSize" width="62" height="62"/>
-        </designable>
-        <designable name="7h7-q4-nCs">
-            <size key="intrinsicContentSize" width="51.333333333333336" height="32.666666666666664"/>
-        </designable>
-        <designable name="BBI-L9-gRm">
-            <size key="intrinsicContentSize" width="58" height="31"/>
-        </designable>
-        <designable name="CIc-hj-wCZ">
-            <size key="intrinsicContentSize" width="30.333333333333332" height="14"/>
-        </designable>
-        <designable name="Eq5-Jd-zhC">
-            <size key="intrinsicContentSize" width="146.33333333333334" height="18.666666666666668"/>
-        </designable>
-        <designable name="Fdn-3P-Xqn">
-            <size key="intrinsicContentSize" width="12" height="22"/>
-        </designable>
-        <designable name="ICL-2p-fE9">
-            <size key="intrinsicContentSize" width="150.66666666666666" height="44.666666666666664"/>
-        </designable>
-        <designable name="Idd-xP-Q87">
-            <size key="intrinsicContentSize" width="62.333333333333336" height="62.333333333333336"/>
-        </designable>
-        <designable name="IxD-MV-Ehi">
-            <size key="intrinsicContentSize" width="67.666666666666671" height="28"/>
-        </designable>
-        <designable name="JfK-xg-6Bn">
-            <size key="intrinsicContentSize" width="62.333333333333336" height="62.333333333333336"/>
-        </designable>
-        <designable name="L4W-37-UFg">
-            <size key="intrinsicContentSize" width="75" height="75"/>
-        </designable>
-        <designable name="M0L-T5-ES8">
-            <size key="intrinsicContentSize" width="81.666666666666671" height="42"/>
-        </designable>
-        <designable name="MH3-kQ-2jW">
-            <size key="intrinsicContentSize" width="71" height="19"/>
-        </designable>
-        <designable name="Q4d-0L-tlw">
-            <size key="intrinsicContentSize" width="22" height="22"/>
-        </designable>
-        <designable name="QD6-gV-u81">
-            <size key="intrinsicContentSize" width="247.66666666666666" height="44.666666666666664"/>
-        </designable>
-        <designable name="QUS-rA-21V">
-            <size key="intrinsicContentSize" width="287.33333333333331" height="21"/>
-        </designable>
-        <designable name="RjW-F0-45b">
-            <size key="intrinsicContentSize" width="17" height="22"/>
-        </designable>
-        <designable name="TPc-hm-ZDe">
-            <size key="intrinsicContentSize" width="30" height="31"/>
-        </designable>
-        <designable name="ThX-8Y-2ja">
-            <size key="intrinsicContentSize" width="55" height="16.333333333333332"/>
-        </designable>
-        <designable name="Und-nX-KcR">
-            <size key="intrinsicContentSize" width="62.333333333333336" height="62.333333333333336"/>
-        </designable>
-        <designable name="Uu8-o1-ssI">
-            <size key="intrinsicContentSize" width="126.66666666666667" height="18.666666666666668"/>
-        </designable>
-        <designable name="VLW-8F-EXw">
-            <size key="intrinsicContentSize" width="181" height="26"/>
-        </designable>
-        <designable name="Vx9-2U-PSr">
-            <size key="intrinsicContentSize" width="281.66666666666669" height="15.333333333333334"/>
-        </designable>
-        <designable name="WrP-i0-RJ5">
-            <size key="intrinsicContentSize" width="22" height="22"/>
-        </designable>
-        <designable name="XxR-8L-kzX">
-            <size key="intrinsicContentSize" width="144" height="36"/>
-        </designable>
-        <designable name="YcK-S2-IbV">
-            <size key="intrinsicContentSize" width="127.33333333333333" height="15.333333333333334"/>
-        </designable>
-        <designable name="bai-oI-EyE">
-            <size key="intrinsicContentSize" width="148.66666666666666" height="35"/>
-        </designable>
-        <designable name="cHA-eF-GKh">
-            <size key="intrinsicContentSize" width="30" height="30"/>
-        </designable>
-        <designable name="cjJ-UN-GS2">
-            <size key="intrinsicContentSize" width="123" height="22.666666666666668"/>
-        </designable>
-        <designable name="dpA-Kh-Ljf">
-            <size key="intrinsicContentSize" width="51.666666666666664" height="51.666666666666664"/>
-        </designable>
-        <designable name="dzy-9Q-rnu">
-            <size key="intrinsicContentSize" width="329" height="141"/>
-        </designable>
-        <designable name="etv-MU-Gxh">
-            <size key="intrinsicContentSize" width="44" height="26"/>
-        </designable>
-        <designable name="ffq-AJ-B2I">
-            <size key="intrinsicContentSize" width="30" height="26"/>
-        </designable>
-        <designable name="gzc-qH-kDn">
-            <size key="intrinsicContentSize" width="182.66666666666666" height="44.666666666666664"/>
-        </designable>
-        <designable name="hct-a8-tyj">
-            <size key="intrinsicContentSize" width="245.66666666666666" height="44.666666666666664"/>
-        </designable>
-        <designable name="i4h-FL-xGV">
-            <size key="intrinsicContentSize" width="145" height="19.666666666666668"/>
-        </designable>
-        <designable name="jY8-iA-NQ6">
-            <size key="intrinsicContentSize" width="65" height="31"/>
-        </designable>
-        <designable name="k8K-DS-KZx">
-            <size key="intrinsicContentSize" width="75" height="75"/>
-        </designable>
-        <designable name="mme-4Y-PD6">
-            <size key="intrinsicContentSize" width="75" height="75"/>
-        </designable>
-        <designable name="nRe-L8-Su2">
-            <size key="intrinsicContentSize" width="50" height="50"/>
-        </designable>
-        <designable name="qPF-pz-nKW">
-            <size key="intrinsicContentSize" width="22" height="22"/>
-        </designable>
-        <designable name="vMu-LN-iyn">
-            <size key="intrinsicContentSize" width="44.666666666666664" height="16.333333333333332"/>
-        </designable>
-        <designable name="w0l-hA-ZV3">
-            <size key="intrinsicContentSize" width="30" height="26"/>
-        </designable>
-        <designable name="ypj-Yr-i64">
-            <size key="intrinsicContentSize" width="96" height="97.333333333333329"/>
-        </designable>
-        <designable name="z6J-yd-caB">
-            <size key="intrinsicContentSize" width="594.33333333333337" height="17.666666666666668"/>
-        </designable>
-        <designable name="znH-TW-hgA">
-            <size key="intrinsicContentSize" width="48" height="36"/>
-        </designable>
-        <designable name="zyI-mB-uv8">
-            <size key="intrinsicContentSize" width="54" height="19"/>
-        </designable>
-    </designables>
     <resources>
         <image name="back_arrow_white" width="11" height="17.666666030883789"/>
         <image name="btn_hamburger" width="22" height="16.666666030883789"/>

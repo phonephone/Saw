@@ -42,6 +42,12 @@ class Login: UIViewController, UITextFieldDelegate {
     }
     
     @objc func textFieldDidChange(_ textField: UITextField) {
+        
+        if textField == emailField || textField == passField {
+            emailField.text! = emailField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            passField.text! = passField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        }
+        
         if isValidEmail(emailField.text!) && passField.text!.count >= 1 {
             signInBtn.enableBtn()
         }

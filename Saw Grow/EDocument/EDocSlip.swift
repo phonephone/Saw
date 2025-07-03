@@ -169,7 +169,7 @@ extension EDocSlip: UICollectionViewDataSource {
         //cell.layer.cornerRadius = 15
         
         cell.cellTitle.text = cellArray["name"].stringValue
-        cell.cellDate.text = "\("EDOC_SLIP_Period".localized()) \(cellArray["period"].stringValue)"
+        cell.cellDate.text = "\("EDOC_SLIP_Period".localized()) \(cellArray["period_str"].stringValue)"
         
         let id = cellArray["id"].stringValue
         if selectedSlip.firstIndex(of: id) != nil {

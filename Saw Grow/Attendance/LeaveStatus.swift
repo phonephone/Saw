@@ -87,8 +87,10 @@ extension LeaveStatus: UICollectionViewDataSource {
         cell.layer.cornerRadius = 15
         
         cell.cellTitle.text = cellArray["category_name"].stringValue
-        cell.cellTotal.text = cellArray["total"].stringValue
-        cell.cellRemain.text = cellArray["remain"].stringValue
+        //cell.cellTotal.text = cellArray["total"].stringValue
+        //cell.cellRemain.text = cellArray["remain"].stringValue
+        cell.cellTotal.text = cellArray["total_str"].stringValue
+        cell.cellRemain.text = cellArray["remain_str"].stringValue
         
         let useFloat = cellArray["leavecount"].floatValue
         let totalFloat = cellArray["total"].floatValue

@@ -247,7 +247,7 @@ extension LeaveDetail: UITableViewDataSource {
                 cell.cellBtnCancel.addTarget(self, action: #selector(cancelClick(_:)), for: .touchUpInside)
                 cell.cellBtnWithdraw.addTarget(self, action: #selector(withdrawClick(_:)), for: .touchUpInside)
                 
-                if detailJSON!["status_id"].stringValue == "1" {//Pending
+                if detailJSON!["status_id"].stringValue == "1" && detailJSON!["iswithdraw"].stringValue != "1" {//Pending
                     cell.cellBtnStackView.isHidden = false
                     cell.cellBtnCancel.isHidden = false
                     cell.cellBtnWithdraw.isHidden = true
@@ -596,7 +596,7 @@ extension LeaveDetail: UITableViewDelegate {
         //cell.menuTitle.textColor = .themeColor
     }
     
-    @IBAction func cancelClick(_ sender: UIButton) {
+    @IBAction func cancelClick(_ sender: UIButton) {//Reject
         var superview = sender.superview
         while let view = superview, !(view is UITableViewCell) {
             superview = view.superview

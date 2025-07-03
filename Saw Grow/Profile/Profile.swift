@@ -88,6 +88,8 @@ class Profile: UIViewController , MFMailComposeViewControllerDelegate {
             employeeCardBtn.isHidden = true
             editProfileBtn.isHidden = true
             userBtn.isHidden = true
+            
+            stickerBtn.isHidden = true
         }
         
 //        changeColor(callBtn)
@@ -142,6 +144,10 @@ class Profile: UIViewController , MFMailComposeViewControllerDelegate {
         
         userPosition.text = self.profileJSON!["designation_name"].stringValue
         //userPosition.text = "\(profileJSON!["first_name"].stringValue) \(profileJSON!["last_name"].stringValue)"
+        
+        if whoMode == .Other && profileJSON!["flag_send_sticker"].stringValue == "1" {
+            stickerBtn.isHidden = false
+        }
         
         if whoMode == .Me && profileJSON!["editable"].count > 0 {
             editProfileBtn.isHidden = false

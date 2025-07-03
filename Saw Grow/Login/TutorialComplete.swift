@@ -27,7 +27,7 @@ class TutorialComplete: UIViewController, UIScrollViewDelegate {
         
         print("TUTORIAL COMPLETE")
         
-        pointLabel.text = "+\(tutorialPoint!)"
+        //pointLabel.text = "+\(tutorialPoint!)"
         descriptionLabel.text = "\("TUTORIAL_COMPLETE_Sub_Header_1".localized()) \(tutorialPoint!) \("TUTORIAL_COMPLETE_Sub_Header_2".localized()) "
     }
     

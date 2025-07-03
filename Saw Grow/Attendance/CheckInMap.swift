@@ -45,7 +45,7 @@ class CheckInMap: UIViewController {
         locationManager = CLLocationManager()
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
-        locationManager.distanceFilter = 2.0 //minimun distance to update in meters
+        //locationManager.distanceFilter = 0.0 //minimun distance to update in meters
         locationManager.startUpdatingLocation()
         locationManager.delegate = self
         //placesClient = GMSPlacesClient.shared()

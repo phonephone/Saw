@@ -13,11 +13,13 @@ import Firebase
 import FirebaseMessaging
 import UserNotifications
 import LineSDK
+import SideMenuSwift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     let gcmMessageIDKey = "gcm.message_id"
+    var prevMessageID = ""
     
     override init() {
         super.init()
@@ -84,7 +86,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 extension AppDelegate: UNUserNotificationCenterDelegate {
     
     // Receive displayed notifications for iOS 10 devices.
-    //แอพเปิดอยู่
+    //Noti when app in foreground
     func userNotificationCenter(_ center: UNUserNotificationCenter,
                                 willPresent notification: UNNotification,
                                 withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions)
@@ -95,39 +97,80 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         // Messaging.messaging().appDidReceiveMessage(userInfo)
         // [START_EXCLUDE]
         // Print message ID.
-        if let messageID = userInfo[gcmMessageIDKey] {
-            print("Message ID AAA: \(messageID)")
+        if let messageID = userInfo[gcmMessageIDKey] as? String {
+            if prevMessageID != messageID {
+                print("Message ID AAA: \(messageID)")
+                prevMessageID = messageID
+            }
         }
         // [END_EXCLUDE]
         // Print full message.
-        print(userInfo)
+        //print(userInfo)
         
         // Change this to your preferred presentation option
         completionHandler([[.alert, .sound]])
     }
     
-    //กดที่แถบ Noti
+    //Tapped push noti
     func userNotificationCenter(_ center: UNUserNotificationCenter,
                                 didReceive response: UNNotificationResponse,
                                 withCompletionHandler completionHandler: @escaping () -> Void) {
         let userInfo = response.notification.request.content.userInfo
         
         // [START_EXCLUDE]
+        
+        //            if let scene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+        //               let delegate = scene.delegate as? SceneDelegate {
+        //                print(delegate.window?.rootViewController)
+        //            }
+
         // Print message ID.
         if let messageID = userInfo[gcmMessageIDKey] {
             print("Message ID BBB: \(messageID)")
+            
+            let headerType : String = userInfo["header_type"] as? String ?? "allNoti"
+            let notiId : String = userInfo["noti_id"] as? String ?? ""
+            
+            let application = UIApplication.shared
+            if(application.applicationState == .active){
+                print("Tapped notification when the app is in Foreground")
+                if let rootVC = UIApplication.shared.windows.first?.rootViewController {
+                    rootVC.switchFromNoti(header_type: headerType,noti_id: notiId)
+                }
+            }
+            else if(application.applicationState == .inactive){
+                print("Tapped notification when the app is in Background")
+                if let rootVC = UIApplication.shared.windows.first?.rootViewController {
+                    rootVC.switchFromNoti(header_type: headerType,noti_id: notiId)
+                }
+            }
+            else {//App not launch (Cold Start)
+                let defaults = UserDefaults.standard
+                defaults.set(headerType, forKey: "launchHeader")
+                defaults.set(notiId, forKey: "launchNotiID")
+                UserDefaults.standard.synchronize()
+            }
+            
+//            guard var rootViewController = (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.window?.rootViewController else {
+//                return
+//            }
+//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//            let controller = storyboard.instantiateViewController(withIdentifier: "Requester") as! RequestViewController
+//            rootViewController.present(controller, animated: true, completion: { () -> Void in
+//                
+//            })
         }
         // [END_EXCLUDE]
         // With swizzling disabled you must let Messaging know about the message, for Analytics
         // Messaging.messaging().appDidReceiveMessage(userInfo)
         // Print full message.
-        print(userInfo)
+        //print(userInfo)
         
-        let aps : [String : Any] = userInfo["aps"] as! [String : Any]
-        let alert : [String : Any] = aps["alert"] as! [String : Any]
-        let title : String = alert["title"] as! String
-        let body : String = alert["body"] as! String
-        print("Title = \(title)\nMessage = \(body)")
+        //        let aps : [String : Any] = userInfo["aps"] as! [String : Any]
+        //        let alert : [String : Any] = aps["alert"] as! [String : Any]
+        //        let title : String = alert["title"] as! String
+        //        let body : String = alert["body"] as! String
+        //        print("Title = \(title)\nMessage = \(body)")
         
         //      let apsData = (userInfo["order_id"] as? NSString)?.integerValue
         //      // if you need to go some views
@@ -152,13 +195,13 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
     func pushToSpecificVC()
     {
         guard let window = (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.window else { return }
-
+        
         let storyboard = UIStoryboard(name: "YourStoryboard", bundle: nil)
         let yourVC = storyboard.instantiateViewController(identifier: "yourVCIdentifier")
         
         let navController = UINavigationController(rootViewController: yourVC)
         navController.modalPresentationStyle = .fullScreen
-
+        
         // you can assign your vc directly or push it in navigation stack as follows:
         window.rootViewController = navController
         window.makeKeyAndVisible()

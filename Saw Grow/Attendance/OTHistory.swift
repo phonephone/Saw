@@ -273,7 +273,7 @@ extension OTHistory: UICollectionViewDelegate {
     func loadDelete(timeRequestID:String) {
         
         let parameters:Parameters = ["time_request_id":timeRequestID ,
-                                     "status":"2" ,//2=cancel,reject
+                                     "status":"3" ,//2=cancel,reject ส่ง 3 เพราะใน API มี -1 ต่อท้าย
                                      "remark":"LEAVE_Cancel_Employee".localized()
         ]
         print(parameters)

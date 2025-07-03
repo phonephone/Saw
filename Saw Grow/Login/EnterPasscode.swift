@@ -22,9 +22,9 @@ class EnterPasscode : UIViewController, UITextFieldDelegate, MyFieldDelegate {
     
     let alertService = AlertService()
     
-//    override var preferredStatusBarStyle : UIStatusBarStyle {
-//        return .darkContent //.default for black style
-//    }
+    //    override var preferredStatusBarStyle : UIStatusBarStyle {
+    //        return .darkContent //.default for black style
+    //    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,29 +32,29 @@ class EnterPasscode : UIViewController, UITextFieldDelegate, MyFieldDelegate {
         Updater.showUpdateAlert()
         
         let context = LAContext()
-            var error: NSError?
-
-        if context.canEvaluatePolicy(.deviceOwnerAuthentication, error: &error) {
+        var error: NSError?
+        
+        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
+            
+            let reason = "Allow login with Touch ID"
+            
+            context.evaluatePolicy(.deviceOwnerAuthentication, localizedReason: reason) {
+                [weak self] success, authenticationError in
                 
-                let reason = "Allow login with Touch ID"
-
-                context.evaluatePolicy(.deviceOwnerAuthentication, localizedReason: reason) {
-                    [weak self] success, authenticationError in
-
-                    DispatchQueue.main.async {
-                        if success {
-                            print("SUCCESS")
-                            self!.switchToHome()
-                        } else {
-                            // error
-                            print("CANCLE")
-                        }
+                DispatchQueue.main.async {
+                    if success {
+                        print("SUCCESS")
+                        self?.checkIfNoti()
+                    } else {
+                        // error
+                        print("CANCLE")
                     }
                 }
-            } else {
-                // no biometry
-                print("NO BIO")
             }
+        } else {
+            // no biometry
+            print("NO BIO")
+        }
         
         passCode1.delegate = self
         passCode2.delegate = self
@@ -67,13 +67,13 @@ class EnterPasscode : UIViewController, UITextFieldDelegate, MyFieldDelegate {
         passCode4.myDelegate = self
         
         passCode1.addTarget(self, action: #selector(self.textFieldDidChange(_:)),
-                                  for: .editingChanged)
+                            for: .editingChanged)
         passCode2.addTarget(self, action: #selector(self.textFieldDidChange(_:)),
-                                  for: .editingChanged)
+                            for: .editingChanged)
         passCode3.addTarget(self, action: #selector(self.textFieldDidChange(_:)),
-                                  for: .editingChanged)
+                            for: .editingChanged)
         passCode4.addTarget(self, action: #selector(self.textFieldDidChange(_:)),
-                                  for: .editingChanged)
+                            for: .editingChanged)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -110,7 +110,7 @@ class EnterPasscode : UIViewController, UITextFieldDelegate, MyFieldDelegate {
             let confirmStr = "\(passCode1.text!)\(passCode2.text!)\(passCode3.text!)\(passCode4.text!)"
             if passcodeStr == confirmStr {
                 print("Passcode Match")
-                switchToHome()
+                checkIfNoti()
             }
             else
             {
@@ -132,20 +132,35 @@ class EnterPasscode : UIViewController, UITextFieldDelegate, MyFieldDelegate {
         }
     }
     
+    func checkIfNoti()
+    {
+        let defaults = UserDefaults.standard
+        let headerType = defaults.string(forKey: "launchHeader")
+        let notiId = defaults.string(forKey: "launchNotiID")
+        if headerType != nil {
+            switchToHome(pushTo: headerType,noti_id: notiId)
+        }
+        else {
+            switchToHome()
+        }
+        UserDefaults.standard.removeObject(forKey: "launchHeader")
+        UserDefaults.standard.removeObject(forKey: "launchNotiID")
+    }
+    
     @IBAction func forgetClick(_ sender: UIButton) {
         logOut()
-//        let alert = alertService.alert(title: "Can you fly?", body: "I believe I can fly,I believe I can touch the sky wowwwwwwwwwwwwwwwwwwww", buttonTitle: "Flyyy") { [weak self] in
-//
-//            self?.passCode1.text = ""
-//
-//            print("Action Tapped")
-//        }
-//        present(alert, animated: true)
+        //        let alert = alertService.alert(title: "Can you fly?", body: "I believe I can fly,I believe I can touch the sky wowwwwwwwwwwwwwwwwwwww", buttonTitle: "Flyyy") { [weak self] in
+        //
+        //            self?.passCode1.text = ""
+        //
+        //            print("Action Tapped")
+        //        }
+        //        present(alert, animated: true)
         
-//        let alertSlide = alertService.alertSlide(title: "Confirm Check Out !", slideTitle: "Swipe to Confirm"){
-//            print("Slideeeeeeeeeeee")
-//        }
-//        present(alertSlide, animated: true)
+        //        let alertSlide = alertService.alertSlide(title: "Confirm Check Out !", slideTitle: "Swipe to Confirm"){
+        //            print("Slideeeeeeeeeeee")
+        //        }
+        //        present(alertSlide, animated: true)
     }
     
     @IBAction func back(_ sender: UIButton) {

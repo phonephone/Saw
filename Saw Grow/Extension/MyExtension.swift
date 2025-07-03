@@ -186,7 +186,7 @@ extension UIViewController {
         }
     }
     
-    func switchToHome(pushTo: String? = nil) {
+    func switchToHome(pushTo: String? = nil,noti_id: String? = nil) {
         //let vc = UIStoryboard.init(name:"Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "TabBar")
         //self.navigationController!.setViewControllers([vc], animated: true)
         
@@ -251,23 +251,14 @@ extension UIViewController {
                 SideMenuController.preferences.basic.supportedOrientations = .portrait
                 SideMenuController.preferences.basic.shouldRespectLanguageDirection = true
                 
-                //self.navigationController!.setViewControllers([SideMenuController(contentViewController: tabBar, menuViewController: menuViewController)], animated: true)
-                
                 //PUSH from notifocation
                 if pushTo == nil {
                     self.navigationController!.setViewControllers([SideMenuController(contentViewController: tabBar, menuViewController: menuViewController)], animated: true)
                 }
                 else{
-                    switch pushTo {
-                    case "xxx":
-                        let vc = UIStoryboard.attendanceStoryBoard.instantiateViewController(withIdentifier: "Approve") as! Approve
-                        vc.approveType = .leave
-                        self.navigationController!.setViewControllers([SideMenuController(contentViewController: tabBar, menuViewController: menuViewController),vc], animated: true)
-                        
-                    default:
-                        break
-                    }
-                    
+                    tabBar.selectedIndex = tabBar.viewControllers!.count-1
+                    self.navigationController!.setViewControllers([SideMenuController(contentViewController: tabBar, menuViewController: menuViewController)], animated: false)
+                    self.switchFromNoti(header_type: pushTo, noti_id: noti_id)
                 }
             }
         }
@@ -288,6 +279,85 @@ extension UIViewController {
         //        }
         
         self.switchToLogin()
+    }
+    
+    func switchFromNoti(header_type: String? = nil,noti_id: String? = nil) {
+        if let scene = (UIApplication.shared.connectedScenes.first as? UIWindowScene)?.windows.first,
+           let navigationController = scene.rootViewController as? UINavigationController
+        {
+            print("BBB")
+            switch header_type {
+            case "leave","time_request","time_ot","time_swap":
+                
+                let vc = UIStoryboard.attendanceStoryBoard.instantiateViewController(withIdentifier: "LeaveDetail") as! LeaveDetail
+                if header_type == "leave" {
+                    vc.mode = .leave
+                } else if header_type == "time_request" {
+                    vc.mode = .attendance
+                } else if header_type == "time_ot" {
+                    vc.mode = .ot
+                } else if header_type == "time_swap" {
+                    vc.mode = .shift
+                }
+                vc.detailID = noti_id
+                navigationController.pushViewController(vc, animated: true)
+                print("Push Noti Employee")
+                
+            case "leave_head","time_request_head","time_ot_head","time_swap_head":
+                let vc = UIStoryboard.attendanceStoryBoard.instantiateViewController(withIdentifier: "ApproveDetail") as! ApproveDetail
+                if header_type == "leave_head" {
+                    vc.approveType = .leave
+                } else if header_type == "time_request_head" {
+                    vc.approveType = .attendance
+                } else if header_type == "time_ot_head" {
+                    vc.approveType = .ot
+                } else if header_type == "time_swap_head" {
+                    vc.approveType = .shift
+                }
+                vc.detailID = noti_id
+                navigationController.pushViewController(vc, animated: true)
+                print("Push Noti Head")
+                
+            case "empcer","empcer_head","reimburse","reimburse_head":
+                let vc = UIStoryboard.eDocumentStoryBoard.instantiateViewController(withIdentifier: "EDocDetail") as! EDocDetail
+                if header_type == "empcer" {
+                    vc.edocType = .work_cert
+                    vc.isHead = false
+                } else if header_type == "empcer_head" {
+                    vc.edocType = .work_cert
+                    vc.isHead = true
+                } else if header_type == "reimburse" {
+                    vc.edocType = .reimburse
+                    vc.isHead = false
+                } else if header_type == "reimburse_head" {
+                    vc.edocType = .reimburse
+                    vc.isHead = true
+                }
+                vc.detailID = noti_id
+                navigationController.pushViewController(vc, animated: true)
+                print("Push Noti EDoc")
+                
+            case "warning","warning_head":
+                let vc = UIStoryboard.eDocumentStoryBoard.instantiateViewController(withIdentifier: "WarningDetail") as! WarningDetail
+                if header_type == "warning" {
+                    vc.warningTab = .status
+                } else if header_type == "warning_head" {
+                    vc.warningTab = .history
+                }
+                vc.detailID = noti_id
+                navigationController.pushViewController(vc, animated: true)
+                print("Push Noti Warning")
+                
+            default:
+                if let sideMenuController = navigationController.viewControllers.first as? SideMenuController,
+                   let tabbarController = sideMenuController.contentViewController as? UITabBarController
+                {
+                    tabbarController.selectedIndex = tabbarController.viewControllers!.count-1
+                    sideMenuController.contentViewController = tabbarController
+                    navigationController.popToViewController(ofClass: SideMenuController.self, animated: true)
+                }
+            }
+        }
     }
     
     func loadingHUD() {
@@ -348,6 +418,9 @@ extension UIViewController {
             
             //360 Employee (Throne)
             //headers = ["Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6Inhqdlh1MDN4eXJqa01rVzI3MktWZElkbTE4LXNuMjlpTl9LT1oyZVZfUEkiLCJjb20iOiJWelJORm0xaTRYTDdfaDNUd2lhVklnUHFhT3NscjhDNWxOcl82MUwySUMwIiwiaWF0IjoxNzI0ODI5ODAyLCJleHAiOjI3MjQ4Mjk4MDF9.a8wdF8HR0uQ5uDObNbhXnRsG1HWikwhKJpUKcgg98HU", "Accept": "application/json","Lang": "Formatter_Locale".localized()]
+            
+            //Lite Employee (Sabuy)
+            //headers = ["Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6ImRNQ2RpQnV1dDY1SjZZMWJzekdaNXdQZ2E4ajEtMW1kNFdnTWY1NGVKTUUiLCJjb20iOiJ2ZFBvOVB2WDJSamRNcWp6VnV3aHo1YkZTTWtYVzlqZjlMV3E5QW05TkVFIiwiaWF0IjoxNzI3ODU0NDY1LCJleHAiOjI3Mjc4NTQ0NjR9.dXhGe2AT4GAb8tVlskMJn7T60ZT9KLXI7-ojs8q_1dw", "Accept": "application/json","Lang": "Formatter_Locale".localized()]
 
         }
         else{

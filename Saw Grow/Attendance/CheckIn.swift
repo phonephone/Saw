@@ -29,6 +29,7 @@ class CheckIn: UIViewController, UITextViewDelegate {
     var empstatus:String?
     var inArea = false
     var isWFH = false
+    var isWFHOut = false
     var isBioScan = false
     var isForcePhotoIn = false
     var isForcePhotoOut = false
@@ -36,6 +37,9 @@ class CheckIn: UIViewController, UITextViewDelegate {
     
     var userLat = ""
     var userLong = ""
+    
+    // เพิ่มตัวแปรเก็บ location ล่าสุด
+    var currentUserLocation: CLLocation?
     
     let remarkStr = "CHECKIN_Note".localized()
     
@@ -101,7 +105,9 @@ class CheckIn: UIViewController, UITextViewDelegate {
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         timer?.invalidate()
+        timer = nil
         NotificationCenter.default.removeObserver(self)
+        currentUserLocation = nil // รีเซ็ต location เมื่อออกจากหน้า
         firstTime = true
     }
     
@@ -125,11 +131,17 @@ class CheckIn: UIViewController, UITextViewDelegate {
                 self.mapJSON = json["data"][0]["worklocation"]
                 self.empstatus = json["data"][0]["profile"][0]["empstatus"].stringValue
                 self.isWFH = json["data"][0]["iswfh"].boolValue
+                self.isWFHOut = json["data"][0]["iswfh_out"].boolValue
                 self.isBioScan = json["data"][0]["isbioscan"].boolValue
                 self.isForcePhotoIn = json["data"][0]["is_force_photo"].boolValue
                 self.isForcePhotoOut = json["data"][0]["is_force_photo_out"].boolValue
                 self.isAllowGallery = json["data"][0]["is_allow_gallery"].boolValue
                 self.updateEmpStatus()
+                
+                // เพิ่มบรรทัดนี้: หลังจากโหลด mapJSON เสร็จแล้ว ให้คำนวณ distance ถ้ามี location
+                if let userLocation = self.currentUserLocation {
+                    self.calculateDistanceAndUpdateUI(userLocation: userLocation)
+                }
             }
         }
     }
@@ -166,6 +178,15 @@ class CheckIn: UIViewController, UITextViewDelegate {
 //            checkOutBtn.disableBtn()
         }
         
+        if inArea || isWFHOut {
+            checkOutBtn.enableBtn()
+            checkOutBtn.backgroundColor = .buttonRed
+        }
+        else
+        {
+            checkOutBtn.disableBtn()
+        }
+        
         if mode == .checkIn {
             checkInBtn.isHidden = false
             updateBtn.isHidden = true
@@ -179,15 +200,15 @@ class CheckIn: UIViewController, UITextViewDelegate {
             
             //updateBtn.enableBtn()//เปิด update นอกวงกลม
             //updateBtn.backgroundColor = .white
-            checkOutBtn.enableBtn()//เปิด checkout นอกวงกลม
-            checkOutBtn.backgroundColor = .buttonRed
+            //checkOutBtn.enableBtn()//เปิด checkout นอกวงกลม
+            //checkOutBtn.backgroundColor = .buttonRed
         }
         else if mode == .checkOut {
             checkInBtn.isHidden = false
             updateBtn.isHidden = true
             checkOutBtn.isHidden = true
             
-            checkInBtn.disableBtn()//ปิด Checkin ไม่ให้วน
+            //checkInBtn.disableBtn()//ปิด Checkin ไม่ให้วน
         }
     }
     
@@ -199,54 +220,87 @@ class CheckIn: UIViewController, UITextViewDelegate {
     @objc func recieveMapInfo (notification: NSNotification){
         updateTimeDisplay()
         
-        //placeLabel.text = notification.object as? String
-        //print("Recieve User Location\(notification.object!)")
+        print("XXX")
         
         if let userLocation = notification.object! as? CLLocation {
+            // เก็บ location ล่าสุดไว้
+            currentUserLocation = userLocation
             userLat = userLocation.coordinate.latitude.description
             userLong = userLocation.coordinate.longitude.description
             
-            let geocoder = CLGeocoder()
-            geocoder.reverseGeocodeLocation(userLocation,preferredLocale: Locale.init(identifier: "Map_Locale".localized())) { (placemarksArray, error) in
-                print("Place \(placemarksArray)\nError \(error)")
-                if placemarksArray != nil {//(placemarksArray?.count)! > 0 {
-
-                    let placemark = placemarksArray?.first
-    //                let number = placemark!.subThoroughfare
-    //                let bairro = placemark!.subLocality
-    //                let street = placemark!.thoroughfare
-                    
-                    let placeName = placemark!.name
-                    
-                    if self.inArea {
-                        
-                    }
-                    else{
-                        self.placeLabel.text = placeName
-                    }
-                }
-                else{
-                    self.placeLabel.text = "CHECKIN_Place_Unknow".localized()
-                }
-            }
+            print("YYY")
             
-            if (mapJSON != nil) {
-                if (mapJSON!.count > 0) {
-                    for i in 0..<mapJSON!.count {
-                        let markerArray = self.mapJSON![i]
-                        let markerLocation = CLLocation(latitude: CLLocationDegrees(markerArray["latitude"].doubleValue), longitude: CLLocationDegrees(markerArray["longitude"].doubleValue))
-                        let distance: CLLocationDistance = userLocation.distance(from: markerLocation)
-                        print("distance = \(distance)")
-                        
-                        
-                        if distance <= markerArray["radius"].doubleValue {
-                            inArea = true
-                            self.placeLabel.text = markerArray["worklocation_name"].stringValue
-                        }
-                        else{
-                            inArea = false
-                        }
-                        self.changeBtnDisplay()
+            // เรียกใช้ฟังก์ชันคำนวณ distance
+            calculateDistanceAndUpdateUI(userLocation: userLocation)
+        }
+    }
+    
+    // แยกฟังก์ชันคำนวณ distance ออกมาต่างหาก
+    func calculateDistanceAndUpdateUI(userLocation: CLLocation) {
+        // ตรวจสอบว่า mapJSON โหลดเสร็จแล้วหรือยัง
+        guard let mapJSON = mapJSON, mapJSON.count > 0 else {
+            print("mapJSON ยังไม่พร้อม รอการโหลด...")
+            // แม้ mapJSON ยังไม่พร้อม ก็ยังควร update place name จาก geocoding
+            updatePlaceNameFromGeocoding(userLocation: userLocation)
+            return
+        }
+        
+        var foundInArea = false
+        var locationName = ""
+        
+        for i in 0..<mapJSON.count {
+            let markerArray = mapJSON[i]
+            let markerLocation = CLLocation(latitude: CLLocationDegrees(markerArray["latitude"].doubleValue), longitude: CLLocationDegrees(markerArray["longitude"].doubleValue))
+            let distance: CLLocationDistance = userLocation.distance(from: markerLocation)
+            print("distance = \(distance) meters, radius = \(markerArray["radius"].doubleValue)")
+            
+            if distance <= markerArray["radius"].doubleValue {
+                foundInArea = true
+                locationName = markerArray["worklocation_name"].stringValue
+                print("อยู่ในพื้นที่: \(locationName)")
+                break // เจอแล้วออกจาก loop
+            }
+        }
+        
+        inArea = foundInArea
+        
+        if inArea {
+            self.placeLabel.text = locationName
+            print("แสดงชื่อพื้นที่งาน: \(locationName)")
+        } else {
+            print("ไม่อยู่ในพื้นที่งาน - ใช้ reverse geocoding")
+            // ถ้าไม่อยู่ในพื้นที่ ให้ใช้ reverse geocoding
+            updatePlaceNameFromGeocoding(userLocation: userLocation)
+        }
+        
+        self.changeBtnDisplay()
+    }
+    
+    // แยกฟังก์ชัน reverse geocoding ออกมา
+    func updatePlaceNameFromGeocoding(userLocation: CLLocation) {
+        let geocoder = CLGeocoder()
+        geocoder.reverseGeocodeLocation(userLocation, preferredLocale: Locale.init(identifier: "Map_Locale".localized())) { (placemarksArray, error) in
+            DispatchQueue.main.async {
+                if let error = error {
+                    print("Geocoding Error: \(error.localizedDescription)")
+                    if !self.inArea {
+                        self.placeLabel.text = "CHECKIN_Place_Unknow".localized()
+                    }
+                    return
+                }
+                
+                if let placemarksArray = placemarksArray, !placemarksArray.isEmpty {
+                    let placemark = placemarksArray.first
+                    let placeName = placemark?.name ?? "CHECKIN_Place_Unknow".localized()
+                    
+                    if !self.inArea {
+                        self.placeLabel.text = placeName
+                        print("แสดงชื่อสถานที่จาก geocoding: \(placeName)")
+                    }
+                } else {
+                    if !self.inArea {
+                        self.placeLabel.text = "CHECKIN_Place_Unknow".localized()
+                        print("ไม่พบข้อมูลสถานที่")
                     }
                 }
             }
