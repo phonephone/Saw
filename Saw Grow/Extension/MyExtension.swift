@@ -413,15 +413,16 @@ extension UIViewController {
             //P'Sorn
             //headers = ["Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IlJkWEt5NzlaV1NPb2xDMHlrMUYyOS1oSGN1ZmgySXNacm10Zm92b1ViOFkiLCJjb20iOiJBU2VfelFDNGNoSndiS3dQenF0aEVXZmdLVDc4Qkdva0k3YVpZTjFYWHdBIiwiaWF0IjoxNjkwNDI1NzA0LCJleHAiOjI2OTA0MjU3MDN9.QLrjMcTjg0uwmC270JLLdyO_2ywX066n_mCUF8rN0lw", "Accept": "application/json","Lang": "Formatter_Locale".localized()]
             
-            //360 CEO (Chen)
-            //headers = ["Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjJaNmRqRHdieHBNRVZuYUZra2Ita2UzY1p6WUxrSHBIQTg3UGpETXZaRVUiLCJjb20iOiJNbHE5OEgyZzh4ME1mcEJ2RkNFRWpqQ1Z0Yk9MS3hXUEpBUVFuQnVWYklBIiwiaWF0IjoxNzI0ODI3ODkxLCJleHAiOjI3MjQ4Mjc4OTB9.sDVdWJRRS0tIGjCai527gVV28rWKOYWZpMWTzrzLskM", "Accept": "application/json","Lang": "Formatter_Locale".localized()]
             
-            //360 Employee (Throne)
-            //headers = ["Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6Inhqdlh1MDN4eXJqa01rVzI3MktWZElkbTE4LXNuMjlpTl9LT1oyZVZfUEkiLCJjb20iOiJWelJORm0xaTRYTDdfaDNUd2lhVklnUHFhT3NscjhDNWxOcl82MUwySUMwIiwiaWF0IjoxNzI0ODI5ODAyLCJleHAiOjI3MjQ4Mjk4MDF9.a8wdF8HR0uQ5uDObNbhXnRsG1HWikwhKJpUKcgg98HU", "Accept": "application/json","Lang": "Formatter_Locale".localized()]
-            
-            //Lite Employee (Sabuy)
-            //headers = ["Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6ImRNQ2RpQnV1dDY1SjZZMWJzekdaNXdQZ2E4ajEtMW1kNFdnTWY1NGVKTUUiLCJjb20iOiJ2ZFBvOVB2WDJSamRNcWp6VnV3aHo1YkZTTWtYVzlqZjlMV3E5QW05TkVFIiwiaWF0IjoxNzI3ODU0NDY1LCJleHAiOjI3Mjc4NTQ0NjR9.dXhGe2AT4GAb8tVlskMJn7T60ZT9KLXI7-ojs8q_1dw", "Accept": "application/json","Lang": "Formatter_Locale".localized()]
+            //Tester (Teen)
+            //headers = ["Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IlE3OFlEUHNfSDhqNGFpc3ByM0RaRUZveGhoekpub2VndE5RQlBPenl5ZEkiLCJjb20iOiJVdXpEVFdVbjZVS0hjOHlLUUVYRTdONVgzN3NXeVZsSXNQSGd1S0ZjN1JrIiwiaWF0IjoxNzUzMDg4MTYwLCJleHAiOjI3NTMwODgxNTl9.zaHx0JdkOpfvq7JrW5E8sbmOuxAs65lXB9GVUCCJIYg", "Accept": "application/json","Lang": "Formatter_Locale".localized()]
 
+            //ต.พีระกิต (หัวหน้าใหญ่)
+            //headers = ["Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IldxbXZtTG84cHNPOUl5Q1JEWGNMUGoxSVhVS3RkSXp4Q0xQVTBEbHJPb1EiLCJjb20iOiI0VFBETnhSYkQxWExZOEVJS2hVdC1odXNTaTdXaEwxTlA1dDl0dl9RSUt3IiwiaWF0IjoxNzUzMDkyOTAxLCJleHAiOjI3NTMwOTI5MDB9.qhQaD6gHT4KR7DoHJOxAbI_GuOY8aEnuKZOPtlmayLs", "Accept": "application/json","Lang": "Formatter_Locale".localized()]
+            
+            //ต.พีระกิต (หัวหน้า)
+            //headers = ["Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjVCY2h1NUpQLWZHRzNnQXhlbmRGc0FYcnAteXRJd1dhVFlZZmV1UHhESzAiLCJjb20iOiJ5LTg5S0FSSENDLXUwYm56OWZyQzdkZGNJNmt6MlRGNGtabjg4c1RMblNvIiwiaWF0IjoxNzUzMDkyNzI5LCJleHAiOjI3NTMwOTI3Mjh9.mqN9a2HAnRRIBzs5bAl9T-ExQ5hmv9VHIxImDFmhf50", "Accept": "application/json","Lang": "Formatter_Locale".localized()]
+            
         }
         else{
             headers = ["Accept": "application/json",

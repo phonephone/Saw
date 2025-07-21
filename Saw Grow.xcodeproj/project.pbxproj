@@ -1247,7 +1247,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Saw Grow/Saw Grow.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = ANTR249Q57;
 				EXCLUDED_ARCHS = "";
@@ -1257,7 +1257,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.8.4;
+				MARKETING_VERSION = 2.8.5;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.softcakes.Saw-Grow";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1276,7 +1276,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Saw Grow/Saw Grow.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ANTR249Q57;
 				EXCLUDED_ARCHS = "";
 				INFOPLIST_FILE = "Saw Grow/Info.plist";
@@ -1284,7 +1284,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.8.4;
+				MARKETING_VERSION = 2.8.5;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.softcakes.Saw-Grow";
 				PRODUCT_NAME = "$(TARGET_NAME)";

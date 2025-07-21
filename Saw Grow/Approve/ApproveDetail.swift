@@ -16,6 +16,7 @@ class ApproveDetail: UIViewController, UITextViewDelegate {
     var approveType:approveType?
     var detailID:String?
     var detailJSON : JSON?
+    var approveHistoryJSON : JSON?
     
     var emptyReason:String = "-"
     
@@ -96,7 +97,11 @@ class ApproveDetail: UIViewController, UITextViewDelegate {
                 let json = JSON(responseObject)
                 print("SUCCESS APPROVE DETAIL\(json)")
                 
+                // เก็บ history data โดยตรง
+                self.approveHistoryJSON = json["data"][0]["approvalstephistory"]
+                // เก็บ detail เหมือนเดิม
                 self.detailJSON = json["data"][0][arrayName][0]
+                
                 self.myTableView.reloadData()
             }
         }
@@ -152,7 +157,22 @@ class ApproveDetail: UIViewController, UITextViewDelegate {
 // MARK: - UITableViewDataSource
 
 extension ApproveDetail: UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        // ใช้ approveHistoryJSON แทน parentJSON
+        if let historyArray = approveHistoryJSON?.array, !historyArray.isEmpty {
+            return 2  // section 0 = detail, section 1 = history
+        }
+        return 1  // เฉพาะ detail section
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if section == 1 {
+            // History section - ใช้ approveHistoryJSON แทน parentJSON
+            return approveHistoryJSON?.arrayValue.count ?? 0
+        }
+        
+        // Section 0 - Detail section (existing logic)
         if (detailJSON != nil) {
             switch approveType {
             case .leave:
@@ -193,12 +213,98 @@ extension ApproveDetail: UITableViewDataSource {
         }
     }
     
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return nil
+    }
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        if section == 0 && numberOfSections(in: tableView) == 2 {
+            let footerView = UIView()
+            footerView.backgroundColor = UIColor.clear
+            
+            let label = UILabel()
+            label.text = "History"
+            label.font = UIFont.Kanit_Regular(ofSize: 16)
+            label.textColor = .textGray
+            label.translatesAutoresizingMaskIntoConstraints = false
+            
+            footerView.addSubview(label)
+            NSLayoutConstraint.activate([
+                label.leadingAnchor.constraint(equalTo: footerView.leadingAnchor, constant: 16),
+                label.trailingAnchor.constraint(equalTo: footerView.trailingAnchor, constant: -16),
+                label.topAnchor.constraint(equalTo: footerView.topAnchor, constant: 16),
+                label.bottomAnchor.constraint(equalTo: footerView.bottomAnchor, constant: -8)
+            ])
+            
+            return footerView
+        }
+        return nil
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        if section == 0 && numberOfSections(in: tableView) == 2 {
+            return 50
+        }
+        return 0
+    }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension;
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        let hideSeperator = UIEdgeInsets.init(top: 0, left: 400,bottom: 0, right: 0)
+        
+        if indexPath.section == 1 {
+            // History section - ใช้ approveHistoryJSON แทน parentJSON
+            let historyArray = approveHistoryJSON!.arrayValue
+            let historyItem = historyArray[indexPath.row]
+            
+            let historyCell = tableView.dequeueReusableCell(withIdentifier: "ApproveDetail_Head", for: indexPath) as! ApproveDetail_Cell
+            
+            historyCell.cellImage.sd_setImage(with: URL(string: historyItem["approval_photo"].stringValue), placeholderImage: UIImage(named: "logo_circle"))
+            historyCell.cellName.text = historyItem["approval_name"].stringValue
+            historyCell.cellPosition.text = historyItem["approval_date"].stringValue  // ใช้วันที่แทนตำแหน่ง
+            historyCell.cellPosition.textColor = .textGray
+            
+            historyCell.cellStatus.text = historyItem["approvel_status"].stringValue
+            historyCell.cellStatus.textColor = self.colorFromRGB(rgbString: historyItem["approvel_color"].stringValue)
+            
+            // Hide approve/reject controls for history
+            historyCell.cellReason.isHidden = true
+            historyCell.cellBtnStackView.isHidden = true
+            
+            // Handle corner radius for history cells
+            let historyCount = historyArray.count
+            if historyCount == 1 {
+                // Only one history item
+                DispatchQueue.main.async {
+                    historyCell.cellBg.roundCorners(corners: [.topLeft, .topRight, .bottomLeft, .bottomRight], radius: 15)
+                }
+                historyCell.separatorInset = hideSeperator
+            } else if indexPath.row == 0 {
+                // First history item
+                DispatchQueue.main.async {
+                    historyCell.cellBg.roundCorners(corners: [.topLeft, .topRight], radius: 15)
+                }
+            } else if indexPath.row == historyCount - 1 {
+                // Last history item
+                DispatchQueue.main.async {
+                    historyCell.cellBg.roundCorners(corners: [.bottomLeft, .bottomRight], radius: 15)
+                }
+                historyCell.separatorInset = hideSeperator
+            } else {
+                // Middle history items
+                DispatchQueue.main.async {
+                    historyCell.cellBg.roundCorners(corners: [], radius: 0)
+                }
+            }
+            
+            return historyCell
+        }
+        
+        // Section 0 - Detail section (existing code)
         let cellArray = self.detailJSON!
         var cell = ApproveDetail_Cell()
         
@@ -208,8 +314,6 @@ extension ApproveDetail: UITableViewDataSource {
         let doubleCell = tableView.dequeueReusableCell(withIdentifier: "ApproveDetail_DoubleColumn", for: indexPath) as! ApproveDetail_Cell
         let reasonCell = tableView.dequeueReusableCell(withIdentifier: "ApproveDetail_Reason", for: indexPath) as! ApproveDetail_Cell
         let swapCell = tableView.dequeueReusableCell(withIdentifier: "ApproveDetail_Shift", for: indexPath) as! ApproveDetail_Cell
-        
-        let hideSeperator = UIEdgeInsets.init(top: 0, left: 400,bottom: 0, right: 0)
         
         switch approveType {
         case .leave:
@@ -284,22 +388,29 @@ extension ApproveDetail: UITableViewDataSource {
                 cell.cellBtnApprove.addTarget(self, action: #selector(approveClick(_:)), for: .touchUpInside)
                 cell.cellBtnReject.addTarget(self, action: #selector(rejectClick(_:)), for: .touchUpInside)
                 
+                // Check if this is the last row of section 0
+                let isLastRowOfSection0 = (detailJSON!["status_id"].stringValue != "3")
+                
                 if detailJSON!["status_id"].stringValue == "1" && detailJSON!["approval_match"].stringValue == "1" {//Pending
                     cell.cellReason.isHidden = false
                     cell.cellBtnStackView.isHidden = false
-                    DispatchQueue.main.async {
-                        cell.cellBg.roundCorners(corners: [.bottomRight,.bottomLeft], radius: 15)
+                    if isLastRowOfSection0 {
+                        DispatchQueue.main.async {
+                            cell.cellBg.roundCorners(corners: [.bottomRight,.bottomLeft], radius: 15)
+                        }
+                        cell.separatorInset = hideSeperator
                     }
-                    cell.separatorInset = hideSeperator
                 }
                 else{
                     cell.cellReason.isHidden = true
                     cell.cellBtnStackView.isHidden = true
                     if detailJSON!["status_id"].stringValue != "3" {//Rejected
-                        DispatchQueue.main.async {
-                            cell.cellBg.roundCorners(corners: [.bottomRight,.bottomLeft], radius: 15)
+                        if isLastRowOfSection0 {
+                            DispatchQueue.main.async {
+                                cell.cellBg.roundCorners(corners: [.bottomRight,.bottomLeft], radius: 15)
+                            }
+                            cell.separatorInset = hideSeperator
                         }
-                        cell.separatorInset = hideSeperator
                     }
                 }
                 
@@ -312,6 +423,7 @@ extension ApproveDetail: UITableViewDataSource {
                 else{
                     cell.cellDescription.text = cellArray["remark"].stringValue
                 }
+                // This is always the last row when it appears
                 DispatchQueue.main.async {
                     cell.cellBg.roundCorners(corners: [.bottomRight,.bottomLeft], radius: 15)
                 }
@@ -386,22 +498,29 @@ extension ApproveDetail: UITableViewDataSource {
                 cell.cellBtnApprove.addTarget(self, action: #selector(approveClick(_:)), for: .touchUpInside)
                 cell.cellBtnReject.addTarget(self, action: #selector(rejectClick(_:)), for: .touchUpInside)
                 
+                // Check if this is the last row of section 0
+                let isLastRowOfSection0 = (detailJSON!["status_id"].stringValue != "3")
+                
                 if detailJSON!["status_id"].stringValue == "1" && detailJSON!["approval_match"].stringValue == "1" {//Pending
                     cell.cellReason.isHidden = false
                     cell.cellBtnStackView.isHidden = false
-                    DispatchQueue.main.async {
-                        cell.cellBg.roundCorners(corners: [.bottomRight,.bottomLeft], radius: 15)
+                    if isLastRowOfSection0 {
+                        DispatchQueue.main.async {
+                            cell.cellBg.roundCorners(corners: [.bottomRight,.bottomLeft], radius: 15)
+                        }
+                        cell.separatorInset = hideSeperator
                     }
-                    cell.separatorInset = hideSeperator
                 }
                 else{
                     cell.cellReason.isHidden = true
                     cell.cellBtnStackView.isHidden = true
                     if detailJSON!["status_id"].stringValue != "3" {//Rejected
-                        DispatchQueue.main.async {
-                            cell.cellBg.roundCorners(corners: [.bottomRight,.bottomLeft], radius: 15)
+                        if isLastRowOfSection0 {
+                            DispatchQueue.main.async {
+                                cell.cellBg.roundCorners(corners: [.bottomRight,.bottomLeft], radius: 15)
+                            }
+                            cell.separatorInset = hideSeperator
                         }
-                        cell.separatorInset = hideSeperator
                     }
                 }
                 
@@ -414,6 +533,7 @@ extension ApproveDetail: UITableViewDataSource {
                 else{
                     cell.cellDescription.text = cellArray["remark"].stringValue
                 }
+                // This is always the last row when it appears
                 DispatchQueue.main.async {
                     cell.cellBg.roundCorners(corners: [.bottomRight,.bottomLeft], radius: 15)
                 }
@@ -480,22 +600,29 @@ extension ApproveDetail: UITableViewDataSource {
                 cell.cellBtnApprove.addTarget(self, action: #selector(approveClick(_:)), for: .touchUpInside)
                 cell.cellBtnReject.addTarget(self, action: #selector(rejectClick(_:)), for: .touchUpInside)
                 
+                // Check if this is the last row of section 0
+                let isLastRowOfSection0 = (detailJSON!["status_id"].stringValue != "3")
+                
                 if detailJSON!["status_id"].stringValue == "1" && detailJSON!["approval_match"].stringValue == "1" {//Pending
                     cell.cellReason.isHidden = false
                     cell.cellBtnStackView.isHidden = false
-                    DispatchQueue.main.async {
-                        cell.cellBg.roundCorners(corners: [.bottomRight,.bottomLeft], radius: 15)
+                    if isLastRowOfSection0 {
+                        DispatchQueue.main.async {
+                            cell.cellBg.roundCorners(corners: [.bottomRight,.bottomLeft], radius: 15)
+                        }
+                        cell.separatorInset = hideSeperator
                     }
-                    cell.separatorInset = hideSeperator
                 }
                 else{
                     cell.cellReason.isHidden = true
                     cell.cellBtnStackView.isHidden = true
                     if detailJSON!["status_id"].stringValue != "3" {//Rejected
-                        DispatchQueue.main.async {
-                            cell.cellBg.roundCorners(corners: [.bottomRight,.bottomLeft], radius: 15)
+                        if isLastRowOfSection0 {
+                            DispatchQueue.main.async {
+                                cell.cellBg.roundCorners(corners: [.bottomRight,.bottomLeft], radius: 15)
+                            }
+                            cell.separatorInset = hideSeperator
                         }
-                        cell.separatorInset = hideSeperator
                     }
                 }
                 
@@ -508,6 +635,7 @@ extension ApproveDetail: UITableViewDataSource {
                 else{
                     cell.cellDescription.text = cellArray["remark"].stringValue
                 }
+                // This is always the last row when it appears
                 DispatchQueue.main.async {
                     cell.cellBg.roundCorners(corners: [.bottomRight,.bottomLeft], radius: 15)
                 }
@@ -570,22 +698,29 @@ extension ApproveDetail: UITableViewDataSource {
                 cell.cellBtnApprove.addTarget(self, action: #selector(approveClick(_:)), for: .touchUpInside)
                 cell.cellBtnReject.addTarget(self, action: #selector(rejectClick(_:)), for: .touchUpInside)
                 
+                // Check if this is the last row of section 0
+                let isLastRowOfSection0 = (detailJSON!["status_id"].stringValue != "3")
+                
                 if detailJSON!["status_code"].stringValue == "1" {
                     cell.cellReason.isHidden = false
                     cell.cellBtnStackView.isHidden = false
-                    DispatchQueue.main.async {
-                        cell.cellBg.roundCorners(corners: [.bottomRight,.bottomLeft], radius: 15)
+                    if isLastRowOfSection0 {
+                        DispatchQueue.main.async {
+                            cell.cellBg.roundCorners(corners: [.bottomRight,.bottomLeft], radius: 15)
+                        }
+                        cell.separatorInset = hideSeperator
                     }
-                    cell.separatorInset = hideSeperator
                 }
                 else{
                     cell.cellReason.isHidden = true
                     cell.cellBtnStackView.isHidden = true
                     if detailJSON!["status_id"].stringValue != "3" {//Rejected
-                        DispatchQueue.main.async {
-                            cell.cellBg.roundCorners(corners: [.bottomRight,.bottomLeft], radius: 15)
+                        if isLastRowOfSection0 {
+                            DispatchQueue.main.async {
+                                cell.cellBg.roundCorners(corners: [.bottomRight,.bottomLeft], radius: 15)
+                            }
+                            cell.separatorInset = hideSeperator
                         }
-                        cell.separatorInset = hideSeperator
                     }
                 }
                 
@@ -598,6 +733,7 @@ extension ApproveDetail: UITableViewDataSource {
                 else{
                     cell.cellDescription.text = cellArray["remark"].stringValue
                 }
+                // This is always the last row when it appears
                 DispatchQueue.main.async {
                     cell.cellBg.roundCorners(corners: [.bottomRight,.bottomLeft], radius: 15)
                 }
